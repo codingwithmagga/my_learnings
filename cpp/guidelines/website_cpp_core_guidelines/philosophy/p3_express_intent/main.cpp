@@ -21,7 +21,7 @@ int main()
         x += y;
     }
 
-    // Even better
+    // Even better, if execution order does not matter (and v is large)
     for_each(std::execution::par, v.begin(), v.end(), [&y](int& x) { x += y; });
 
     for (const auto& x : v) {
