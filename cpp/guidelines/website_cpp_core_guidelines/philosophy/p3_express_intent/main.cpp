@@ -4,6 +4,17 @@
 
 using namespace std;
 
+struct Point {
+    int x;
+    int y;
+};
+
+// Bad:
+void drawLine(int, int, int, int) { }
+
+// Better:
+void drawLine(Point, Point) { }
+
 int main()
 {
     vector<int> v { 1, 2, 3, 4 };
