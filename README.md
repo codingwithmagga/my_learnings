@@ -15,7 +15,7 @@ The repository is organized by learning source (course, book, or website), with 
 ### Notes Export  
 Some of the notes were exported from [Remnote](https://www.remnote.com/) as **HTML** and **Markdown** files. The Markdown files can be re-imported into Remnote or other note-taking apps if needed.  
 
-**However**, I encourage taking your own notes rather than relying solely on these exports. The process of summarizing and rewriting information is a crucial part of the learning process!  s
+**However**, I encourage taking your own notes rather than relying solely on these exports. The process of summarizing and rewriting information is a crucial part of the learning process!
 
 ## Building the Code  
 
