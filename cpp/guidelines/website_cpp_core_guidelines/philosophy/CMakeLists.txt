@@ -1,2 +1,3 @@
 add_subdirectory(p1_express_ideas_directly_in_code)
 add_subdirectory(p3_express_intent)
+add_subdirectory(p4_type_safe_program)
