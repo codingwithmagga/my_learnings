@@ -37,6 +37,8 @@ There are no Notes from the first section "Before we start" and the last one "Bo
 
 Some notes are enriched with information from Google or ChatGPT, as stated in the Review section.
 
+Note that I added code in the file `code/31_demo_process_management/main.c` to get it run under Windows. The original code is only for linux. The webserver example in `code/44_socket_management_demo` also only runs under linux, but I did not add code for windows here.
+
 ## Course certificate
 
 <img src="./udemy_certificate.jpg" alt="Udemy Certificate" width="400" />
