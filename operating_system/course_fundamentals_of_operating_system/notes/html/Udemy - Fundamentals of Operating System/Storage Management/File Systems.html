@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      File Systems
+    </h1>
+    <br/>
+    <ul>
+        <li>File System are an abstraction above present storage for the users. Writing and reading to a file translates to blocks, and at least one block (one or more LBAs) needs to be allocated.</li>
+        <li>Linux treats everything as a file.</li>
+        <li></li>
+        <li>Examples for File Systems
+            <ul>
+                <li>FAT (FAT16, FAT32)</li>
+                <li>NTFS (new technology file system)</li>
+                <li>APFS (Apple File System)</li>
+                <li>EXT4 (linux default)</li>
+                <li>XFS</li>
+                <li>btrfs</li>
+                <li></li>
+            </ul>
+        </li>
+        <li></li>
+        <li>PBA
+            <ul>
+                <li>Define→A PBA is a Physical Block Address, the actual location of a data block on a storage device. Size is a multiple of an LBA (so one or more). Also known as physical sector size.</li>
+            </ul>
+        </li>
+        <li>File system block size
+            <ul>
+                <li>Define→The minimum read/write used by the filesystem. Size is a multiple of an LBA (so one or more). When formatting a file system, the user can specify a file system block size, especially on Linux with some restrictions.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>FAT32 (File Allocation Table) 
+            <ul>
+                <li>Describe
+                    <ul>
+                        <li>FAT32 is a file system that organizes files and directories on a storage device using a File Allocation Table.  </li>
+                        <li>The basic idea is an array of 32bit integers, where the index is the LBA. The value in the array itself at this index is the next index until we reach the end.</li>
+                        <li>Reading all the LBAs in order gives the file.</li>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/5PogkNB__koqruzjrDQfee2ysMP1pC2Thro6RRQdPuwp5D593WcuPZXxwRX9iXiHavHEU7vYHhU0OHPoxfrJlw7MGXb19zxV6p_Cc0Gtvh3x-5LPqvdJNBTTxE0DWK4y.png" width="566" height="270"/></li>
+                    </ul>
+                </li>
+                <li>Why can only be 28 bits used for the LBA index instead of 32?→Four bits are reserved for other purposes like &quot;dirty&quot; or &quot;free&quot;, leaving only 28 bits for the LBA index.</li>
+                <li>Explain the issue with low LBA sizes and how it was solved?→In the old standard (LBA=512 byte), you could only address 2^28*512 bytes ~ 128GB. It was solved using Clustering.</li>
+                <li>Clustering
+                    <ul>
+                        <li>Explain→Cluster is a logical grouping of LBAs. For example, 8LBAS = 1 cluster (4kb, if LBA = 512byte). So Block/Cluster 0 ⇒ LBAs 0-7, Block/Cluster 1 ⇒LBAs 8-15 and so on. Now you can address 8*128GB ~ 1 TB.</li>
+                        <li>A larger cluster size allows more disk space to be addressed. But what is the disadvantage here?→Larger <a isRemReference="true" href="../Storage%20Management/Persistent%20storage/HDD/Parts/Cluster.html?isPin=false">Cluster</a> sizes lead to wasted space for smaller files (<a isRemReference="true" href="../../Udemy%20-%20Fundamentals%20of%20Operating%20System/Memory%20Management/Virtual%20memory/Internal%20fragmentation.html?isPin=false">Internal fragmentation</a>).</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>OS Page Cache
+            <ul>
+                <li>Describe→A region of RAM used by the OS to cache recently accessed file system blocks, improving I/O performance. </li>
+                <li>What happens when a user writes a file?→The OS writes to the page cache, and then asynchronously writes it to the disk. Calling <q>fsync()</q> immediately flushes the page cache to disk. </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>File Modes
+            <ul>
+                <li>A file must be opened to be used</li>
+                <li>There are different modes in open
+                    <ul>
+                        <li>O_APPEND - append mode</li>
+                        <li>O_DIRECT - skips page cache</li>
+                        <li>O_SYNC - write always flushes cache (slow, calls fsync() every time, should not be used unless you know what you are doing)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Partitions
+            <ul>
+                <li>Explain→Partitions are divisions of a hard drive that allow for the organization and management of files and operating systems. Start and end in an LBA. Each partition can have its own file system and each file system a different block size (cluster). An OS concept, disk and filesystem have no idea of a partition.</li>
+                <li>Partitions should be aligned with the PBAs; otherwise there are performance issues, due to overlapping.</li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

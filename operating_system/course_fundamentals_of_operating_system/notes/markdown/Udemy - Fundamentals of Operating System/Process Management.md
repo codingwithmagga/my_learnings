@@ -1,0 +1,84 @@
+- Process vs. Thread
+    - Process Control Block (PCB)
+        - Define→The PCB is a data structure in the kernel memory space where process metadata (like the program counter, PID, and memory data) is stored.
+        - What does it contain? >>>
+            - PID, Process State, Program counter, registers
+            - Process Control info (running/stopped, priority)
+            - Page Table 
+            - Accounting (CPU/Memory usage)
+            - Memory Management info (Pointer to code/stack etc.)
+            - I/O info (File descriptors, e.g. in Linux everything is a file like sockets, outgoing connections ...)
+            - IPC (interprocess communication) info, semaphores, mutexes, shared memory, messages
+    - 
+    - Kernel Process Table
+        - Purpose→Keeps track of all currently running processes in the system in a table mapping PID to PCB location. Located in the kernel memory space.
+    - 
+    - Threads
+        - Explain why a thread is a lighter weight process→Threads share the same memory space and resources as their parent process, requiring less overhead to create and manage.
+        - What is shared between different threads in the same process? >>>
+            - Memory space, including code, data, and heap. 
+            - File descriptors 
+            - Interprocess communication entities like mutexes or semaphores.
+        - What is unique for each thread?→Each thread has its own program counter, register(s) (values), and stack.
+        - Explain the memory structure of a process in RAM with threads >>>
+            - ![](https://remnote-user-data.s3.amazonaws.com/C-slemGNUxZxIzlacwlNWo5zWtdzo-j7R0JZjjDvnEalnXklGUBAsuafYpUeExjK3zoYXT8Rd9ktLpNu-o9llU3LccarW76o6SrqC1MiBzqJgZ3K1bvPbI4zdVLeUOuv.png)
+        - Explain the benefit of sharing the PCB between threads→Reduces overhead when switching between the threads. For example, the TLB doesn't have to be flushed, since they share the same page tables.
+    - 
+    - Thread Control Block (TCB)
+        - Define→The TCB is a data structure in the kernel memory space where thread metadata (like TID, program counter, registers) is stored.
+        - What does it contain? >>>
+            - TID, Thread State, Program counter, registers
+            - Process Control info (running/stopped, priority)
+            - Accounting (CPU/Memory usage)
+            - Memory Management info (Pointer to code/stack etc.)
+            - Pointer to parent PCB
+        - Which metadata is shared with the parent process?→Page Table, IO info (file descriptors) and IPC info (semaphores, shared memory etc.)
+    - 
+    - Kernel Thread Table
+        - Purpose→Keeps track of all currently running threads in the system in a table mapping TID to TCB location.  Located in the kernel memory space.
+    - 
+    - Fork of a process
+        - Define→A fork creates a nearly identical copy of a process. 
+        - What is Copy on Write (CoW)?→Copy-on-write is a memory management technique that delays copying data until it is modified. Before that, the memory is shared, for example between two processes.
+        - What happens with the memory during a fork?→The child process must have new virtual memory space. But the OS uses CoW, so pages can be shared unless a write operation happens, for example calling a function.
+    - 
+    - Example Postgres
+        - In Postgres, every database connection creates a new (forked) process. Which is a bad idea because it creates so much overhead compared to a thread. They needed to limit the number of connections to 100 because of this. 
+        - It is often solved by having a pool of connections and multiple users share these connections. 
+    - 
+- Context switching
+    - CPU doesn't really know what a process is. It's just executing instructions.
+    - What is a context?→A process or thread is a context, which can be switched.
+    - What happens during a context switch?→The operating system saves the state (registers) of one process to the corresponding PCB and loads the state of another. 
+    - When is the TLB flushed?→During a context switch involving processes. Threads of the same process use the same paging table and can use the "old" TLB values.
+    - Explain TLB ASID in short→TLB ASID (Address space ID) is a unique identifier that allows multiple processes to share the Translation Lookaside Buffer (TLB) without interfering with each other's address translations. This can avoid TLB flushing on context switch.
+    - Context switch can be done by scheduling algorithms or preemptive multitasking (a process is not allowed to run for too long).
+- Concurrency
+    - Bound Workload
+        - Explain CPU Bound Workload→A CPU-bound workload is one that spends most of its time performing computations on the CPU. For example, encryption, Compression, sorting, ...
+        - Explain IO Bound Workload→A workload where the process spends more time waiting for I/O operations than performing computations. For example, database queries, network connection write/read, file read/write, ...
+    - 
+    - Multithreaded vs. Multi-process
+        - Multi-process
+            - Spins up multiple process
+            - Isolated from each other
+            - e.g. NGINX, Postgres
+        - Multithreaded
+            - Parent process spins multiple threads
+            - Shares memory with the parent
+            - e.g. MySQL, libuv
+    - 
+    - Mutex
+        - Explains concurrency issues with shared memory, like a race condition with two threads. It can be solved using a mutex. The mutex lives in the same shared space and the OS only allows one holding it.
+        - Book: Unix Systems for Modern Architectures: Symmetric Multiprocessing and Caching for Kernel Programmers
+        - Mutex has ownership
+        - The thread that locks Mutex must unlock
+        - If a thread terminates, the mutex can remain locked
+        - Can cause deadlock
+    - 
+    - Semaphores
+        - Semaphores can be used for mutual exclusion
+        - In general, this is a number with signals that can increment/decrement the value (atomically)
+        - Wait/blocks when semaphore=0
+        - Any thread with access to the semaphore can signal/wait
+        - 

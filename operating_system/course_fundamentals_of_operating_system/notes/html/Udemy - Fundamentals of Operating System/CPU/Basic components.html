@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Basic components
+    </h1>
+    <br/>
+    <ul>
+        <li>Mention the basic components of a CPU
+            <ul>
+                <li>ALU (Arithmetic Logic Unit)</li>
+                <li>CU (Control Unit)</li>
+                <li>Registers</li>
+                <li>MMU (Memory Management Unit)</li>
+                <li>Caches</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/9gDRYvXjcdk_sVuLQxPBIeI1tfjZNKU9uW3_fdm8AiZCi8qeSuu4miFddNJ1aDwCV5CaPtbcRxfVeRFERAnzsvncICZKLICLGLpE0mh_EGZj5IwI-jN4Us9_zG-MYH1t.png" width="738" height="436.09090909090907"/></li>
+            </ul>
+        </li>
+        <li></li>
+        <li>What is the ALU?→Short for arithmetic logical unit and part of the CPU. The basic unit that actually does the computation in the CPU. These are addition, subtraction, multiplication and division, which are basically done using logic like AND, OR and XOR.</li>
+        <li></li>
+        <li>What is the CU?→Short for control unit and part of the CPU. Controls/Manages the execution, fetching and decoding of instructions in the CPU. The execution of an instruction does not always include the ALU, for example just a memory access or fetching data from a register.</li>
+        <li></li>
+        <li>What are the main characteristics and types of registers?
+            <ul>
+                <li>Registers provide very fast data access (1-2 ns).</li>
+                <li>They are small memory units (32 or 64 bits).</li>
+                <li>They are expensive to build.</li>
+                <li>Examples include program counters, instruction registers, stack pointers, and base pointers.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>What are the main functions of the MMU?
+            <ul>
+                <li>MMU is short for Memory Management Unit and is part of the CPU</li>
+                <li>Reads from memory and uses caches.</li>
+                <li>Translates virtual to physical addresses.</li>
+                <li>Contains the TLB, which caches the translation table.</li>
+                <li>Requires flushing during context switches.</li>
+                <li>Manages memory protection and access control</li>
+                <li>Handles memory paging (fixed-size blocks) and segmentation (variable-size blocks)</li>
+                <li>Swapping: Moves data between RAM and disk storage to free up memory for active processes, essential in systems with limited physical memory.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>CPU Caches
+            <ul>
+                <li>What is cached to allow faster access?→Data and instructions.</li>
+                <li>Describe different cache levels
+                    <ul>
+                        <li>L1 cache is the fastest, smallest cache closest to the CPU, followed by L2 and then L3, each progressively larger and slower. </li>
+                        <li>L1 local to Core, separated in a data and instruction cache.
+                            <ul>
+                                <li>○ CU can fetch data and instructions at the same time</li>
+                                <li>○ 1 ns</li>
+                                <li>○ ca. 128 KB</li>
+                            </ul>
+                        </li>
+                        <li>L2 local to Core in newer Cores, shared in older ones
+                            <ul>
+                                <li>○ 5 ns</li>
+                                <li>○ ca. 256 KB - 2 MB</li>
+                            </ul>
+                        </li>
+                        <li>L3 shared btw all cores, missing in older cores
+                            <ul>
+                                <li>○ 15 ns</li>
+                                <li>○ ca. 64 MB</li>
+                            </ul>
+                        </li>
+                        <li>Main Memory
+                            <ul>
+                                <li>○ 50-100 ns</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Why should cache invalidation be avoided?→Cache invalidation can cause performance bottlenecks due to the time-consuming process of updating all cached data. Accessing data from memory is time consuming.</li>
+                <li>What is the purpose of caches?→Caches store frequently accessed data closer to the CPU, reducing access time. Reduced Latency: Decreases the time it takes for applications to retrieve data, enhancing performance.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li></li>
+        <li>What is the purpose of a BUS for the CPU?→A bus is an electronic communication system that transfers data between the CPU and other components. </li>
+        <li></li>
+        <li>DSM
+            <ul>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/cLyo3CG3HEE8nQG2E9yQ2cpdtZskKAxE_cRon76GLFfv3w93-ymBnwZEVKicaEcwmj5vWS8ot0MtW4suVPAQQRBcxzU3BKBF3PgKSizXXWZWefax5-lrdQUiyRI4CJT4.png?loading=false?loading=false?loading=false" width="742" height="327.5851063829787"/></li>
+                <li>What does DSM stand for and what is the primary function of DSM?
+                    <ul>
+                        <li>Distributed Shared Memory (DSM) </li>
+                        <li>Allows multiple processes on different machines to access a common memory space, facilitating inter-process communication. </li>
+                        <li>The memory is presented as a single logical space, abstracted from the physical memory locations.  </li>
+                        <li>This allows multiple process to access a unified memory model, which simplifies programming and resource management.</li>
+                    </ul>
+                </li>
+                <li>What is a NUMA in this context and what does it stand for?→NUMA stands for Non-Uniform Memory Access, a memory architecture that allows a system to access multiple memory nodes with varying access times, optimizing performance in multi-processor environments.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li>CPU architecture
+            <ul>
+                <li>RISC
+                    <ul>
+                        <li>What does RISC stand for and what are the main characteristics?
+                            <ul>
+                                <li>Reduced Instruction Set Computer</li>
+                                <li>Simple instructions, single task, single cycle</li>
+                                <li>Low power, predictable</li>
+                                <li>Example: ARM</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>CISC
+                    <ul>
+                        <li>What does CISC stand for and what are the main characteristics?
+                            <ul>
+                                <li>Complex Instruction Set Computer</li>
+                                <li>One instruction, multiple tasks, multiple cycles</li>
+                                <li>More power, unpredictable due to multiple tasks in one instruction</li>
+                                <li>Example: An addition that loads two variables from memory, adds them, and writes the result back</li>
+                                <li>Example: x86 (Intel/AMD)</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>What is the clock speed of a CPU?→Expresses how many cycles per second a CPU can do, for example 3 GHz are 3 billion clock cycles per second. In RISC this could mean 3 billion instructions per second, in CISC these are less. Additionally, there is cost (cylces needed) for fetching and decoding instructions (pipelining helps here).</li>
+        <li></li>
+        <li></li>
+
+    </ul>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+- RAM Types
+    - Explain the main aspects of RAM >>>
+        - Volatile memory, data is lost without power
+        - Used for temporary storage of data and instructions
+        - Faster than HDD/SDD
+        - Dynamic and static types
+    - Explain the main aspects of SRAM >>>
+        - Static RAM
+        - Faster access times compared to DRAM
+        - Needs 6 transistors per bit ⇒ Expensive
+        - Retains data without refresh cycles
+        - Used in CPU caches
+    - Explain the main aspects of DRAM >>>
+        - Dynamic RAM
+        - Uses capacitors (1 per bit) to store data, which needs 1 transistor each
+        - Capacitors are either charged (1) or not (0)
+        - Slower than SRAM, but denser and cheaper to produce
+        - Requires periodic refreshing to maintain data integrity
+        - Used in most computers and devices for main memory
+    - Explain the refresh process of DRAM >>>
+        - With time, capacitors lose their charge
+        - Every few milliseconds, data (of one row of capacitors) is read to a sense amplifier
+            - A sense amplifier detects small signals in electronic systems
+        - The sense amplifier restores the charge to the capacitors to prevent data loss.
+    - Explain the main aspects of Asynchronous RAM >>>
+        - Operates independently of the system clock, allowing more flexibility in timing.
+        - Typically, slower than synchronous RAM due to lack of clock synchronization.
+        - There is a delay between requests and the responses:
+![](https://remnote-user-data.s3.amazonaws.com/GUwfg8wR6j_PtnA7aZVv6BOVUGDVkDXJ92gfivj7Q7OElBN-PZ_akEffmJo7f94uvlosHpuG86YPyMg4ZTtl1u_Hp0KQqy2RjHStqdA6BugcORQPtD_U4CaZAM-FRLHJ.png)
+    - Explain the main aspects of SDRAM >>>
+        - Synchronous Dynamic RAM
+        - RAM clock is synchronized with the system clock
+        - Supports burst mode for faster data access
+        - No wasted cycles
+![](https://remnote-user-data.s3.amazonaws.com/FZq2HxCt2AvPBZ0dYliIEKCRIkL2vxqQYQfj1Kokblv0NQ6mRiDEGTlplX_ueVM-cWW5PEfCNFBUNFgIljcdn0Xu6-ws57JLICxaLqilabGHGZLkR5XoOkQPFRojfiau.png)
+- 
+- DDR SDRAM
+    - What does DDR SDRAM stand for?→Double Data Rate Synchronized Dynamic Random Access Memory
+    - Explain the improvement in DDR SDRAM→Increased data transfer rates by transferring data on both rising and falling edges of the clock cycle.
+    - Explain the main aspects of DDR4 SDRAM >>>
+        - DDR4 Pins: Each pin transfers 1 byte (8 bits).
+        - Burst Size: 64 bytes per memory access burst/cache line.
+        - Cycle Time: Approximately 100 nanoseconds for reading.
+        - Previous DDRs: DDR1 (2 bits), DDR2 (4 bits), DDR3 (8 bits).
+        - Optimizations: DDR4 allows more transfers per second than DDR3 even if the number of bits are equal
+        - ![](https://remnote-user-data.s3.amazonaws.com/j-_WQ8ON3SsAbO27HVm7n_AFVSMB2bZ6uiUomhnp7Lvp8Vbwr0-EG89Zsri1GRTvMAktkR0UGB1_n8TRu9wMvi_d42rPJKyBP9H9Y4MboFUcBUIy_r5-vChm_3HIRbTt.png)
+    - Explain the improvements of DDR5 vs DDR4 >>>
+        - Channels: DDR5 has two channels of 32 pins each.
+        - Prefetch Buffer: Increased to 16 bits per pin.
+        - Burst Size: Can deliver 128 bytes (two 64-byte bursts).
+        - Channel Usage: Different cores can use separate channels.
+        - Locking Mechanism: DDR4 locks during reads, blocking other cores.
+        - CPU Requirement: Must support channel concept for efficiency.
+        - ![](https://remnote-user-data.s3.amazonaws.com/2qeYbv-9fNtgJSqepxsacD3mw64CZhUUSo01R-fCWhIJheq13uk6z-Q3qlrNw_F-IMnGAuC2PWknt-1A1fTrU1jH8vaFrGPyRG2FsvvXyXLeF1uQcoDoCWJ1sYKhbsrU.png)
+- 
+- RAM Components
+    - Explain the RAM structure >>>
+        - Dual Inline Memory Module (DIMM), where the RAM chips are build on
+        - Bank: subdivision of memory within a RAM module
+        - Rows: Multiple Rows in one Bank (for example 32k)
+        - Columns: Multiple Columns per Row (for example 1024)
+        - Cells: Multiple cells per column (usually 1cell = 1bit/capacitor and 16/32 cells per column)
+        - ![](https://remnote-user-data.s3.amazonaws.com/jWem2Z6_8y5n21DYm25xkhN8_h-gtsBjhcDBzU6sKjrRv-bVWJ_cPfUxU-RBBDh5_uKDIFixpKFSeGDHqc7xBjzS6OVN6U8dd1NgUdbgXy-MEbnEd5srC_fNjSeShhUw.png)
+    - Explain how the data is accessed in RAM >>>
+        - Only one row can opened at a time
+        - Because there is only one sense amplifier per bank
+        - Opening a row means reading/draining the whole row
+        - The relevant part of the row is cached in a burst
+- 
+- Data alignement
+    - Explain this image ![](https://remnote-user-data.s3.amazonaws.com/X7bqpnSSx3xEgvYwn4iOrCf16JaESlm1Zeo4g4EJ78jXZ3G4YrxsQ-Bm05MjAS2s_34cnmY5kdUDDc-6VD6FQmSiG4JwAnFoFFOvRhfDK7EyXG2vQ1WiMNrzTXL1jIPr.png) >>>
+        - Data alignement concept
+        - Certain variable sizes are stored in specific addresses
+        - E.g. 4 bytes are placed in addresses divisible by 4
+        - Rearranging the data can reduce the necessary memory space

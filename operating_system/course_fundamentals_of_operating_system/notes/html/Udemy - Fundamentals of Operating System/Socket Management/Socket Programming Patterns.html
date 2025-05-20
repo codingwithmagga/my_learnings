@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Socket Programming Patterns
+    </h1>
+    <br/>
+    <ul>
+        <li>There are multiple ways of implementing this:
+            <ul>
+                <li>Single Listener / Single Worker thread (Node)</li>
+                <li>Single Listener / Multiple Worker threads (Memcached)
+                    <ul>
+                        <li>Listener and Acceptor in one main thread</li>
+                        <li>Each connection gets its own reader thread</li>
+                    </ul>
+                </li>
+                <li>Single Listener / Multiple Worker threads with load balancing (Ramcloud)
+                    <ul>
+                        <li>Building requests(jobs), each getting its own thread</li>
+                    </ul>
+                </li>
+                <li>Multiple Acceptor Threads single Socket (nginx)
+                    <ul>
+                        <li>One Listener</li>
+                        <li>Multiple Acceptors (fast accepting(user) possible) and readers </li>
+                    </ul>
+                </li>
+                <li>Multiple Listeners on the same port (nginx and other)
+                    <ul>
+                        <li>Listener, Acceptor and reader in each thread</li>
+                        <li>Using Socket sharding</li>
+                        <li>Fastest way to accept as many connections as possible</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

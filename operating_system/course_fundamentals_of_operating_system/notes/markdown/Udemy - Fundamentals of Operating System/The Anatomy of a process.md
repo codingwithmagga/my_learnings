@@ -1,0 +1,76 @@
+- Program vs. Process
+    - General
+        - What is the difference between a program and a process?→A program is the actual file on the disk, while a process is a program in motion, executing instructions.
+        - What happens when a program starts?→When a program starts, it becomes a process that executes instructions immediately, potentially modifying states, variables, and values.
+        - 
+    - Program
+        - What is a program?→A program is a compiled and linked code specific to a CPU architecture, stored as a file on the disk.
+        - What does the launcher do when starting a program?→Loads the program into memory and creates a process. 
+        - 
+    - 
+    - Process
+        - What is a process?→A process is an instance of a program that executes instructions and has its own unique ID and memory space.
+        - What is a Process ID (PID)?→A PID is a unique identifier assigned to each process, along with other data structures like the page table and file descriptors.
+        - What is a PID namespace?→A PID namespace gives processes an independent set of PIDs, and it can be nested, allowing processes to have unique PIDs within different namespaces.
+        - What happens during a context switch with the process data (new/old)?→During a context switch, the process's current state, including the program counter, is saved to memory, and the state of another process is loaded.
+        - Describe the high-level structure of a process in the memory >>>
+            - Text segment, contains the executable code of the program. Typically read-only. It can be shared.
+            - Data segment, Stores global and static variables. Not shared, writable.
+            - Heap segment, used for dynamic memory allocation. Managed by the program.
+            - Stack segment, used to store function call information, local variables and return addresses
+            - ![](https://remnote-user-data.s3.amazonaws.com/JB5-_-UunCWu091zLc3rooYmBUhyTKkws-iynw7dkK2f8SSUSiANlr2Jf8QNUC9D11BpR6to3RSg9yEnGayJqBqqc1yCE7Z-Km9EIp89wPyVd3o913nY8vzuA9rxCTcM.png)
+        - 
+    - 
+    - 
+- The Stack
+    - General
+        - What is a stack in the context of functions?→A stack is a data structure where each function gets a frame in memory, and the active function is at the top of the stack.
+        - How is the stack implemented in memory? >>>
+            - The stack is implemented from high to low in memory, with the active function at the top.
+            - Each function call pushes a new frame onto the stack, containing local variables and return addresses.
+            - ![](https://remnote-user-data.s3.amazonaws.com/4EVheYiGceB6qURwS9XL_6uKLKeGyxvnHI_zLQsnQNeCfM2K47QMPv1W2cCFtmbdRdb3sNjZ4xWFU1WA9N-5puENDZxCE3zQyqqGnY-6BypT-eUKlVvNb97OgcCEssQS.png)
+        - Why is stack space considered efficient?→Stack space is efficient because everything is stored sequentially, which is good for memory and CPU time, and it can be cached in one burst.
+        - 
+    - Pointer
+        - What is the instruction pointer/program counter?→The instruction pointer (or program counter) points to the next instruction in memory to be executed by the CPU.
+        - What are the two pointers used in the stack?→The two pointers are the base pointer (at the start of the function stack) and the stack pointer (at the end of the function stack).
+        - What is the stack pointer, and how does it work?→The stack pointer is stored in a specific register (sp) and moves as memory is allocated or deallocated, overwriting the previous data when needed.
+        - What is the purpose of the base pointer in the process stack?→The base pointer is a static pointer that points to the beginning of the current function in the process stack, making it easier to address variables in the function.
+    - 
+    - Functions
+        - What happens to the stack pointer in nested function calls?→The stack pointer moves, and the previous base pointer is stored so that it can be used to restore the base pointer after returning from the nested function. 
+![](https://remnote-user-data.s3.amazonaws.com/AgNN9OZ9ZcE0JJrfWz7pWnm-HN7ic4Ak2YbgpT82S3UfiMByEbczajsyeH2RWW0tIfrz3w5ZB5dx2Abu2iMep5usnuWXDwmzvDuCpxXQhw83VAR9MBBJnord_5JxhZZH.png)
+        - What happens when a function returns?→The stack pointer is set to the base pointer, and the old base pointer is used to set the base pointer of the previous function ![](https://remnote-user-data.s3.amazonaws.com/kGpgdhXsxkje67IdK1GeXbbMpUlep3zQNLAA3Uhe9J4b3JitMGfI5JOqRgYyDxuXrhIwSW2HXFPcVsLxnWJyhSvcqrqv5EvI_AFTA49ZgSAZvFsjMyHi4LgcMeuC1lMt.png)
+        - What does the program counter (pc) do in nested function calls?→The program counter needs to be stored and set back to the correct point in the previous function after a nested function call.
+        - How are function parameters and return values passed?→Function parameters and return values are passed through special registers.
+    - 
+    - Burst
+        - What is burst mode in electronics?→Burst mode refers to transmitting data repeatedly without going through all the steps of each individual data transaction.
+        - What is the main advantage of burst mode over single mode data access?→The main advantage of burst mode over single mode in data access is increased throughput and efficiency by transferring data in large chunks.
+    - 
+    - Issues
+        - What causes a stack overflow?→A stack overflow occurs due to infinite function calls, recursion, or large local variables, potentially running out of stack space.
+    - 
+    - Performance
+        - How are the member variables in a struct or class arranged in memory?→The member variables are stored in the order they are written in the definition of the struct or class.
+        - How can rearranging member variables in a struct/class improve performance?→By grouping frequently used variables together, it improves memory access since they are loaded together in a cache line.
+        - How did Google improve the performance of the TCP/IP stack in the Linux kernel?→Google improved the performance by 40% by rearranging the member variables in the struct to improve memory access efficiency.
+- Process execution
+    - Assembly Language and Machine Code
+        - What is assembly language?→Assembly is the closest you can get to universal instructions that can be used on almost every machine. But it's still sometimes CPU specific.
+        - What is the difference between assembly and machine code?→Assembly and machine code are similar but different; assembly is more readable and can be mapped to machine code, which is binary and not human-readable.
+    - 
+    - CPU Execution and Performance
+        - Can two processes run on the same core simultaneously?→No, two processes cannot run at the same time on the same core, except in cases like hyper-threading or using multiple virtual cores.
+        - How much space does each instruction occupy in memory?→Each instruction occupies 4 bytes (32-bit machine) or 8 bytes (64-bit machine).
+    - 
+    - 
+- Data section
+    - What is stored in the data section of process memory?→The global and static variables, which are referenced directly by memory address, are stored in the data section.
+    - Is the size of the data section fixed?→The data section has a fixed size.
+    - Which functions have access to the data section of a process?→The data section is shared by all functions of the process. In other words: Each function can access the data section.
+    - How does the compiler determine the size of the data section?→The compiler knows how much space is needed for the data section after compilation, and this can be estimated through static analysis of the code.
+    - Is the data section read-only?→No, the data section is not read-only, but it has a fixed size (for example, an integer variable remains an integer variable).
+    - What is the purpose of the pointer at the start of the data section?→The pointer at the start of the data section, similar to the base pointer, helps address variables with the offset.
+    - What can happen when a global variable is changed when using multiple threads?→When using multiple threads in one process, changing a global variable can cause cache invalidation more often, which decreases performance.
+    - 

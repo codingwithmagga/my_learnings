@@ -1,0 +1,179 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Network fundamentals
+    </h1>
+    <br/>
+    <ul>
+        <li>Client-Server Architecture
+            <ul>
+                <li>Benefits?→Clients can call servers to perform expensive tasks which have the resources (like RAM, CPU etc.) to do it. Clients no longer require dependencies but can still execute lightweight tasks. This results in improved resource utilization.</li>
+                <li>What is RPC?→A Remote Procedure Call (RPC) is a technology that allows a computer program to execute a procedure (function) on another computer, as if it were a local procedure call.</li>
+                <li>What is absolutely necessary for this?→A network and a communication model.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>OSI (Open Systems Interconnection) Model
+            <ul>
+                <li>Why do we need a communication model?→To standardize communication protocols and ensure interoperability between different systems.</li>
+                <li>There are 7 layers, each describing a specific network component. 
+                    <ul>
+                        <li>Name these layers
+                            <ul>
+                                <li>Layer 7 - Application - HTTP/FTP/gRPC</li>
+                                <li>Layer 6 - Presentation - Encoding, Serialization</li>
+                                <li>Layer 5 - Session - Connection establishment, TLS (Transport Layer Security)</li>
+                                <li>Layer 4 - Transport - UDP/TCP</li>
+                                <li>Layer 3 - Network - IP</li>
+                                <li>Layer 2 - Data link - Frames, Mac address Ethernet</li>
+                                <li>Layer 1 - Physical - Electric signal, fiber or radio waves</li>
+                            </ul>
+                        </li>
+                        <li>Example:
+                            <ul>
+                                <li>Sending a Post Request to an HTTPS webpage
+                                    <ul>
+                                        <li>Layer 7 - Application - POST request with JSON data to HTTPS server</li>
+                                        <li>Layer 6 - Presentation - Serialize JSON to flat byte strings</li>
+                                        <li>Layer 5 - Session - Request to establish TCP connection/TLS</li>
+                                        <li>Layer 4 - Transport - Sends SYN request target port 443</li>
+                                        <li>Layer 3 - Network - SYN is placed in IP packet(s) and adds the source/destination IPs</li>
+                                        <li>Layer 2 - Data link - Each packet goes into a single frame and adds the source/destination MAC addresses</li>
+                                        <li>Layer 1 - Physical - Each frame becomes a string of bits which converted into either a radio signal (Wi-Fi), electric signal (Ethernet), or light (fiber)</li>
+                                        <li>Take it with a grain of salt, it&#39;s not always cut and dry</li>
+                                    </ul>
+                                </li>
+                                <li>Receiver computer receives the POST request the other way around
+                                    <ul>
+                                        <li>Layer 1 - Physical - Radio, electric or light is received and converted into digital bits</li>
+                                        <li>Layer 2 - Data link - The bits from Layer 1 are assembled into frames</li>
+                                        <li>Layer 3 - Network - The frames from layer 2 are assembled into IP packet.</li>
+                                        <li>Layer 4 - Transport
+                                            <ul>
+                                                <li>The IP packets from layer 3 are assembled into TCP segments</li>
+                                                <li>Deals with Congestion control/flow control/retransmission in case of TCP</li>
+                                                <li>If Segment is SYN, we don’t need to go further into more layers as we are still processing the connection request</li>
+                                            </ul>
+                                        </li>
+                                        <li>Layer 5 - Session
+                                            <ul>
+                                                <li>The connection session is established or identified</li>
+                                                <li>We only arrive at this layer when necessary (three-way handshake is done)</li>
+                                            </ul>
+                                        </li>
+                                        <li>Layer 6 - Presentation - Deserialize flat byte strings back to JSON for the app to consume</li>
+                                        <li>Layer 7 - Application - Application understands the JSON POST request and your express JSON or Apache request receive event is triggered</li>
+                                        <li>Take it with a grain of salt, it&#39;s not always cut and dry</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Explain why sending data from a client does not necessarily go directly to the server. Instead, it will be checked (multiple) times before that.
+                    <ul>
+                        <li>While sending data through a network, you often go through switches or routers or firewalls or ... These are devices operating on different layers which check, for example, the MAC or IP Addresses. </li>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/YQjxOiiBu1EyAUrG0zyML1pe1yqL2S3ucF2pxw-xrL3i4XTL65iJRxC3aDireRaoBB1r0nBBE0ML3Rq6iI8a_oJF3ww0qtmevInbbcPXsFq1J48n5_wUYnupTdNns1OE.png" width="718" height="389.5741758241758"/></li>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/f8AYm4U5IYVcPNKCvg-jQEHNJwK0RbwO_LIaPERN2MDLCyQD7qWReImPrzcn8xCuxHOI2Z1xjIg6FzYQidSHLrbgd5LsmUIZCJMcIIF4m4E9rF1xareM9bC7FDYn5aZH.png" width="392" height="227.23076923076923"/></li>
+                    </ul>
+                </li>
+                <li>Name shortcomings
+                    <ul>
+                        <li>Too many layers which are difficult to comprehend </li>
+                        <li>Lack of standardization across implementations</li>
+                        <li>Overhead: The model introduces additional overhead due to its layered structure, which can impact performance.</li>
+                        <li>Not used in Practice: While it is a good theoretical framework, most of the networking protocols used today are based on the TCP/IP model, leading to a mismatch between theory and practice.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>TCP/IP Model
+            <ul>
+                <li>Describe the difference to the OSI Model→The TCP/IP model is a simpler, less layered model than the OSI model, focusing on four layers instead of seven. </li>
+                <li>Name the four layers
+                    <ul>
+                        <li>Application (Layer 5, 6 and 7)</li>
+                        <li>Transport (Layer 4)</li>
+                        <li>Internet (Layer 3)</li>
+                        <li>Data link (Layer 2)</li>
+                        <li>The Physical layer is not officially covered</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Host-to-Host Connection
+            <ul>
+                <li>MAC
+                    <ul>
+                        <li>What does it stand for?→Media Access Control.</li>
+                        <li>What problem does it solve?→Each host network card has a unique MAC address, ensuring that data is directed to the correct device.</li>
+                        <li>When a message is sent on a network, {{3543933937596466::everyone}} will receive it, but only {{3543933937596466::the one}} with the {{3543933937596466::correct MAC address}} will accept it.</li>
+                    </ul>
+                </li>
+                <li>IP Address
+                    <ul>
+                        <li>Purpose?→To enable routing and uniquely identify a device on a network. Without routing, the entire network and all messages needed to be scanned to search for messages.  </li>
+                        <li>Structure?→Is built in two parts: One part to identify the network, the other is the host.</li>
+                        <li>Why are MAC addresses still necessary?→MAC addresses provide unique hardware identification for devices on a local network, enabling efficient communication between them.</li>
+                    </ul>
+                </li>
+                <li>Ports
+                    <ul>
+                        <li>Purpose?→To uniquely identify a process or application on a host for network communication.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>TCP
+            <ul>
+                <li>Stands for?→Transmission Control Protocol.</li>
+                <li>Name key points
+                    <ul>
+                        <li>Layer 4 protocol</li>
+                        <li>Ability to address processes in a host using ports</li>
+                        <li>&quot;Controls&quot; the transmission, unlike UDP</li>
+                        <li>Establishes a connection/session, means there is knowledge between the client and the server</li>
+                    </ul>
+                </li>
+                <li>Name Use cases
+                    <ul>
+                        <li>Reliable communication</li>
+                        <li>Remote shell</li>
+                        <li>Database connections</li>
+                        <li>Web communications</li>
+                        <li>Any bidirectional communication</li>
+                    </ul>
+                </li>
+                <li>Key points about a TCP connection
+                    <ul>
+                        <li>Connection is a Layer 5 entity (session)</li>
+                        <li>An agreement between client and server, can&#39;t send data without a connection</li>
+                        <li>Requires a 3-way TCP handshake</li>
+                        <li>Reliable, ordered delivery of data in segments</li>
+                        <li>Lost segments are retransmitted</li>
+                        <li>20 bytes header segment (can go to 60)</li>
+                        <li>Stateful</li>
+                        <li>Identified by four properties: Source/Destination IP, Source/Destination port</li>
+                    </ul>
+                </li>
+                <li>Explain the three-way handshake→A three-way handshake is a method used in TCP/IP networks to establish a connection between two devices, involving a SYN, SYN-ACK, and ACK exchange (in this order). <img src="https://remnote-user-data.s3.amazonaws.com/o8vmPD2btd3KImkMciE9N-n5bv6izNBo_d52qiY6I22-xAChoKsz4rkyZ_7WWr6saaKxFTykm4z0szRuPyg96CLmoi9Nk6ZHmviX32y3vGYsIQw8eptxE_Kb243_jUvw.png" width="190" height="47.89693593314764"/></li>
+                <li>Explain how data is sent?→Data will be encapsulated in a segment and acknowledged (ACK) by the receiver. Data can be sent in multiple segments and acknowledged by a single response.
+ <img src="https://remnote-user-data.s3.amazonaws.com/fvO61cuEqmrPQWh5kZqfatjr7un08FvLeFMhQfpLMryDuczR8BmWlgcW63n_UdhwFuqnSYxbejaEQaiEthLTpup8TSqxpmqwlI17z4qmSnz8zE1LA_xDrEDh0bN5vx6O.png" width="708" height="173.54874651810584"/><img src="https://remnote-user-data.s3.amazonaws.com/rku2UFd4Szt0dFMyyvn08P5NZEcNwG-IG8lhWstLd5YGMwE_-1pBYNO0Dul-NuOH49m1QV3ie3Veday_JcJwmwxKsis8O6DfY5AWy6Jjnp0a041BsIu_JzWJK7up4mQ2.png" width="708" height="209.04735376044567"/></li>
+                <li>Explain how a connection is closed?→A connection is closed when both the client and server send a FIN packet (started by one of them), followed by an ACK packet acknowledging the receipt of the FIN. It&#39;s a four way handshake.<img src="https://remnote-user-data.s3.amazonaws.com/1Rrujy2vh4UoB_8hXBgqoKOMrmFCGisj0SCRt4qWRQ-8UhNY3fa5BPjSPN8JP9VIpPAThV4GVFlWAuzM5TxXVpFy0aynZE8xl1WqY7mBwOpV9HSX1ZUI0XgB57kPv-hY.png" width="708" height="182.4233983286908"/></li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+- Most IO operations are {{blocking operations}} . This means the process cannot move their {{program counter}} .
+- Read blocks, for example when there is no data.
+ ![](https://remnote-user-data.s3.amazonaws.com/R8Tu1LshEuIXLwAltoXH-BUNGEn68XiJj0JD8fp8XKXSoHJSr4ydVWNyRDZGLaQItEv_ehDuSBSflCVB4i5daiZG313LW4pA-mGugeASOoD-E5bGs3hyOpSE7dAnLGgm.png)
+    - What does that lead to?→It leads to context switches and slowing down the process. Potentially blocked forever if data is never sent/received through that connection.
+    - How to solve the blocking?→Ask OS if there is data. If so, call without blocking
+- With the function `select()` a collection of file descriptors will be monitored by the kernel and returns when any of is ready. Select is blocking but with a timeout. But the process needs to check which one is ready using a loop.
+    - Name Pros >>>
+        - Avoid reading unready resources
+        - async
+    - Name Cons >>>
+        - Slow, since we have to do the loop ⇒ `O(n)`
+        - Lots of copying to/from kernel/user space
+        - Only supports a fixed size of file descriptors.
+- Better is `epoll`. Register an interest list of file descriptors in the kernel. Kernel updating this list. When the user calls `epoll__wait()`, the kernel returns a list of connections with data (events). 
+![](https://remnote-user-data.s3.amazonaws.com/pwnPYyNhkYtN_Uxvt3HPRrQNnZN0oa_4Q3kCS2gxi2mbGAs99z6JLBeb6LejQ1XyGONimHSZsrDT0uJEAC4Qj2QC-FhElzoPRe1V2CtnwVKrZ58_r90O3mTKv1YCNA_B.png)
+    - Drawbacks >>>
+        - Complex, for example, missing events can be dangerous.
+            - In edge tracking, additional user checks necessary
+        - Only on linux
+        - Too many `syscalls` 
+        - Doesn't work on files, only on sockets and pipes
+- `io_uring` is a modern Linux asynchronous I/O (AIO) interface that uses two ring buffers (queues) for submission and completion events. The kernel and user space communicate via these queues, allowing zero-copy, low-latency I/O without `syscall` overhead for each operation. It supports file I/O, network I/O, and more, making it more flexible and efficient than `epoll `for high-performance workloads.
+    - Biggest issue?→Security issues because of the usage of shared memory. Google even disabled `io_uring` in many applications because of this. 
+- 
+- For cross-platform development use `lib_uv`. 
+- 

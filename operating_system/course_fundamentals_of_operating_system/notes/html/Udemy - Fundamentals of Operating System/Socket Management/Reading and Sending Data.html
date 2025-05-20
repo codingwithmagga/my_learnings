@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Reading and Sending Data
+    </h1>
+    <br/>
+    <ul>
+        <li>What happens when data is received through a connection?
+            <ul>
+                <li>Kernel puts data in receive queue</li>
+                <li>Kernel ACKs (may delay) and update window sizes</li>
+                <li>App calls read to copy data</li>
+            </ul>
+        </li>
+        <li>What is the &quot;window size&quot; in the context of sockets?→The &quot;window size&quot; refers to the amount of data that can be sent before needing an acknowledgment from the receiver. The concept of window sizing is part of flow control. This helps prevent overwhelming the receiver with too much data at once. </li>
+        <li></li>
+
+    </ul>
+    </body>
+</html>

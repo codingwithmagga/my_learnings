@@ -1,0 +1,136 @@
+- Memory Essentials
+    - RAM Types
+        - Explain the main aspects of RAM >>>
+            - Volatile memory, data is lost without power
+            - Used for temporary storage of data and instructions
+            - Faster than HDD/SDD
+            - Dynamic and static types
+        - Explain the main aspects of SRAM >>>
+            - Static RAM
+            - Faster access times compared to DRAM
+            - Needs 6 transistors per bit ⇒ Expensive
+            - Retains data without refresh cycles
+            - Used in CPU caches
+        - Explain the main aspects of DRAM >>>
+            - Dynamic RAM
+            - Uses capacitors (1 per bit) to store data, which needs 1 transistor each
+            - Capacitors are either charged (1) or not (0)
+            - Slower than SRAM, but denser and cheaper to produce
+            - Requires periodic refreshing to maintain data integrity
+            - Used in most computers and devices for main memory
+        - Explain the refresh process of DRAM >>>
+            - With time, capacitors lose their charge
+            - Every few milliseconds, data (of one row of capacitors) is read to a sense amplifier
+                - A sense amplifier detects small signals in electronic systems
+            - The sense amplifier restores the charge to the capacitors to prevent data loss.
+        - Explain the main aspects of Asynchronous RAM >>>
+            - Operates independently of the system clock, allowing more flexibility in timing.
+            - Typically, slower than synchronous RAM due to lack of clock synchronization.
+            - There is a delay between requests and the responses:
+![](https://remnote-user-data.s3.amazonaws.com/GUwfg8wR6j_PtnA7aZVv6BOVUGDVkDXJ92gfivj7Q7OElBN-PZ_akEffmJo7f94uvlosHpuG86YPyMg4ZTtl1u_Hp0KQqy2RjHStqdA6BugcORQPtD_U4CaZAM-FRLHJ.png)
+        - Explain the main aspects of SDRAM >>>
+            - Synchronous Dynamic RAM
+            - RAM clock is synchronized with the system clock
+            - Supports burst mode for faster data access
+            - No wasted cycles
+![](https://remnote-user-data.s3.amazonaws.com/FZq2HxCt2AvPBZ0dYliIEKCRIkL2vxqQYQfj1Kokblv0NQ6mRiDEGTlplX_ueVM-cWW5PEfCNFBUNFgIljcdn0Xu6-ws57JLICxaLqilabGHGZLkR5XoOkQPFRojfiau.png)
+    - 
+    - DDR SDRAM
+        - What does DDR SDRAM stand for?→Double Data Rate Synchronized Dynamic Random Access Memory
+        - Explain the improvement in DDR SDRAM→Increased data transfer rates by transferring data on both rising and falling edges of the clock cycle.
+        - Explain the main aspects of DDR4 SDRAM >>>
+            - DDR4 Pins: Each pin transfers 1 byte (8 bits).
+            - Burst Size: 64 bytes per memory access burst/cache line.
+            - Cycle Time: Approximately 100 nanoseconds for reading.
+            - Previous DDRs: DDR1 (2 bits), DDR2 (4 bits), DDR3 (8 bits).
+            - Optimizations: DDR4 allows more transfers per second than DDR3 even if the number of bits are equal
+            - ![](https://remnote-user-data.s3.amazonaws.com/j-_WQ8ON3SsAbO27HVm7n_AFVSMB2bZ6uiUomhnp7Lvp8Vbwr0-EG89Zsri1GRTvMAktkR0UGB1_n8TRu9wMvi_d42rPJKyBP9H9Y4MboFUcBUIy_r5-vChm_3HIRbTt.png)
+        - Explain the improvements of DDR5 vs DDR4 >>>
+            - Channels: DDR5 has two channels of 32 pins each.
+            - Prefetch Buffer: Increased to 16 bits per pin.
+            - Burst Size: Can deliver 128 bytes (two 64-byte bursts).
+            - Channel Usage: Different cores can use separate channels.
+            - Locking Mechanism: DDR4 locks during reads, blocking other cores.
+            - CPU Requirement: Must support channel concept for efficiency.
+            - ![](https://remnote-user-data.s3.amazonaws.com/2qeYbv-9fNtgJSqepxsacD3mw64CZhUUSo01R-fCWhIJheq13uk6z-Q3qlrNw_F-IMnGAuC2PWknt-1A1fTrU1jH8vaFrGPyRG2FsvvXyXLeF1uQcoDoCWJ1sYKhbsrU.png)
+    - 
+    - RAM Components
+        - Explain the RAM structure >>>
+            - Dual Inline Memory Module (DIMM), where the RAM chips are build on
+            - Bank: subdivision of memory within a RAM module
+            - Rows: Multiple Rows in one Bank (for example 32k)
+            - Columns: Multiple Columns per Row (for example 1024)
+            - Cells: Multiple cells per column (usually 1cell = 1bit/capacitor and 16/32 cells per column)
+            - ![](https://remnote-user-data.s3.amazonaws.com/jWem2Z6_8y5n21DYm25xkhN8_h-gtsBjhcDBzU6sKjrRv-bVWJ_cPfUxU-RBBDh5_uKDIFixpKFSeGDHqc7xBjzS6OVN6U8dd1NgUdbgXy-MEbnEd5srC_fNjSeShhUw.png)
+        - Explain how the data is accessed in RAM >>>
+            - Only one row can opened at a time
+            - Because there is only one sense amplifier per bank
+            - Opening a row means reading/draining the whole row
+            - The relevant part of the row is cached in a burst
+    - 
+    - Data alignement
+        - Explain this image ![](https://remnote-user-data.s3.amazonaws.com/X7bqpnSSx3xEgvYwn4iOrCf16JaESlm1Zeo4g4EJ78jXZ3G4YrxsQ-Bm05MjAS2s_34cnmY5kdUDDc-6VD6FQmSiG4JwAnFoFFOvRhfDK7EyXG2vQ1WiMNrzTXL1jIPr.png) >>>
+            - Data alignement concept
+            - Certain variable sizes are stored in specific addresses
+            - E.g. 4 bytes are placed in addresses divisible by 4
+            - Rearranging the data can reduce the necessary memory space
+- Virtual memory
+    - Name advantages of virtual vs. physical memory >>>
+        - No external fragmentation
+        - Shared memory
+        - Isolation of data between processes
+        - No memory limitation (beside the size of HDD/SSD)
+    - External fragmentation
+        - Definition >>>
+            - External fragmentation occurs when free memory is split into small, non-contiguous blocks, making it difficult to allocate larger memory requests.
+            - ![](https://remnote-user-data.s3.amazonaws.com/-hA_o-449Hhx6PFGdBkUChJsf17OfEbuKJ3oADq_2nR5ZInZt8EsIoBg5e-8tYUuKE2VgpktfVt0TbcJfkfV-3AvWeF8kiInwd2DtHaaHU_sEHCRZhy59fzYKVQ417Iy.png) 
+        - Cause→It arises from allocating and deallocating memory dynamically. Over time, as processes are loaded and removed, gaps of free space form between allocated blocks.
+        - Impact→Reduces available memory and increases the likelihood of needing to swap pages to disk.
+    - 
+    - Internal fragmentation
+        - Cause→Internal fragmentation occurs when memory is allocated in fixed-size blocks, and the amount of memory requested by a process is less than the size of the allocated block. The unused space within the allocated block is wasted and cannot be used by other processes, leading to inefficient memory utilization. 
+    - Explain the concept of virtual memory >>>
+        - Abstraction of physical memory
+        - Fixed block sizes (often 4kb) of memory are used ⇒ called paging
+        - The logical page is mapped to the physical page using a process page table
+        - Many to one mapping, which means many virtual pages can map to one physical address
+        - ![](https://remnote-user-data.s3.amazonaws.com/kMvDrOQFhA0qpFMNOBSvFS_JhCQ2K9CWX1oqHHaff8cZkh0MeZaca3nlFVGjwZUWpNv9jGbB4rR0i3eS56k8f9YUtb1UjN6Xcjw0iM6dJkXvEMXB1yDtjb4cgMNML0BN.png)
+    - Do we have fragmentation in virtual memory?→Yes, while external fragmentation is solved, internal fragmentation can occur, especially with big page sizes.
+    - Explain how shared memory works in virtual memory >>>
+        - Shared memory allows multiple processes to access and modify the same region of virtual memory, since all virtual addresses are mapped the same physical address space
+        - E.g. spinning up the same program multiple times, the code is just loaded once to memory and all virtual pages map to the same physical space
+        - The same works for shared libraries, they are only loaded once to the RAM.
+    - Explain how data isolation works in virtual memory→Each process has its own isolated address space, preventing one process from accessing another's memory.
+    - Explain how the limitation of physical memory is solved >>>
+        - The OS can decide to store process memory which was not used for some time on to disk. 
+        - The space in RAM is freed and can be used by other or even the same process. 
+        - When the stored data is accessed again via its virtual address, the OS copies the process data back to RAM. 
+    - What are page tables, and how are they used? >>>
+        - Data structures for mapping virtual memory addresses to physical
+        - Each process has its own page table
+        - The page table is stored in memory, adding an overhead for address translation.
+        - Accessing the page table requires additional memory reads, impacting performance
+        - The overhead can be reduced by the TLB
+    - Describe what the TLB does→Translation Lookaside Buffer (TLB): A cache that stores recently used virtual-physical mappings to speed up address resolution.
+    - What is a drawback of virtual memory? >>>
+        - We have an additional layer of translations, since the CPU can't read from virtual addresses.
+        - This is done by page tables, but adding this includes additional maintenance and memory usage
+        - If a page fault occurs, the performance sinks due to kernel mode switch and reading/writing back from disc.
+        - All this results in a more complex CPU architectures (MMU/TLB)
+        - The TLB can also have cache misses
+- Direct Memory Access 
+    - What happens when a key is pressed on the keyboard?→When a key is pressed, the value is written to the keyboard buffer and the CPU is interrupted. The interruption is a context switch to kernel mode, which executes the interrupt service routine (ISR) function in the kernel.
+    - What does the Interrupt Service Routine (ISR) function do for keyboard inputs?→The ISR function reads from the keyboard, puts the value in the CPU cache, and then transfers it to the memory.
+    - Why is DMA useful for larger amounts of data?→Otherwise, the transfer of every single data point goes through the CPU, which causes a bottleneck for larger amounts of data.
+    - What is the DMA and what does it do? >>>
+        - DMA stands for Direct Memory Access.
+        - It allows direct access from the network/disk to the RAM.
+        - The CPU initializes the transfer with a memory address for reading/writing and the device buffer.
+        - The DMA executes the operation and starts the direct transfer.
+    - Why is it important that the address is locked during DMA operations?→It is important because the DMA uses a physical address for the transfer, and the address must be locked to prevent any other operations from interfering with the ongoing transfer.
+    - What are some drawbacks associated with DMA? >>>
+        - DMA can be susceptible to DMA attacks (security issue).
+        - It adds complexity.
+    - Is it a good idea to use the DMA for keyboard and mouse interrupts? Why or why not?→No, DMA shouldn't be used for keyboard and mouse interrupts because the CPU is faster in handling these due to the initialization costs involved with DMA.
+    - 
+    - 

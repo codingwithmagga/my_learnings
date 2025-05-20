@@ -1,0 +1,8 @@
+- What is stored in the data section of process memory?→The global and static variables, which are referenced directly by memory address, are stored in the data section.
+- Is the size of the data section fixed?→The data section has a fixed size.
+- Which functions have access to the data section of a process?→The data section is shared by all functions of the process. In other words: Each function can access the data section.
+- How does the compiler determine the size of the data section?→The compiler knows how much space is needed for the data section after compilation, and this can be estimated through static analysis of the code.
+- Is the data section read-only?→No, the data section is not read-only, but it has a fixed size (for example, an integer variable remains an integer variable).
+- What is the purpose of the pointer at the start of the data section?→The pointer at the start of the data section, similar to the base pointer, helps address variables with the offset.
+- What can happen when a global variable is changed when using multiple threads?→When using multiple threads in one process, changing a global variable can cause cache invalidation more often, which decreases performance.
+- 

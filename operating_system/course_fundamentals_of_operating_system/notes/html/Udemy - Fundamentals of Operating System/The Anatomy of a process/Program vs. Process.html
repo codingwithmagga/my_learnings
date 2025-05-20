@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Program vs. Process
+    </h1>
+    <br/>
+    <ul>
+        <li>General
+            <ul>
+                <li>What is the difference between a program and a process?→A program is the actual file on the disk, while a process is a program in motion, executing instructions.</li>
+                <li>What happens when a program starts?→When a program starts, it becomes a process that executes instructions immediately, potentially modifying states, variables, and values.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Program
+            <ul>
+                <li>What is a program?→A program is a compiled and linked code specific to a CPU architecture, stored as a file on the disk.</li>
+                <li>What does the launcher do when starting a program?→Loads the program into memory and creates a process. </li>
+                <li></li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Process
+            <ul>
+                <li>What is a process?→A process is an instance of a program that executes instructions and has its own unique ID and memory space.</li>
+                <li>What is a Process ID (PID)?→A PID is a unique identifier assigned to each process, along with other data structures like the page table and file descriptors.</li>
+                <li>What is a PID namespace?→A PID namespace gives processes an independent set of PIDs, and it can be nested, allowing processes to have unique PIDs within different namespaces.</li>
+                <li>What happens during a context switch with the process data (new/old)?→During a context switch, the process&#39;s current state, including the program counter, is saved to memory, and the state of another process is loaded.</li>
+                <li>Describe the high-level structure of a process in the memory
+                    <ul>
+                        <li>Text segment, contains the executable code of the program. Typically read-only. It can be shared.</li>
+                        <li>Data segment, Stores global and static variables. Not shared, writable.</li>
+                        <li>Heap segment, used for dynamic memory allocation. Managed by the program.</li>
+                        <li>Stack segment, used to store function call information, local variables and return addresses</li>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/JB5-_-UunCWu091zLc3rooYmBUhyTKkws-iynw7dkK2f8SSUSiANlr2Jf8QNUC9D11BpR6to3RSg9yEnGayJqBqqc1yCE7Z-Km9EIp89wPyVd3o913nY8vzuA9rxCTcM.png" width="394" height="386"/></li>
+                    </ul>
+                </li>
+                <li></li>
+            </ul>
+        </li>
+        <li></li>
+        <li></li>
+
+    </ul>
+    </body>
+</html>

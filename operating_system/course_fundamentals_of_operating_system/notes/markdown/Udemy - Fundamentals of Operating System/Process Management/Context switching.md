@@ -1,0 +1,6 @@
+- CPU doesn't really know what a process is. It's just executing instructions.
+- What is a context?→A process or thread is a context, which can be switched.
+- What happens during a context switch?→The operating system saves the state (registers) of one process to the corresponding PCB and loads the state of another. 
+- When is the TLB flushed?→During a context switch involving processes. Threads of the same process use the same paging table and can use the "old" TLB values.
+- Explain TLB ASID in short→TLB ASID (Address space ID) is a unique identifier that allows multiple processes to share the Translation Lookaside Buffer (TLB) without interfering with each other's address translations. This can avoid TLB flushing on context switch.
+- Context switch can be done by scheduling algorithms or preemptive multitasking (a process is not allowed to run for too long).

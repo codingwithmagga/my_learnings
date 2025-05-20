@@ -1,0 +1,28 @@
+- Bound Workload
+    - Explain CPU Bound Workload→A CPU-bound workload is one that spends most of its time performing computations on the CPU. For example, encryption, Compression, sorting, ...
+    - Explain IO Bound Workload→A workload where the process spends more time waiting for I/O operations than performing computations. For example, database queries, network connection write/read, file read/write, ...
+- 
+- Multithreaded vs. Multi-process
+    - Multi-process
+        - Spins up multiple process
+        - Isolated from each other
+        - e.g. NGINX, Postgres
+    - Multithreaded
+        - Parent process spins multiple threads
+        - Shares memory with the parent
+        - e.g. MySQL, libuv
+- 
+- Mutex
+    - Explains concurrency issues with shared memory, like a race condition with two threads. It can be solved using a mutex. The mutex lives in the same shared space and the OS only allows one holding it.
+    - Book: Unix Systems for Modern Architectures: Symmetric Multiprocessing and Caching for Kernel Programmers
+    - Mutex has ownership
+    - The thread that locks Mutex must unlock
+    - If a thread terminates, the mutex can remain locked
+    - Can cause deadlock
+- 
+- Semaphores
+    - Semaphores can be used for mutual exclusion
+    - In general, this is a number with signals that can increment/decrement the value (atomically)
+    - Wait/blocks when semaphore=0
+    - Any thread with access to the semaphore can signal/wait
+    - 

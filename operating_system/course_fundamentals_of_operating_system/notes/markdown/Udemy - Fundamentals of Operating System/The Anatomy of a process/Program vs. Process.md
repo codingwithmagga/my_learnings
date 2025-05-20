@@ -1,0 +1,23 @@
+- General
+    - What is the difference between a program and a process?→A program is the actual file on the disk, while a process is a program in motion, executing instructions.
+    - What happens when a program starts?→When a program starts, it becomes a process that executes instructions immediately, potentially modifying states, variables, and values.
+    - 
+- Program
+    - What is a program?→A program is a compiled and linked code specific to a CPU architecture, stored as a file on the disk.
+    - What does the launcher do when starting a program?→Loads the program into memory and creates a process. 
+    - 
+- 
+- Process
+    - What is a process?→A process is an instance of a program that executes instructions and has its own unique ID and memory space.
+    - What is a Process ID (PID)?→A PID is a unique identifier assigned to each process, along with other data structures like the page table and file descriptors.
+    - What is a PID namespace?→A PID namespace gives processes an independent set of PIDs, and it can be nested, allowing processes to have unique PIDs within different namespaces.
+    - What happens during a context switch with the process data (new/old)?→During a context switch, the process's current state, including the program counter, is saved to memory, and the state of another process is loaded.
+    - Describe the high-level structure of a process in the memory >>>
+        - Text segment, contains the executable code of the program. Typically read-only. It can be shared.
+        - Data segment, Stores global and static variables. Not shared, writable.
+        - Heap segment, used for dynamic memory allocation. Managed by the program.
+        - Stack segment, used to store function call information, local variables and return addresses
+        - ![](https://remnote-user-data.s3.amazonaws.com/JB5-_-UunCWu091zLc3rooYmBUhyTKkws-iynw7dkK2f8SSUSiANlr2Jf8QNUC9D11BpR6to3RSg9yEnGayJqBqqc1yCE7Z-Km9EIp89wPyVd3o913nY8vzuA9rxCTcM.png)
+    - 
+- 
+- 

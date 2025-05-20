@@ -1,0 +1,25 @@
+- What is the purpose of separating a CPU into multiple units? >>>
+    - To enable pipelining, allowing simultaneous execution of multiple tasks. 
+    - For example, the next instruction can be fetched, while the previous one is decoded. 
+    - Without pipelining, the CPU or at least parts of the CPUs are (more) idle.
+- 
+- Explain Hyper Threading and which problem is solves >>>
+    - Hyper Threading exposes a single core as multiple logical cores with dedicated registers, sharing  everything else (CU, ALU and L cache). 
+    - It improves CPU utilization by allowing multiple threads to run simultaneously, reducing idle time.
+    - Overhead of context switch is reduced/removed, since the registers (which are normally replaced) are dedicated and the memory stays more or less the same.
+    - This was achieved by adding more registers to a CPU
+    - Hyper Threading does not work well, when the processes work on different data and the cache is invalidated anyway during a context switch
+- 
+- Explain SIMD and how it improves the CPU performance >>>
+    - SIMD stands for Single Instruction Multiple Data
+    - With a single instruction, multiple values are added (or subtracted or...)
+        - Traditional: Add a1,b1; Add a2,b2; Add a3,b3; Add a4,b4
+        - SIMD: Add [a1,a2,a3,a4], [b1,b2,b3,b4]
+    - This is like a vector operation with a fixed size, e.g. 32 bits
+    - It allows parallel processing of data, enhancing throughput and efficiency.
+    - E.g. ARM Neon architecture extension
+- 
+- Speculative execution
+    - What is speculative execution?→Speculative execution is a performance optimization where the CPU predicts the direction of branch instructions and executes subsequent instructions in advance.
+    - How does speculative execution improve performance?→It keeps the CPU busy during idle times, such as while waiting for memory operations to complete, saving time when predictions are correct.
+    - 

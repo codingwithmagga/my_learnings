@@ -1,0 +1,47 @@
+- Process Control Block (PCB)
+    - Define→The PCB is a data structure in the kernel memory space where process metadata (like the program counter, PID, and memory data) is stored.
+    - What does it contain? >>>
+        - PID, Process State, Program counter, registers
+        - Process Control info (running/stopped, priority)
+        - Page Table 
+        - Accounting (CPU/Memory usage)
+        - Memory Management info (Pointer to code/stack etc.)
+        - I/O info (File descriptors, e.g. in Linux everything is a file like sockets, outgoing connections ...)
+        - IPC (interprocess communication) info, semaphores, mutexes, shared memory, messages
+- 
+- Kernel Process Table
+    - Purpose→Keeps track of all currently running processes in the system in a table mapping PID to PCB location. Located in the kernel memory space.
+- 
+- Threads
+    - Explain why a thread is a lighter weight process→Threads share the same memory space and resources as their parent process, requiring less overhead to create and manage.
+    - What is shared between different threads in the same process? >>>
+        - Memory space, including code, data, and heap. 
+        - File descriptors 
+        - Interprocess communication entities like mutexes or semaphores.
+    - What is unique for each thread?→Each thread has its own program counter, register(s) (values), and stack.
+    - Explain the memory structure of a process in RAM with threads >>>
+        - ![](https://remnote-user-data.s3.amazonaws.com/C-slemGNUxZxIzlacwlNWo5zWtdzo-j7R0JZjjDvnEalnXklGUBAsuafYpUeExjK3zoYXT8Rd9ktLpNu-o9llU3LccarW76o6SrqC1MiBzqJgZ3K1bvPbI4zdVLeUOuv.png)
+    - Explain the benefit of sharing the PCB between threads→Reduces overhead when switching between the threads. For example, the TLB doesn't have to be flushed, since they share the same page tables.
+- 
+- Thread Control Block (TCB)
+    - Define→The TCB is a data structure in the kernel memory space where thread metadata (like TID, program counter, registers) is stored.
+    - What does it contain? >>>
+        - TID, Thread State, Program counter, registers
+        - Process Control info (running/stopped, priority)
+        - Accounting (CPU/Memory usage)
+        - Memory Management info (Pointer to code/stack etc.)
+        - Pointer to parent PCB
+    - Which metadata is shared with the parent process?→Page Table, IO info (file descriptors) and IPC info (semaphores, shared memory etc.)
+- 
+- Kernel Thread Table
+    - Purpose→Keeps track of all currently running threads in the system in a table mapping TID to TCB location.  Located in the kernel memory space.
+- 
+- Fork of a process
+    - Define→A fork creates a nearly identical copy of a process. 
+    - What is Copy on Write (CoW)?→Copy-on-write is a memory management technique that delays copying data until it is modified. Before that, the memory is shared, for example between two processes.
+    - What happens with the memory during a fork?→The child process must have new virtual memory space. But the OS uses CoW, so pages can be shared unless a write operation happens, for example calling a function.
+- 
+- Example Postgres
+    - In Postgres, every database connection creates a new (forked) process. Which is a bad idea because it creates so much overhead compared to a thread. They needed to limit the number of connections to 100 because of this. 
+    - It is often solved by having a pool of connections and multiple users share these connections. 
+- 

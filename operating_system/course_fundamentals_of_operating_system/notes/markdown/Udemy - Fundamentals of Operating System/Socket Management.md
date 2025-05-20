@@ -1,0 +1,158 @@
+- Network fundamentals
+    - Client-Server Architecture
+        - Benefits?→Clients can call servers to perform expensive tasks which have the resources (like RAM, CPU etc.) to do it. Clients no longer require dependencies but can still execute lightweight tasks. This results in improved resource utilization.
+        - What is RPC?→A Remote Procedure Call (RPC) is a technology that allows a computer program to execute a procedure (function) on another computer, as if it were a local procedure call.
+        - What is absolutely necessary for this?→A network and a communication model.
+    - 
+    - OSI (Open Systems Interconnection) Model
+        - Why do we need a communication model?→To standardize communication protocols and ensure interoperability between different systems.
+        - There are 7 layers, each describing a specific network component. 
+            - Name these layers >>>
+                - Layer 7 - Application - HTTP/FTP/gRPC
+                - Layer 6 - Presentation - Encoding, Serialization
+                - Layer 5 - Session - Connection establishment, TLS (Transport Layer Security)
+                - Layer 4 - Transport - UDP/TCP
+                - Layer 3 - Network - IP
+                - Layer 2 - Data link - Frames, Mac address Ethernet
+                - Layer 1 - Physical - Electric signal, fiber or radio waves
+            - Example:
+                - Sending a Post Request to an HTTPS webpage
+                    - Layer 7 - Application - POST request with JSON data to HTTPS server
+                    - Layer 6 - Presentation - Serialize JSON to flat byte strings
+                    - Layer 5 - Session - Request to establish TCP connection/TLS
+                    - Layer 4 - Transport - Sends SYN request target port 443
+                    - Layer 3 - Network - SYN is placed in IP packet(s) and adds the source/destination IPs
+                    - Layer 2 - Data link - Each packet goes into a single frame and adds the source/destination MAC addresses
+                    - Layer 1 - Physical - Each frame becomes a string of bits which converted into either a radio signal (Wi-Fi), electric signal (Ethernet), or light (fiber)
+                    - Take it with a grain of salt, it's not always cut and dry
+                - Receiver computer receives the POST request the other way around
+                    - Layer 1 - Physical - Radio, electric or light is received and converted into digital bits
+                    - Layer 2 - Data link - The bits from Layer 1 are assembled into frames
+                    - Layer 3 - Network - The frames from layer 2 are assembled into IP packet.
+                    - Layer 4 - Transport
+                        - The IP packets from layer 3 are assembled into TCP segments
+                        - Deals with Congestion control/flow control/retransmission in case of TCP
+                        - If Segment is SYN, we don’t need to go further into more layers as we are still processing the connection request
+                    - Layer 5 - Session
+                        - The connection session is established or identified
+                        - We only arrive at this layer when necessary (three-way handshake is done)
+                    - Layer 6 - Presentation - Deserialize flat byte strings back to JSON for the app to consume
+                    - Layer 7 - Application - Application understands the JSON POST request and your express JSON or Apache request receive event is triggered
+                    - Take it with a grain of salt, it's not always cut and dry
+        - Explain why sending data from a client does not necessarily go directly to the server. Instead, it will be checked (multiple) times before that. >>>
+            - While sending data through a network, you often go through switches or routers or firewalls or ... These are devices operating on different layers which check, for example, the MAC or IP Addresses. 
+            - ![](https://remnote-user-data.s3.amazonaws.com/YQjxOiiBu1EyAUrG0zyML1pe1yqL2S3ucF2pxw-xrL3i4XTL65iJRxC3aDireRaoBB1r0nBBE0ML3Rq6iI8a_oJF3ww0qtmevInbbcPXsFq1J48n5_wUYnupTdNns1OE.png)
+            - ![](https://remnote-user-data.s3.amazonaws.com/f8AYm4U5IYVcPNKCvg-jQEHNJwK0RbwO_LIaPERN2MDLCyQD7qWReImPrzcn8xCuxHOI2Z1xjIg6FzYQidSHLrbgd5LsmUIZCJMcIIF4m4E9rF1xareM9bC7FDYn5aZH.png)
+        - Name shortcomings >>>
+            - Too many layers which are difficult to comprehend 
+            - Lack of standardization across implementations
+            - Overhead: The model introduces additional overhead due to its layered structure, which can impact performance.
+            - Not used in Practice: While it is a good theoretical framework, most of the networking protocols used today are based on the TCP/IP model, leading to a mismatch between theory and practice.
+    - 
+    - TCP/IP Model
+        - Describe the difference to the OSI Model→The TCP/IP model is a simpler, less layered model than the OSI model, focusing on four layers instead of seven. 
+        - Name the four layers >>>
+            - Application (Layer 5, 6 and 7)
+            - Transport (Layer 4)
+            - Internet (Layer 3)
+            - Data link (Layer 2)
+            - The Physical layer is not officially covered
+    - 
+    - Host-to-Host Connection
+        - MAC
+            - What does it stand for?→Media Access Control.
+            - What problem does it solve?→Each host network card has a unique MAC address, ensuring that data is directed to the correct device.
+            - When a message is sent on a network, {{everyone}} will receive it, but only {{the one}} with the {{correct MAC address}} will accept it.
+        - IP Address
+            - Purpose?→To enable routing and uniquely identify a device on a network. Without routing, the entire network and all messages needed to be scanned to search for messages.  
+            - Structure?→Is built in two parts: One part to identify the network, the other is the host.
+            - Why are MAC addresses still necessary?→MAC addresses provide unique hardware identification for devices on a local network, enabling efficient communication between them.
+        - Ports
+            - Purpose?→To uniquely identify a process or application on a host for network communication.
+    - 
+    - TCP
+        - Stands for?→Transmission Control Protocol.
+        - Name key points >>>
+            - Layer 4 protocol
+            - Ability to address processes in a host using ports
+            - "Controls" the transmission, unlike UDP
+            - Establishes a connection/session, means there is knowledge between the client and the server
+        - Name Use cases >>>
+            - Reliable communication
+            - Remote shell
+            - Database connections
+            - Web communications
+            - Any bidirectional communication
+        - Key points about a TCP connection >>>
+            - Connection is a Layer 5 entity (session)
+            - An agreement between client and server, can't send data without a connection
+            - Requires a 3-way TCP handshake
+            - Reliable, ordered delivery of data in segments
+            - Lost segments are retransmitted
+            - 20 bytes header segment (can go to 60)
+            - Stateful
+            - Identified by four properties: Source/Destination IP, Source/Destination port
+        - Explain the three-way handshake→A three-way handshake is a method used in TCP/IP networks to establish a connection between two devices, involving a SYN, SYN-ACK, and ACK exchange (in this order). ![](https://remnote-user-data.s3.amazonaws.com/o8vmPD2btd3KImkMciE9N-n5bv6izNBo_d52qiY6I22-xAChoKsz4rkyZ_7WWr6saaKxFTykm4z0szRuPyg96CLmoi9Nk6ZHmviX32y3vGYsIQw8eptxE_Kb243_jUvw.png)
+        - Explain how data is sent?→Data will be encapsulated in a segment and acknowledged (ACK) by the receiver. Data can be sent in multiple segments and acknowledged by a single response.
+ ![](https://remnote-user-data.s3.amazonaws.com/fvO61cuEqmrPQWh5kZqfatjr7un08FvLeFMhQfpLMryDuczR8BmWlgcW63n_UdhwFuqnSYxbejaEQaiEthLTpup8TSqxpmqwlI17z4qmSnz8zE1LA_xDrEDh0bN5vx6O.png)![](https://remnote-user-data.s3.amazonaws.com/rku2UFd4Szt0dFMyyvn08P5NZEcNwG-IG8lhWstLd5YGMwE_-1pBYNO0Dul-NuOH49m1QV3ie3Veday_JcJwmwxKsis8O6DfY5AWy6Jjnp0a041BsIu_JzWJK7up4mQ2.png)
+        - Explain how a connection is closed?→A connection is closed when both the client and server send a FIN packet (started by one of them), followed by an ACK packet acknowledging the receipt of the FIN. It's a four way handshake.![](https://remnote-user-data.s3.amazonaws.com/1Rrujy2vh4UoB_8hXBgqoKOMrmFCGisj0SCRt4qWRQ-8UhNY3fa5BPjSPN8JP9VIpPAThV4GVFlWAuzM5TxXVpFy0aynZE8xl1WqY7mBwOpV9HSX1ZUI0XgB57kPv-hY.png)
+- Sockets, Connections and Queues
+    - Socket
+        - What is a socket?→A socket is an endpoint of a two-way communication link between two programs. It is created when a process listens on an IP/Port. 
+        - Relationship to the process?→The process owns the socket, which is stored in the PCB. It can be shared during a fork.
+        - How is a connection established? >>>
+            - Kernel does the 3-way handshake and creates a socket and the SYN and accept queue
+            - The backend process needs to "accept" the connection. Before that, it will be stored in the Accept Queue of the socket.
+            - A connection file descriptor is created.
+            - A send and a receive queue are created for outgoing and incoming data.
+        - What is socket sharding?→Socket sharding is a technique used to distribute network traffic across multiple sockets (or connections) to improve performance, scalability, and fault tolerance in network applications. 
+    - 
+- Reading and Sending Data
+    - What happens when data is received through a connection? >>>
+        - Kernel puts data in receive queue
+        - Kernel ACKs (may delay) and update window sizes
+        - App calls read to copy data
+    - What is the "window size" in the context of sockets?→The "window size" refers to the amount of data that can be sent before needing an acknowledgment from the receiver. The concept of window sizing is part of flow control. This helps prevent overwhelming the receiver with too much data at once. 
+    - 
+- Socket Programming Patterns
+    - There are multiple ways of implementing this:
+        - Single Listener / Single Worker thread (Node)
+        - Single Listener / Multiple Worker threads (Memcached)
+            - Listener and Acceptor in one main thread
+            - Each connection gets its own reader thread
+        - Single Listener / Multiple Worker threads with load balancing (Ramcloud)
+            - Building requests(jobs), each getting its own thread
+        - Multiple Acceptor Threads single Socket (nginx)
+            - One Listener
+            - Multiple Acceptors (fast accepting(user) possible) and readers 
+        - Multiple Listeners on the same port (nginx and other)
+            - Listener, Acceptor and reader in each thread
+            - Using Socket sharding
+            - Fastest way to accept as many connections as possible
+- Asynchronous IO
+    - Most IO operations are {{blocking operations}} . This means the process cannot move their {{program counter}} .
+    - Read blocks, for example when there is no data.
+ ![](https://remnote-user-data.s3.amazonaws.com/R8Tu1LshEuIXLwAltoXH-BUNGEn68XiJj0JD8fp8XKXSoHJSr4ydVWNyRDZGLaQItEv_ehDuSBSflCVB4i5daiZG313LW4pA-mGugeASOoD-E5bGs3hyOpSE7dAnLGgm.png)
+        - What does that lead to?→It leads to context switches and slowing down the process. Potentially blocked forever if data is never sent/received through that connection.
+        - How to solve the blocking?→Ask OS if there is data. If so, call without blocking
+    - With the function `select()` a collection of file descriptors will be monitored by the kernel and returns when any of is ready. Select is blocking but with a timeout. But the process needs to check which one is ready using a loop.
+        - Name Pros >>>
+            - Avoid reading unready resources
+            - async
+        - Name Cons >>>
+            - Slow, since we have to do the loop ⇒ `O(n)`
+            - Lots of copying to/from kernel/user space
+            - Only supports a fixed size of file descriptors.
+    - Better is `epoll`. Register an interest list of file descriptors in the kernel. Kernel updating this list. When the user calls `epoll__wait()`, the kernel returns a list of connections with data (events). 
+![](https://remnote-user-data.s3.amazonaws.com/pwnPYyNhkYtN_Uxvt3HPRrQNnZN0oa_4Q3kCS2gxi2mbGAs99z6JLBeb6LejQ1XyGONimHSZsrDT0uJEAC4Qj2QC-FhElzoPRe1V2CtnwVKrZ58_r90O3mTKv1YCNA_B.png)
+        - Drawbacks >>>
+            - Complex, for example, missing events can be dangerous.
+                - In edge tracking, additional user checks necessary
+            - Only on linux
+            - Too many `syscalls` 
+            - Doesn't work on files, only on sockets and pipes
+    - `io_uring` is a modern Linux asynchronous I/O (AIO) interface that uses two ring buffers (queues) for submission and completion events. The kernel and user space communicate via these queues, allowing zero-copy, low-latency I/O without `syscall` overhead for each operation. It supports file I/O, network I/O, and more, making it more flexible and efficient than `epoll `for high-performance workloads.
+        - Biggest issue?→Security issues because of the usage of shared memory. Google even disabled `io_uring` in many applications because of this. 
+    - 
+    - For cross-platform development use `lib_uv`. 
+    - 

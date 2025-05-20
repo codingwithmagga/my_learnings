@@ -1,0 +1,14 @@
+- There are multiple ways of implementing this:
+    - Single Listener / Single Worker thread (Node)
+    - Single Listener / Multiple Worker threads (Memcached)
+        - Listener and Acceptor in one main thread
+        - Each connection gets its own reader thread
+    - Single Listener / Multiple Worker threads with load balancing (Ramcloud)
+        - Building requests(jobs), each getting its own thread
+    - Multiple Acceptor Threads single Socket (nginx)
+        - One Listener
+        - Multiple Acceptors (fast accepting(user) possible) and readers 
+    - Multiple Listeners on the same port (nginx and other)
+        - Listener, Acceptor and reader in each thread
+        - Using Socket sharding
+        - Fastest way to accept as many connections as possible

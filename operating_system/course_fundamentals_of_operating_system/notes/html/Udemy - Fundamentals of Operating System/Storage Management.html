@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Storage Management
+    </h1>
+    <br/>
+    <ul>
+        <li>Persistent storage
+            <ul>
+                <li>HDD
+                    <ul>
+                        <li>Parts
+                            <ul>
+                                <li>What does it consist of?→Platters, read/write heads, and a spindle motor.</li>
+                                <li>Track::A concentric circular path where data is stored and accessed.</li>
+                                <li>Geometrical sector::A portion of the disk (a closed region bounded by a circle) enclosed by two radii and an arc.</li>
+                                <li>Disc sector::It refers to the intersection of a track and geometrical sector. Minimum storage unit of a hard drive.</li>
+                                <li>Cluster::Unit of storage on a hard disk drive (HDD) that consists of a group of contiguous sectors used to improve data access efficiency. It is the smallest logical amount of disk space that can be allocated to hold a file</li>
+                                <li><svg width="293" height="415" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <image href="https://remnote-user-data.s3.amazonaws.com/BXJd0YxQT7bImC0iW4mIMWs0tSCU1qrkN4x4RUO4p2ieOwOSM6ZVKWslXEYJycYlzpqpL78yrJlK_V6YStfz9PPoAK8FiuBza2vYtJgX0mYSzbkO9REe2ErQbOgQ96Sx.png" x="0" y="0" height="415px" width="293px"/>
+        <rect x="47.649826720969614" y="324.3446597389203" width="41.48634215337546" height="15.3653119086576" clozeId="5388616648379746" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/><rect x="47.137649657347694" y="346.36827347466283" width="127.019911778236" height="18.95055135401102" clozeId="5388616648379746" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/><rect x="48.16200378459154" y="366.85535601953956" width="75.29002835242211" height="14.853134845035683" clozeId="5388616648379746" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/><rect x="48.67418084821345" y="387.34243856441634" width="48.14464398046041" height="17.926197226767172" clozeId="5388616648379746" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/>
+        </svg></li>
+                            </ul>
+                        </li>
+                        <li>How is data read from the disc
+                            <ul>
+                                <li>New: LBA, Old: Using the CHS method: Cylinder(Track)/Head/Sector</li>
+                                <li>Position the read/write head over the cylinder/track </li>
+                                <li>Spin to the correct geometrical sector</li>
+                                <li>Read the magnetic data</li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/fuY3V0n7BhTSA8vaLtUdrehkuP6Kh_UuRrQkGlHaz0WaiCQZGMdNFWnWYErmjmGkSd0iqspqk_hqhzcIB9xH9rPf58kVjQ_VY4Cn5k2yMp4U3llXFNxnYoktqIbI-qKS.png" width="527" height="249"/></li>
+                            </ul>
+                        </li>
+                        <li>Why was introducing new HDD layouts a hard and painful task and how was it solved?→In the early stages, where was no HDD controller and the OS was sending commands directly to the hard drive. The layout of the HDD (CHS) was exposed to the OS. The OS didn&#39;t work on other layouts. It was solved by adding an HDD controller which does the conversion from CHS to the new layout.</li>
+                        <li>LBA
+                            <ul>
+                                <li>Define→Logical Block Addressing is a method of addressing data on a hard disk drive. Only one number is used to address data, and each linear base address describes a single block. Also used in SSD. Also known as logical sector size.</li>
+                                <li>What problem does it solve?→Logical Block Addressing (LBA) solves the problem of needing a consistent way to address data on a hard disk drive (HDD) regardless of its physical layout.</li>
+                                <li>Drawback?→Additional cost for the translation of the LBA number to the disk address, which is done by the disk controller.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>SSD
+                    <ul>
+                        <li>Structure→SSDs use flash memory organized in blocks and pages for persistent storage. A block is a collection of pages which have a fixed size (4kb, 16kb, ...)</li>
+                        <li>What is flash memory?→Non-volatile memory that can be electrically erased and reprogrammed. There is NOR flash and NAND flash. SSD uses NAND flash.</li>
+                        <li>Minimum read, write and erase size?→The minimum read and write size is a page. Erase is a whole block because it is expensive.</li>
+                        <li>Flash translation layer::Software layer that manages the mapping of logical block addresses to physical storage locations in flash memory devices.</li>
+                        <li>Why is LBA mapping more expensive than in HDD→More complex mapping since it has to be updated continuously because there is no &quot;update&quot; functionality in an SSD. The mapping table is stored in a RAM (mostly DRAM) belonging to the SSD.</li>
+                        <li>What is Write amplification?→Write amplification is the phenomenon where writing data to a storage device requires writing a larger amount of data than the original data size. Because flash memory must be erased before it can be rewritten, the process to perform a write operation results in moving (or rewriting) user data and metadata more than once.</li>
+                        <li>Wear leveling
+                            <ul>
+                                <li>Explain→Wear leveling is a technique used in SSDs to distribute write operations evenly across all memory blocks, extending the lifespan of the drive. Because NAND cells have a write limit.</li>
+                                <li>Why is it necessary?→Extending the lifespan. Without this, there are pages which are never touched (like OS files or shared libraries) called cold pages and hot pages which are updated all the time. So some pages will die way before others.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>File Systems
+            <ul>
+                <li>File System are an abstraction above present storage for the users. Writing and reading to a file translates to blocks, and at least one block (one or more LBAs) needs to be allocated.</li>
+                <li>Linux treats everything as a file.</li>
+                <li></li>
+                <li>Examples for File Systems
+                    <ul>
+                        <li>FAT (FAT16, FAT32)</li>
+                        <li>NTFS (new technology file system)</li>
+                        <li>APFS (Apple File System)</li>
+                        <li>EXT4 (linux default)</li>
+                        <li>XFS</li>
+                        <li>btrfs</li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>PBA
+                    <ul>
+                        <li>Define→A PBA is a Physical Block Address, the actual location of a data block on a storage device. Size is a multiple of an LBA (so one or more). Also known as physical sector size.</li>
+                    </ul>
+                </li>
+                <li>File system block size
+                    <ul>
+                        <li>Define→The minimum read/write used by the filesystem. Size is a multiple of an LBA (so one or more). When formatting a file system, the user can specify a file system block size, especially on Linux with some restrictions.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>FAT32 (File Allocation Table) 
+                    <ul>
+                        <li>Describe
+                            <ul>
+                                <li>FAT32 is a file system that organizes files and directories on a storage device using a File Allocation Table.  </li>
+                                <li>The basic idea is an array of 32bit integers, where the index is the LBA. The value in the array itself at this index is the next index until we reach the end.</li>
+                                <li>Reading all the LBAs in order gives the file.</li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/5PogkNB__koqruzjrDQfee2ysMP1pC2Thro6RRQdPuwp5D593WcuPZXxwRX9iXiHavHEU7vYHhU0OHPoxfrJlw7MGXb19zxV6p_Cc0Gtvh3x-5LPqvdJNBTTxE0DWK4y.png" width="566" height="270"/></li>
+                            </ul>
+                        </li>
+                        <li>Why can only be 28 bits used for the LBA index instead of 32?→Four bits are reserved for other purposes like &quot;dirty&quot; or &quot;free&quot;, leaving only 28 bits for the LBA index.</li>
+                        <li>Explain the issue with low LBA sizes and how it was solved?→In the old standard (LBA=512 byte), you could only address 2^28*512 bytes ~ 128GB. It was solved using Clustering.</li>
+                        <li>Clustering
+                            <ul>
+                                <li>Explain→Cluster is a logical grouping of LBAs. For example, 8LBAS = 1 cluster (4kb, if LBA = 512byte). So Block/Cluster 0 ⇒ LBAs 0-7, Block/Cluster 1 ⇒LBAs 8-15 and so on. Now you can address 8*128GB ~ 1 TB.</li>
+                                <li>A larger cluster size allows more disk space to be addressed. But what is the disadvantage here?→Larger <a isRemReference="true" href="Storage%20Management/Persistent%20storage/HDD/Parts/Cluster.html?isPin=false">Cluster</a> sizes lead to wasted space for smaller files (<a isRemReference="true" href="../Udemy%20-%20Fundamentals%20of%20Operating%20System/Memory%20Management/Virtual%20memory/Internal%20fragmentation.html?isPin=false">Internal fragmentation</a>).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>OS Page Cache
+                    <ul>
+                        <li>Describe→A region of RAM used by the OS to cache recently accessed file system blocks, improving I/O performance. </li>
+                        <li>What happens when a user writes a file?→The OS writes to the page cache, and then asynchronously writes it to the disk. Calling <q>fsync()</q> immediately flushes the page cache to disk. </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>File Modes
+                    <ul>
+                        <li>A file must be opened to be used</li>
+                        <li>There are different modes in open
+                            <ul>
+                                <li>O_APPEND - append mode</li>
+                                <li>O_DIRECT - skips page cache</li>
+                                <li>O_SYNC - write always flushes cache (slow, calls fsync() every time, should not be used unless you know what you are doing)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Partitions
+                    <ul>
+                        <li>Explain→Partitions are divisions of a hard drive that allow for the organization and management of files and operating systems. Start and end in an LBA. Each partition can have its own file system and each file system a different block size (cluster). An OS concept, disk and filesystem have no idea of a partition.</li>
+                        <li>Partitions should be aligned with the PBAs; otherwise there are performance issues, due to overlapping.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>What really happens in a file IO?
+            <ul>
+                <li>API
+                    <ul>
+                        <li>What API is used for reading/writing files in Unix/Linux→Portable Operating System Interface (POSIX) provides functions like <q>open()</q>, <q>read()</q>, <q>write()</q>, and <q>close()</q> for file I/O in Unix-like systems. Since everything on Linux is treated as a file, the same API can be used to read/write a socket connection.</li>
+                        <li>What API is used for reading/writing files on Windows?→WIN32 API functions.</li>
+                    </ul>
+                </li>
+                <li></li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

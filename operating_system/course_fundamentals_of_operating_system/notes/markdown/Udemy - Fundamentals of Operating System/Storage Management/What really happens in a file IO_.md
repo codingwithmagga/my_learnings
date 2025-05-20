@@ -1,0 +1,4 @@
+- API
+    - What API is used for reading/writing files in Unix/Linux→Portable Operating System Interface (POSIX) provides functions like `open()`, `read()`, `write()`, and `close()` for file I/O in Unix-like systems. Since everything on Linux is treated as a file, the same API can be used to read/write a socket connection.
+    - What API is used for reading/writing files on Windows?→WIN32 API functions.
+- 

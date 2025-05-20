@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Concurrency
+    </h1>
+    <br/>
+    <ul>
+        <li>Bound Workload
+            <ul>
+                <li>Explain CPU Bound Workload→A CPU-bound workload is one that spends most of its time performing computations on the CPU. For example, encryption, Compression, sorting, ...</li>
+                <li>Explain IO Bound Workload→A workload where the process spends more time waiting for I/O operations than performing computations. For example, database queries, network connection write/read, file read/write, ...</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Multithreaded vs. Multi-process
+            <ul>
+                <li>Multi-process
+                    <ul>
+                        <li>Spins up multiple process</li>
+                        <li>Isolated from each other</li>
+                        <li>e.g. NGINX, Postgres</li>
+                    </ul>
+                </li>
+                <li>Multithreaded
+                    <ul>
+                        <li>Parent process spins multiple threads</li>
+                        <li>Shares memory with the parent</li>
+                        <li>e.g. MySQL, libuv</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Mutex
+            <ul>
+                <li>Explains concurrency issues with shared memory, like a race condition with two threads. It can be solved using a mutex. The mutex lives in the same shared space and the OS only allows one holding it.</li>
+                <li>Book: Unix Systems for Modern Architectures: Symmetric Multiprocessing and Caching for Kernel Programmers</li>
+                <li>Mutex has ownership</li>
+                <li>The thread that locks Mutex must unlock</li>
+                <li>If a thread terminates, the mutex can remain locked</li>
+                <li>Can cause deadlock</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Semaphores
+            <ul>
+                <li>Semaphores can be used for mutual exclusion</li>
+                <li>In general, this is a number with signals that can increment/decrement the value (atomically)</li>
+                <li>Wait/blocks when semaphore=0</li>
+                <li>Any thread with access to the semaphore can signal/wait</li>
+                <li></li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

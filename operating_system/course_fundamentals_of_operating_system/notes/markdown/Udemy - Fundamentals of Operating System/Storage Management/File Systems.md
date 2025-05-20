@@ -1,0 +1,43 @@
+- File System are an abstraction above present storage for the users. Writing and reading to a file translates to blocks, and at least one block (one or more LBAs) needs to be allocated.
+- Linux treats everything as a file.
+- 
+- Examples for File Systems >>>
+    - FAT (FAT16, FAT32)
+    - NTFS (new technology file system)
+    - APFS (Apple File System)
+    - EXT4 (linux default)
+    - XFS
+    - btrfs
+    - 
+- 
+- PBA
+    - Define→A PBA is a Physical Block Address, the actual location of a data block on a storage device. Size is a multiple of an LBA (so one or more). Also known as physical sector size.
+- File system block size
+    - Define→The minimum read/write used by the filesystem. Size is a multiple of an LBA (so one or more). When formatting a file system, the user can specify a file system block size, especially on Linux with some restrictions.
+- 
+- FAT32 (File Allocation Table) 
+    - Describe >>>
+        - FAT32 is a file system that organizes files and directories on a storage device using a File Allocation Table.  
+        - The basic idea is an array of 32bit integers, where the index is the LBA. The value in the array itself at this index is the next index until we reach the end.
+        - Reading all the LBAs in order gives the file.
+        - ![](https://remnote-user-data.s3.amazonaws.com/5PogkNB__koqruzjrDQfee2ysMP1pC2Thro6RRQdPuwp5D593WcuPZXxwRX9iXiHavHEU7vYHhU0OHPoxfrJlw7MGXb19zxV6p_Cc0Gtvh3x-5LPqvdJNBTTxE0DWK4y.png)
+    - Why can only be 28 bits used for the LBA index instead of 32?→Four bits are reserved for other purposes like "dirty" or "free", leaving only 28 bits for the LBA index.
+    - Explain the issue with low LBA sizes and how it was solved?→In the old standard (LBA=512 byte), you could only address 2^28*512 bytes ~ 128GB. It was solved using Clustering.
+    - Clustering
+        - Explain→Cluster is a logical grouping of LBAs. For example, 8LBAS = 1 cluster (4kb, if LBA = 512byte). So Block/Cluster 0 ⇒ LBAs 0-7, Block/Cluster 1 ⇒LBAs 8-15 and so on. Now you can address 8*128GB ~ 1 TB.
+        - A larger cluster size allows more disk space to be addressed. But what is the disadvantage here?→Larger [Cluster](../Storage%20Management/Persistent%20storage/HDD/Parts/Cluster.md) sizes lead to wasted space for smaller files ([Internal fragmentation](../../Udemy%20-%20Fundamentals%20of%20Operating%20System/Memory%20Management/Virtual%20memory/Internal%20fragmentation.md)).
+- 
+- OS Page Cache
+    - Describe→A region of RAM used by the OS to cache recently accessed file system blocks, improving I/O performance. 
+    - What happens when a user writes a file?→The OS writes to the page cache, and then asynchronously writes it to the disk. Calling `fsync()` immediately flushes the page cache to disk. 
+- 
+- File Modes
+    - A file must be opened to be used
+    - There are different modes in open >>>
+        - O_APPEND - append mode
+        - O_DIRECT - skips page cache
+        - O_SYNC - write always flushes cache (slow, calls fsync() every time, should not be used unless you know what you are doing)
+- 
+- Partitions
+    - Explain→Partitions are divisions of a hard drive that allow for the organization and management of files and operating systems. Start and end in an LBA. Each partition can have its own file system and each file system a different block size (cluster). An OS concept, disk and filesystem have no idea of a partition.
+    - Partitions should be aligned with the PBAs; otherwise there are performance issues, due to overlapping.

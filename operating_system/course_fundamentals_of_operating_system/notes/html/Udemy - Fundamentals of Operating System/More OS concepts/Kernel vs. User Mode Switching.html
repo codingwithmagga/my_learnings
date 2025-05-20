@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Kernel vs. User Mode Switching
+    </h1>
+    <br/>
+    <ul>
+        <li>Kernel vs. User
+            <ul>
+                <li>In the process memory space, there is an additional part at the top of each process. What is it?→It&#39;s the kernel stack space.</li>
+                <li>The CPU has two modes.→User and Kernel mode</li>
+                <li>What is done in CPU user mode?→The code of the user is executed</li>
+                <li>What is done in Kernel Mode?→The code from the kernel (in the kernel stack) is executed like system calls, drivers etc. </li>
+                <li>How are the access rights for kernel and user mode in the process memory space for kernel and user space?→In kernel mode, both spaces can be accessed, while in user mode only the user space can be accessed.</li>
+                <li>Describe what happens when the process switch to kernel mode→Almost the same as in a context switch between threads of the same process and when a function is called. The base pointer is stored on the kernel stack, as well as the return address. All registers values and states are stored in memory. </li>
+                <li>What cost comes with a kernel switch?
+                    <ul>
+                        <li>Mode switch (store all registers and restore them)</li>
+                        <li>Memory access</li>
+                        <li>Security check and validation</li>
+                        <li>System call number lookup (lookup for kernel function place)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+- What happens when a key is pressed on the keyboard?→When a key is pressed, the value is written to the keyboard buffer and the CPU is interrupted. The interruption is a context switch to kernel mode, which executes the interrupt service routine (ISR) function in the kernel.
+- What does the Interrupt Service Routine (ISR) function do for keyboard inputs?→The ISR function reads from the keyboard, puts the value in the CPU cache, and then transfers it to the memory.
+- Why is DMA useful for larger amounts of data?→Otherwise, the transfer of every single data point goes through the CPU, which causes a bottleneck for larger amounts of data.
+- What is the DMA and what does it do? >>>
+    - DMA stands for Direct Memory Access.
+    - It allows direct access from the network/disk to the RAM.
+    - The CPU initializes the transfer with a memory address for reading/writing and the device buffer.
+    - The DMA executes the operation and starts the direct transfer.
+- Why is it important that the address is locked during DMA operations?→It is important because the DMA uses a physical address for the transfer, and the address must be locked to prevent any other operations from interfering with the ongoing transfer.
+- What are some drawbacks associated with DMA? >>>
+    - DMA can be susceptible to DMA attacks (security issue).
+    - It adds complexity.
+- Is it a good idea to use the DMA for keyboard and mouse interrupts? Why or why not?→No, DMA shouldn't be used for keyboard and mouse interrupts because the CPU is faster in handling these due to the initialization costs involved with DMA.
+- 
+- 

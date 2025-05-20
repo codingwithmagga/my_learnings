@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Process Management
+    </h1>
+    <br/>
+    <ul>
+        <li>Process vs. Thread
+            <ul>
+                <li>Process Control Block (PCB)
+                    <ul>
+                        <li>Define→The PCB is a data structure in the kernel memory space where process metadata (like the program counter, PID, and memory data) is stored.</li>
+                        <li>What does it contain?
+                            <ul>
+                                <li>PID, Process State, Program counter, registers</li>
+                                <li>Process Control info (running/stopped, priority)</li>
+                                <li>Page Table </li>
+                                <li>Accounting (CPU/Memory usage)</li>
+                                <li>Memory Management info (Pointer to code/stack etc.)</li>
+                                <li>I/O info (File descriptors, e.g. in Linux everything is a file like sockets, outgoing connections ...)</li>
+                                <li>IPC (interprocess communication) info, semaphores, mutexes, shared memory, messages</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Kernel Process Table
+                    <ul>
+                        <li>Purpose→Keeps track of all currently running processes in the system in a table mapping PID to PCB location. Located in the kernel memory space.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Threads
+                    <ul>
+                        <li>Explain why a thread is a lighter weight process→Threads share the same memory space and resources as their parent process, requiring less overhead to create and manage.</li>
+                        <li>What is shared between different threads in the same process?
+                            <ul>
+                                <li>Memory space, including code, data, and heap. </li>
+                                <li>File descriptors </li>
+                                <li>Interprocess communication entities like mutexes or semaphores.</li>
+                            </ul>
+                        </li>
+                        <li>What is unique for each thread?→Each thread has its own program counter, register(s) (values), and stack.</li>
+                        <li>Explain the memory structure of a process in RAM with threads
+                            <ul>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/C-slemGNUxZxIzlacwlNWo5zWtdzo-j7R0JZjjDvnEalnXklGUBAsuafYpUeExjK3zoYXT8Rd9ktLpNu-o9llU3LccarW76o6SrqC1MiBzqJgZ3K1bvPbI4zdVLeUOuv.png" width="479" height="605"/></li>
+                            </ul>
+                        </li>
+                        <li>Explain the benefit of sharing the PCB between threads→Reduces overhead when switching between the threads. For example, the TLB doesn&#39;t have to be flushed, since they share the same page tables.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Thread Control Block (TCB)
+                    <ul>
+                        <li>Define→The TCB is a data structure in the kernel memory space where thread metadata (like TID, program counter, registers) is stored.</li>
+                        <li>What does it contain?
+                            <ul>
+                                <li>TID, Thread State, Program counter, registers</li>
+                                <li>Process Control info (running/stopped, priority)</li>
+                                <li>Accounting (CPU/Memory usage)</li>
+                                <li>Memory Management info (Pointer to code/stack etc.)</li>
+                                <li>Pointer to parent PCB</li>
+                            </ul>
+                        </li>
+                        <li>Which metadata is shared with the parent process?→Page Table, IO info (file descriptors) and IPC info (semaphores, shared memory etc.)</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Kernel Thread Table
+                    <ul>
+                        <li>Purpose→Keeps track of all currently running threads in the system in a table mapping TID to TCB location.  Located in the kernel memory space.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Fork of a process
+                    <ul>
+                        <li>Define→A fork creates a nearly identical copy of a process. </li>
+                        <li>What is Copy on Write (CoW)?→Copy-on-write is a memory management technique that delays copying data until it is modified. Before that, the memory is shared, for example between two processes.</li>
+                        <li>What happens with the memory during a fork?→The child process must have new virtual memory space. But the OS uses CoW, so pages can be shared unless a write operation happens, for example calling a function.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Example Postgres
+                    <ul>
+                        <li>In Postgres, every database connection creates a new (forked) process. Which is a bad idea because it creates so much overhead compared to a thread. They needed to limit the number of connections to 100 because of this. </li>
+                        <li>It is often solved by having a pool of connections and multiple users share these connections. </li>
+                    </ul>
+                </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Context switching
+            <ul>
+                <li>CPU doesn&#39;t really know what a process is. It&#39;s just executing instructions.</li>
+                <li>What is a context?→A process or thread is a context, which can be switched.</li>
+                <li>What happens during a context switch?→The operating system saves the state (registers) of one process to the corresponding PCB and loads the state of another. </li>
+                <li>When is the TLB flushed?→During a context switch involving processes. Threads of the same process use the same paging table and can use the &quot;old&quot; TLB values.</li>
+                <li>Explain TLB ASID in short→TLB ASID (Address space ID) is a unique identifier that allows multiple processes to share the Translation Lookaside Buffer (TLB) without interfering with each other&#39;s address translations. This can avoid TLB flushing on context switch.</li>
+                <li>Context switch can be done by scheduling algorithms or preemptive multitasking (a process is not allowed to run for too long).</li>
+            </ul>
+        </li>
+        <li>Concurrency
+            <ul>
+                <li>Bound Workload
+                    <ul>
+                        <li>Explain CPU Bound Workload→A CPU-bound workload is one that spends most of its time performing computations on the CPU. For example, encryption, Compression, sorting, ...</li>
+                        <li>Explain IO Bound Workload→A workload where the process spends more time waiting for I/O operations than performing computations. For example, database queries, network connection write/read, file read/write, ...</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Multithreaded vs. Multi-process
+                    <ul>
+                        <li>Multi-process
+                            <ul>
+                                <li>Spins up multiple process</li>
+                                <li>Isolated from each other</li>
+                                <li>e.g. NGINX, Postgres</li>
+                            </ul>
+                        </li>
+                        <li>Multithreaded
+                            <ul>
+                                <li>Parent process spins multiple threads</li>
+                                <li>Shares memory with the parent</li>
+                                <li>e.g. MySQL, libuv</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Mutex
+                    <ul>
+                        <li>Explains concurrency issues with shared memory, like a race condition with two threads. It can be solved using a mutex. The mutex lives in the same shared space and the OS only allows one holding it.</li>
+                        <li>Book: Unix Systems for Modern Architectures: Symmetric Multiprocessing and Caching for Kernel Programmers</li>
+                        <li>Mutex has ownership</li>
+                        <li>The thread that locks Mutex must unlock</li>
+                        <li>If a thread terminates, the mutex can remain locked</li>
+                        <li>Can cause deadlock</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Semaphores
+                    <ul>
+                        <li>Semaphores can be used for mutual exclusion</li>
+                        <li>In general, this is a number with signals that can increment/decrement the value (atomically)</li>
+                        <li>Wait/blocks when semaphore=0</li>
+                        <li>Any thread with access to the semaphore can signal/wait</li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

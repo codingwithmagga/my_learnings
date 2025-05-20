@@ -1,0 +1,10 @@
+- Socket
+    - What is a socket?→A socket is an endpoint of a two-way communication link between two programs. It is created when a process listens on an IP/Port. 
+    - Relationship to the process?→The process owns the socket, which is stored in the PCB. It can be shared during a fork.
+    - How is a connection established? >>>
+        - Kernel does the 3-way handshake and creates a socket and the SYN and accept queue
+        - The backend process needs to "accept" the connection. Before that, it will be stored in the Accept Queue of the socket.
+        - A connection file descriptor is created.
+        - A send and a receive queue are created for outgoing and incoming data.
+    - What is socket sharding?→Socket sharding is a technique used to distribute network traffic across multiple sockets (or connections) to improve performance, scalability, and fault tolerance in network applications. 
+- 

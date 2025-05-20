@@ -1,0 +1,97 @@
+- Client-Server Architecture
+    - Benefits?→Clients can call servers to perform expensive tasks which have the resources (like RAM, CPU etc.) to do it. Clients no longer require dependencies but can still execute lightweight tasks. This results in improved resource utilization.
+    - What is RPC?→A Remote Procedure Call (RPC) is a technology that allows a computer program to execute a procedure (function) on another computer, as if it were a local procedure call.
+    - What is absolutely necessary for this?→A network and a communication model.
+- 
+- OSI (Open Systems Interconnection) Model
+    - Why do we need a communication model?→To standardize communication protocols and ensure interoperability between different systems.
+    - There are 7 layers, each describing a specific network component. 
+        - Name these layers >>>
+            - Layer 7 - Application - HTTP/FTP/gRPC
+            - Layer 6 - Presentation - Encoding, Serialization
+            - Layer 5 - Session - Connection establishment, TLS (Transport Layer Security)
+            - Layer 4 - Transport - UDP/TCP
+            - Layer 3 - Network - IP
+            - Layer 2 - Data link - Frames, Mac address Ethernet
+            - Layer 1 - Physical - Electric signal, fiber or radio waves
+        - Example:
+            - Sending a Post Request to an HTTPS webpage
+                - Layer 7 - Application - POST request with JSON data to HTTPS server
+                - Layer 6 - Presentation - Serialize JSON to flat byte strings
+                - Layer 5 - Session - Request to establish TCP connection/TLS
+                - Layer 4 - Transport - Sends SYN request target port 443
+                - Layer 3 - Network - SYN is placed in IP packet(s) and adds the source/destination IPs
+                - Layer 2 - Data link - Each packet goes into a single frame and adds the source/destination MAC addresses
+                - Layer 1 - Physical - Each frame becomes a string of bits which converted into either a radio signal (Wi-Fi), electric signal (Ethernet), or light (fiber)
+                - Take it with a grain of salt, it's not always cut and dry
+            - Receiver computer receives the POST request the other way around
+                - Layer 1 - Physical - Radio, electric or light is received and converted into digital bits
+                - Layer 2 - Data link - The bits from Layer 1 are assembled into frames
+                - Layer 3 - Network - The frames from layer 2 are assembled into IP packet.
+                - Layer 4 - Transport
+                    - The IP packets from layer 3 are assembled into TCP segments
+                    - Deals with Congestion control/flow control/retransmission in case of TCP
+                    - If Segment is SYN, we don’t need to go further into more layers as we are still processing the connection request
+                - Layer 5 - Session
+                    - The connection session is established or identified
+                    - We only arrive at this layer when necessary (three-way handshake is done)
+                - Layer 6 - Presentation - Deserialize flat byte strings back to JSON for the app to consume
+                - Layer 7 - Application - Application understands the JSON POST request and your express JSON or Apache request receive event is triggered
+                - Take it with a grain of salt, it's not always cut and dry
+    - Explain why sending data from a client does not necessarily go directly to the server. Instead, it will be checked (multiple) times before that. >>>
+        - While sending data through a network, you often go through switches or routers or firewalls or ... These are devices operating on different layers which check, for example, the MAC or IP Addresses. 
+        - ![](https://remnote-user-data.s3.amazonaws.com/YQjxOiiBu1EyAUrG0zyML1pe1yqL2S3ucF2pxw-xrL3i4XTL65iJRxC3aDireRaoBB1r0nBBE0ML3Rq6iI8a_oJF3ww0qtmevInbbcPXsFq1J48n5_wUYnupTdNns1OE.png)
+        - ![](https://remnote-user-data.s3.amazonaws.com/f8AYm4U5IYVcPNKCvg-jQEHNJwK0RbwO_LIaPERN2MDLCyQD7qWReImPrzcn8xCuxHOI2Z1xjIg6FzYQidSHLrbgd5LsmUIZCJMcIIF4m4E9rF1xareM9bC7FDYn5aZH.png)
+    - Name shortcomings >>>
+        - Too many layers which are difficult to comprehend 
+        - Lack of standardization across implementations
+        - Overhead: The model introduces additional overhead due to its layered structure, which can impact performance.
+        - Not used in Practice: While it is a good theoretical framework, most of the networking protocols used today are based on the TCP/IP model, leading to a mismatch between theory and practice.
+- 
+- TCP/IP Model
+    - Describe the difference to the OSI Model→The TCP/IP model is a simpler, less layered model than the OSI model, focusing on four layers instead of seven. 
+    - Name the four layers >>>
+        - Application (Layer 5, 6 and 7)
+        - Transport (Layer 4)
+        - Internet (Layer 3)
+        - Data link (Layer 2)
+        - The Physical layer is not officially covered
+- 
+- Host-to-Host Connection
+    - MAC
+        - What does it stand for?→Media Access Control.
+        - What problem does it solve?→Each host network card has a unique MAC address, ensuring that data is directed to the correct device.
+        - When a message is sent on a network, {{everyone}} will receive it, but only {{the one}} with the {{correct MAC address}} will accept it.
+    - IP Address
+        - Purpose?→To enable routing and uniquely identify a device on a network. Without routing, the entire network and all messages needed to be scanned to search for messages.  
+        - Structure?→Is built in two parts: One part to identify the network, the other is the host.
+        - Why are MAC addresses still necessary?→MAC addresses provide unique hardware identification for devices on a local network, enabling efficient communication between them.
+    - Ports
+        - Purpose?→To uniquely identify a process or application on a host for network communication.
+- 
+- TCP
+    - Stands for?→Transmission Control Protocol.
+    - Name key points >>>
+        - Layer 4 protocol
+        - Ability to address processes in a host using ports
+        - "Controls" the transmission, unlike UDP
+        - Establishes a connection/session, means there is knowledge between the client and the server
+    - Name Use cases >>>
+        - Reliable communication
+        - Remote shell
+        - Database connections
+        - Web communications
+        - Any bidirectional communication
+    - Key points about a TCP connection >>>
+        - Connection is a Layer 5 entity (session)
+        - An agreement between client and server, can't send data without a connection
+        - Requires a 3-way TCP handshake
+        - Reliable, ordered delivery of data in segments
+        - Lost segments are retransmitted
+        - 20 bytes header segment (can go to 60)
+        - Stateful
+        - Identified by four properties: Source/Destination IP, Source/Destination port
+    - Explain the three-way handshake→A three-way handshake is a method used in TCP/IP networks to establish a connection between two devices, involving a SYN, SYN-ACK, and ACK exchange (in this order). ![](https://remnote-user-data.s3.amazonaws.com/o8vmPD2btd3KImkMciE9N-n5bv6izNBo_d52qiY6I22-xAChoKsz4rkyZ_7WWr6saaKxFTykm4z0szRuPyg96CLmoi9Nk6ZHmviX32y3vGYsIQw8eptxE_Kb243_jUvw.png)
+    - Explain how data is sent?→Data will be encapsulated in a segment and acknowledged (ACK) by the receiver. Data can be sent in multiple segments and acknowledged by a single response.
+ ![](https://remnote-user-data.s3.amazonaws.com/fvO61cuEqmrPQWh5kZqfatjr7un08FvLeFMhQfpLMryDuczR8BmWlgcW63n_UdhwFuqnSYxbejaEQaiEthLTpup8TSqxpmqwlI17z4qmSnz8zE1LA_xDrEDh0bN5vx6O.png)![](https://remnote-user-data.s3.amazonaws.com/rku2UFd4Szt0dFMyyvn08P5NZEcNwG-IG8lhWstLd5YGMwE_-1pBYNO0Dul-NuOH49m1QV3ie3Veday_JcJwmwxKsis8O6DfY5AWy6Jjnp0a041BsIu_JzWJK7up4mQ2.png)
+    - Explain how a connection is closed?→A connection is closed when both the client and server send a FIN packet (started by one of them), followed by an ACK packet acknowledging the receipt of the FIN. It's a four way handshake.![](https://remnote-user-data.s3.amazonaws.com/1Rrujy2vh4UoB_8hXBgqoKOMrmFCGisj0SCRt4qWRQ-8UhNY3fa5BPjSPN8JP9VIpPAThV4GVFlWAuzM5TxXVpFy0aynZE8xl1WqY7mBwOpV9HSX1ZUI0XgB57kPv-hY.png)

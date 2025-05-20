@@ -1,0 +1,9 @@
+- Assembly Language and Machine Code
+    - What is assembly language?→Assembly is the closest you can get to universal instructions that can be used on almost every machine. But it's still sometimes CPU specific.
+    - What is the difference between assembly and machine code?→Assembly and machine code are similar but different; assembly is more readable and can be mapped to machine code, which is binary and not human-readable.
+- 
+- CPU Execution and Performance
+    - Can two processes run on the same core simultaneously?→No, two processes cannot run at the same time on the same core, except in cases like hyper-threading or using multiple virtual cores.
+    - How much space does each instruction occupy in memory?→Each instruction occupies 4 bytes (32-bit machine) or 8 bytes (64-bit machine).
+- 
+- 

@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Persistent storage
+    </h1>
+    <br/>
+    <ul>
+        <li>HDD
+            <ul>
+                <li>Parts
+                    <ul>
+                        <li>What does it consist of?→Platters, read/write heads, and a spindle motor.</li>
+                        <li>Track::A concentric circular path where data is stored and accessed.</li>
+                        <li>Geometrical sector::A portion of the disk (a closed region bounded by a circle) enclosed by two radii and an arc.</li>
+                        <li>Disc sector::It refers to the intersection of a track and geometrical sector. Minimum storage unit of a hard drive.</li>
+                        <li>Cluster::Unit of storage on a hard disk drive (HDD) that consists of a group of contiguous sectors used to improve data access efficiency. It is the smallest logical amount of disk space that can be allocated to hold a file</li>
+                        <li><svg width="293" height="415" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <image href="https://remnote-user-data.s3.amazonaws.com/BXJd0YxQT7bImC0iW4mIMWs0tSCU1qrkN4x4RUO4p2ieOwOSM6ZVKWslXEYJycYlzpqpL78yrJlK_V6YStfz9PPoAK8FiuBza2vYtJgX0mYSzbkO9REe2ErQbOgQ96Sx.png" x="0" y="0" height="415px" width="293px"/>
+        <rect x="47.649826720969614" y="324.3446597389203" width="41.48634215337546" height="15.3653119086576" clozeId="5388616648379746" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/><rect x="47.137649657347694" y="346.36827347466283" width="127.019911778236" height="18.95055135401102" clozeId="5388616648379746" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/><rect x="48.16200378459154" y="366.85535601953956" width="75.29002835242211" height="14.853134845035683" clozeId="5388616648379746" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/><rect x="48.67418084821345" y="387.34243856441634" width="48.14464398046041" height="17.926197226767172" clozeId="5388616648379746" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/>
+        </svg></li>
+                    </ul>
+                </li>
+                <li>How is data read from the disc
+                    <ul>
+                        <li>New: LBA, Old: Using the CHS method: Cylinder(Track)/Head/Sector</li>
+                        <li>Position the read/write head over the cylinder/track </li>
+                        <li>Spin to the correct geometrical sector</li>
+                        <li>Read the magnetic data</li>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/fuY3V0n7BhTSA8vaLtUdrehkuP6Kh_UuRrQkGlHaz0WaiCQZGMdNFWnWYErmjmGkSd0iqspqk_hqhzcIB9xH9rPf58kVjQ_VY4Cn5k2yMp4U3llXFNxnYoktqIbI-qKS.png" width="527" height="249"/></li>
+                    </ul>
+                </li>
+                <li>Why was introducing new HDD layouts a hard and painful task and how was it solved?→In the early stages, where was no HDD controller and the OS was sending commands directly to the hard drive. The layout of the HDD (CHS) was exposed to the OS. The OS didn&#39;t work on other layouts. It was solved by adding an HDD controller which does the conversion from CHS to the new layout.</li>
+                <li>LBA
+                    <ul>
+                        <li>Define→Logical Block Addressing is a method of addressing data on a hard disk drive. Only one number is used to address data, and each linear base address describes a single block. Also used in SSD. Also known as logical sector size.</li>
+                        <li>What problem does it solve?→Logical Block Addressing (LBA) solves the problem of needing a consistent way to address data on a hard disk drive (HDD) regardless of its physical layout.</li>
+                        <li>Drawback?→Additional cost for the translation of the LBA number to the disk address, which is done by the disk controller.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>SSD
+            <ul>
+                <li>Structure→SSDs use flash memory organized in blocks and pages for persistent storage. A block is a collection of pages which have a fixed size (4kb, 16kb, ...)</li>
+                <li>What is flash memory?→Non-volatile memory that can be electrically erased and reprogrammed. There is NOR flash and NAND flash. SSD uses NAND flash.</li>
+                <li>Minimum read, write and erase size?→The minimum read and write size is a page. Erase is a whole block because it is expensive.</li>
+                <li>Flash translation layer::Software layer that manages the mapping of logical block addresses to physical storage locations in flash memory devices.</li>
+                <li>Why is LBA mapping more expensive than in HDD→More complex mapping since it has to be updated continuously because there is no &quot;update&quot; functionality in an SSD. The mapping table is stored in a RAM (mostly DRAM) belonging to the SSD.</li>
+                <li>What is Write amplification?→Write amplification is the phenomenon where writing data to a storage device requires writing a larger amount of data than the original data size. Because flash memory must be erased before it can be rewritten, the process to perform a write operation results in moving (or rewriting) user data and metadata more than once.</li>
+                <li>Wear leveling
+                    <ul>
+                        <li>Explain→Wear leveling is a technique used in SSDs to distribute write operations evenly across all memory blocks, extending the lifespan of the drive. Because NAND cells have a write limit.</li>
+                        <li>Why is it necessary?→Extending the lifespan. Without this, there are pages which are never touched (like OS files or shared libraries) called cold pages and hot pages which are updated all the time. So some pages will die way before others.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+
+    </ul>
+    </body>
+</html>

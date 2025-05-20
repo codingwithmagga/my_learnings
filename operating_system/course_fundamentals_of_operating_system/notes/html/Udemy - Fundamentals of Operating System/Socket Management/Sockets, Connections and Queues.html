@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Sockets, Connections and Queues
+    </h1>
+    <br/>
+    <ul>
+        <li>Socket
+            <ul>
+                <li>What is a socket?→A socket is an endpoint of a two-way communication link between two programs. It is created when a process listens on an IP/Port. </li>
+                <li>Relationship to the process?→The process owns the socket, which is stored in the PCB. It can be shared during a fork.</li>
+                <li>How is a connection established?
+                    <ul>
+                        <li>Kernel does the 3-way handshake and creates a socket and the SYN and accept queue</li>
+                        <li>The backend process needs to &quot;accept&quot; the connection. Before that, it will be stored in the Accept Queue of the socket.</li>
+                        <li>A connection file descriptor is created.</li>
+                        <li>A send and a receive queue are created for outgoing and incoming data.</li>
+                    </ul>
+                </li>
+                <li>What is socket sharding?→Socket sharding is a technique used to distribute network traffic across multiple sockets (or connections) to improve performance, scalability, and fault tolerance in network applications. </li>
+            </ul>
+        </li>
+        <li></li>
+
+    </ul>
+    </body>
+</html>

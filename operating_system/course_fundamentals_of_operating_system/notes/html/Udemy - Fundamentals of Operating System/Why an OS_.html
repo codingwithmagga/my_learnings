@@ -1,0 +1,167 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Why an OS?
+    </h1>
+    <br/>
+    <ul>
+        <li>Why do we need an Operating System?
+            <ul>
+                <li>Why do we need an Operating System?→We don&#39;t need an operating system per se, but it is easier to deal with hardware and resources using an abstracted layer, which is the operating system. An OS, which is a piece of software, manages diverse hardware, including varying RAM, CPU architectures, storage devices, and input peripherals, reducing complexity for developers.</li>
+                <li></li>
+                <li>What would be challenges without an OS?
+                    <ul>
+                        <li>If building an application on a specific hardware setup, developers would be forced to handle each hardware component&#39;s interactions directly.</li>
+                        <li>This process can lead to complexity, increased chances of errors, and performance degradation as all device-specific code must be managed manually.</li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>General-purpose operating systems (which are most OS) like Linux are designed to work across a wide range of devices and use cases, making them invaluable for most applications. However, they often come with overhead due to their need to accommodate many different scenarios, which can affect performance. While specialized systems can be more efficient for specific tasks, they limit the application to the hardware for which they were designed. Examples include companies like Apple, which design their systems (e.g., M1 chip) to optimize performance by tightly controlling hardware integration. Developing an app on a lightweight OS or directly on hardware means it may only run on that particular setup, limiting versatility and portability. The existence of a robust OS allows developers to create applications that can function across various platforms. Operating systems play a crucial role in application development by providing necessary abstractions and management tools, enabling developers to focus on building functionality rather than managing hardware details.</li>
+                <li></li>
+                <li>The application you write &quot;talks&quot; to the OS and the OS translates your request for the devices. It is the biggest abstraction layer. Abstraction hides complexity, but this has also limitations. The application never talks to the hardware directly.</li>
+                <li></li>
+                <li>Scheduling and processes
+                    <ul>
+                        <li>The OS handles scheduling processes to ensure fair resource distribution among competing tasks. Preemptive scheduling allows the OS to allocate CPU time effectively, preventing any single process from monopolizing system resources. For example, Windows 3.1 was awful at this and let run a task really long/forever. Memory and I/O needs also to be distributed. One of the most challenging things an OS needs to do.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Example to improve OS
+                    <ul>
+                        <li>Google waited for every SSD to shut down individually, doing a synchronous shutdown. Because of huge numbers of SSDs in their servers, it took over a minute for a reboot. They made it asynchronous, and it took less than a second to shut down the server.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>System Architecture Overview
+            <ul>
+                <li>Every system has limited resources (like CPU/memory) which needs to be managed. This is usually done by the kernel. The OS has more tools for usability, for example a GUI.</li>
+                <li></li>
+                <li>Kernel
+                    <ul>
+                        <li>The core part of the OS is the kernel. The kernel manages mostly everything, knows how to deal with drivers, how to read/write memory, schedule processes, the CPU etc. Users may not interact directly with the kernel but depend on its functionality through system APIs. The kernel manages processes, ensuring fair resource allocation and scheduling tasks effectively to maximize performance. Early OS versions faced challenges with blocking processes, prompting improvements in scheduling techniques.</li>
+                        <li>The OS is more than the kernel. There are many tools (GUI, command lines, …) on top of the kernel. The kernel exposes an API for the OS, for example to extract all current processes. The distributions (Linux, Windows, Mac) are all about these extra tooling.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>CPU (Central Processing Unit)
+                    <ul>
+                        <li>Components of Each CPU Core:
+                            <ul>
+                                <li>1. ALU (Arithmetic Logic Unit):
+                                    <ul>
+                                        <li>○ Responsible for performing arithmetic and logical operations. It executes calculations and decision-making processes within the CPU.</li>
+                                    </ul>
+                                </li>
+                                <li>2. CU (Control Unit):
+                                    <ul>
+                                        <li>○ Manages the execution of instructions by directing the operation of the ALU, memory, and input/output devices. The CU fetches instructions from memory and decodes them to control execution.</li>
+                                    </ul>
+                                </li>
+                                <li>3. Registers:
+                                    <ul>
+                                        <li>○ Small, fast storage locations within the CPU used to hold temporary data, such as operands for operations and intermediate results. Registers provide quick access to data during instruction execution.</li>
+                                    </ul>
+                                </li>
+                                <li>4. MMU (Memory Management Unit):
+                                    <ul>
+                                        <li>○ Responsible for translating virtual memory addresses to physical addresses. It helps manage memory access and protection, allowing multiple processes to operate securely in memory.</li>
+                                    </ul>
+                                </li>
+                                <li>5. L1 Cache:
+                                    <ul>
+                                        <li>○ The first level of cache memory, located closest to the core. It stores copies of frequently accessed data and instructions to speed up access times.</li>
+                                    </ul>
+                                </li>
+                                <li>6. L2 Cache:
+                                    <ul>
+                                        <li>○ The second level of cache, larger than L1 but slower. It serves as an additional buffer to store data before it is fetched from main memory.</li>
+                                    </ul>
+                                </li>
+                                <li>7. L3 Cache:
+                                    <ul>
+                                        <li>○ Shared between the cores and larger than both L1 and L2 caches, the L3 cache helps improve data access speed for both cores, reducing the need to access the slower main memory.</li>
+                                    </ul>
+                                </li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/_O7nuXeqng0MCa6ZXaJY4KrB2GJmbKkaDxEL27_PR3ayXu_deVuwCirGfQgiI4_yl0x1EpW57nDj2UNER5i-RfFjkHS31rjZQeVXGcZ6G09MQadU_TvXYjRW6XLk8Vt1.png" width="648" height="391"/></li>
+                            </ul>
+                        </li>
+                        <li>In the CPU, the actual execution (of machine level instructions in ALU) happens. Another word is processor, which means the whole socket, which can have multiple CPU cores (Dual, Quad etc.). In the above image there are two cores, so is a dual-core. Each core has a specific clock speed (mostly one). Complex instructions can need more cycles (and more time/power).</li>
+                        <li>Values which are used frequently should be close to the CPU. That&#39;s why we have L1-L2-L3 cache. The L3 cache is often shared between all cores. Discarding cash is slow, needs to be avoided!</li>
+                        <li>Each CPU machine code is different. When compiling Code, like C/C++, you need to specify what CPU you are compiling against. That&#39;s one of the limitations of compiled languages. Different CPU architectures (e.g., x86, x64, ARM) have distinct instruction sets. Each machine code instruction is specific to the architecture it was compiled for. When you compile C or C++ code, you typically specify the target architecture for which you want the executable to be built. This ensures that the generated machine code is compatible with the intended CPU. If two CPUs are based on the same architecture (e.g., both are x86 or both are x64), the compiled executable can run on any machine with that architecture regardless of specific CPU models. For instance, an executable compiled for x64 architecture can run on any x64 compatible CPU (like Intel or AMD processors). Compiled programs can rely on an operating system that abstracts some hardware-specific features. For example, on Windows, the OS provides a layer that allows applications to interact with the hardware without needing to know specifics about the underlying CPU. In other languages like python or Java, someone actually did this compilation for you, for example python.exe.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Memory (RAM, Random Access Memory)
+                    <ul>
+                        <li>&quot;Random&quot; because you don&#39;t have access to it sequentially, like in a hardware disk (SSDs are technically random access memory). It is slower than cache, but way faster than a hard drive. Storage is limited, less than hard drive, more than cache. It is volatile, so the moment no power is available, every information is lost. RAM always immediately writes changes (and only the changes) to the disk sequentially.  It&#39;s stores process states and data. When spinning a process, it lives in memory. It&#39;s basically a bunch of data structures of memory with their machine code. The program tells the CPU to fetch data from the RAM and executes the process. The program that runs the processes exists on the disk.</li>
+                        <li>The OS manages the usage of the RAM. Physical memory is limited, so there is virtual memory. Virtual memory hides the physical layout from you, it is an abstraction from the OS. You think it&#39;s there and calling the virtual address, but the OS will maybe pull it again because it was deleted meanwhile.</li>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/Hh5DuKBHjuy3TqWGhJCGt3wdY9Xzimx3Tx128SomlR8kNj_Y8EIowKjQEcV9n-PqhhRd_3WfKFUjR-2D2b2ME66ey1bNfvzjgqQMq7Af_1OFbzDhayzm32R_VJPu15JJ.png" width="581" height="594"/></li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Storage (SSD, HDD)
+                    <ul>
+                        <li>Persistent storage even with no power. Two types: hard disk drive and solid-state drive. Using the NAND technology.</li>
+                        <li>In an HDD, you can write a small sector, but in SSD, you need to write a whole page and need to find an empty, ready-to-use page. When you update a file in a SSD you take the value of it, invalidate the result, read the data and move it to a new page. SSD has to take invalid pages and make them available again, which is an overhead in a SSD. The kernel has drivers which know how to write to an HDD/SSD (moving the needles and so on). SSD have a controller/driver inside, while for the old SSDs the controller lived in the memory of the host.  NVMe (Nonvolatile Memory Express) is a software protocol for SSD to connect them over a physical interface without manufacturer drivers. The operating system knows with this how to talk to the SSDs.</li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>Network
+                    <ul>
+                        <li>The network card has also controller (NIC, network interface controller) which receives commands from the OS. Data (for example from the internet) is processed locally on the network card. The OS can talk to other hosts through the network. Signals from the cable (electric Ethernet, fiber lights) gets converted to bits, which are converted to layer two frames, and then layer three packets and layer four segments. Layer three and four are dealt by the OS. TCP (Transmission Control protocol) may be the oldest network protocol from 1981 and is implemented in the OS for efficiency reasons.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li></li>
+                <li>File System
+                    <ul>
+                        <li>Storage is mostly blocks of bytes. We look at the storage as an array of blocks. But earlier it looked like a cylinder, because of the shape of the hard drive, and it was physically implemented like this in the kernel. Now we can&#39;t get away from it. Now the vendors couldn&#39;t evolve their products. So they invented a mapping between number of blocks vs. place on storage ⇒ logical block addressing (LBA).</li>
+                        <li>Users like to work with files and directories, which are essentially an abstraction of the block like storage. So the file system is an abstraction for the user. Including its own data structure, nodes, headers, metadata, file names, mutexes to build files and so on. Files are stored on the disk as blocks. A file can only be stored in a whole number of blocks, so when it&#39;s too small, part of a block is wasted. How the files are exactly stored depends on the filesystem (ext4, fat32, NTFS). The OS needs to know the filesystem to read the data, it can&#39;t be read using another filesystem.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li></li>
+                <li>Program vs. Process
+                    <ul>
+                        <li>A program is a compiled executable, a process is an instance of the program. A program can be executed multiple times and creates a new process each time. The program lives in the disk, while the processes live in memory.  The process is a program in motion. Different OSs have different executable formats.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Process management
+                    <ul>
+                        <li>The kernel manages the processes and schedules the process for the CPU and also schedules the threads. A process has at least one but can create multiple threads. The OS can interrupt process/threads and give CPU time to another one. Also, storage, I/O etc. is managed by the kernel for each process/thread.
+                            <ul>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/5aD4kWQ6xZlW27-qD50rFqP3DNsvJqVecjXjWuE8U5RqOlzpkg8VyIHqb1ElQqHflmZxEKHrDDCBGw7_RHTnm_XO1OliwYd9BwMvUA1kMt2q-5XufgB2WR78Z1Kk2NVo.png" width="433" height="549"/></li>
+                            </ul>
+                        </li>
+                        <li>On the left, virtual memory addresses. Part is for the user and a part for the kernel. This just shows the maximum as it&#39;s virtual and mapped to the physical address. It is not necessarily everything allocated memory. The protected kernel space is to access the kernel functionality and, if necessary (system call for example, see below) the process switches to a kernel mode. The kernel does not have its own running process which is switched on and off, it lies in the same (user) process. The kernel space, for example, contains the kernel code, device drivers, TCP/IP stack. In kernel space the virtual memory is one to one mapped to the physical memory, this is not the case for the user space. Normally, the two spaces are isolated, but the rule was broken, and the kernel space has now a shared memory where the user can write into. With this, there is a really efficient and fast option for I/O stuff. Because data from I/O needs otherwise copied from kernel to user space. Including back and forth switches to kernel mode.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>System call
+                    <ul>
+                        <li>Jumps/Switches from user to kernel mode. The user can make a system call, for example, to allocate memory. Like in C <q>read()</q>, <q>write()</q>, <q>malloc()</q>. Mode switching is expensive since the registers, memory etc. needs to be saved and restored in the CPU. Best to limit this. </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Device drivers
+                    <ul>
+                        <li>Device drivers are the software in the kernel which manages the hardware devices, for example keyboard, network driver and so on. The driver knows how to talk to the hardware. This is done by the interrupt service routine (ISR). For example, a key is pressed on the keyboard, the ISR immediately interrupts the CPU and executes certain code for this key press.</li>
+                    </ul>
+                </li>
+                <li></li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

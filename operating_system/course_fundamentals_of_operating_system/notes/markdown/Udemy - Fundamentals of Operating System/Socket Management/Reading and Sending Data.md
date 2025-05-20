@@ -1,0 +1,6 @@
+- What happens when data is received through a connection? >>>
+    - Kernel puts data in receive queue
+    - Kernel ACKs (may delay) and update window sizes
+    - App calls read to copy data
+- What is the "window size" in the context of sockets?→The "window size" refers to the amount of data that can be sent before needing an acknowledgment from the receiver. The concept of window sizing is part of flow control. This helps prevent overwhelming the receiver with too much data at once. 
+- 

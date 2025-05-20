@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Asynchronous IO
+    </h1>
+    <br/>
+    <ul>
+        <li>Most IO operations are {{5164883595857813::blocking operations}} . This means the process cannot move their {{5164883595857813::program counter}} .</li>
+        <li>Read blocks, for example when there is no data.
+ <img src="https://remnote-user-data.s3.amazonaws.com/R8Tu1LshEuIXLwAltoXH-BUNGEn68XiJj0JD8fp8XKXSoHJSr4ydVWNyRDZGLaQItEv_ehDuSBSflCVB4i5daiZG313LW4pA-mGugeASOoD-E5bGs3hyOpSE7dAnLGgm.png" width="190" height="104.60106382978726"/>
+            <ul>
+                <li>What does that lead to?→It leads to context switches and slowing down the process. Potentially blocked forever if data is never sent/received through that connection.</li>
+                <li>How to solve the blocking?→Ask OS if there is data. If so, call without blocking</li>
+            </ul>
+        </li>
+        <li>With the function <q>select()</q> a collection of file descriptors will be monitored by the kernel and returns when any of is ready. Select is blocking but with a timeout. But the process needs to check which one is ready using a loop.
+            <ul>
+                <li>Name Pros
+                    <ul>
+                        <li>Avoid reading unready resources</li>
+                        <li>async</li>
+                    </ul>
+                </li>
+                <li>Name Cons
+                    <ul>
+                        <li>Slow, since we have to do the loop ⇒ <q>O(n)</q></li>
+                        <li>Lots of copying to/from kernel/user space</li>
+                        <li>Only supports a fixed size of file descriptors.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Better is <q>epoll</q>. Register an interest list of file descriptors in the kernel. Kernel updating this list. When the user calls <q>epoll__wait()</q>, the kernel returns a list of connections with data (events). 
+<img src="https://remnote-user-data.s3.amazonaws.com/pwnPYyNhkYtN_Uxvt3HPRrQNnZN0oa_4Q3kCS2gxi2mbGAs99z6JLBeb6LejQ1XyGONimHSZsrDT0uJEAC4Qj2QC-FhElzoPRe1V2CtnwVKrZ58_r90O3mTKv1YCNA_B.png" width="766" height="259.61082474226805"/>
+            <ul>
+                <li>Drawbacks
+                    <ul>
+                        <li>Complex, for example, missing events can be dangerous.
+                            <ul>
+                                <li>In edge tracking, additional user checks necessary</li>
+                            </ul>
+                        </li>
+                        <li>Only on linux</li>
+                        <li>Too many <q>syscalls</q> </li>
+                        <li>Doesn&#39;t work on files, only on sockets and pipes</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><q>io_uring</q> is a modern Linux asynchronous I/O (AIO) interface that uses two ring buffers (queues) for submission and completion events. The kernel and user space communicate via these queues, allowing zero-copy, low-latency I/O without <q>syscall</q> overhead for each operation. It supports file I/O, network I/O, and more, making it more flexible and efficient than <q>epoll </q>for high-performance workloads.
+            <ul>
+                <li>Biggest issue?→Security issues because of the usage of shared memory. Google even disabled <q>io_uring</q> in many applications because of this. </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>For cross-platform development use <q>lib_uv</q>. </li>
+        <li></li>
+
+    </ul>
+    </body>
+</html>

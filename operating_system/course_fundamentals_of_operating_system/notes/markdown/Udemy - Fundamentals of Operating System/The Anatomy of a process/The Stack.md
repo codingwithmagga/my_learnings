@@ -1,0 +1,32 @@
+- General
+    - What is a stack in the context of functions?→A stack is a data structure where each function gets a frame in memory, and the active function is at the top of the stack.
+    - How is the stack implemented in memory? >>>
+        - The stack is implemented from high to low in memory, with the active function at the top.
+        - Each function call pushes a new frame onto the stack, containing local variables and return addresses.
+        - ![](https://remnote-user-data.s3.amazonaws.com/4EVheYiGceB6qURwS9XL_6uKLKeGyxvnHI_zLQsnQNeCfM2K47QMPv1W2cCFtmbdRdb3sNjZ4xWFU1WA9N-5puENDZxCE3zQyqqGnY-6BypT-eUKlVvNb97OgcCEssQS.png)
+    - Why is stack space considered efficient?→Stack space is efficient because everything is stored sequentially, which is good for memory and CPU time, and it can be cached in one burst.
+    - 
+- Pointer
+    - What is the instruction pointer/program counter?→The instruction pointer (or program counter) points to the next instruction in memory to be executed by the CPU.
+    - What are the two pointers used in the stack?→The two pointers are the base pointer (at the start of the function stack) and the stack pointer (at the end of the function stack).
+    - What is the stack pointer, and how does it work?→The stack pointer is stored in a specific register (sp) and moves as memory is allocated or deallocated, overwriting the previous data when needed.
+    - What is the purpose of the base pointer in the process stack?→The base pointer is a static pointer that points to the beginning of the current function in the process stack, making it easier to address variables in the function.
+- 
+- Functions
+    - What happens to the stack pointer in nested function calls?→The stack pointer moves, and the previous base pointer is stored so that it can be used to restore the base pointer after returning from the nested function. 
+![](https://remnote-user-data.s3.amazonaws.com/AgNN9OZ9ZcE0JJrfWz7pWnm-HN7ic4Ak2YbgpT82S3UfiMByEbczajsyeH2RWW0tIfrz3w5ZB5dx2Abu2iMep5usnuWXDwmzvDuCpxXQhw83VAR9MBBJnord_5JxhZZH.png)
+    - What happens when a function returns?→The stack pointer is set to the base pointer, and the old base pointer is used to set the base pointer of the previous function ![](https://remnote-user-data.s3.amazonaws.com/kGpgdhXsxkje67IdK1GeXbbMpUlep3zQNLAA3Uhe9J4b3JitMGfI5JOqRgYyDxuXrhIwSW2HXFPcVsLxnWJyhSvcqrqv5EvI_AFTA49ZgSAZvFsjMyHi4LgcMeuC1lMt.png)
+    - What does the program counter (pc) do in nested function calls?→The program counter needs to be stored and set back to the correct point in the previous function after a nested function call.
+    - How are function parameters and return values passed?→Function parameters and return values are passed through special registers.
+- 
+- Burst
+    - What is burst mode in electronics?→Burst mode refers to transmitting data repeatedly without going through all the steps of each individual data transaction.
+    - What is the main advantage of burst mode over single mode data access?→The main advantage of burst mode over single mode in data access is increased throughput and efficiency by transferring data in large chunks.
+- 
+- Issues
+    - What causes a stack overflow?→A stack overflow occurs due to infinite function calls, recursion, or large local variables, potentially running out of stack space.
+- 
+- Performance
+    - How are the member variables in a struct or class arranged in memory?→The member variables are stored in the order they are written in the definition of the struct or class.
+    - How can rearranging member variables in a struct/class improve performance?→By grouping frequently used variables together, it improves memory access since they are loaded together in a cache line.
+    - How did Google improve the performance of the TCP/IP stack in the Linux kernel?→Google improved the performance by 40% by rearranging the member variables in the struct to improve memory access efficiency.

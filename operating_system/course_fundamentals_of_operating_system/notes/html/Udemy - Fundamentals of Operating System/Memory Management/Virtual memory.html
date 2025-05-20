@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Virtual memory
+    </h1>
+    <br/>
+    <ul>
+        <li>Name advantages of virtual vs. physical memory
+            <ul>
+                <li>No external fragmentation</li>
+                <li>Shared memory</li>
+                <li>Isolation of data between processes</li>
+                <li>No memory limitation (beside the size of HDD/SSD)</li>
+            </ul>
+        </li>
+        <li>External fragmentation
+            <ul>
+                <li>Definition
+                    <ul>
+                        <li>External fragmentation occurs when free memory is split into small, non-contiguous blocks, making it difficult to allocate larger memory requests.</li>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/-hA_o-449Hhx6PFGdBkUChJsf17OfEbuKJ3oADq_2nR5ZInZt8EsIoBg5e-8tYUuKE2VgpktfVt0TbcJfkfV-3AvWeF8kiInwd2DtHaaHU_sEHCRZhy59fzYKVQ417Iy.png" width="393" height="386.33898305084745"/> </li>
+                    </ul>
+                </li>
+                <li>Cause→It arises from allocating and deallocating memory dynamically. Over time, as processes are loaded and removed, gaps of free space form between allocated blocks.</li>
+                <li>Impact→Reduces available memory and increases the likelihood of needing to swap pages to disk.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Internal fragmentation
+            <ul>
+                <li>Cause→Internal fragmentation occurs when memory is allocated in fixed-size blocks, and the amount of memory requested by a process is less than the size of the allocated block. The unused space within the allocated block is wasted and cannot be used by other processes, leading to inefficient memory utilization. </li>
+            </ul>
+        </li>
+        <li>Explain the concept of virtual memory
+            <ul>
+                <li>Abstraction of physical memory</li>
+                <li>Fixed block sizes (often 4kb) of memory are used ⇒ called paging</li>
+                <li>The logical page is mapped to the physical page using a process page table</li>
+                <li>Many to one mapping, which means many virtual pages can map to one physical address</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/kMvDrOQFhA0qpFMNOBSvFS_JhCQ2K9CWX1oqHHaff8cZkh0MeZaca3nlFVGjwZUWpNv9jGbB4rR0i3eS56k8f9YUtb1UjN6Xcjw0iM6dJkXvEMXB1yDtjb4cgMNML0BN.png" width="738" height="407.4786096256684"/></li>
+            </ul>
+        </li>
+        <li>Do we have fragmentation in virtual memory?→Yes, while external fragmentation is solved, internal fragmentation can occur, especially with big page sizes.</li>
+        <li>Explain how shared memory works in virtual memory
+            <ul>
+                <li>Shared memory allows multiple processes to access and modify the same region of virtual memory, since all virtual addresses are mapped the same physical address space</li>
+                <li>E.g. spinning up the same program multiple times, the code is just loaded once to memory and all virtual pages map to the same physical space</li>
+                <li>The same works for shared libraries, they are only loaded once to the RAM.</li>
+            </ul>
+        </li>
+        <li>Explain how data isolation works in virtual memory→Each process has its own isolated address space, preventing one process from accessing another&#39;s memory.</li>
+        <li>Explain how the limitation of physical memory is solved
+            <ul>
+                <li>The OS can decide to store process memory which was not used for some time on to disk. </li>
+                <li>The space in RAM is freed and can be used by other or even the same process. </li>
+                <li>When the stored data is accessed again via its virtual address, the OS copies the process data back to RAM. </li>
+            </ul>
+        </li>
+        <li>What are page tables, and how are they used?
+            <ul>
+                <li>Data structures for mapping virtual memory addresses to physical</li>
+                <li>Each process has its own page table</li>
+                <li>The page table is stored in memory, adding an overhead for address translation.</li>
+                <li>Accessing the page table requires additional memory reads, impacting performance</li>
+                <li>The overhead can be reduced by the TLB</li>
+            </ul>
+        </li>
+        <li>Describe what the TLB does→Translation Lookaside Buffer (TLB): A cache that stores recently used virtual-physical mappings to speed up address resolution.</li>
+        <li>What is a drawback of virtual memory?
+            <ul>
+                <li>We have an additional layer of translations, since the CPU can&#39;t read from virtual addresses.</li>
+                <li>This is done by page tables, but adding this includes additional maintenance and memory usage</li>
+                <li>If a page fault occurs, the performance sinks due to kernel mode switch and reading/writing back from disc.</li>
+                <li>All this results in a more complex CPU architectures (MMU/TLB)</li>
+                <li>The TLB can also have cache misses</li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

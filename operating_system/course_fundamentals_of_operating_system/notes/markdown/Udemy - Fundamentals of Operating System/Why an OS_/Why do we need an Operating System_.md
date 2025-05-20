@@ -1,0 +1,15 @@
+- Why do we need an Operating System?→We don't need an operating system per se, but it is easier to deal with hardware and resources using an abstracted layer, which is the operating system. An OS, which is a piece of software, manages diverse hardware, including varying RAM, CPU architectures, storage devices, and input peripherals, reducing complexity for developers.
+- 
+- What would be challenges without an OS? >>>
+    - If building an application on a specific hardware setup, developers would be forced to handle each hardware component's interactions directly.
+    - This process can lead to complexity, increased chances of errors, and performance degradation as all device-specific code must be managed manually.
+    - 
+- General-purpose operating systems (which are most OS) like Linux are designed to work across a wide range of devices and use cases, making them invaluable for most applications. However, they often come with overhead due to their need to accommodate many different scenarios, which can affect performance. While specialized systems can be more efficient for specific tasks, they limit the application to the hardware for which they were designed. Examples include companies like Apple, which design their systems (e.g., M1 chip) to optimize performance by tightly controlling hardware integration. Developing an app on a lightweight OS or directly on hardware means it may only run on that particular setup, limiting versatility and portability. The existence of a robust OS allows developers to create applications that can function across various platforms. Operating systems play a crucial role in application development by providing necessary abstractions and management tools, enabling developers to focus on building functionality rather than managing hardware details.
+- 
+- The application you write "talks" to the OS and the OS translates your request for the devices. It is the biggest abstraction layer. Abstraction hides complexity, but this has also limitations. The application never talks to the hardware directly.
+- 
+- Scheduling and processes
+    - The OS handles scheduling processes to ensure fair resource distribution among competing tasks. Preemptive scheduling allows the OS to allocate CPU time effectively, preventing any single process from monopolizing system resources. For example, Windows 3.1 was awful at this and let run a task really long/forever. Memory and I/O needs also to be distributed. One of the most challenging things an OS needs to do.
+- 
+- Example to improve OS
+    - Google waited for every SSD to shut down individually, doing a synchronous shutdown. Because of huge numbers of SSDs in their servers, it took over a minute for a reboot. They made it asynchronous, and it took less than a second to shut down the server.

@@ -1,0 +1,43 @@
+- Name advantages of virtual vs. physical memory >>>
+    - No external fragmentation
+    - Shared memory
+    - Isolation of data between processes
+    - No memory limitation (beside the size of HDD/SSD)
+- External fragmentation
+    - Definition >>>
+        - External fragmentation occurs when free memory is split into small, non-contiguous blocks, making it difficult to allocate larger memory requests.
+        - ![](https://remnote-user-data.s3.amazonaws.com/-hA_o-449Hhx6PFGdBkUChJsf17OfEbuKJ3oADq_2nR5ZInZt8EsIoBg5e-8tYUuKE2VgpktfVt0TbcJfkfV-3AvWeF8kiInwd2DtHaaHU_sEHCRZhy59fzYKVQ417Iy.png) 
+    - Cause→It arises from allocating and deallocating memory dynamically. Over time, as processes are loaded and removed, gaps of free space form between allocated blocks.
+    - Impact→Reduces available memory and increases the likelihood of needing to swap pages to disk.
+- 
+- Internal fragmentation
+    - Cause→Internal fragmentation occurs when memory is allocated in fixed-size blocks, and the amount of memory requested by a process is less than the size of the allocated block. The unused space within the allocated block is wasted and cannot be used by other processes, leading to inefficient memory utilization. 
+- Explain the concept of virtual memory >>>
+    - Abstraction of physical memory
+    - Fixed block sizes (often 4kb) of memory are used ⇒ called paging
+    - The logical page is mapped to the physical page using a process page table
+    - Many to one mapping, which means many virtual pages can map to one physical address
+    - ![](https://remnote-user-data.s3.amazonaws.com/kMvDrOQFhA0qpFMNOBSvFS_JhCQ2K9CWX1oqHHaff8cZkh0MeZaca3nlFVGjwZUWpNv9jGbB4rR0i3eS56k8f9YUtb1UjN6Xcjw0iM6dJkXvEMXB1yDtjb4cgMNML0BN.png)
+- Do we have fragmentation in virtual memory?→Yes, while external fragmentation is solved, internal fragmentation can occur, especially with big page sizes.
+- Explain how shared memory works in virtual memory >>>
+    - Shared memory allows multiple processes to access and modify the same region of virtual memory, since all virtual addresses are mapped the same physical address space
+    - E.g. spinning up the same program multiple times, the code is just loaded once to memory and all virtual pages map to the same physical space
+    - The same works for shared libraries, they are only loaded once to the RAM.
+- Explain how data isolation works in virtual memory→Each process has its own isolated address space, preventing one process from accessing another's memory.
+- Explain how the limitation of physical memory is solved >>>
+    - The OS can decide to store process memory which was not used for some time on to disk. 
+    - The space in RAM is freed and can be used by other or even the same process. 
+    - When the stored data is accessed again via its virtual address, the OS copies the process data back to RAM. 
+- What are page tables, and how are they used? >>>
+    - Data structures for mapping virtual memory addresses to physical
+    - Each process has its own page table
+    - The page table is stored in memory, adding an overhead for address translation.
+    - Accessing the page table requires additional memory reads, impacting performance
+    - The overhead can be reduced by the TLB
+- Describe what the TLB does→Translation Lookaside Buffer (TLB): A cache that stores recently used virtual-physical mappings to speed up address resolution.
+- What is a drawback of virtual memory? >>>
+    - We have an additional layer of translations, since the CPU can't read from virtual addresses.
+    - This is done by page tables, but adding this includes additional maintenance and memory usage
+    - If a page fault occurs, the performance sinks due to kernel mode switch and reading/writing back from disc.
+    - All this results in a more complex CPU architectures (MMU/TLB)
+    - The TLB can also have cache misses

@@ -1,0 +1,31 @@
+- HDD
+    - Parts
+        - What does it consist of?→Platters, read/write heads, and a spindle motor.
+        - Track::A concentric circular path where data is stored and accessed.
+        - Geometrical sector::A portion of the disk (a closed region bounded by a circle) enclosed by two radii and an arc.
+        - Disc sector::It refers to the intersection of a track and geometrical sector. Minimum storage unit of a hard drive.
+        - Cluster::Unit of storage on a hard disk drive (HDD) that consists of a group of contiguous sectors used to improve data access efficiency. It is the smallest logical amount of disk space that can be allocated to hold a file
+        - ![](https://remnote-user-data.s3.amazonaws.com/BXJd0YxQT7bImC0iW4mIMWs0tSCU1qrkN4x4RUO4p2ieOwOSM6ZVKWslXEYJycYlzpqpL78yrJlK_V6YStfz9PPoAK8FiuBza2vYtJgX0mYSzbkO9REe2ErQbOgQ96Sx.png)
+    - How is data read from the disc >>>
+        - New: LBA, Old: Using the CHS method: Cylinder(Track)/Head/Sector
+        - Position the read/write head over the cylinder/track 
+        - Spin to the correct geometrical sector
+        - Read the magnetic data
+        - ![](https://remnote-user-data.s3.amazonaws.com/fuY3V0n7BhTSA8vaLtUdrehkuP6Kh_UuRrQkGlHaz0WaiCQZGMdNFWnWYErmjmGkSd0iqspqk_hqhzcIB9xH9rPf58kVjQ_VY4Cn5k2yMp4U3llXFNxnYoktqIbI-qKS.png)
+    - Why was introducing new HDD layouts a hard and painful task and how was it solved?→In the early stages, where was no HDD controller and the OS was sending commands directly to the hard drive. The layout of the HDD (CHS) was exposed to the OS. The OS didn't work on other layouts. It was solved by adding an HDD controller which does the conversion from CHS to the new layout.
+    - LBA
+        - Define→Logical Block Addressing is a method of addressing data on a hard disk drive. Only one number is used to address data, and each linear base address describes a single block. Also used in SSD. Also known as logical sector size.
+        - What problem does it solve?→Logical Block Addressing (LBA) solves the problem of needing a consistent way to address data on a hard disk drive (HDD) regardless of its physical layout.
+        - Drawback?→Additional cost for the translation of the LBA number to the disk address, which is done by the disk controller.
+- 
+- SSD
+    - Structure→SSDs use flash memory organized in blocks and pages for persistent storage. A block is a collection of pages which have a fixed size (4kb, 16kb, ...)
+    - What is flash memory?→Non-volatile memory that can be electrically erased and reprogrammed. There is NOR flash and NAND flash. SSD uses NAND flash.
+    - Minimum read, write and erase size?→The minimum read and write size is a page. Erase is a whole block because it is expensive.
+    - Flash translation layer::Software layer that manages the mapping of logical block addresses to physical storage locations in flash memory devices.
+    - Why is LBA mapping more expensive than in HDD→More complex mapping since it has to be updated continuously because there is no "update" functionality in an SSD. The mapping table is stored in a RAM (mostly DRAM) belonging to the SSD.
+    - What is Write amplification?→Write amplification is the phenomenon where writing data to a storage device requires writing a larger amount of data than the original data size. Because flash memory must be erased before it can be rewritten, the process to perform a write operation results in moving (or rewriting) user data and metadata more than once.
+    - Wear leveling
+        - Explain→Wear leveling is a technique used in SSDs to distribute write operations evenly across all memory blocks, extending the lifespan of the drive. Because NAND cells have a write limit.
+        - Why is it necessary?→Extending the lifespan. Without this, there are pages which are never touched (like OS files or shared libraries) called cold pages and hot pages which are updated all the time. So some pages will die way before others.
+- 

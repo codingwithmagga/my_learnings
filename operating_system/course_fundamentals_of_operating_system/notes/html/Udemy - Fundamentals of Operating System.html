@@ -1,0 +1,1484 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Udemy - Fundamentals of Operating System
+    </h1>
+    <br/>
+    <ul>
+        <li>Why an OS?
+            <ul>
+                <li>Why do we need an Operating System?
+                    <ul>
+                        <li>Why do we need an Operating System?→We don&#39;t need an operating system per se, but it is easier to deal with hardware and resources using an abstracted layer, which is the operating system. An OS, which is a piece of software, manages diverse hardware, including varying RAM, CPU architectures, storage devices, and input peripherals, reducing complexity for developers.</li>
+                        <li></li>
+                        <li>What would be challenges without an OS?
+                            <ul>
+                                <li>If building an application on a specific hardware setup, developers would be forced to handle each hardware component&#39;s interactions directly.</li>
+                                <li>This process can lead to complexity, increased chances of errors, and performance degradation as all device-specific code must be managed manually.</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li>General-purpose operating systems (which are most OS) like Linux are designed to work across a wide range of devices and use cases, making them invaluable for most applications. However, they often come with overhead due to their need to accommodate many different scenarios, which can affect performance. While specialized systems can be more efficient for specific tasks, they limit the application to the hardware for which they were designed. Examples include companies like Apple, which design their systems (e.g., M1 chip) to optimize performance by tightly controlling hardware integration. Developing an app on a lightweight OS or directly on hardware means it may only run on that particular setup, limiting versatility and portability. The existence of a robust OS allows developers to create applications that can function across various platforms. Operating systems play a crucial role in application development by providing necessary abstractions and management tools, enabling developers to focus on building functionality rather than managing hardware details.</li>
+                        <li></li>
+                        <li>The application you write &quot;talks&quot; to the OS and the OS translates your request for the devices. It is the biggest abstraction layer. Abstraction hides complexity, but this has also limitations. The application never talks to the hardware directly.</li>
+                        <li></li>
+                        <li>Scheduling and processes
+                            <ul>
+                                <li>The OS handles scheduling processes to ensure fair resource distribution among competing tasks. Preemptive scheduling allows the OS to allocate CPU time effectively, preventing any single process from monopolizing system resources. For example, Windows 3.1 was awful at this and let run a task really long/forever. Memory and I/O needs also to be distributed. One of the most challenging things an OS needs to do.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Example to improve OS
+                            <ul>
+                                <li>Google waited for every SSD to shut down individually, doing a synchronous shutdown. Because of huge numbers of SSDs in their servers, it took over a minute for a reboot. They made it asynchronous, and it took less than a second to shut down the server.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>System Architecture Overview
+                    <ul>
+                        <li>Every system has limited resources (like CPU/memory) which needs to be managed. This is usually done by the kernel. The OS has more tools for usability, for example a GUI.</li>
+                        <li></li>
+                        <li>Kernel
+                            <ul>
+                                <li>The core part of the OS is the kernel. The kernel manages mostly everything, knows how to deal with drivers, how to read/write memory, schedule processes, the CPU etc. Users may not interact directly with the kernel but depend on its functionality through system APIs. The kernel manages processes, ensuring fair resource allocation and scheduling tasks effectively to maximize performance. Early OS versions faced challenges with blocking processes, prompting improvements in scheduling techniques.</li>
+                                <li>The OS is more than the kernel. There are many tools (GUI, command lines, …) on top of the kernel. The kernel exposes an API for the OS, for example to extract all current processes. The distributions (Linux, Windows, Mac) are all about these extra tooling.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>CPU (Central Processing Unit)
+                            <ul>
+                                <li>Components of Each CPU Core:
+                                    <ul>
+                                        <li>1. ALU (Arithmetic Logic Unit):
+                                            <ul>
+                                                <li>○ Responsible for performing arithmetic and logical operations. It executes calculations and decision-making processes within the CPU.</li>
+                                            </ul>
+                                        </li>
+                                        <li>2. CU (Control Unit):
+                                            <ul>
+                                                <li>○ Manages the execution of instructions by directing the operation of the ALU, memory, and input/output devices. The CU fetches instructions from memory and decodes them to control execution.</li>
+                                            </ul>
+                                        </li>
+                                        <li>3. Registers:
+                                            <ul>
+                                                <li>○ Small, fast storage locations within the CPU used to hold temporary data, such as operands for operations and intermediate results. Registers provide quick access to data during instruction execution.</li>
+                                            </ul>
+                                        </li>
+                                        <li>4. MMU (Memory Management Unit):
+                                            <ul>
+                                                <li>○ Responsible for translating virtual memory addresses to physical addresses. It helps manage memory access and protection, allowing multiple processes to operate securely in memory.</li>
+                                            </ul>
+                                        </li>
+                                        <li>5. L1 Cache:
+                                            <ul>
+                                                <li>○ The first level of cache memory, located closest to the core. It stores copies of frequently accessed data and instructions to speed up access times.</li>
+                                            </ul>
+                                        </li>
+                                        <li>6. L2 Cache:
+                                            <ul>
+                                                <li>○ The second level of cache, larger than L1 but slower. It serves as an additional buffer to store data before it is fetched from main memory.</li>
+                                            </ul>
+                                        </li>
+                                        <li>7. L3 Cache:
+                                            <ul>
+                                                <li>○ Shared between the cores and larger than both L1 and L2 caches, the L3 cache helps improve data access speed for both cores, reducing the need to access the slower main memory.</li>
+                                            </ul>
+                                        </li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/_O7nuXeqng0MCa6ZXaJY4KrB2GJmbKkaDxEL27_PR3ayXu_deVuwCirGfQgiI4_yl0x1EpW57nDj2UNER5i-RfFjkHS31rjZQeVXGcZ6G09MQadU_TvXYjRW6XLk8Vt1.png" width="648" height="391"/></li>
+                                    </ul>
+                                </li>
+                                <li>In the CPU, the actual execution (of machine level instructions in ALU) happens. Another word is processor, which means the whole socket, which can have multiple CPU cores (Dual, Quad etc.). In the above image there are two cores, so is a dual-core. Each core has a specific clock speed (mostly one). Complex instructions can need more cycles (and more time/power).</li>
+                                <li>Values which are used frequently should be close to the CPU. That&#39;s why we have L1-L2-L3 cache. The L3 cache is often shared between all cores. Discarding cash is slow, needs to be avoided!</li>
+                                <li>Each CPU machine code is different. When compiling Code, like C/C++, you need to specify what CPU you are compiling against. That&#39;s one of the limitations of compiled languages. Different CPU architectures (e.g., x86, x64, ARM) have distinct instruction sets. Each machine code instruction is specific to the architecture it was compiled for. When you compile C or C++ code, you typically specify the target architecture for which you want the executable to be built. This ensures that the generated machine code is compatible with the intended CPU. If two CPUs are based on the same architecture (e.g., both are x86 or both are x64), the compiled executable can run on any machine with that architecture regardless of specific CPU models. For instance, an executable compiled for x64 architecture can run on any x64 compatible CPU (like Intel or AMD processors). Compiled programs can rely on an operating system that abstracts some hardware-specific features. For example, on Windows, the OS provides a layer that allows applications to interact with the hardware without needing to know specifics about the underlying CPU. In other languages like python or Java, someone actually did this compilation for you, for example python.exe.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Memory (RAM, Random Access Memory)
+                            <ul>
+                                <li>&quot;Random&quot; because you don&#39;t have access to it sequentially, like in a hardware disk (SSDs are technically random access memory). It is slower than cache, but way faster than a hard drive. Storage is limited, less than hard drive, more than cache. It is volatile, so the moment no power is available, every information is lost. RAM always immediately writes changes (and only the changes) to the disk sequentially.  It&#39;s stores process states and data. When spinning a process, it lives in memory. It&#39;s basically a bunch of data structures of memory with their machine code. The program tells the CPU to fetch data from the RAM and executes the process. The program that runs the processes exists on the disk.</li>
+                                <li>The OS manages the usage of the RAM. Physical memory is limited, so there is virtual memory. Virtual memory hides the physical layout from you, it is an abstraction from the OS. You think it&#39;s there and calling the virtual address, but the OS will maybe pull it again because it was deleted meanwhile.</li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/Hh5DuKBHjuy3TqWGhJCGt3wdY9Xzimx3Tx128SomlR8kNj_Y8EIowKjQEcV9n-PqhhRd_3WfKFUjR-2D2b2ME66ey1bNfvzjgqQMq7Af_1OFbzDhayzm32R_VJPu15JJ.png" width="581" height="594"/></li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Storage (SSD, HDD)
+                            <ul>
+                                <li>Persistent storage even with no power. Two types: hard disk drive and solid-state drive. Using the NAND technology.</li>
+                                <li>In an HDD, you can write a small sector, but in SSD, you need to write a whole page and need to find an empty, ready-to-use page. When you update a file in a SSD you take the value of it, invalidate the result, read the data and move it to a new page. SSD has to take invalid pages and make them available again, which is an overhead in a SSD. The kernel has drivers which know how to write to an HDD/SSD (moving the needles and so on). SSD have a controller/driver inside, while for the old SSDs the controller lived in the memory of the host.  NVMe (Nonvolatile Memory Express) is a software protocol for SSD to connect them over a physical interface without manufacturer drivers. The operating system knows with this how to talk to the SSDs.</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li>Network
+                            <ul>
+                                <li>The network card has also controller (NIC, network interface controller) which receives commands from the OS. Data (for example from the internet) is processed locally on the network card. The OS can talk to other hosts through the network. Signals from the cable (electric Ethernet, fiber lights) gets converted to bits, which are converted to layer two frames, and then layer three packets and layer four segments. Layer three and four are dealt by the OS. TCP (Transmission Control protocol) may be the oldest network protocol from 1981 and is implemented in the OS for efficiency reasons.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li>File System
+                            <ul>
+                                <li>Storage is mostly blocks of bytes. We look at the storage as an array of blocks. But earlier it looked like a cylinder, because of the shape of the hard drive, and it was physically implemented like this in the kernel. Now we can&#39;t get away from it. Now the vendors couldn&#39;t evolve their products. So they invented a mapping between number of blocks vs. place on storage ⇒ logical block addressing (LBA).</li>
+                                <li>Users like to work with files and directories, which are essentially an abstraction of the block like storage. So the file system is an abstraction for the user. Including its own data structure, nodes, headers, metadata, file names, mutexes to build files and so on. Files are stored on the disk as blocks. A file can only be stored in a whole number of blocks, so when it&#39;s too small, part of a block is wasted. How the files are exactly stored depends on the filesystem (ext4, fat32, NTFS). The OS needs to know the filesystem to read the data, it can&#39;t be read using another filesystem.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li>Program vs. Process
+                            <ul>
+                                <li>A program is a compiled executable, a process is an instance of the program. A program can be executed multiple times and creates a new process each time. The program lives in the disk, while the processes live in memory.  The process is a program in motion. Different OSs have different executable formats.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Process management
+                            <ul>
+                                <li>The kernel manages the processes and schedules the process for the CPU and also schedules the threads. A process has at least one but can create multiple threads. The OS can interrupt process/threads and give CPU time to another one. Also, storage, I/O etc. is managed by the kernel for each process/thread.
+                                    <ul>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/5aD4kWQ6xZlW27-qD50rFqP3DNsvJqVecjXjWuE8U5RqOlzpkg8VyIHqb1ElQqHflmZxEKHrDDCBGw7_RHTnm_XO1OliwYd9BwMvUA1kMt2q-5XufgB2WR78Z1Kk2NVo.png" width="433" height="549"/></li>
+                                    </ul>
+                                </li>
+                                <li>On the left, virtual memory addresses. Part is for the user and a part for the kernel. This just shows the maximum as it&#39;s virtual and mapped to the physical address. It is not necessarily everything allocated memory. The protected kernel space is to access the kernel functionality and, if necessary (system call for example, see below) the process switches to a kernel mode. The kernel does not have its own running process which is switched on and off, it lies in the same (user) process. The kernel space, for example, contains the kernel code, device drivers, TCP/IP stack. In kernel space the virtual memory is one to one mapped to the physical memory, this is not the case for the user space. Normally, the two spaces are isolated, but the rule was broken, and the kernel space has now a shared memory where the user can write into. With this, there is a really efficient and fast option for I/O stuff. Because data from I/O needs otherwise copied from kernel to user space. Including back and forth switches to kernel mode.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>System call
+                            <ul>
+                                <li>Jumps/Switches from user to kernel mode. The user can make a system call, for example, to allocate memory. Like in C <q>read()</q>, <q>write()</q>, <q>malloc()</q>. Mode switching is expensive since the registers, memory etc. needs to be saved and restored in the CPU. Best to limit this. </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Device drivers
+                            <ul>
+                                <li>Device drivers are the software in the kernel which manages the hardware devices, for example keyboard, network driver and so on. The driver knows how to talk to the hardware. This is done by the interrupt service routine (ISR). For example, a key is pressed on the keyboard, the ISR immediately interrupts the CPU and executes certain code for this key press.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>The Anatomy of a process
+            <ul>
+                <li>Program vs. Process
+                    <ul>
+                        <li>General
+                            <ul>
+                                <li>What is the difference between a program and a process?→A program is the actual file on the disk, while a process is a program in motion, executing instructions.</li>
+                                <li>What happens when a program starts?→When a program starts, it becomes a process that executes instructions immediately, potentially modifying states, variables, and values.</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li>Program
+                            <ul>
+                                <li>What is a program?→A program is a compiled and linked code specific to a CPU architecture, stored as a file on the disk.</li>
+                                <li>What does the launcher do when starting a program?→Loads the program into memory and creates a process. </li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Process
+                            <ul>
+                                <li>What is a process?→A process is an instance of a program that executes instructions and has its own unique ID and memory space.</li>
+                                <li>What is a Process ID (PID)?→A PID is a unique identifier assigned to each process, along with other data structures like the page table and file descriptors.</li>
+                                <li>What is a PID namespace?→A PID namespace gives processes an independent set of PIDs, and it can be nested, allowing processes to have unique PIDs within different namespaces.</li>
+                                <li>What happens during a context switch with the process data (new/old)?→During a context switch, the process&#39;s current state, including the program counter, is saved to memory, and the state of another process is loaded.</li>
+                                <li>Describe the high-level structure of a process in the memory
+                                    <ul>
+                                        <li>Text segment, contains the executable code of the program. Typically read-only. It can be shared.</li>
+                                        <li>Data segment, Stores global and static variables. Not shared, writable.</li>
+                                        <li>Heap segment, used for dynamic memory allocation. Managed by the program.</li>
+                                        <li>Stack segment, used to store function call information, local variables and return addresses</li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/JB5-_-UunCWu091zLc3rooYmBUhyTKkws-iynw7dkK2f8SSUSiANlr2Jf8QNUC9D11BpR6to3RSg9yEnGayJqBqqc1yCE7Z-Km9EIp89wPyVd3o913nY8vzuA9rxCTcM.png" width="394" height="386"/></li>
+                                    </ul>
+                                </li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>The Stack
+                    <ul>
+                        <li>General
+                            <ul>
+                                <li>What is a stack in the context of functions?→A stack is a data structure where each function gets a frame in memory, and the active function is at the top of the stack.</li>
+                                <li>How is the stack implemented in memory?
+                                    <ul>
+                                        <li>The stack is implemented from high to low in memory, with the active function at the top.</li>
+                                        <li>Each function call pushes a new frame onto the stack, containing local variables and return addresses.</li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/4EVheYiGceB6qURwS9XL_6uKLKeGyxvnHI_zLQsnQNeCfM2K47QMPv1W2cCFtmbdRdb3sNjZ4xWFU1WA9N-5puENDZxCE3zQyqqGnY-6BypT-eUKlVvNb97OgcCEssQS.png" width="477" height="403"/></li>
+                                    </ul>
+                                </li>
+                                <li>Why is stack space considered efficient?→Stack space is efficient because everything is stored sequentially, which is good for memory and CPU time, and it can be cached in one burst.</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li>Pointer
+                            <ul>
+                                <li>What is the instruction pointer/program counter?→The instruction pointer (or program counter) points to the next instruction in memory to be executed by the CPU.</li>
+                                <li>What are the two pointers used in the stack?→The two pointers are the base pointer (at the start of the function stack) and the stack pointer (at the end of the function stack).</li>
+                                <li>What is the stack pointer, and how does it work?→The stack pointer is stored in a specific register (sp) and moves as memory is allocated or deallocated, overwriting the previous data when needed.</li>
+                                <li>What is the purpose of the base pointer in the process stack?→The base pointer is a static pointer that points to the beginning of the current function in the process stack, making it easier to address variables in the function.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Functions
+                            <ul>
+                                <li>What happens to the stack pointer in nested function calls?→The stack pointer moves, and the previous base pointer is stored so that it can be used to restore the base pointer after returning from the nested function. 
+<img src="https://remnote-user-data.s3.amazonaws.com/AgNN9OZ9ZcE0JJrfWz7pWnm-HN7ic4Ak2YbgpT82S3UfiMByEbczajsyeH2RWW0tIfrz3w5ZB5dx2Abu2iMep5usnuWXDwmzvDuCpxXQhw83VAR9MBBJnord_5JxhZZH.png" width="360.89741532536783" height="338.67798490421643"/></li>
+                                <li>What happens when a function returns?→The stack pointer is set to the base pointer, and the old base pointer is used to set the base pointer of the previous function <img src="https://remnote-user-data.s3.amazonaws.com/kGpgdhXsxkje67IdK1GeXbbMpUlep3zQNLAA3Uhe9J4b3JitMGfI5JOqRgYyDxuXrhIwSW2HXFPcVsLxnWJyhSvcqrqv5EvI_AFTA49ZgSAZvFsjMyHi4LgcMeuC1lMt.png" width="542" height="513"/></li>
+                                <li>What does the program counter (pc) do in nested function calls?→The program counter needs to be stored and set back to the correct point in the previous function after a nested function call.</li>
+                                <li>How are function parameters and return values passed?→Function parameters and return values are passed through special registers.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Burst
+                            <ul>
+                                <li>What is burst mode in electronics?→Burst mode refers to transmitting data repeatedly without going through all the steps of each individual data transaction.</li>
+                                <li>What is the main advantage of burst mode over single mode data access?→The main advantage of burst mode over single mode in data access is increased throughput and efficiency by transferring data in large chunks.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Issues
+                            <ul>
+                                <li>What causes a stack overflow?→A stack overflow occurs due to infinite function calls, recursion, or large local variables, potentially running out of stack space.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Performance
+                            <ul>
+                                <li>How are the member variables in a struct or class arranged in memory?→The member variables are stored in the order they are written in the definition of the struct or class.</li>
+                                <li>How can rearranging member variables in a struct/class improve performance?→By grouping frequently used variables together, it improves memory access since they are loaded together in a cache line.</li>
+                                <li>How did Google improve the performance of the TCP/IP stack in the Linux kernel?→Google improved the performance by 40% by rearranging the member variables in the struct to improve memory access efficiency.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Process execution
+                    <ul>
+                        <li>Assembly Language and Machine Code
+                            <ul>
+                                <li>What is assembly language?→Assembly is the closest you can get to universal instructions that can be used on almost every machine. But it&#39;s still sometimes CPU specific.</li>
+                                <li>What is the difference between assembly and machine code?→Assembly and machine code are similar but different; assembly is more readable and can be mapped to machine code, which is binary and not human-readable.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>CPU Execution and Performance
+                            <ul>
+                                <li>Can two processes run on the same core simultaneously?→No, two processes cannot run at the same time on the same core, except in cases like hyper-threading or using multiple virtual cores.</li>
+                                <li>How much space does each instruction occupy in memory?→Each instruction occupies 4 bytes (32-bit machine) or 8 bytes (64-bit machine).</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>Data section
+                    <ul>
+                        <li>What is stored in the data section of process memory?→The global and static variables, which are referenced directly by memory address, are stored in the data section.</li>
+                        <li>Is the size of the data section fixed?→The data section has a fixed size.</li>
+                        <li>Which functions have access to the data section of a process?→The data section is shared by all functions of the process. In other words: Each function can access the data section.</li>
+                        <li>How does the compiler determine the size of the data section?→The compiler knows how much space is needed for the data section after compilation, and this can be estimated through static analysis of the code.</li>
+                        <li>Is the data section read-only?→No, the data section is not read-only, but it has a fixed size (for example, an integer variable remains an integer variable).</li>
+                        <li>What is the purpose of the pointer at the start of the data section?→The pointer at the start of the data section, similar to the base pointer, helps address variables with the offset.</li>
+                        <li>What can happen when a global variable is changed when using multiple threads?→When using multiple threads in one process, changing a global variable can cause cache invalidation more often, which decreases performance.</li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Memory Management
+            <ul>
+                <li>Memory Essentials
+                    <ul>
+                        <li>RAM Types
+                            <ul>
+                                <li>Explain the main aspects of RAM
+                                    <ul>
+                                        <li>Volatile memory, data is lost without power</li>
+                                        <li>Used for temporary storage of data and instructions</li>
+                                        <li>Faster than HDD/SDD</li>
+                                        <li>Dynamic and static types</li>
+                                    </ul>
+                                </li>
+                                <li>Explain the main aspects of SRAM
+                                    <ul>
+                                        <li>Static RAM</li>
+                                        <li>Faster access times compared to DRAM</li>
+                                        <li>Needs 6 transistors per bit ⇒ Expensive</li>
+                                        <li>Retains data without refresh cycles</li>
+                                        <li>Used in CPU caches</li>
+                                    </ul>
+                                </li>
+                                <li>Explain the main aspects of DRAM
+                                    <ul>
+                                        <li>Dynamic RAM</li>
+                                        <li>Uses capacitors (1 per bit) to store data, which needs 1 transistor each</li>
+                                        <li>Capacitors are either charged (1) or not (0)</li>
+                                        <li>Slower than SRAM, but denser and cheaper to produce</li>
+                                        <li>Requires periodic refreshing to maintain data integrity</li>
+                                        <li>Used in most computers and devices for main memory</li>
+                                    </ul>
+                                </li>
+                                <li>Explain the refresh process of DRAM
+                                    <ul>
+                                        <li>With time, capacitors lose their charge</li>
+                                        <li>Every few milliseconds, data (of one row of capacitors) is read to a sense amplifier
+                                            <ul>
+                                                <li>A sense amplifier detects small signals in electronic systems</li>
+                                            </ul>
+                                        </li>
+                                        <li>The sense amplifier restores the charge to the capacitors to prevent data loss.</li>
+                                    </ul>
+                                </li>
+                                <li>Explain the main aspects of Asynchronous RAM
+                                    <ul>
+                                        <li>Operates independently of the system clock, allowing more flexibility in timing.</li>
+                                        <li>Typically, slower than synchronous RAM due to lack of clock synchronization.</li>
+                                        <li>There is a delay between requests and the responses:
+<img src="https://remnote-user-data.s3.amazonaws.com/GUwfg8wR6j_PtnA7aZVv6BOVUGDVkDXJ92gfivj7Q7OElBN-PZ_akEffmJo7f94uvlosHpuG86YPyMg4ZTtl1u_Hp0KQqy2RjHStqdA6BugcORQPtD_U4CaZAM-FRLHJ.png" width="714" height="285.9944751381215"/></li>
+                                    </ul>
+                                </li>
+                                <li>Explain the main aspects of SDRAM
+                                    <ul>
+                                        <li>Synchronous Dynamic RAM</li>
+                                        <li>RAM clock is synchronized with the system clock</li>
+                                        <li>Supports burst mode for faster data access</li>
+                                        <li>No wasted cycles
+<img src="https://remnote-user-data.s3.amazonaws.com/FZq2HxCt2AvPBZ0dYliIEKCRIkL2vxqQYQfj1Kokblv0NQ6mRiDEGTlplX_ueVM-cWW5PEfCNFBUNFgIljcdn0Xu6-ws57JLICxaLqilabGHGZLkR5XoOkQPFRojfiau.png" width="714" height="285.00828729281767"/></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>DDR SDRAM
+                            <ul>
+                                <li>What does DDR SDRAM stand for?→Double Data Rate Synchronized Dynamic Random Access Memory</li>
+                                <li>Explain the improvement in DDR SDRAM→Increased data transfer rates by transferring data on both rising and falling edges of the clock cycle.</li>
+                                <li>Explain the main aspects of DDR4 SDRAM
+                                    <ul>
+                                        <li>DDR4 Pins: Each pin transfers 1 byte (8 bits).</li>
+                                        <li>Burst Size: 64 bytes per memory access burst/cache line.</li>
+                                        <li>Cycle Time: Approximately 100 nanoseconds for reading.</li>
+                                        <li>Previous DDRs: DDR1 (2 bits), DDR2 (4 bits), DDR3 (8 bits).</li>
+                                        <li>Optimizations: DDR4 allows more transfers per second than DDR3 even if the number of bits are equal</li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/j-_WQ8ON3SsAbO27HVm7n_AFVSMB2bZ6uiUomhnp7Lvp8Vbwr0-EG89Zsri1GRTvMAktkR0UGB1_n8TRu9wMvi_d42rPJKyBP9H9Y4MboFUcBUIy_r5-vChm_3HIRbTt.png" width="490" height="319"/></li>
+                                    </ul>
+                                </li>
+                                <li>Explain the improvements of DDR5 vs DDR4
+                                    <ul>
+                                        <li>Channels: DDR5 has two channels of 32 pins each.</li>
+                                        <li>Prefetch Buffer: Increased to 16 bits per pin.</li>
+                                        <li>Burst Size: Can deliver 128 bytes (two 64-byte bursts).</li>
+                                        <li>Channel Usage: Different cores can use separate channels.</li>
+                                        <li>Locking Mechanism: DDR4 locks during reads, blocking other cores.</li>
+                                        <li>CPU Requirement: Must support channel concept for efficiency.</li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/2qeYbv-9fNtgJSqepxsacD3mw64CZhUUSo01R-fCWhIJheq13uk6z-Q3qlrNw_F-IMnGAuC2PWknt-1A1fTrU1jH8vaFrGPyRG2FsvvXyXLeF1uQcoDoCWJ1sYKhbsrU.png" width="578" height="314"/></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>RAM Components
+                            <ul>
+                                <li>Explain the RAM structure
+                                    <ul>
+                                        <li>Dual Inline Memory Module (DIMM), where the RAM chips are build on</li>
+                                        <li>Bank: subdivision of memory within a RAM module</li>
+                                        <li>Rows: Multiple Rows in one Bank (for example 32k)</li>
+                                        <li>Columns: Multiple Columns per Row (for example 1024)</li>
+                                        <li>Cells: Multiple cells per column (usually 1cell = 1bit/capacitor and 16/32 cells per column)</li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/jWem2Z6_8y5n21DYm25xkhN8_h-gtsBjhcDBzU6sKjrRv-bVWJ_cPfUxU-RBBDh5_uKDIFixpKFSeGDHqc7xBjzS6OVN6U8dd1NgUdbgXy-MEbnEd5srC_fNjSeShhUw.png" width="534" height="337"/></li>
+                                    </ul>
+                                </li>
+                                <li>Explain how the data is accessed in RAM
+                                    <ul>
+                                        <li>Only one row can opened at a time</li>
+                                        <li>Because there is only one sense amplifier per bank</li>
+                                        <li>Opening a row means reading/draining the whole row</li>
+                                        <li>The relevant part of the row is cached in a burst</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Data alignement
+                            <ul>
+                                <li>Explain this image <img src="https://remnote-user-data.s3.amazonaws.com/X7bqpnSSx3xEgvYwn4iOrCf16JaESlm1Zeo4g4EJ78jXZ3G4YrxsQ-Bm05MjAS2s_34cnmY5kdUDDc-6VD6FQmSiG4JwAnFoFFOvRhfDK7EyXG2vQ1WiMNrzTXL1jIPr.png" width="420" height="356"/>
+                                    <ul>
+                                        <li>Data alignement concept</li>
+                                        <li>Certain variable sizes are stored in specific addresses</li>
+                                        <li>E.g. 4 bytes are placed in addresses divisible by 4</li>
+                                        <li>Rearranging the data can reduce the necessary memory space</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Virtual memory
+                    <ul>
+                        <li>Name advantages of virtual vs. physical memory
+                            <ul>
+                                <li>No external fragmentation</li>
+                                <li>Shared memory</li>
+                                <li>Isolation of data between processes</li>
+                                <li>No memory limitation (beside the size of HDD/SSD)</li>
+                            </ul>
+                        </li>
+                        <li>External fragmentation
+                            <ul>
+                                <li>Definition
+                                    <ul>
+                                        <li>External fragmentation occurs when free memory is split into small, non-contiguous blocks, making it difficult to allocate larger memory requests.</li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/-hA_o-449Hhx6PFGdBkUChJsf17OfEbuKJ3oADq_2nR5ZInZt8EsIoBg5e-8tYUuKE2VgpktfVt0TbcJfkfV-3AvWeF8kiInwd2DtHaaHU_sEHCRZhy59fzYKVQ417Iy.png" width="393" height="386.33898305084745"/> </li>
+                                    </ul>
+                                </li>
+                                <li>Cause→It arises from allocating and deallocating memory dynamically. Over time, as processes are loaded and removed, gaps of free space form between allocated blocks.</li>
+                                <li>Impact→Reduces available memory and increases the likelihood of needing to swap pages to disk.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Internal fragmentation
+                            <ul>
+                                <li>Cause→Internal fragmentation occurs when memory is allocated in fixed-size blocks, and the amount of memory requested by a process is less than the size of the allocated block. The unused space within the allocated block is wasted and cannot be used by other processes, leading to inefficient memory utilization. </li>
+                            </ul>
+                        </li>
+                        <li>Explain the concept of virtual memory
+                            <ul>
+                                <li>Abstraction of physical memory</li>
+                                <li>Fixed block sizes (often 4kb) of memory are used ⇒ called paging</li>
+                                <li>The logical page is mapped to the physical page using a process page table</li>
+                                <li>Many to one mapping, which means many virtual pages can map to one physical address</li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/kMvDrOQFhA0qpFMNOBSvFS_JhCQ2K9CWX1oqHHaff8cZkh0MeZaca3nlFVGjwZUWpNv9jGbB4rR0i3eS56k8f9YUtb1UjN6Xcjw0iM6dJkXvEMXB1yDtjb4cgMNML0BN.png" width="738" height="407.4786096256684"/></li>
+                            </ul>
+                        </li>
+                        <li>Do we have fragmentation in virtual memory?→Yes, while external fragmentation is solved, internal fragmentation can occur, especially with big page sizes.</li>
+                        <li>Explain how shared memory works in virtual memory
+                            <ul>
+                                <li>Shared memory allows multiple processes to access and modify the same region of virtual memory, since all virtual addresses are mapped the same physical address space</li>
+                                <li>E.g. spinning up the same program multiple times, the code is just loaded once to memory and all virtual pages map to the same physical space</li>
+                                <li>The same works for shared libraries, they are only loaded once to the RAM.</li>
+                            </ul>
+                        </li>
+                        <li>Explain how data isolation works in virtual memory→Each process has its own isolated address space, preventing one process from accessing another&#39;s memory.</li>
+                        <li>Explain how the limitation of physical memory is solved
+                            <ul>
+                                <li>The OS can decide to store process memory which was not used for some time on to disk. </li>
+                                <li>The space in RAM is freed and can be used by other or even the same process. </li>
+                                <li>When the stored data is accessed again via its virtual address, the OS copies the process data back to RAM. </li>
+                            </ul>
+                        </li>
+                        <li>What are page tables, and how are they used?
+                            <ul>
+                                <li>Data structures for mapping virtual memory addresses to physical</li>
+                                <li>Each process has its own page table</li>
+                                <li>The page table is stored in memory, adding an overhead for address translation.</li>
+                                <li>Accessing the page table requires additional memory reads, impacting performance</li>
+                                <li>The overhead can be reduced by the TLB</li>
+                            </ul>
+                        </li>
+                        <li>Describe what the TLB does→Translation Lookaside Buffer (TLB): A cache that stores recently used virtual-physical mappings to speed up address resolution.</li>
+                        <li>What is a drawback of virtual memory?
+                            <ul>
+                                <li>We have an additional layer of translations, since the CPU can&#39;t read from virtual addresses.</li>
+                                <li>This is done by page tables, but adding this includes additional maintenance and memory usage</li>
+                                <li>If a page fault occurs, the performance sinks due to kernel mode switch and reading/writing back from disc.</li>
+                                <li>All this results in a more complex CPU architectures (MMU/TLB)</li>
+                                <li>The TLB can also have cache misses</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Direct Memory Access 
+                    <ul>
+                        <li>What happens when a key is pressed on the keyboard?→When a key is pressed, the value is written to the keyboard buffer and the CPU is interrupted. The interruption is a context switch to kernel mode, which executes the interrupt service routine (ISR) function in the kernel.</li>
+                        <li>What does the Interrupt Service Routine (ISR) function do for keyboard inputs?→The ISR function reads from the keyboard, puts the value in the CPU cache, and then transfers it to the memory.</li>
+                        <li>Why is DMA useful for larger amounts of data?→Otherwise, the transfer of every single data point goes through the CPU, which causes a bottleneck for larger amounts of data.</li>
+                        <li>What is the DMA and what does it do?
+                            <ul>
+                                <li>DMA stands for Direct Memory Access.</li>
+                                <li>It allows direct access from the network/disk to the RAM.</li>
+                                <li>The CPU initializes the transfer with a memory address for reading/writing and the device buffer.</li>
+                                <li>The DMA executes the operation and starts the direct transfer.</li>
+                            </ul>
+                        </li>
+                        <li>Why is it important that the address is locked during DMA operations?→It is important because the DMA uses a physical address for the transfer, and the address must be locked to prevent any other operations from interfering with the ongoing transfer.</li>
+                        <li>What are some drawbacks associated with DMA?
+                            <ul>
+                                <li>DMA can be susceptible to DMA attacks (security issue).</li>
+                                <li>It adds complexity.</li>
+                            </ul>
+                        </li>
+                        <li>Is it a good idea to use the DMA for keyboard and mouse interrupts? Why or why not?→No, DMA shouldn&#39;t be used for keyboard and mouse interrupts because the CPU is faster in handling these due to the initialization costs involved with DMA.</li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>CPU
+            <ul>
+                <li>Basic components
+                    <ul>
+                        <li>Mention the basic components of a CPU
+                            <ul>
+                                <li>ALU (Arithmetic Logic Unit)</li>
+                                <li>CU (Control Unit)</li>
+                                <li>Registers</li>
+                                <li>MMU (Memory Management Unit)</li>
+                                <li>Caches</li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/9gDRYvXjcdk_sVuLQxPBIeI1tfjZNKU9uW3_fdm8AiZCi8qeSuu4miFddNJ1aDwCV5CaPtbcRxfVeRFERAnzsvncICZKLICLGLpE0mh_EGZj5IwI-jN4Us9_zG-MYH1t.png" width="738" height="436.09090909090907"/></li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>What is the ALU?→Short for arithmetic logical unit and part of the CPU. The basic unit that actually does the computation in the CPU. These are addition, subtraction, multiplication and division, which are basically done using logic like AND, OR and XOR.</li>
+                        <li></li>
+                        <li>What is the CU?→Short for control unit and part of the CPU. Controls/Manages the execution, fetching and decoding of instructions in the CPU. The execution of an instruction does not always include the ALU, for example just a memory access or fetching data from a register.</li>
+                        <li></li>
+                        <li>What are the main characteristics and types of registers?
+                            <ul>
+                                <li>Registers provide very fast data access (1-2 ns).</li>
+                                <li>They are small memory units (32 or 64 bits).</li>
+                                <li>They are expensive to build.</li>
+                                <li>Examples include program counters, instruction registers, stack pointers, and base pointers.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>What are the main functions of the MMU?
+                            <ul>
+                                <li>MMU is short for Memory Management Unit and is part of the CPU</li>
+                                <li>Reads from memory and uses caches.</li>
+                                <li>Translates virtual to physical addresses.</li>
+                                <li>Contains the TLB, which caches the translation table.</li>
+                                <li>Requires flushing during context switches.</li>
+                                <li>Manages memory protection and access control</li>
+                                <li>Handles memory paging (fixed-size blocks) and segmentation (variable-size blocks)</li>
+                                <li>Swapping: Moves data between RAM and disk storage to free up memory for active processes, essential in systems with limited physical memory.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>CPU Caches
+                            <ul>
+                                <li>What is cached to allow faster access?→Data and instructions.</li>
+                                <li>Describe different cache levels
+                                    <ul>
+                                        <li>L1 cache is the fastest, smallest cache closest to the CPU, followed by L2 and then L3, each progressively larger and slower. </li>
+                                        <li>L1 local to Core, separated in a data and instruction cache.
+                                            <ul>
+                                                <li>○ CU can fetch data and instructions at the same time</li>
+                                                <li>○ 1 ns</li>
+                                                <li>○ ca. 128 KB</li>
+                                            </ul>
+                                        </li>
+                                        <li>L2 local to Core in newer Cores, shared in older ones
+                                            <ul>
+                                                <li>○ 5 ns</li>
+                                                <li>○ ca. 256 KB - 2 MB</li>
+                                            </ul>
+                                        </li>
+                                        <li>L3 shared btw all cores, missing in older cores
+                                            <ul>
+                                                <li>○ 15 ns</li>
+                                                <li>○ ca. 64 MB</li>
+                                            </ul>
+                                        </li>
+                                        <li>Main Memory
+                                            <ul>
+                                                <li>○ 50-100 ns</li>
+                                                <li></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Why should cache invalidation be avoided?→Cache invalidation can cause performance bottlenecks due to the time-consuming process of updating all cached data. Accessing data from memory is time consuming.</li>
+                                <li>What is the purpose of caches?→Caches store frequently accessed data closer to the CPU, reducing access time. Reduced Latency: Decreases the time it takes for applications to retrieve data, enhancing performance.</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>What is the purpose of a BUS for the CPU?→A bus is an electronic communication system that transfers data between the CPU and other components. </li>
+                        <li></li>
+                        <li>DSM
+                            <ul>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/cLyo3CG3HEE8nQG2E9yQ2cpdtZskKAxE_cRon76GLFfv3w93-ymBnwZEVKicaEcwmj5vWS8ot0MtW4suVPAQQRBcxzU3BKBF3PgKSizXXWZWefax5-lrdQUiyRI4CJT4.png?loading=false?loading=false?loading=false" width="742" height="327.5851063829787"/></li>
+                                <li>What does DSM stand for and what is the primary function of DSM?
+                                    <ul>
+                                        <li>Distributed Shared Memory (DSM) </li>
+                                        <li>Allows multiple processes on different machines to access a common memory space, facilitating inter-process communication. </li>
+                                        <li>The memory is presented as a single logical space, abstracted from the physical memory locations.  </li>
+                                        <li>This allows multiple process to access a unified memory model, which simplifies programming and resource management.</li>
+                                    </ul>
+                                </li>
+                                <li>What is a NUMA in this context and what does it stand for?→NUMA stands for Non-Uniform Memory Access, a memory architecture that allows a system to access multiple memory nodes with varying access times, optimizing performance in multi-processor environments.</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li>CPU architecture
+                            <ul>
+                                <li>RISC
+                                    <ul>
+                                        <li>What does RISC stand for and what are the main characteristics?
+                                            <ul>
+                                                <li>Reduced Instruction Set Computer</li>
+                                                <li>Simple instructions, single task, single cycle</li>
+                                                <li>Low power, predictable</li>
+                                                <li>Example: ARM</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>CISC
+                                    <ul>
+                                        <li>What does CISC stand for and what are the main characteristics?
+                                            <ul>
+                                                <li>Complex Instruction Set Computer</li>
+                                                <li>One instruction, multiple tasks, multiple cycles</li>
+                                                <li>More power, unpredictable due to multiple tasks in one instruction</li>
+                                                <li>Example: An addition that loads two variables from memory, adds them, and writes the result back</li>
+                                                <li>Example: x86 (Intel/AMD)</li>
+                                            </ul>
+                                        </li>
+                                        <li></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>What is the clock speed of a CPU?→Expresses how many cycles per second a CPU can do, for example 3 GHz are 3 billion clock cycles per second. In RISC this could mean 3 billion instructions per second, in CISC these are less. Additionally, there is cost (cylces needed) for fetching and decoding instructions (pipelining helps here).</li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>Instruction Life Cycle
+                    <ul>
+                        <li>CPU
+                            <ul>
+                                <li>Describe shortly the life cycle of an instruction
+                                    <ul>
+                                        <li>Fetch from memory (MMU)</li>
+                                        <li>Decode (CU)</li>
+                                        <li>Execute (ALU)</li>
+                                        <li>Memory read (optional)</li>
+                                        <li>Write back to register/memory</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>Improving CPU Performance
+                    <ul>
+                        <li>What is the purpose of separating a CPU into multiple units?
+                            <ul>
+                                <li>To enable pipelining, allowing simultaneous execution of multiple tasks. </li>
+                                <li>For example, the next instruction can be fetched, while the previous one is decoded. </li>
+                                <li>Without pipelining, the CPU or at least parts of the CPUs are (more) idle.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Explain Hyper Threading and which problem is solves
+                            <ul>
+                                <li>Hyper Threading exposes a single core as multiple logical cores with dedicated registers, sharing  everything else (CU, ALU and L cache). </li>
+                                <li>It improves CPU utilization by allowing multiple threads to run simultaneously, reducing idle time.</li>
+                                <li>Overhead of context switch is reduced/removed, since the registers (which are normally replaced) are dedicated and the memory stays more or less the same.</li>
+                                <li>This was achieved by adding more registers to a CPU</li>
+                                <li>Hyper Threading does not work well, when the processes work on different data and the cache is invalidated anyway during a context switch</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Explain SIMD and how it improves the CPU performance
+                            <ul>
+                                <li>SIMD stands for Single Instruction Multiple Data</li>
+                                <li>With a single instruction, multiple values are added (or subtracted or...)
+                                    <ul>
+                                        <li>Traditional: Add a1,b1; Add a2,b2; Add a3,b3; Add a4,b4</li>
+                                        <li>SIMD: Add [a1,a2,a3,a4], [b1,b2,b3,b4]</li>
+                                    </ul>
+                                </li>
+                                <li>This is like a vector operation with a fixed size, e.g. 32 bits</li>
+                                <li>It allows parallel processing of data, enhancing throughput and efficiency.</li>
+                                <li>E.g. ARM Neon architecture extension</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Speculative execution
+                            <ul>
+                                <li>What is speculative execution?→Speculative execution is a performance optimization where the CPU predicts the direction of branch instructions and executes subsequent instructions in advance.</li>
+                                <li>How does speculative execution improve performance?→It keeps the CPU busy during idle times, such as while waiting for memory operations to complete, saving time when predictions are correct.</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Process Management
+            <ul>
+                <li>Process vs. Thread
+                    <ul>
+                        <li>Process Control Block (PCB)
+                            <ul>
+                                <li>Define→The PCB is a data structure in the kernel memory space where process metadata (like the program counter, PID, and memory data) is stored.</li>
+                                <li>What does it contain?
+                                    <ul>
+                                        <li>PID, Process State, Program counter, registers</li>
+                                        <li>Process Control info (running/stopped, priority)</li>
+                                        <li>Page Table </li>
+                                        <li>Accounting (CPU/Memory usage)</li>
+                                        <li>Memory Management info (Pointer to code/stack etc.)</li>
+                                        <li>I/O info (File descriptors, e.g. in Linux everything is a file like sockets, outgoing connections ...)</li>
+                                        <li>IPC (interprocess communication) info, semaphores, mutexes, shared memory, messages</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Kernel Process Table
+                            <ul>
+                                <li>Purpose→Keeps track of all currently running processes in the system in a table mapping PID to PCB location. Located in the kernel memory space.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Threads
+                            <ul>
+                                <li>Explain why a thread is a lighter weight process→Threads share the same memory space and resources as their parent process, requiring less overhead to create and manage.</li>
+                                <li>What is shared between different threads in the same process?
+                                    <ul>
+                                        <li>Memory space, including code, data, and heap. </li>
+                                        <li>File descriptors </li>
+                                        <li>Interprocess communication entities like mutexes or semaphores.</li>
+                                    </ul>
+                                </li>
+                                <li>What is unique for each thread?→Each thread has its own program counter, register(s) (values), and stack.</li>
+                                <li>Explain the memory structure of a process in RAM with threads
+                                    <ul>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/C-slemGNUxZxIzlacwlNWo5zWtdzo-j7R0JZjjDvnEalnXklGUBAsuafYpUeExjK3zoYXT8Rd9ktLpNu-o9llU3LccarW76o6SrqC1MiBzqJgZ3K1bvPbI4zdVLeUOuv.png" width="479" height="605"/></li>
+                                    </ul>
+                                </li>
+                                <li>Explain the benefit of sharing the PCB between threads→Reduces overhead when switching between the threads. For example, the TLB doesn&#39;t have to be flushed, since they share the same page tables.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Thread Control Block (TCB)
+                            <ul>
+                                <li>Define→The TCB is a data structure in the kernel memory space where thread metadata (like TID, program counter, registers) is stored.</li>
+                                <li>What does it contain?
+                                    <ul>
+                                        <li>TID, Thread State, Program counter, registers</li>
+                                        <li>Process Control info (running/stopped, priority)</li>
+                                        <li>Accounting (CPU/Memory usage)</li>
+                                        <li>Memory Management info (Pointer to code/stack etc.)</li>
+                                        <li>Pointer to parent PCB</li>
+                                    </ul>
+                                </li>
+                                <li>Which metadata is shared with the parent process?→Page Table, IO info (file descriptors) and IPC info (semaphores, shared memory etc.)</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Kernel Thread Table
+                            <ul>
+                                <li>Purpose→Keeps track of all currently running threads in the system in a table mapping TID to TCB location.  Located in the kernel memory space.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Fork of a process
+                            <ul>
+                                <li>Define→A fork creates a nearly identical copy of a process. </li>
+                                <li>What is Copy on Write (CoW)?→Copy-on-write is a memory management technique that delays copying data until it is modified. Before that, the memory is shared, for example between two processes.</li>
+                                <li>What happens with the memory during a fork?→The child process must have new virtual memory space. But the OS uses CoW, so pages can be shared unless a write operation happens, for example calling a function.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Example Postgres
+                            <ul>
+                                <li>In Postgres, every database connection creates a new (forked) process. Which is a bad idea because it creates so much overhead compared to a thread. They needed to limit the number of connections to 100 because of this. </li>
+                                <li>It is often solved by having a pool of connections and multiple users share these connections. </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>Context switching
+                    <ul>
+                        <li>CPU doesn&#39;t really know what a process is. It&#39;s just executing instructions.</li>
+                        <li>What is a context?→A process or thread is a context, which can be switched.</li>
+                        <li>What happens during a context switch?→The operating system saves the state (registers) of one process to the corresponding PCB and loads the state of another. </li>
+                        <li>When is the TLB flushed?→During a context switch involving processes. Threads of the same process use the same paging table and can use the &quot;old&quot; TLB values.</li>
+                        <li>Explain TLB ASID in short→TLB ASID (Address space ID) is a unique identifier that allows multiple processes to share the Translation Lookaside Buffer (TLB) without interfering with each other&#39;s address translations. This can avoid TLB flushing on context switch.</li>
+                        <li>Context switch can be done by scheduling algorithms or preemptive multitasking (a process is not allowed to run for too long).</li>
+                    </ul>
+                </li>
+                <li>Concurrency
+                    <ul>
+                        <li>Bound Workload
+                            <ul>
+                                <li>Explain CPU Bound Workload→A CPU-bound workload is one that spends most of its time performing computations on the CPU. For example, encryption, Compression, sorting, ...</li>
+                                <li>Explain IO Bound Workload→A workload where the process spends more time waiting for I/O operations than performing computations. For example, database queries, network connection write/read, file read/write, ...</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Multithreaded vs. Multi-process
+                            <ul>
+                                <li>Multi-process
+                                    <ul>
+                                        <li>Spins up multiple process</li>
+                                        <li>Isolated from each other</li>
+                                        <li>e.g. NGINX, Postgres</li>
+                                    </ul>
+                                </li>
+                                <li>Multithreaded
+                                    <ul>
+                                        <li>Parent process spins multiple threads</li>
+                                        <li>Shares memory with the parent</li>
+                                        <li>e.g. MySQL, libuv</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Mutex
+                            <ul>
+                                <li>Explains concurrency issues with shared memory, like a race condition with two threads. It can be solved using a mutex. The mutex lives in the same shared space and the OS only allows one holding it.</li>
+                                <li>Book: Unix Systems for Modern Architectures: Symmetric Multiprocessing and Caching for Kernel Programmers</li>
+                                <li>Mutex has ownership</li>
+                                <li>The thread that locks Mutex must unlock</li>
+                                <li>If a thread terminates, the mutex can remain locked</li>
+                                <li>Can cause deadlock</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Semaphores
+                            <ul>
+                                <li>Semaphores can be used for mutual exclusion</li>
+                                <li>In general, this is a number with signals that can increment/decrement the value (atomically)</li>
+                                <li>Wait/blocks when semaphore=0</li>
+                                <li>Any thread with access to the semaphore can signal/wait</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Storage Management
+            <ul>
+                <li>Persistent storage
+                    <ul>
+                        <li>HDD
+                            <ul>
+                                <li>Parts
+                                    <ul>
+                                        <li>What does it consist of?→Platters, read/write heads, and a spindle motor.</li>
+                                        <li>Track::A concentric circular path where data is stored and accessed.</li>
+                                        <li>Geometrical sector::A portion of the disk (a closed region bounded by a circle) enclosed by two radii and an arc.</li>
+                                        <li>Disc sector::It refers to the intersection of a track and geometrical sector. Minimum storage unit of a hard drive.</li>
+                                        <li>Cluster::Unit of storage on a hard disk drive (HDD) that consists of a group of contiguous sectors used to improve data access efficiency. It is the smallest logical amount of disk space that can be allocated to hold a file</li>
+                                        <li><svg width="293" height="415" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <image href="https://remnote-user-data.s3.amazonaws.com/BXJd0YxQT7bImC0iW4mIMWs0tSCU1qrkN4x4RUO4p2ieOwOSM6ZVKWslXEYJycYlzpqpL78yrJlK_V6YStfz9PPoAK8FiuBza2vYtJgX0mYSzbkO9REe2ErQbOgQ96Sx.png" x="0" y="0" height="415px" width="293px"/>
+        <rect x="47.649826720969614" y="324.3446597389203" width="41.48634215337546" height="15.3653119086576" clozeId="5388616648379746" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/><rect x="47.137649657347694" y="346.36827347466283" width="127.019911778236" height="18.95055135401102" clozeId="5388616648379746" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/><rect x="48.16200378459154" y="366.85535601953956" width="75.29002835242211" height="14.853134845035683" clozeId="5388616648379746" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/><rect x="48.67418084821345" y="387.34243856441634" width="48.14464398046041" height="17.926197226767172" clozeId="5388616648379746" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/>
+        </svg></li>
+                                    </ul>
+                                </li>
+                                <li>How is data read from the disc
+                                    <ul>
+                                        <li>New: LBA, Old: Using the CHS method: Cylinder(Track)/Head/Sector</li>
+                                        <li>Position the read/write head over the cylinder/track </li>
+                                        <li>Spin to the correct geometrical sector</li>
+                                        <li>Read the magnetic data</li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/fuY3V0n7BhTSA8vaLtUdrehkuP6Kh_UuRrQkGlHaz0WaiCQZGMdNFWnWYErmjmGkSd0iqspqk_hqhzcIB9xH9rPf58kVjQ_VY4Cn5k2yMp4U3llXFNxnYoktqIbI-qKS.png" width="527" height="249"/></li>
+                                    </ul>
+                                </li>
+                                <li>Why was introducing new HDD layouts a hard and painful task and how was it solved?→In the early stages, where was no HDD controller and the OS was sending commands directly to the hard drive. The layout of the HDD (CHS) was exposed to the OS. The OS didn&#39;t work on other layouts. It was solved by adding an HDD controller which does the conversion from CHS to the new layout.</li>
+                                <li>LBA
+                                    <ul>
+                                        <li>Define→Logical Block Addressing is a method of addressing data on a hard disk drive. Only one number is used to address data, and each linear base address describes a single block. Also used in SSD. Also known as logical sector size.</li>
+                                        <li>What problem does it solve?→Logical Block Addressing (LBA) solves the problem of needing a consistent way to address data on a hard disk drive (HDD) regardless of its physical layout.</li>
+                                        <li>Drawback?→Additional cost for the translation of the LBA number to the disk address, which is done by the disk controller.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>SSD
+                            <ul>
+                                <li>Structure→SSDs use flash memory organized in blocks and pages for persistent storage. A block is a collection of pages which have a fixed size (4kb, 16kb, ...)</li>
+                                <li>What is flash memory?→Non-volatile memory that can be electrically erased and reprogrammed. There is NOR flash and NAND flash. SSD uses NAND flash.</li>
+                                <li>Minimum read, write and erase size?→The minimum read and write size is a page. Erase is a whole block because it is expensive.</li>
+                                <li>Flash translation layer::Software layer that manages the mapping of logical block addresses to physical storage locations in flash memory devices.</li>
+                                <li>Why is LBA mapping more expensive than in HDD→More complex mapping since it has to be updated continuously because there is no &quot;update&quot; functionality in an SSD. The mapping table is stored in a RAM (mostly DRAM) belonging to the SSD.</li>
+                                <li>What is Write amplification?→Write amplification is the phenomenon where writing data to a storage device requires writing a larger amount of data than the original data size. Because flash memory must be erased before it can be rewritten, the process to perform a write operation results in moving (or rewriting) user data and metadata more than once.</li>
+                                <li>Wear leveling
+                                    <ul>
+                                        <li>Explain→Wear leveling is a technique used in SSDs to distribute write operations evenly across all memory blocks, extending the lifespan of the drive. Because NAND cells have a write limit.</li>
+                                        <li>Why is it necessary?→Extending the lifespan. Without this, there are pages which are never touched (like OS files or shared libraries) called cold pages and hot pages which are updated all the time. So some pages will die way before others.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>File Systems
+                    <ul>
+                        <li>File System are an abstraction above present storage for the users. Writing and reading to a file translates to blocks, and at least one block (one or more LBAs) needs to be allocated.</li>
+                        <li>Linux treats everything as a file.</li>
+                        <li></li>
+                        <li>Examples for File Systems
+                            <ul>
+                                <li>FAT (FAT16, FAT32)</li>
+                                <li>NTFS (new technology file system)</li>
+                                <li>APFS (Apple File System)</li>
+                                <li>EXT4 (linux default)</li>
+                                <li>XFS</li>
+                                <li>btrfs</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>PBA
+                            <ul>
+                                <li>Define→A PBA is a Physical Block Address, the actual location of a data block on a storage device. Size is a multiple of an LBA (so one or more). Also known as physical sector size.</li>
+                            </ul>
+                        </li>
+                        <li>File system block size
+                            <ul>
+                                <li>Define→The minimum read/write used by the filesystem. Size is a multiple of an LBA (so one or more). When formatting a file system, the user can specify a file system block size, especially on Linux with some restrictions.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>FAT32 (File Allocation Table) 
+                            <ul>
+                                <li>Describe
+                                    <ul>
+                                        <li>FAT32 is a file system that organizes files and directories on a storage device using a File Allocation Table.  </li>
+                                        <li>The basic idea is an array of 32bit integers, where the index is the LBA. The value in the array itself at this index is the next index until we reach the end.</li>
+                                        <li>Reading all the LBAs in order gives the file.</li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/5PogkNB__koqruzjrDQfee2ysMP1pC2Thro6RRQdPuwp5D593WcuPZXxwRX9iXiHavHEU7vYHhU0OHPoxfrJlw7MGXb19zxV6p_Cc0Gtvh3x-5LPqvdJNBTTxE0DWK4y.png" width="566" height="270"/></li>
+                                    </ul>
+                                </li>
+                                <li>Why can only be 28 bits used for the LBA index instead of 32?→Four bits are reserved for other purposes like &quot;dirty&quot; or &quot;free&quot;, leaving only 28 bits for the LBA index.</li>
+                                <li>Explain the issue with low LBA sizes and how it was solved?→In the old standard (LBA=512 byte), you could only address 2^28*512 bytes ~ 128GB. It was solved using Clustering.</li>
+                                <li>Clustering
+                                    <ul>
+                                        <li>Explain→Cluster is a logical grouping of LBAs. For example, 8LBAS = 1 cluster (4kb, if LBA = 512byte). So Block/Cluster 0 ⇒ LBAs 0-7, Block/Cluster 1 ⇒LBAs 8-15 and so on. Now you can address 8*128GB ~ 1 TB.</li>
+                                        <li>A larger cluster size allows more disk space to be addressed. But what is the disadvantage here?→Larger <a isRemReference="true" href="Udemy%20-%20Fundamentals%20of%20Operating%20System/Storage%20Management/Persistent%20storage/HDD/Parts/Cluster.html?isPin=false">Cluster</a> sizes lead to wasted space for smaller files (<a isRemReference="true" href="Udemy%20-%20Fundamentals%20of%20Operating%20System/Memory%20Management/Virtual%20memory/Internal%20fragmentation.html?isPin=false">Internal fragmentation</a>).</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>OS Page Cache
+                            <ul>
+                                <li>Describe→A region of RAM used by the OS to cache recently accessed file system blocks, improving I/O performance. </li>
+                                <li>What happens when a user writes a file?→The OS writes to the page cache, and then asynchronously writes it to the disk. Calling <q>fsync()</q> immediately flushes the page cache to disk. </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>File Modes
+                            <ul>
+                                <li>A file must be opened to be used</li>
+                                <li>There are different modes in open
+                                    <ul>
+                                        <li>O_APPEND - append mode</li>
+                                        <li>O_DIRECT - skips page cache</li>
+                                        <li>O_SYNC - write always flushes cache (slow, calls fsync() every time, should not be used unless you know what you are doing)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Partitions
+                            <ul>
+                                <li>Explain→Partitions are divisions of a hard drive that allow for the organization and management of files and operating systems. Start and end in an LBA. Each partition can have its own file system and each file system a different block size (cluster). An OS concept, disk and filesystem have no idea of a partition.</li>
+                                <li>Partitions should be aligned with the PBAs; otherwise there are performance issues, due to overlapping.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>What really happens in a file IO?
+                    <ul>
+                        <li>API
+                            <ul>
+                                <li>What API is used for reading/writing files in Unix/Linux→Portable Operating System Interface (POSIX) provides functions like <q>open()</q>, <q>read()</q>, <q>write()</q>, and <q>close()</q> for file I/O in Unix-like systems. Since everything on Linux is treated as a file, the same API can be used to read/write a socket connection.</li>
+                                <li>What API is used for reading/writing files on Windows?→WIN32 API functions.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Socket Management
+            <ul>
+                <li>Network fundamentals
+                    <ul>
+                        <li>Client-Server Architecture
+                            <ul>
+                                <li>Benefits?→Clients can call servers to perform expensive tasks which have the resources (like RAM, CPU etc.) to do it. Clients no longer require dependencies but can still execute lightweight tasks. This results in improved resource utilization.</li>
+                                <li>What is RPC?→A Remote Procedure Call (RPC) is a technology that allows a computer program to execute a procedure (function) on another computer, as if it were a local procedure call.</li>
+                                <li>What is absolutely necessary for this?→A network and a communication model.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>OSI (Open Systems Interconnection) Model
+                            <ul>
+                                <li>Why do we need a communication model?→To standardize communication protocols and ensure interoperability between different systems.</li>
+                                <li>There are 7 layers, each describing a specific network component. 
+                                    <ul>
+                                        <li>Name these layers
+                                            <ul>
+                                                <li>Layer 7 - Application - HTTP/FTP/gRPC</li>
+                                                <li>Layer 6 - Presentation - Encoding, Serialization</li>
+                                                <li>Layer 5 - Session - Connection establishment, TLS (Transport Layer Security)</li>
+                                                <li>Layer 4 - Transport - UDP/TCP</li>
+                                                <li>Layer 3 - Network - IP</li>
+                                                <li>Layer 2 - Data link - Frames, Mac address Ethernet</li>
+                                                <li>Layer 1 - Physical - Electric signal, fiber or radio waves</li>
+                                            </ul>
+                                        </li>
+                                        <li>Example:
+                                            <ul>
+                                                <li>Sending a Post Request to an HTTPS webpage
+                                                    <ul>
+                                                        <li>Layer 7 - Application - POST request with JSON data to HTTPS server</li>
+                                                        <li>Layer 6 - Presentation - Serialize JSON to flat byte strings</li>
+                                                        <li>Layer 5 - Session - Request to establish TCP connection/TLS</li>
+                                                        <li>Layer 4 - Transport - Sends SYN request target port 443</li>
+                                                        <li>Layer 3 - Network - SYN is placed in IP packet(s) and adds the source/destination IPs</li>
+                                                        <li>Layer 2 - Data link - Each packet goes into a single frame and adds the source/destination MAC addresses</li>
+                                                        <li>Layer 1 - Physical - Each frame becomes a string of bits which converted into either a radio signal (Wi-Fi), electric signal (Ethernet), or light (fiber)</li>
+                                                        <li>Take it with a grain of salt, it&#39;s not always cut and dry</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Receiver computer receives the POST request the other way around
+                                                    <ul>
+                                                        <li>Layer 1 - Physical - Radio, electric or light is received and converted into digital bits</li>
+                                                        <li>Layer 2 - Data link - The bits from Layer 1 are assembled into frames</li>
+                                                        <li>Layer 3 - Network - The frames from layer 2 are assembled into IP packet.</li>
+                                                        <li>Layer 4 - Transport
+                                                            <ul>
+                                                                <li>The IP packets from layer 3 are assembled into TCP segments</li>
+                                                                <li>Deals with Congestion control/flow control/retransmission in case of TCP</li>
+                                                                <li>If Segment is SYN, we don’t need to go further into more layers as we are still processing the connection request</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>Layer 5 - Session
+                                                            <ul>
+                                                                <li>The connection session is established or identified</li>
+                                                                <li>We only arrive at this layer when necessary (three-way handshake is done)</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>Layer 6 - Presentation - Deserialize flat byte strings back to JSON for the app to consume</li>
+                                                        <li>Layer 7 - Application - Application understands the JSON POST request and your express JSON or Apache request receive event is triggered</li>
+                                                        <li>Take it with a grain of salt, it&#39;s not always cut and dry</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Explain why sending data from a client does not necessarily go directly to the server. Instead, it will be checked (multiple) times before that.
+                                    <ul>
+                                        <li>While sending data through a network, you often go through switches or routers or firewalls or ... These are devices operating on different layers which check, for example, the MAC or IP Addresses. </li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/YQjxOiiBu1EyAUrG0zyML1pe1yqL2S3ucF2pxw-xrL3i4XTL65iJRxC3aDireRaoBB1r0nBBE0ML3Rq6iI8a_oJF3ww0qtmevInbbcPXsFq1J48n5_wUYnupTdNns1OE.png" width="718" height="389.5741758241758"/></li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/f8AYm4U5IYVcPNKCvg-jQEHNJwK0RbwO_LIaPERN2MDLCyQD7qWReImPrzcn8xCuxHOI2Z1xjIg6FzYQidSHLrbgd5LsmUIZCJMcIIF4m4E9rF1xareM9bC7FDYn5aZH.png" width="392" height="227.23076923076923"/></li>
+                                    </ul>
+                                </li>
+                                <li>Name shortcomings
+                                    <ul>
+                                        <li>Too many layers which are difficult to comprehend </li>
+                                        <li>Lack of standardization across implementations</li>
+                                        <li>Overhead: The model introduces additional overhead due to its layered structure, which can impact performance.</li>
+                                        <li>Not used in Practice: While it is a good theoretical framework, most of the networking protocols used today are based on the TCP/IP model, leading to a mismatch between theory and practice.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>TCP/IP Model
+                            <ul>
+                                <li>Describe the difference to the OSI Model→The TCP/IP model is a simpler, less layered model than the OSI model, focusing on four layers instead of seven. </li>
+                                <li>Name the four layers
+                                    <ul>
+                                        <li>Application (Layer 5, 6 and 7)</li>
+                                        <li>Transport (Layer 4)</li>
+                                        <li>Internet (Layer 3)</li>
+                                        <li>Data link (Layer 2)</li>
+                                        <li>The Physical layer is not officially covered</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Host-to-Host Connection
+                            <ul>
+                                <li>MAC
+                                    <ul>
+                                        <li>What does it stand for?→Media Access Control.</li>
+                                        <li>What problem does it solve?→Each host network card has a unique MAC address, ensuring that data is directed to the correct device.</li>
+                                        <li>When a message is sent on a network, {{3543933937596466::everyone}} will receive it, but only {{3543933937596466::the one}} with the {{3543933937596466::correct MAC address}} will accept it.</li>
+                                    </ul>
+                                </li>
+                                <li>IP Address
+                                    <ul>
+                                        <li>Purpose?→To enable routing and uniquely identify a device on a network. Without routing, the entire network and all messages needed to be scanned to search for messages.  </li>
+                                        <li>Structure?→Is built in two parts: One part to identify the network, the other is the host.</li>
+                                        <li>Why are MAC addresses still necessary?→MAC addresses provide unique hardware identification for devices on a local network, enabling efficient communication between them.</li>
+                                    </ul>
+                                </li>
+                                <li>Ports
+                                    <ul>
+                                        <li>Purpose?→To uniquely identify a process or application on a host for network communication.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>TCP
+                            <ul>
+                                <li>Stands for?→Transmission Control Protocol.</li>
+                                <li>Name key points
+                                    <ul>
+                                        <li>Layer 4 protocol</li>
+                                        <li>Ability to address processes in a host using ports</li>
+                                        <li>&quot;Controls&quot; the transmission, unlike UDP</li>
+                                        <li>Establishes a connection/session, means there is knowledge between the client and the server</li>
+                                    </ul>
+                                </li>
+                                <li>Name Use cases
+                                    <ul>
+                                        <li>Reliable communication</li>
+                                        <li>Remote shell</li>
+                                        <li>Database connections</li>
+                                        <li>Web communications</li>
+                                        <li>Any bidirectional communication</li>
+                                    </ul>
+                                </li>
+                                <li>Key points about a TCP connection
+                                    <ul>
+                                        <li>Connection is a Layer 5 entity (session)</li>
+                                        <li>An agreement between client and server, can&#39;t send data without a connection</li>
+                                        <li>Requires a 3-way TCP handshake</li>
+                                        <li>Reliable, ordered delivery of data in segments</li>
+                                        <li>Lost segments are retransmitted</li>
+                                        <li>20 bytes header segment (can go to 60)</li>
+                                        <li>Stateful</li>
+                                        <li>Identified by four properties: Source/Destination IP, Source/Destination port</li>
+                                    </ul>
+                                </li>
+                                <li>Explain the three-way handshake→A three-way handshake is a method used in TCP/IP networks to establish a connection between two devices, involving a SYN, SYN-ACK, and ACK exchange (in this order). <img src="https://remnote-user-data.s3.amazonaws.com/o8vmPD2btd3KImkMciE9N-n5bv6izNBo_d52qiY6I22-xAChoKsz4rkyZ_7WWr6saaKxFTykm4z0szRuPyg96CLmoi9Nk6ZHmviX32y3vGYsIQw8eptxE_Kb243_jUvw.png" width="190" height="47.89693593314764"/></li>
+                                <li>Explain how data is sent?→Data will be encapsulated in a segment and acknowledged (ACK) by the receiver. Data can be sent in multiple segments and acknowledged by a single response.
+ <img src="https://remnote-user-data.s3.amazonaws.com/fvO61cuEqmrPQWh5kZqfatjr7un08FvLeFMhQfpLMryDuczR8BmWlgcW63n_UdhwFuqnSYxbejaEQaiEthLTpup8TSqxpmqwlI17z4qmSnz8zE1LA_xDrEDh0bN5vx6O.png" width="708" height="173.54874651810584"/><img src="https://remnote-user-data.s3.amazonaws.com/rku2UFd4Szt0dFMyyvn08P5NZEcNwG-IG8lhWstLd5YGMwE_-1pBYNO0Dul-NuOH49m1QV3ie3Veday_JcJwmwxKsis8O6DfY5AWy6Jjnp0a041BsIu_JzWJK7up4mQ2.png" width="708" height="209.04735376044567"/></li>
+                                <li>Explain how a connection is closed?→A connection is closed when both the client and server send a FIN packet (started by one of them), followed by an ACK packet acknowledging the receipt of the FIN. It&#39;s a four way handshake.<img src="https://remnote-user-data.s3.amazonaws.com/1Rrujy2vh4UoB_8hXBgqoKOMrmFCGisj0SCRt4qWRQ-8UhNY3fa5BPjSPN8JP9VIpPAThV4GVFlWAuzM5TxXVpFy0aynZE8xl1WqY7mBwOpV9HSX1ZUI0XgB57kPv-hY.png" width="708" height="182.4233983286908"/></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Sockets, Connections and Queues
+                    <ul>
+                        <li>Socket
+                            <ul>
+                                <li>What is a socket?→A socket is an endpoint of a two-way communication link between two programs. It is created when a process listens on an IP/Port. </li>
+                                <li>Relationship to the process?→The process owns the socket, which is stored in the PCB. It can be shared during a fork.</li>
+                                <li>How is a connection established?
+                                    <ul>
+                                        <li>Kernel does the 3-way handshake and creates a socket and the SYN and accept queue</li>
+                                        <li>The backend process needs to &quot;accept&quot; the connection. Before that, it will be stored in the Accept Queue of the socket.</li>
+                                        <li>A connection file descriptor is created.</li>
+                                        <li>A send and a receive queue are created for outgoing and incoming data.</li>
+                                    </ul>
+                                </li>
+                                <li>What is socket sharding?→Socket sharding is a technique used to distribute network traffic across multiple sockets (or connections) to improve performance, scalability, and fault tolerance in network applications. </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>Reading and Sending Data
+                    <ul>
+                        <li>What happens when data is received through a connection?
+                            <ul>
+                                <li>Kernel puts data in receive queue</li>
+                                <li>Kernel ACKs (may delay) and update window sizes</li>
+                                <li>App calls read to copy data</li>
+                            </ul>
+                        </li>
+                        <li>What is the &quot;window size&quot; in the context of sockets?→The &quot;window size&quot; refers to the amount of data that can be sent before needing an acknowledgment from the receiver. The concept of window sizing is part of flow control. This helps prevent overwhelming the receiver with too much data at once. </li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>Socket Programming Patterns
+                    <ul>
+                        <li>There are multiple ways of implementing this:
+                            <ul>
+                                <li>Single Listener / Single Worker thread (Node)</li>
+                                <li>Single Listener / Multiple Worker threads (Memcached)
+                                    <ul>
+                                        <li>Listener and Acceptor in one main thread</li>
+                                        <li>Each connection gets its own reader thread</li>
+                                    </ul>
+                                </li>
+                                <li>Single Listener / Multiple Worker threads with load balancing (Ramcloud)
+                                    <ul>
+                                        <li>Building requests(jobs), each getting its own thread</li>
+                                    </ul>
+                                </li>
+                                <li>Multiple Acceptor Threads single Socket (nginx)
+                                    <ul>
+                                        <li>One Listener</li>
+                                        <li>Multiple Acceptors (fast accepting(user) possible) and readers </li>
+                                    </ul>
+                                </li>
+                                <li>Multiple Listeners on the same port (nginx and other)
+                                    <ul>
+                                        <li>Listener, Acceptor and reader in each thread</li>
+                                        <li>Using Socket sharding</li>
+                                        <li>Fastest way to accept as many connections as possible</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Asynchronous IO
+                    <ul>
+                        <li>Most IO operations are {{5164883595857813::blocking operations}} . This means the process cannot move their {{5164883595857813::program counter}} .</li>
+                        <li>Read blocks, for example when there is no data.
+ <img src="https://remnote-user-data.s3.amazonaws.com/R8Tu1LshEuIXLwAltoXH-BUNGEn68XiJj0JD8fp8XKXSoHJSr4ydVWNyRDZGLaQItEv_ehDuSBSflCVB4i5daiZG313LW4pA-mGugeASOoD-E5bGs3hyOpSE7dAnLGgm.png" width="190" height="104.60106382978726"/>
+                            <ul>
+                                <li>What does that lead to?→It leads to context switches and slowing down the process. Potentially blocked forever if data is never sent/received through that connection.</li>
+                                <li>How to solve the blocking?→Ask OS if there is data. If so, call without blocking</li>
+                            </ul>
+                        </li>
+                        <li>With the function <q>select()</q> a collection of file descriptors will be monitored by the kernel and returns when any of is ready. Select is blocking but with a timeout. But the process needs to check which one is ready using a loop.
+                            <ul>
+                                <li>Name Pros
+                                    <ul>
+                                        <li>Avoid reading unready resources</li>
+                                        <li>async</li>
+                                    </ul>
+                                </li>
+                                <li>Name Cons
+                                    <ul>
+                                        <li>Slow, since we have to do the loop ⇒ <q>O(n)</q></li>
+                                        <li>Lots of copying to/from kernel/user space</li>
+                                        <li>Only supports a fixed size of file descriptors.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Better is <q>epoll</q>. Register an interest list of file descriptors in the kernel. Kernel updating this list. When the user calls <q>epoll__wait()</q>, the kernel returns a list of connections with data (events). 
+<img src="https://remnote-user-data.s3.amazonaws.com/pwnPYyNhkYtN_Uxvt3HPRrQNnZN0oa_4Q3kCS2gxi2mbGAs99z6JLBeb6LejQ1XyGONimHSZsrDT0uJEAC4Qj2QC-FhElzoPRe1V2CtnwVKrZ58_r90O3mTKv1YCNA_B.png" width="766" height="259.61082474226805"/>
+                            <ul>
+                                <li>Drawbacks
+                                    <ul>
+                                        <li>Complex, for example, missing events can be dangerous.
+                                            <ul>
+                                                <li>In edge tracking, additional user checks necessary</li>
+                                            </ul>
+                                        </li>
+                                        <li>Only on linux</li>
+                                        <li>Too many <q>syscalls</q> </li>
+                                        <li>Doesn&#39;t work on files, only on sockets and pipes</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><q>io_uring</q> is a modern Linux asynchronous I/O (AIO) interface that uses two ring buffers (queues) for submission and completion events. The kernel and user space communicate via these queues, allowing zero-copy, low-latency I/O without <q>syscall</q> overhead for each operation. It supports file I/O, network I/O, and more, making it more flexible and efficient than <q>epoll </q>for high-performance workloads.
+                            <ul>
+                                <li>Biggest issue?→Security issues because of the usage of shared memory. Google even disabled <q>io_uring</q> in many applications because of this. </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>For cross-platform development use <q>lib_uv</q>. </li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>More OS concepts
+            <ul>
+                <li>Compilers and Linkers
+                    <ul>
+                        <li>Machine Code, see also <a isRemReference="true" href="Udemy%20-%20Fundamentals%20of%20Operating%20System/The%20Anatomy%20of%20a%20process/Process%20execution/Assembly%20Language%20and%20Machine%20Code.html?isPin=false">Assembly Language and Machine Code</a>
+                            <ul>
+                                <li>Programs run on machine code</li>
+                                <li>Specific to the CPU</li>
+                                <li>Each CPU has a different instruction set (RISC vs. CISC)</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Assembly, see also <a isRemReference="true" href="Udemy%20-%20Fundamentals%20of%20Operating%20System/The%20Anatomy%20of%20a%20process/Process%20execution/Assembly%20Language%20and%20Machine%20Code.html?isPin=false">Assembly Language and Machine Code</a>
+                            <ul>
+                                <li>Closest to the machine code</li>
+                                <li>Still sometimes CPU specific</li>
+                                <li>Easier to write</li>
+                                <li>Not easy enough though</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>High-level languages
+                            <ul>
+                                <li>HLL are more convenient</li>
+                                <li>Abstractions to hide complexity</li>
+                                <li>What does the compiler do?
+                                    <ul>
+                                        <li>The compiler turns the HLL code to machine code, specific for a CPU architecture (e.g., x86-64).</li>
+                                        <li>Generates an object file for each translation unit (at least in C++)</li>
+                                        <li>It optimizes the code for performance and ensures compatibility with the target hardware, allowing the same program to run across different CPUs that support the same instruction set (e.g., Intel and AMD).</li>
+                                    </ul>
+                                </li>
+                                <li>What does the linker do?
+                                    <ul>
+                                        <li>The linker is a critical tool in the compilation process that combines multiple object files (generated by the compiler) into a single executable or library. </li>
+                                        <li>It resolves references between these files (like function calls) and links them with system libraries (e.g., the C++ standard library) to produce a working program. </li>
+                                        <li>Essentially, it &quot;stitches together&quot; all the compiled code so it can run properly.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Executable files formats
+                            <ul>
+                                <li>The executable file is a program</li>
+                                <li>Specific format for the OS who knows how to create the process</li>
+                                <li>Created by the linker</li>
+                                <li>Example ELF Linux, Mach-O Mac and PE (portable executable) Windows
+                                    <ul>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/hL0zxvmvBSXBnPrfQBF2OACcX2PPb2yKY1E1GwfwIHUrowKplvo60Opa2ow0dsrHzE4rMv09g1-E9fwpfvo3LyCD1AU8DyODrQnyzsXUic2KAGkbsbvkNRBkJx7hOS1R.png" width="718" height="408.31318681318686"/></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Interpreted Languages
+                            <ul>
+                                <li>Why does the code run everywhere?
+                                    <ul>
+                                        <li>Interpreted languages run on a virtual machine, the interpreter, allowing code to run on any system with a compatible virtual machine. </li>
+                                        <li>The interpreter acts as a universal middle layer, translating Python byte code into machine-specific instructions at runtime, making it platform-independent as long as the interpreter is available for that system. </li>
+                                        <li>For example, in python there is the python runtime containing the interpreter, core libraries and so on and is called for execution:
+                                            <ul>
+                                                <li>Windows: <q>python.exe hello.py</q></li>
+                                                <li>Linux: <q>./python hello.py</q> </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Each line is interpreted ⇒ obviously slower</li>
+                                <li>Examples are python, Java and JavaScript</li>
+                                <li>Just in Time Compilation
+                                    <ul>
+                                        <li>Explain how it works
+                                            <ul>
+                                                <li>Hybrid Approach: Combines interpretation + compilation for speed and portability.</li>
+                                                <li>Step 1: Interpret First: Code runs via an interpreter (platform-independent).</li>
+                                                <li>Step 2: Profile Hot Code: Identifies frequently executed parts (e.g., loops).</li>
+                                                <li>Step 3: Compile Dynamically: Converts hot code to optimized machine code for the host CPU and puts it on the heap.</li>
+                                                <li>Step 4: Point the CPU program counter to the memory which is marked as executable</li>
+                                                <li>Result: Faster than pure interpretation, more flexible than static compilation (e.g., Java’s JVM, PyPy, JavaScript’s V8).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Garbage Collection
+                            <ul>
+                                <li>Some languages manage memory for the user: Go, Python, Java</li>
+                                <li>How does it work?
+                                    <ul>
+                                        <li>Part of the runtime</li>
+                                        <li>Tracks Object Usage: The garbage collector (GC) monitors which objects are still being referenced by active parts of the program.</li>
+                                        <li>Identifies Garbage: It periodically scans memory to find unreachable objects (no longer referenced by anything).</li>
+                                        <li>Reclaims Memory: Automatically frees the memory occupied by unused objects, preventing leaks.</li>
+                                        <li>Slows down the program since CPU time and memory is needed for that task and also the GC needs to ensure that no new reference is created during the cleanup, for example by using a mutex</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Kernel vs. User Mode Switching
+                    <ul>
+                        <li>Kernel vs. User
+                            <ul>
+                                <li>In the process memory space, there is an additional part at the top of each process. What is it?→It&#39;s the kernel stack space.</li>
+                                <li>The CPU has two modes.→User and Kernel mode</li>
+                                <li>What is done in CPU user mode?→The code of the user is executed</li>
+                                <li>What is done in Kernel Mode?→The code from the kernel (in the kernel stack) is executed like system calls, drivers etc. </li>
+                                <li>How are the access rights for kernel and user mode in the process memory space for kernel and user space?→In kernel mode, both spaces can be accessed, while in user mode only the user space can be accessed.</li>
+                                <li>Describe what happens when the process switch to kernel mode→Almost the same as in a context switch between threads of the same process and when a function is called. The base pointer is stored on the kernel stack, as well as the return address. All registers values and states are stored in memory. </li>
+                                <li>What cost comes with a kernel switch?
+                                    <ul>
+                                        <li>Mode switch (store all registers and restore them)</li>
+                                        <li>Memory access</li>
+                                        <li>Security check and validation</li>
+                                        <li>System call number lookup (lookup for kernel function place)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Virtualization and Containerization
+                    <ul>
+                        <li>Multiple native OS
+                            <ul>
+                                <li>Many OS on top of the hardware</li>
+                                <li>Switch at startup</li>
+                                <li>One active at a time</li>
+                                <li>High isolation</li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/JRKK6mkE0Yf68Gotdan1toJ4QAN37S4I6uTZZuylcCIZVzX6yjeIp1EvnsbETYYOyEyoeVGGBZW6Q4uZankL8l_VkQ_ErzjluUlU66N_OeO-z_-gsLGnmByMfPkMBbP1.png" width="631" height="194"/></li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Virtualization
+                            <ul>
+                                <li>Explain the concept
+                                    <ul>
+                                        <li>Many OSs on top of one base OS</li>
+                                        <li>Hypervisor (software) controls upper OS</li>
+                                        <li>Hypervisor  proxies syscalls to lower kernel</li>
+                                        <li>Full isolation but lots of redundancy</li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/lXmLWdbBV1g50m_oCHZWiI3fcDHTn7VM2Z2d9rXo8jX2jH5H31CXmrLyrPhFBKkiWvYDBP9LVcvPviEI8z0ksBltmzZsiGKbk-qe5Uq0rnJBgF2LLr1uY41y4fBAoYnQ.png" width="640" height="494"/></li>
+                                    </ul>
+                                </li>
+                                <li>E.g. VMWare, Oracle VirtualBox</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Containerization
+                            <ul>
+                                <li>Explain the concept
+                                    <ul>
+                                        <li>Containerization packages apps and dependencies into portable, lightweight containers that run consistently across environments.</li>
+                                        <li>Efficiency: Unlike VMs, containers share the host OS kernel, reducing overhead and improving performance.</li>
+                                        <li>Isolation: Linux namespaces (PID, network, mount, etc.) virtualize system resources, keeping containers separated.</li>
+                                        <li>CPU/Memory usage is limited by cgroups (control groups), kernel feature</li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/vzHcpwLs0SQvvJdaNU8h7r5Ru-jf95T_E58n0roQhXQSlvVZ1blg3jlKaes5OdUIBIbcBSIuIbi2xfOlqj5K7W8UoNLZvrDMsK3dM5s7BQggok4BiGoVqshePXjQR7JO.png" width="629" height="391"/></li>
+                                    </ul>
+                                </li>
+                                <li>E.g. docker or Kubernetes</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>www.udemy.com/course/fundamentals of operating systems/</li>
+
+    </ul>
+    </body>
+</html>

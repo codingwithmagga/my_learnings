@@ -1,0 +1,8 @@
+- CPU
+    - Describe shortly the life cycle of an instruction >>>
+        - Fetch from memory (MMU)
+        - Decode (CU)
+        - Execute (ALU)
+        - Memory read (optional)
+        - Write back to register/memory
+- 
