@@ -39,4 +39,4 @@ Some notes are enriched with information from Google or ChatGPT, as stated in th
 
 ## Course certificate
 
-[View Udemy Certificate](./udemy_certificate)
+<img src="./udemy_certificate.jpg" alt="Udemy Certificate" width="400" />
