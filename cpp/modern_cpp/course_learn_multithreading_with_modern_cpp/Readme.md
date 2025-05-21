@@ -1,4 +1,4 @@
-# Udemy Course - Fundamentals of Operating System by Hussein Nasser
+# Udemy Course - Learn Multithreading with Modern C++
 
 In this folder you can find my notes and code from the Udemy course [Learn Multithreading with Modern C++](https://www.udemy.com/course/learn-modern-cplusplus-concurrency/).
 
