@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      General
+    </h1>
+    <br/>
+    <ul>
+        <li>General
+            <ul>
+                <li>What is concurrency?→Concurrency is the ability of multiple tasks to run seemingly simultaneously, even if they&#39;re not truly parallel. These tasks often interact with each other. For example, doing a longer computation and showing a progress bar of it.</li>
+                <li>Explain hardware concurrency→Multiple CPU chips respectively multiple processor &quot;cores&quot; on a chip. Different processors perform different activities at the same time, each following their own thread of execution. 1 hardware thread ↔ 1 processor core</li>
+                <li>Explain software concurrency→Software concurrency is the ability of multiple tasks to run seemingly simultaneously, even on a single processor. It is managed by the OS. Normally, there are more software than hardware threads.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Threads (<q>std::thread</q>) 
+            <ul>
+                <li>Name the key characteristics of <q>std::thread</q>
+                    <ul>
+                        <li>Lightweight abstraction for a software thread</li>
+                        <li>Rather low-level implementation which can&#39;t return a value</li>
+                        <li>Managed by the OS</li>
+                        <li>Allows direct access to the underlying software thread, useful if you want to use features which are not supported by standard C++.</li>
+                        <li>Additional information:
+                            <ul>
+                                <li>C++14: read-write locks</li>
+                                <li>C++17: Many std alg. can be execute in parallel</li>
+                                <li>C++20: Joining threads, thread cancellation, coroutines, semaphores, latches and barriers</li>
+                                <li>C++23: Improved support for coroutines</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Would it be possible to copy a <q>std::thread</q>?→No, it is a move-only class.</li>
+                <li>Detaching a thread::Action of allowing a thread to run independently of its parent thread so that it can continue executing without needing to be joined back to the parent.</li>
+                <li>Explain the issue when a non-joined <q>std::thread</q>is destroyed
+                    <ul>
+                        <li>Calling the destructor leads to call <q>std::terminate</q>if the thread was not joined</li>
+                        <li>This can happen, when the parent thread is completed and the thread is still running</li>
+                        <li>It can be solved by calling <q>join()</q>, which blocks the parent thread, until the thread is completed.</li>
+                    </ul>
+                </li>
+                <li>What happens if an exception is not caught in a <q>std::thread</q>?→The program terminates. Exceptions are not allowed to propagate over threads.</li>
+                <li>Name possible entry points for a thread
+                    <ul>
+                        <li>Function pointers</li>
+                        <li>A Functor class</li>
+                        <li>Lambda expressions</li>
+                        <li>Member function pointers</li>
+                    </ul>
+                </li>
+                <li>Which features for threads are not available in standard C++?
+                    <ul>
+                        <li>Thread priorities</li>
+                        <li>Thread affinity: pinning a thread to a specific processor</li>
+                        <li>Thread pool</li>
+                        <li>Sophisticated synchronization primitives beyond mutexes and condition variables</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Issues
+            <ul>
+                <li>Memory locations
+                    <ul>
+                        <li>Define→A memory location is a specific address in a computer&#39;s memory where data is stored.</li>
+                        <li>Name memory locations in C++
+                            <ul>
+                                <li>A Variable</li>
+                                <li>A Pointer</li>
+                                <li>An Element in a container</li>
+                                <li>Struct or class member, which are one of the above</li>
+                                <li>C++-Stl Containers, which means multiple threads modifiying the same container, even on different elements, have to be synchronized.</li>
+                                <li>Own classes could provide their own synchronization, but usually its better to implement them as a memory location, like the STL container</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>What is a data race?→A data race occurs when multiple threads access and modify the same shared memory location without proper synchronization. Data Race causes undefined behavior.</li>
+                <li>What is a race condition?→When the outcome depends on the order of the threads&#39; execution. Data Race is a special case of a race condition.</li>
+                <li>What is a torn write?→A torn write is when a multi-threaded program&#39;s write operation to a shared memory location is interrupted, resulting in an inconsistent or partial update.</li>
+                <li>What is a torn read?→A torn read occurs when a multi-threaded program reads a multi-part variable whose value is being updated concurrently, resulting in an inconsistent value.</li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

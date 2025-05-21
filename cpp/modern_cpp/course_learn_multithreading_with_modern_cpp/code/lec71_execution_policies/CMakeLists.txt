@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.16)
+
+project(lec71_execution_policies LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(lec71_execution_policies main.cpp)
+
+include(GNUInstallDirs)
+install(TARGETS lec71_execution_policies
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)

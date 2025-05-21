@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Synchronization Issues
+    </h1>
+    <br/>
+    <ul>
+        <li>Cause of Synchronization Issues
+            <ul>
+                <li>Arises from time slicing and, primarily, from multiple threads executing on different cores.</li>
+                <li>Threads can share data, leading to multiple copies of the same data in different caches.</li>
+                <li>Modification of shared data by one thread can lead to inconsistencies across copies. (See example on the right)</li>
+                <li>The question arises: which copy represents the correct value?</li>
+                <li>Software solutions like mutexes and atomic variables can help manage this.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Example
+            <ul>
+                <li>Two cores with separate Level 1 and Level 2 caches, a shared Level 3 cache, and main memory. Shared variable x initialized to 5, with copies stored in caches and main memory.</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/AQ2cN5htiPszN_dAo_5canKsZRmE5ijROKEie_lGQa0DrPiFlc1RlRTeWRG1RCWKgPC0zuQpU38CfL3MoIZKNG2ot0hPpRrxNRnDfpwH9Mgbr6hETY6UwScSho7xuKi4.png" width="742" height="278.25"/></li>
+                <li>If a thread on core 1 changes x to 7, it writes the new value to its store buffer.</li>
+                <li>At this point, the cache controller is unaware of this change; the value is still considered private to core 1.</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/jKNrRkKL-KyLD0ST6xu2dRnop7wdNEVjWeC8KMjhAp3v2fVEPG_st_RGItFxa7xmggrZu9Wn0J_71hPX3KB5Dl_kfwgGUfQDnrcDMEBC8bQum54O6xByYp4LjvRVH9_n.png" width="742" height="277.2632978723404"/></li>
+                <li>Thread on core 2 accesses variable x, likely obtaining the old value (5) from the cache.</li>
+                <li>Core 2 performs computations using the outdated value (5)</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/0yY-JsDcaSagu0gvY7FMNHDw0ruLgcwUmjQEWyAFrvAswDhGfPXLaEaFLjIW5qIn18AgMHvDnOLK55l9yLbSpm1tCR8ISXDB7Ln4WmXpbZKGxl2incq3dpDDnKu4_Bad.png" width="739" height="284.98670212765956"/></li>
+                <li>Eventually, core 1&#39;s store buffer flushes, updating the Level 1 cache with the new value (7).</li>
+                <li>The cache controller then updates all other caches to reflect this new value.</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/X0FdICkA8Pxni1Bce63S395fMJpugxEH8RqUeColLj9UTofqiTu5fczJXrMB4asMGx0QEYCHczAoWbDoHFFrRRGTFwyGjTV9pomLx8j4ZaZ6t9Z1NE_FkAnMSeydg973.png" width="742" height="286.1436170212766"/></li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/JQW7d0mYG9apMUZDw4i0YSBadd6IdTRXl5RWnrYNFXqgncAEJvq_T4SJVIwj9khnknpxbfAn_QDzoJI833WzKJT2nKYR3KoCjeTVvK7g63BA2Y09Cp5YgsZ0VYhizIor.png" width="766" height="295.14690721649487"/></li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/FQuAsMMX6EESHdkcKtlEK1w61e5PTO2M6Aa7aL0ZfnwhE_Ekp_cwE8OLQXRvo8H2bsnelQ0jV2dR56GphRCMmK-SXe5sjEbNnfnCF2srLQoBEVsx9DebjMokB4lwjPOS.png" width="742" height="286.1436170212766"/></li>
+                <li>By the time core 2 gets the updated value (7), it has already computed results using the old value (5).</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Synchronization Solution
+            <ul>
+                <li>Ideally, the new value should be available before core 2 accesses the shared variable.</li>
+                <li>Software solutions like mutexes and atomic variables can help manage this.</li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Thread synchronization
+    </h1>
+    <br/>
+    <ul>
+        <li>Issues with mutex
+            <ul>
+                <li>An example with a download, a progress bar and some data processing at the end shows some issues with using mutexes:</li>
+                <li>Too many loops and explicit lock and unlocking. How is the sleep duration chosen of threads which are currently waiting?</li>
+                <li>A better solution would be that a thread A notifies the other thread B when it is finished. Then Thread B starts doing its thing.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Condition variable
+            <ul>
+                <li><q>std::condition_variable</q> 
+                    <ul>
+                        <li>Explain shortly→A synchronization primitive that blocks a thread until a condition is met, then wakes one or more waiting threads using a notification function. During blocking the given mutex is unlocked.</li>
+                        <li>Which problem does it solve compared to mutex locking mechanism?→It allows threads to efficiently wait for a specific condition to become true before acquiring a mutex, avoiding busy-waiting and determining wait times by the programmer.</li>
+                    </ul>
+                </li>
+                <li>Issues
+                    <ul>
+                        <li>What is a lost wake-up?→A lost wake-up is when a thread is signaled to wake up, but the signal is lost before the thread can receive it. For example, the notification to wake up is sent, but the other thread is not at the point to wait for this notification. When it gets to this point, the notification is already gone.</li>
+                        <li>What is a spurious wake-up?→A spurious wake-up is when a thread waiting on a condition variable is awakened even though the notification wasn&#39;t sent. This occurs by an efficient implementation of <q>std::condition_variable</q> and avoiding this would be too much overhead.</li>
+                        <li>How can a spurious wake-up be avoided?→Use a predicate to check the condition before processing. This can be used as a second argument in the <q>wait()</q>function of <q>std::condition_variable</q>. </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Futures and promises
+            <ul>
+                <li>Main purpose:>Using <q>std::future&lt;T&gt;</q> and <q>std::promise&lt;T&gt;</q> transfer of data between threads is possible, with setting up a &quot;shared state&quot; between threads. This has no shared data variables and no explicit locking.</li>
+                <li>Explain the producer-consumer model
+                    <ul>
+                        <li>Producer (<q>std::promise&lt;T&gt;</q>) thread generates data</li>
+                        <li>Result will be stored in the shared state</li>
+                        <li>Consumer (<q>std::future&lt;T&gt;</q>) thread processes data by calling <q>std::future&lt;T&gt;::get()</q> which blocks the thread until the result is ready.</li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>How are exceptions handled?→Exceptions can also be shared and an exception in the producer thread can be &quot;thrown&quot; to the consumer. </li>
+                <li><q>std::future&lt;T&gt;</q> 
+                    <ul>
+                        <li>Describe:>A class representing the result of an asynchronous operation, providing a way to access the result of type <q>T</q> when it&#39;s ready. Normally, an object of this class is not created directly it is obtained from a <q>std::promise&lt;T&gt;</q> object or returned by an asynchronous operation. Move-only class which is designed to use with a single consumer thread.</li>
+                    </ul>
+                </li>
+                <li><q>std::shared_future&lt;T&gt;</q>
+                    <ul>
+                        <li>Difference to <q>std::future&lt;T&gt;</q>→<q>std::shared_future&lt;T&gt;</q> allows multiple threads to access the result, unlike <q>std::future&lt;T&gt;</q>, which only allows one. Therefore this class can be copied.</li>
+                    </ul>
+                </li>
+                <li><q>std::promise&lt;T&gt;</q>
+                    <ul>
+                        <li>Describe:>A class template that allows asynchronous operations to deliver a value to a future. In the constructor an associated <q>std::future&lt;T&gt;</q> object is created and a shared state is set up. </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

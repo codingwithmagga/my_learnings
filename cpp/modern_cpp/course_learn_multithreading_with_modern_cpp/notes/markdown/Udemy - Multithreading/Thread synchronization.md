@@ -1,0 +1,28 @@
+- Issues with mutex
+    - An example with a download, a progress bar and some data processing at the end shows some issues with using mutexes:
+    - Too many loops and explicit lock and unlocking. How is the sleep duration chosen of threads which are currently waiting?
+    - A better solution would be that a thread A notifies the other thread B when it is finished. Then Thread B starts doing its thing.
+- 
+- Condition variable
+    - `std::condition_variable` 
+        - Explain shortly→A synchronization primitive that blocks a thread until a condition is met, then wakes one or more waiting threads using a notification function. During blocking the given mutex is unlocked.
+        - Which problem does it solve compared to mutex locking mechanism?→It allows threads to efficiently wait for a specific condition to become true before acquiring a mutex, avoiding busy-waiting and determining wait times by the programmer.
+    - Issues
+        - What is a lost wake-up?→A lost wake-up is when a thread is signaled to wake up, but the signal is lost before the thread can receive it. For example, the notification to wake up is sent, but the other thread is not at the point to wait for this notification. When it gets to this point, the notification is already gone.
+        - What is a spurious wake-up?→A spurious wake-up is when a thread waiting on a condition variable is awakened even though the notification wasn't sent. This occurs by an efficient implementation of `std::condition_variable` and avoiding this would be too much overhead.
+        - How can a spurious wake-up be avoided?→Use a predicate to check the condition before processing. This can be used as a second argument in the `wait()`function of `std::condition_variable`. 
+- 
+- Futures and promises
+    - Main purpose:>Using `std::future<T>` and `std::promise<T>` transfer of data between threads is possible, with setting up a "shared state" between threads. This has no shared data variables and no explicit locking.
+    - Explain the producer-consumer model >>>
+        - Producer (`std::promise<T>`) thread generates data
+        - Result will be stored in the shared state
+        - Consumer (`std::future<T>`) thread processes data by calling `std::future<T>::get()` which blocks the thread until the result is ready.
+        - 
+    - How are exceptions handled?→Exceptions can also be shared and an exception in the producer thread can be "thrown" to the consumer. 
+    - `std::future<T>` 
+        - Describe:>A class representing the result of an asynchronous operation, providing a way to access the result of type `T` when it's ready. Normally, an object of this class is not created directly it is obtained from a `std::promise<T>` object or returned by an asynchronous operation. Move-only class which is designed to use with a single consumer thread.
+    - `std::shared_future<T>`
+        - Difference to `std::future<T>`→`std::shared_future<T>` allows multiple threads to access the result, unlike `std::future<T>`, which only allows one. Therefore this class can be copied.
+    - `std::promise<T>`
+        - Describe:>A class template that allows asynchronous operations to deliver a value to a future. In the constructor an associated `std::future<T>` object is created and a shared state is set up. 

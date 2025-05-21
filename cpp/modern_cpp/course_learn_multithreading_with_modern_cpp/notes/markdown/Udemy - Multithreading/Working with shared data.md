@@ -1,0 +1,109 @@
+- ## Overview
+    - Basic mutex class (`std::mutex`)
+    - Mutex wrappers (`std::lock_guard`, `std::unique_lock`)
+    - Mutexes and time-outs (`std::timed_mutex`, `std::unique_lock`)
+    - Shared mutexes (`std::shared_mutex`, `std::shared_lock`)
+    - Deadlock + Avoidance (`std::scoped_lock`, `std::lock`)
+    - Livelock + Avoidance
+- 
+- ## Critical section
+    - What is a critical section?→A critical section is a code segment where shared resources are accessed, requiring exclusive access (one thread at a time) to prevent data corruption.
+- 
+- ## Shared data in a program
+    - Global variable: Accessible to all code in the program
+    - Static variable at namespace scope: accessible in the translation unit
+        - In a cpp file: Visible to this cpp file
+        - In a h.file:  Each translation unit gets its own copy of the variable, confusing!
+    - Static class member: potentially accessible via member functions or to all code, if public
+    - Static local variable: Accessible to all code which calls this fct.
+        - No threads before C++11 ⇾ Initialization behavior not defined
+        - Initialization behavior at C++11→ Behavior well-defined, only one thread can initialize the variable. Other threads have to wait. Synchronization done by the implementation for initialization, not for other write operations!
+    - See also [Storage classes]()
+- 
+- ## Locking Guidelines
+    - Name some best practices for locking >>>
+        - Lock for the shortest time possible
+        - Avoid locking lengthy operations if possible, like input/output
+        - Use fine-grained locking instead of coarse-grained locking, for example, one element in a list and not the whole list
+        - Also, don't make it too fine-grained, like locking individual elements when inserting and deleting, which can affect the whole list.
+- 
+- ## Mutex
+    - Describe a mutex >>>
+        - A mutex (short for "Mutual Exclusion") is used to implement locking protocols for managing access to shared data.
+        - It has two states: "locked" and "unlocked".
+    - How does it work? >>>
+        - When a thread wants to enter a critical section, it locks the mutex. If the mutex is already locked, other threads must wait.
+        - Upon completing the execution of the code in the critical section, the thread unlocks the mutex, allowing other threads to enter.
+        - This mechanism ensures that threads access the critical section in an orderly manner, preventing interleaved execution and data races.
+    - Describe an issue with multiple readers and one (rarely occuring) writer thread→Mutexes cause unnecessary sequential access among reader threads. Because for every entry in the critical section, the mutex blocks the data, even when it should only be read by multiple instances.
+    - C++11 provides a mutex class (`std::mutex`) in the Standard library to synchronize threads.
+    - Mutex objects must be visible to all task functions and defined outside any task functions, similar to shared data variables.
+    - `std::mutex` interface
+        - `bool try_lock()`↔Attempts to acquire a mutex lock without blocking. It returns true if successful, otherwise returns false. 
+        - `void lock()`→Acquires the mutex, blocking the calling thread if the mutex is already locked.
+        - `void unlock()`↔Unlocks the mutex, allowing other threads to acquire it.
+        - What happens when a thread calls `lock()`on a `std::mutex` multiple times without unlocking?→Results in undefined behavior.
+    - `std::recursive_mutex` 
+        - Purpose?→A recursive mutex allows a thread to acquire the same mutex multiple times. The number of `lock()` and `unlock()` calls must be the same to unlock the mutex. It can be used for recursive functions, for example.
+        - What does the usage of this class says about your system design?→Normally this a sign of a bad design!
+        - There is also `std::recursive_timed_mutex`.
+    - `std::timed_mutex`
+        - Describe the additional functionality over `std::mutex`→`std::timed_mutex` adds the ability to specify a timeout for lock acquisition, either via a specific duration or until a specific time point is reached.
+    - `std::shared_mutex` 
+        - Describe the additional functionality over `std::mutex`→`std::shared_mutex` allows shared locking, such that multiple threads can enter a critical section.
+        - Which problem can be solved compared with `std::mutex`→Using `std::shared_mutex` multiple readers can be allowed to access shared memory. Reducing the overhead of locking and unlocking the mutex for every read.
+        - Name a drawback compared with `std::mutex`→Performance overhead, it uses more memory (internal counter) and is a little bit slower.
+    - Name two drawbacks of mutexes >>>
+        - Locking and unlocking are slow operations
+        - Low-level implementation: Programmer must remember to use a mutex and use the right one. Also, the programmer must understand how different threads can modify the data.
+    - In real-world programs, general higher-level structures are used like the mutex wrapper classes and other.
+- 
+- ## Mutex Wrapper
+    - Why is a mutex not used directly in general?→If an `unlock()` call is missing (bug, exception thrown...), the program can be blocked entirely. 
+    - How does a mutex wrapper work in general?→A mutex is typically wrapped in a class or struct to manage its locking and unlocking using RAII. Constructor locks the mutex, destructor unlocks it. This ensured that the mutex is unlocked, when the wrapper goes out of scope.
+    - `std::lock_guard<T>` 
+        - Describe usage→`std::lock_guard<T>` automatically acquires a mutex in its constructor and releases it in its destructor, ensuring proper locking and unlocking. The template parameter is the type of the mutex (`std::mutex`, `std::shared_mutex`, ...)
+        - What is a potential drawback?→It may hold the lock longer than necessary when the `std::lock_guard<T>` object does not go out of scope directly because subsequent non-critical code is executed after the critical section.
+    - `std::unique_lock<T>`
+        - Describe advantages over `std::lock_guard<T>`→The mutex can be unlocked immediately after exiting the critical section. Other threads can enter the critical section sooner. 
+        - Why is it safe to unlock `std::unique_lock<T>` when the destructor may try to unlock it again?→It remembers the state of the mutex (locked or unlocked) and will not attempt to unlock it again when the `std::unique_lock<T>` object is destroyed.
+        - Name drawbacks compared to `std::lock_guard<T>`→Requires slightly more storage and is slightly slower than lock_guard.
+        - Name three different behaviors, which can be configured in the constructor >>>
+            - `std::try_to_lock`: Attempts to lock the mutex without blocking; returns immediately, whether successful or not.
+            - `std::defer_lock`: Constructs the object without locking the mutex, allowing manual locking later.
+            - `std::adopt_lock`: Assumes the mutex is already locked by the active thread and avoids a double-lock situation. The behavior is undefined if this is not the case.
+        - Would it be possible to copy an object of this class?→No, it's a move only class.
+    - `std::shared_lock<T>`
+        - Difference to `std::unique_lock<T>`?→`std::shared_lock` allows multiple threads to enter a critical section if there is no exclusive lock, for example by `std::unique_lock<T>`.
+- 
+- ## Synchronization
+    - Describe external synchronization→External synchronization uses external mechanisms, like mutexes or semaphores, to control access to shared resources.
+    - Describe internal synchronization in a class→Classes can be designed to manage their own synchronization, minimizing the burden on the user. Can be achieved by using a mutex as a class member.
+    - Explain how internal synchronization in a class can be achieved by using a mutex→By including a mutex as a private data member, class methods can automatically lock and unlock the mutex when accessing internal data.
+- 
+- ## Thread Local Variables
+    - C++ supports thread-local variables, which are the same as static and global variables, but there is a separate object for each thread. (Static has a single object for every thread).
+    - Declare them by using thread_local Keyword:
+        - Global or namespace scope: Constructed at or before the first use in translation unit. Safe to use in DLLs
+        - Local variables: Initialization is the same as static local variables
+    - They will be destroyed in all cases when the thread completes it execution.
+- 
+- ## Issues
+    - Deadlock
+        - Define→A deadlock is a situation where two or more threads are blocked indefinitely, waiting for each other to release the resources that they need.
+        - A simple way to avoid?→A simple way to avoid deadlock is locking mutexes in the same order. But this is not really reliable, especially in large programs.
+        - Another approach to avoid deadlocks is to implement an ordering of mutexes. A thread cannot lock a mutex unless it has already locked a mutex with a lower status (ID number, for example). The Williams book (C++ Concurrency in Action) has a hierarchical_mutex implementation.
+    - Livelock
+        - Define→Livelock is a situation where two or more processes continuously change their state in response to each other, preventing any actual progress.
+    - Resource starvation
+        - Define→Resource starvation is when one or more threads are unable to access necessary resources to complete their tasks. For example, deadlock, livelock, lack of system resources.
+    - `std::scoped_lock<MutexTypes...>` 
+        - Difference to `std::lock_guard<T>`→`std::scoped_lock` locks multiple mutexes at once, while `std::lock_guard` locks only one.
+        - Order of locking and unlocking?→Locked in order given in the constructor and unlocked in reverse order in destructor.
+    - `bool std::try_lock<MutexTypes...>` 
+        - Difference to class `std::scoped_lock<MutexTypes...>`→`bool std::try_lock` attempts to acquire multiple mutexes without blocking, returning `true` on success and `false` on failure, unlike `std::scoped_lock`, which blocks until all mutexes are acquired.
+    - Double-checked locking
+        - Explain the possible issue which should be solved using this >>>
+            - Before C++17, the compiler can allocate the memory and store the address in a pointer before the object is constructed. In this case, the object could be used in a multi-threading environment before it is constructed ⇒ undefined behavior. The order of operations was changed in C++17 s.t. the address is stored in the variable after the construction of the object.
+        - Explain how this is solved in modern C++:>Modern C++ uses either Meyers singleton (`static`), `std::atomic` or `std::call_once()`, eliminating the need for double-checked locking.
+- 

@@ -1,0 +1,31 @@
+- Issues
+    - Modifying Operations on general data structures can affect other parts of the object in concurrent programming.
+        - Linked List: Adding or removing an element modifies the surrounding nodes
+        - Vector/String/Dynamic Array: Data is stored in a memory block. Adding or removing elements moves the following elements in memory. Also, adding elements may cause the block to be reallocated.
+    - If other threads are accessing these elements at the same time, we can have dangling pointers/references or iterators which become invalidated.
+    - STL Container
+        - STL containers are "memory objects". Concurrent Reads of the same object are safe, as well as  a single write. Concurrent reads and writes of the same object are not safe!
+    - Coarse-grained locking
+        - Means locking the entire object, which is rather easy to do and requires no change to the data structure. It's sometimes the only option, for example for a variable of built-in type, types in the c++- std library and types provided by other programmers which we can't change. In effect, all code which accesses these objects is single threaded.
+    - Fine-grained locking
+        - Fine-grained locking means we choose which parts of the object we want to lock. It allows concurrent access, but requires writing extra code and a careful design. Normally, also the cost of creating an object increases, for example an extra mutex initialization.
+- 
+- Monitor class
+    - It is a class which is internally synchronized.
+    - In a naive solution using a mutex as a class member, we have several drawbacks: Member functions may call other member functions ‒> using multiple locks risks a deadlock. Calling multiple member functions from outside can result in many locking and unlocking operations. There is also potential for race conditions and data race, so no transaction can be done.
+    - A slightly better solution is a wrapper class, which has a private member of the class to be wrapped and a mutex. Number of locking calls can be reduced. It works for every class and no modifications are needed. Drawbacks are still the possible interruption by other threads and possible deadlocks due to multiple locking. Also, some locking may be unnecessary and there is still potential for data races, so no transaction can be done.
+    - Sophisticated monitor class
+        - Make the wrapper class generic, where the template parameter is the wrapped class type. It will be a functor class with a callable object as argument in ()operator. This contains a sequence of member functions calls for the transaction, accepting a type of the wrapped class as parameter. We lock the mutex before calling the object. This works for any type. Callers can now perform transactions as unnecessary locking, multiple locking and interruptions are avoided.
+- 
+- Thread pool
+    - Creating a thread involves a lot of overhead, for example creating an execution stack for the thread, calling the system API, OS managing and internal data creation, context switches and execution by scheduler. This can take, 10000time as long as calling a function directly.
+    - A thread pool is a fixed-size container of thread objects, usually equal to the number of cores on the machine (`std::thread::hardware_concurrency()`).  It also contains a queue of tasks functions objects which shall be executed. Threads take one task after another from the queue and when finished take the next one. 
+    - This works best for short, simple "one-shot" tasks where the overhead of creating a thread is comparable to the task execution, also the tasks should not block. Adding and removing for queue must be done in a thread-safe way. The queue needs to be designed carefully.
+- 
+- Semaphore
+    - Describe >>>
+        - Has non-negative integer counter which can be increment (released) and decremented (acquired). The counter can be zero, so that `aquire()` will block until the counter becomes positive again.
+        - In a binary semaphore, the counter can only be 0 or 1. It can be used for mutual exclusion. It can lock calling `acquire()` and unlocked calling `release()`.
+        - It can also be used for signaling over multiple threads. This may need a suitable value for `max_count`.
+        - Semaphore is a higher level of abstraction than a mutex, which leads to simpler code and sometimes better performance. It is more flexible and can notify any given number of threads.
+- 

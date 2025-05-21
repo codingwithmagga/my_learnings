@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Atomic types
+    </h1>
+    <br/>
+    <ul>
+        <li>To synchronize threads , we need to ensure that each thread uses the latest value of count and publishes its results immediately. A mutex does this internally when calling lock()/unlock(). It can also be done by declaring a variable atomic.</li>
+        <li></li>
+        <li><q>std::atomic&lt;T&gt;</q>
+            <ul>
+                <li>Name key points for an atomic variable?
+                    <ul>
+                        <li>The compiler disables prefetching for this variable and flushes the store buffer immediately with a new value. </li>
+                        <li>This can also avoid hardware and compiler optimizations (for this variable) which change the instruction order</li>
+                        <li>Only one thread can access the variable at a time</li>
+                        <li>Prevents data race, but makes the operation take much longer</li>
+                    </ul>
+                </li>
+                <li>Name important aspects about the Type <q>T</q> of the parameter
+                    <ul>
+                        <li>Parameter must be a type which is &quot;trivially copyable&quot;. Scalar types and classes with only trivial copy and move constructors</li>
+                        <li>More complex types includes a silently added mutex, which takes much longer</li>
+                        <li>Normally, only integer types and pointers (to avoid the above) are used</li>
+                        <li>Threads could interleave two operations like <q>x=2; y=x</q> (distinct operations), while <q>++x</q> is an atomic operation </li>
+                    </ul>
+                </li>
+                <li>Member functions:
+                    <ul>
+                        <li><q>void store(T arg)</q>: Replace object&#39;s value with <q>arg</q> </li>
+                        <li><q>T load()</q>: Returns object value</li>
+                        <li><q>void operator=()</q>: Assignment operator</li>
+                        <li><q>void operator T()</q>: synonym for store and load</li>
+                        <li><q>T exchange (T arg)</q>: Replace previous value with <q>arg</q>and returns old value</li>
+                    </ul>
+                </li>
+                <li>Atomic pointers and integer support pointer arithmetic:
+                    <ul>
+                        <li>increment and decrement operator</li>
+                        <li><q>fetch_add()</q> synonym for increment</li>
+                        <li><q>fetch_sub()</q> synonym for decrement</li>
+                        <li><q>+=</q> and <q>-=</q> operator</li>
+                    </ul>
+                </li>
+                <li>Integer also supports this:
+                    <ul>
+                        <li>Atomic bitwise logical operations <q>&amp;</q>, <q>|</q> and <q>^</q> </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li><q>std::atomic_flag</q>
+            <ul>
+                <li>Purpose?:>Provides a simple boolean atomic flag for thread synchronization. Has less overhead than <q>std::atomic&lt;bool&gt;</q></li>
+                <li>Three operations:
+                    <ul>
+                        <li><q>void clear()</q> sets flag to false</li>
+                        <li><q>bool test_and_set()</q> sets flag to true and returns the previous value</li>
+                        <li><q>void operator =()</q> </li>
+                    </ul>
+                </li>
+                <li>Must be initialized to false:
+                    <ul>
+                        <li><q>atomic_flag lock = ATOMIC_FLAC_INIT;</q></li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Spin lock
+            <ul>
+                <li>Describe→Basically an infinite loop, which can be implemented using <q>std::atomic_flag</q>. It &quot;spins&quot; until a condition becomes true. This is an alternative to locking a mutex or using a condition_variable.</li>
+                <li>Pros and cons?→Pros: simple to implement, avoids context switching; cons: busy-waiting wastes CPU cycles, prone to priority inversion.</li>
+                <li>Usage?→Processor intensive, so it is only suitable for very short critical sections and/or very low contention. When spinning threads interrupt each other, the performance can heavily be impacted. It is usually only used in operating systems and libraries.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Lock-free programming
+            <ul>
+                <li>Describe→In lock-free programming the goal is having threads which execute critical sections concurrently without data races, but without using the operating system&#39;s locking facilities. Try to avoid and reduce some of the drawbacks using locks.</li>
+                <li>Drawbacks of locking mechanisms
+                    <ul>
+                        <li>Possible race conditions</li>
+                        <li>Risk of deadlock</li>
+                        <li>High overhead (lock and unlock take relatively much time for a CPU)</li>
+                        <li>Lack of composability</li>
+                        <li>Lack of scalability</li>
+                        <li>High code complexity (when fine-granulated locking is applied).</li>
+                    </ul>
+                </li>
+                <li>Advantages?→Improved performance and reduced latency by avoiding the overhead of locks.</li>
+                <li>Disadvantages?→Increased complexity and potential for subtle bugs due to reliance on low-level memory operations.</li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

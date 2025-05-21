@@ -1,0 +1,34 @@
+- Difference to concurrency?→In contrast to concurrency, in parallelism all tasks are identical and do the same thing. They run independent of each other at the same time on multiple cores to improve scalability. Parallelism is a feature of the algorithm being run.
+- Describe the difference between explicit and implicit parallelism→Explicit parallelism uses programmer-defined threads, while implicit parallelism relies on the compiler or runtime to parallelize code. Explicit parallelismIt is not scalable, but useful when writing for specific hardware, e.g. game consoles.
+- Explain Task Parallelism >>>
+    - Distributing the process into smaller tasks
+    - Independent execution of subtasks
+    - This is also known as "Thread-Level Parallelism (TLP)"
+    - Example: A database server which runs many threads to reduce latency. One thread is waiting to access data on disk, other threads do "useful" work. This improves the performance of the database server.
+    - ![](https://remnote-user-data.s3.amazonaws.com/HRgVQR-rfQHxGh1z-H6-u5YjLu11Fte4LyRJZrOn6plUyDlj2XzjetJq6qXL3mG4Z68zzpemVJfp4kd6iqhvOY2ztnavB99O40W4tLhYPiusiMlWtOOnDHL9SfH1oli0.png)
+- Explain Data Parallelism >>>
+    - Subdividing a data set into several subsets, which are processed concurrently.
+    - After that is a final "reduce" step which collects the results from each subset and combines them.
+    - Also known as "vector processing" or "vectorization" used in GPUs. Also modern CPUs have support for vectorization ⇒  SIMD
+    - ![](https://remnote-user-data.s3.amazonaws.com/hbPJ6giZQLdi4XNfap8rDV79hgVSHrnRdgoV8uK-68gAO00okjqJeV5dpcTtTtIbj54nIA5J2cMjE5eGRkfLapTceJPkvZYxvluKsuEf0vDAJej3zKWd9U0SzHsHlDWl.png)
+- Explain Pipelining >>>
+    - Technique for overlapping tasks
+    - Task is divided into multiple steps.
+    - Each step is processed in parallel to improve efficiency.
+    - Similar is graph parallelism but with an arbitrary graph of dependencies.
+    - ![](https://remnote-user-data.s3.amazonaws.com/nXuMgSrXdzZxQrsJZh6TpXQm77UhIA1gXq5IcB2FA7ZrHXBeSPKT9UUjqHYiji9CVmUbQiqd59wVIwMTbnVWxsgq-AQkwO0so-ns0vjB83HHWl7C4SAP_qvMhbOzFieP.png)
+- 
+- Code execution
+    - C++17 gives you the choice of "execution policies", except vectorized only execution, which is supported in C++20. This is not supported by all compilers. Also, it is a request which may be ignored (not supported,  resources not available, not implemented).
+    - Name four ways to execute an algorithm on modern computers→Sequential, Vectorized, Parallelized, Vectorized+Parallelized
+    - Describe sequential execution policy→A single instruction processes one data item. All operations are performed on a single thread. Operations will not be interleaved.
+    - Describe vectorized execution policy→A single instruction processes several data items, requires suitable data structure and hardware support. All operations are performed on a single thread. Operations will not be interleaved.
+    - Describe parallelized execution policy→Several instructions process one data item each at the same time, requires a suitable algorithm. Operations are performed in parallel across a number of threads. 
+    - Describe parallelized+vectorized execution policy→Several instructions process several data items each, at the same time, requires suitable algorithm, data structure and hardware support. Operations are performed in parallel across a number of threads.
+    - Disadvantages of execution policies→Execution policies can add overhead and complexity, potentially negating performance gains if not used correctly. May not have any effect, if not supported or get fallen back to non-policy version.
+- 
+- `std::reduce()`
+    - Which function does it replace and why?→`std::reduce()` replaces `std::accumulate()` for parallel execution across multiple threads.
+- 
+- Explain the Map and Reduce Pattern→Mapping: Transforms input data by applying functions to it, for example by using `std::transform()`. Reducing: Summarizes the transformed data by applying functions to it, for example by using `std::reduce()`. In C++17 this was combined to `std::transform_reduce()` , allowing for more efficient execution without waiting for all threads to finish.
+- 

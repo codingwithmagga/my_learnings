@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Parallelism
+    </h1>
+    <br/>
+    <ul>
+        <li>Difference to concurrency?→In contrast to concurrency, in parallelism all tasks are identical and do the same thing. They run independent of each other at the same time on multiple cores to improve scalability. Parallelism is a feature of the algorithm being run.</li>
+        <li>Describe the difference between explicit and implicit parallelism→Explicit parallelism uses programmer-defined threads, while implicit parallelism relies on the compiler or runtime to parallelize code. Explicit parallelismIt is not scalable, but useful when writing for specific hardware, e.g. game consoles.</li>
+        <li>Explain Task Parallelism
+            <ul>
+                <li>Distributing the process into smaller tasks</li>
+                <li>Independent execution of subtasks</li>
+                <li>This is also known as &quot;Thread-Level Parallelism (TLP)&quot;</li>
+                <li>Example: A database server which runs many threads to reduce latency. One thread is waiting to access data on disk, other threads do &quot;useful&quot; work. This improves the performance of the database server.</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/HRgVQR-rfQHxGh1z-H6-u5YjLu11Fte4LyRJZrOn6plUyDlj2XzjetJq6qXL3mG4Z68zzpemVJfp4kd6iqhvOY2ztnavB99O40W4tLhYPiusiMlWtOOnDHL9SfH1oli0.png" width="738" height="329.53475935828874"/></li>
+            </ul>
+        </li>
+        <li>Explain Data Parallelism
+            <ul>
+                <li>Subdividing a data set into several subsets, which are processed concurrently.</li>
+                <li>After that is a final &quot;reduce&quot; step which collects the results from each subset and combines them.</li>
+                <li>Also known as &quot;vector processing&quot; or &quot;vectorization&quot; used in GPUs. Also modern CPUs have support for vectorization ⇒  SIMD</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/hbPJ6giZQLdi4XNfap8rDV79hgVSHrnRdgoV8uK-68gAO00okjqJeV5dpcTtTtIbj54nIA5J2cMjE5eGRkfLapTceJPkvZYxvluKsuEf0vDAJej3zKWd9U0SzHsHlDWl.png" width="742" height="297.9840425531915"/></li>
+            </ul>
+        </li>
+        <li>Explain Pipelining
+            <ul>
+                <li>Technique for overlapping tasks</li>
+                <li>Task is divided into multiple steps.</li>
+                <li>Each step is processed in parallel to improve efficiency.</li>
+                <li>Similar is graph parallelism but with an arbitrary graph of dependencies.</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/nXuMgSrXdzZxQrsJZh6TpXQm77UhIA1gXq5IcB2FA7ZrHXBeSPKT9UUjqHYiji9CVmUbQiqd59wVIwMTbnVWxsgq-AQkwO0so-ns0vjB83HHWl7C4SAP_qvMhbOzFieP.png" width="738" height="356.1737967914438"/></li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Code execution
+            <ul>
+                <li>C++17 gives you the choice of &quot;execution policies&quot;, except vectorized only execution, which is supported in C++20. This is not supported by all compilers. Also, it is a request which may be ignored (not supported,  resources not available, not implemented).</li>
+                <li>Name four ways to execute an algorithm on modern computers→Sequential, Vectorized, Parallelized, Vectorized+Parallelized</li>
+                <li>Describe sequential execution policy→A single instruction processes one data item. All operations are performed on a single thread. Operations will not be interleaved.</li>
+                <li>Describe vectorized execution policy→A single instruction processes several data items, requires suitable data structure and hardware support. All operations are performed on a single thread. Operations will not be interleaved.</li>
+                <li>Describe parallelized execution policy→Several instructions process one data item each at the same time, requires a suitable algorithm. Operations are performed in parallel across a number of threads. </li>
+                <li>Describe parallelized+vectorized execution policy→Several instructions process several data items each, at the same time, requires suitable algorithm, data structure and hardware support. Operations are performed in parallel across a number of threads.</li>
+                <li>Disadvantages of execution policies→Execution policies can add overhead and complexity, potentially negating performance gains if not used correctly. May not have any effect, if not supported or get fallen back to non-policy version.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li><q>std::reduce()</q>
+            <ul>
+                <li>Which function does it replace and why?→<q>std::reduce()</q> replaces <q>std::accumulate()</q> for parallel execution across multiple threads.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Explain the Map and Reduce Pattern→Mapping: Transforms input data by applying functions to it, for example by using <q>std::transform()</q>. Reducing: Summarizes the transformed data by applying functions to it, for example by using <q>std::reduce()</q>. In C++17 this was combined to <q>std::transform_reduce()</q> , allowing for more efficient execution without waiting for all threads to finish.</li>
+        <li></li>
+
+    </ul>
+    </body>
+</html>

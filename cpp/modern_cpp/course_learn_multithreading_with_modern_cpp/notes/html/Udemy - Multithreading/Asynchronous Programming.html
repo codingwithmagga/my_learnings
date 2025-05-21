@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Asynchronous Programming
+    </h1>
+    <br/>
+    <ul>
+        <li>Asynchronous Programming
+            <ul>
+                <li>Explain→Asynchronous programming allows multiple tasks to run concurrently without blocking each other, improving efficiency. Using asynchronous programming can reduce the need to lock, but may not avoid it completely.</li>
+                <li>Explain Non-blocking synchronization→In contrast to blocking synchronization using mutex and/or atomic variables, Non-blocking synchronization is a technique that allows multiple threads to access shared data concurrently, without blocking program execution. It&#39;s used to implement non-blocking data structures in a parallel system, for example a concurrent message queue</li>
+                <li>Missing features in std C++ (as of C++23)
+                    <ul>
+                        <li>Continuations - &quot;do this task, then this task&quot;</li>
+                        <li>Only supports waiting on one future at a time</li>
+                        <li>Waiting on multiple threads has to be done sequentially</li>
+                        <li>Concurrent queue</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li><q>std::packaged_task&lt;T&gt;</q>
+            <ul>
+                <li>Describe:>Encapsulates a task. Expects a callable object for the task&#39;s code in the constructor, and contains a <q>std::promise</q> for the result of the task. A functor class, where the <q>operator()</q> invokes the callable object. The task starts after that call, not when the object is created. It starts in the same thread when called directly and in another one when it is used as an argument for a new thread.</li>
+                <li>How is <q>T</q> specified?→<q>T</q> is specified as the function type which is called in the constructor of std::packaged_task. Example <q>int(int, int)</q>. A function which returns an <q>int</q> and accepts two <q>int</q>&#39;s as parameters. </li>
+                <li>Advantages and disadvantages:>Best choice if tasks should be represented as objects. Lower-level abstraction than <q>std::async&lt;T&gt;</q>, we can control when a task is executed and can control which thread it executes. Disadvantage: Lower level, so more complex and possible error-prone code.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li><q>std::future &lt;...&gt; std::async&lt;F, Args...&gt;</q> 
+            <ul>
+                <li>Describe:><q>std::async</q> launches a function asynchronously, returning a <q>std::future</q> that holds the result. Higher-level abstraction than <q>std::thread</q>. Different launch flags, which decide if to start in another thread and/or directly.</li>
+                <li>Advantages and disadvantages→Simplest way to execute a task. Easy to obtain the return value or exception and the choice of running synchronously or not. The library manages the threads for the programmer and inter-thread communication, no need to use shared data. Disadvantages: Tasks cannot be detached. Async tasks are &quot;implicitly joined&quot;, the returned future&#39;s destructor will be blocked until the task completes.</li>
+            </ul>
+        </li>
+        <li></li>
+
+    </ul>
+    </body>
+</html>

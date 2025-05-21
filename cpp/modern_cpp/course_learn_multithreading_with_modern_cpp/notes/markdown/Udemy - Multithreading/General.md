@@ -1,0 +1,48 @@
+- General
+    - What is concurrency?→Concurrency is the ability of multiple tasks to run seemingly simultaneously, even if they're not truly parallel. These tasks often interact with each other. For example, doing a longer computation and showing a progress bar of it.
+    - Explain hardware concurrency→Multiple CPU chips respectively multiple processor "cores" on a chip. Different processors perform different activities at the same time, each following their own thread of execution. 1 hardware thread ↔ 1 processor core
+    - Explain software concurrency→Software concurrency is the ability of multiple tasks to run seemingly simultaneously, even on a single processor. It is managed by the OS. Normally, there are more software than hardware threads.
+- 
+- Threads (`std::thread`) 
+    - Name the key characteristics of `std::thread` >>>
+        - Lightweight abstraction for a software thread
+        - Rather low-level implementation which can't return a value
+        - Managed by the OS
+        - Allows direct access to the underlying software thread, useful if you want to use features which are not supported by standard C++.
+        - Additional information:
+            - C++14: read-write locks
+            - C++17: Many std alg. can be execute in parallel
+            - C++20: Joining threads, thread cancellation, coroutines, semaphores, latches and barriers
+            - C++23: Improved support for coroutines
+    - Would it be possible to copy a `std::thread`?→No, it is a move-only class.
+    - Detaching a thread::Action of allowing a thread to run independently of its parent thread so that it can continue executing without needing to be joined back to the parent.
+    - Explain the issue when a non-joined `std::thread`is destroyed >>>
+        - Calling the destructor leads to call `std::terminate`if the thread was not joined
+        - This can happen, when the parent thread is completed and the thread is still running
+        - It can be solved by calling `join()`, which blocks the parent thread, until the thread is completed.
+    - What happens if an exception is not caught in a `std::thread`?→The program terminates. Exceptions are not allowed to propagate over threads.
+    - Name possible entry points for a thread >>>
+        - Function pointers
+        - A Functor class
+        - Lambda expressions
+        - Member function pointers
+    - Which features for threads are not available in standard C++? >>>
+        - Thread priorities
+        - Thread affinity: pinning a thread to a specific processor
+        - Thread pool
+        - Sophisticated synchronization primitives beyond mutexes and condition variables
+- 
+- Issues
+    - Memory locations
+        - Define→A memory location is a specific address in a computer's memory where data is stored.
+        - Name memory locations in C++ >>>
+            - A Variable
+            - A Pointer
+            - An Element in a container
+            - Struct or class member, which are one of the above
+            - C++-Stl Containers, which means multiple threads modifiying the same container, even on different elements, have to be synchronized.
+            - Own classes could provide their own synchronization, but usually its better to implement them as a memory location, like the STL container
+    - What is a data race?→A data race occurs when multiple threads access and modify the same shared memory location without proper synchronization. Data Race causes undefined behavior.
+    - What is a race condition?→When the outcome depends on the order of the threads' execution. Data Race is a special case of a race condition.
+    - What is a torn write?→A torn write is when a multi-threaded program's write operation to a shared memory location is interrupted, resulting in an inconsistent or partial update.
+    - What is a torn read?→A torn read occurs when a multi-threaded program reads a multi-part variable whose value is being updated concurrently, resulting in an inconsistent value.

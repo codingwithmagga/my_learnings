@@ -1,0 +1,357 @@
+- cgm.udemy.com/course/learn modern cplusplus concurrency/
+- General
+    - General
+        - What is concurrency?→Concurrency is the ability of multiple tasks to run seemingly simultaneously, even if they're not truly parallel. These tasks often interact with each other. For example, doing a longer computation and showing a progress bar of it.
+        - Explain hardware concurrency→Multiple CPU chips respectively multiple processor "cores" on a chip. Different processors perform different activities at the same time, each following their own thread of execution. 1 hardware thread ↔ 1 processor core
+        - Explain software concurrency→Software concurrency is the ability of multiple tasks to run seemingly simultaneously, even on a single processor. It is managed by the OS. Normally, there are more software than hardware threads.
+    - 
+    - Threads (`std::thread`) 
+        - Name the key characteristics of `std::thread` >>>
+            - Lightweight abstraction for a software thread
+            - Rather low-level implementation which can't return a value
+            - Managed by the OS
+            - Allows direct access to the underlying software thread, useful if you want to use features which are not supported by standard C++.
+            - Additional information:
+                - C++14: read-write locks
+                - C++17: Many std alg. can be execute in parallel
+                - C++20: Joining threads, thread cancellation, coroutines, semaphores, latches and barriers
+                - C++23: Improved support for coroutines
+        - Would it be possible to copy a `std::thread`?→No, it is a move-only class.
+        - Detaching a thread::Action of allowing a thread to run independently of its parent thread so that it can continue executing without needing to be joined back to the parent.
+        - Explain the issue when a non-joined `std::thread`is destroyed >>>
+            - Calling the destructor leads to call `std::terminate`if the thread was not joined
+            - This can happen, when the parent thread is completed and the thread is still running
+            - It can be solved by calling `join()`, which blocks the parent thread, until the thread is completed.
+        - What happens if an exception is not caught in a `std::thread`?→The program terminates. Exceptions are not allowed to propagate over threads.
+        - Name possible entry points for a thread >>>
+            - Function pointers
+            - A Functor class
+            - Lambda expressions
+            - Member function pointers
+        - Which features for threads are not available in standard C++? >>>
+            - Thread priorities
+            - Thread affinity: pinning a thread to a specific processor
+            - Thread pool
+            - Sophisticated synchronization primitives beyond mutexes and condition variables
+    - 
+    - Issues
+        - Memory locations
+            - Define→A memory location is a specific address in a computer's memory where data is stored.
+            - Name memory locations in C++ >>>
+                - A Variable
+                - A Pointer
+                - An Element in a container
+                - Struct or class member, which are one of the above
+                - C++-Stl Containers, which means multiple threads modifiying the same container, even on different elements, have to be synchronized.
+                - Own classes could provide their own synchronization, but usually its better to implement them as a memory location, like the STL container
+        - What is a data race?→A data race occurs when multiple threads access and modify the same shared memory location without proper synchronization. Data Race causes undefined behavior.
+        - What is a race condition?→When the outcome depends on the order of the threads' execution. Data Race is a special case of a race condition.
+        - What is a torn write?→A torn write is when a multi-threaded program's write operation to a shared memory location is interrupted, resulting in an inconsistent or partial update.
+        - What is a torn read?→A torn read occurs when a multi-threaded program reads a multi-part variable whose value is being updated concurrently, resulting in an inconsistent value.
+- Synchronization Issues
+    - ## Cause of Synchronization Issues
+        - Arises from time slicing and, primarily, from multiple threads executing on different cores.
+        - Threads can share data, leading to multiple copies of the same data in different caches.
+        - Modification of shared data by one thread can lead to inconsistencies across copies. (See example on the right)
+        - The question arises: which copy represents the correct value?
+        - Software solutions like mutexes and atomic variables can help manage this.
+    - 
+    - ## Example
+        - Two cores with separate Level 1 and Level 2 caches, a shared Level 3 cache, and main memory. Shared variable x initialized to 5, with copies stored in caches and main memory.
+        - ![](https://remnote-user-data.s3.amazonaws.com/AQ2cN5htiPszN_dAo_5canKsZRmE5ijROKEie_lGQa0DrPiFlc1RlRTeWRG1RCWKgPC0zuQpU38CfL3MoIZKNG2ot0hPpRrxNRnDfpwH9Mgbr6hETY6UwScSho7xuKi4.png)
+        - If a thread on core 1 changes x to 7, it writes the new value to its store buffer.
+        - At this point, the cache controller is unaware of this change; the value is still considered private to core 1.
+        - ![](https://remnote-user-data.s3.amazonaws.com/jKNrRkKL-KyLD0ST6xu2dRnop7wdNEVjWeC8KMjhAp3v2fVEPG_st_RGItFxa7xmggrZu9Wn0J_71hPX3KB5Dl_kfwgGUfQDnrcDMEBC8bQum54O6xByYp4LjvRVH9_n.png)
+        - Thread on core 2 accesses variable x, likely obtaining the old value (5) from the cache.
+        - Core 2 performs computations using the outdated value (5)
+        - ![](https://remnote-user-data.s3.amazonaws.com/0yY-JsDcaSagu0gvY7FMNHDw0ruLgcwUmjQEWyAFrvAswDhGfPXLaEaFLjIW5qIn18AgMHvDnOLK55l9yLbSpm1tCR8ISXDB7Ln4WmXpbZKGxl2incq3dpDDnKu4_Bad.png)
+        - Eventually, core 1's store buffer flushes, updating the Level 1 cache with the new value (7).
+        - The cache controller then updates all other caches to reflect this new value.
+        - ![](https://remnote-user-data.s3.amazonaws.com/X0FdICkA8Pxni1Bce63S395fMJpugxEH8RqUeColLj9UTofqiTu5fczJXrMB4asMGx0QEYCHczAoWbDoHFFrRRGTFwyGjTV9pomLx8j4ZaZ6t9Z1NE_FkAnMSeydg973.png)
+        - ![](https://remnote-user-data.s3.amazonaws.com/JQW7d0mYG9apMUZDw4i0YSBadd6IdTRXl5RWnrYNFXqgncAEJvq_T4SJVIwj9khnknpxbfAn_QDzoJI833WzKJT2nKYR3KoCjeTVvK7g63BA2Y09Cp5YgsZ0VYhizIor.png)
+        - ![](https://remnote-user-data.s3.amazonaws.com/FQuAsMMX6EESHdkcKtlEK1w61e5PTO2M6Aa7aL0ZfnwhE_Ekp_cwE8OLQXRvo8H2bsnelQ0jV2dR56GphRCMmK-SXe5sjEbNnfnCF2srLQoBEVsx9DebjMokB4lwjPOS.png)
+        - By the time core 2 gets the updated value (7), it has already computed results using the old value (5).
+    - 
+    - ## Synchronization Solution
+        - Ideally, the new value should be available before core 2 accesses the shared variable.
+        - Software solutions like mutexes and atomic variables can help manage this.
+- Working with shared data
+    - ## Overview
+        - Basic mutex class (`std::mutex`)
+        - Mutex wrappers (`std::lock_guard`, `std::unique_lock`)
+        - Mutexes and time-outs (`std::timed_mutex`, `std::unique_lock`)
+        - Shared mutexes (`std::shared_mutex`, `std::shared_lock`)
+        - Deadlock + Avoidance (`std::scoped_lock`, `std::lock`)
+        - Livelock + Avoidance
+    - 
+    - ## Critical section
+        - What is a critical section?→A critical section is a code segment where shared resources are accessed, requiring exclusive access (one thread at a time) to prevent data corruption.
+    - 
+    - ## Shared data in a program
+        - Global variable: Accessible to all code in the program
+        - Static variable at namespace scope: accessible in the translation unit
+            - In a cpp file: Visible to this cpp file
+            - In a h.file:  Each translation unit gets its own copy of the variable, confusing!
+        - Static class member: potentially accessible via member functions or to all code, if public
+        - Static local variable: Accessible to all code which calls this fct.
+            - No threads before C++11 ⇾ Initialization behavior not defined
+            - Initialization behavior at C++11→ Behavior well-defined, only one thread can initialize the variable. Other threads have to wait. Synchronization done by the implementation for initialization, not for other write operations!
+        - See also [Storage classes]()
+    - 
+    - ## Locking Guidelines
+        - Name some best practices for locking >>>
+            - Lock for the shortest time possible
+            - Avoid locking lengthy operations if possible, like input/output
+            - Use fine-grained locking instead of coarse-grained locking, for example, one element in a list and not the whole list
+            - Also, don't make it too fine-grained, like locking individual elements when inserting and deleting, which can affect the whole list.
+    - 
+    - ## Mutex
+        - Describe a mutex >>>
+            - A mutex (short for "Mutual Exclusion") is used to implement locking protocols for managing access to shared data.
+            - It has two states: "locked" and "unlocked".
+        - How does it work? >>>
+            - When a thread wants to enter a critical section, it locks the mutex. If the mutex is already locked, other threads must wait.
+            - Upon completing the execution of the code in the critical section, the thread unlocks the mutex, allowing other threads to enter.
+            - This mechanism ensures that threads access the critical section in an orderly manner, preventing interleaved execution and data races.
+        - Describe an issue with multiple readers and one (rarely occuring) writer thread→Mutexes cause unnecessary sequential access among reader threads. Because for every entry in the critical section, the mutex blocks the data, even when it should only be read by multiple instances.
+        - C++11 provides a mutex class (`std::mutex`) in the Standard library to synchronize threads.
+        - Mutex objects must be visible to all task functions and defined outside any task functions, similar to shared data variables.
+        - `std::mutex` interface
+            - `bool try_lock()`↔Attempts to acquire a mutex lock without blocking. It returns true if successful, otherwise returns false. 
+            - `void lock()`→Acquires the mutex, blocking the calling thread if the mutex is already locked.
+            - `void unlock()`↔Unlocks the mutex, allowing other threads to acquire it.
+            - What happens when a thread calls `lock()`on a `std::mutex` multiple times without unlocking?→Results in undefined behavior.
+        - `std::recursive_mutex` 
+            - Purpose?→A recursive mutex allows a thread to acquire the same mutex multiple times. The number of `lock()` and `unlock()` calls must be the same to unlock the mutex. It can be used for recursive functions, for example.
+            - What does the usage of this class says about your system design?→Normally this a sign of a bad design!
+            - There is also `std::recursive_timed_mutex`.
+        - `std::timed_mutex`
+            - Describe the additional functionality over `std::mutex`→`std::timed_mutex` adds the ability to specify a timeout for lock acquisition, either via a specific duration or until a specific time point is reached.
+        - `std::shared_mutex` 
+            - Describe the additional functionality over `std::mutex`→`std::shared_mutex` allows shared locking, such that multiple threads can enter a critical section.
+            - Which problem can be solved compared with `std::mutex`→Using `std::shared_mutex` multiple readers can be allowed to access shared memory. Reducing the overhead of locking and unlocking the mutex for every read.
+            - Name a drawback compared with `std::mutex`→Performance overhead, it uses more memory (internal counter) and is a little bit slower.
+        - Name two drawbacks of mutexes >>>
+            - Locking and unlocking are slow operations
+            - Low-level implementation: Programmer must remember to use a mutex and use the right one. Also, the programmer must understand how different threads can modify the data.
+        - In real-world programs, general higher-level structures are used like the mutex wrapper classes and other.
+    - 
+    - ## Mutex Wrapper
+        - Why is a mutex not used directly in general?→If an `unlock()` call is missing (bug, exception thrown...), the program can be blocked entirely. 
+        - How does a mutex wrapper work in general?→A mutex is typically wrapped in a class or struct to manage its locking and unlocking using RAII. Constructor locks the mutex, destructor unlocks it. This ensured that the mutex is unlocked, when the wrapper goes out of scope.
+        - `std::lock_guard<T>` 
+            - Describe usage→`std::lock_guard<T>` automatically acquires a mutex in its constructor and releases it in its destructor, ensuring proper locking and unlocking. The template parameter is the type of the mutex (`std::mutex`, `std::shared_mutex`, ...)
+            - What is a potential drawback?→It may hold the lock longer than necessary when the `std::lock_guard<T>` object does not go out of scope directly because subsequent non-critical code is executed after the critical section.
+        - `std::unique_lock<T>`
+            - Describe advantages over `std::lock_guard<T>`→The mutex can be unlocked immediately after exiting the critical section. Other threads can enter the critical section sooner. 
+            - Why is it safe to unlock `std::unique_lock<T>` when the destructor may try to unlock it again?→It remembers the state of the mutex (locked or unlocked) and will not attempt to unlock it again when the `std::unique_lock<T>` object is destroyed.
+            - Name drawbacks compared to `std::lock_guard<T>`→Requires slightly more storage and is slightly slower than lock_guard.
+            - Name three different behaviors, which can be configured in the constructor >>>
+                - `std::try_to_lock`: Attempts to lock the mutex without blocking; returns immediately, whether successful or not.
+                - `std::defer_lock`: Constructs the object without locking the mutex, allowing manual locking later.
+                - `std::adopt_lock`: Assumes the mutex is already locked by the active thread and avoids a double-lock situation. The behavior is undefined if this is not the case.
+            - Would it be possible to copy an object of this class?→No, it's a move only class.
+        - `std::shared_lock<T>`
+            - Difference to `std::unique_lock<T>`?→`std::shared_lock` allows multiple threads to enter a critical section if there is no exclusive lock, for example by `std::unique_lock<T>`.
+    - 
+    - ## Synchronization
+        - Describe external synchronization→External synchronization uses external mechanisms, like mutexes or semaphores, to control access to shared resources.
+        - Describe internal synchronization in a class→Classes can be designed to manage their own synchronization, minimizing the burden on the user. Can be achieved by using a mutex as a class member.
+        - Explain how internal synchronization in a class can be achieved by using a mutex→By including a mutex as a private data member, class methods can automatically lock and unlock the mutex when accessing internal data.
+    - 
+    - ## Thread Local Variables
+        - C++ supports thread-local variables, which are the same as static and global variables, but there is a separate object for each thread. (Static has a single object for every thread).
+        - Declare them by using thread_local Keyword:
+            - Global or namespace scope: Constructed at or before the first use in translation unit. Safe to use in DLLs
+            - Local variables: Initialization is the same as static local variables
+        - They will be destroyed in all cases when the thread completes it execution.
+    - 
+    - ## Issues
+        - Deadlock
+            - Define→A deadlock is a situation where two or more threads are blocked indefinitely, waiting for each other to release the resources that they need.
+            - A simple way to avoid?→A simple way to avoid deadlock is locking mutexes in the same order. But this is not really reliable, especially in large programs.
+            - Another approach to avoid deadlocks is to implement an ordering of mutexes. A thread cannot lock a mutex unless it has already locked a mutex with a lower status (ID number, for example). The Williams book (C++ Concurrency in Action) has a hierarchical_mutex implementation.
+        - Livelock
+            - Define→Livelock is a situation where two or more processes continuously change their state in response to each other, preventing any actual progress.
+        - Resource starvation
+            - Define→Resource starvation is when one or more threads are unable to access necessary resources to complete their tasks. For example, deadlock, livelock, lack of system resources.
+        - `std::scoped_lock<MutexTypes...>` 
+            - Difference to `std::lock_guard<T>`→`std::scoped_lock` locks multiple mutexes at once, while `std::lock_guard` locks only one.
+            - Order of locking and unlocking?→Locked in order given in the constructor and unlocked in reverse order in destructor.
+        - `bool std::try_lock<MutexTypes...>` 
+            - Difference to class `std::scoped_lock<MutexTypes...>`→`bool std::try_lock` attempts to acquire multiple mutexes without blocking, returning `true` on success and `false` on failure, unlike `std::scoped_lock`, which blocks until all mutexes are acquired.
+        - Double-checked locking
+            - Explain the possible issue which should be solved using this >>>
+                - Before C++17, the compiler can allocate the memory and store the address in a pointer before the object is constructed. In this case, the object could be used in a multi-threading environment before it is constructed ⇒ undefined behavior. The order of operations was changed in C++17 s.t. the address is stored in the variable after the construction of the object.
+            - Explain how this is solved in modern C++:>Modern C++ uses either Meyers singleton (`static`), `std::atomic` or `std::call_once()`, eliminating the need for double-checked locking.
+    - 
+- Thread synchronization
+    - Issues with mutex
+        - An example with a download, a progress bar and some data processing at the end shows some issues with using mutexes:
+        - Too many loops and explicit lock and unlocking. How is the sleep duration chosen of threads which are currently waiting?
+        - A better solution would be that a thread A notifies the other thread B when it is finished. Then Thread B starts doing its thing.
+    - 
+    - Condition variable
+        - `std::condition_variable` 
+            - Explain shortly→A synchronization primitive that blocks a thread until a condition is met, then wakes one or more waiting threads using a notification function. During blocking the given mutex is unlocked.
+            - Which problem does it solve compared to mutex locking mechanism?→It allows threads to efficiently wait for a specific condition to become true before acquiring a mutex, avoiding busy-waiting and determining wait times by the programmer.
+        - Issues
+            - What is a lost wake-up?→A lost wake-up is when a thread is signaled to wake up, but the signal is lost before the thread can receive it. For example, the notification to wake up is sent, but the other thread is not at the point to wait for this notification. When it gets to this point, the notification is already gone.
+            - What is a spurious wake-up?→A spurious wake-up is when a thread waiting on a condition variable is awakened even though the notification wasn't sent. This occurs by an efficient implementation of `std::condition_variable` and avoiding this would be too much overhead.
+            - How can a spurious wake-up be avoided?→Use a predicate to check the condition before processing. This can be used as a second argument in the `wait()`function of `std::condition_variable`. 
+    - 
+    - Futures and promises
+        - Main purpose:>Using `std::future<T>` and `std::promise<T>` transfer of data between threads is possible, with setting up a "shared state" between threads. This has no shared data variables and no explicit locking.
+        - Explain the producer-consumer model >>>
+            - Producer (`std::promise<T>`) thread generates data
+            - Result will be stored in the shared state
+            - Consumer (`std::future<T>`) thread processes data by calling `std::future<T>::get()` which blocks the thread until the result is ready.
+            - 
+        - How are exceptions handled?→Exceptions can also be shared and an exception in the producer thread can be "thrown" to the consumer. 
+        - `std::future<T>` 
+            - Describe:>A class representing the result of an asynchronous operation, providing a way to access the result of type `T` when it's ready. Normally, an object of this class is not created directly it is obtained from a `std::promise<T>` object or returned by an asynchronous operation. Move-only class which is designed to use with a single consumer thread.
+        - `std::shared_future<T>`
+            - Difference to `std::future<T>`→`std::shared_future<T>` allows multiple threads to access the result, unlike `std::future<T>`, which only allows one. Therefore this class can be copied.
+        - `std::promise<T>`
+            - Describe:>A class template that allows asynchronous operations to deliver a value to a future. In the constructor an associated `std::future<T>` object is created and a shared state is set up. 
+- Atomic types
+    - To synchronize threads , we need to ensure that each thread uses the latest value of count and publishes its results immediately. A mutex does this internally when calling lock()/unlock(). It can also be done by declaring a variable atomic.
+    - 
+    - `std::atomic<T>`
+        - Name key points for an atomic variable? >>>
+            - The compiler disables prefetching for this variable and flushes the store buffer immediately with a new value. 
+            - This can also avoid hardware and compiler optimizations (for this variable) which change the instruction order
+            - Only one thread can access the variable at a time
+            - Prevents data race, but makes the operation take much longer
+        - Name important aspects about the Type `T` of the parameter >>>
+            - Parameter must be a type which is "trivially copyable". Scalar types and classes with only trivial copy and move constructors
+            - More complex types includes a silently added mutex, which takes much longer
+            - Normally, only integer types and pointers (to avoid the above) are used
+            - Threads could interleave two operations like `x=2; y=x` (distinct operations), while `++x` is an atomic operation 
+        - Member functions:
+            - `void store(T arg)`: Replace object's value with `arg` 
+            - `T load()`: Returns object value
+            - `void operator=()`: Assignment operator
+            - `void operator T()`: synonym for store and load
+            - `T exchange (T arg)`: Replace previous value with `arg`and returns old value
+        - Atomic pointers and integer support pointer arithmetic:
+            - increment and decrement operator
+            - `fetch_add()` synonym for increment
+            - `fetch_sub()` synonym for decrement
+            - `+=` and `-=` operator
+        - Integer also supports this:
+            - Atomic bitwise logical operations `&`, `|` and `^` 
+    - 
+    - `std::atomic_flag`
+        - Purpose?:>Provides a simple boolean atomic flag for thread synchronization. Has less overhead than `std::atomic<bool>`
+        - Three operations:
+            - `void clear()` sets flag to false
+            - `bool test_and_set()` sets flag to true and returns the previous value
+            - `void operator =()` 
+        - Must be initialized to false:
+            - `atomic_flag lock = ATOMIC_FLAC_INIT;`
+            - 
+    - 
+    - Spin lock
+        - Describe→Basically an infinite loop, which can be implemented using `std::atomic_flag`. It "spins" until a condition becomes true. This is an alternative to locking a mutex or using a condition_variable.
+        - Pros and cons?→Pros: simple to implement, avoids context switching; cons: busy-waiting wastes CPU cycles, prone to priority inversion.
+        - Usage?→Processor intensive, so it is only suitable for very short critical sections and/or very low contention. When spinning threads interrupt each other, the performance can heavily be impacted. It is usually only used in operating systems and libraries.
+        - 
+    - 
+    - Lock-free programming
+        - Describe→In lock-free programming the goal is having threads which execute critical sections concurrently without data races, but without using the operating system's locking facilities. Try to avoid and reduce some of the drawbacks using locks.
+        - Drawbacks of locking mechanisms >>>
+            - Possible race conditions
+            - Risk of deadlock
+            - High overhead (lock and unlock take relatively much time for a CPU)
+            - Lack of composability
+            - Lack of scalability
+            - High code complexity (when fine-granulated locking is applied).
+        - Advantages?→Improved performance and reduced latency by avoiding the overhead of locks.
+        - Disadvantages?→Increased complexity and potential for subtle bugs due to reliance on low-level memory operations.
+- Asynchronous Programming
+    - Asynchronous Programming
+        - Explain→Asynchronous programming allows multiple tasks to run concurrently without blocking each other, improving efficiency. Using asynchronous programming can reduce the need to lock, but may not avoid it completely.
+        - Explain Non-blocking synchronization→In contrast to blocking synchronization using mutex and/or atomic variables, Non-blocking synchronization is a technique that allows multiple threads to access shared data concurrently, without blocking program execution. It's used to implement non-blocking data structures in a parallel system, for example a concurrent message queue
+        - Missing features in std C++ (as of C++23) >>>
+            - Continuations - "do this task, then this task"
+            - Only supports waiting on one future at a time
+            - Waiting on multiple threads has to be done sequentially
+            - Concurrent queue
+    - 
+    - `std::packaged_task<T>`
+        - Describe:>Encapsulates a task. Expects a callable object for the task's code in the constructor, and contains a `std::promise` for the result of the task. A functor class, where the `operator()` invokes the callable object. The task starts after that call, not when the object is created. It starts in the same thread when called directly and in another one when it is used as an argument for a new thread.
+        - How is `T` specified?→`T` is specified as the function type which is called in the constructor of std::packaged_task. Example `int(int, int)`. A function which returns an `int` and accepts two `int`'s as parameters. 
+        - Advantages and disadvantages:>Best choice if tasks should be represented as objects. Lower-level abstraction than `std::async<T>`, we can control when a task is executed and can control which thread it executes. Disadvantage: Lower level, so more complex and possible error-prone code.
+    - 
+    - `std::future <...> std::async<F, Args...>` 
+        - Describe:>`std::async` launches a function asynchronously, returning a `std::future` that holds the result. Higher-level abstraction than `std::thread`. Different launch flags, which decide if to start in another thread and/or directly.
+        - Advantages and disadvantages→Simplest way to execute a task. Easy to obtain the return value or exception and the choice of running synchronously or not. The library manages the threads for the programmer and inter-thread communication, no need to use shared data. Disadvantages: Tasks cannot be detached. Async tasks are "implicitly joined", the returned future's destructor will be blocked until the task completes.
+    - 
+- Parallelism
+    - Difference to concurrency?→In contrast to concurrency, in parallelism all tasks are identical and do the same thing. They run independent of each other at the same time on multiple cores to improve scalability. Parallelism is a feature of the algorithm being run.
+    - Describe the difference between explicit and implicit parallelism→Explicit parallelism uses programmer-defined threads, while implicit parallelism relies on the compiler or runtime to parallelize code. Explicit parallelismIt is not scalable, but useful when writing for specific hardware, e.g. game consoles.
+    - Explain Task Parallelism >>>
+        - Distributing the process into smaller tasks
+        - Independent execution of subtasks
+        - This is also known as "Thread-Level Parallelism (TLP)"
+        - Example: A database server which runs many threads to reduce latency. One thread is waiting to access data on disk, other threads do "useful" work. This improves the performance of the database server.
+        - ![](https://remnote-user-data.s3.amazonaws.com/HRgVQR-rfQHxGh1z-H6-u5YjLu11Fte4LyRJZrOn6plUyDlj2XzjetJq6qXL3mG4Z68zzpemVJfp4kd6iqhvOY2ztnavB99O40W4tLhYPiusiMlWtOOnDHL9SfH1oli0.png)
+    - Explain Data Parallelism >>>
+        - Subdividing a data set into several subsets, which are processed concurrently.
+        - After that is a final "reduce" step which collects the results from each subset and combines them.
+        - Also known as "vector processing" or "vectorization" used in GPUs. Also modern CPUs have support for vectorization ⇒  SIMD
+        - ![](https://remnote-user-data.s3.amazonaws.com/hbPJ6giZQLdi4XNfap8rDV79hgVSHrnRdgoV8uK-68gAO00okjqJeV5dpcTtTtIbj54nIA5J2cMjE5eGRkfLapTceJPkvZYxvluKsuEf0vDAJej3zKWd9U0SzHsHlDWl.png)
+    - Explain Pipelining >>>
+        - Technique for overlapping tasks
+        - Task is divided into multiple steps.
+        - Each step is processed in parallel to improve efficiency.
+        - Similar is graph parallelism but with an arbitrary graph of dependencies.
+        - ![](https://remnote-user-data.s3.amazonaws.com/nXuMgSrXdzZxQrsJZh6TpXQm77UhIA1gXq5IcB2FA7ZrHXBeSPKT9UUjqHYiji9CVmUbQiqd59wVIwMTbnVWxsgq-AQkwO0so-ns0vjB83HHWl7C4SAP_qvMhbOzFieP.png)
+    - 
+    - Code execution
+        - C++17 gives you the choice of "execution policies", except vectorized only execution, which is supported in C++20. This is not supported by all compilers. Also, it is a request which may be ignored (not supported,  resources not available, not implemented).
+        - Name four ways to execute an algorithm on modern computers→Sequential, Vectorized, Parallelized, Vectorized+Parallelized
+        - Describe sequential execution policy→A single instruction processes one data item. All operations are performed on a single thread. Operations will not be interleaved.
+        - Describe vectorized execution policy→A single instruction processes several data items, requires suitable data structure and hardware support. All operations are performed on a single thread. Operations will not be interleaved.
+        - Describe parallelized execution policy→Several instructions process one data item each at the same time, requires a suitable algorithm. Operations are performed in parallel across a number of threads. 
+        - Describe parallelized+vectorized execution policy→Several instructions process several data items each, at the same time, requires suitable algorithm, data structure and hardware support. Operations are performed in parallel across a number of threads.
+        - Disadvantages of execution policies→Execution policies can add overhead and complexity, potentially negating performance gains if not used correctly. May not have any effect, if not supported or get fallen back to non-policy version.
+    - 
+    - `std::reduce()`
+        - Which function does it replace and why?→`std::reduce()` replaces `std::accumulate()` for parallel execution across multiple threads.
+    - 
+    - Explain the Map and Reduce Pattern→Mapping: Transforms input data by applying functions to it, for example by using `std::transform()`. Reducing: Summarizes the transformed data by applying functions to it, for example by using `std::reduce()`. In C++17 this was combined to `std::transform_reduce()` , allowing for more efficient execution without waiting for all threads to finish.
+    - 
+- Practical Data Structures
+    - Issues
+        - Modifying Operations on general data structures can affect other parts of the object in concurrent programming.
+            - Linked List: Adding or removing an element modifies the surrounding nodes
+            - Vector/String/Dynamic Array: Data is stored in a memory block. Adding or removing elements moves the following elements in memory. Also, adding elements may cause the block to be reallocated.
+        - If other threads are accessing these elements at the same time, we can have dangling pointers/references or iterators which become invalidated.
+        - STL Container
+            - STL containers are "memory objects". Concurrent Reads of the same object are safe, as well as  a single write. Concurrent reads and writes of the same object are not safe!
+        - Coarse-grained locking
+            - Means locking the entire object, which is rather easy to do and requires no change to the data structure. It's sometimes the only option, for example for a variable of built-in type, types in the c++- std library and types provided by other programmers which we can't change. In effect, all code which accesses these objects is single threaded.
+        - Fine-grained locking
+            - Fine-grained locking means we choose which parts of the object we want to lock. It allows concurrent access, but requires writing extra code and a careful design. Normally, also the cost of creating an object increases, for example an extra mutex initialization.
+    - 
+    - Monitor class
+        - It is a class which is internally synchronized.
+        - In a naive solution using a mutex as a class member, we have several drawbacks: Member functions may call other member functions ‒> using multiple locks risks a deadlock. Calling multiple member functions from outside can result in many locking and unlocking operations. There is also potential for race conditions and data race, so no transaction can be done.
+        - A slightly better solution is a wrapper class, which has a private member of the class to be wrapped and a mutex. Number of locking calls can be reduced. It works for every class and no modifications are needed. Drawbacks are still the possible interruption by other threads and possible deadlocks due to multiple locking. Also, some locking may be unnecessary and there is still potential for data races, so no transaction can be done.
+        - Sophisticated monitor class
+            - Make the wrapper class generic, where the template parameter is the wrapped class type. It will be a functor class with a callable object as argument in ()operator. This contains a sequence of member functions calls for the transaction, accepting a type of the wrapped class as parameter. We lock the mutex before calling the object. This works for any type. Callers can now perform transactions as unnecessary locking, multiple locking and interruptions are avoided.
+    - 
+    - Thread pool
+        - Creating a thread involves a lot of overhead, for example creating an execution stack for the thread, calling the system API, OS managing and internal data creation, context switches and execution by scheduler. This can take, 10000time as long as calling a function directly.
+        - A thread pool is a fixed-size container of thread objects, usually equal to the number of cores on the machine (`std::thread::hardware_concurrency()`).  It also contains a queue of tasks functions objects which shall be executed. Threads take one task after another from the queue and when finished take the next one. 
+        - This works best for short, simple "one-shot" tasks where the overhead of creating a thread is comparable to the task execution, also the tasks should not block. Adding and removing for queue must be done in a thread-safe way. The queue needs to be designed carefully.
+    - 
+    - Semaphore
+        - Describe >>>
+            - Has non-negative integer counter which can be increment (released) and decremented (acquired). The counter can be zero, so that `aquire()` will block until the counter becomes positive again.
+            - In a binary semaphore, the counter can only be 0 or 1. It can be used for mutual exclusion. It can lock calling `acquire()` and unlocked calling `release()`.
+            - It can also be used for signaling over multiple threads. This may need a suitable value for `max_count`.
+            - Semaphore is a higher level of abstraction than a mutex, which leads to simpler code and sometimes better performance. It is more flexible and can notify any given number of threads.
+    - 

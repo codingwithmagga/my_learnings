@@ -1,0 +1,26 @@
+- ## Cause of Synchronization Issues
+    - Arises from time slicing and, primarily, from multiple threads executing on different cores.
+    - Threads can share data, leading to multiple copies of the same data in different caches.
+    - Modification of shared data by one thread can lead to inconsistencies across copies. (See example on the right)
+    - The question arises: which copy represents the correct value?
+    - Software solutions like mutexes and atomic variables can help manage this.
+- 
+- ## Example
+    - Two cores with separate Level 1 and Level 2 caches, a shared Level 3 cache, and main memory. Shared variable x initialized to 5, with copies stored in caches and main memory.
+    - ![](https://remnote-user-data.s3.amazonaws.com/AQ2cN5htiPszN_dAo_5canKsZRmE5ijROKEie_lGQa0DrPiFlc1RlRTeWRG1RCWKgPC0zuQpU38CfL3MoIZKNG2ot0hPpRrxNRnDfpwH9Mgbr6hETY6UwScSho7xuKi4.png)
+    - If a thread on core 1 changes x to 7, it writes the new value to its store buffer.
+    - At this point, the cache controller is unaware of this change; the value is still considered private to core 1.
+    - ![](https://remnote-user-data.s3.amazonaws.com/jKNrRkKL-KyLD0ST6xu2dRnop7wdNEVjWeC8KMjhAp3v2fVEPG_st_RGItFxa7xmggrZu9Wn0J_71hPX3KB5Dl_kfwgGUfQDnrcDMEBC8bQum54O6xByYp4LjvRVH9_n.png)
+    - Thread on core 2 accesses variable x, likely obtaining the old value (5) from the cache.
+    - Core 2 performs computations using the outdated value (5)
+    - ![](https://remnote-user-data.s3.amazonaws.com/0yY-JsDcaSagu0gvY7FMNHDw0ruLgcwUmjQEWyAFrvAswDhGfPXLaEaFLjIW5qIn18AgMHvDnOLK55l9yLbSpm1tCR8ISXDB7Ln4WmXpbZKGxl2incq3dpDDnKu4_Bad.png)
+    - Eventually, core 1's store buffer flushes, updating the Level 1 cache with the new value (7).
+    - The cache controller then updates all other caches to reflect this new value.
+    - ![](https://remnote-user-data.s3.amazonaws.com/X0FdICkA8Pxni1Bce63S395fMJpugxEH8RqUeColLj9UTofqiTu5fczJXrMB4asMGx0QEYCHczAoWbDoHFFrRRGTFwyGjTV9pomLx8j4ZaZ6t9Z1NE_FkAnMSeydg973.png)
+    - ![](https://remnote-user-data.s3.amazonaws.com/JQW7d0mYG9apMUZDw4i0YSBadd6IdTRXl5RWnrYNFXqgncAEJvq_T4SJVIwj9khnknpxbfAn_QDzoJI833WzKJT2nKYR3KoCjeTVvK7g63BA2Y09Cp5YgsZ0VYhizIor.png)
+    - ![](https://remnote-user-data.s3.amazonaws.com/FQuAsMMX6EESHdkcKtlEK1w61e5PTO2M6Aa7aL0ZfnwhE_Ekp_cwE8OLQXRvo8H2bsnelQ0jV2dR56GphRCMmK-SXe5sjEbNnfnCF2srLQoBEVsx9DebjMokB4lwjPOS.png)
+    - By the time core 2 gets the updated value (7), it has already computed results using the old value (5).
+- 
+- ## Synchronization Solution
+    - Ideally, the new value should be available before core 2 accesses the shared variable.
+    - Software solutions like mutexes and atomic variables can help manage this.
