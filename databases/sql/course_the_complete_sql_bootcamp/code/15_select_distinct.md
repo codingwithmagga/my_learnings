@@ -1,4 +1,4 @@
-# 13 Challenge SELECT
+# 15 Challenge SELECT DISTINCT
 
 ## Exercise
 
