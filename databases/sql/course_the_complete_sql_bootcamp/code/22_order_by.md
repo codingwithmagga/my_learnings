@@ -31,3 +31,15 @@ What are the titles of the 5 shortes (in length of runtime) movies?
 ```sql
 SELECT title,length FROM film ORDER BY length ASC LIMIT 5; 
 ```
+
+## Bonus
+
+### Question 3
+
+How many options does a customer have to watch a movie that is 50 minutes or less in run time?
+
+### Solution 3
+
+```sql
+SELECT COUNT(*) FROM film WHERE length <= 50; 
+```
