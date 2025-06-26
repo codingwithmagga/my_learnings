@@ -1,0 +1,230 @@
+- KidsDoc-Handout-Fieber-Fibel-01042025 
+    - Die Informationen beziehen sich immer auf Kinder ohne eine Grunderkrankung, etwa Epilepsie oder eine Stoffwechselerkrankung. 
+    - 
+    - ## Einleitung
+        - Kinder fiebern viel öfter als Erwachsene.
+        - Ein Kind kann abends Fieber haben und morgen schon wieder fit und fieberfrei sein.
+        - Manchmal steigt die Temperatur nur, weil es zu warm angezogen war oder weil es längere Zeit draußen in der Sonne gespielt hat.
+        - Fieber ist in den meisten Fällen ein Freund und kein Feind.
+    - 
+    - ## Grundlagen: Was ist Fieber?
+        - Warum ist Fieber bei einem Kind gleichzeitig ein Warnsignal und ein gutes Zeichen >>>
+            - Warnsignal: Es machen sich Krankheitserreger breit.
+            - Gutes Zeichen: Das Immunsystem hat die Eindringlinge entdeckt und wehrt sich.
+        - Warum hilft das Fieber gegen Eindringlinge?→Bei über 38 °C verbreiten sich manche Erreger langsamer und sterben schneller ab. Gleichzeitig laufen Stoffwechselprozesse schneller ab, und Abwehrzellen werden aktiviert.
+        - Nenne die einzelnen Fieberstufen >>>
+            - 37,6 °C bis 38,4 °C: erhöhte Temperatur 
+            - 38,5 °C bis 39,0 °C: Fieber – kein Grund zur Sorge 
+            - 39,1 °C bis 39,9 °C: hohes Fieber – solltest du aufmerksam beobachten 
+            - 40,0 °C bis 42,0 °C: sehr hohes Fieber – Achtung, kann gefährlich werden!
+        - Ab welcher Temperatur spricht man bei Babys in den ersten drei Lebensmonaten von Fieber?→Ab 38,0 °C. 
+        - Ab welchem Alter ist der Allgemeinzustand des Kindes immer wichtiger als der absolute Temperaturwert?→Ab 6 Monaten.
+    - 
+    - ## Fieber richtig erkennen und messen
+        - Ort der Fiebermessung
+            - Wo sollte man bei Neugeborenen und Säuglingen Fieber messen?→Immer Po, also rektal.
+            - Wo sollte man bei Kindern und Jugendlichen Fieber messen?→Im Po oder im Ohr.
+        - Altersspannen
+            - Neugeborenes→0 - 28 Tage
+            - Säugling→29 Tage - 12 Monate
+            - Kleinkind→1 - 3 Jahre
+            - Kind im Vorschulalter→3 - 6 Jahre
+            - Schulkind→6 - 12 Jahre
+            - Jugendlicher→12 - 18 Jahre
+        - ### Die genauste Methode: im Po
+            - Bis wann sollte Fieber im Po gemessen werden?→Diese Methode wird für Kinder bis zum zweiten Lebensjahr empfohlen, auf jeden Fall solltest du sie in den ersten sechs Lebensmonaten anwenden. Bei etwas älteren Kindern kommt es darauf an, wie gut sie mitmachen: Ist ein Kind mit 13 Monaten dabei zu unruhig, kann es sinnvoll sein, auf das Messen im Ohr zu wechseln.
+            - Was kann das Messergebnis verfälschen? >>>
+                - Die Spitze des Thermometers ist nicht tief genug eingeführt. Die Metallkappe sollte im Po verschwinden.
+                - Zu kurze Messzeit
+                - Unruhiges und zappeliges Kind
+                - Kind hat kurz zuvor gebadet
+        - ### Im Ohr
+            - Wie funktioniert ein Ohrthermometer?→Beim Ohrthermometer wird die Infrarotstrahlung gemessen, die vom Trommelfell abgegeben wird.
+            - Was kann das Messergebnis verfälschen? >>>
+                - Verstopfter Gehörgang
+                - Kind lag zuvor auf einem Ohr, es sollte vor dem Messen kurz aufsitzen
+                - Temperatur in einem Ohr ist heißer als die im anderen
+                    - Den höheren Wert nehmen, auf Ohrenschmerzen (Hinweis auf Mittelohrentzündung) achten.
+        - ### Im Mund
+            - Ab wann ist diese Methode geeignet?→Etwa ab fünf oder sechs Jahren. 
+            - Was ist wichtig während der Messung?→Die Spitze liegt beim Messen etwas hinten unter der Zunge. Mund schließen während der Messung, Zunge ruhig halten und kein Herumkauen auf dem Thermometer.
+            - Was kann das Messergebnis verfälschen? >>>
+                - Das Thermometer liegt nicht lange genug an der richtigen Position im Mund.
+                - Es wurde zuvor etwas Kaltes gegessen oder getrunken.
+        - ### Thermometer reinigen
+            - Wie sollte dies bei einer rektalen Messung durchgeführt werden?→Vor und nach jeder Messung das Fieberthermometer mit lauwarmem Seifenwasser reinigen. Danach mit etwas verdünntem Reinigungsalkohol (Isopropylalkohol) desinfizieren.
+    - 
+    - ## Umgang mit Fieber im Alltag
+        - Was tut einem Kind bei Fieber gut? >>>
+            - Liebe und Zuwendung
+            - Ruhige Umgebung
+            - Ungestörter Schlaf
+            - Getränke anbieten
+        - Viel Trinken ist wichtig. Was sollte hier beachtet werden?→Noch mehr darauf achten, dass genügend getrunken wird. Ruhig jede Stunde oder öfter etwas anbieten.
+        - Was sollte getrunken werden? >>>
+            - Stilles Wasser (Leitungswasser)
+            - Ungesüßte Kräuter- und Früchtetees
+            - Saftschorlen mit wenig Kohlensäure
+            - Wasserreiche Gurken- oder Melonenstücke gehen auch
+        - Was, wenn das Kind keine Mahlzeiten essen mag?→Kleine Snacks anbieten, Kleinigkeiten werden oft besser vertragen. Oder Sachen anbieten, die sonst nicht erlaubt sind, wie etwas mit viel Zucker.
+        - Kinder sollten sich bei Fieber schonen. Was kann trotzdem erlaubt sein?→Wenn dein Kind trotz erhöhter Temperatur oder Fieber gut drauf und unternehmungslustig ist: Es spricht nichts gegen eine kleine Runde durch den Park oder einen Besuch des Spielplatzes, wenn es Lust dazu hat. Behalte nur im Blick, dass es sich nicht verausgabt. 
+        - Was sollte man bezüglich Überwärmung beachten? >>>
+            - Angenehm ist eine Raumtemperatur von 20°C
+            - Passe Kleidung dem Zustand (heiß/friert) des Kindes an
+            - Durchgeschwitzte Bodys/Unterwäsche regelmäßig wechseln
+            - Lauwarmes-feuchtes Tuch auf der Stirn
+            - Keine heißen Bäder, lieber Katzenwäsche
+            - Keinesfalls kalt abduschen
+        - Was sollte man bezüglich des Schlafes beachten? >>>
+            - Ungestörter Schlaf hilft, nicht wecken
+            - Achtung: Wenn ein Kind kaum Wachphasen hat, ist das ein Warnzeichen
+    - 
+    - ## Wann muss ich mit meinem Kind zum Arzt?
+        - Bei welchen Anzeichen sollte man direkt zum Kinderarzt? >>>
+            - Bewusstseinsstörungen 
+            - Teilnahmslosigkeit (Apathie) 
+            - Extreme Schläfrigkeit 
+            - Verwirrtheit 
+            - Starke Schmerzen 
+            - Erschwerte Atmung 
+            - Nackensteife 
+            - Wiederholtes Erbrechen 
+            - Starker Durchfall 
+            - Kopf- und Bauchschmerzen 
+            - Schrilles Schreien 
+            - Berührungsempfindlichkeit 
+            - Hautausschläge 
+            - Hauteinblutungen 
+            - Fieber, das schubweise auftritt
+            - Fieber, das länger als drei Tage anhält 
+            - Wenn das Kind nicht trinkt 
+            - Austrocknung z.B. längere Zeit kein Urin 
+            - Nach einem Fieberkrampf 
+            - Wenn man besorgt oder unsicher ist
+        - Welche Besonderheit gilt hier bei Säuglingen?→Diese sollten bei Temperaturen über 38,0 °C immer vorgestellt werden, im schlimmsten Fall kann eine Nierenbeckenentzündung oder eine Blutvergiftung vorliegen.
+    - 
+    - ## Fiebermanagement: Wann und wie du Fieber senken kannst
+        - Worum geht es beim Fiebermanagement?→Beim Fiebermanagement geht es darum, dass es dem Kind besser geht und nicht darum, dass das Thermometer einen bestimmten Wert anzeigt. Nach der Fieber-Leitlinie der medizinischen Fachgesellschaften ist es bei sonst gesunden Kindern und Jugendlichen nicht notwendig, das Fieber allein wegen der Höhe der Temperatur zu senken. Wir betreiben keine Temperaturkosmetik! Gilt ab dem 7. Monat.
+        - Wann sollte das Fieber gesenkt werden? >>>
+            - Wenn dein Kind leidet, viel weint, unruhig ist, nicht schlafen kann oder Schmerzen hat 
+            - Bei Anzeichen von Dehydrierung: trockene Lippen, Schwäche, Schlappheit, wenig Urin und/oder nur selten nasse Windeln. 
+            - Bei Säuglingen unter 6 Monaten immer zum Arzt!
+        - Was sollte bei Fieber vermieden werden? >>>
+            - Sport
+            - Geistige Anstrengung
+            - Schweres Essen [ Vermeide daher Sport, geistige Anstrengung und schweres Essen.](Handout%20Fieber%20-%20Dr.%20med.%20Vitor%20Gatinho/KidsDoc-Handout-Fieber-Fibel-01042025/Highlights/Page%2015/Vermeide%20daher%20Sport%2C%20geistige%20Anstrengung%20und%20schweres%20Essen.md)
+        - Wadenwickel
+            - Wann kann man sie einsetzen? >>>
+                - Hände und Füße des Kindes sind warm
+                - Nur auf Körperstellen, die sich warm anfühlen 
+                - Niemals bei Schüttelfrost!
+                - Geeignet für größere Kinder, diese geben mehr Körperwärme über die Beine ab als Babys
+            - Wie durchzuführen? >>>
+                - Tränke Leinentücher, Stoffwindeln oder Handtücher mit körperwarmem Wasser (nie mit kaltem!)
+                - Wringe sie leicht aus
+                - Wickle die Beine einzeln ein 
+                - Schließe die Wickel mit trockenen Handtüchern ab. 
+                - Wenn die feuchten Tücher warm oder trocken sind, nimm sie sofort ab. 
+                - Wenn das Kind mag, wiederhole das Verfahren nach einer kleinen Pause. 
+                - Niemals mit Essig arbeiten!
+    - 
+    - ## Medikamente gegen Fieber
+        - Allgemein
+            - Welche zwei Wirkstoffe sind geeignet, um Fieber bei Kindern zu senken?→Paracetamol und Ibuprofen sind geeignet, um Fieber bei Kindern zu senken.
+            - Kernpunkte zu Paracetamol >>>
+                - Für Säuglinge ab 3 Kilogramm Gewicht, Kleinkinder und ältere Kinder 
+                - Wirkt fiebersenkend und schmerzlindernd 
+                - Gut bei Fieber, Kopf und Gliederschmerzen
+            - Kernpunkte zu Ibuprofen
+                - Für Säuglinge ab 6 Kilogramm Gewicht, Kleinkinder und ältere Kinder 
+                - Erst ab dem Alter von 3 Monaten zugelassen 
+                - Wirkt fiebersenkend, schmerzlindernd und entzündungshemmend 
+                - Besonders gut bei Fieber mit begleitenden Entzündungen wie Halsschmerzen oder Ohrenschmerzen
+            - Warum ist Aspirin nicht geeignet?→Unter 12 Jahren kann durch die Einnahme bei einer Virusinfektion das sehr seltene, aber lebensbedrohliche Reye-Syndrom auftreten. Dabei werden Gehirn und Leber geschädigt.
+            - Richtet sich die Dosierung nach Alter oder Gewicht?→Nach dem Körpergewicht, nicht nach dem Alter. Beachte die Packungsbeilagen.
+            - Können Ibuprofen und Paracetamol im Wechsel gegeben werden?→Ja, Ibuprofen und Paracetamol können in Ausnahmefällen abwechselnd verabreicht werden, aber nur unter Beachtung der Packungsbeilage und unter sorgfältiger Dokumentation der Medikamentengabe.  
+            - Helfen Antibiotika bei Fieber?→In der Regel wird kein Antibiotikum benötigt, weil es sich bei Fieber um ein Symptom handelt, nicht um eine Infektion, da die Ursache für Fieber in der Regel viral ist und Antibiotika nur gegen Bakterien wirken. Der Arzt muss entscheiden, ob ein Antibiotikum sinnvoll ist.
+            - Generelle Tipps zur Medikamentengabe >>>
+                - Vermeide Hektik und Aufregung
+                - Nähe tut gut, Medikamente im Sitzen, evtl. auf dem Schoß geben.
+                - Erkläre dem Kind in einfachen Worten, warum das Medikament wichtig ist, etwa: "Das hilft dir, damit deine Superkräfte zurückkommen."
+                - Packungsbeilage immer lesen! 
+                - Abgelaufene Medikamente ersetzen.
+        - Zäpfchen
+            - Besonders geeignet für? >>>
+                - Gut geeignet für Kinder mit Erbrechen 
+                - Gut geeignet für Säuglinge und Kleinkinder, weil sie dazu neigen, Fiebersaft wieder auszuspucken.
+            - Wie vorgehen? >>>
+                - Seite des Zäpfchens ist egal
+                - Evtl. mit der Hand leicht erwärmen
+                - In den After einführen, nicht nur zwischen die Pobacken
+                - Die Pobacken etwas spreizen und danach kurz zusammendrücken
+                - Falls das Zäpfchen herausrutscht, kann es erneut versucht werden.
+            - Lagerung in Sommermonaten?→Am besten gekühlt.
+            - Erneut geben, wenn es wieder herauskommt?→Nach weniger als 10 Minuten, ja. Falls es länger dauert und keine Besserung eintritt, Wirkstoff wechseln. Gleiches gilt für Saft.
+        - Saft
+            - Was spricht dafür? >>>
+                - Viele Kinder akzeptieren Fiebersaft wegen des fruchtigen Geschmacks. 
+                - Einfach zu dosieren.
+            - Wie vorgehen? >>>
+                - Menge abmessen 
+                - Saft in die Wangentasche des Kindes oder in mehrere kleine Schlucke aufteilen ⇒ Senkt Risiko des Verschluckens
+                - Evtl. in kleine Mengen (1 EL) Apfelmus, Joghurt oder Brei einrühren, dann aber darauf achten, dass alles genommen wird. Niemals heiße Speisen verwenden: Das kann den Wirkstoff beeinträchtigen!
+            - Wie lange haltbar nach Anbruch? >>>
+                - Schreibe das Datum auf, meist sind es 6 Monate. 
+                - Achte auf die Lagerungshinweise auf der Verpackung
+        - Tablette
+            - Ab welchem Alter?→Ab etwa 6 Jahren
+            - Was spricht für eine Schmelztablette?→Sind in kindgerechter Dosierung oft mit angenehmem Geschmack überzogen. Kann einfach auf der Zunge zergehen lassen werden.
+        - 
+    - 
+    - ## Fieber nach der Impfung
+        - In welchem Zeitraum tritt Fieber meist nach der Impfung auf?→Meist innerhalb der ersten 24 Stunden, bei der MMR-Impfung kann es auch 6-12 Tage später auftreten.
+        - Sollte routinemäßig das Fieber nach einer Impfung gesenkt werden?→Nein, das ist nur nötig, wenn das Kind leidet.
+        - Wie häufig tritt Fieber nach der Impfung auf?→Bei etwa 1-10 Prozent der Geimpften, je nach Impfstoff.
+        - Was passiert im Körper nach einer Impfung?→Der Körper bildet Antikörper gegen die im Impfstoff enthaltenen abgeschwächten oder abgetöteten Krankheitserreger. Dies kann zu ähnlichen Symptomen wie bei einem Infekt, etwa Fieber, führen.
+        - Wie hoch wird das Fieber?→Meist nur leicht erhöht zwischen 38 -39°C. Es kann zu höherem Fieber kommen, aber auch das ist in der Regel kein Alarmsignal.
+        - Wann sollte man den Arzt/Ärztin informieren? >>>
+            - Kind wirkt teilnahmslos (apathisch) oder trinkt zu wenig
+            - Zusätzliche Symptome wie starker Ausschlag, Atemnot oder Schwellungen
+            - Wenn das Fieber länger als 48h anhält
+            - Wenn man in Sorge ist, weil das Kind sehr krank ist
+        - 
+    - 
+    - ## Fieberkrampf
+        - Welche Anzeichen gibt es? >>>
+            - Die geöffneten Augen werden verdreht
+            - Bewusstseinsverlust für Minuten
+            - Unkontrolliertes Zucken mit Armen und Beinen
+            - Muskeln verspannen sich stark oder erschlaffen.
+        - Wie kommt es dazu?→Die Ursache ist eine Veranlagung des Gehirns, in einer bestimmten kindlichen Entwicklungsphase bei Fieber mit Krampfanfällen zu reagieren. Fast immer passiert es, wenn die Körpertemperatur sehr schnell steigt.
+        - Wie häufig kommt es vor?→Drei bis fünf Prozent aller Kinder zwischen sechs Monaten und fünf Jahren erleiden mindestens einmal einen Fieberanfall, jedes Dritte davon macht mehr als einen Fieberkrampf durch. Am häufigsten sind sie im Alter zwischen einem und drei Jahren.
+        - Vorgehen? >>>
+            - Ruhe bewahren!
+            - Kind vor Verletzungen schützen
+            - Dafür sorgen, dass das Kind frei atmen kann
+            - Auf die Uhr schauen, Dauer des Krampfes festhalten (meist 1-3 Minuten)
+            - Notarzt rufen (112)
+            - Nach dem Krampf beim Kind bleiben
+            - Kind ärztlich untersuchen lassen
+        - Wie kann man das Kind vor Verletzungen schützen? >>>
+            - Seitlich auf dem Boden (besser Decke o.ä.) lagern
+            - Gegenstände wegräumen
+            - Nicht festhalten oder schütteln, höchsten kleine Säuglinge im Arm halten
+            - Niemals Wasser ins Gesicht, Gefahr des Ertrinkens!
+        - Wie sorgt man dafür, dass das Kind frei atmen kann? >>>
+            - Kleidung lockern und seitlich lagern
+            - Niemals gewaltsam den Mund öffnen
+        - Kann einem Fieberkrampf vorgebeugt werden?→Nein, das ist nicht möglich. Auch frühzeitiges Fiebersenken hilft nicht, wie viele Studien zeigen. Im selben Infekt kann es jedoch hilfreich sein, dass Fieber früh genug zu senken.
+    - 
+    - Warnzeichen für Austrocknung bei Kindern? >>>
+        - Trinkt kaum noch oder verweigert komplett das Trinken
+        - Wirkt apathisch, teilnahmslos oder verwirrt
+        - Ist schwer weckbar oder bewusstlos
+        - Die Augen wirken tief eingefallen
+        - Weint ohne Tränen
+        - Hat blasse, fahle Haut
+        - Atmet auffallend schnell oder schwer
+        - Herzschlag ist entweder viel zu schnell oder unnatürlich langsam
+    - 
+    - 
