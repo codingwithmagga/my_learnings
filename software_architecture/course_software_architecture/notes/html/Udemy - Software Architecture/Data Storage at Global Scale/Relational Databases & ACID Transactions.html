@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Relational Databases &amp; ACID Transactions
+    </h1>
+    <br/>
+    <ul>
+        <li>Relational Database
+            <ul>
+                <li>Describe
+                    <ul>
+                        <li>Data is stored in tables</li>
+                        <li>Each row is a single record</li>
+                        <li>The records are all related to each other through a set of predefined columns.</li>
+                        <li>Each of the columns has a name and type and optional a set of constraints. </li>
+                        <li>Each record is uniquely identified by a key, represented by one or multiple columns.</li>
+                    </ul>
+                </li>
+                <li>The structure ({{6026083236591226::schema}}) of each table is defined {{6026083236591226::ahead of time}}.</li>
+                <li>How is data duplication avoided?→Data duplication is avoided by the opportunity to have a relation between different tables. For example, a product table with a product ID and a sales table where the product is referenced through the product ID.</li>
+                <li>Advantages?
+                    <ul>
+                        <li>Support for complex queries</li>
+                        <li>Efficient storage</li>
+                        <li>Natural structure of data for humans</li>
+                        <li>ACID transactions guarantee</li>
+                    </ul>
+                </li>
+                <li>Disadvantages
+                    <ul>
+                        <li>Rigid structure, which needs to be defined before the database can be used. Changes require maintenance time.</li>
+                        <li>Hard to maintain/scale</li>
+                        <li>Slower read operations compared to non-relational operations</li>
+                    </ul>
+                </li>
+                <li>When to choose a relational database?
+                    <ul>
+                        <li>Structured data requirements</li>
+                        <li>Complex queries and transactions required</li>
+                        <li>Read performance is not the most important quality attribute</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>SQL
+            <ul>
+                <li>Describe→SQL is a domain-specific language used for managing and manipulating data held in a relational database management system.</li>
+                <li>Different relational database implementations have their own additional features, but the majority of standard operations are the same for all relational databases.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>ACID transactions
+            <ul>
+                <li>Explain the acronym
+                    <ul>
+                        <li>Atomicity</li>
+                        <li>Consistency</li>
+                        <li>Isolation</li>
+                        <li>Durability</li>
+                    </ul>
+                </li>
+                <li>Definition transaction→A transaction is a sequence of database operations that for an external observer should appear as a single operation.</li>
+                <li>Explain Atomicity→Atomicity ensures that a transaction is treated as a single, indivisible unit of work. Either all operations of the transaction are done at once or are not done.</li>
+                <li>Explain Consistency→Consistency ensures that a transaction leaves the database in a valid state, e.g. no constraints are violated by a transaction. A committed transaction will be seen by all future queries/transactions.</li>
+                <li>Explain Isolation→Isolation ensures that concurrent transactions appear to execute sequentially, preventing interference between them.</li>
+                <li>Explain Durability→Durability ensures that once a transaction is committed, it remains persistent even in the event of system failures.</li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

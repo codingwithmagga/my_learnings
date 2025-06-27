@@ -1,0 +1,23 @@
+- Systems are frequently redesigned, not because of functional requirements
+    - Name reasons why systems are often redesigned >>>
+        - Improving performance
+        - Better scaleability
+        - Enhancing security
+        - Hard to maintain
+        - Slow to develop
+        - 
+- 
+- Quality attributes 
+    - Motivation and definition
+        - {{Quality attributes}} are also called {{non-functional requirements}} 
+        - They describe >>>
+            - The qualities of the functional requirements
+            - The overall properties of the system
+        - They provide a {{quality measure}} on how well our system performs on a {{particular dimension}} 
+        - This can also be a requirement for the developing team, for example deploying a new version twice a week.
+    - Considerations
+        - Quality attributes need to be {{measurable}}  and {{testable}} 
+        - Would it be possible to build a single software architecture that can provide all quality attributes?→No, there are certain quality attributes which contradict one another, which means some combinations of quality attributes are very hard or even impossible to achieve. Software architects need to make the right tradeoff when designing a system.
+        - 
+        - 
+- 

@@ -1,0 +1,24 @@
+- Availability is an important attribute since it has the greatest impact on {{our users}} and {{our business}} . Downtime can result in a loss of {{money }}  and {{customers}} .
+- Definition→The fraction of time/probability that our service is operationally functional and accessible to the user.
+- Uptime↔Time that our system is operationally functional and accessible to the user.
+- Downtime::Time that our system is unavailable to the user.
+- How is it measured?→Uptime / (Uptime + Downtime) or MTBF / (MTBF + MTTR)
+- MTBF 
+    - Define >>>
+        - Mean Time between failures
+        - Represents the average time our system is operational
+    - When is it useful >>>
+        - Dealing with multiple pieces of hardware
+        - Each component has its own operational shelf life
+        - Not using a cloud/third-party API with a given uptime and availability
+- MTTR
+    - Define >>>
+        - Mean Time to Recovery
+        - Time average it takes us to detect and recover from failure
+        - Average downtime of our system
+    - {{Detectability}}  and {{fast recovery}}  can help us achieve {{high availability}} 
+- 
+- When do we have high availability (at which value/percentile)? >>>
+    - No strict definition, but the industry standard set by cloud vendors is typically 99.9% or higher
+    - ![](https://remnote-user-data.s3.amazonaws.com/pu1NTAKYJ1qiKUBrpRsqwpbEorMllbXpQnftlZcofRC-bvR4ECysuZ1_d7vAgM8uTJoGNwl5hoNsgrrL8G5sSkip4KJGTj-I8c7fDeyL7YALfo6vfu4NXJzvuMHJUZiK.png)
+- 

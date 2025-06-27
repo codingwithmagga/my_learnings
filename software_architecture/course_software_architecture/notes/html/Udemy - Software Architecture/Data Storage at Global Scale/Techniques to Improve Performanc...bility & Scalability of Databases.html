@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Techniques to Improve Performance, Availability &amp; Scalability of Databases
+    </h1>
+    <br/>
+    <ul>
+        <li>Name three techniques to improve the mentioned quality attributes
+            <ul>
+                <li>Database Indexing</li>
+                <li>Database Replication</li>
+                <li>Database Partitioning/Sharding</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Database Indexing
+            <ul>
+                <li>Definition Database Index→A data structure (hash map, B-Tree) that improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space. Created from a particular column (single index) or group of columns (composite index). </li>
+                <li>Define Composite Index→A composite index is an index that combines multiple columns to speed up queries involving those columns.</li>
+                <li>Tradeoffs for indexing
+                    <ul>
+                        <li>Additional space for storing the index tables</li>
+                        <li>Speed decrease for write operations</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Database replication
+            <ul>
+                <li>Why should you replicate databases?→To eliminate the database as a single point of failure, improving performance, availability and scalability.</li>
+                <li>Tradeoff
+                    <ul>
+                        <li>Higher complexity for operations like write, update and delete. Keeping multiple databases in a large-scale system consistent is not a trivial task.</li>
+                        <li>Increased resource consumption.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Database Partitioning/Sharding
+            <ul>
+                <li>Describe this technique→Database partitioning divides a large database into smaller, more manageable parts.</li>
+                <li>Advantages
+                    <ul>
+                        <li>Scaling, more data can be stored</li>
+                        <li>Different queries that touch different parts of data can be performed in parallel</li>
+                    </ul>
+                </li>
+                <li>Drawback
+                    <ul>
+                        <li>Increased complexity, especially for relational databases</li>
+                        <li>Overhead for managing different parts, for example, keep them in a similar size</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Indexing, Replication and Partitioning are completely {{7560095851465254::orthogonal}} to each other. </li>
+        <li>All three of them are commonly used together in most real-life large-scale systems.</li>
+
+    </ul>
+    </body>
+</html>

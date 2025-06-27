@@ -1,0 +1,21 @@
+- System constraints
+    - Why are system constraints often referred to as pillars for software architecture? >>>
+        - They provide a solid starting point
+        - The rest of the system need to be designed around them
+    - Name different types >>>
+        - Technical constraints
+        - Business constraints
+        - Regulatory/legal constraints
+    - Examples for technical constraints? >>>
+        - Being locked to a particular hardware/cloud vendor
+        - Having to use a particular programming language
+        - Having to use a particular database or technology
+        - Having to support certain platforms, browsers, or OS
+    - Examples for business constraints >>>
+        - Limited budget
+        - Strict deadline
+    - Example for regulatory/legal constraints→Data protection in different countries
+    - What should be considered at these constraints? >>>
+        - Any given constraint shouldn't be taken lightly
+        - Use loosely coupled architecture
+- 

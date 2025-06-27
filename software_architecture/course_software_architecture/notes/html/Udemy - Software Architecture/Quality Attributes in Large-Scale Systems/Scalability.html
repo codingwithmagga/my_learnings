@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Scalability
+    </h1>
+    <br/>
+    <ul>
+        <li>Definition?→The measure of a system&#39;s ability to handle a growing amount of work, in an easy and cost-effective way, by adding resources to the system.</li>
+        <li>Motivation→Load/Traffic changes over time, for example at global events, weather, day/night cycle etc.</li>
+        <li>Name three types of scalability
+            <ul>
+                <li>Vertical scalability (Scale Up)</li>
+                <li>Horizontal scalability (Scale Out)</li>
+                <li>Team/Organization scalability </li>
+            </ul>
+        </li>
+        <li>The three types of scalability (vertical, horizontal, team) are {{9846830753555955::orthogonal}} to each other, which means that each part can be {{9846830753555955::increased/decreased separately}} </li>
+        <li>Vertical Scalability
+            <ul>
+                <li>Definition→Adding resources or upgrading the existing resources on a single computer, to allow our system to handle higher traffic or load.</li>
+                <li>Pros?
+                    <ul>
+                        <li>Any application can benefit from it, no code changes are required</li>
+                        <li>Migration between different machines is easy</li>
+                    </ul>
+                </li>
+                <li>Cons?
+                    <ul>
+                        <li>The scope of upgrade is limited</li>
+                        <li>Locked to a centralized system, which cannot provide high availability and fault tolerance</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Horizontal Scalability
+            <ul>
+                <li>Definition→Adding more resources in a form of new instance running on different machines, to allow our system to handle higher traffic or load.</li>
+                <li>Pros?
+                    <ul>
+                        <li>No limit on scalability</li>
+                        <li>Easy to add/remove machines</li>
+                        <li>If designed correctly, we get: High Availability and fault tolerance</li>
+                    </ul>
+                </li>
+                <li>Disadvantages?
+                    <ul>
+                        <li>Initial code changes may be required</li>
+                        <li>Increased complexity, coordination overhead</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Team/Organization scalability 
+            <ul>
+                <li>Hiring engineers can increase productivity up to some point, then we observe productivity degradation. 
+                    <ul>
+                        <li>What are the possible reasons for that?
+                            <ul>
+                                <li>Many crowded meetings</li>
+                                <li>Code merge conflicts</li>
+                                <li>Business complexity - longer ramp up time</li>
+                                <li>Testing is harder and slower</li>
+                                <li>Releases become very risky</li>
+                            </ul>
+                        </li>
+                        <li>What are the options to solve this problem?
+                            <ul>
+                                <li>Separate code in different modules of the same service</li>
+                                <li>Separate product in multiple services</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Software architecture impacts {{5777233769681221::engineering velocity (team productivity)}}</li>
+                <li></li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

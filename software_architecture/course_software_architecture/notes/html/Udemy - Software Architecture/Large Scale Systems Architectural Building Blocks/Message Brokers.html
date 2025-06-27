@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Message Brokers
+    </h1>
+    <br/>
+    <ul>
+        <li>Drawbacks of synchronous communication
+            <ul>
+                <li>Both instances have to be healthy and maintain the connection</li>
+                <li>No padding in the system to absorb a sudden increase in traffic or load</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>What is a message broker?→A software architectural building block inside our system that uses the queue data structure to store messages between senders and receivers. Decouples senders from the receivers and is fundamental for asynchronous software architecture.</li>
+        <li>Capabilities of a message broker?
+            <ul>
+                <li>Buffering messages</li>
+                <li>Message routing</li>
+                <li>Transformation &amp; Validation</li>
+                <li>Load balancing</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>How does a message broker increases fault tolerance, availability and scalability?
+            <ul>
+                <li>By decoupling components, allowing one component to be temporarily unavailable without affecting others. </li>
+                <li>Prevent messages from being lost.</li>
+                <li>Messages can be queued up during traffic spikes</li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Name drawbacks when using a message broker
+            <ul>
+                <li>Increased complexity</li>
+                <li>Potential single point of failure</li>
+                <li>Added latency (mostly not significant)</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Open-Source Message Brokers
+            <ul>
+                <li>Apache Kafka - The most popular open-source message broker nowadays. Apache Kafka is a distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.</li>
+                <li>RabbitMQ - A widely deployed open-source message broker. It is used worldwide at small startups and large enterprises.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Cloud-Based Message Brokers
+            <ul>
+                <li>Amazon Simple Queue Service (SQS) - Fully managed message queuing service that enables you to decouple and scale micro-services, distributed systems, and serverless applications.</li>
+                <li>GCP Pub/Sub and Cloud Tasks - Publisher/Subscriber and message queue solutions offered by Google Cloud Platform. See this article for comparison between the two offerings.</li>
+                <li>Microsoft Azure:
+                    <ul>
+                        <li>Service Bus - Fully managed enterprise message broker with message queues and publish-subscribe topics.</li>
+                        <li>Event Hubs - Fully managed real-time data ingestion service. Allows streaming millions of events per second from any source. Integrates seamlessly with Apache Kafka clients without any code changes. A perfect solution for Big Data.</li>
+                        <li>Event Grid - Reliable, serverless event delivery system at a massive scale. It uses the publish-subscribe model. It is Dynamically scalable, Low cost with a pay-as-you-go model, and guarantees &quot;At least once delivery of an event&quot;</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Big Data Architecture Patterns
+    </h1>
+    <br/>
+    <ul>
+        <li>Introduction to Big Data
+            <ul>
+                <li>Definition of Big Data→Big data is a large, complex data set that cannot be processed using traditional data processing applications.</li>
+                <li></li>
+                <li>Name three most common characteristics of Big Data
+                    <ul>
+                        <li>Volume (Large Quantity of Data)</li>
+                        <li>Variety (Large variety of unstructured data from multiple sources ⇒ Data fusion necessary)</li>
+                        <li>Velocity (Continuous stream of data at a very high rate)</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Big Data Processing Strategies
+            <ul>
+                <li>Name two strategies/patterns to process big data
+                    <ul>
+                        <li>Batch processing</li>
+                        <li>Real-Time processing</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Batch processing model
+                    <ul>
+                        <li>Describe→A batch processing model processes large amounts of data in batches at scheduled intervals. The data is often stored in a DFS.</li>
+                        <li>Advantages
+                            <ul>
+                                <li>Easy to implement</li>
+                                <li>High availability</li>
+                                <li>Efficient</li>
+                                <li>Higher fault tolerance</li>
+                                <li>Complex and in-depth analysis of large datasets</li>
+                            </ul>
+                        </li>
+                        <li>Drawback→High latency due to delayed processing.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Real-Time processing
+                    <ul>
+                        <li>Describe→Real-time processing is the immediate analysis of data as it is generated.</li>
+                        <li>Advantages→Real-time processing provides immediate insights and enables faster decision-making.</li>
+                        <li>Drawbacks
+                            <ul>
+                                <li>Hard to do complex analysis.</li>
+                                <li>Doing data-fusion/analyzing historical data is impossible.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Lambda Architecture
+            <ul>
+                <li>Some system need batch and real-time processing of data, like anomaly detection.</li>
+                <li></li>
+                <li>Describe→Three layers: A batch layer processing historical data and a speed layer processing real-time data, combined to provide low-latency and high-throughput results. The third layer is the serving layer, which combines the data from the batch and speed layer. 
+<img src="https://remnote-user-data.s3.amazonaws.com/MhGeJHjq4IZEvqcOHqtneIYAzJ5_DtJyHFP7JC2FPqrAee_aTy3iTPah4betLrGdDK-YytusNQMElI7YnCUqhasYXOQTavrmyZpfANMssMulDFhQC7Jghu3gHm-dm_8H.png" width="732" height="347.25606469002696"/></li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

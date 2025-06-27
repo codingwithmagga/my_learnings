@@ -1,0 +1,29 @@
+- What problem does the API Gateway solve?→It manages and secures access to multiple backend services. With this, not every backend needs to implement its own security, authentication and authorization.
+- 
+- What does an API Gateway do? >>>
+    - An API gateway manages and secures external access to multiple internal APIs, providing just one single API to external users.
+    - ![](https://remnote-user-data.s3.amazonaws.com/qQH0WDU4RLGYBA5ldoJ2vn7zXh55nXe05pQcsFRv-QF_nXFaViKtklhyx-_kLPSqYLOpXDDsdlzcJPvUlkA3diDVimwdKPzGm0lRhxuLDGrRnLCJi2DAYULr442yAj97.png)
+- Name benefits of an API Gateway >>>
+    - Seamless internal modifications/refactoring
+    - Consolidating all security, authorization and authentication in a single place
+    - Load balancing and traffic management, including health checks
+    - Request routing, saving the user from making multiple requests to different services
+    - Caching static content and responses
+    - Protocol translation
+- 
+- Considerations
+    - API Gateway shouldn't contain any {{business logic.}}
+    - API Gateway may become a {{single point of failure}}. 
+    - Avoid {{bypassing}} API Gateway from external services. 
+- 
+- Open-Source API Gateways
+    - Netflix Zuul
+        - Zuul is a free and open-source application gateway written in Java that provides capabilities for dynamic routing, monitoring, resiliency, security, and more.
+- Cloud-Based API Gateways
+    - Amazon API Gateway
+        - Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. Supports RESTful APIs and WebSocket APIs (bi-directional communication between client and server).
+    - Google Cloud Platform API Gateway
+        - Google Cloud Platform API Gateway enables you to provide secure access to your services through a well-defined REST API that is consistent across all of your services, regardless of service implementation. It is designed for serverless workloads on GCP. For full documentation, follow this link.
+        - Apigee is Google Cloud’s API management product that enables organizations to build, manage, and secure APIs — for any use case, environment (on-premises, in Google Cloud, or a hybrid environment), or scale. For full documentation, follow this link.
+    - Microsoft Azure API Management
+        - API Management helps organizations publish APIs to external, partner, and internal developers to unlock the potential of their data and services.

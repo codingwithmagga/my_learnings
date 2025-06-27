@@ -1,0 +1,291 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Data Storage at Global Scale
+    </h1>
+    <br/>
+    <ul>
+        <li>Relational Databases &amp; ACID Transactions
+            <ul>
+                <li>Relational Database
+                    <ul>
+                        <li>Describe
+                            <ul>
+                                <li>Data is stored in tables</li>
+                                <li>Each row is a single record</li>
+                                <li>The records are all related to each other through a set of predefined columns.</li>
+                                <li>Each of the columns has a name and type and optional a set of constraints. </li>
+                                <li>Each record is uniquely identified by a key, represented by one or multiple columns.</li>
+                            </ul>
+                        </li>
+                        <li>The structure ({{6026083236591226::schema}}) of each table is defined {{6026083236591226::ahead of time}}.</li>
+                        <li>How is data duplication avoided?→Data duplication is avoided by the opportunity to have a relation between different tables. For example, a product table with a product ID and a sales table where the product is referenced through the product ID.</li>
+                        <li>Advantages?
+                            <ul>
+                                <li>Support for complex queries</li>
+                                <li>Efficient storage</li>
+                                <li>Natural structure of data for humans</li>
+                                <li>ACID transactions guarantee</li>
+                            </ul>
+                        </li>
+                        <li>Disadvantages
+                            <ul>
+                                <li>Rigid structure, which needs to be defined before the database can be used. Changes require maintenance time.</li>
+                                <li>Hard to maintain/scale</li>
+                                <li>Slower read operations compared to non-relational operations</li>
+                            </ul>
+                        </li>
+                        <li>When to choose a relational database?
+                            <ul>
+                                <li>Structured data requirements</li>
+                                <li>Complex queries and transactions required</li>
+                                <li>Read performance is not the most important quality attribute</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>SQL
+                    <ul>
+                        <li>Describe→SQL is a domain-specific language used for managing and manipulating data held in a relational database management system.</li>
+                        <li>Different relational database implementations have their own additional features, but the majority of standard operations are the same for all relational databases.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>ACID transactions
+                    <ul>
+                        <li>Explain the acronym
+                            <ul>
+                                <li>Atomicity</li>
+                                <li>Consistency</li>
+                                <li>Isolation</li>
+                                <li>Durability</li>
+                            </ul>
+                        </li>
+                        <li>Definition transaction→A transaction is a sequence of database operations that for an external observer should appear as a single operation.</li>
+                        <li>Explain Atomicity→Atomicity ensures that a transaction is treated as a single, indivisible unit of work. Either all operations of the transaction are done at once or are not done.</li>
+                        <li>Explain Consistency→Consistency ensures that a transaction leaves the database in a valid state, e.g. no constraints are violated by a transaction. A committed transaction will be seen by all future queries/transactions.</li>
+                        <li>Explain Isolation→Isolation ensures that concurrent transactions appear to execute sequentially, preventing interference between them.</li>
+                        <li>Explain Durability→Durability ensures that once a transaction is committed, it remains persistent even in the event of system failures.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Non-Relational Databases
+            <ul>
+                <li>What is the main difference between relational and non-relational databases?→Relational databases use structured tables with predefined schemas, while non-relational databases use flexible schemas and various data models.</li>
+                <li>Relational databases are designed for {{9804230400272547::efficient storage}} and non-relational databases are designed for {{9804230400272547::faster queries}}. </li>
+                <li>What are the trade-offs of using a flexible schema in non-relational databases?
+                    <ul>
+                        <li>Loose the ability to easily analyze the records, also multiple groups (join operations) becomes hard</li>
+                        <li>ACID transaction are rarely supported</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>What are the three main types of non-relational databases?
+                    <ul>
+                        <li>Document store</li>
+                        <li>Key-value stores</li>
+                        <li>Graph database</li>
+                    </ul>
+                </li>
+                <li>Explain the concept of a key value store database→A key-value store database stores data as key-value pairs, offering fast read and write operations. The type of value can be simple or complex. It can be seen as a large-scale hash table or dictionary.</li>
+                <li>Explain the concept of a document store database→A document store database stores data in flexible, self-contained documents. Each document is an object with different attributes of different types. These documents can be easily mapped to objects in a programming language.</li>
+                <li>Explain the concept of graph databases→A graph database is an extension of a document store and stores data as nodes and edges, representing relationships between data points.</li>
+                <li>Name use cases for a graph database
+                    <ul>
+                        <li>Fraud detection: The same person uses multiple logical users to initiate multiple transactions</li>
+                        <li>Recommendation engines: Recommendation of new products based on purchase history or friends of the user.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>When to choose a non-relational database?
+                    <ul>
+                        <li>Caching Task</li>
+                        <li>Handling real-time big data</li>
+                        <li>Unstructured data, different records can contain different attributes</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Non-Relational Databases - Solutions
+                    <ul>
+                        <li>Key/Value Stores Examples
+                            <ul>
+                                <li>Redis</li>
+                                <li>Aerospike</li>
+                                <li>Amazon DynamoDB</li>
+                            </ul>
+                        </li>
+                        <li>Document Store Examples
+                            <ul>
+                                <li>Cassandra</li>
+                                <li>MongoDB</li>
+                            </ul>
+                        </li>
+                        <li>Graph Databases Examples
+                            <ul>
+                                <li>Amazon Neptune</li>
+                                <li>NEO4J</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Techniques to Improve Performance, Availability &amp; Scalability of Databases
+            <ul>
+                <li>Name three techniques to improve the mentioned quality attributes
+                    <ul>
+                        <li>Database Indexing</li>
+                        <li>Database Replication</li>
+                        <li>Database Partitioning/Sharding</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Database Indexing
+                    <ul>
+                        <li>Definition Database Index→A data structure (hash map, B-Tree) that improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space. Created from a particular column (single index) or group of columns (composite index). </li>
+                        <li>Define Composite Index→A composite index is an index that combines multiple columns to speed up queries involving those columns.</li>
+                        <li>Tradeoffs for indexing
+                            <ul>
+                                <li>Additional space for storing the index tables</li>
+                                <li>Speed decrease for write operations</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Database replication
+                    <ul>
+                        <li>Why should you replicate databases?→To eliminate the database as a single point of failure, improving performance, availability and scalability.</li>
+                        <li>Tradeoff
+                            <ul>
+                                <li>Higher complexity for operations like write, update and delete. Keeping multiple databases in a large-scale system consistent is not a trivial task.</li>
+                                <li>Increased resource consumption.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Database Partitioning/Sharding
+                    <ul>
+                        <li>Describe this technique→Database partitioning divides a large database into smaller, more manageable parts.</li>
+                        <li>Advantages
+                            <ul>
+                                <li>Scaling, more data can be stored</li>
+                                <li>Different queries that touch different parts of data can be performed in parallel</li>
+                            </ul>
+                        </li>
+                        <li>Drawback
+                            <ul>
+                                <li>Increased complexity, especially for relational databases</li>
+                                <li>Overhead for managing different parts, for example, keep them in a similar size</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Indexing, Replication and Partitioning are completely {{7560095851465254::orthogonal}} to each other. </li>
+                <li>All three of them are commonly used together in most real-life large-scale systems.</li>
+            </ul>
+        </li>
+        <li>Brewer&#39;s (CAP) Theorem
+            <ul>
+                <li>Repeat the CAP Theorem→A distributed database can only provide two out of three guarantees: consistency, availability, and partition tolerance. 
+<img src="https://remnote-user-data.s3.amazonaws.com/cEhJsI3c_qUOSPVWiOkA2_XrIqeokB_0cH3jviNd_wdICFWrJ9GIM-9rRAXKSypPZoTrCQ-L3Jz9ce3ZY69IdEMhrA7LuWBRRQ4MAz7yVeMEEl2VQNcx9CwlOGDLwUCj.png" width="732" height="729.0404312668463"/></li>
+                <li>What is a network partition→A network partition is a network failure that divides a network into multiple isolated segments.</li>
+                <li>What is partition tolerance?→Partition tolerance is the ability of a distributed system to continue operating despite network partitions.</li>
+                <li>What is consistency in the CAP theorem?→Consistency means every read receives the most recent write or an error.</li>
+                <li>What is availability in the CAP theorem?→Availability means that every request receives a non-error response, without the guarantee that it contains the most recent write.</li>
+                <li>Without a network partition, consistency and availability can both be fulfilled. Explain why we have to choose one when there is a network partition
+                    <ul>
+                        <li>A network partition prevents communication between nodes, making it impossible to guarantee both consistency (all nodes have the same data) and availability (all nodes respond to requests) simultaneously. </li>
+                        <li>Choosing consistency: Service returns an error during network partition.</li>
+                        <li>Choosing availability: Data is not consistent through the whole network.</li>
+                        <li>Not that in reality a tradeoff can be made between consistency and availability, we don&#39;t have to choose one entirely.</li>
+                    </ul>
+                </li>
+                <li>When a database shall be distributed, we have to choose {{5708766922279914::Partition tolerance}} out of three quality attributes in the CAP theorem.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Scalable Unstructured Data Storage
+            <ul>
+                <li>What is unstructured data?→Data which doesn&#39;t follow a particular structure, schema or model. For example, &quot;Blob&quot; - Binary Large Object Files, like Audio, Video or Images. Often the data sets and each file or object itself of unstructured data are large.</li>
+                <li>Relational/non-relational databases are {{6528028871785729::not optimized}}  for unstructured data. They often have also a size limit for binary objects (~megabytes).</li>
+                <li></li>
+                <li>Distributed File System (DFS)
+                    <ul>
+                        <li>Describe→A distributed file system (DFS) is a storage architecture that distributes data across multiple storage nodes. It is similar to a file system on a single computer.</li>
+                        <li>Benefits
+                            <ul>
+                                <li>No need for a special API.</li>
+                                <li>Files can be modified easily.</li>
+                                <li>Efficient for high-performance operations</li>
+                            </ul>
+                        </li>
+                        <li>Limitations
+                            <ul>
+                                <li>Number of files is limited</li>
+                                <li>No easy access through web API (HTTP+ REST)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Object Store
+                    <ul>
+                        <li>Describe→An object store is a data storage architecture that manages data as objects rather than files or blocks. Each object contains the data itself, along with metadata and a unique identifier, allowing for easy retrieval and management.</li>
+                        <li>Benefits
+                            <ul>
+                                <li>Linear scalability</li>
+                                <li>No limit to the number of objects</li>
+                                <li>Very high limit on single object size (~5-10 Terabytes)</li>
+                                <li>Provides an HTTP + REST API</li>
+                                <li>Supports versioning out of the box</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li>Drawbacks
+                            <ul>
+                                <li>Objects are immutable, objects needs to be replaced if changed</li>
+                                <li>No easy access like a file-system, access through an SDK or REST API</li>
+                                <li>Lower IO performance compared to DFS</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Cloud and Open Source Solutions
+                    <ul>
+                        <li>Cloud-Based Object Store Solutions
+                            <ul>
+                                <li>Amazon S3 (Simple Storage Service) - Amazon&#39;s highly scalable cloud storage service that stores object data within buckets. Designed to store and protect any amount of data for various use cases, such as websites, cloud-native applications, backups, archiving machine learning, and analytics.</li>
+                                <li>GCP Cloud Storage - Google Cloud&#39;s managed service for storing unstructured data for companies of all sizes</li>
+                                <li>Azure Blob Storage -  Microsoft&#39;s massively scalable and secure object storage for cloud-native workloads, archives, data lakes, high-performance computing, and machine learning</li>
+                                <li>Alibaba Cloud OSS (Object Storage Service) - Fully managed enterprise-ready Object Storage Service to store and access any amount of data from anywhere.</li>
+                            </ul>
+                        </li>
+                        <li>Open Source and Third-Party Object Store Solutions
+                            <ul>
+                                <li>OpenIO - A software-defined open-source object storage solution ideal for Big Data, HPC, and AI. It is S3 compatible and can be deployed on-premises or cloud-hosted on any hardware that you choose.</li>
+                                <li>MinIO - High-performance, S3-compatible object storage. It is native to Kubernetes and 100% open source under GNU AGPL v3.</li>
+                                <li>Ceph - Open-source, reliable and scalable storage. Ceph provides a unified storage service with object, block, and file interfaces from a single cluster built from commodity hardware components.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

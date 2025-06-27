@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Content Delivery Network - CDN
+    </h1>
+    <br/>
+    <ul>
+        <li>What is a CDN?→A CDN is a geographically distributed network of servers that caches content to improve delivery speed and reduce latency.</li>
+        <li>CDNs provide service by {{7993970539783427::caching}} our website content on their {{4237977355066259::edge servers}}, which are relocated at different {{7993970539783427::Points of Presence (PoP).}} {{4237977355066259::Edge servers}} are {{5624249783664189::physically closer}} to the user and {{5624249783664189::strategy located}} in terms of network infrastructure.</li>
+        <li>CDNs can be used to deliver the following resources
+            <ul>
+                <li>Images</li>
+                <li>Text</li>
+                <li>CSS</li>
+                <li>JavaScript files</li>
+                <li>Video streams (live and on-demand)</li>
+            </ul>
+        </li>
+        <li>Quality attributes of CDNs
+            <ul>
+                <li>Performance ⇒ faster page loads</li>
+                <li>High availability ⇒ issues/slowness are less noticeable</li>
+                <li>Security ⇒ Protection against Distributed Denial of Service (DDoS) attacks</li>
+            </ul>
+        </li>
+        <li>How are CDNs improved?
+            <ul>
+                <li>Use faster and more optimized HDDs</li>
+                <li>Reduce bandwidth by compressing the content</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Name different strategies of CDNs
+            <ul>
+                <li>Pull strategy</li>
+                <li>Push strategy</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Pull strategy
+            <ul>
+                <li>How does it work?→The service tells the CDN which content is cached and how the cache needs to be invalidated by setting the Time To Live (TTL) property. When the TTL expires, the CDN downloades the content again from the server.</li>
+                <li>Advantage
+                    <ul>
+                        <li>Lower maintenance, once set up, everything is done by the CDN.</li>
+                    </ul>
+                </li>
+                <li>Drawbacks
+                    <ul>
+                        <li>First user of an asset which is not cached will have a longer latency</li>
+                        <li>Increased load on the origin server during peak times when TTL is similar of all assets</li>
+                        <li>Still a high availability necessary on our system.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Push strategy
+            <ul>
+                <li>How does it work?→The origin server pushes content updates to CDN edge servers.</li>
+                <li>Advantage?
+                    <ul>
+                        <li>When content doesn&#39;t change frequently, one push to the CDN is enough. Reduces traffic and temporarily downtime of our system can be caught.</li>
+                    </ul>
+                </li>
+                <li>Drawback
+                    <ul>
+                        <li>If the content changes frequently, we actively need to push it every time to the CDN.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>CDN Solutions &amp; Cloud Technologies
+            <ul>
+                <li>Cloudflare
+                    <ul>
+                        <li>Cloudflare offers ultra-fast static and dynamic content delivery over our global edge network. It helps reduce bandwidth costs and takes advantage of built-in unmetered DDoS protection.</li>
+                    </ul>
+                </li>
+                <li>Fastly
+                    <ul>
+                        <li>Fastly&#39;s Deliver@Edge is a modern, efficient, and highly configurable CDN that gives you the freedom to control how your content is cached so you can deliver the content your users want quickly.</li>
+                    </ul>
+                </li>
+                <li>Akamai
+                    <ul>
+                        <li>Akamai has a large variety of offerings for API Acceleration, Global Traffic Management, Image &amp; Video Management, Media Delivery, and much more.</li>
+                    </ul>
+                </li>
+                <li>Amazon CloudFront
+                    <ul>
+                        <li>Amazon CloudFront is a content delivery network (CDN) service built for high performance, security, and developer convenience. Some of its use-cases include delivering fast secure websites, accelerating dynamic content delivery and APIs, live streaming, video-on-demand, and others.</li>
+                    </ul>
+                </li>
+                <li>Google Cloud Platform CDN
+                    <ul>
+                        <li>GCP CDN offers fast, reliable web and video content delivery with a global scale and reach.</li>
+                    </ul>
+                </li>
+                <li>Microsoft Azure Content Delivery Network
+                    <ul>
+                        <li>Microsoft&#39;s CDN solution offers global coverage, full integration with Azure services, and a simple setup.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

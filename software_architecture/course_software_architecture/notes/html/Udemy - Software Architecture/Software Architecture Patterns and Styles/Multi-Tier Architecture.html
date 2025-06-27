@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Multi-Tier Architecture
+    </h1>
+    <br/>
+    <ul>
+        <li>Describe what is a multi-tier architecture→A multi-tier architecture is a system which is separated into multiple logical (limiting the scope) and physical distinct tiers. The physical separation allows each tier to be separately developed, upgraded and scaled. </li>
+        <li>What is the difference to a multi layer architecture?→Multi-tier architecture distributes application components across multiple physical tiers, while multi-layer architecture separates components into logical layers within a single tier.</li>
+        <li>Name restrictions, which allow this architecture to be loosely coupled
+            <ul>
+                <li>Usage of client-server model</li>
+                <li>It is not allowed to skip tiers, they must call each other in a specific order.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>The three-tier architecture is the most common and popular architectural pattern for client-server, web-based services.
+            <ul>
+                <li>Describe
+                    <ul>
+                        <li>A three-tier architecture separates an application into presentation, application, and data tiers for improved organization and scalability.</li>
+                        <li>Presentation tier: Displays information, takes user input, no business logic</li>
+                        <li>Application tier: Contains business logic and processes user requests, communicates with the data tier. Sometimes also called business or logic tier.</li>
+                        <li>Data tier: Manages data storage, retrieval, and manipulation, ensuring data (user and business) integrity and security.</li>
+                    </ul>
+                </li>
+                <li>Advantages
+                    <ul>
+                        <li>Easy to scale horizontally</li>
+                        <li>Easy to maintain, the logic is concentrated in the application tier</li>
+                    </ul>
+                </li>
+                <li>Drawback→Monolithic structure of the logic tier. Business concentrated in a single codebase. Possible high CPU and memory consumption and low development policy.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Two tier architecture
+            <ul>
+                <li>Describe→One tier for presentation and business tier, for example desktop applications. One tier for data and storage, often remotely.</li>
+                <li>Advantages
+                    <ul>
+                        <li>Eliminates overhead of the logic tier in the three tier architecture</li>
+                        <li>Faster, more native experience for the user</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>There is also a four and five (not often used) tier architecture.</li>
+
+    </ul>
+    </body>
+</html>

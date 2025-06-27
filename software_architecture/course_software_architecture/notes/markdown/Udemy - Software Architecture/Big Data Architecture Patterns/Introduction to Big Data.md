@@ -1,0 +1,8 @@
+- Definition of Big Data→Big data is a large, complex data set that cannot be processed using traditional data processing applications.
+- 
+- Name three most common characteristics of Big Data >>>
+    - Volume (Large Quantity of Data)
+    - Variety (Large variety of unstructured data from multiple sources ⇒ Data fusion necessary)
+    - Velocity (Continuous stream of data at a very high rate)
+- 
+- 

@@ -1,0 +1,87 @@
+- Requirements & API
+    - Important Observation: 2 major actors, merchants and users/buyers.
+    - Example questions
+        - Merchants
+            - What type of products are we selling? Physical or digital?
+            - What product information does a merchant provide?
+            - What data do we need to provide the merchant?
+            - What operation can a merchant perform?
+        - Users
+            - Can anyone browse/purchase, or is registration required?
+            - Are Product Reviews/Ratings in scope?
+            - Search capabilities?
+            - Do we need to design checkout/payment/delivery?
+            - What UI do we offer? Browser/Mobile?
+    - Assume the following functional requirements
+        - Product
+            - Physical product (with limited inventory)
+            - Each product contains
+                - Title
+                - Description
+                - Categories
+                - Images
+                - Optional attributes
+        - Merchant
+            - Product Management System
+                - Signup
+                - Create new products
+                - Update the product properties
+                - Update product inventory
+                - View product data
+            - Product analytics
+                - View real-time product page visitors
+                - View historical/projected product performance
+            - Sequence diagram
+                - ![](https://remnote-user-data.s3.amazonaws.com/5-n89SNHy9vdMAaZiwkc7YFrvRH2vITacPFgmAxYmFYlsuohnBZB2e_8hitb0PO1X9fQmORDWOP6ZYZag1itJqhCcCcdMB-AYQ32pNT8C7HUPuEUei5Ss58pZYD--2Ge.png)
+        - Users
+            - Store Front
+                - Web UI + Mobile users
+                - Browser products
+                - Search products based on title/categories/description
+                - Out of scope: User registration, product reviews
+            - Store Checkout
+                - Navigate to the checkout page
+                - View breakdown of the bill incl. taxes
+                - Complete the purchase by providing shipping + payment info
+                - Send order updates via email/push notifications to the user
+                - Out of scope: Shopping cart, delivery, payment
+            - Sequence diagram
+                - ![](https://remnote-user-data.s3.amazonaws.com/5qeEcHpaehexyt6V_fiaZ7WAFjcceYgjJuexF4F5NcBfOd16QopPzwpJp3q_zCZ_LY3SUo9Aq0Grg0zQaNjxSOmfj9rEUPu-fduCFEACfke7ug7PTePt3bT6yivuS0Mg.png)
+                - ![](https://remnote-user-data.s3.amazonaws.com/1gZr3YTFENMkNZ9DPwt9GDL1F1CIGY3F7TvPnMTzNAwq4a-wUJiO8uokO5wrj0ZgAhT4HWeZGr96U7BC-kpzVEUyI982X7dwT4Gvmq5Ii72KklxMP-zGdgF5EXLvMx_Z.png)
+    - Assume the following nonfunctional requirements
+        - Merchants
+            - Scalability (not very high)
+                - Hundreds of merchants
+                - Low traffic
+                - Thousands of products
+            - Performance
+                - Response time < 1 second at 50th percentile
+            - Consistency vs. Availability
+                - CP databases
+            - High availability
+                - Uptime 99.5%
+        - User
+            - Scalability (very high)
+                - 10–100 million daily users
+                - Multiple countries
+                - High traffic at peak
+            - Performance
+                - Products reponse time < 200ms 50p, 500mms 99p
+                - Checkout response time <1s 99p
+            - Consistency vs. Availability
+                - Storefront: AP
+                - Checkout: CP
+            - High availability
+                - Internal SLA: 99.99% uptime
+    - We ignore system constraints for now.
+    - Defining of the system API would be very technical. Base are the sequence diagrams above from the functional requirements.
+- 
+- Functional Diagram
+    - Go through the functional requirements step by step and add them to the architectural diagram. Ignore the non-functional requirements for now.
+    - Microservice Architecture for organizational scalability
+    - ![](https://remnote-user-data.s3.amazonaws.com/KquFgmzCo74z2d3G-uMw8vnRjWqImSI-990T4IESgS29ltNfnsryu5fAUVRuu06vcEGIUp7-mg2mdePSmQtMBcKT1ehJXF9gInJJtz-adJT_jCENdytQje_N2U4ZYfLo.png)
+- 
+- Final Software Architecture
+    - ![](https://remnote-user-data.s3.amazonaws.com/LPv6475s14ETnbnii5FIrTDzGLxz5vU9UMx0oDujeVSz3WHNgVv_RNzvBO5mKYVJ7LqVxT-44MRE9RLXC5KOAMSnUCr0iial_qlHX3E69joYNGSHXZ2Y7tKDu_qHqmhA.png)
+    - Running in multiple data centers, worldwide
+    - ![](https://remnote-user-data.s3.amazonaws.com/bPi0wRPLMn7qESCK1iZtTjyJzVmRbNXaZkjy58xyCG2cuVMWm7AdATvPOPkEIShnSfR1hkpOSkrVmI3dZz2B-JZ6u5zQ2ZWpEKkbpbxlXZpSBwBDcB6Um7XiZgCJng6D.png)

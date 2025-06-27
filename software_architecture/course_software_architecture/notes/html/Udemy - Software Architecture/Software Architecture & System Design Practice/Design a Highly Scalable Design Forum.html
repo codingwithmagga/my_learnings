@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Design a Highly Scalable Design Forum
+    </h1>
+    <br/>
+    <ul>
+        <li>System Design Step-By-Step Process
+            <ul>
+                <li>Ask questions to capture: functional and non-functional requirements, system constraints</li>
+                <li>Define the systems API</li>
+                <li>Create a Software Architecture Diagram to fulfill the Functional Requirements</li>
+                <li>Refine the Software Architecture Diagram to address the Non-Functional Requirements</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>The most important thing in system design: Make the {{6343211462444005::right trade-offs}} based on the given requirements. </li>
+        <li></li>
+        <li>Requirements &amp; API
+            <ul>
+                <li>Example questions:
+                    <ul>
+                        <li>Can anyone post or view post/comments?</li>
+                        <li>What can a post contain? (text/images/video)</li>
+                        <li>What is the meaning of &quot;most popular posts&quot;?</li>
+                        <li>What is the structure of the comments? (flat list vs tree)</li>
+                    </ul>
+                </li>
+                <li>Assume the following functional requirements
+                    <ul>
+                        <li>A user can sign up and login to post, vote or comment.</li>
+                        <li>A user should be able to create a new post that contains a
+                            <ul>
+                                <li>title</li>
+                                <li>Topic tags</li>
+                                <li>Body (text or uploaded images)</li>
+                            </ul>
+                        </li>
+                        <li>A user should be able to comment on any existing post.</li>
+                        <li>Comments are ordered chronologically as a flat list.</li>
+                        <li>User can delete their own post or comments.</li>
+                        <li>A logged-in user can upvote/downvote an existing post/comment.</li>
+                        <li>Present the top most popular posts in the last 24 hours on the homepage, where popularity = Upvotes-Downvotes.</li>
+                    </ul>
+                </li>
+                <li>Assume the following nonfunctional requirements
+                    <ul>
+                        <li>Scalability (millions of daily users)</li>
+                        <li>Performance (less than 500ms response time 99p)</li>
+                        <li>Fault Tolerance / High Availability (99.9%)</li>
+                        <li>Availability + Partition Tolerance (AP over CP)</li>
+                        <li>Durability</li>
+                    </ul>
+                </li>
+                <li>We ignore system constraints for now.</li>
+                <li>Using REST API over HTTP since this is a client web-based application
+                    <ul>
+                        <li>Identifying entities: Users, Posts, Images, Comments, Votes</li>
+                        <li>Mapping Entities to URIs:
+                            <ul>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/Ho8lRsm9ro4QP_Xx0PWn1nJEZnaCC5dQh98SV_SijFdKzxZ2nUDJbh2kFd2Njf6zpku3yC9XeJE36WviAm8x8GnQNqqDUZgWu6NAsUNKeSigYbt7UoVCzwZGlEGEs8M4.png" width="694" height="342.07102272727275"/></li>
+                            </ul>
+                        </li>
+                        <li>Define resource representation
+                            <ul>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/6lVJb_IIqiUlC5UiF9Nt8TiQQ-XLuCaWtTldc92b82erZxQsoaGKdVkbijc0NbVK3DdLLvhJIcZiJ13brTtb4Sodovb-_VM77A__APigh8p7YZ9bsWe31d2XyorWq4Pi.png" width="694" height="328.2698863636364"/></li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/SNVFzNwvUqI65OoMquor6QGSpM1MHC-nqSBLXcD3pAMCb7Nn15J2XkWobWQlVdOV3jxRJ0z9JqFXUTDZrscyjpamxPvR1jQw5VELemt6Jdcto3DvqQPL-JxY5rpfgKMD.png" width="694" height="404.1761363636364"/></li>
+                            </ul>
+                        </li>
+                        <li>Assigning HTTP methods
+                            <ul>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/KIhSKE4-R5okvTWg0by-T3yMSvIgbyrD5zdJBkRixoEdayE9M645b1F9Ax2qH5K038sFfJ09k535u7w3yUW59C_C-Sw-Uyb5Lot8vH6ag3gUawaecnZa1_whGSWhVgMS.png" width="694" height="157.72727272727275"/></li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/Cylgj-m4McJmcD8yMDKo7CMaMDVf5JyFxX1ic3tZjqskeZRN0E6yDghelqDnp2_qMTotkAcyUvCXyfQNhKXKyj3SawAHAFU9M-H1Lx6SUEcMOhn4qOap7FOfF_QeeNQg.png" width="694" height="315.4545454545455"/></li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/ieoCm1RVqG2UMEEAUlYorDTCSQcUQoNogVl4Uwfizv7M4V3pG2MJlpbZW0l3a-gwfSwFZ8auklQWK1h18GL_z9VTS7C_btRvW1JA0n6llBihkyiZ6R0SkkGcEKpXki1R.png" width="694" height="203.07386363636365"/></li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/2ZmmrrIbUM-L_5I0-IYNdTjQry64GZC_8DPLVglQ3B0JqK43euFSwMSc8NbHujkAJLWNO59kiDtHpmDqz7ZxnSp6_TMg7USv0Tb3k3QIqEO0mBa4Jo2XGQMER_273ZoN.png" width="694" height="208.0028409090909"/></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Using API Pagination, s.t. the user does not get millions of posts/comments at once</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Functional Architecture Diagram
+            <ul>
+                <li>Go through the functional requirements step by step and add them to the architectural diagram. Ignore the non-functional requirements for now.</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/4G78ipJj90f_TfzxzVeca9mjznTr1deVYppOVlF5sCtxzaXDRqafCwWkV3o6oZADZa-VgFqKxHbXX3BaeQpX73Q4u_-x_cojQDZu2cvOzWtx1ssedK5Nxb8-F-hCcv9e.png" width="742" height="406.52127659574467"/></li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Final Software Architecture
+            <ul>
+                <li>Scalability 
+                    <ul>
+                        <li>Load Balancer for each service</li>
+                        <li>Adding API Gateway</li>
+                        <li>Sharding Database (Range Shard Strategy)</li>
+                    </ul>
+                </li>
+                <li>Performance
+                    <ul>
+                        <li>Use a CDN, especially for the images and the web content</li>
+                        <li>Caching at API Gateway</li>
+                        <li>Indexing databases</li>
+                        <li>Message Broker for votes</li>
+                    </ul>
+                </li>
+                <li>Fault Tolerance/ High Availability
+                    <ul>
+                        <li>Multi Data Center Deployment ⇒ GSLB</li>
+                        <li>Replication of databases and services</li>
+                    </ul>
+                </li>
+                <li>Availability and Partition Tolerance
+                    <ul>
+                        <li>Databases are optimized for AP</li>
+                    </ul>
+                </li>
+                <li>Durability
+                    <ul>
+                        <li>Replication of databases</li>
+                        <li>Backups of databases</li>
+                    </ul>
+                </li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/ubp5ZPglsCCdIE2zaGwiabEZ9D8sk1mNlJh-TokFpud6sNQjh6PvI_FW0gzD-hSdJw1CaqYDfo2Ltj7fReoqOEkccTB3tZujEZzqKihXBoYgwANediXEz8ky_q8cdGJn.png" width="766" height="421.4974226804124"/></li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

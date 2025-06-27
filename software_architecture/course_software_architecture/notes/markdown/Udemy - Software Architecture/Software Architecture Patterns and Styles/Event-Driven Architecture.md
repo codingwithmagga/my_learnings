@@ -1,0 +1,27 @@
+- Instead of direct messages that issues command or requests that ask for data in an event-driven architecture, we have only {{events}}.
+- 
+- What is an event?→An event is an immutable statement of a fact or a change.
+- 
+- Which components do we have? >>>
+    - Event producers
+    - Event consumers
+    - Message brokers
+- 
+- What benefits do we get? >>>
+    - Decoupled components
+    - Asynchronous messages
+    - Scalability and flexibility (more services can be added without any changes)
+    - Real-time stream analysis (Data analysis, Pattern detection, act upon data in real-time)
+- 
+- Describe the event sourcing pattern→Event sourcing is an architectural pattern where state changes are stored as a sequence of events, enabling reconstruction of past states and facilitating auditing and replayability.
+- 
+- CQRS pattern
+    - Stands for→Command Query Responsibility Segregation.
+    - Which problems does it solve? >>>
+        - Optimizing a database with high load of Read and Update operations (concurrent operations)
+            - One database optimized for write, one for read
+            - Events from Database A to B to update the data
+        - Joining multiple tables located in separate databases that belong to different microservices
+            - Changes in two databases of service A and B were sent as event which is taken from service C.
+            - Joins the data and provides a read-only "materialized view".
+- 

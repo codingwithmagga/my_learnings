@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      RPC
+    </h1>
+    <br/>
+    <ul>
+        <li>See <a isRemReference="true" href="?isPin=false">What is RPC?</a></li>
+        <li>RPC is also referred to as  {{2550357095951522::location transparency}} since for the developer of the client application, a method executed {{0013115935288685598::locally}} or {{0013115935288685598::remotely}} looks the same. </li>
+        <li>RPC frameworks written in {{04935880065173326::different programming languages}} can talk to each other using RPC.</li>
+        <li></li>
+        <li>Explain how RPC is implemented
+            <ul>
+                <li>Defining interface using the interface description language (IDL) of the used framework</li>
+                <li>Client and Server stub creation using the RPC Code Generation Tool</li>
+                <li>The custom object types from the API are compiled into classes or structs</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/MfDL9OllfD-Hf390NC1F44J8okZJz1VFpBl56F88WURaH6xd5NMVXtP7ThT54xEh3ezlekQh13JW22C986vbu7fnDaa8ITPtx3lIF64LFdAHimfMxft2mGJ6et4FCOaY.png" width="738" height="394.6524064171123"/></li>
+            </ul>
+        </li>
+        <li>Explain the steps when an RPC call is made
+            <ul>
+                <li>Serialization of requests</li>
+                <li>Transport to server</li>
+                <li>Deserialization in server</li>
+                <li>Executing the function</li>
+                <li>Same way back for the response from the server</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/PA3I5c3knKDTf2GckX-rZt4vAKmo0rFYtR25ucnm0G_Ur6TGVWWZPWAVLbyqMEGK6J4fojTEJDwGALRarDNxtzy7I1ETGrn2TL2kQ4bTly2OLqAM2HlyHC-JBqi8qtfi.png" width="738" height="362.0935828877005"/></li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/FJffUUX7hdIefRPxtHYpo6JgNL6BfpwcgRFEa_ZfCwPTbobpF2X9kAud5ncP7oY5NfkOETAXydiPYTStxNYYlPlE_qJTy2grj7351_goSAe0icntOtAZtPOa1kz0sz21.png" width="738" height="342.3609625668449"/></li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Benefits of RPC
+            <ul>
+                <li>Simplified communication, calling like local methods</li>
+                <li>Language-agnostic, supports multiple platforms</li>
+                <li>The communication is abstracted away in a framework</li>
+                <li>Failure in the communication results in an error or exception</li>
+            </ul>
+        </li>
+        <li>Drawbacks of RPC
+            <ul>
+                <li>Slower execution (can be addressed by asynchronous calls)</li>
+                <li>Increased complexity in error handling
+                    <ul>
+                        <li>For example, lost message, here idempotent operations can help</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>RPC is a good choice if:
+            <ul>
+                <li>API provided to a different company instead of an end user or web page</li>
+                <li>Communication between different components within a large system</li>
+                <li>Abstracting away the network communication and focusing only on the actions the client wants to perform</li>
+            </ul>
+        </li>
+        <li>RPC is not a good fit
+            <ul>
+                <li>Where we don&#39;t want to abstract the network communication and want to take direct advantage of HTTP cookies or headers.</li>
+                <li>When performance is critical and low latency is required.</li>
+                <li>Designing a data-centric API</li>
+                <li>All operations needed are simple CRUD (Create, Read, Update, Delete) operations.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>RPC evolves more around {{21609842486786146::actions}} and less around {{21609842486786146::data/resources}}. </li>
+        <li></li>
+        <li>Popular RPC Frameworks and Technologies
+            <ul>
+                <li>gRPC, developed by Google in 2015</li>
+                <li>Apache Thrift</li>
+                <li>Java Remote Method Invocation (RMI) </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

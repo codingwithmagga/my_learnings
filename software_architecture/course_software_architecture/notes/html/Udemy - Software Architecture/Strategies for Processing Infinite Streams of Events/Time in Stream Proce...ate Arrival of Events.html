@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Time in Stream Processing and Handling Late Arrival of Events
+    </h1>
+    <br/>
+    <ul>
+        <li>Types of Timestamps in Event-Stream Processing
+            <ul>
+                <li>Event time::Time when the event happened.</li>
+                <li>Application Time / Arrival Time::Time when the event is consumed by the application/consumer microservice</li>
+                <li>Processing Time::Time when the event read/parsed/processed by the consumer microservice.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>When to use arrival time?
+            <ul>
+                <li>We don&#39;t care about &quot;when the event actually happened&quot;.</li>
+                <li>Need to act in real-time</li>
+                <li>We don&#39;t know/trust the event time</li>
+                <li>For example, for monitoring or altering purposes.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>When to use event time?
+            <ul>
+                <li>When accurate correlation or ordering of the events is required</li>
+                <li>For example, analyzing trends in the stock market</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Name options for handling late arrival of events<img src="https://remnote-user-data.s3.amazonaws.com/m12-jWU6NaPkliVg3tMc9rDGqp7x3f61qPDKDoZs9H1IsXfxDpyNr4PusX6i1Nkg4ztv3-Xu_Rbt779z-YUfJdDR3fX-xO0Dc-Yh2B5OKWar5Wx6fO5H_Qq2du9i0JWb.png" width="732" height="266.3611859838275"/>
+            <ul>
+                <li>Discard the event</li>
+                <li>End Window after a grace period, even later events are discarded</li>
+                <li>Watermarking, adapting grace period depending on the arrived event with the latest event time</li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

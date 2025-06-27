@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Session Window Event-Stream
+    </h1>
+    <br/>
+    <ul>
+        <li>Describe→A session window groups events based on a user session (variable time frame), processing events within that session together. Starts with the login and ends when the user leaves the website.</li>
+        <li>Use Case?
+            <ul>
+                <li>User Behavior Analysis on a website
+<img src="https://remnote-user-data.s3.amazonaws.com/8D3MixKR30rwJg6iVAOM1QzcbP19RLhlaybnqyCZumYEQujZk0L5m5r6Fs74_0t2t6SnqiX9zff3AmpTe1aQxTJiXwoxygBZeOEJBEFO1QW56YPfIPAGWkqIiX-IZRP5.png" width="738" height="348.2807486631016"/></li>
+                <li>Internet of Things, like a robot cleaner</li>
+                <li>Navigation App, optimizing route for all drivers</li>
+            </ul>
+        </li>
+        <li>Advantages
+            <ul>
+                <li>Good for real-time analytics for users</li>
+                <li>Dynamic window size</li>
+                <li>No waste of computation, since each event belongs to one window</li>
+            </ul>
+        </li>
+        <li>Disadvantages
+            <ul>
+                <li>Defining the inactivity threshold/period difficult</li>
+                <li>Potential many windows, depending on users, sessions etc.</li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

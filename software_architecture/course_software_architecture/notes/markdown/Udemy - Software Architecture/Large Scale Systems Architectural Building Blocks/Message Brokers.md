@@ -1,0 +1,32 @@
+- Drawbacks of synchronous communication >>>
+    - Both instances have to be healthy and maintain the connection
+    - No padding in the system to absorb a sudden increase in traffic or load
+- 
+- What is a message broker?→A software architectural building block inside our system that uses the queue data structure to store messages between senders and receivers. Decouples senders from the receivers and is fundamental for asynchronous software architecture.
+- Capabilities of a message broker? >>>
+    - Buffering messages
+    - Message routing
+    - Transformation & Validation
+    - Load balancing
+- 
+- How does a message broker increases fault tolerance, availability and scalability? >>>
+    - By decoupling components, allowing one component to be temporarily unavailable without affecting others. 
+    - Prevent messages from being lost.
+    - Messages can be queued up during traffic spikes
+    - 
+- Name drawbacks when using a message broker >>>
+    - Increased complexity
+    - Potential single point of failure
+    - Added latency (mostly not significant)
+- 
+- Open-Source Message Brokers
+    - Apache Kafka - The most popular open-source message broker nowadays. Apache Kafka is a distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
+    - RabbitMQ - A widely deployed open-source message broker. It is used worldwide at small startups and large enterprises.
+    - 
+- Cloud-Based Message Brokers
+    - Amazon Simple Queue Service (SQS) - Fully managed message queuing service that enables you to decouple and scale micro-services, distributed systems, and serverless applications.
+    - GCP Pub/Sub and Cloud Tasks - Publisher/Subscriber and message queue solutions offered by Google Cloud Platform. See this article for comparison between the two offerings.
+    - Microsoft Azure:
+        - Service Bus - Fully managed enterprise message broker with message queues and publish-subscribe topics.
+        - Event Hubs - Fully managed real-time data ingestion service. Allows streaming millions of events per second from any source. Integrates seamlessly with Apache Kafka clients without any code changes. A perfect solution for Big Data.
+        - Event Grid - Reliable, serverless event delivery system at a massive scale. It uses the publish-subscribe model. It is Dynamically scalable, Low cost with a pay-as-you-go model, and guarantees "At least once delivery of an event"

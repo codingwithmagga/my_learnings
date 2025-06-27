@@ -1,0 +1,24 @@
+- Apache Kafka Streams
+    - Client library (Java and Scala) for building applications and microservices that process continuous streams of records coming through the Kafka message broker.
+    - It supports:
+        - Per record, real-time processing
+        - Stateful and processing using Windows
+            - Tumbling Window code
+            - Hopping Window code
+            - Session Window code
+            - Siding Window code 
+        - 
+- Apache Flink
+    - Apache Flink is a framework and distributed processing engine for building scalable streaming ETL, analytics, and event-driven applications. It is specifically designed for stateful computations of bounded and unbounded streams of events.
+    - Apache Flink can
+        - Be used as a distributed system that requires effective allocation and management of computing resources using Hadoop YARN or Kubernetes.
+        - Run as a standalone distributed cluster
+        - Used as a client library for building microservices
+    - For more information, see Apache Flink's architecture and Windowing with Apache Flink (Java and Python code examples).
+    - 
+- Azure Stream Analytics
+    - Azure Stream Analytics is a real-time analytics service that enables you to process and analyze streaming data from various sources. It's a fully managed, serverless service that uses a SQL-like query language to process data streams using windows.
+        - Tumbling Window 
+        - Hopping Window
+        - Session Window 
+        - Siding Window

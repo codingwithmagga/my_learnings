@@ -1,0 +1,16 @@
+- Describe→Microservice architecture organizes our business logic as a collection of loosely coupled and independently deployed services. Each service is owned by a small team and has a narrow scope of responsibility. 
+- 
+- Advantages >>>
+    - Small codebase ⇒ faster and easier development, test, and deployment
+    - Better performance and horizontal scalability
+    - Better organizational scalability
+    - Better security (fault isolation)
+- 
+- Drawbacks >>>
+    - All the advantages don't come out-of-the-box by switching from a monolithic (tier) architecture to a microservice architecture. 
+    - Overhead 
+    - Additional challenges (for example, each change should only happen in one service)
+- 
+- Name important best practices >>>
+    - Single Responsibility Principle (SRP)
+    - Separate Database per service

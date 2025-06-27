@@ -1,0 +1,44 @@
+- See [What is RPC?]()
+- RPC is also referred to as  {{location transparency}} since for the developer of the client application, a method executed {{locally}} or {{remotely}} looks the same. 
+- RPC frameworks written in {{different programming languages}} can talk to each other using RPC.
+- 
+- Explain how RPC is implemented >>>
+    - Defining interface using the interface description language (IDL) of the used framework
+    - Client and Server stub creation using the RPC Code Generation Tool
+    - The custom object types from the API are compiled into classes or structs
+    - ![](https://remnote-user-data.s3.amazonaws.com/MfDL9OllfD-Hf390NC1F44J8okZJz1VFpBl56F88WURaH6xd5NMVXtP7ThT54xEh3ezlekQh13JW22C986vbu7fnDaa8ITPtx3lIF64LFdAHimfMxft2mGJ6et4FCOaY.png)
+- Explain the steps when an RPC call is made >>>
+    - Serialization of requests
+    - Transport to server
+    - Deserialization in server
+    - Executing the function
+    - Same way back for the response from the server
+    - ![](https://remnote-user-data.s3.amazonaws.com/PA3I5c3knKDTf2GckX-rZt4vAKmo0rFYtR25ucnm0G_Ur6TGVWWZPWAVLbyqMEGK6J4fojTEJDwGALRarDNxtzy7I1ETGrn2TL2kQ4bTly2OLqAM2HlyHC-JBqi8qtfi.png)
+    - ![](https://remnote-user-data.s3.amazonaws.com/FJffUUX7hdIefRPxtHYpo6JgNL6BfpwcgRFEa_ZfCwPTbobpF2X9kAud5ncP7oY5NfkOETAXydiPYTStxNYYlPlE_qJTy2grj7351_goSAe0icntOtAZtPOa1kz0sz21.png)
+- 
+- Benefits of RPC >>>
+    - Simplified communication, calling like local methods
+    - Language-agnostic, supports multiple platforms
+    - The communication is abstracted away in a framework
+    - Failure in the communication results in an error or exception
+- Drawbacks of RPC >>>
+    - Slower execution (can be addressed by asynchronous calls)
+    - Increased complexity in error handling
+        - For example, lost message, here idempotent operations can help
+- 
+- RPC is a good choice if: >>>
+    - API provided to a different company instead of an end user or web page
+    - Communication between different components within a large system
+    - Abstracting away the network communication and focusing only on the actions the client wants to perform
+- RPC is not a good fit >>>
+    - Where we don't want to abstract the network communication and want to take direct advantage of HTTP cookies or headers.
+    - When performance is critical and low latency is required.
+    - Designing a data-centric API
+    - All operations needed are simple CRUD (Create, Read, Update, Delete) operations.
+- 
+- RPC evolves more around {{actions}} and less around {{data/resources}}. 
+- 
+- Popular RPC Frameworks and Technologies
+    - gRPC, developed by Google in 2015
+    - Apache Thrift
+    - Java Remote Method Invocation (RMI) 

@@ -1,0 +1,190 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Design an E-Commerce Marketplace Platform
+    </h1>
+    <br/>
+    <ul>
+        <li>Requirements &amp; API
+            <ul>
+                <li>Important Observation: 2 major actors, merchants and users/buyers.</li>
+                <li>Example questions
+                    <ul>
+                        <li>Merchants
+                            <ul>
+                                <li>What type of products are we selling? Physical or digital?</li>
+                                <li>What product information does a merchant provide?</li>
+                                <li>What data do we need to provide the merchant?</li>
+                                <li>What operation can a merchant perform?</li>
+                            </ul>
+                        </li>
+                        <li>Users
+                            <ul>
+                                <li>Can anyone browse/purchase, or is registration required?</li>
+                                <li>Are Product Reviews/Ratings in scope?</li>
+                                <li>Search capabilities?</li>
+                                <li>Do we need to design checkout/payment/delivery?</li>
+                                <li>What UI do we offer? Browser/Mobile?</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Assume the following functional requirements
+                    <ul>
+                        <li>Product
+                            <ul>
+                                <li>Physical product (with limited inventory)</li>
+                                <li>Each product contains
+                                    <ul>
+                                        <li>Title</li>
+                                        <li>Description</li>
+                                        <li>Categories</li>
+                                        <li>Images</li>
+                                        <li>Optional attributes</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Merchant
+                            <ul>
+                                <li>Product Management System
+                                    <ul>
+                                        <li>Signup</li>
+                                        <li>Create new products</li>
+                                        <li>Update the product properties</li>
+                                        <li>Update product inventory</li>
+                                        <li>View product data</li>
+                                    </ul>
+                                </li>
+                                <li>Product analytics
+                                    <ul>
+                                        <li>View real-time product page visitors</li>
+                                        <li>View historical/projected product performance</li>
+                                    </ul>
+                                </li>
+                                <li>Sequence diagram
+                                    <ul>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/5-n89SNHy9vdMAaZiwkc7YFrvRH2vITacPFgmAxYmFYlsuohnBZB2e_8hitb0PO1X9fQmORDWOP6ZYZag1itJqhCcCcdMB-AYQ32pNT8C7HUPuEUei5Ss58pZYD--2Ge.png" width="670" height="396.0882352941177"/></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Users
+                            <ul>
+                                <li>Store Front
+                                    <ul>
+                                        <li>Web UI + Mobile users</li>
+                                        <li>Browser products</li>
+                                        <li>Search products based on title/categories/description</li>
+                                        <li>Out of scope: User registration, product reviews</li>
+                                    </ul>
+                                </li>
+                                <li>Store Checkout
+                                    <ul>
+                                        <li>Navigate to the checkout page</li>
+                                        <li>View breakdown of the bill incl. taxes</li>
+                                        <li>Complete the purchase by providing shipping + payment info</li>
+                                        <li>Send order updates via email/push notifications to the user</li>
+                                        <li>Out of scope: Shopping cart, delivery, payment</li>
+                                    </ul>
+                                </li>
+                                <li>Sequence diagram
+                                    <ul>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/5qeEcHpaehexyt6V_fiaZ7WAFjcceYgjJuexF4F5NcBfOd16QopPzwpJp3q_zCZ_LY3SUo9Aq0Grg0zQaNjxSOmfj9rEUPu-fduCFEACfke7ug7PTePt3bT6yivuS0Mg.png" width="670" height="368.5"/></li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/1gZr3YTFENMkNZ9DPwt9GDL1F1CIGY3F7TvPnMTzNAwq4a-wUJiO8uokO5wrj0ZgAhT4HWeZGr96U7BC-kpzVEUyI982X7dwT4Gvmq5Ii72KklxMP-zGdgF5EXLvMx_Z.png" width="670" height="378.3529411764706"/></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Assume the following nonfunctional requirements
+                    <ul>
+                        <li>Merchants
+                            <ul>
+                                <li>Scalability (not very high)
+                                    <ul>
+                                        <li>Hundreds of merchants</li>
+                                        <li>Low traffic</li>
+                                        <li>Thousands of products</li>
+                                    </ul>
+                                </li>
+                                <li>Performance
+                                    <ul>
+                                        <li>Response time &lt; 1 second at 50th percentile</li>
+                                    </ul>
+                                </li>
+                                <li>Consistency vs. Availability
+                                    <ul>
+                                        <li>CP databases</li>
+                                    </ul>
+                                </li>
+                                <li>High availability
+                                    <ul>
+                                        <li>Uptime 99.5%</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>User
+                            <ul>
+                                <li>Scalability (very high)
+                                    <ul>
+                                        <li>10–100 million daily users</li>
+                                        <li>Multiple countries</li>
+                                        <li>High traffic at peak</li>
+                                    </ul>
+                                </li>
+                                <li>Performance
+                                    <ul>
+                                        <li>Products reponse time &lt; 200ms 50p, 500mms 99p</li>
+                                        <li>Checkout response time &lt;1s 99p</li>
+                                    </ul>
+                                </li>
+                                <li>Consistency vs. Availability
+                                    <ul>
+                                        <li>Storefront: AP</li>
+                                        <li>Checkout: CP</li>
+                                    </ul>
+                                </li>
+                                <li>High availability
+                                    <ul>
+                                        <li>Internal SLA: 99.99% uptime</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>We ignore system constraints for now.</li>
+                <li>Defining of the system API would be very technical. Base are the sequence diagrams above from the functional requirements.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Functional Diagram
+            <ul>
+                <li>Go through the functional requirements step by step and add them to the architectural diagram. Ignore the non-functional requirements for now.</li>
+                <li>Microservice Architecture for organizational scalability</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/KquFgmzCo74z2d3G-uMw8vnRjWqImSI-990T4IESgS29ltNfnsryu5fAUVRuu06vcEGIUp7-mg2mdePSmQtMBcKT1ehJXF9gInJJtz-adJT_jCENdytQje_N2U4ZYfLo.png" width="742" height="408.49468085106383"/></li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Final Software Architecture
+            <ul>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/LPv6475s14ETnbnii5FIrTDzGLxz5vU9UMx0oDujeVSz3WHNgVv_RNzvBO5mKYVJ7LqVxT-44MRE9RLXC5KOAMSnUCr0iial_qlHX3E69joYNGSHXZ2Y7tKDu_qHqmhA.png" width="351.4300102205945" height="193.82995409074027"/></li>
+                <li>Running in multiple data centers, worldwide</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/bPi0wRPLMn7qESCK1iZtTjyJzVmRbNXaZkjy58xyCG2cuVMWm7AdATvPOPkEIShnSfR1hkpOSkrVmI3dZz2B-JZ6u5zQ2ZWpEKkbpbxlXZpSBwBDcB6Um7XiZgCJng6D.png" width="742" height="355.2127659574468"/></li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

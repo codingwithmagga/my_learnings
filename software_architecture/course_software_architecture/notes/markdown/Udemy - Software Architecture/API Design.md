@@ -1,0 +1,143 @@
+- Introduction to API Design
+    - What is an API?→The Application Programming Interface is a contract (or a set of rules) between the engineers who implement the system and the clients who use the system. It defines the methods and data formats that the client can use to communicate with the system.
+    - In a large-scale system, the API is called by other applications {{remotely through the network}}.
+    - 
+    - APIs are classified into three groups >>>
+        - Public APIs
+        - Private/Internal APIs
+        - Partner APIs
+    - Public APIs 
+        - Describe→Exposed to the public. Any developer can use/call them from their application.
+        - Good practice: Requiring the user to {{register}} with the system before allowing to send requests.
+            - Advantages? >>>
+                - Control who uses the system and how the system is used
+                - Better security
+                - Option to blacklist users
+    - Private APIs
+        - Describe→Exposed only internally within the company
+    - Partner APIs
+        - Describe→Similar to public APIs, but only for companies/users which have business relationship, for example a subscription.
+    - 
+    - Benefits of API
+        - Clients who uses it can immediately and easily {{enhance their business}} by using our system.
+        - The users don't need to know anything about {{the system's internal design and implementation}}.
+        - Once the API is defined and exposed, {{clients can integrate it}} without waiting for full implementation of the system.
+        - The API makes it easier to {{design and architect }} the internal structure of our system.
+    - 
+    - Best practices and patterns for remote APIs
+        - Name six of them >>>
+            - Complete encapsulation
+            - Easy to Use
+            - Keep operations idempotent
+            - Use Pagination
+            - Asynchronous operations
+            - Versioning the API
+        - API should be {{completely decoupled}} from the internal design and implementation.
+        - How could an API be made simple? >>>
+            - Only one way to get certain data or perform a task
+            - Descriptive names for actions and resources
+            - Exposing only the information and actions that users need
+            - Keeping things consistent across all APIs
+        - What is an idempotent operation?→An idempotent operation is one that can be called multiple times without changing the result beyond the initial call.
+        - Why are  idempotent operations preferred in a network API? >>>
+            - Messages can get lost, Responses of message can get lost, or the message wasn't received because a critical component went down
+            - Messages can simply be resent without any consequences.
+        - What is API Pagination?→API pagination is a mechanism to retrieve large datasets in smaller, manageable chunks. The client can specify the maximum size of each response and the offset in the entire dataset.
+        - What can happen without API pagination?→The client may receive an overwhelming amount of data, causing performance issues and potential crashes.
+        - If an operation takes a long time, how should it be implemented?→As asynchronous operation.
+        - What are the benefits of versioning the API?→Maintain two versions of API at the same time. Deprecate the older ones gradually.
+- RPC
+    - See [What is RPC?]()
+    - RPC is also referred to as  {{location transparency}} since for the developer of the client application, a method executed {{locally}} or {{remotely}} looks the same. 
+    - RPC frameworks written in {{different programming languages}} can talk to each other using RPC.
+    - 
+    - Explain how RPC is implemented >>>
+        - Defining interface using the interface description language (IDL) of the used framework
+        - Client and Server stub creation using the RPC Code Generation Tool
+        - The custom object types from the API are compiled into classes or structs
+        - ![](https://remnote-user-data.s3.amazonaws.com/MfDL9OllfD-Hf390NC1F44J8okZJz1VFpBl56F88WURaH6xd5NMVXtP7ThT54xEh3ezlekQh13JW22C986vbu7fnDaa8ITPtx3lIF64LFdAHimfMxft2mGJ6et4FCOaY.png)
+    - Explain the steps when an RPC call is made >>>
+        - Serialization of requests
+        - Transport to server
+        - Deserialization in server
+        - Executing the function
+        - Same way back for the response from the server
+        - ![](https://remnote-user-data.s3.amazonaws.com/PA3I5c3knKDTf2GckX-rZt4vAKmo0rFYtR25ucnm0G_Ur6TGVWWZPWAVLbyqMEGK6J4fojTEJDwGALRarDNxtzy7I1ETGrn2TL2kQ4bTly2OLqAM2HlyHC-JBqi8qtfi.png)
+        - ![](https://remnote-user-data.s3.amazonaws.com/FJffUUX7hdIefRPxtHYpo6JgNL6BfpwcgRFEa_ZfCwPTbobpF2X9kAud5ncP7oY5NfkOETAXydiPYTStxNYYlPlE_qJTy2grj7351_goSAe0icntOtAZtPOa1kz0sz21.png)
+    - 
+    - Benefits of RPC >>>
+        - Simplified communication, calling like local methods
+        - Language-agnostic, supports multiple platforms
+        - The communication is abstracted away in a framework
+        - Failure in the communication results in an error or exception
+    - Drawbacks of RPC >>>
+        - Slower execution (can be addressed by asynchronous calls)
+        - Increased complexity in error handling
+            - For example, lost message, here idempotent operations can help
+    - 
+    - RPC is a good choice if: >>>
+        - API provided to a different company instead of an end user or web page
+        - Communication between different components within a large system
+        - Abstracting away the network communication and focusing only on the actions the client wants to perform
+    - RPC is not a good fit >>>
+        - Where we don't want to abstract the network communication and want to take direct advantage of HTTP cookies or headers.
+        - When performance is critical and low latency is required.
+        - Designing a data-centric API
+        - All operations needed are simple CRUD (Create, Read, Update, Delete) operations.
+    - 
+    - RPC evolves more around {{actions}} and less around {{data/resources}}. 
+    - 
+    - Popular RPC Frameworks and Technologies
+        - gRPC, developed by Google in 2015
+        - Apache Thrift
+        - Java Remote Method Invocation (RMI) 
+- REST API
+    - Define REST >>>
+        - Representational State Transfer
+        - Set of architectural constrains and best practices for defining APIs for the web
+        - It is not a standard or a protocol
+    - 
+    - REST API style
+        - Has a {{resource-oriented}} approach.
+        - The main abstraction to the user is a {{named resource}} 
+        - The {{resources}} encapsulate different entities in our system
+        - REST API allows the user to manipulate {{resources}} through some methods
+    - 
+    - Explain HATEOAS >>>
+        - Hypermedia as the Engine of the Application State
+        - State representation to the client is done with hypermedia links
+        - ![](https://remnote-user-data.s3.amazonaws.com/ROZHA-H8Kq33b9u4ePx8cf0MuvWgvUoS0oF2GQxTwWMk5-GzWlYF62-DBEhcBChbQQ4Qel5GqSJU4GdJ5rCsTLPcaWk--J9wXJkyHWlJKffje0LKhOazQoRwq-5q3_7z.png)
+    - 
+    - Name REST API Quality Attributes >>>
+        - Stateless Server
+        - Server needs to define each response as cacheble or non-cacheable
+    - 
+    - Resources
+        - Each resource is {{named}} and {{addressed}} using a {{URI (Uniform Resource Identifier)}}.
+        - Each resource is either a {{simple}} or a {{collection}} resource. 
+        - The resources are structured {{hierarchically}}, using {{"/"}} to denote levels.
+        - Explain the difference between a simple and a collections resource→A simple resource represents a single entity with a state which can contain one or more sub-resources, while a collection resource represents a group of entities of the same type.
+    - 
+    - Best practices for naming resources >>>
+        - Naming using nouns, verbs are for actions
+        - Use plural nouns for collections
+        - Give clear and meaningful names, avoid namings like elements or objects
+        - Use consistent naming conventions across the API
+        - The resource identifiers should be unique and URL friendly
+    - 
+    - The REST API limits the number of methods we can perform on each resource. These are >>>
+        - Create a new resource ⇒ POST (can be made cacheable)
+        - Updating an existing resource ⇒ PUT (idempotent)
+        - Deleting an existing resource ⇒ DELETE (idempotent)
+        - Getting the current state of the resource ⇒ GET (doesn't change state, idempotent, considered cacheable by default)
+    - 
+    - REST API Definition - Step-by-step process: >>>
+        - Identifying entities
+            - ![](https://remnote-user-data.s3.amazonaws.com/T77FhFt1dZL-i4rg333Eid1jV6PrhMvuWGRBIVZHidF3yseFwWkwtZoT4t9C7v-FkE21tqB9sMyEoKRNh28N5ZB9YiMwQLgEOMXsezTSp6XiiiU7j-0WYtsmwogGfihy.png)
+        - Mapping entities to URIs
+            - ![](https://remnote-user-data.s3.amazonaws.com/J_atNqJugs_cX6jJlDdLP5koEEVCPfvyOyM9UamymXIdZ-sWMNGVqlNhFCWY0xmY--LDTSR-P9WDfkz6W0wI5ad-olcVD933PwCfSVh4yW0cN6Kbik8r8_DGBTn6X2Gm.png)
+        - Defining Resources Representations
+            - ![](https://remnote-user-data.s3.amazonaws.com/nCO0GUXtXekNioo3Qjn7T277TQF78X6mT_3T9AIXQEICmLEbZTwWmDsPlRmOikfSWwCn5IzTz1mpHqGhk_PNj3qLbbouK6vYuSjaXtU1cshZUo1j7VKKq9RPHa2d1asF.png)
+            - ![](https://remnote-user-data.s3.amazonaws.com/Xz9W3d0qCdQVgXGc9PM1fxehZR-ozjUb4C2O_muv9sSK7REfOiQtiJwPNsHRR75HTrW69u3pbjKxjyCU26Ern4ULYCV9Ohntp6r_atqhg1J1ZNii1sStOPGOv0NWk_ec.png)
+        - Assigning HTTP Methods to Operation on Resources
+            - ![](https://remnote-user-data.s3.amazonaws.com/LBUv-a8Y3TC4ZpODgrFHT4ltezGhrwIVXHc694uZHX_hwXONGjw0a2ui1aeHcK8kiroRcl6fis1Q8hgHd4xujpw9P4jI35q3BVnVrfs19ER2TYy_bAB7W5HNwEy1pQ9V.png)

@@ -1,0 +1,33 @@
+- What is the main difference between relational and non-relational databases?→Relational databases use structured tables with predefined schemas, while non-relational databases use flexible schemas and various data models.
+- Relational databases are designed for {{efficient storage}} and non-relational databases are designed for {{faster queries}}. 
+- What are the trade-offs of using a flexible schema in non-relational databases? >>>
+    - Loose the ability to easily analyze the records, also multiple groups (join operations) becomes hard
+    - ACID transaction are rarely supported
+- 
+- What are the three main types of non-relational databases? >>>
+    - Document store
+    - Key-value stores
+    - Graph database
+- Explain the concept of a key value store database→A key-value store database stores data as key-value pairs, offering fast read and write operations. The type of value can be simple or complex. It can be seen as a large-scale hash table or dictionary.
+- Explain the concept of a document store database→A document store database stores data in flexible, self-contained documents. Each document is an object with different attributes of different types. These documents can be easily mapped to objects in a programming language.
+- Explain the concept of graph databases→A graph database is an extension of a document store and stores data as nodes and edges, representing relationships between data points.
+- Name use cases for a graph database >>>
+    - Fraud detection: The same person uses multiple logical users to initiate multiple transactions
+    - Recommendation engines: Recommendation of new products based on purchase history or friends of the user.
+- 
+- When to choose a non-relational database? >>>
+    - Caching Task
+    - Handling real-time big data
+    - Unstructured data, different records can contain different attributes
+- 
+- Non-Relational Databases - Solutions
+    - Key/Value Stores Examples
+        - Redis
+        - Aerospike
+        - Amazon DynamoDB
+    - Document Store Examples
+        - Cassandra
+        - MongoDB
+    - Graph Databases Examples
+        - Amazon Neptune
+        - NEO4J

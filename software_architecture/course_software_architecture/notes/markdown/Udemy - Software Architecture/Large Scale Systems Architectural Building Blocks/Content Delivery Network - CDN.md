@@ -1,0 +1,48 @@
+- What is a CDN?→A CDN is a geographically distributed network of servers that caches content to improve delivery speed and reduce latency.
+- CDNs provide service by {{caching}} our website content on their {{edge servers}}, which are relocated at different {{Points of Presence (PoP).}} {{Edge servers}} are {{physically closer}} to the user and {{strategy located}} in terms of network infrastructure.
+- CDNs can be used to deliver the following resources >>>
+    - Images
+    - Text
+    - CSS
+    - JavaScript files
+    - Video streams (live and on-demand)
+- Quality attributes of CDNs >>>
+    - Performance ⇒ faster page loads
+    - High availability ⇒ issues/slowness are less noticeable
+    - Security ⇒ Protection against Distributed Denial of Service (DDoS) attacks
+- How are CDNs improved? >>>
+    - Use faster and more optimized HDDs
+    - Reduce bandwidth by compressing the content
+- 
+- Name different strategies of CDNs >>>
+    - Pull strategy
+    - Push strategy
+- 
+- Pull strategy
+    - How does it work?→The service tells the CDN which content is cached and how the cache needs to be invalidated by setting the Time To Live (TTL) property. When the TTL expires, the CDN downloades the content again from the server.
+    - Advantage >>>
+        - Lower maintenance, once set up, everything is done by the CDN.
+    - Drawbacks >>>
+        - First user of an asset which is not cached will have a longer latency
+        - Increased load on the origin server during peak times when TTL is similar of all assets
+        - Still a high availability necessary on our system.
+- Push strategy
+    - How does it work?→The origin server pushes content updates to CDN edge servers.
+    - Advantage? >>>
+        - When content doesn't change frequently, one push to the CDN is enough. Reduces traffic and temporarily downtime of our system can be caught.
+    - Drawback >>>
+        - If the content changes frequently, we actively need to push it every time to the CDN.
+- 
+- CDN Solutions & Cloud Technologies
+    - Cloudflare
+        - Cloudflare offers ultra-fast static and dynamic content delivery over our global edge network. It helps reduce bandwidth costs and takes advantage of built-in unmetered DDoS protection.
+    - Fastly
+        - Fastly's Deliver@Edge is a modern, efficient, and highly configurable CDN that gives you the freedom to control how your content is cached so you can deliver the content your users want quickly.
+    - Akamai
+        - Akamai has a large variety of offerings for API Acceleration, Global Traffic Management, Image & Video Management, Media Delivery, and much more.
+    - Amazon CloudFront
+        - Amazon CloudFront is a content delivery network (CDN) service built for high performance, security, and developer convenience. Some of its use-cases include delivering fast secure websites, accelerating dynamic content delivery and APIs, live streaming, video-on-demand, and others.
+    - Google Cloud Platform CDN
+        - GCP CDN offers fast, reliable web and video content delivery with a global scale and reach.
+    - Microsoft Azure Content Delivery Network
+        - Microsoft's CDN solution offers global coverage, full integration with Azure services, and a simple setup.

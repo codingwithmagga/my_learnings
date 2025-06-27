@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      REST API
+    </h1>
+    <br/>
+    <ul>
+        <li>Define REST
+            <ul>
+                <li>Representational State Transfer</li>
+                <li>Set of architectural constrains and best practices for defining APIs for the web</li>
+                <li>It is not a standard or a protocol</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>REST API style
+            <ul>
+                <li>Has a {{9219326925998539::resource-oriented}} approach.</li>
+                <li>The main abstraction to the user is a {{17754008250853182::named resource}} </li>
+                <li>The {{6016094435663997::resources}} encapsulate different entities in our system</li>
+                <li>REST API allows the user to manipulate {{9649929029420605::resources}} through some methods</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Explain HATEOAS
+            <ul>
+                <li>Hypermedia as the Engine of the Application State</li>
+                <li>State representation to the client is done with hypermedia links</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/ROZHA-H8Kq33b9u4ePx8cf0MuvWgvUoS0oF2GQxTwWMk5-GzWlYF62-DBEhcBChbQQ4Qel5GqSJU4GdJ5rCsTLPcaWk--J9wXJkyHWlJKffje0LKhOazQoRwq-5q3_7z.png" width="541" height="517"/></li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Name REST API Quality Attributes
+            <ul>
+                <li>Stateless Server</li>
+                <li>Server needs to define each response as cacheble or non-cacheable</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Resources
+            <ul>
+                <li>Each resource is {{6163657597544011::named}} and {{6163657597544011::addressed}} using a {{1639786798087911::URI (Uniform Resource Identifier)}}.</li>
+                <li>Each resource is either a {{9763661349911776::simple}} or a {{9763661349911776::collection}} resource. </li>
+                <li>The resources are structured {{771948070712144::hierarchically}}, using {{771948070712144::&quot;/&quot;}} to denote levels.</li>
+                <li>Explain the difference between a simple and a collections resource→A simple resource represents a single entity with a state which can contain one or more sub-resources, while a collection resource represents a group of entities of the same type.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Best practices for naming resources
+            <ul>
+                <li>Naming using nouns, verbs are for actions</li>
+                <li>Use plural nouns for collections</li>
+                <li>Give clear and meaningful names, avoid namings like elements or objects</li>
+                <li>Use consistent naming conventions across the API</li>
+                <li>The resource identifiers should be unique and URL friendly</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>The REST API limits the number of methods we can perform on each resource. These are
+            <ul>
+                <li>Create a new resource ⇒ POST (can be made cacheable)</li>
+                <li>Updating an existing resource ⇒ PUT (idempotent)</li>
+                <li>Deleting an existing resource ⇒ DELETE (idempotent)</li>
+                <li>Getting the current state of the resource ⇒ GET (doesn&#39;t change state, idempotent, considered cacheable by default)</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>REST API Definition - Step-by-step process:
+            <ul>
+                <li>Identifying entities
+                    <ul>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/T77FhFt1dZL-i4rg333Eid1jV6PrhMvuWGRBIVZHidF3yseFwWkwtZoT4t9C7v-FkE21tqB9sMyEoKRNh28N5ZB9YiMwQLgEOMXsezTSp6XiiiU7j-0WYtsmwogGfihy.png" width="714" height="348.12430939226516"/></li>
+                    </ul>
+                </li>
+                <li>Mapping entities to URIs
+                    <ul>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/J_atNqJugs_cX6jJlDdLP5koEEVCPfvyOyM9UamymXIdZ-sWMNGVqlNhFCWY0xmY--LDTSR-P9WDfkz6W0wI5ad-olcVD933PwCfSVh4yW0cN6Kbik8r8_DGBTn6X2Gm.png" width="714" height="364.88950276243094"/></li>
+                    </ul>
+                </li>
+                <li>Defining Resources Representations
+                    <ul>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/nCO0GUXtXekNioo3Qjn7T277TQF78X6mT_3T9AIXQEICmLEbZTwWmDsPlRmOikfSWwCn5IzTz1mpHqGhk_PNj3qLbbouK6vYuSjaXtU1cshZUo1j7VKKq9RPHa2d1asF.png" width="609" height="525"/></li>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/Xz9W3d0qCdQVgXGc9PM1fxehZR-ozjUb4C2O_muv9sSK7REfOiQtiJwPNsHRR75HTrW69u3pbjKxjyCU26Ern4ULYCV9Ohntp6r_atqhg1J1ZNii1sStOPGOv0NWk_ec.png" width="667" height="490"/></li>
+                    </ul>
+                </li>
+                <li>Assigning HTTP Methods to Operation on Resources
+                    <ul>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/LBUv-a8Y3TC4ZpODgrFHT4ltezGhrwIVXHc694uZHX_hwXONGjw0a2ui1aeHcK8kiroRcl6fis1Q8hgHd4xujpw9P4jI35q3BVnVrfs19ER2TYy_bAB7W5HNwEy1pQ9V.png" width="714" height="304.73204419889504"/></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

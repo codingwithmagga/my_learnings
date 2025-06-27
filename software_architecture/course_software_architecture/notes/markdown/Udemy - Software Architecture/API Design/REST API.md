@@ -1,0 +1,49 @@
+- Define REST >>>
+    - Representational State Transfer
+    - Set of architectural constrains and best practices for defining APIs for the web
+    - It is not a standard or a protocol
+- 
+- REST API style
+    - Has a {{resource-oriented}} approach.
+    - The main abstraction to the user is a {{named resource}} 
+    - The {{resources}} encapsulate different entities in our system
+    - REST API allows the user to manipulate {{resources}} through some methods
+- 
+- Explain HATEOAS >>>
+    - Hypermedia as the Engine of the Application State
+    - State representation to the client is done with hypermedia links
+    - ![](https://remnote-user-data.s3.amazonaws.com/ROZHA-H8Kq33b9u4ePx8cf0MuvWgvUoS0oF2GQxTwWMk5-GzWlYF62-DBEhcBChbQQ4Qel5GqSJU4GdJ5rCsTLPcaWk--J9wXJkyHWlJKffje0LKhOazQoRwq-5q3_7z.png)
+- 
+- Name REST API Quality Attributes >>>
+    - Stateless Server
+    - Server needs to define each response as cacheble or non-cacheable
+- 
+- Resources
+    - Each resource is {{named}} and {{addressed}} using a {{URI (Uniform Resource Identifier)}}.
+    - Each resource is either a {{simple}} or a {{collection}} resource. 
+    - The resources are structured {{hierarchically}}, using {{"/"}} to denote levels.
+    - Explain the difference between a simple and a collections resource→A simple resource represents a single entity with a state which can contain one or more sub-resources, while a collection resource represents a group of entities of the same type.
+- 
+- Best practices for naming resources >>>
+    - Naming using nouns, verbs are for actions
+    - Use plural nouns for collections
+    - Give clear and meaningful names, avoid namings like elements or objects
+    - Use consistent naming conventions across the API
+    - The resource identifiers should be unique and URL friendly
+- 
+- The REST API limits the number of methods we can perform on each resource. These are >>>
+    - Create a new resource ⇒ POST (can be made cacheable)
+    - Updating an existing resource ⇒ PUT (idempotent)
+    - Deleting an existing resource ⇒ DELETE (idempotent)
+    - Getting the current state of the resource ⇒ GET (doesn't change state, idempotent, considered cacheable by default)
+- 
+- REST API Definition - Step-by-step process: >>>
+    - Identifying entities
+        - ![](https://remnote-user-data.s3.amazonaws.com/T77FhFt1dZL-i4rg333Eid1jV6PrhMvuWGRBIVZHidF3yseFwWkwtZoT4t9C7v-FkE21tqB9sMyEoKRNh28N5ZB9YiMwQLgEOMXsezTSp6XiiiU7j-0WYtsmwogGfihy.png)
+    - Mapping entities to URIs
+        - ![](https://remnote-user-data.s3.amazonaws.com/J_atNqJugs_cX6jJlDdLP5koEEVCPfvyOyM9UamymXIdZ-sWMNGVqlNhFCWY0xmY--LDTSR-P9WDfkz6W0wI5ad-olcVD933PwCfSVh4yW0cN6Kbik8r8_DGBTn6X2Gm.png)
+    - Defining Resources Representations
+        - ![](https://remnote-user-data.s3.amazonaws.com/nCO0GUXtXekNioo3Qjn7T277TQF78X6mT_3T9AIXQEICmLEbZTwWmDsPlRmOikfSWwCn5IzTz1mpHqGhk_PNj3qLbbouK6vYuSjaXtU1cshZUo1j7VKKq9RPHa2d1asF.png)
+        - ![](https://remnote-user-data.s3.amazonaws.com/Xz9W3d0qCdQVgXGc9PM1fxehZR-ozjUb4C2O_muv9sSK7REfOiQtiJwPNsHRR75HTrW69u3pbjKxjyCU26Ern4ULYCV9Ohntp6r_atqhg1J1ZNii1sStOPGOv0NWk_ec.png)
+    - Assigning HTTP Methods to Operation on Resources
+        - ![](https://remnote-user-data.s3.amazonaws.com/LBUv-a8Y3TC4ZpODgrFHT4ltezGhrwIVXHc694uZHX_hwXONGjw0a2ui1aeHcK8kiroRcl6fis1Q8hgHd4xujpw9P4jI35q3BVnVrfs19ER2TYy_bAB7W5HNwEy1pQ9V.png)

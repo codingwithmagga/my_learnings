@@ -1,0 +1,47 @@
+- What is an API?→The Application Programming Interface is a contract (or a set of rules) between the engineers who implement the system and the clients who use the system. It defines the methods and data formats that the client can use to communicate with the system.
+- In a large-scale system, the API is called by other applications {{remotely through the network}}.
+- 
+- APIs are classified into three groups >>>
+    - Public APIs
+    - Private/Internal APIs
+    - Partner APIs
+- Public APIs 
+    - Describe→Exposed to the public. Any developer can use/call them from their application.
+    - Good practice: Requiring the user to {{register}} with the system before allowing to send requests.
+        - Advantages? >>>
+            - Control who uses the system and how the system is used
+            - Better security
+            - Option to blacklist users
+- Private APIs
+    - Describe→Exposed only internally within the company
+- Partner APIs
+    - Describe→Similar to public APIs, but only for companies/users which have business relationship, for example a subscription.
+- 
+- Benefits of API
+    - Clients who uses it can immediately and easily {{enhance their business}} by using our system.
+    - The users don't need to know anything about {{the system's internal design and implementation}}.
+    - Once the API is defined and exposed, {{clients can integrate it}} without waiting for full implementation of the system.
+    - The API makes it easier to {{design and architect }} the internal structure of our system.
+- 
+- Best practices and patterns for remote APIs
+    - Name six of them >>>
+        - Complete encapsulation
+        - Easy to Use
+        - Keep operations idempotent
+        - Use Pagination
+        - Asynchronous operations
+        - Versioning the API
+    - API should be {{completely decoupled}} from the internal design and implementation.
+    - How could an API be made simple? >>>
+        - Only one way to get certain data or perform a task
+        - Descriptive names for actions and resources
+        - Exposing only the information and actions that users need
+        - Keeping things consistent across all APIs
+    - What is an idempotent operation?→An idempotent operation is one that can be called multiple times without changing the result beyond the initial call.
+    - Why are  idempotent operations preferred in a network API? >>>
+        - Messages can get lost, Responses of message can get lost, or the message wasn't received because a critical component went down
+        - Messages can simply be resent without any consequences.
+    - What is API Pagination?→API pagination is a mechanism to retrieve large datasets in smaller, manageable chunks. The client can specify the maximum size of each response and the offset in the entire dataset.
+    - What can happen without API pagination?→The client may receive an overwhelming amount of data, causing performance issues and potential crashes.
+    - If an operation takes a long time, how should it be implemented?→As asynchronous operation.
+    - What are the benefits of versioning the API?→Maintain two versions of API at the same time. Deprecate the older ones gradually.

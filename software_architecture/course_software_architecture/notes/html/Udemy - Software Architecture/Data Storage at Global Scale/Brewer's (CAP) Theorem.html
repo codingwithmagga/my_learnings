@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Brewer&#39;s (CAP) Theorem
+    </h1>
+    <br/>
+    <ul>
+        <li>Repeat the CAP Theorem→A distributed database can only provide two out of three guarantees: consistency, availability, and partition tolerance. 
+<img src="https://remnote-user-data.s3.amazonaws.com/cEhJsI3c_qUOSPVWiOkA2_XrIqeokB_0cH3jviNd_wdICFWrJ9GIM-9rRAXKSypPZoTrCQ-L3Jz9ce3ZY69IdEMhrA7LuWBRRQ4MAz7yVeMEEl2VQNcx9CwlOGDLwUCj.png" width="732" height="729.0404312668463"/></li>
+        <li>What is a network partition→A network partition is a network failure that divides a network into multiple isolated segments.</li>
+        <li>What is partition tolerance?→Partition tolerance is the ability of a distributed system to continue operating despite network partitions.</li>
+        <li>What is consistency in the CAP theorem?→Consistency means every read receives the most recent write or an error.</li>
+        <li>What is availability in the CAP theorem?→Availability means that every request receives a non-error response, without the guarantee that it contains the most recent write.</li>
+        <li>Without a network partition, consistency and availability can both be fulfilled. Explain why we have to choose one when there is a network partition
+            <ul>
+                <li>A network partition prevents communication between nodes, making it impossible to guarantee both consistency (all nodes have the same data) and availability (all nodes respond to requests) simultaneously. </li>
+                <li>Choosing consistency: Service returns an error during network partition.</li>
+                <li>Choosing availability: Data is not consistent through the whole network.</li>
+                <li>Not that in reality a tradeoff can be made between consistency and availability, we don&#39;t have to choose one entirely.</li>
+            </ul>
+        </li>
+        <li>When a database shall be distributed, we have to choose {{5708766922279914::Partition tolerance}} out of three quality attributes in the CAP theorem.</li>
+        <li></li>
+
+    </ul>
+    </body>
+</html>

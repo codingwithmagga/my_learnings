@@ -1,0 +1,29 @@
+- Name three techniques to improve the mentioned quality attributes >>>
+    - Database Indexing
+    - Database Replication
+    - Database Partitioning/Sharding
+- 
+- Database Indexing
+    - Definition Database Index→A data structure (hash map, B-Tree) that improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space. Created from a particular column (single index) or group of columns (composite index). 
+    - Define Composite Index→A composite index is an index that combines multiple columns to speed up queries involving those columns.
+    - Tradeoffs for indexing >>>
+        - Additional space for storing the index tables
+        - Speed decrease for write operations
+- 
+- Database replication
+    - Why should you replicate databases?→To eliminate the database as a single point of failure, improving performance, availability and scalability.
+    - Tradeoff >>>
+        - Higher complexity for operations like write, update and delete. Keeping multiple databases in a large-scale system consistent is not a trivial task.
+        - Increased resource consumption.
+- 
+- Database Partitioning/Sharding
+    - Describe this technique→Database partitioning divides a large database into smaller, more manageable parts.
+    - Advantages >>>
+        - Scaling, more data can be stored
+        - Different queries that touch different parts of data can be performed in parallel
+    - Drawback >>>
+        - Increased complexity, especially for relational databases
+        - Overhead for managing different parts, for example, keep them in a similar size
+- 
+- Indexing, Replication and Partitioning are completely {{orthogonal}} to each other. 
+- All three of them are commonly used together in most real-life large-scale systems.

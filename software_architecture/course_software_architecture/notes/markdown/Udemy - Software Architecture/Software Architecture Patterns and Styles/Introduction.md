@@ -1,0 +1,6 @@
+- What are software architectural patterns?→These are general, repeatable solutions to commonly occurring system design problems. This involves, in general, multiple components that run as separate units.
+- 
+- Why use software architectural patterns? >>>
+    - Save valuable time and resources
+    - Avoid the risk to make our architecture resemble a Big Ball of Mud (anti-Pattern, no structure, tightly coupled system, ...)
+    - Other engineers/architects can follow the pattern

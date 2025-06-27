@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      API Gateway
+    </h1>
+    <br/>
+    <ul>
+        <li>What problem does the API Gateway solve?→It manages and secures access to multiple backend services. With this, not every backend needs to implement its own security, authentication and authorization.</li>
+        <li></li>
+        <li>What does an API Gateway do?
+            <ul>
+                <li>An API gateway manages and secures external access to multiple internal APIs, providing just one single API to external users.</li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/qQH0WDU4RLGYBA5ldoJ2vn7zXh55nXe05pQcsFRv-QF_nXFaViKtklhyx-_kLPSqYLOpXDDsdlzcJPvUlkA3diDVimwdKPzGm0lRhxuLDGrRnLCJi2DAYULr442yAj97.png" width="738" height="335.45454545454544"/></li>
+            </ul>
+        </li>
+        <li>Name benefits of an API Gateway
+            <ul>
+                <li>Seamless internal modifications/refactoring</li>
+                <li>Consolidating all security, authorization and authentication in a single place</li>
+                <li>Load balancing and traffic management, including health checks</li>
+                <li>Request routing, saving the user from making multiple requests to different services</li>
+                <li>Caching static content and responses</li>
+                <li>Protocol translation</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Considerations
+            <ul>
+                <li>API Gateway shouldn&#39;t contain any {{21498407353907256::business logic.}}</li>
+                <li>API Gateway may become a {{3151577589661304::single point of failure}}. </li>
+                <li>Avoid {{2523572424012993::bypassing}} API Gateway from external services. </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Open-Source API Gateways
+            <ul>
+                <li>Netflix Zuul
+                    <ul>
+                        <li>Zuul is a free and open-source application gateway written in Java that provides capabilities for dynamic routing, monitoring, resiliency, security, and more.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Cloud-Based API Gateways
+            <ul>
+                <li>Amazon API Gateway
+                    <ul>
+                        <li>Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. Supports RESTful APIs and WebSocket APIs (bi-directional communication between client and server).</li>
+                    </ul>
+                </li>
+                <li>Google Cloud Platform API Gateway
+                    <ul>
+                        <li>Google Cloud Platform API Gateway enables you to provide secure access to your services through a well-defined REST API that is consistent across all of your services, regardless of service implementation. It is designed for serverless workloads on GCP. For full documentation, follow this link.</li>
+                        <li>Apigee is Google Cloud’s API management product that enables organizations to build, manage, and secure APIs — for any use case, environment (on-premises, in Google Cloud, or a hybrid environment), or scale. For full documentation, follow this link.</li>
+                    </ul>
+                </li>
+                <li>Microsoft Azure API Management
+                    <ul>
+                        <li>API Management helps organizations publish APIs to external, partner, and internal developers to unlock the potential of their data and services.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+- Definition?→The measure of a system's ability to handle a growing amount of work, in an easy and cost-effective way, by adding resources to the system.
+- Motivation→Load/Traffic changes over time, for example at global events, weather, day/night cycle etc.
+- Name three types of scalability >>>
+    - Vertical scalability (Scale Up)
+    - Horizontal scalability (Scale Out)
+    - Team/Organization scalability 
+- The three types of scalability (vertical, horizontal, team) are {{orthogonal}} to each other, which means that each part can be {{increased/decreased separately}} 
+- Vertical Scalability
+    - Definition→Adding resources or upgrading the existing resources on a single computer, to allow our system to handle higher traffic or load.
+    - Pros? >>>
+        - Any application can benefit from it, no code changes are required
+        - Migration between different machines is easy
+    - Cons?
+        - The scope of upgrade is limited
+        - Locked to a centralized system, which cannot provide high availability and fault tolerance
+- Horizontal Scalability
+    - Definition→Adding more resources in a form of new instance running on different machines, to allow our system to handle higher traffic or load.
+    - Pros? >>>
+        - No limit on scalability
+        - Easy to add/remove machines
+        - If designed correctly, we get: High Availability and fault tolerance
+    - Disadvantages? >>>
+        - Initial code changes may be required
+        - Increased complexity, coordination overhead
+- Team/Organization scalability 
+    - Hiring engineers can increase productivity up to some point, then we observe productivity degradation. 
+        - What are the possible reasons for that? >>>
+            - Many crowded meetings
+            - Code merge conflicts
+            - Business complexity - longer ramp up time
+            - Testing is harder and slower
+            - Releases become very risky
+        - What are the options to solve this problem? >>>
+            - Separate code in different modules of the same service
+            - Separate product in multiple services
+    - Software architecture impacts {{engineering velocity (team productivity)}}
+    - 

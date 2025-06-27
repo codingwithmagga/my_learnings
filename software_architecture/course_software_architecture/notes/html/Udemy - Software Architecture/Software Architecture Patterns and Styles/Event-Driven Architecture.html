@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Event-Driven Architecture
+    </h1>
+    <br/>
+    <ul>
+        <li>Instead of direct messages that issues command or requests that ask for data in an event-driven architecture, we have only {{852148871429976::events}}.</li>
+        <li></li>
+        <li>What is an event?→An event is an immutable statement of a fact or a change.</li>
+        <li></li>
+        <li>Which components do we have?
+            <ul>
+                <li>Event producers</li>
+                <li>Event consumers</li>
+                <li>Message brokers</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>What benefits do we get?
+            <ul>
+                <li>Decoupled components</li>
+                <li>Asynchronous messages</li>
+                <li>Scalability and flexibility (more services can be added without any changes)</li>
+                <li>Real-time stream analysis (Data analysis, Pattern detection, act upon data in real-time)</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Describe the event sourcing pattern→Event sourcing is an architectural pattern where state changes are stored as a sequence of events, enabling reconstruction of past states and facilitating auditing and replayability.</li>
+        <li></li>
+        <li>CQRS pattern
+            <ul>
+                <li>Stands for→Command Query Responsibility Segregation.</li>
+                <li>Which problems does it solve?
+                    <ul>
+                        <li>Optimizing a database with high load of Read and Update operations (concurrent operations)
+                            <ul>
+                                <li>One database optimized for write, one for read</li>
+                                <li>Events from Database A to B to update the data</li>
+                            </ul>
+                        </li>
+                        <li>Joining multiple tables located in separate databases that belong to different microservices
+                            <ul>
+                                <li>Changes in two databases of service A and B were sent as event which is taken from service C.</li>
+                                <li>Joins the data and provides a read-only &quot;materialized view&quot;.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+
+    </ul>
+    </body>
+</html>

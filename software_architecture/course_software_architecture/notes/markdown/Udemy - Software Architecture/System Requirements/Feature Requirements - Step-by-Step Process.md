@@ -1,0 +1,27 @@
+- How should requirements of a system gathered→By creating Use Cases and User flows. Just asking the client to describe everything they need is (for complex systems) not a suitable approach.
+- Use Case
+    - Describe?→A use case describes a specific situation or scenario in which the system is used.
+- User Flow
+    - Describe→A Step-By-Step or graphical representation of a Use Case
+    - What is a sequence diagram?→A sequence diagram is a visual representation of the interactions between objects in a system over time. Part of the Unified Model Language (UML).
+    - Standard language for visualizing system design?→Unified Modeling Language (UML).
+- Name the required steps to gather the requirements >>>
+    - Identify all the actors/users in the system
+    - Capture and describe all the possible use-cases/scenarios
+    - User Flow - Expand each use case through a flow of events
+        - Each event contains the Action and the Data
+- 
+- Example: Hitchhiking Services
+    - Allow people to join drivers on a route, who are willing to take passengers for a fee.
+    - Actors: Drivers and Passengers
+    - Possible Use Cases:
+        - Rider first time registration
+        - Driver registration
+        - Rider login
+        - Driver login
+        - Successful match and ride
+        - Unsuccessful ride
+    - Example: Successful Match and Ride 
+        - ![](https://remnote-user-data.s3.amazonaws.com/A5dIJPTfqky3uUzP4oTDmOCYey3qkq4vcA1uuiNi2Ig0CvD9uyoxkWIDlJ29BuZDvBxhvEDJhr5h9Qc45E7z0lEBi8gWM2esOhgujJd1b8pnXG-wDz9Kcu6aYX36aIwK.png)
+        - ![](https://remnote-user-data.s3.amazonaws.com/SHsDrQ0JhFC7qyFaUUe6iUw3Qa7qG3bpl4aYm3pdmow1vzip8N3RB2pnLuBGf4UvnozN5h2FfcdBVHLmHdcNLHk0XlSuOwUr9RSKfHpNJrifipeULh4ljZYYFa4gCyJo.png)
+- 

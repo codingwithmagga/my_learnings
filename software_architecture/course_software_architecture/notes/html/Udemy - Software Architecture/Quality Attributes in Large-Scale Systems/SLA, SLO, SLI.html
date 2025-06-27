@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      SLA, SLO, SLI
+    </h1>
+    <br/>
+    <ul>
+        <li>SLA
+            <ul>
+                <li>Describe
+                    <ul>
+                        <li>Service-Level Agreement</li>
+                        <li>A legal contract that represents the quality service of a system like:
+                            <ul>
+                                <li>Availability</li>
+                                <li>Performance</li>
+                                <li>Data durability</li>
+                                <li>Time to respond to system failures</li>
+                            </ul>
+                        </li>
+                        <li>States Penalties and financial consequences if the contract is breached:
+                            <ul>
+                                <li>Full/Partial refunds</li>
+                                <li>Subscription/License extensions</li>
+                                <li>Service credits</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>For whom do they exist
+                    <ul>
+                        <li>External paying users (always)</li>
+                        <li>Free external users (sometimes), for example for free trial periods</li>
+                        <li>Internal users (occasionally), for example if an internal service relies on us which has external users</li>
+                    </ul>
+                </li>
+                <li>SLAs are crafted by {{5734860765056793::the business and the legal team}}.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>SLO
+            <ul>
+                <li>Describe
+                    <ul>
+                        <li>Service-Level Objectives</li>
+                        <li>Individuals goals set for the system</li>
+                        <li>Quantifiable targets for service performance</li>
+                    </ul>
+                </li>
+                <li>Example
+                    <ul>
+                        <li>Availability SLO of 99.9%</li>
+                        <li>Response time SLO of less than 100 milliseconds at 90th percentile</li>
+                        <li>Issue Resolution SLO of 24–48 hours.</li>
+                    </ul>
+                </li>
+                <li>Relationship between SLA and SLO?→The SLA units all SLOs in a single document.</li>
+                <li>SLO represents the {{0043315109755514::target values}} for the {{3787337921352477::important quality attributes}}.</li>
+                <li>How should SLOs be determined?
+                    <ul>
+                        <li>Take metrics which the users care about the most</li>
+                        <li>Define SLOs around those metrics</li>
+                        <li>Determine SLIs to track those SLOs</li>
+                        <li>Don&#39;t measure every single possible SLI in a system and define an SLO for it! Fewer SLOs are better.</li>
+                        <li>Be realistic, left room for errors. For example, 99.9% availability instead of 99.99%. The higher one can be used internally as commitment.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>SLI
+            <ul>
+                <li>Describe
+                    <ul>
+                        <li>Service Level Indicators</li>
+                        <li>Quantitative Measure of our compliance with a SLO</li>
+                        <li>Actual numbers measured by a monitoring service or calculated from logs.</li>
+                        <li>They can later be compared to the SLOs</li>
+                    </ul>
+                </li>
+                <li>Why is it important that quality attributes are testable and measurable?→If they weren&#39;t measurable, it would not be possible to find any SLI to validate the SLOs. If we can&#39;t prove the SLOs, we can&#39;t say that we meet the SLA.</li>
+                <li>SLOs and SLIs are defined and set by {{15220889699895945::the software engineers and architects}}.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Create a recovery plan for when the SLIs show that we are not meeting our SLOs.
+            <ul>
+                <li>So we need to decide ahead of time what to do if:
+                    <ul>
+                        <li>The system went down for a long time.</li>
+                        <li>Performance degrades</li>
+                        <li>Reports about issues/bugs in the system.</li>
+                    </ul>
+                </li>
+                <li>What should the plan include?
+                    <ul>
+                        <li>Automatic alerts to engineer/DevOps</li>
+                        <li>Automatic failovers/restarts/rollbacks/auto-scaling policies</li>
+                        <li>Predefined handbooks on what to do in certain situations</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

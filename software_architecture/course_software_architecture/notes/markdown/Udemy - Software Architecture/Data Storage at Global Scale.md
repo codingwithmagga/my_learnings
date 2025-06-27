@@ -1,0 +1,155 @@
+- Relational Databases & ACID Transactions
+    - Relational Database
+        - Describe >>>
+            - Data is stored in tables
+            - Each row is a single record
+            - The records are all related to each other through a set of predefined columns.
+            - Each of the columns has a name and type and optional a set of constraints. 
+            - Each record is uniquely identified by a key, represented by one or multiple columns.
+        - The structure ({{schema}}) of each table is defined {{ahead of time}}.
+        - How is data duplication avoided?→Data duplication is avoided by the opportunity to have a relation between different tables. For example, a product table with a product ID and a sales table where the product is referenced through the product ID.
+        - Advantages? >>>
+            - Support for complex queries
+            - Efficient storage
+            - Natural structure of data for humans
+            - ACID transactions guarantee
+        - Disadvantages >>>
+            - Rigid structure, which needs to be defined before the database can be used. Changes require maintenance time.
+            - Hard to maintain/scale
+            - Slower read operations compared to non-relational operations
+        - When to choose a relational database? >>>
+            - Structured data requirements
+            - Complex queries and transactions required
+            - Read performance is not the most important quality attribute
+    - 
+    - SQL
+        - Describe→SQL is a domain-specific language used for managing and manipulating data held in a relational database management system.
+        - Different relational database implementations have their own additional features, but the majority of standard operations are the same for all relational databases.
+    - 
+    - ACID transactions
+        - Explain the acronym >>>
+            - Atomicity
+            - Consistency
+            - Isolation
+            - Durability
+        - Definition transaction→A transaction is a sequence of database operations that for an external observer should appear as a single operation.
+        - Explain Atomicity→Atomicity ensures that a transaction is treated as a single, indivisible unit of work. Either all operations of the transaction are done at once or are not done.
+        - Explain Consistency→Consistency ensures that a transaction leaves the database in a valid state, e.g. no constraints are violated by a transaction. A committed transaction will be seen by all future queries/transactions.
+        - Explain Isolation→Isolation ensures that concurrent transactions appear to execute sequentially, preventing interference between them.
+        - Explain Durability→Durability ensures that once a transaction is committed, it remains persistent even in the event of system failures.
+- Non-Relational Databases
+    - What is the main difference between relational and non-relational databases?→Relational databases use structured tables with predefined schemas, while non-relational databases use flexible schemas and various data models.
+    - Relational databases are designed for {{efficient storage}} and non-relational databases are designed for {{faster queries}}. 
+    - What are the trade-offs of using a flexible schema in non-relational databases? >>>
+        - Loose the ability to easily analyze the records, also multiple groups (join operations) becomes hard
+        - ACID transaction are rarely supported
+    - 
+    - What are the three main types of non-relational databases? >>>
+        - Document store
+        - Key-value stores
+        - Graph database
+    - Explain the concept of a key value store database→A key-value store database stores data as key-value pairs, offering fast read and write operations. The type of value can be simple or complex. It can be seen as a large-scale hash table or dictionary.
+    - Explain the concept of a document store database→A document store database stores data in flexible, self-contained documents. Each document is an object with different attributes of different types. These documents can be easily mapped to objects in a programming language.
+    - Explain the concept of graph databases→A graph database is an extension of a document store and stores data as nodes and edges, representing relationships between data points.
+    - Name use cases for a graph database >>>
+        - Fraud detection: The same person uses multiple logical users to initiate multiple transactions
+        - Recommendation engines: Recommendation of new products based on purchase history or friends of the user.
+    - 
+    - When to choose a non-relational database? >>>
+        - Caching Task
+        - Handling real-time big data
+        - Unstructured data, different records can contain different attributes
+    - 
+    - Non-Relational Databases - Solutions
+        - Key/Value Stores Examples
+            - Redis
+            - Aerospike
+            - Amazon DynamoDB
+        - Document Store Examples
+            - Cassandra
+            - MongoDB
+        - Graph Databases Examples
+            - Amazon Neptune
+            - NEO4J
+- Techniques to Improve Performance, Availability & Scalability of Databases
+    - Name three techniques to improve the mentioned quality attributes >>>
+        - Database Indexing
+        - Database Replication
+        - Database Partitioning/Sharding
+    - 
+    - Database Indexing
+        - Definition Database Index→A data structure (hash map, B-Tree) that improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space. Created from a particular column (single index) or group of columns (composite index). 
+        - Define Composite Index→A composite index is an index that combines multiple columns to speed up queries involving those columns.
+        - Tradeoffs for indexing >>>
+            - Additional space for storing the index tables
+            - Speed decrease for write operations
+    - 
+    - Database replication
+        - Why should you replicate databases?→To eliminate the database as a single point of failure, improving performance, availability and scalability.
+        - Tradeoff >>>
+            - Higher complexity for operations like write, update and delete. Keeping multiple databases in a large-scale system consistent is not a trivial task.
+            - Increased resource consumption.
+    - 
+    - Database Partitioning/Sharding
+        - Describe this technique→Database partitioning divides a large database into smaller, more manageable parts.
+        - Advantages >>>
+            - Scaling, more data can be stored
+            - Different queries that touch different parts of data can be performed in parallel
+        - Drawback >>>
+            - Increased complexity, especially for relational databases
+            - Overhead for managing different parts, for example, keep them in a similar size
+    - 
+    - Indexing, Replication and Partitioning are completely {{orthogonal}} to each other. 
+    - All three of them are commonly used together in most real-life large-scale systems.
+- Brewer's (CAP) Theorem
+    - Repeat the CAP Theorem→A distributed database can only provide two out of three guarantees: consistency, availability, and partition tolerance. 
+![](https://remnote-user-data.s3.amazonaws.com/cEhJsI3c_qUOSPVWiOkA2_XrIqeokB_0cH3jviNd_wdICFWrJ9GIM-9rRAXKSypPZoTrCQ-L3Jz9ce3ZY69IdEMhrA7LuWBRRQ4MAz7yVeMEEl2VQNcx9CwlOGDLwUCj.png)
+    - What is a network partition→A network partition is a network failure that divides a network into multiple isolated segments.
+    - What is partition tolerance?→Partition tolerance is the ability of a distributed system to continue operating despite network partitions.
+    - What is consistency in the CAP theorem?→Consistency means every read receives the most recent write or an error.
+    - What is availability in the CAP theorem?→Availability means that every request receives a non-error response, without the guarantee that it contains the most recent write.
+    - Without a network partition, consistency and availability can both be fulfilled. Explain why we have to choose one when there is a network partition >>>
+        - A network partition prevents communication between nodes, making it impossible to guarantee both consistency (all nodes have the same data) and availability (all nodes respond to requests) simultaneously. 
+        - Choosing consistency: Service returns an error during network partition.
+        - Choosing availability: Data is not consistent through the whole network.
+        - Not that in reality a tradeoff can be made between consistency and availability, we don't have to choose one entirely.
+    - When a database shall be distributed, we have to choose {{Partition tolerance}} out of three quality attributes in the CAP theorem.
+    - 
+- Scalable Unstructured Data Storage
+    - What is unstructured data?→Data which doesn't follow a particular structure, schema or model. For example, "Blob" - Binary Large Object Files, like Audio, Video or Images. Often the data sets and each file or object itself of unstructured data are large.
+    - Relational/non-relational databases are {{not optimized}}  for unstructured data. They often have also a size limit for binary objects (~megabytes).
+    - 
+    - Distributed File System (DFS)
+        - Describe→A distributed file system (DFS) is a storage architecture that distributes data across multiple storage nodes. It is similar to a file system on a single computer.
+        - Benefits >>>
+            - No need for a special API.
+            - Files can be modified easily.
+            - Efficient for high-performance operations
+        - Limitations >>>
+            - Number of files is limited
+            - No easy access through web API (HTTP+ REST)
+    - 
+    - Object Store
+        - Describe→An object store is a data storage architecture that manages data as objects rather than files or blocks. Each object contains the data itself, along with metadata and a unique identifier, allowing for easy retrieval and management.
+        - Benefits >>>
+            - Linear scalability
+            - No limit to the number of objects
+            - Very high limit on single object size (~5-10 Terabytes)
+            - Provides an HTTP + REST API
+            - Supports versioning out of the box
+            - 
+        - Drawbacks >>>
+            - Objects are immutable, objects needs to be replaced if changed
+            - No easy access like a file-system, access through an SDK or REST API
+            - Lower IO performance compared to DFS
+    - 
+    - Cloud and Open Source Solutions
+        - Cloud-Based Object Store Solutions
+            - Amazon S3 (Simple Storage Service) - Amazon's highly scalable cloud storage service that stores object data within buckets. Designed to store and protect any amount of data for various use cases, such as websites, cloud-native applications, backups, archiving machine learning, and analytics.
+            - GCP Cloud Storage - Google Cloud's managed service for storing unstructured data for companies of all sizes
+            - Azure Blob Storage -  Microsoft's massively scalable and secure object storage for cloud-native workloads, archives, data lakes, high-performance computing, and machine learning
+            - Alibaba Cloud OSS (Object Storage Service) - Fully managed enterprise-ready Object Storage Service to store and access any amount of data from anywhere.
+        - Open Source and Third-Party Object Store Solutions
+            - OpenIO - A software-defined open-source object storage solution ideal for Big Data, HPC, and AI. It is S3 compatible and can be deployed on-premises or cloud-hosted on any hardware that you choose.
+            - MinIO - High-performance, S3-compatible object storage. It is native to Kubernetes and 100% open source under GNU AGPL v3.
+            - Ceph - Open-source, reliable and scalable storage. Ceph provides a unified storage service with object, block, and file interfaces from a single cluster built from commodity hardware components.

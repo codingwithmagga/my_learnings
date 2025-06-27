@@ -1,0 +1,199 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Strategies for Processing Infinite Streams of Events
+    </h1>
+    <br/>
+    <ul>
+        <li>Introduction
+            <ul>
+                <li>Tumbling Window Strategy 
+                    <ul>
+                        <li>Describe→A tumbling window strategy processes data in fixed-size, non-overlapping time intervals.
+ <img src="https://remnote-user-data.s3.amazonaws.com/0V_eXZjlR5DNB7qBtK1g1vjWg0zAhPlhZCvF_zyL47xU_DYnBRUuqddrkvv9wRtVQkvkmY5eAWx0J1PoiQBi_dBs2SdAil5kVwpzCFpFeBH7ai_L85Ef7dp-ehXZvH-A.png" width="708" height="324.41782729805016"/></li>
+                        <li>Advantages?
+                            <ul>
+                                <li>Simple </li>
+                                <li>Minimal memory/computation overhead</li>
+                            </ul>
+                        </li>
+                        <li>Disadvantages?
+                            <ul>
+                                <li>Low granularity of results (depends on window size)</li>
+                                <li>Not good for pattern/trend recognition</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Hopping Window Event-Stream
+            <ul>
+                <li>Describe→A hopping window processes events in overlapping fixed-size time windows that slide forward. Each time a window is closed, the events are processed, and the results are published.
+<img src="https://remnote-user-data.s3.amazonaws.com/-fUFjTa2mUj1hGabVcgucINZb7D79N7OrguMadRcqxSHbL4PzJCJ-_4-zNpuIf8hnHSgqxLDvbAfIwEhJT8MYdklS2nd0t8-22o0VjHNdkzb16BJsYy_7C3_SIk4ReEc.png" width="732" height="336.4043126684636"/></li>
+                <li>Possible Use cases
+                    <ul>
+                        <li>Real-time analytics</li>
+                        <li>Error Log analysis</li>
+                        <li>Stock trading</li>
+                    </ul>
+                </li>
+                <li>Advantages?
+                    <ul>
+                        <li>Frequent results</li>
+                        <li>Respond to changes insights can be faster</li>
+                    </ul>
+                </li>
+                <li>Disadvantages?
+                    <ul>
+                        <li>Additional memory usage</li>
+                        <li>Additional CPU resources needed</li>
+                        <li>More network resources needed</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Sliding Window Event-Stream
+            <ul>
+                <li>Describe→In the sliding window event-stream, a new window is created when a new event occurs. The window size is fixed and will be processed and published after the window closes.
+<img src="https://remnote-user-data.s3.amazonaws.com/01tpxs5FrX8La5Sbg71i3TnvvaFGsAnt2zUIBKWIAXySBeYZTycrguXIdL3wLwC5SiufOfQTTq9oDG0waVxjtEvozCjI58AEUVSXyFAl-cwUoNtQI-GkMG3xR36FoJmg.png" width="732" height="329.49865229110515"/></li>
+                <li>Possible Use cases?
+                    <ul>
+                        <li>Fraud detection</li>
+                        <li>API Rate Limiter</li>
+                    </ul>
+                </li>
+                <li>Advantage?
+                    <ul>
+                        <li>Flexible intervals</li>
+                    </ul>
+                </li>
+                <li>Disadvantage?
+                    <ul>
+                        <li>High memory and CPU consumption</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Session Window Event-Stream
+            <ul>
+                <li>Describe→A session window groups events based on a user session (variable time frame), processing events within that session together. Starts with the login and ends when the user leaves the website.</li>
+                <li>Use Case?
+                    <ul>
+                        <li>User Behavior Analysis on a website
+<img src="https://remnote-user-data.s3.amazonaws.com/8D3MixKR30rwJg6iVAOM1QzcbP19RLhlaybnqyCZumYEQujZk0L5m5r6Fs74_0t2t6SnqiX9zff3AmpTe1aQxTJiXwoxygBZeOEJBEFO1QW56YPfIPAGWkqIiX-IZRP5.png" width="738" height="348.2807486631016"/></li>
+                        <li>Internet of Things, like a robot cleaner</li>
+                        <li>Navigation App, optimizing route for all drivers</li>
+                    </ul>
+                </li>
+                <li>Advantages
+                    <ul>
+                        <li>Good for real-time analytics for users</li>
+                        <li>Dynamic window size</li>
+                        <li>No waste of computation, since each event belongs to one window</li>
+                    </ul>
+                </li>
+                <li>Disadvantages
+                    <ul>
+                        <li>Defining the inactivity threshold/period difficult</li>
+                        <li>Potential many windows, depending on users, sessions etc.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Time in Stream Processing and Handling Late Arrival of Events
+            <ul>
+                <li>Types of Timestamps in Event-Stream Processing
+                    <ul>
+                        <li>Event time::Time when the event happened.</li>
+                        <li>Application Time / Arrival Time::Time when the event is consumed by the application/consumer microservice</li>
+                        <li>Processing Time::Time when the event read/parsed/processed by the consumer microservice.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>When to use arrival time?
+                    <ul>
+                        <li>We don&#39;t care about &quot;when the event actually happened&quot;.</li>
+                        <li>Need to act in real-time</li>
+                        <li>We don&#39;t know/trust the event time</li>
+                        <li>For example, for monitoring or altering purposes.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>When to use event time?
+                    <ul>
+                        <li>When accurate correlation or ordering of the events is required</li>
+                        <li>For example, analyzing trends in the stock market</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Name options for handling late arrival of events<img src="https://remnote-user-data.s3.amazonaws.com/m12-jWU6NaPkliVg3tMc9rDGqp7x3f61qPDKDoZs9H1IsXfxDpyNr4PusX6i1Nkg4ztv3-Xu_Rbt779z-YUfJdDR3fX-xO0Dc-Yh2B5OKWar5Wx6fO5H_Qq2du9i0JWb.png" width="732" height="266.3611859838275"/>
+                    <ul>
+                        <li>Discard the event</li>
+                        <li>End Window after a grace period, even later events are discarded</li>
+                        <li>Watermarking, adapting grace period depending on the arrived event with the latest event time</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Stream processing Technologies
+            <ul>
+                <li>Apache Kafka Streams
+                    <ul>
+                        <li>Client library (Java and Scala) for building applications and microservices that process continuous streams of records coming through the Kafka message broker.</li>
+                        <li>It supports:
+                            <ul>
+                                <li>Per record, real-time processing</li>
+                                <li>Stateful and processing using Windows
+                                    <ul>
+                                        <li>Tumbling Window code</li>
+                                        <li>Hopping Window code</li>
+                                        <li>Session Window code</li>
+                                        <li>Siding Window code </li>
+                                    </ul>
+                                </li>
+                                <li></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Apache Flink
+                    <ul>
+                        <li>Apache Flink is a framework and distributed processing engine for building scalable streaming ETL, analytics, and event-driven applications. It is specifically designed for stateful computations of bounded and unbounded streams of events.</li>
+                        <li>Apache Flink can
+                            <ul>
+                                <li>Be used as a distributed system that requires effective allocation and management of computing resources using Hadoop YARN or Kubernetes.</li>
+                                <li>Run as a standalone distributed cluster</li>
+                                <li>Used as a client library for building microservices</li>
+                            </ul>
+                        </li>
+                        <li>For more information, see Apache Flink&#39;s architecture and Windowing with Apache Flink (Java and Python code examples).</li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>Azure Stream Analytics
+                    <ul>
+                        <li>Azure Stream Analytics is a real-time analytics service that enables you to process and analyze streaming data from various sources. It&#39;s a fully managed, serverless service that uses a SQL-like query language to process data streams using windows.
+                            <ul>
+                                <li>Tumbling Window </li>
+                                <li>Hopping Window</li>
+                                <li>Session Window </li>
+                                <li>Siding Window</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

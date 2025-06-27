@@ -1,0 +1,13 @@
+- Repeat the CAP Theorem→A distributed database can only provide two out of three guarantees: consistency, availability, and partition tolerance. 
+![](https://remnote-user-data.s3.amazonaws.com/cEhJsI3c_qUOSPVWiOkA2_XrIqeokB_0cH3jviNd_wdICFWrJ9GIM-9rRAXKSypPZoTrCQ-L3Jz9ce3ZY69IdEMhrA7LuWBRRQ4MAz7yVeMEEl2VQNcx9CwlOGDLwUCj.png)
+- What is a network partition→A network partition is a network failure that divides a network into multiple isolated segments.
+- What is partition tolerance?→Partition tolerance is the ability of a distributed system to continue operating despite network partitions.
+- What is consistency in the CAP theorem?→Consistency means every read receives the most recent write or an error.
+- What is availability in the CAP theorem?→Availability means that every request receives a non-error response, without the guarantee that it contains the most recent write.
+- Without a network partition, consistency and availability can both be fulfilled. Explain why we have to choose one when there is a network partition >>>
+    - A network partition prevents communication between nodes, making it impossible to guarantee both consistency (all nodes have the same data) and availability (all nodes respond to requests) simultaneously. 
+    - Choosing consistency: Service returns an error during network partition.
+    - Choosing availability: Data is not consistent through the whole network.
+    - Not that in reality a tradeoff can be made between consistency and availability, we don't have to choose one entirely.
+- When a database shall be distributed, we have to choose {{Partition tolerance}} out of three quality attributes in the CAP theorem.
+- 

@@ -1,0 +1,202 @@
+- Performance
+    - Response time (also called End to End Latency)
+        - Definition→Time between a client sending a request and receiving a response
+        - Broken in two parts, name them→Processing time + Waiting time
+        - Define Processing Time→Time spent in our system actively processing the request and building/sending the response.
+        - Define waiting time (latency)→Duration of time request/response spends inactively in our system, for example waiting in a queue for processing
+        - What should be considered when measuring the response time? >>>
+            - Don't forget the waiting time!
+            - Calculate the x-th Percentile Distribution
+                - ![](https://remnote-user-data.s3.amazonaws.com/ASX9sdX14bjk3n4BtwFnM9cS-5rUJ4s0nOcb1C-6O0nFVHIRJT0GHUzz6iACZsjcQjNgwoqI2M9r-yKn7TSZMuVfXwLZN1gtvQp2fX8op7Mmcs0psUCF2iClaPRQCiZs.png)
+                - ![](https://remnote-user-data.s3.amazonaws.com/AyXvzbjQSv5lSkhbGPjf7rm3QLEc3cE32FakniI2ahwH03-4-741LH3VEmaFI7ot1x9RdivtxHHcssRjL351R_BkgTVl6_8BGBC55RrPxA2zhc1GsrsRuRiYtjTy8Ecz.png)
+        - ![](https://remnote-user-data.s3.amazonaws.com/NNGSsQ_wIKcd-XoTzHU0hcPGN27NUEPA3uZ1-g1AHo0JB45hkg2-dHxZj5_QgPJNzLnwV-fR4TM8SKvipMJuDpIGzoSTvr6tdmiT9vMANt7S8X1SbENK8sQUC9jPikDv.png)
+        - Tail Latency
+            - Definition→The small percentage of response times from a system, that take the longest in comparison to the rest of values.
+        - How should goals regarding the response time of a service be defined?→Define them using percentiles. For example: 30ms at 95th percentile of response time.
+    - 
+    - Throughput
+        - Definition→Amount of work performed/data processed by our system per unit of time. Measured in tasks per second or bytes per second.
+    - 
+    - Performance degradation
+        - Define→Performance degradation is a decrease in a system's speed, responsiveness, or efficiency.
+        - Name potential overly utilized resources >>>
+            - High CPU utilization
+            - High memory consumption
+            - Too many connections/IO 
+            - Message queue is at capacity
+        - ![](https://remnote-user-data.s3.amazonaws.com/2q3xJtR4pdC2D4k0MvIMZpfzx91ju77K8Wwml8iOfZzjyuhRZkYwoWyViIlgQndWvchwY_rADMKZHppnXrQyNVE7rvq2kITlkusoIO-YilFjKSFng1s1qmvrS1FjOPWw.png)
+- Scalability
+    - Definition?→The measure of a system's ability to handle a growing amount of work, in an easy and cost-effective way, by adding resources to the system.
+    - Motivation→Load/Traffic changes over time, for example at global events, weather, day/night cycle etc.
+    - Name three types of scalability >>>
+        - Vertical scalability (Scale Up)
+        - Horizontal scalability (Scale Out)
+        - Team/Organization scalability 
+    - The three types of scalability (vertical, horizontal, team) are {{orthogonal}} to each other, which means that each part can be {{increased/decreased separately}} 
+    - Vertical Scalability
+        - Definition→Adding resources or upgrading the existing resources on a single computer, to allow our system to handle higher traffic or load.
+        - Pros? >>>
+            - Any application can benefit from it, no code changes are required
+            - Migration between different machines is easy
+        - Cons?
+            - The scope of upgrade is limited
+            - Locked to a centralized system, which cannot provide high availability and fault tolerance
+    - Horizontal Scalability
+        - Definition→Adding more resources in a form of new instance running on different machines, to allow our system to handle higher traffic or load.
+        - Pros? >>>
+            - No limit on scalability
+            - Easy to add/remove machines
+            - If designed correctly, we get: High Availability and fault tolerance
+        - Disadvantages? >>>
+            - Initial code changes may be required
+            - Increased complexity, coordination overhead
+    - Team/Organization scalability 
+        - Hiring engineers can increase productivity up to some point, then we observe productivity degradation. 
+            - What are the possible reasons for that? >>>
+                - Many crowded meetings
+                - Code merge conflicts
+                - Business complexity - longer ramp up time
+                - Testing is harder and slower
+                - Releases become very risky
+            - What are the options to solve this problem? >>>
+                - Separate code in different modules of the same service
+                - Separate product in multiple services
+        - Software architecture impacts {{engineering velocity (team productivity)}}
+        - 
+- Availability
+    - Availability is an important attribute since it has the greatest impact on {{our users}} and {{our business}} . Downtime can result in a loss of {{money }}  and {{customers}} .
+    - Definition→The fraction of time/probability that our service is operationally functional and accessible to the user.
+    - Uptime↔Time that our system is operationally functional and accessible to the user.
+    - Downtime::Time that our system is unavailable to the user.
+    - How is it measured?→Uptime / (Uptime + Downtime) or MTBF / (MTBF + MTTR)
+    - MTBF 
+        - Define >>>
+            - Mean Time between failures
+            - Represents the average time our system is operational
+        - When is it useful >>>
+            - Dealing with multiple pieces of hardware
+            - Each component has its own operational shelf life
+            - Not using a cloud/third-party API with a given uptime and availability
+    - MTTR
+        - Define >>>
+            - Mean Time to Recovery
+            - Time average it takes us to detect and recover from failure
+            - Average downtime of our system
+        - {{Detectability}}  and {{fast recovery}}  can help us achieve {{high availability}} 
+    - 
+    - When do we have high availability (at which value/percentile)? >>>
+        - No strict definition, but the industry standard set by cloud vendors is typically 99.9% or higher
+        - ![](https://remnote-user-data.s3.amazonaws.com/pu1NTAKYJ1qiKUBrpRsqwpbEorMllbXpQnftlZcofRC-bvR4ECysuZ1_d7vAgM8uTJoGNwl5hoNsgrrL8G5sSkip4KJGTj-I8c7fDeyL7YALfo6vfu4NXJzvuMHJUZiK.png)
+    - 
+- Fault Tolerance & High Availability
+    - Name categories of possible failures >>>
+        - Human Error
+        - Software errors
+        - Hardware failures
+    - 
+    - {{Fault Tolerance}} is the best way to achieve {{High Availability}}  in our system.
+    - 
+    - Define Fault Tolerance→Fault Tolerance enables our system to remain operational and available to the users despite failures within one or multiple components.
+    - 
+    - When failures happen, a fault-tolerant system will >>>
+        - Continue operating at the same/reduced level of performance
+        - Prevent the system from becoming unavailable
+    - 
+    - Fault Tolerance revolves around 3 major tactics >>>
+        - Failure Prevention
+        - Failure Detection and Isolation
+        - Recovery from failure
+    - 
+    - Failure Prevention
+        - To prevent our entire system from going down, {{eliminate any Single Point of Failure}} in our system. The best way to eliminate this is through {{Replication and Redundancy}} .
+        - Examples for Single Point of Failure >>>
+            - One server where the application runs
+            - Storing all data in one instance of our database that runs on a single computer
+    - 
+    - Types of Redundancy
+        - Name two→Spatial and Time Redundancy
+        - Define Spatial Redundancy→Running replicas of our application on different computers
+        - Define Time Redundancy→Repeating the same operation/request multiple times until we succeed/give up
+    - 
+    - Strategies for Redundancy and Replication
+        - Name two strategies >>>
+            - Active-Active architecture
+            - Active-Passive architecture
+        - Active-Active architecture
+            - Describe→All replicas are synchronized with each other, such that a failure replica can be replaced by any other.
+            - Advantages? >>>
+                - Load is spread among all the replicas ⇒identical to horizontal scalability
+                - Allows more traffic, better performance
+            - Disadvantage? >>>
+                - Additional coordination for synchronization
+        - Active-Passive architecture
+            - Describe→Active-passive architecture has one active replica handling all requests and (multiple) passive replica following the active one by taking periodic snapshots.
+            - Advantage? >>>
+                - Implementation is easier, since there is a clear leader
+            - Disadvantage? >>>
+                - Ability to scale the system is lost
+    - 
+    - Failure Detection and Isolation
+        - How to detect failures?→Using a monitoring service which sends health checks or gets heartbeats to/from each instance/client. Detected failures are isolated and don't get requests any longer.
+        - Why are false negatives in the monitoring service problematic?→False negatives mask actual failures, hindering timely responses and potentially leading to cascading system failures.
+    - 
+    - Recovery from failure
+        - Possible actions after detecting a failure >>>
+            - Stop sending traffic/workload to the host
+            - Restart the host
+            - Rollback, going back to a stable version
+- SLA, SLO, SLI
+    - SLA
+        - Describe >>>
+            - Service-Level Agreement
+            - A legal contract that represents the quality service of a system like:
+                - Availability
+                - Performance
+                - Data durability
+                - Time to respond to system failures
+            - States Penalties and financial consequences if the contract is breached:
+                - Full/Partial refunds
+                - Subscription/License extensions
+                - Service credits
+        - For whom do they exist >>>
+            - External paying users (always)
+            - Free external users (sometimes), for example for free trial periods
+            - Internal users (occasionally), for example if an internal service relies on us which has external users
+        - SLAs are crafted by {{the business and the legal team}}.
+    - 
+    - SLO
+        - Describe >>>
+            - Service-Level Objectives
+            - Individuals goals set for the system
+            - Quantifiable targets for service performance
+        - Example >>>
+            - Availability SLO of 99.9%
+            - Response time SLO of less than 100 milliseconds at 90th percentile
+            - Issue Resolution SLO of 24–48 hours.
+        - Relationship between SLA and SLO?→The SLA units all SLOs in a single document.
+        - SLO represents the {{target values}} for the {{important quality attributes}}.
+        - How should SLOs be determined? >>>
+            - Take metrics which the users care about the most
+            - Define SLOs around those metrics
+            - Determine SLIs to track those SLOs
+            - Don't measure every single possible SLI in a system and define an SLO for it! Fewer SLOs are better.
+            - Be realistic, left room for errors. For example, 99.9% availability instead of 99.99%. The higher one can be used internally as commitment.
+    - 
+    - SLI
+        - Describe >>>
+            - Service Level Indicators
+            - Quantitative Measure of our compliance with a SLO
+            - Actual numbers measured by a monitoring service or calculated from logs.
+            - They can later be compared to the SLOs
+        - Why is it important that quality attributes are testable and measurable?→If they weren't measurable, it would not be possible to find any SLI to validate the SLOs. If we can't prove the SLOs, we can't say that we meet the SLA.
+        - SLOs and SLIs are defined and set by {{the software engineers and architects}}.
+    - 
+    - Create a recovery plan for when the SLIs show that we are not meeting our SLOs.
+        - So we need to decide ahead of time what to do if: >>>
+            - The system went down for a long time.
+            - Performance degrades
+            - Reports about issues/bugs in the system.
+        - What should the plan include? >>>
+            - Automatic alerts to engineer/DevOps
+            - Automatic failovers/restarts/rollbacks/auto-scaling policies
+            - Predefined handbooks on what to do in certain situations

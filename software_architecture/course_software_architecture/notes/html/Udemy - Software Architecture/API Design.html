@@ -1,0 +1,264 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      API Design
+    </h1>
+    <br/>
+    <ul>
+        <li>Introduction to API Design
+            <ul>
+                <li>What is an API?→The Application Programming Interface is a contract (or a set of rules) between the engineers who implement the system and the clients who use the system. It defines the methods and data formats that the client can use to communicate with the system.</li>
+                <li>In a large-scale system, the API is called by other applications {{9672672806553235::remotely through the network}}.</li>
+                <li></li>
+                <li>APIs are classified into three groups
+                    <ul>
+                        <li>Public APIs</li>
+                        <li>Private/Internal APIs</li>
+                        <li>Partner APIs</li>
+                    </ul>
+                </li>
+                <li>Public APIs 
+                    <ul>
+                        <li>Describe→Exposed to the public. Any developer can use/call them from their application.</li>
+                        <li>Good practice: Requiring the user to {{9068261151034259::register}} with the system before allowing to send requests.
+                            <ul>
+                                <li>Advantages?
+                                    <ul>
+                                        <li>Control who uses the system and how the system is used</li>
+                                        <li>Better security</li>
+                                        <li>Option to blacklist users</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Private APIs
+                    <ul>
+                        <li>Describe→Exposed only internally within the company</li>
+                    </ul>
+                </li>
+                <li>Partner APIs
+                    <ul>
+                        <li>Describe→Similar to public APIs, but only for companies/users which have business relationship, for example a subscription.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Benefits of API
+                    <ul>
+                        <li>Clients who uses it can immediately and easily {{48763213461800414::enhance their business}} by using our system.</li>
+                        <li>The users don&#39;t need to know anything about {{3981785990708324::the system&#39;s internal design and implementation}}.</li>
+                        <li>Once the API is defined and exposed, {{06693358214597434::clients can integrate it}} without waiting for full implementation of the system.</li>
+                        <li>The API makes it easier to {{21200159000733831::design and architect }} the internal structure of our system.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Best practices and patterns for remote APIs
+                    <ul>
+                        <li>Name six of them
+                            <ul>
+                                <li>Complete encapsulation</li>
+                                <li>Easy to Use</li>
+                                <li>Keep operations idempotent</li>
+                                <li>Use Pagination</li>
+                                <li>Asynchronous operations</li>
+                                <li>Versioning the API</li>
+                            </ul>
+                        </li>
+                        <li>API should be {{7004262561824205::completely decoupled}} from the internal design and implementation.</li>
+                        <li>How could an API be made simple?
+                            <ul>
+                                <li>Only one way to get certain data or perform a task</li>
+                                <li>Descriptive names for actions and resources</li>
+                                <li>Exposing only the information and actions that users need</li>
+                                <li>Keeping things consistent across all APIs</li>
+                            </ul>
+                        </li>
+                        <li>What is an idempotent operation?→An idempotent operation is one that can be called multiple times without changing the result beyond the initial call.</li>
+                        <li>Why are  idempotent operations preferred in a network API?
+                            <ul>
+                                <li>Messages can get lost, Responses of message can get lost, or the message wasn&#39;t received because a critical component went down</li>
+                                <li>Messages can simply be resent without any consequences.</li>
+                            </ul>
+                        </li>
+                        <li>What is API Pagination?→API pagination is a mechanism to retrieve large datasets in smaller, manageable chunks. The client can specify the maximum size of each response and the offset in the entire dataset.</li>
+                        <li>What can happen without API pagination?→The client may receive an overwhelming amount of data, causing performance issues and potential crashes.</li>
+                        <li>If an operation takes a long time, how should it be implemented?→As asynchronous operation.</li>
+                        <li>What are the benefits of versioning the API?→Maintain two versions of API at the same time. Deprecate the older ones gradually.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>RPC
+            <ul>
+                <li>See <a isRemReference="true" href="?isPin=false">What is RPC?</a></li>
+                <li>RPC is also referred to as  {{2550357095951522::location transparency}} since for the developer of the client application, a method executed {{0013115935288685598::locally}} or {{0013115935288685598::remotely}} looks the same. </li>
+                <li>RPC frameworks written in {{04935880065173326::different programming languages}} can talk to each other using RPC.</li>
+                <li></li>
+                <li>Explain how RPC is implemented
+                    <ul>
+                        <li>Defining interface using the interface description language (IDL) of the used framework</li>
+                        <li>Client and Server stub creation using the RPC Code Generation Tool</li>
+                        <li>The custom object types from the API are compiled into classes or structs</li>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/MfDL9OllfD-Hf390NC1F44J8okZJz1VFpBl56F88WURaH6xd5NMVXtP7ThT54xEh3ezlekQh13JW22C986vbu7fnDaa8ITPtx3lIF64LFdAHimfMxft2mGJ6et4FCOaY.png" width="738" height="394.6524064171123"/></li>
+                    </ul>
+                </li>
+                <li>Explain the steps when an RPC call is made
+                    <ul>
+                        <li>Serialization of requests</li>
+                        <li>Transport to server</li>
+                        <li>Deserialization in server</li>
+                        <li>Executing the function</li>
+                        <li>Same way back for the response from the server</li>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/PA3I5c3knKDTf2GckX-rZt4vAKmo0rFYtR25ucnm0G_Ur6TGVWWZPWAVLbyqMEGK6J4fojTEJDwGALRarDNxtzy7I1ETGrn2TL2kQ4bTly2OLqAM2HlyHC-JBqi8qtfi.png" width="738" height="362.0935828877005"/></li>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/FJffUUX7hdIefRPxtHYpo6JgNL6BfpwcgRFEa_ZfCwPTbobpF2X9kAud5ncP7oY5NfkOETAXydiPYTStxNYYlPlE_qJTy2grj7351_goSAe0icntOtAZtPOa1kz0sz21.png" width="738" height="342.3609625668449"/></li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Benefits of RPC
+                    <ul>
+                        <li>Simplified communication, calling like local methods</li>
+                        <li>Language-agnostic, supports multiple platforms</li>
+                        <li>The communication is abstracted away in a framework</li>
+                        <li>Failure in the communication results in an error or exception</li>
+                    </ul>
+                </li>
+                <li>Drawbacks of RPC
+                    <ul>
+                        <li>Slower execution (can be addressed by asynchronous calls)</li>
+                        <li>Increased complexity in error handling
+                            <ul>
+                                <li>For example, lost message, here idempotent operations can help</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>RPC is a good choice if:
+                    <ul>
+                        <li>API provided to a different company instead of an end user or web page</li>
+                        <li>Communication between different components within a large system</li>
+                        <li>Abstracting away the network communication and focusing only on the actions the client wants to perform</li>
+                    </ul>
+                </li>
+                <li>RPC is not a good fit
+                    <ul>
+                        <li>Where we don&#39;t want to abstract the network communication and want to take direct advantage of HTTP cookies or headers.</li>
+                        <li>When performance is critical and low latency is required.</li>
+                        <li>Designing a data-centric API</li>
+                        <li>All operations needed are simple CRUD (Create, Read, Update, Delete) operations.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>RPC evolves more around {{21609842486786146::actions}} and less around {{21609842486786146::data/resources}}. </li>
+                <li></li>
+                <li>Popular RPC Frameworks and Technologies
+                    <ul>
+                        <li>gRPC, developed by Google in 2015</li>
+                        <li>Apache Thrift</li>
+                        <li>Java Remote Method Invocation (RMI) </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>REST API
+            <ul>
+                <li>Define REST
+                    <ul>
+                        <li>Representational State Transfer</li>
+                        <li>Set of architectural constrains and best practices for defining APIs for the web</li>
+                        <li>It is not a standard or a protocol</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>REST API style
+                    <ul>
+                        <li>Has a {{9219326925998539::resource-oriented}} approach.</li>
+                        <li>The main abstraction to the user is a {{17754008250853182::named resource}} </li>
+                        <li>The {{6016094435663997::resources}} encapsulate different entities in our system</li>
+                        <li>REST API allows the user to manipulate {{9649929029420605::resources}} through some methods</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Explain HATEOAS
+                    <ul>
+                        <li>Hypermedia as the Engine of the Application State</li>
+                        <li>State representation to the client is done with hypermedia links</li>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/ROZHA-H8Kq33b9u4ePx8cf0MuvWgvUoS0oF2GQxTwWMk5-GzWlYF62-DBEhcBChbQQ4Qel5GqSJU4GdJ5rCsTLPcaWk--J9wXJkyHWlJKffje0LKhOazQoRwq-5q3_7z.png" width="541" height="517"/></li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Name REST API Quality Attributes
+                    <ul>
+                        <li>Stateless Server</li>
+                        <li>Server needs to define each response as cacheble or non-cacheable</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Resources
+                    <ul>
+                        <li>Each resource is {{6163657597544011::named}} and {{6163657597544011::addressed}} using a {{1639786798087911::URI (Uniform Resource Identifier)}}.</li>
+                        <li>Each resource is either a {{9763661349911776::simple}} or a {{9763661349911776::collection}} resource. </li>
+                        <li>The resources are structured {{771948070712144::hierarchically}}, using {{771948070712144::&quot;/&quot;}} to denote levels.</li>
+                        <li>Explain the difference between a simple and a collections resource→A simple resource represents a single entity with a state which can contain one or more sub-resources, while a collection resource represents a group of entities of the same type.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Best practices for naming resources
+                    <ul>
+                        <li>Naming using nouns, verbs are for actions</li>
+                        <li>Use plural nouns for collections</li>
+                        <li>Give clear and meaningful names, avoid namings like elements or objects</li>
+                        <li>Use consistent naming conventions across the API</li>
+                        <li>The resource identifiers should be unique and URL friendly</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>The REST API limits the number of methods we can perform on each resource. These are
+                    <ul>
+                        <li>Create a new resource ⇒ POST (can be made cacheable)</li>
+                        <li>Updating an existing resource ⇒ PUT (idempotent)</li>
+                        <li>Deleting an existing resource ⇒ DELETE (idempotent)</li>
+                        <li>Getting the current state of the resource ⇒ GET (doesn&#39;t change state, idempotent, considered cacheable by default)</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>REST API Definition - Step-by-step process:
+                    <ul>
+                        <li>Identifying entities
+                            <ul>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/T77FhFt1dZL-i4rg333Eid1jV6PrhMvuWGRBIVZHidF3yseFwWkwtZoT4t9C7v-FkE21tqB9sMyEoKRNh28N5ZB9YiMwQLgEOMXsezTSp6XiiiU7j-0WYtsmwogGfihy.png" width="714" height="348.12430939226516"/></li>
+                            </ul>
+                        </li>
+                        <li>Mapping entities to URIs
+                            <ul>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/J_atNqJugs_cX6jJlDdLP5koEEVCPfvyOyM9UamymXIdZ-sWMNGVqlNhFCWY0xmY--LDTSR-P9WDfkz6W0wI5ad-olcVD933PwCfSVh4yW0cN6Kbik8r8_DGBTn6X2Gm.png" width="714" height="364.88950276243094"/></li>
+                            </ul>
+                        </li>
+                        <li>Defining Resources Representations
+                            <ul>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/nCO0GUXtXekNioo3Qjn7T277TQF78X6mT_3T9AIXQEICmLEbZTwWmDsPlRmOikfSWwCn5IzTz1mpHqGhk_PNj3qLbbouK6vYuSjaXtU1cshZUo1j7VKKq9RPHa2d1asF.png" width="609" height="525"/></li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/Xz9W3d0qCdQVgXGc9PM1fxehZR-ozjUb4C2O_muv9sSK7REfOiQtiJwPNsHRR75HTrW69u3pbjKxjyCU26Ern4ULYCV9Ohntp6r_atqhg1J1ZNii1sStOPGOv0NWk_ec.png" width="667" height="490"/></li>
+                            </ul>
+                        </li>
+                        <li>Assigning HTTP Methods to Operation on Resources
+                            <ul>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/LBUv-a8Y3TC4ZpODgrFHT4ltezGhrwIVXHc694uZHX_hwXONGjw0a2ui1aeHcK8kiroRcl6fis1Q8hgHd4xujpw9P4jI35q3BVnVrfs19ER2TYy_bAB7W5HNwEy1pQ9V.png" width="714" height="304.73204419889504"/></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

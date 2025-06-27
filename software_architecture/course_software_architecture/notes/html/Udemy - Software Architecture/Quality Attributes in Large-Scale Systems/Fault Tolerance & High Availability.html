@@ -1,0 +1,126 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Fault Tolerance &amp; High Availability
+    </h1>
+    <br/>
+    <ul>
+        <li>Name categories of possible failures
+            <ul>
+                <li>Human Error</li>
+                <li>Software errors</li>
+                <li>Hardware failures</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>{{86530972771862::Fault Tolerance}} is the best way to achieve {{4228552968818111::High Availability}}  in our system.</li>
+        <li></li>
+        <li>Define Fault Tolerance→Fault Tolerance enables our system to remain operational and available to the users despite failures within one or multiple components.</li>
+        <li></li>
+        <li>When failures happen, a fault-tolerant system will
+            <ul>
+                <li>Continue operating at the same/reduced level of performance</li>
+                <li>Prevent the system from becoming unavailable</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Fault Tolerance revolves around 3 major tactics
+            <ul>
+                <li>Failure Prevention</li>
+                <li>Failure Detection and Isolation</li>
+                <li>Recovery from failure</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Failure Prevention
+            <ul>
+                <li>To prevent our entire system from going down, {{6969835233874987::eliminate any Single Point of Failure}} in our system. The best way to eliminate this is through {{37802493256492053::Replication and Redundancy}} .</li>
+                <li>Examples for Single Point of Failure
+                    <ul>
+                        <li>One server where the application runs</li>
+                        <li>Storing all data in one instance of our database that runs on a single computer</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Types of Redundancy
+            <ul>
+                <li>Name two→Spatial and Time Redundancy</li>
+                <li>Define Spatial Redundancy→Running replicas of our application on different computers</li>
+                <li>Define Time Redundancy→Repeating the same operation/request multiple times until we succeed/give up</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Strategies for Redundancy and Replication
+            <ul>
+                <li>Name two strategies
+                    <ul>
+                        <li>Active-Active architecture</li>
+                        <li>Active-Passive architecture</li>
+                    </ul>
+                </li>
+                <li>Active-Active architecture
+                    <ul>
+                        <li>Describe→All replicas are synchronized with each other, such that a failure replica can be replaced by any other.</li>
+                        <li>Advantages?
+                            <ul>
+                                <li>Load is spread among all the replicas ⇒identical to horizontal scalability</li>
+                                <li>Allows more traffic, better performance</li>
+                            </ul>
+                        </li>
+                        <li>Disadvantage?
+                            <ul>
+                                <li>Additional coordination for synchronization</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Active-Passive architecture
+                    <ul>
+                        <li>Describe→Active-passive architecture has one active replica handling all requests and (multiple) passive replica following the active one by taking periodic snapshots.</li>
+                        <li>Advantage?
+                            <ul>
+                                <li>Implementation is easier, since there is a clear leader</li>
+                            </ul>
+                        </li>
+                        <li>Disadvantage?
+                            <ul>
+                                <li>Ability to scale the system is lost</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Failure Detection and Isolation
+            <ul>
+                <li>How to detect failures?→Using a monitoring service which sends health checks or gets heartbeats to/from each instance/client. Detected failures are isolated and don&#39;t get requests any longer.</li>
+                <li>Why are false negatives in the monitoring service problematic?→False negatives mask actual failures, hindering timely responses and potentially leading to cascading system failures.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Recovery from failure
+            <ul>
+                <li>Possible actions after detecting a failure
+                    <ul>
+                        <li>Stop sending traffic/workload to the host</li>
+                        <li>Restart the host</li>
+                        <li>Rollback, going back to a stable version</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

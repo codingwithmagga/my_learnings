@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Non-Relational Databases
+    </h1>
+    <br/>
+    <ul>
+        <li>What is the main difference between relational and non-relational databases?→Relational databases use structured tables with predefined schemas, while non-relational databases use flexible schemas and various data models.</li>
+        <li>Relational databases are designed for {{9804230400272547::efficient storage}} and non-relational databases are designed for {{9804230400272547::faster queries}}. </li>
+        <li>What are the trade-offs of using a flexible schema in non-relational databases?
+            <ul>
+                <li>Loose the ability to easily analyze the records, also multiple groups (join operations) becomes hard</li>
+                <li>ACID transaction are rarely supported</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>What are the three main types of non-relational databases?
+            <ul>
+                <li>Document store</li>
+                <li>Key-value stores</li>
+                <li>Graph database</li>
+            </ul>
+        </li>
+        <li>Explain the concept of a key value store database→A key-value store database stores data as key-value pairs, offering fast read and write operations. The type of value can be simple or complex. It can be seen as a large-scale hash table or dictionary.</li>
+        <li>Explain the concept of a document store database→A document store database stores data in flexible, self-contained documents. Each document is an object with different attributes of different types. These documents can be easily mapped to objects in a programming language.</li>
+        <li>Explain the concept of graph databases→A graph database is an extension of a document store and stores data as nodes and edges, representing relationships between data points.</li>
+        <li>Name use cases for a graph database
+            <ul>
+                <li>Fraud detection: The same person uses multiple logical users to initiate multiple transactions</li>
+                <li>Recommendation engines: Recommendation of new products based on purchase history or friends of the user.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>When to choose a non-relational database?
+            <ul>
+                <li>Caching Task</li>
+                <li>Handling real-time big data</li>
+                <li>Unstructured data, different records can contain different attributes</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Non-Relational Databases - Solutions
+            <ul>
+                <li>Key/Value Stores Examples
+                    <ul>
+                        <li>Redis</li>
+                        <li>Aerospike</li>
+                        <li>Amazon DynamoDB</li>
+                    </ul>
+                </li>
+                <li>Document Store Examples
+                    <ul>
+                        <li>Cassandra</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </li>
+                <li>Graph Databases Examples
+                    <ul>
+                        <li>Amazon Neptune</li>
+                        <li>NEO4J</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

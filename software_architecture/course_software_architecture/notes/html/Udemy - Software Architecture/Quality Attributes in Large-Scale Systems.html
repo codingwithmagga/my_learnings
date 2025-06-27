@@ -1,0 +1,407 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Quality Attributes in Large-Scale Systems
+    </h1>
+    <br/>
+    <ul>
+        <li>Performance
+            <ul>
+                <li>Response time (also called End to End Latency)
+                    <ul>
+                        <li>Definition→Time between a client sending a request and receiving a response</li>
+                        <li>Broken in two parts, name them→Processing time + Waiting time</li>
+                        <li>Define Processing Time→Time spent in our system actively processing the request and building/sending the response.</li>
+                        <li>Define waiting time (latency)→Duration of time request/response spends inactively in our system, for example waiting in a queue for processing</li>
+                        <li>What should be considered when measuring the response time?
+                            <ul>
+                                <li>Don&#39;t forget the waiting time!</li>
+                                <li>Calculate the x-th Percentile Distribution
+                                    <ul>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/ASX9sdX14bjk3n4BtwFnM9cS-5rUJ4s0nOcb1C-6O0nFVHIRJT0GHUzz6iACZsjcQjNgwoqI2M9r-yKn7TSZMuVfXwLZN1gtvQp2fX8op7Mmcs0psUCF2iClaPRQCiZs.png" width="714" height="422.08839779005524"/></li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/AyXvzbjQSv5lSkhbGPjf7rm3QLEc3cE32FakniI2ahwH03-4-741LH3VEmaFI7ot1x9RdivtxHHcssRjL351R_BkgTVl6_8BGBC55RrPxA2zhc1GsrsRuRiYtjTy8Ecz.png" width="393" height="199.75690607734805"/></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><svg width="738" height="369" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <image href="https://remnote-user-data.s3.amazonaws.com/NNGSsQ_wIKcd-XoTzHU0hcPGN27NUEPA3uZ1-g1AHo0JB45hkg2-dHxZj5_QgPJNzLnwV-fR4TM8SKvipMJuDpIGzoSTvr6tdmiT9vMANt7S8X1SbENK8sQUC9jPikDv.png" x="0" y="0" height="369px" width="738px"/>
+        <rect x="442.77571207034" y="80.27283053953366" width="92.44734290295688" height="24.59190402344666" clozeId="8110290028376367" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/>
+        </svg></li>
+                        <li>Tail Latency
+                            <ul>
+                                <li>Definition→The small percentage of response times from a system, that take the longest in comparison to the rest of values.</li>
+                            </ul>
+                        </li>
+                        <li>How should goals regarding the response time of a service be defined?→Define them using percentiles. For example: 30ms at 95th percentile of response time.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Throughput
+                    <ul>
+                        <li>Definition→Amount of work performed/data processed by our system per unit of time. Measured in tasks per second or bytes per second.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Performance degradation
+                    <ul>
+                        <li>Define→Performance degradation is a decrease in a system&#39;s speed, responsiveness, or efficiency.</li>
+                        <li>Name potential overly utilized resources
+                            <ul>
+                                <li>High CPU utilization</li>
+                                <li>High memory consumption</li>
+                                <li>Too many connections/IO </li>
+                                <li>Message queue is at capacity</li>
+                            </ul>
+                        </li>
+                        <li><svg width="742" height="355.2127659574468" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <image href="https://remnote-user-data.s3.amazonaws.com/2q3xJtR4pdC2D4k0MvIMZpfzx91ju77K8Wwml8iOfZzjyuhRZkYwoWyViIlgQndWvchwY_rADMKZHppnXrQyNVE7rvq2kITlkusoIO-YilFjKSFng1s1qmvrS1FjOPWw.png" x="0" y="0" height="355.2127659574468px" width="742px"/>
+        <rect x="86.51243234660977" y="53.16208678960715" width="169.2021588816774" height="24.54983749404792" clozeId="6024617947783599" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/><rect x="87.82747503221867" y="184.240683409613" width="170.07885400541664" height="28.933737046556505" clozeId="6024617947783599" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/>
+        </svg></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Scalability
+            <ul>
+                <li>Definition?→The measure of a system&#39;s ability to handle a growing amount of work, in an easy and cost-effective way, by adding resources to the system.</li>
+                <li>Motivation→Load/Traffic changes over time, for example at global events, weather, day/night cycle etc.</li>
+                <li>Name three types of scalability
+                    <ul>
+                        <li>Vertical scalability (Scale Up)</li>
+                        <li>Horizontal scalability (Scale Out)</li>
+                        <li>Team/Organization scalability </li>
+                    </ul>
+                </li>
+                <li>The three types of scalability (vertical, horizontal, team) are {{9846830753555955::orthogonal}} to each other, which means that each part can be {{9846830753555955::increased/decreased separately}} </li>
+                <li>Vertical Scalability
+                    <ul>
+                        <li>Definition→Adding resources or upgrading the existing resources on a single computer, to allow our system to handle higher traffic or load.</li>
+                        <li>Pros?
+                            <ul>
+                                <li>Any application can benefit from it, no code changes are required</li>
+                                <li>Migration between different machines is easy</li>
+                            </ul>
+                        </li>
+                        <li>Cons?
+                            <ul>
+                                <li>The scope of upgrade is limited</li>
+                                <li>Locked to a centralized system, which cannot provide high availability and fault tolerance</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Horizontal Scalability
+                    <ul>
+                        <li>Definition→Adding more resources in a form of new instance running on different machines, to allow our system to handle higher traffic or load.</li>
+                        <li>Pros?
+                            <ul>
+                                <li>No limit on scalability</li>
+                                <li>Easy to add/remove machines</li>
+                                <li>If designed correctly, we get: High Availability and fault tolerance</li>
+                            </ul>
+                        </li>
+                        <li>Disadvantages?
+                            <ul>
+                                <li>Initial code changes may be required</li>
+                                <li>Increased complexity, coordination overhead</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Team/Organization scalability 
+                    <ul>
+                        <li>Hiring engineers can increase productivity up to some point, then we observe productivity degradation. 
+                            <ul>
+                                <li>What are the possible reasons for that?
+                                    <ul>
+                                        <li>Many crowded meetings</li>
+                                        <li>Code merge conflicts</li>
+                                        <li>Business complexity - longer ramp up time</li>
+                                        <li>Testing is harder and slower</li>
+                                        <li>Releases become very risky</li>
+                                    </ul>
+                                </li>
+                                <li>What are the options to solve this problem?
+                                    <ul>
+                                        <li>Separate code in different modules of the same service</li>
+                                        <li>Separate product in multiple services</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Software architecture impacts {{5777233769681221::engineering velocity (team productivity)}}</li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Availability
+            <ul>
+                <li>Availability is an important attribute since it has the greatest impact on {{23735507385300725::our users}} and {{23735507385300725::our business}} . Downtime can result in a loss of {{23735507385300725::money }}  and {{23735507385300725::customers}} .</li>
+                <li>Definition→The fraction of time/probability that our service is operationally functional and accessible to the user.</li>
+                <li>Uptime↔Time that our system is operationally functional and accessible to the user.</li>
+                <li>Downtime::Time that our system is unavailable to the user.</li>
+                <li>How is it measured?→Uptime / (Uptime + Downtime) or MTBF / (MTBF + MTTR)</li>
+                <li>MTBF 
+                    <ul>
+                        <li>Define
+                            <ul>
+                                <li>Mean Time between failures</li>
+                                <li>Represents the average time our system is operational</li>
+                            </ul>
+                        </li>
+                        <li>When is it useful
+                            <ul>
+                                <li>Dealing with multiple pieces of hardware</li>
+                                <li>Each component has its own operational shelf life</li>
+                                <li>Not using a cloud/third-party API with a given uptime and availability</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>MTTR
+                    <ul>
+                        <li>Define
+                            <ul>
+                                <li>Mean Time to Recovery</li>
+                                <li>Time average it takes us to detect and recover from failure</li>
+                                <li>Average downtime of our system</li>
+                            </ul>
+                        </li>
+                        <li>{{2230956265021684::Detectability}}  and {{2230956265021684::fast recovery}}  can help us achieve {{5604183426383246::high availability}} </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>When do we have high availability (at which value/percentile)?
+                    <ul>
+                        <li>No strict definition, but the industry standard set by cloud vendors is typically 99.9% or higher</li>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/pu1NTAKYJ1qiKUBrpRsqwpbEorMllbXpQnftlZcofRC-bvR4ECysuZ1_d7vAgM8uTJoGNwl5hoNsgrrL8G5sSkip4KJGTj-I8c7fDeyL7YALfo6vfu4NXJzvuMHJUZiK.png" width="365.9038461538461" height="134.13314567556793"/></li>
+                    </ul>
+                </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Fault Tolerance &amp; High Availability
+            <ul>
+                <li>Name categories of possible failures
+                    <ul>
+                        <li>Human Error</li>
+                        <li>Software errors</li>
+                        <li>Hardware failures</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>{{86530972771862::Fault Tolerance}} is the best way to achieve {{4228552968818111::High Availability}}  in our system.</li>
+                <li></li>
+                <li>Define Fault Tolerance→Fault Tolerance enables our system to remain operational and available to the users despite failures within one or multiple components.</li>
+                <li></li>
+                <li>When failures happen, a fault-tolerant system will
+                    <ul>
+                        <li>Continue operating at the same/reduced level of performance</li>
+                        <li>Prevent the system from becoming unavailable</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Fault Tolerance revolves around 3 major tactics
+                    <ul>
+                        <li>Failure Prevention</li>
+                        <li>Failure Detection and Isolation</li>
+                        <li>Recovery from failure</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Failure Prevention
+                    <ul>
+                        <li>To prevent our entire system from going down, {{6969835233874987::eliminate any Single Point of Failure}} in our system. The best way to eliminate this is through {{37802493256492053::Replication and Redundancy}} .</li>
+                        <li>Examples for Single Point of Failure
+                            <ul>
+                                <li>One server where the application runs</li>
+                                <li>Storing all data in one instance of our database that runs on a single computer</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Types of Redundancy
+                    <ul>
+                        <li>Name two→Spatial and Time Redundancy</li>
+                        <li>Define Spatial Redundancy→Running replicas of our application on different computers</li>
+                        <li>Define Time Redundancy→Repeating the same operation/request multiple times until we succeed/give up</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Strategies for Redundancy and Replication
+                    <ul>
+                        <li>Name two strategies
+                            <ul>
+                                <li>Active-Active architecture</li>
+                                <li>Active-Passive architecture</li>
+                            </ul>
+                        </li>
+                        <li>Active-Active architecture
+                            <ul>
+                                <li>Describe→All replicas are synchronized with each other, such that a failure replica can be replaced by any other.</li>
+                                <li>Advantages?
+                                    <ul>
+                                        <li>Load is spread among all the replicas ⇒identical to horizontal scalability</li>
+                                        <li>Allows more traffic, better performance</li>
+                                    </ul>
+                                </li>
+                                <li>Disadvantage?
+                                    <ul>
+                                        <li>Additional coordination for synchronization</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Active-Passive architecture
+                            <ul>
+                                <li>Describe→Active-passive architecture has one active replica handling all requests and (multiple) passive replica following the active one by taking periodic snapshots.</li>
+                                <li>Advantage?
+                                    <ul>
+                                        <li>Implementation is easier, since there is a clear leader</li>
+                                    </ul>
+                                </li>
+                                <li>Disadvantage?
+                                    <ul>
+                                        <li>Ability to scale the system is lost</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Failure Detection and Isolation
+                    <ul>
+                        <li>How to detect failures?→Using a monitoring service which sends health checks or gets heartbeats to/from each instance/client. Detected failures are isolated and don&#39;t get requests any longer.</li>
+                        <li>Why are false negatives in the monitoring service problematic?→False negatives mask actual failures, hindering timely responses and potentially leading to cascading system failures.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Recovery from failure
+                    <ul>
+                        <li>Possible actions after detecting a failure
+                            <ul>
+                                <li>Stop sending traffic/workload to the host</li>
+                                <li>Restart the host</li>
+                                <li>Rollback, going back to a stable version</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>SLA, SLO, SLI
+            <ul>
+                <li>SLA
+                    <ul>
+                        <li>Describe
+                            <ul>
+                                <li>Service-Level Agreement</li>
+                                <li>A legal contract that represents the quality service of a system like:
+                                    <ul>
+                                        <li>Availability</li>
+                                        <li>Performance</li>
+                                        <li>Data durability</li>
+                                        <li>Time to respond to system failures</li>
+                                    </ul>
+                                </li>
+                                <li>States Penalties and financial consequences if the contract is breached:
+                                    <ul>
+                                        <li>Full/Partial refunds</li>
+                                        <li>Subscription/License extensions</li>
+                                        <li>Service credits</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>For whom do they exist
+                            <ul>
+                                <li>External paying users (always)</li>
+                                <li>Free external users (sometimes), for example for free trial periods</li>
+                                <li>Internal users (occasionally), for example if an internal service relies on us which has external users</li>
+                            </ul>
+                        </li>
+                        <li>SLAs are crafted by {{5734860765056793::the business and the legal team}}.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>SLO
+                    <ul>
+                        <li>Describe
+                            <ul>
+                                <li>Service-Level Objectives</li>
+                                <li>Individuals goals set for the system</li>
+                                <li>Quantifiable targets for service performance</li>
+                            </ul>
+                        </li>
+                        <li>Example
+                            <ul>
+                                <li>Availability SLO of 99.9%</li>
+                                <li>Response time SLO of less than 100 milliseconds at 90th percentile</li>
+                                <li>Issue Resolution SLO of 24–48 hours.</li>
+                            </ul>
+                        </li>
+                        <li>Relationship between SLA and SLO?→The SLA units all SLOs in a single document.</li>
+                        <li>SLO represents the {{0043315109755514::target values}} for the {{3787337921352477::important quality attributes}}.</li>
+                        <li>How should SLOs be determined?
+                            <ul>
+                                <li>Take metrics which the users care about the most</li>
+                                <li>Define SLOs around those metrics</li>
+                                <li>Determine SLIs to track those SLOs</li>
+                                <li>Don&#39;t measure every single possible SLI in a system and define an SLO for it! Fewer SLOs are better.</li>
+                                <li>Be realistic, left room for errors. For example, 99.9% availability instead of 99.99%. The higher one can be used internally as commitment.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>SLI
+                    <ul>
+                        <li>Describe
+                            <ul>
+                                <li>Service Level Indicators</li>
+                                <li>Quantitative Measure of our compliance with a SLO</li>
+                                <li>Actual numbers measured by a monitoring service or calculated from logs.</li>
+                                <li>They can later be compared to the SLOs</li>
+                            </ul>
+                        </li>
+                        <li>Why is it important that quality attributes are testable and measurable?→If they weren&#39;t measurable, it would not be possible to find any SLI to validate the SLOs. If we can&#39;t prove the SLOs, we can&#39;t say that we meet the SLA.</li>
+                        <li>SLOs and SLIs are defined and set by {{15220889699895945::the software engineers and architects}}.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Create a recovery plan for when the SLIs show that we are not meeting our SLOs.
+                    <ul>
+                        <li>So we need to decide ahead of time what to do if:
+                            <ul>
+                                <li>The system went down for a long time.</li>
+                                <li>Performance degrades</li>
+                                <li>Reports about issues/bugs in the system.</li>
+                            </ul>
+                        </li>
+                        <li>What should the plan include?
+                            <ul>
+                                <li>Automatic alerts to engineer/DevOps</li>
+                                <li>Automatic failovers/restarts/rollbacks/auto-scaling policies</li>
+                                <li>Predefined handbooks on what to do in certain situations</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

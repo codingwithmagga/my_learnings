@@ -1,0 +1,26 @@
+- System requirements Motivation
+    - Define "System Requirements"→System requirements are a format description of what a system must do and the constraints under which it must operate.
+    - Differences to requirements for a small unit (method/function) >>>
+        - Big scope and high level of abstraction
+        - High level of ambiguity (Non-precise or non-technical requirements, getting requirements is part of the solution)
+    - Why is getting the correct requirements important?→Large-scale systems are big projects that cannot be easily changed. They need many engineers and months of work, also there may be additional hard- and software costs.
+- 
+- System requirements Classification
+    - Name the three types of requirements >>>
+        - Features of the system (functional requirements)
+        - Quality Attributes (non-function requirements)
+        - System constraints (limitation and boundaries)
+    - How are the system requirements also often called?→Architectural Drivers
+    - Functional requirements
+        - Define→Functional requirements, describe what a system should do. They are strongly related to the objective of our system. "The system must do ...". They do not determine the architecture, each functional requirement can be fulfilled with any architecture.  
+    - Non-Functional requirements
+        - Define→Non-functional requirements describe system attributes like performance, security, and scalability. "The system must have ...". These requirements dictate the software architecture of the system. 
+    - System constraints
+        - Define→A system constraint is a necessary condition for developing the system. Like time, financial or staffing constraints. It is essentially a decision that was already either fully or partially made for us, restricting our degrees of freedom.
+    - Which type of requirement is this:
+        - When a rider logs into the service mobile app, the system must display a map with nearby drivers within a 5-mile radius→That's a functional requirement.
+        - When a ride is completed, the system will charge the rider's credit card and credit the driver, minus service fees.→That's a functional requirement.
+        - The website should load pages within 100ms→That's a non-functional requirement.
+        - The program should run on different operating systems without changes in performance→That's a non-functional requirement specifying portability and performance consistency across operating systems.
+        - The budget for the project is €5.000→That's a system constraint.
+        - The project has to be finished by the end of the year.→That's a system constraint.

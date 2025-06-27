@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Introduction to System Design &amp; Architectural Drivers
+    </h1>
+    <br/>
+    <ul>
+        <li>System requirements Motivation
+            <ul>
+                <li>Define &quot;System Requirements&quot;→System requirements are a format description of what a system must do and the constraints under which it must operate.</li>
+                <li>Differences to requirements for a small unit (method/function)
+                    <ul>
+                        <li>Big scope and high level of abstraction</li>
+                        <li>High level of ambiguity (Non-precise or non-technical requirements, getting requirements is part of the solution)</li>
+                    </ul>
+                </li>
+                <li>Why is getting the correct requirements important?→Large-scale systems are big projects that cannot be easily changed. They need many engineers and months of work, also there may be additional hard- and software costs.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>System requirements Classification
+            <ul>
+                <li>Name the three types of requirements
+                    <ul>
+                        <li>Features of the system (functional requirements)</li>
+                        <li>Quality Attributes (non-function requirements)</li>
+                        <li>System constraints (limitation and boundaries)</li>
+                    </ul>
+                </li>
+                <li>How are the system requirements also often called?→Architectural Drivers</li>
+                <li>Functional requirements
+                    <ul>
+                        <li>Define→Functional requirements, describe what a system should do. They are strongly related to the objective of our system. &quot;The system must do ...&quot;. They do not determine the architecture, each functional requirement can be fulfilled with any architecture.  </li>
+                    </ul>
+                </li>
+                <li>Non-Functional requirements
+                    <ul>
+                        <li>Define→Non-functional requirements describe system attributes like performance, security, and scalability. &quot;The system must have ...&quot;. These requirements dictate the software architecture of the system. </li>
+                    </ul>
+                </li>
+                <li>System constraints
+                    <ul>
+                        <li>Define→A system constraint is a necessary condition for developing the system. Like time, financial or staffing constraints. It is essentially a decision that was already either fully or partially made for us, restricting our degrees of freedom.</li>
+                    </ul>
+                </li>
+                <li>Which type of requirement is this:
+                    <ul>
+                        <li>When a rider logs into the service mobile app, the system must display a map with nearby drivers within a 5-mile radius→That&#39;s a functional requirement.</li>
+                        <li>When a ride is completed, the system will charge the rider&#39;s credit card and credit the driver, minus service fees.→That&#39;s a functional requirement.</li>
+                        <li>The website should load pages within 100ms→That&#39;s a non-functional requirement.</li>
+                        <li>The program should run on different operating systems without changes in performance→That&#39;s a non-functional requirement specifying portability and performance consistency across operating systems.</li>
+                        <li>The budget for the project is €5.000→That&#39;s a system constraint.</li>
+                        <li>The project has to be finished by the end of the year.→That&#39;s a system constraint.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+- Introduction to System Design & Architectural Drivers
+    - System requirements Motivation
+        - Define "System Requirements"→System requirements are a format description of what a system must do and the constraints under which it must operate.
+        - Differences to requirements for a small unit (method/function) >>>
+            - Big scope and high level of abstraction
+            - High level of ambiguity (Non-precise or non-technical requirements, getting requirements is part of the solution)
+        - Why is getting the correct requirements important?→Large-scale systems are big projects that cannot be easily changed. They need many engineers and months of work, also there may be additional hard- and software costs.
+    - 
+    - System requirements Classification
+        - Name the three types of requirements >>>
+            - Features of the system (functional requirements)
+            - Quality Attributes (non-function requirements)
+            - System constraints (limitation and boundaries)
+        - How are the system requirements also often called?→Architectural Drivers
+        - Functional requirements
+            - Define→Functional requirements, describe what a system should do. They are strongly related to the objective of our system. "The system must do ...". They do not determine the architecture, each functional requirement can be fulfilled with any architecture.  
+        - Non-Functional requirements
+            - Define→Non-functional requirements describe system attributes like performance, security, and scalability. "The system must have ...". These requirements dictate the software architecture of the system. 
+        - System constraints
+            - Define→A system constraint is a necessary condition for developing the system. Like time, financial or staffing constraints. It is essentially a decision that was already either fully or partially made for us, restricting our degrees of freedom.
+        - Which type of requirement is this:
+            - When a rider logs into the service mobile app, the system must display a map with nearby drivers within a 5-mile radius→That's a functional requirement.
+            - When a ride is completed, the system will charge the rider's credit card and credit the driver, minus service fees.→That's a functional requirement.
+            - The website should load pages within 100ms→That's a non-functional requirement.
+            - The program should run on different operating systems without changes in performance→That's a non-functional requirement specifying portability and performance consistency across operating systems.
+            - The budget for the project is €5.000→That's a system constraint.
+            - The project has to be finished by the end of the year.→That's a system constraint.
+- Feature Requirements - Step-by-Step Process
+    - How should requirements of a system gathered→By creating Use Cases and User flows. Just asking the client to describe everything they need is (for complex systems) not a suitable approach.
+    - Use Case
+        - Describe?→A use case describes a specific situation or scenario in which the system is used.
+    - User Flow
+        - Describe→A Step-By-Step or graphical representation of a Use Case
+        - What is a sequence diagram?→A sequence diagram is a visual representation of the interactions between objects in a system over time. Part of the Unified Model Language (UML).
+        - Standard language for visualizing system design?→Unified Modeling Language (UML).
+    - Name the required steps to gather the requirements >>>
+        - Identify all the actors/users in the system
+        - Capture and describe all the possible use-cases/scenarios
+        - User Flow - Expand each use case through a flow of events
+            - Each event contains the Action and the Data
+    - 
+    - Example: Hitchhiking Services
+        - Allow people to join drivers on a route, who are willing to take passengers for a fee.
+        - Actors: Drivers and Passengers
+        - Possible Use Cases:
+            - Rider first time registration
+            - Driver registration
+            - Rider login
+            - Driver login
+            - Successful match and ride
+            - Unsuccessful ride
+        - Example: Successful Match and Ride 
+            - ![](https://remnote-user-data.s3.amazonaws.com/A5dIJPTfqky3uUzP4oTDmOCYey3qkq4vcA1uuiNi2Ig0CvD9uyoxkWIDlJ29BuZDvBxhvEDJhr5h9Qc45E7z0lEBi8gWM2esOhgujJd1b8pnXG-wDz9Kcu6aYX36aIwK.png)
+            - ![](https://remnote-user-data.s3.amazonaws.com/SHsDrQ0JhFC7qyFaUUe6iUw3Qa7qG3bpl4aYm3pdmow1vzip8N3RB2pnLuBGf4UvnozN5h2FfcdBVHLmHdcNLHk0XlSuOwUr9RSKfHpNJrifipeULh4ljZYYFa4gCyJo.png)
+    - 
+- System Quality Attributes Requirements
+    - Systems are frequently redesigned, not because of functional requirements
+        - Name reasons why systems are often redesigned >>>
+            - Improving performance
+            - Better scaleability
+            - Enhancing security
+            - Hard to maintain
+            - Slow to develop
+            - 
+    - 
+    - Quality attributes 
+        - Motivation and definition
+            - {{Quality attributes}} are also called {{non-functional requirements}} 
+            - They describe >>>
+                - The qualities of the functional requirements
+                - The overall properties of the system
+            - They provide a {{quality measure}} on how well our system performs on a {{particular dimension}} 
+            - This can also be a requirement for the developing team, for example deploying a new version twice a week.
+        - Considerations
+            - Quality attributes need to be {{measurable}}  and {{testable}} 
+            - Would it be possible to build a single software architecture that can provide all quality attributes?→No, there are certain quality attributes which contradict one another, which means some combinations of quality attributes are very hard or even impossible to achieve. Software architects need to make the right tradeoff when designing a system.
+            - 
+            - 
+    - 
+- System Constraints in Software Architecture
+    - System constraints
+        - Why are system constraints often referred to as pillars for software architecture? >>>
+            - They provide a solid starting point
+            - The rest of the system need to be designed around them
+        - Name different types >>>
+            - Technical constraints
+            - Business constraints
+            - Regulatory/legal constraints
+        - Examples for technical constraints? >>>
+            - Being locked to a particular hardware/cloud vendor
+            - Having to use a particular programming language
+            - Having to use a particular database or technology
+            - Having to support certain platforms, browsers, or OS
+        - Examples for business constraints >>>
+            - Limited budget
+            - Strict deadline
+        - Example for regulatory/legal constraints→Data protection in different countries
+        - What should be considered at these constraints? >>>
+            - Any given constraint shouldn't be taken lightly
+            - Use loosely coupled architecture
+    - 

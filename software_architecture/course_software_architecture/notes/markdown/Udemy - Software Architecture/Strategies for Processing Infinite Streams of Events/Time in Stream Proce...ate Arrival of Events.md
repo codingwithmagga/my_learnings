@@ -1,0 +1,19 @@
+- Types of Timestamps in Event-Stream Processing
+    - Event time::Time when the event happened.
+    - Application Time / Arrival Time::Time when the event is consumed by the application/consumer microservice
+    - Processing Time::Time when the event read/parsed/processed by the consumer microservice.
+- 
+- When to use arrival time? >>>
+    - We don't care about "when the event actually happened".
+    - Need to act in real-time
+    - We don't know/trust the event time
+    - For example, for monitoring or altering purposes.
+- 
+- When to use event time? >>>
+    - When accurate correlation or ordering of the events is required
+    - For example, analyzing trends in the stock market
+- 
+- Name options for handling late arrival of events![](https://remnote-user-data.s3.amazonaws.com/m12-jWU6NaPkliVg3tMc9rDGqp7x3f61qPDKDoZs9H1IsXfxDpyNr4PusX6i1Nkg4ztv3-Xu_Rbt779z-YUfJdDR3fX-xO0Dc-Yh2B5OKWar5Wx6fO5H_Qq2du9i0JWb.png) >>>
+    - Discard the event
+    - End Window after a grace period, even later events are discarded
+    - Watermarking, adapting grace period depending on the arrived event with the latest event time

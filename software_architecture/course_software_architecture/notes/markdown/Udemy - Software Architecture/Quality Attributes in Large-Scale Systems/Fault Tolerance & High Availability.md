@@ -1,0 +1,56 @@
+- Name categories of possible failures >>>
+    - Human Error
+    - Software errors
+    - Hardware failures
+- 
+- {{Fault Tolerance}} is the best way to achieve {{High Availability}}  in our system.
+- 
+- Define Fault Tolerance→Fault Tolerance enables our system to remain operational and available to the users despite failures within one or multiple components.
+- 
+- When failures happen, a fault-tolerant system will >>>
+    - Continue operating at the same/reduced level of performance
+    - Prevent the system from becoming unavailable
+- 
+- Fault Tolerance revolves around 3 major tactics >>>
+    - Failure Prevention
+    - Failure Detection and Isolation
+    - Recovery from failure
+- 
+- Failure Prevention
+    - To prevent our entire system from going down, {{eliminate any Single Point of Failure}} in our system. The best way to eliminate this is through {{Replication and Redundancy}} .
+    - Examples for Single Point of Failure >>>
+        - One server where the application runs
+        - Storing all data in one instance of our database that runs on a single computer
+- 
+- Types of Redundancy
+    - Name two→Spatial and Time Redundancy
+    - Define Spatial Redundancy→Running replicas of our application on different computers
+    - Define Time Redundancy→Repeating the same operation/request multiple times until we succeed/give up
+- 
+- Strategies for Redundancy and Replication
+    - Name two strategies >>>
+        - Active-Active architecture
+        - Active-Passive architecture
+    - Active-Active architecture
+        - Describe→All replicas are synchronized with each other, such that a failure replica can be replaced by any other.
+        - Advantages? >>>
+            - Load is spread among all the replicas ⇒identical to horizontal scalability
+            - Allows more traffic, better performance
+        - Disadvantage? >>>
+            - Additional coordination for synchronization
+    - Active-Passive architecture
+        - Describe→Active-passive architecture has one active replica handling all requests and (multiple) passive replica following the active one by taking periodic snapshots.
+        - Advantage? >>>
+            - Implementation is easier, since there is a clear leader
+        - Disadvantage? >>>
+            - Ability to scale the system is lost
+- 
+- Failure Detection and Isolation
+    - How to detect failures?→Using a monitoring service which sends health checks or gets heartbeats to/from each instance/client. Detected failures are isolated and don't get requests any longer.
+    - Why are false negatives in the monitoring service problematic?→False negatives mask actual failures, hindering timely responses and potentially leading to cascading system failures.
+- 
+- Recovery from failure
+    - Possible actions after detecting a failure >>>
+        - Stop sending traffic/workload to the host
+        - Restart the host
+        - Rollback, going back to a stable version

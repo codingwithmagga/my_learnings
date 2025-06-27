@@ -1,0 +1,54 @@
+- SLA
+    - Describe >>>
+        - Service-Level Agreement
+        - A legal contract that represents the quality service of a system like:
+            - Availability
+            - Performance
+            - Data durability
+            - Time to respond to system failures
+        - States Penalties and financial consequences if the contract is breached:
+            - Full/Partial refunds
+            - Subscription/License extensions
+            - Service credits
+    - For whom do they exist >>>
+        - External paying users (always)
+        - Free external users (sometimes), for example for free trial periods
+        - Internal users (occasionally), for example if an internal service relies on us which has external users
+    - SLAs are crafted by {{the business and the legal team}}.
+- 
+- SLO
+    - Describe >>>
+        - Service-Level Objectives
+        - Individuals goals set for the system
+        - Quantifiable targets for service performance
+    - Example >>>
+        - Availability SLO of 99.9%
+        - Response time SLO of less than 100 milliseconds at 90th percentile
+        - Issue Resolution SLO of 24–48 hours.
+    - Relationship between SLA and SLO?→The SLA units all SLOs in a single document.
+    - SLO represents the {{target values}} for the {{important quality attributes}}.
+    - How should SLOs be determined? >>>
+        - Take metrics which the users care about the most
+        - Define SLOs around those metrics
+        - Determine SLIs to track those SLOs
+        - Don't measure every single possible SLI in a system and define an SLO for it! Fewer SLOs are better.
+        - Be realistic, left room for errors. For example, 99.9% availability instead of 99.99%. The higher one can be used internally as commitment.
+- 
+- SLI
+    - Describe >>>
+        - Service Level Indicators
+        - Quantitative Measure of our compliance with a SLO
+        - Actual numbers measured by a monitoring service or calculated from logs.
+        - They can later be compared to the SLOs
+    - Why is it important that quality attributes are testable and measurable?→If they weren't measurable, it would not be possible to find any SLI to validate the SLOs. If we can't prove the SLOs, we can't say that we meet the SLA.
+    - SLOs and SLIs are defined and set by {{the software engineers and architects}}.
+- 
+- Create a recovery plan for when the SLIs show that we are not meeting our SLOs.
+    - So we need to decide ahead of time what to do if: >>>
+        - The system went down for a long time.
+        - Performance degrades
+        - Reports about issues/bugs in the system.
+    - What should the plan include? >>>
+        - Automatic alerts to engineer/DevOps
+        - Automatic failovers/restarts/rollbacks/auto-scaling policies
+        - Predefined handbooks on what to do in certain situations

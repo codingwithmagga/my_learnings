@@ -1,0 +1,13 @@
+- Describe→A hopping window processes events in overlapping fixed-size time windows that slide forward. Each time a window is closed, the events are processed, and the results are published.
+![](https://remnote-user-data.s3.amazonaws.com/-fUFjTa2mUj1hGabVcgucINZb7D79N7OrguMadRcqxSHbL4PzJCJ-_4-zNpuIf8hnHSgqxLDvbAfIwEhJT8MYdklS2nd0t8-22o0VjHNdkzb16BJsYy_7C3_SIk4ReEc.png)
+- Possible Use cases >>>
+    - Real-time analytics
+    - Error Log analysis
+    - Stock trading
+- Advantages? >>>
+    - Frequent results
+    - Respond to changes insights can be faster
+- Disadvantages? >>>
+    - Additional memory usage
+    - Additional CPU resources needed
+    - More network resources needed

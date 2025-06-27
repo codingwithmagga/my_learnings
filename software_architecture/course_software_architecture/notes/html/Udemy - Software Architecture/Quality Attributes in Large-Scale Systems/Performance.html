@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Performance
+    </h1>
+    <br/>
+    <ul>
+        <li>Response time (also called End to End Latency)
+            <ul>
+                <li>Definition→Time between a client sending a request and receiving a response</li>
+                <li>Broken in two parts, name them→Processing time + Waiting time</li>
+                <li>Define Processing Time→Time spent in our system actively processing the request and building/sending the response.</li>
+                <li>Define waiting time (latency)→Duration of time request/response spends inactively in our system, for example waiting in a queue for processing</li>
+                <li>What should be considered when measuring the response time?
+                    <ul>
+                        <li>Don&#39;t forget the waiting time!</li>
+                        <li>Calculate the x-th Percentile Distribution
+                            <ul>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/ASX9sdX14bjk3n4BtwFnM9cS-5rUJ4s0nOcb1C-6O0nFVHIRJT0GHUzz6iACZsjcQjNgwoqI2M9r-yKn7TSZMuVfXwLZN1gtvQp2fX8op7Mmcs0psUCF2iClaPRQCiZs.png" width="714" height="422.08839779005524"/></li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/AyXvzbjQSv5lSkhbGPjf7rm3QLEc3cE32FakniI2ahwH03-4-741LH3VEmaFI7ot1x9RdivtxHHcssRjL351R_BkgTVl6_8BGBC55RrPxA2zhc1GsrsRuRiYtjTy8Ecz.png" width="393" height="199.75690607734805"/></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><svg width="738" height="369" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <image href="https://remnote-user-data.s3.amazonaws.com/NNGSsQ_wIKcd-XoTzHU0hcPGN27NUEPA3uZ1-g1AHo0JB45hkg2-dHxZj5_QgPJNzLnwV-fR4TM8SKvipMJuDpIGzoSTvr6tdmiT9vMANt7S8X1SbENK8sQUC9jPikDv.png" x="0" y="0" height="369px" width="738px"/>
+        <rect x="442.77571207034" y="80.27283053953366" width="92.44734290295688" height="24.59190402344666" clozeId="8110290028376367" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/>
+        </svg></li>
+                <li>Tail Latency
+                    <ul>
+                        <li>Definition→The small percentage of response times from a system, that take the longest in comparison to the rest of values.</li>
+                    </ul>
+                </li>
+                <li>How should goals regarding the response time of a service be defined?→Define them using percentiles. For example: 30ms at 95th percentile of response time.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Throughput
+            <ul>
+                <li>Definition→Amount of work performed/data processed by our system per unit of time. Measured in tasks per second or bytes per second.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Performance degradation
+            <ul>
+                <li>Define→Performance degradation is a decrease in a system&#39;s speed, responsiveness, or efficiency.</li>
+                <li>Name potential overly utilized resources
+                    <ul>
+                        <li>High CPU utilization</li>
+                        <li>High memory consumption</li>
+                        <li>Too many connections/IO </li>
+                        <li>Message queue is at capacity</li>
+                    </ul>
+                </li>
+                <li><svg width="742" height="355.2127659574468" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <image href="https://remnote-user-data.s3.amazonaws.com/2q3xJtR4pdC2D4k0MvIMZpfzx91ju77K8Wwml8iOfZzjyuhRZkYwoWyViIlgQndWvchwY_rADMKZHppnXrQyNVE7rvq2kITlkusoIO-YilFjKSFng1s1qmvrS1FjOPWw.png" x="0" y="0" height="355.2127659574468px" width="742px"/>
+        <rect x="86.51243234660977" y="53.16208678960715" width="169.2021588816774" height="24.54983749404792" clozeId="6024617947783599" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/><rect x="87.82747503221867" y="184.240683409613" width="170.07885400541664" height="28.933737046556505" clozeId="6024617947783599" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/>
+        </svg></li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

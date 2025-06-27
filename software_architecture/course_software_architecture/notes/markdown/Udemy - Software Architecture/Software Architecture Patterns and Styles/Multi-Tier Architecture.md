@@ -1,0 +1,24 @@
+- Describe what is a multi-tier architecture→A multi-tier architecture is a system which is separated into multiple logical (limiting the scope) and physical distinct tiers. The physical separation allows each tier to be separately developed, upgraded and scaled. 
+- What is the difference to a multi layer architecture?→Multi-tier architecture distributes application components across multiple physical tiers, while multi-layer architecture separates components into logical layers within a single tier.
+- Name restrictions, which allow this architecture to be loosely coupled >>>
+    - Usage of client-server model
+    - It is not allowed to skip tiers, they must call each other in a specific order.
+- 
+- The three-tier architecture is the most common and popular architectural pattern for client-server, web-based services.
+    - Describe >>>
+        - A three-tier architecture separates an application into presentation, application, and data tiers for improved organization and scalability.
+        - Presentation tier: Displays information, takes user input, no business logic
+        - Application tier: Contains business logic and processes user requests, communicates with the data tier. Sometimes also called business or logic tier.
+        - Data tier: Manages data storage, retrieval, and manipulation, ensuring data (user and business) integrity and security.
+    - Advantages >>>
+        - Easy to scale horizontally
+        - Easy to maintain, the logic is concentrated in the application tier
+    - Drawback→Monolithic structure of the logic tier. Business concentrated in a single codebase. Possible high CPU and memory consumption and low development policy.
+- 
+- Two tier architecture
+    - Describe→One tier for presentation and business tier, for example desktop applications. One tier for data and storage, often remotely.
+    - Advantages >>>
+        - Eliminates overhead of the logic tier in the three tier architecture
+        - Faster, more native experience for the user
+- 
+- There is also a four and five (not often used) tier architecture.

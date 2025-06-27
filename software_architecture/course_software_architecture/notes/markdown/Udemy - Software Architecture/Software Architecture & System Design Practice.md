@@ -1,0 +1,158 @@
+- Design a Highly Scalable Design Forum
+    - System Design Step-By-Step Process >>>
+        - Ask questions to capture: functional and non-functional requirements, system constraints
+        - Define the systems API
+        - Create a Software Architecture Diagram to fulfill the Functional Requirements
+        - Refine the Software Architecture Diagram to address the Non-Functional Requirements
+    - 
+    - The most important thing in system design: Make the {{right trade-offs}} based on the given requirements. 
+    - 
+    - Requirements & API
+        - Example questions:
+            - Can anyone post or view post/comments?
+            - What can a post contain? (text/images/video)
+            - What is the meaning of "most popular posts"?
+            - What is the structure of the comments? (flat list vs tree)
+        - Assume the following functional requirements
+            - A user can sign up and login to post, vote or comment.
+            - A user should be able to create a new post that contains a
+                - title
+                - Topic tags
+                - Body (text or uploaded images)
+            - A user should be able to comment on any existing post.
+            - Comments are ordered chronologically as a flat list.
+            - User can delete their own post or comments.
+            - A logged-in user can upvote/downvote an existing post/comment.
+            - Present the top most popular posts in the last 24 hours on the homepage, where popularity = Upvotes-Downvotes.
+        - Assume the following nonfunctional requirements
+            - Scalability (millions of daily users)
+            - Performance (less than 500ms response time 99p)
+            - Fault Tolerance / High Availability (99.9%)
+            - Availability + Partition Tolerance (AP over CP)
+            - Durability
+        - We ignore system constraints for now.
+        - Using REST API over HTTP since this is a client web-based application
+            - Identifying entities: Users, Posts, Images, Comments, Votes
+            - Mapping Entities to URIs:
+                - ![](https://remnote-user-data.s3.amazonaws.com/Ho8lRsm9ro4QP_Xx0PWn1nJEZnaCC5dQh98SV_SijFdKzxZ2nUDJbh2kFd2Njf6zpku3yC9XeJE36WviAm8x8GnQNqqDUZgWu6NAsUNKeSigYbt7UoVCzwZGlEGEs8M4.png)
+            - Define resource representation
+                - ![](https://remnote-user-data.s3.amazonaws.com/6lVJb_IIqiUlC5UiF9Nt8TiQQ-XLuCaWtTldc92b82erZxQsoaGKdVkbijc0NbVK3DdLLvhJIcZiJ13brTtb4Sodovb-_VM77A__APigh8p7YZ9bsWe31d2XyorWq4Pi.png)
+                - ![](https://remnote-user-data.s3.amazonaws.com/SNVFzNwvUqI65OoMquor6QGSpM1MHC-nqSBLXcD3pAMCb7Nn15J2XkWobWQlVdOV3jxRJ0z9JqFXUTDZrscyjpamxPvR1jQw5VELemt6Jdcto3DvqQPL-JxY5rpfgKMD.png)
+            - Assigning HTTP methods
+                - ![](https://remnote-user-data.s3.amazonaws.com/KIhSKE4-R5okvTWg0by-T3yMSvIgbyrD5zdJBkRixoEdayE9M645b1F9Ax2qH5K038sFfJ09k535u7w3yUW59C_C-Sw-Uyb5Lot8vH6ag3gUawaecnZa1_whGSWhVgMS.png)
+                - ![](https://remnote-user-data.s3.amazonaws.com/Cylgj-m4McJmcD8yMDKo7CMaMDVf5JyFxX1ic3tZjqskeZRN0E6yDghelqDnp2_qMTotkAcyUvCXyfQNhKXKyj3SawAHAFU9M-H1Lx6SUEcMOhn4qOap7FOfF_QeeNQg.png)
+                - ![](https://remnote-user-data.s3.amazonaws.com/ieoCm1RVqG2UMEEAUlYorDTCSQcUQoNogVl4Uwfizv7M4V3pG2MJlpbZW0l3a-gwfSwFZ8auklQWK1h18GL_z9VTS7C_btRvW1JA0n6llBihkyiZ6R0SkkGcEKpXki1R.png)
+                - ![](https://remnote-user-data.s3.amazonaws.com/2ZmmrrIbUM-L_5I0-IYNdTjQry64GZC_8DPLVglQ3B0JqK43euFSwMSc8NbHujkAJLWNO59kiDtHpmDqz7ZxnSp6_TMg7USv0Tb3k3QIqEO0mBa4Jo2XGQMER_273ZoN.png)
+        - Using API Pagination, s.t. the user does not get millions of posts/comments at once
+    - 
+    - Functional Architecture Diagram
+        - Go through the functional requirements step by step and add them to the architectural diagram. Ignore the non-functional requirements for now.
+        - ![](https://remnote-user-data.s3.amazonaws.com/4G78ipJj90f_TfzxzVeca9mjznTr1deVYppOVlF5sCtxzaXDRqafCwWkV3o6oZADZa-VgFqKxHbXX3BaeQpX73Q4u_-x_cojQDZu2cvOzWtx1ssedK5Nxb8-F-hCcv9e.png)
+    - 
+    - Final Software Architecture
+        - Scalability 
+            - Load Balancer for each service
+            - Adding API Gateway
+            - Sharding Database (Range Shard Strategy)
+        - Performance
+            - Use a CDN, especially for the images and the web content
+            - Caching at API Gateway
+            - Indexing databases
+            - Message Broker for votes
+        - Fault Tolerance/ High Availability
+            - Multi Data Center Deployment ⇒ GSLB
+            - Replication of databases and services
+        - Availability and Partition Tolerance
+            - Databases are optimized for AP
+        - Durability
+            - Replication of databases
+            - Backups of databases
+        - ![](https://remnote-user-data.s3.amazonaws.com/ubp5ZPglsCCdIE2zaGwiabEZ9D8sk1mNlJh-TokFpud6sNQjh6PvI_FW0gzD-hSdJw1CaqYDfo2Ltj7fReoqOEkccTB3tZujEZzqKihXBoYgwANediXEz8ky_q8cdGJn.png)
+- Design an E-Commerce Marketplace Platform
+    - Requirements & API
+        - Important Observation: 2 major actors, merchants and users/buyers.
+        - Example questions
+            - Merchants
+                - What type of products are we selling? Physical or digital?
+                - What product information does a merchant provide?
+                - What data do we need to provide the merchant?
+                - What operation can a merchant perform?
+            - Users
+                - Can anyone browse/purchase, or is registration required?
+                - Are Product Reviews/Ratings in scope?
+                - Search capabilities?
+                - Do we need to design checkout/payment/delivery?
+                - What UI do we offer? Browser/Mobile?
+        - Assume the following functional requirements
+            - Product
+                - Physical product (with limited inventory)
+                - Each product contains
+                    - Title
+                    - Description
+                    - Categories
+                    - Images
+                    - Optional attributes
+            - Merchant
+                - Product Management System
+                    - Signup
+                    - Create new products
+                    - Update the product properties
+                    - Update product inventory
+                    - View product data
+                - Product analytics
+                    - View real-time product page visitors
+                    - View historical/projected product performance
+                - Sequence diagram
+                    - ![](https://remnote-user-data.s3.amazonaws.com/5-n89SNHy9vdMAaZiwkc7YFrvRH2vITacPFgmAxYmFYlsuohnBZB2e_8hitb0PO1X9fQmORDWOP6ZYZag1itJqhCcCcdMB-AYQ32pNT8C7HUPuEUei5Ss58pZYD--2Ge.png)
+            - Users
+                - Store Front
+                    - Web UI + Mobile users
+                    - Browser products
+                    - Search products based on title/categories/description
+                    - Out of scope: User registration, product reviews
+                - Store Checkout
+                    - Navigate to the checkout page
+                    - View breakdown of the bill incl. taxes
+                    - Complete the purchase by providing shipping + payment info
+                    - Send order updates via email/push notifications to the user
+                    - Out of scope: Shopping cart, delivery, payment
+                - Sequence diagram
+                    - ![](https://remnote-user-data.s3.amazonaws.com/5qeEcHpaehexyt6V_fiaZ7WAFjcceYgjJuexF4F5NcBfOd16QopPzwpJp3q_zCZ_LY3SUo9Aq0Grg0zQaNjxSOmfj9rEUPu-fduCFEACfke7ug7PTePt3bT6yivuS0Mg.png)
+                    - ![](https://remnote-user-data.s3.amazonaws.com/1gZr3YTFENMkNZ9DPwt9GDL1F1CIGY3F7TvPnMTzNAwq4a-wUJiO8uokO5wrj0ZgAhT4HWeZGr96U7BC-kpzVEUyI982X7dwT4Gvmq5Ii72KklxMP-zGdgF5EXLvMx_Z.png)
+        - Assume the following nonfunctional requirements
+            - Merchants
+                - Scalability (not very high)
+                    - Hundreds of merchants
+                    - Low traffic
+                    - Thousands of products
+                - Performance
+                    - Response time < 1 second at 50th percentile
+                - Consistency vs. Availability
+                    - CP databases
+                - High availability
+                    - Uptime 99.5%
+            - User
+                - Scalability (very high)
+                    - 10–100 million daily users
+                    - Multiple countries
+                    - High traffic at peak
+                - Performance
+                    - Products reponse time < 200ms 50p, 500mms 99p
+                    - Checkout response time <1s 99p
+                - Consistency vs. Availability
+                    - Storefront: AP
+                    - Checkout: CP
+                - High availability
+                    - Internal SLA: 99.99% uptime
+        - We ignore system constraints for now.
+        - Defining of the system API would be very technical. Base are the sequence diagrams above from the functional requirements.
+    - 
+    - Functional Diagram
+        - Go through the functional requirements step by step and add them to the architectural diagram. Ignore the non-functional requirements for now.
+        - Microservice Architecture for organizational scalability
+        - ![](https://remnote-user-data.s3.amazonaws.com/KquFgmzCo74z2d3G-uMw8vnRjWqImSI-990T4IESgS29ltNfnsryu5fAUVRuu06vcEGIUp7-mg2mdePSmQtMBcKT1ehJXF9gInJJtz-adJT_jCENdytQje_N2U4ZYfLo.png)
+    - 
+    - Final Software Architecture
+        - ![](https://remnote-user-data.s3.amazonaws.com/LPv6475s14ETnbnii5FIrTDzGLxz5vU9UMx0oDujeVSz3WHNgVv_RNzvBO5mKYVJ7LqVxT-44MRE9RLXC5KOAMSnUCr0iial_qlHX3E69joYNGSHXZ2Y7tKDu_qHqmhA.png)
+        - Running in multiple data centers, worldwide
+        - ![](https://remnote-user-data.s3.amazonaws.com/bPi0wRPLMn7qESCK1iZtTjyJzVmRbNXaZkjy58xyCG2cuVMWm7AdATvPOPkEIShnSfR1hkpOSkrVmI3dZz2B-JZ6u5zQ2ZWpEKkbpbxlXZpSBwBDcB6Um7XiZgCJng6D.png)

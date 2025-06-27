@@ -1,0 +1,2221 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Udemy - Software Architecture &amp; Design of Modern Large Scale Systems
+    </h1>
+    <br/>
+    <ul>
+        <li>www.udemy.com/course/software architecture design of modern large scale systems/</li>
+        <li>Introduction
+            <ul>
+                <li>Software architecture
+                    <ul>
+                        <li>There are multiple definitions for software architecture, here is the one used in this course
+                            <ul>
+                                <li>Definition→The software architecture of a system is a high-level description of the system&#39;s structure, its different components, and how those components communicate with each other to fulfill the systems&#39; requirements and constraints.</li>
+                            </ul>
+                        </li>
+                        <li>What is not part of the software architecture?→Technologies, programming languages or in general implementation details.</li>
+                        <li>When should you decide about implementation details?→After the high-level architecture is designed and approved. They should be delayed to the very end of the design.</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Software architecture can have different levels of abstraction:
+                    <ul>
+                        <li>Classes/Structs</li>
+                        <li>Modules/packages/libraries</li>
+                        <li>Services (process or groups of processes)</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Name the four stages of the software development cycle
+                    <ul>
+                        <li>Design (output software architecture)</li>
+                        <li>Implementation (input software architecture)</li>
+                        <li>Testing</li>
+                        <li>Deployment</li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Correctness of the software architecture cannot be proved!</li>
+            </ul>
+        </li>
+        <li>System Requirements
+            <ul>
+                <li>Introduction to System Design &amp; Architectural Drivers
+                    <ul>
+                        <li>System requirements Motivation
+                            <ul>
+                                <li>Define &quot;System Requirements&quot;→System requirements are a format description of what a system must do and the constraints under which it must operate.</li>
+                                <li>Differences to requirements for a small unit (method/function)
+                                    <ul>
+                                        <li>Big scope and high level of abstraction</li>
+                                        <li>High level of ambiguity (Non-precise or non-technical requirements, getting requirements is part of the solution)</li>
+                                    </ul>
+                                </li>
+                                <li>Why is getting the correct requirements important?→Large-scale systems are big projects that cannot be easily changed. They need many engineers and months of work, also there may be additional hard- and software costs.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>System requirements Classification
+                            <ul>
+                                <li>Name the three types of requirements
+                                    <ul>
+                                        <li>Features of the system (functional requirements)</li>
+                                        <li>Quality Attributes (non-function requirements)</li>
+                                        <li>System constraints (limitation and boundaries)</li>
+                                    </ul>
+                                </li>
+                                <li>How are the system requirements also often called?→Architectural Drivers</li>
+                                <li>Functional requirements
+                                    <ul>
+                                        <li>Define→Functional requirements, describe what a system should do. They are strongly related to the objective of our system. &quot;The system must do ...&quot;. They do not determine the architecture, each functional requirement can be fulfilled with any architecture.  </li>
+                                    </ul>
+                                </li>
+                                <li>Non-Functional requirements
+                                    <ul>
+                                        <li>Define→Non-functional requirements describe system attributes like performance, security, and scalability. &quot;The system must have ...&quot;. These requirements dictate the software architecture of the system. </li>
+                                    </ul>
+                                </li>
+                                <li>System constraints
+                                    <ul>
+                                        <li>Define→A system constraint is a necessary condition for developing the system. Like time, financial or staffing constraints. It is essentially a decision that was already either fully or partially made for us, restricting our degrees of freedom.</li>
+                                    </ul>
+                                </li>
+                                <li>Which type of requirement is this:
+                                    <ul>
+                                        <li>When a rider logs into the service mobile app, the system must display a map with nearby drivers within a 5-mile radius→That&#39;s a functional requirement.</li>
+                                        <li>When a ride is completed, the system will charge the rider&#39;s credit card and credit the driver, minus service fees.→That&#39;s a functional requirement.</li>
+                                        <li>The website should load pages within 100ms→That&#39;s a non-functional requirement.</li>
+                                        <li>The program should run on different operating systems without changes in performance→That&#39;s a non-functional requirement specifying portability and performance consistency across operating systems.</li>
+                                        <li>The budget for the project is €5.000→That&#39;s a system constraint.</li>
+                                        <li>The project has to be finished by the end of the year.→That&#39;s a system constraint.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Feature Requirements - Step-by-Step Process
+                    <ul>
+                        <li>How should requirements of a system gathered→By creating Use Cases and User flows. Just asking the client to describe everything they need is (for complex systems) not a suitable approach.</li>
+                        <li>Use Case
+                            <ul>
+                                <li>Describe?→A use case describes a specific situation or scenario in which the system is used.</li>
+                            </ul>
+                        </li>
+                        <li>User Flow
+                            <ul>
+                                <li>Describe→A Step-By-Step or graphical representation of a Use Case</li>
+                                <li>What is a sequence diagram?→A sequence diagram is a visual representation of the interactions between objects in a system over time. Part of the Unified Model Language (UML).</li>
+                                <li>Standard language for visualizing system design?→Unified Modeling Language (UML).</li>
+                            </ul>
+                        </li>
+                        <li>Name the required steps to gather the requirements
+                            <ul>
+                                <li>Identify all the actors/users in the system</li>
+                                <li>Capture and describe all the possible use-cases/scenarios</li>
+                                <li>User Flow - Expand each use case through a flow of events
+                                    <ul>
+                                        <li>Each event contains the Action and the Data</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Example: Hitchhiking Services
+                            <ul>
+                                <li>Allow people to join drivers on a route, who are willing to take passengers for a fee.</li>
+                                <li>Actors: Drivers and Passengers</li>
+                                <li>Possible Use Cases:
+                                    <ul>
+                                        <li>Rider first time registration</li>
+                                        <li>Driver registration</li>
+                                        <li>Rider login</li>
+                                        <li>Driver login</li>
+                                        <li>Successful match and ride</li>
+                                        <li>Unsuccessful ride</li>
+                                    </ul>
+                                </li>
+                                <li>Example: Successful Match and Ride 
+                                    <ul>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/A5dIJPTfqky3uUzP4oTDmOCYey3qkq4vcA1uuiNi2Ig0CvD9uyoxkWIDlJ29BuZDvBxhvEDJhr5h9Qc45E7z0lEBi8gWM2esOhgujJd1b8pnXG-wDz9Kcu6aYX36aIwK.png" width="718" height="434.94230769230774"/></li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/SHsDrQ0JhFC7qyFaUUe6iUw3Qa7qG3bpl4aYm3pdmow1vzip8N3RB2pnLuBGf4UvnozN5h2FfcdBVHLmHdcNLHk0XlSuOwUr9RSKfHpNJrifipeULh4ljZYYFa4gCyJo.png" width="718" height="443.81868131868134"/></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>System Quality Attributes Requirements
+                    <ul>
+                        <li>Systems are frequently redesigned, not because of functional requirements
+                            <ul>
+                                <li>Name reasons why systems are often redesigned
+                                    <ul>
+                                        <li>Improving performance</li>
+                                        <li>Better scaleability</li>
+                                        <li>Enhancing security</li>
+                                        <li>Hard to maintain</li>
+                                        <li>Slow to develop</li>
+                                        <li></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Quality attributes 
+                            <ul>
+                                <li>Motivation and definition
+                                    <ul>
+                                        <li>{{39357487042016914::Quality attributes}} are also called {{39254401606004263::non-functional requirements}} </li>
+                                        <li>They describe
+                                            <ul>
+                                                <li>The qualities of the functional requirements</li>
+                                                <li>The overall properties of the system</li>
+                                            </ul>
+                                        </li>
+                                        <li>They provide a {{8662163351178681::quality measure}} on how well our system performs on a {{8662163351178681::particular dimension}} </li>
+                                        <li>This can also be a requirement for the developing team, for example deploying a new version twice a week.</li>
+                                    </ul>
+                                </li>
+                                <li>Considerations
+                                    <ul>
+                                        <li>Quality attributes need to be {{9068069128866408::measurable}}  and {{9068069128866408::testable}} </li>
+                                        <li>Would it be possible to build a single software architecture that can provide all quality attributes?→No, there are certain quality attributes which contradict one another, which means some combinations of quality attributes are very hard or even impossible to achieve. Software architects need to make the right tradeoff when designing a system.</li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>System Constraints in Software Architecture
+                    <ul>
+                        <li>System constraints
+                            <ul>
+                                <li>Why are system constraints often referred to as pillars for software architecture?
+                                    <ul>
+                                        <li>They provide a solid starting point</li>
+                                        <li>The rest of the system need to be designed around them</li>
+                                    </ul>
+                                </li>
+                                <li>Name different types
+                                    <ul>
+                                        <li>Technical constraints</li>
+                                        <li>Business constraints</li>
+                                        <li>Regulatory/legal constraints</li>
+                                    </ul>
+                                </li>
+                                <li>Examples for technical constraints?
+                                    <ul>
+                                        <li>Being locked to a particular hardware/cloud vendor</li>
+                                        <li>Having to use a particular programming language</li>
+                                        <li>Having to use a particular database or technology</li>
+                                        <li>Having to support certain platforms, browsers, or OS</li>
+                                    </ul>
+                                </li>
+                                <li>Examples for business constraints
+                                    <ul>
+                                        <li>Limited budget</li>
+                                        <li>Strict deadline</li>
+                                    </ul>
+                                </li>
+                                <li>Example for regulatory/legal constraints→Data protection in different countries</li>
+                                <li>What should be considered at these constraints?
+                                    <ul>
+                                        <li>Any given constraint shouldn&#39;t be taken lightly</li>
+                                        <li>Use loosely coupled architecture</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Quality Attributes in Large-Scale Systems
+            <ul>
+                <li>Performance
+                    <ul>
+                        <li>Response time (also called End to End Latency)
+                            <ul>
+                                <li>Definition→Time between a client sending a request and receiving a response</li>
+                                <li>Broken in two parts, name them→Processing time + Waiting time</li>
+                                <li>Define Processing Time→Time spent in our system actively processing the request and building/sending the response.</li>
+                                <li>Define waiting time (latency)→Duration of time request/response spends inactively in our system, for example waiting in a queue for processing</li>
+                                <li>What should be considered when measuring the response time?
+                                    <ul>
+                                        <li>Don&#39;t forget the waiting time!</li>
+                                        <li>Calculate the x-th Percentile Distribution
+                                            <ul>
+                                                <li><img src="https://remnote-user-data.s3.amazonaws.com/ASX9sdX14bjk3n4BtwFnM9cS-5rUJ4s0nOcb1C-6O0nFVHIRJT0GHUzz6iACZsjcQjNgwoqI2M9r-yKn7TSZMuVfXwLZN1gtvQp2fX8op7Mmcs0psUCF2iClaPRQCiZs.png" width="714" height="422.08839779005524"/></li>
+                                                <li><img src="https://remnote-user-data.s3.amazonaws.com/AyXvzbjQSv5lSkhbGPjf7rm3QLEc3cE32FakniI2ahwH03-4-741LH3VEmaFI7ot1x9RdivtxHHcssRjL351R_BkgTVl6_8BGBC55RrPxA2zhc1GsrsRuRiYtjTy8Ecz.png" width="393" height="199.75690607734805"/></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><svg width="738" height="369" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <image href="https://remnote-user-data.s3.amazonaws.com/NNGSsQ_wIKcd-XoTzHU0hcPGN27NUEPA3uZ1-g1AHo0JB45hkg2-dHxZj5_QgPJNzLnwV-fR4TM8SKvipMJuDpIGzoSTvr6tdmiT9vMANt7S8X1SbENK8sQUC9jPikDv.png" x="0" y="0" height="369px" width="738px"/>
+        <rect x="442.77571207034" y="80.27283053953366" width="92.44734290295688" height="24.59190402344666" clozeId="8110290028376367" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/>
+        </svg></li>
+                                <li>Tail Latency
+                                    <ul>
+                                        <li>Definition→The small percentage of response times from a system, that take the longest in comparison to the rest of values.</li>
+                                    </ul>
+                                </li>
+                                <li>How should goals regarding the response time of a service be defined?→Define them using percentiles. For example: 30ms at 95th percentile of response time.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Throughput
+                            <ul>
+                                <li>Definition→Amount of work performed/data processed by our system per unit of time. Measured in tasks per second or bytes per second.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Performance degradation
+                            <ul>
+                                <li>Define→Performance degradation is a decrease in a system&#39;s speed, responsiveness, or efficiency.</li>
+                                <li>Name potential overly utilized resources
+                                    <ul>
+                                        <li>High CPU utilization</li>
+                                        <li>High memory consumption</li>
+                                        <li>Too many connections/IO </li>
+                                        <li>Message queue is at capacity</li>
+                                    </ul>
+                                </li>
+                                <li><svg width="742" height="355.2127659574468" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <image href="https://remnote-user-data.s3.amazonaws.com/2q3xJtR4pdC2D4k0MvIMZpfzx91ju77K8Wwml8iOfZzjyuhRZkYwoWyViIlgQndWvchwY_rADMKZHppnXrQyNVE7rvq2kITlkusoIO-YilFjKSFng1s1qmvrS1FjOPWw.png" x="0" y="0" height="355.2127659574468px" width="742px"/>
+        <rect x="86.51243234660977" y="53.16208678960715" width="169.2021588816774" height="24.54983749404792" clozeId="6024617947783599" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/><rect x="87.82747503221867" y="184.240683409613" width="170.07885400541664" height="28.933737046556505" clozeId="6024617947783599" stroke="black" fill="rgba(216, 216, 228, 1)" stroke-width="1"/>
+        </svg></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Scalability
+                    <ul>
+                        <li>Definition?→The measure of a system&#39;s ability to handle a growing amount of work, in an easy and cost-effective way, by adding resources to the system.</li>
+                        <li>Motivation→Load/Traffic changes over time, for example at global events, weather, day/night cycle etc.</li>
+                        <li>Name three types of scalability
+                            <ul>
+                                <li>Vertical scalability (Scale Up)</li>
+                                <li>Horizontal scalability (Scale Out)</li>
+                                <li>Team/Organization scalability </li>
+                            </ul>
+                        </li>
+                        <li>The three types of scalability (vertical, horizontal, team) are {{9846830753555955::orthogonal}} to each other, which means that each part can be {{9846830753555955::increased/decreased separately}} </li>
+                        <li>Vertical Scalability
+                            <ul>
+                                <li>Definition→Adding resources or upgrading the existing resources on a single computer, to allow our system to handle higher traffic or load.</li>
+                                <li>Pros?
+                                    <ul>
+                                        <li>Any application can benefit from it, no code changes are required</li>
+                                        <li>Migration between different machines is easy</li>
+                                    </ul>
+                                </li>
+                                <li>Cons?
+                                    <ul>
+                                        <li>The scope of upgrade is limited</li>
+                                        <li>Locked to a centralized system, which cannot provide high availability and fault tolerance</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Horizontal Scalability
+                            <ul>
+                                <li>Definition→Adding more resources in a form of new instance running on different machines, to allow our system to handle higher traffic or load.</li>
+                                <li>Pros?
+                                    <ul>
+                                        <li>No limit on scalability</li>
+                                        <li>Easy to add/remove machines</li>
+                                        <li>If designed correctly, we get: High Availability and fault tolerance</li>
+                                    </ul>
+                                </li>
+                                <li>Disadvantages?
+                                    <ul>
+                                        <li>Initial code changes may be required</li>
+                                        <li>Increased complexity, coordination overhead</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Team/Organization scalability 
+                            <ul>
+                                <li>Hiring engineers can increase productivity up to some point, then we observe productivity degradation. 
+                                    <ul>
+                                        <li>What are the possible reasons for that?
+                                            <ul>
+                                                <li>Many crowded meetings</li>
+                                                <li>Code merge conflicts</li>
+                                                <li>Business complexity - longer ramp up time</li>
+                                                <li>Testing is harder and slower</li>
+                                                <li>Releases become very risky</li>
+                                            </ul>
+                                        </li>
+                                        <li>What are the options to solve this problem?
+                                            <ul>
+                                                <li>Separate code in different modules of the same service</li>
+                                                <li>Separate product in multiple services</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Software architecture impacts {{5777233769681221::engineering velocity (team productivity)}}</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Availability
+                    <ul>
+                        <li>Availability is an important attribute since it has the greatest impact on {{23735507385300725::our users}} and {{23735507385300725::our business}} . Downtime can result in a loss of {{23735507385300725::money }}  and {{23735507385300725::customers}} .</li>
+                        <li>Definition→The fraction of time/probability that our service is operationally functional and accessible to the user.</li>
+                        <li>Uptime↔Time that our system is operationally functional and accessible to the user.</li>
+                        <li>Downtime::Time that our system is unavailable to the user.</li>
+                        <li>How is it measured?→Uptime / (Uptime + Downtime) or MTBF / (MTBF + MTTR)</li>
+                        <li>MTBF 
+                            <ul>
+                                <li>Define
+                                    <ul>
+                                        <li>Mean Time between failures</li>
+                                        <li>Represents the average time our system is operational</li>
+                                    </ul>
+                                </li>
+                                <li>When is it useful
+                                    <ul>
+                                        <li>Dealing with multiple pieces of hardware</li>
+                                        <li>Each component has its own operational shelf life</li>
+                                        <li>Not using a cloud/third-party API with a given uptime and availability</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>MTTR
+                            <ul>
+                                <li>Define
+                                    <ul>
+                                        <li>Mean Time to Recovery</li>
+                                        <li>Time average it takes us to detect and recover from failure</li>
+                                        <li>Average downtime of our system</li>
+                                    </ul>
+                                </li>
+                                <li>{{2230956265021684::Detectability}}  and {{2230956265021684::fast recovery}}  can help us achieve {{5604183426383246::high availability}} </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>When do we have high availability (at which value/percentile)?
+                            <ul>
+                                <li>No strict definition, but the industry standard set by cloud vendors is typically 99.9% or higher</li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/pu1NTAKYJ1qiKUBrpRsqwpbEorMllbXpQnftlZcofRC-bvR4ECysuZ1_d7vAgM8uTJoGNwl5hoNsgrrL8G5sSkip4KJGTj-I8c7fDeyL7YALfo6vfu4NXJzvuMHJUZiK.png" width="365.9038461538461" height="134.13314567556793"/></li>
+                            </ul>
+                        </li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>Fault Tolerance &amp; High Availability
+                    <ul>
+                        <li>Name categories of possible failures
+                            <ul>
+                                <li>Human Error</li>
+                                <li>Software errors</li>
+                                <li>Hardware failures</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>{{86530972771862::Fault Tolerance}} is the best way to achieve {{4228552968818111::High Availability}}  in our system.</li>
+                        <li></li>
+                        <li>Define Fault Tolerance→Fault Tolerance enables our system to remain operational and available to the users despite failures within one or multiple components.</li>
+                        <li></li>
+                        <li>When failures happen, a fault-tolerant system will
+                            <ul>
+                                <li>Continue operating at the same/reduced level of performance</li>
+                                <li>Prevent the system from becoming unavailable</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Fault Tolerance revolves around 3 major tactics
+                            <ul>
+                                <li>Failure Prevention</li>
+                                <li>Failure Detection and Isolation</li>
+                                <li>Recovery from failure</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Failure Prevention
+                            <ul>
+                                <li>To prevent our entire system from going down, {{6969835233874987::eliminate any Single Point of Failure}} in our system. The best way to eliminate this is through {{37802493256492053::Replication and Redundancy}} .</li>
+                                <li>Examples for Single Point of Failure
+                                    <ul>
+                                        <li>One server where the application runs</li>
+                                        <li>Storing all data in one instance of our database that runs on a single computer</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Types of Redundancy
+                            <ul>
+                                <li>Name two→Spatial and Time Redundancy</li>
+                                <li>Define Spatial Redundancy→Running replicas of our application on different computers</li>
+                                <li>Define Time Redundancy→Repeating the same operation/request multiple times until we succeed/give up</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Strategies for Redundancy and Replication
+                            <ul>
+                                <li>Name two strategies
+                                    <ul>
+                                        <li>Active-Active architecture</li>
+                                        <li>Active-Passive architecture</li>
+                                    </ul>
+                                </li>
+                                <li>Active-Active architecture
+                                    <ul>
+                                        <li>Describe→All replicas are synchronized with each other, such that a failure replica can be replaced by any other.</li>
+                                        <li>Advantages?
+                                            <ul>
+                                                <li>Load is spread among all the replicas ⇒identical to horizontal scalability</li>
+                                                <li>Allows more traffic, better performance</li>
+                                            </ul>
+                                        </li>
+                                        <li>Disadvantage?
+                                            <ul>
+                                                <li>Additional coordination for synchronization</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Active-Passive architecture
+                                    <ul>
+                                        <li>Describe→Active-passive architecture has one active replica handling all requests and (multiple) passive replica following the active one by taking periodic snapshots.</li>
+                                        <li>Advantage?
+                                            <ul>
+                                                <li>Implementation is easier, since there is a clear leader</li>
+                                            </ul>
+                                        </li>
+                                        <li>Disadvantage?
+                                            <ul>
+                                                <li>Ability to scale the system is lost</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Failure Detection and Isolation
+                            <ul>
+                                <li>How to detect failures?→Using a monitoring service which sends health checks or gets heartbeats to/from each instance/client. Detected failures are isolated and don&#39;t get requests any longer.</li>
+                                <li>Why are false negatives in the monitoring service problematic?→False negatives mask actual failures, hindering timely responses and potentially leading to cascading system failures.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Recovery from failure
+                            <ul>
+                                <li>Possible actions after detecting a failure
+                                    <ul>
+                                        <li>Stop sending traffic/workload to the host</li>
+                                        <li>Restart the host</li>
+                                        <li>Rollback, going back to a stable version</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>SLA, SLO, SLI
+                    <ul>
+                        <li>SLA
+                            <ul>
+                                <li>Describe
+                                    <ul>
+                                        <li>Service-Level Agreement</li>
+                                        <li>A legal contract that represents the quality service of a system like:
+                                            <ul>
+                                                <li>Availability</li>
+                                                <li>Performance</li>
+                                                <li>Data durability</li>
+                                                <li>Time to respond to system failures</li>
+                                            </ul>
+                                        </li>
+                                        <li>States Penalties and financial consequences if the contract is breached:
+                                            <ul>
+                                                <li>Full/Partial refunds</li>
+                                                <li>Subscription/License extensions</li>
+                                                <li>Service credits</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>For whom do they exist
+                                    <ul>
+                                        <li>External paying users (always)</li>
+                                        <li>Free external users (sometimes), for example for free trial periods</li>
+                                        <li>Internal users (occasionally), for example if an internal service relies on us which has external users</li>
+                                    </ul>
+                                </li>
+                                <li>SLAs are crafted by {{5734860765056793::the business and the legal team}}.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>SLO
+                            <ul>
+                                <li>Describe
+                                    <ul>
+                                        <li>Service-Level Objectives</li>
+                                        <li>Individuals goals set for the system</li>
+                                        <li>Quantifiable targets for service performance</li>
+                                    </ul>
+                                </li>
+                                <li>Example
+                                    <ul>
+                                        <li>Availability SLO of 99.9%</li>
+                                        <li>Response time SLO of less than 100 milliseconds at 90th percentile</li>
+                                        <li>Issue Resolution SLO of 24–48 hours.</li>
+                                    </ul>
+                                </li>
+                                <li>Relationship between SLA and SLO?→The SLA units all SLOs in a single document.</li>
+                                <li>SLO represents the {{0043315109755514::target values}} for the {{3787337921352477::important quality attributes}}.</li>
+                                <li>How should SLOs be determined?
+                                    <ul>
+                                        <li>Take metrics which the users care about the most</li>
+                                        <li>Define SLOs around those metrics</li>
+                                        <li>Determine SLIs to track those SLOs</li>
+                                        <li>Don&#39;t measure every single possible SLI in a system and define an SLO for it! Fewer SLOs are better.</li>
+                                        <li>Be realistic, left room for errors. For example, 99.9% availability instead of 99.99%. The higher one can be used internally as commitment.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>SLI
+                            <ul>
+                                <li>Describe
+                                    <ul>
+                                        <li>Service Level Indicators</li>
+                                        <li>Quantitative Measure of our compliance with a SLO</li>
+                                        <li>Actual numbers measured by a monitoring service or calculated from logs.</li>
+                                        <li>They can later be compared to the SLOs</li>
+                                    </ul>
+                                </li>
+                                <li>Why is it important that quality attributes are testable and measurable?→If they weren&#39;t measurable, it would not be possible to find any SLI to validate the SLOs. If we can&#39;t prove the SLOs, we can&#39;t say that we meet the SLA.</li>
+                                <li>SLOs and SLIs are defined and set by {{15220889699895945::the software engineers and architects}}.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Create a recovery plan for when the SLIs show that we are not meeting our SLOs.
+                            <ul>
+                                <li>So we need to decide ahead of time what to do if:
+                                    <ul>
+                                        <li>The system went down for a long time.</li>
+                                        <li>Performance degrades</li>
+                                        <li>Reports about issues/bugs in the system.</li>
+                                    </ul>
+                                </li>
+                                <li>What should the plan include?
+                                    <ul>
+                                        <li>Automatic alerts to engineer/DevOps</li>
+                                        <li>Automatic failovers/restarts/rollbacks/auto-scaling policies</li>
+                                        <li>Predefined handbooks on what to do in certain situations</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>API Design
+            <ul>
+                <li>Introduction to API Design
+                    <ul>
+                        <li>What is an API?→The Application Programming Interface is a contract (or a set of rules) between the engineers who implement the system and the clients who use the system. It defines the methods and data formats that the client can use to communicate with the system.</li>
+                        <li>In a large-scale system, the API is called by other applications {{9672672806553235::remotely through the network}}.</li>
+                        <li></li>
+                        <li>APIs are classified into three groups
+                            <ul>
+                                <li>Public APIs</li>
+                                <li>Private/Internal APIs</li>
+                                <li>Partner APIs</li>
+                            </ul>
+                        </li>
+                        <li>Public APIs 
+                            <ul>
+                                <li>Describe→Exposed to the public. Any developer can use/call them from their application.</li>
+                                <li>Good practice: Requiring the user to {{9068261151034259::register}} with the system before allowing to send requests.
+                                    <ul>
+                                        <li>Advantages?
+                                            <ul>
+                                                <li>Control who uses the system and how the system is used</li>
+                                                <li>Better security</li>
+                                                <li>Option to blacklist users</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Private APIs
+                            <ul>
+                                <li>Describe→Exposed only internally within the company</li>
+                            </ul>
+                        </li>
+                        <li>Partner APIs
+                            <ul>
+                                <li>Describe→Similar to public APIs, but only for companies/users which have business relationship, for example a subscription.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Benefits of API
+                            <ul>
+                                <li>Clients who uses it can immediately and easily {{48763213461800414::enhance their business}} by using our system.</li>
+                                <li>The users don&#39;t need to know anything about {{3981785990708324::the system&#39;s internal design and implementation}}.</li>
+                                <li>Once the API is defined and exposed, {{06693358214597434::clients can integrate it}} without waiting for full implementation of the system.</li>
+                                <li>The API makes it easier to {{21200159000733831::design and architect }} the internal structure of our system.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Best practices and patterns for remote APIs
+                            <ul>
+                                <li>Name six of them
+                                    <ul>
+                                        <li>Complete encapsulation</li>
+                                        <li>Easy to Use</li>
+                                        <li>Keep operations idempotent</li>
+                                        <li>Use Pagination</li>
+                                        <li>Asynchronous operations</li>
+                                        <li>Versioning the API</li>
+                                    </ul>
+                                </li>
+                                <li>API should be {{7004262561824205::completely decoupled}} from the internal design and implementation.</li>
+                                <li>How could an API be made simple?
+                                    <ul>
+                                        <li>Only one way to get certain data or perform a task</li>
+                                        <li>Descriptive names for actions and resources</li>
+                                        <li>Exposing only the information and actions that users need</li>
+                                        <li>Keeping things consistent across all APIs</li>
+                                    </ul>
+                                </li>
+                                <li>What is an idempotent operation?→An idempotent operation is one that can be called multiple times without changing the result beyond the initial call.</li>
+                                <li>Why are  idempotent operations preferred in a network API?
+                                    <ul>
+                                        <li>Messages can get lost, Responses of message can get lost, or the message wasn&#39;t received because a critical component went down</li>
+                                        <li>Messages can simply be resent without any consequences.</li>
+                                    </ul>
+                                </li>
+                                <li>What is API Pagination?→API pagination is a mechanism to retrieve large datasets in smaller, manageable chunks. The client can specify the maximum size of each response and the offset in the entire dataset.</li>
+                                <li>What can happen without API pagination?→The client may receive an overwhelming amount of data, causing performance issues and potential crashes.</li>
+                                <li>If an operation takes a long time, how should it be implemented?→As asynchronous operation.</li>
+                                <li>What are the benefits of versioning the API?→Maintain two versions of API at the same time. Deprecate the older ones gradually.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>RPC
+                    <ul>
+                        <li>See <a isRemReference="true" href="?isPin=false">What is RPC?</a></li>
+                        <li>RPC is also referred to as  {{2550357095951522::location transparency}} since for the developer of the client application, a method executed {{0013115935288685598::locally}} or {{0013115935288685598::remotely}} looks the same. </li>
+                        <li>RPC frameworks written in {{04935880065173326::different programming languages}} can talk to each other using RPC.</li>
+                        <li></li>
+                        <li>Explain how RPC is implemented
+                            <ul>
+                                <li>Defining interface using the interface description language (IDL) of the used framework</li>
+                                <li>Client and Server stub creation using the RPC Code Generation Tool</li>
+                                <li>The custom object types from the API are compiled into classes or structs</li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/MfDL9OllfD-Hf390NC1F44J8okZJz1VFpBl56F88WURaH6xd5NMVXtP7ThT54xEh3ezlekQh13JW22C986vbu7fnDaa8ITPtx3lIF64LFdAHimfMxft2mGJ6et4FCOaY.png" width="738" height="394.6524064171123"/></li>
+                            </ul>
+                        </li>
+                        <li>Explain the steps when an RPC call is made
+                            <ul>
+                                <li>Serialization of requests</li>
+                                <li>Transport to server</li>
+                                <li>Deserialization in server</li>
+                                <li>Executing the function</li>
+                                <li>Same way back for the response from the server</li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/PA3I5c3knKDTf2GckX-rZt4vAKmo0rFYtR25ucnm0G_Ur6TGVWWZPWAVLbyqMEGK6J4fojTEJDwGALRarDNxtzy7I1ETGrn2TL2kQ4bTly2OLqAM2HlyHC-JBqi8qtfi.png" width="738" height="362.0935828877005"/></li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/FJffUUX7hdIefRPxtHYpo6JgNL6BfpwcgRFEa_ZfCwPTbobpF2X9kAud5ncP7oY5NfkOETAXydiPYTStxNYYlPlE_qJTy2grj7351_goSAe0icntOtAZtPOa1kz0sz21.png" width="738" height="342.3609625668449"/></li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Benefits of RPC
+                            <ul>
+                                <li>Simplified communication, calling like local methods</li>
+                                <li>Language-agnostic, supports multiple platforms</li>
+                                <li>The communication is abstracted away in a framework</li>
+                                <li>Failure in the communication results in an error or exception</li>
+                            </ul>
+                        </li>
+                        <li>Drawbacks of RPC
+                            <ul>
+                                <li>Slower execution (can be addressed by asynchronous calls)</li>
+                                <li>Increased complexity in error handling
+                                    <ul>
+                                        <li>For example, lost message, here idempotent operations can help</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>RPC is a good choice if:
+                            <ul>
+                                <li>API provided to a different company instead of an end user or web page</li>
+                                <li>Communication between different components within a large system</li>
+                                <li>Abstracting away the network communication and focusing only on the actions the client wants to perform</li>
+                            </ul>
+                        </li>
+                        <li>RPC is not a good fit
+                            <ul>
+                                <li>Where we don&#39;t want to abstract the network communication and want to take direct advantage of HTTP cookies or headers.</li>
+                                <li>When performance is critical and low latency is required.</li>
+                                <li>Designing a data-centric API</li>
+                                <li>All operations needed are simple CRUD (Create, Read, Update, Delete) operations.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>RPC evolves more around {{21609842486786146::actions}} and less around {{21609842486786146::data/resources}}. </li>
+                        <li></li>
+                        <li>Popular RPC Frameworks and Technologies
+                            <ul>
+                                <li>gRPC, developed by Google in 2015</li>
+                                <li>Apache Thrift</li>
+                                <li>Java Remote Method Invocation (RMI) </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>REST API
+                    <ul>
+                        <li>Define REST
+                            <ul>
+                                <li>Representational State Transfer</li>
+                                <li>Set of architectural constrains and best practices for defining APIs for the web</li>
+                                <li>It is not a standard or a protocol</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>REST API style
+                            <ul>
+                                <li>Has a {{9219326925998539::resource-oriented}} approach.</li>
+                                <li>The main abstraction to the user is a {{17754008250853182::named resource}} </li>
+                                <li>The {{6016094435663997::resources}} encapsulate different entities in our system</li>
+                                <li>REST API allows the user to manipulate {{9649929029420605::resources}} through some methods</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Explain HATEOAS
+                            <ul>
+                                <li>Hypermedia as the Engine of the Application State</li>
+                                <li>State representation to the client is done with hypermedia links</li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/ROZHA-H8Kq33b9u4ePx8cf0MuvWgvUoS0oF2GQxTwWMk5-GzWlYF62-DBEhcBChbQQ4Qel5GqSJU4GdJ5rCsTLPcaWk--J9wXJkyHWlJKffje0LKhOazQoRwq-5q3_7z.png" width="541" height="517"/></li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Name REST API Quality Attributes
+                            <ul>
+                                <li>Stateless Server</li>
+                                <li>Server needs to define each response as cacheble or non-cacheable</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Resources
+                            <ul>
+                                <li>Each resource is {{6163657597544011::named}} and {{6163657597544011::addressed}} using a {{1639786798087911::URI (Uniform Resource Identifier)}}.</li>
+                                <li>Each resource is either a {{9763661349911776::simple}} or a {{9763661349911776::collection}} resource. </li>
+                                <li>The resources are structured {{771948070712144::hierarchically}}, using {{771948070712144::&quot;/&quot;}} to denote levels.</li>
+                                <li>Explain the difference between a simple and a collections resource→A simple resource represents a single entity with a state which can contain one or more sub-resources, while a collection resource represents a group of entities of the same type.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Best practices for naming resources
+                            <ul>
+                                <li>Naming using nouns, verbs are for actions</li>
+                                <li>Use plural nouns for collections</li>
+                                <li>Give clear and meaningful names, avoid namings like elements or objects</li>
+                                <li>Use consistent naming conventions across the API</li>
+                                <li>The resource identifiers should be unique and URL friendly</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>The REST API limits the number of methods we can perform on each resource. These are
+                            <ul>
+                                <li>Create a new resource ⇒ POST (can be made cacheable)</li>
+                                <li>Updating an existing resource ⇒ PUT (idempotent)</li>
+                                <li>Deleting an existing resource ⇒ DELETE (idempotent)</li>
+                                <li>Getting the current state of the resource ⇒ GET (doesn&#39;t change state, idempotent, considered cacheable by default)</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>REST API Definition - Step-by-step process:
+                            <ul>
+                                <li>Identifying entities
+                                    <ul>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/T77FhFt1dZL-i4rg333Eid1jV6PrhMvuWGRBIVZHidF3yseFwWkwtZoT4t9C7v-FkE21tqB9sMyEoKRNh28N5ZB9YiMwQLgEOMXsezTSp6XiiiU7j-0WYtsmwogGfihy.png" width="714" height="348.12430939226516"/></li>
+                                    </ul>
+                                </li>
+                                <li>Mapping entities to URIs
+                                    <ul>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/J_atNqJugs_cX6jJlDdLP5koEEVCPfvyOyM9UamymXIdZ-sWMNGVqlNhFCWY0xmY--LDTSR-P9WDfkz6W0wI5ad-olcVD933PwCfSVh4yW0cN6Kbik8r8_DGBTn6X2Gm.png" width="714" height="364.88950276243094"/></li>
+                                    </ul>
+                                </li>
+                                <li>Defining Resources Representations
+                                    <ul>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/nCO0GUXtXekNioo3Qjn7T277TQF78X6mT_3T9AIXQEICmLEbZTwWmDsPlRmOikfSWwCn5IzTz1mpHqGhk_PNj3qLbbouK6vYuSjaXtU1cshZUo1j7VKKq9RPHa2d1asF.png" width="609" height="525"/></li>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/Xz9W3d0qCdQVgXGc9PM1fxehZR-ozjUb4C2O_muv9sSK7REfOiQtiJwPNsHRR75HTrW69u3pbjKxjyCU26Ern4ULYCV9Ohntp6r_atqhg1J1ZNii1sStOPGOv0NWk_ec.png" width="667" height="490"/></li>
+                                    </ul>
+                                </li>
+                                <li>Assigning HTTP Methods to Operation on Resources
+                                    <ul>
+                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/LBUv-a8Y3TC4ZpODgrFHT4ltezGhrwIVXHc694uZHX_hwXONGjw0a2ui1aeHcK8kiroRcl6fis1Q8hgHd4xujpw9P4jI35q3BVnVrfs19ER2TYy_bAB7W5HNwEy1pQ9V.png" width="714" height="304.73204419889504"/></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Large Scale Systems Architectural Building Blocks
+            <ul>
+                <li>DNS, Load Balancing &amp; GLSB
+                    <ul>
+                        <li>Load Balancer
+                            <ul>
+                                <li>What is the purpose of a load balancer?→Distributes network traffic across multiple servers to prevent overload and ensure high availability. Additionally, it serves as a single server abstraction, meaning our service looks like it&#39;s running on one single server.</li>
+                                <li>Which quality attributes are provided?
+                                    <ul>
+                                        <li>Scalability</li>
+                                        <li>High Availability</li>
+                                        <li>Performance (Throughput), additionally latency added by the load balancer is inferior to the ability to handle more requests on multiple servers</li>
+                                        <li>Maintainability</li>
+                                    </ul>
+                                </li>
+                                <li>Name different types of load balancers
+                                    <ul>
+                                        <li>DNS load balancing</li>
+                                        <li>Hardware load balancing</li>
+                                        <li>Software load balancing</li>
+                                        <li>Global Server Load Balancing</li>
+                                    </ul>
+                                </li>
+                                <li>Explain DNS→Domain Name System (DNS) is part of the internet infrastructure that maps human-friendly URLs to IP Addresses. It is the &quot;phone book of the internet&quot;.</li>
+                                <li>DNS load balancing
+                                    <ul>
+                                        <li>Explain→The DNS server sends a list of IP addresses of our servers back to the client. It will rotate them at each request, which balances the load automatically, since most clients just take the first address in the list.</li>
+                                        <li>Advantages
+                                            <ul>
+                                                <li>Simple</li>
+                                                <li>Cheap (comes for free by purchasing a domain name)</li>
+                                            </ul>
+                                        </li>
+                                        <li>Disadvantage
+                                            <ul>
+                                                <li>The DNS server doesn&#39;t check the health of the servers. It can take some time to update the list of IP addresses in the DNS server, since it will be changed based on the configured TTL. Also, it may be cached in different computers.</li>
+                                                <li>The strategy is a simple round-robin, different server powers or that a server may be overloaded is not considered.</li>
+                                                <li>All IP addresses are public ⇒ security issue.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Hard- and Software load balancers
+                                    <ul>
+                                        <li>Explain the difference→Hardware load balancers are dedicated physical devices designed and optimized for load balancing, while software load balancers are software applications that can run on any computer to perform load balancing functions.</li>
+                                        <li>Advantages
+                                            <ul>
+                                                <li>Better security, since the IP addresses and number of servers are not exposed.</li>
+                                                <li>Actively monitoring possible</li>
+                                                <li>Intelligent load balancing possible</li>
+                                                <li>It can also be used internally for different services
+                                                    <ul>
+                                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/Lt7PTVHpGtERsqmUIVNAifkkA4yuRmeNpeV3YBoMfJ4y7sxmm48DS1RnD1jAvWlUD4-hoKZVvj2nlQLMXz-NYRCTy_LtttZfBSvCUTNjoQYHhtTgLb7Dqj3t34DYqG8T.png" width="666" height="333.9852071005917"/></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Disadvantage→Additional latency, which can be minimized when the load balancers servers are located physically close to the server running the services. Multiple load balancers may be required when there exists multiple data centers in different locations.</li>
+                                    </ul>
+                                </li>
+                                <li>Global Server Load Balancing (GLSB)
+                                    <ul>
+                                        <li>Describe→A hybrid between a DNS service and a hardware/software load balancer for global traffic distribution. Solving the latency issue from the latter ones. It can be configured on various strategies for route traffic.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Open Source Software Load Balancing Solutions
+                            <ul>
+                                <li>HAProxy
+                                    <ul>
+                                        <li>HAProxy is a free and open-source, reliable, high-performance TCP/HTTP load balancer. It is particularly suited for very high traffic websites, and powers a significant portion of the world&#39;s most visited ones. It is considered the de-facto standard open-source load balancer, and is  shipped with most mainstream Linux distributions. HAProxy supports most Unix style operating systems.</li>
+                                    </ul>
+                                </li>
+                                <li>NGINX
+                                    <ul>
+                                        <li>NGINX is a free, open-source, high-performance HTTP server and reverse proxy (load balancer). It is known for its high performance, stability, rich feature set and simple configuration. For a full tutorial on how to install, configure and use NGINX, follow this <a isInlineLink="true" href="https://www.nginx.com/resources/wiki/start/">link</a>.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Cloud Based Load Balancing Solutions
+                            <ul>
+                                <li>AWS - Elastic Load Balancing (ELB)
+                                    <ul>
+                                        <li>Amazon ELB is a highly scalable load balancing solution. It is an ideal solution for running on AWS, and integrates seamlessly with all of AWS services. It can operate in 4 different modes:
+                                            <ul>
+                                                <li>Application (Layer 7) Load Balancer - Ideal for advanced load balancing of HTTP and HTTPS traffic</li>
+                                                <li>Network (Layer 4) Load Balancer - Ideal for load balancing of both TCP and UDP traffic</li>
+                                                <li>Gateway Load Balancer - Ideal for deploying, scaling, and managing your third-party virtual appliances.</li>
+                                                <li>Classic Load Balancer (Layer 4 and 7) - Ideal for routing traffic to EC2 instances.</li>
+                                            </ul>
+                                        </li>
+                                        <li>For the full documentation on Amazon ELB and its autoscaling policies follow this <a isInlineLink="true" href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">link</a> </li>
+                                    </ul>
+                                </li>
+                                <li>GCP - Cloud Load Balancing
+                                    <ul>
+                                        <li>Google Cloud Platform Load Balancer is Google&#39;s highly scalable and robust load-balancing solution. &quot;Cloud Load Balancing allows you to put your resources behind a single IP address that is externally accessible or internal to your Virtual Private Cloud (VPC) network&quot;. Some of the load balancer types available as part of the GCP Cloud Load Balancing are:
+                                            <ul>
+                                                <li>External HTTP(S) Load Balancer - Externally facing HTTP(s) (Layer 7) load balancer which enables you to run and scale your services behind an internal IP address</li>
+                                                <li>Internal HTTP(S) Load Balancer - Internal Layer 7 load balancer that enables you to run and scale your services behind an internal IP address.</li>
+                                                <li>External TCP/UDP Network Load Balancer - Externally facing TCP/UDP (Layer 4) load balancer</li>
+                                                <li>Internal TCP/UDP Load Balancer - Internally facing TCP/UDP (Layer 4) load balancer.</li>
+                                                <li></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Microsoft Azure Load Balancer
+                                    <ul>
+                                        <li>Microsoft Azure load balancing solution provides 3 different types of load balancers:
+                                            <ul>
+                                                <li>Standard Load Balancer - Public and internal Layer 4 load balancer</li>
+                                                <li>Gateway Load Balancer - High-performance and high availability load balancer for third-party Network Virtual Appliances.</li>
+                                                <li>Basic Load Balancer - Ideal for small-scale application</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>GSLB Solutions
+                            <ul>
+                                <li>Amazon Route 53 - Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service.</li>
+                                <li>AWS Global Accelerator -  A networking service that helps you improve the availability, performance, and security of your public applications.</li>
+                                <li>Google Cloud Platform Load Balancer &amp; Cloud DNS - Reliable, resilient, low-latency DNS serving from Google&#39;s worldwide network with everything you need to register, manage, and serve your domains.</li>
+                                <li>Azure Traffic Manager - DNS-based load balancing</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>Message Brokers
+                    <ul>
+                        <li>Drawbacks of synchronous communication
+                            <ul>
+                                <li>Both instances have to be healthy and maintain the connection</li>
+                                <li>No padding in the system to absorb a sudden increase in traffic or load</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>What is a message broker?→A software architectural building block inside our system that uses the queue data structure to store messages between senders and receivers. Decouples senders from the receivers and is fundamental for asynchronous software architecture.</li>
+                        <li>Capabilities of a message broker?
+                            <ul>
+                                <li>Buffering messages</li>
+                                <li>Message routing</li>
+                                <li>Transformation &amp; Validation</li>
+                                <li>Load balancing</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>How does a message broker increases fault tolerance, availability and scalability?
+                            <ul>
+                                <li>By decoupling components, allowing one component to be temporarily unavailable without affecting others. </li>
+                                <li>Prevent messages from being lost.</li>
+                                <li>Messages can be queued up during traffic spikes</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li>Name drawbacks when using a message broker
+                            <ul>
+                                <li>Increased complexity</li>
+                                <li>Potential single point of failure</li>
+                                <li>Added latency (mostly not significant)</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Open-Source Message Brokers
+                            <ul>
+                                <li>Apache Kafka - The most popular open-source message broker nowadays. Apache Kafka is a distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.</li>
+                                <li>RabbitMQ - A widely deployed open-source message broker. It is used worldwide at small startups and large enterprises.</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li>Cloud-Based Message Brokers
+                            <ul>
+                                <li>Amazon Simple Queue Service (SQS) - Fully managed message queuing service that enables you to decouple and scale micro-services, distributed systems, and serverless applications.</li>
+                                <li>GCP Pub/Sub and Cloud Tasks - Publisher/Subscriber and message queue solutions offered by Google Cloud Platform. See this article for comparison between the two offerings.</li>
+                                <li>Microsoft Azure:
+                                    <ul>
+                                        <li>Service Bus - Fully managed enterprise message broker with message queues and publish-subscribe topics.</li>
+                                        <li>Event Hubs - Fully managed real-time data ingestion service. Allows streaming millions of events per second from any source. Integrates seamlessly with Apache Kafka clients without any code changes. A perfect solution for Big Data.</li>
+                                        <li>Event Grid - Reliable, serverless event delivery system at a massive scale. It uses the publish-subscribe model. It is Dynamically scalable, Low cost with a pay-as-you-go model, and guarantees &quot;At least once delivery of an event&quot;</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>API Gateway
+                    <ul>
+                        <li>What problem does the API Gateway solve?→It manages and secures access to multiple backend services. With this, not every backend needs to implement its own security, authentication and authorization.</li>
+                        <li></li>
+                        <li>What does an API Gateway do?
+                            <ul>
+                                <li>An API gateway manages and secures external access to multiple internal APIs, providing just one single API to external users.</li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/qQH0WDU4RLGYBA5ldoJ2vn7zXh55nXe05pQcsFRv-QF_nXFaViKtklhyx-_kLPSqYLOpXDDsdlzcJPvUlkA3diDVimwdKPzGm0lRhxuLDGrRnLCJi2DAYULr442yAj97.png" width="738" height="335.45454545454544"/></li>
+                            </ul>
+                        </li>
+                        <li>Name benefits of an API Gateway
+                            <ul>
+                                <li>Seamless internal modifications/refactoring</li>
+                                <li>Consolidating all security, authorization and authentication in a single place</li>
+                                <li>Load balancing and traffic management, including health checks</li>
+                                <li>Request routing, saving the user from making multiple requests to different services</li>
+                                <li>Caching static content and responses</li>
+                                <li>Protocol translation</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Considerations
+                            <ul>
+                                <li>API Gateway shouldn&#39;t contain any {{21498407353907256::business logic.}}</li>
+                                <li>API Gateway may become a {{3151577589661304::single point of failure}}. </li>
+                                <li>Avoid {{2523572424012993::bypassing}} API Gateway from external services. </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Open-Source API Gateways
+                            <ul>
+                                <li>Netflix Zuul
+                                    <ul>
+                                        <li>Zuul is a free and open-source application gateway written in Java that provides capabilities for dynamic routing, monitoring, resiliency, security, and more.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Cloud-Based API Gateways
+                            <ul>
+                                <li>Amazon API Gateway
+                                    <ul>
+                                        <li>Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. Supports RESTful APIs and WebSocket APIs (bi-directional communication between client and server).</li>
+                                    </ul>
+                                </li>
+                                <li>Google Cloud Platform API Gateway
+                                    <ul>
+                                        <li>Google Cloud Platform API Gateway enables you to provide secure access to your services through a well-defined REST API that is consistent across all of your services, regardless of service implementation. It is designed for serverless workloads on GCP. For full documentation, follow this link.</li>
+                                        <li>Apigee is Google Cloud’s API management product that enables organizations to build, manage, and secure APIs — for any use case, environment (on-premises, in Google Cloud, or a hybrid environment), or scale. For full documentation, follow this link.</li>
+                                    </ul>
+                                </li>
+                                <li>Microsoft Azure API Management
+                                    <ul>
+                                        <li>API Management helps organizations publish APIs to external, partner, and internal developers to unlock the potential of their data and services.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Content Delivery Network - CDN
+                    <ul>
+                        <li>What is a CDN?→A CDN is a geographically distributed network of servers that caches content to improve delivery speed and reduce latency.</li>
+                        <li>CDNs provide service by {{7993970539783427::caching}} our website content on their {{4237977355066259::edge servers}}, which are relocated at different {{7993970539783427::Points of Presence (PoP).}} {{4237977355066259::Edge servers}} are {{5624249783664189::physically closer}} to the user and {{5624249783664189::strategy located}} in terms of network infrastructure.</li>
+                        <li>CDNs can be used to deliver the following resources
+                            <ul>
+                                <li>Images</li>
+                                <li>Text</li>
+                                <li>CSS</li>
+                                <li>JavaScript files</li>
+                                <li>Video streams (live and on-demand)</li>
+                            </ul>
+                        </li>
+                        <li>Quality attributes of CDNs
+                            <ul>
+                                <li>Performance ⇒ faster page loads</li>
+                                <li>High availability ⇒ issues/slowness are less noticeable</li>
+                                <li>Security ⇒ Protection against Distributed Denial of Service (DDoS) attacks</li>
+                            </ul>
+                        </li>
+                        <li>How are CDNs improved?
+                            <ul>
+                                <li>Use faster and more optimized HDDs</li>
+                                <li>Reduce bandwidth by compressing the content</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Name different strategies of CDNs
+                            <ul>
+                                <li>Pull strategy</li>
+                                <li>Push strategy</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Pull strategy
+                            <ul>
+                                <li>How does it work?→The service tells the CDN which content is cached and how the cache needs to be invalidated by setting the Time To Live (TTL) property. When the TTL expires, the CDN downloades the content again from the server.</li>
+                                <li>Advantage
+                                    <ul>
+                                        <li>Lower maintenance, once set up, everything is done by the CDN.</li>
+                                    </ul>
+                                </li>
+                                <li>Drawbacks
+                                    <ul>
+                                        <li>First user of an asset which is not cached will have a longer latency</li>
+                                        <li>Increased load on the origin server during peak times when TTL is similar of all assets</li>
+                                        <li>Still a high availability necessary on our system.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Push strategy
+                            <ul>
+                                <li>How does it work?→The origin server pushes content updates to CDN edge servers.</li>
+                                <li>Advantage?
+                                    <ul>
+                                        <li>When content doesn&#39;t change frequently, one push to the CDN is enough. Reduces traffic and temporarily downtime of our system can be caught.</li>
+                                    </ul>
+                                </li>
+                                <li>Drawback
+                                    <ul>
+                                        <li>If the content changes frequently, we actively need to push it every time to the CDN.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>CDN Solutions &amp; Cloud Technologies
+                            <ul>
+                                <li>Cloudflare
+                                    <ul>
+                                        <li>Cloudflare offers ultra-fast static and dynamic content delivery over our global edge network. It helps reduce bandwidth costs and takes advantage of built-in unmetered DDoS protection.</li>
+                                    </ul>
+                                </li>
+                                <li>Fastly
+                                    <ul>
+                                        <li>Fastly&#39;s Deliver@Edge is a modern, efficient, and highly configurable CDN that gives you the freedom to control how your content is cached so you can deliver the content your users want quickly.</li>
+                                    </ul>
+                                </li>
+                                <li>Akamai
+                                    <ul>
+                                        <li>Akamai has a large variety of offerings for API Acceleration, Global Traffic Management, Image &amp; Video Management, Media Delivery, and much more.</li>
+                                    </ul>
+                                </li>
+                                <li>Amazon CloudFront
+                                    <ul>
+                                        <li>Amazon CloudFront is a content delivery network (CDN) service built for high performance, security, and developer convenience. Some of its use-cases include delivering fast secure websites, accelerating dynamic content delivery and APIs, live streaming, video-on-demand, and others.</li>
+                                    </ul>
+                                </li>
+                                <li>Google Cloud Platform CDN
+                                    <ul>
+                                        <li>GCP CDN offers fast, reliable web and video content delivery with a global scale and reach.</li>
+                                    </ul>
+                                </li>
+                                <li>Microsoft Azure Content Delivery Network
+                                    <ul>
+                                        <li>Microsoft&#39;s CDN solution offers global coverage, full integration with Azure services, and a simple setup.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Data Storage at Global Scale
+            <ul>
+                <li>Relational Databases &amp; ACID Transactions
+                    <ul>
+                        <li>Relational Database
+                            <ul>
+                                <li>Describe
+                                    <ul>
+                                        <li>Data is stored in tables</li>
+                                        <li>Each row is a single record</li>
+                                        <li>The records are all related to each other through a set of predefined columns.</li>
+                                        <li>Each of the columns has a name and type and optional a set of constraints. </li>
+                                        <li>Each record is uniquely identified by a key, represented by one or multiple columns.</li>
+                                    </ul>
+                                </li>
+                                <li>The structure ({{6026083236591226::schema}}) of each table is defined {{6026083236591226::ahead of time}}.</li>
+                                <li>How is data duplication avoided?→Data duplication is avoided by the opportunity to have a relation between different tables. For example, a product table with a product ID and a sales table where the product is referenced through the product ID.</li>
+                                <li>Advantages?
+                                    <ul>
+                                        <li>Support for complex queries</li>
+                                        <li>Efficient storage</li>
+                                        <li>Natural structure of data for humans</li>
+                                        <li>ACID transactions guarantee</li>
+                                    </ul>
+                                </li>
+                                <li>Disadvantages
+                                    <ul>
+                                        <li>Rigid structure, which needs to be defined before the database can be used. Changes require maintenance time.</li>
+                                        <li>Hard to maintain/scale</li>
+                                        <li>Slower read operations compared to non-relational operations</li>
+                                    </ul>
+                                </li>
+                                <li>When to choose a relational database?
+                                    <ul>
+                                        <li>Structured data requirements</li>
+                                        <li>Complex queries and transactions required</li>
+                                        <li>Read performance is not the most important quality attribute</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>SQL
+                            <ul>
+                                <li>Describe→SQL is a domain-specific language used for managing and manipulating data held in a relational database management system.</li>
+                                <li>Different relational database implementations have their own additional features, but the majority of standard operations are the same for all relational databases.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>ACID transactions
+                            <ul>
+                                <li>Explain the acronym
+                                    <ul>
+                                        <li>Atomicity</li>
+                                        <li>Consistency</li>
+                                        <li>Isolation</li>
+                                        <li>Durability</li>
+                                    </ul>
+                                </li>
+                                <li>Definition transaction→A transaction is a sequence of database operations that for an external observer should appear as a single operation.</li>
+                                <li>Explain Atomicity→Atomicity ensures that a transaction is treated as a single, indivisible unit of work. Either all operations of the transaction are done at once or are not done.</li>
+                                <li>Explain Consistency→Consistency ensures that a transaction leaves the database in a valid state, e.g. no constraints are violated by a transaction. A committed transaction will be seen by all future queries/transactions.</li>
+                                <li>Explain Isolation→Isolation ensures that concurrent transactions appear to execute sequentially, preventing interference between them.</li>
+                                <li>Explain Durability→Durability ensures that once a transaction is committed, it remains persistent even in the event of system failures.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Non-Relational Databases
+                    <ul>
+                        <li>What is the main difference between relational and non-relational databases?→Relational databases use structured tables with predefined schemas, while non-relational databases use flexible schemas and various data models.</li>
+                        <li>Relational databases are designed for {{9804230400272547::efficient storage}} and non-relational databases are designed for {{9804230400272547::faster queries}}. </li>
+                        <li>What are the trade-offs of using a flexible schema in non-relational databases?
+                            <ul>
+                                <li>Loose the ability to easily analyze the records, also multiple groups (join operations) becomes hard</li>
+                                <li>ACID transaction are rarely supported</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>What are the three main types of non-relational databases?
+                            <ul>
+                                <li>Document store</li>
+                                <li>Key-value stores</li>
+                                <li>Graph database</li>
+                            </ul>
+                        </li>
+                        <li>Explain the concept of a key value store database→A key-value store database stores data as key-value pairs, offering fast read and write operations. The type of value can be simple or complex. It can be seen as a large-scale hash table or dictionary.</li>
+                        <li>Explain the concept of a document store database→A document store database stores data in flexible, self-contained documents. Each document is an object with different attributes of different types. These documents can be easily mapped to objects in a programming language.</li>
+                        <li>Explain the concept of graph databases→A graph database is an extension of a document store and stores data as nodes and edges, representing relationships between data points.</li>
+                        <li>Name use cases for a graph database
+                            <ul>
+                                <li>Fraud detection: The same person uses multiple logical users to initiate multiple transactions</li>
+                                <li>Recommendation engines: Recommendation of new products based on purchase history or friends of the user.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>When to choose a non-relational database?
+                            <ul>
+                                <li>Caching Task</li>
+                                <li>Handling real-time big data</li>
+                                <li>Unstructured data, different records can contain different attributes</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Non-Relational Databases - Solutions
+                            <ul>
+                                <li>Key/Value Stores Examples
+                                    <ul>
+                                        <li>Redis</li>
+                                        <li>Aerospike</li>
+                                        <li>Amazon DynamoDB</li>
+                                    </ul>
+                                </li>
+                                <li>Document Store Examples
+                                    <ul>
+                                        <li>Cassandra</li>
+                                        <li>MongoDB</li>
+                                    </ul>
+                                </li>
+                                <li>Graph Databases Examples
+                                    <ul>
+                                        <li>Amazon Neptune</li>
+                                        <li>NEO4J</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Techniques to Improve Performance, Availability &amp; Scalability of Databases
+                    <ul>
+                        <li>Name three techniques to improve the mentioned quality attributes
+                            <ul>
+                                <li>Database Indexing</li>
+                                <li>Database Replication</li>
+                                <li>Database Partitioning/Sharding</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Database Indexing
+                            <ul>
+                                <li>Definition Database Index→A data structure (hash map, B-Tree) that improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space. Created from a particular column (single index) or group of columns (composite index). </li>
+                                <li>Define Composite Index→A composite index is an index that combines multiple columns to speed up queries involving those columns.</li>
+                                <li>Tradeoffs for indexing
+                                    <ul>
+                                        <li>Additional space for storing the index tables</li>
+                                        <li>Speed decrease for write operations</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Database replication
+                            <ul>
+                                <li>Why should you replicate databases?→To eliminate the database as a single point of failure, improving performance, availability and scalability.</li>
+                                <li>Tradeoff
+                                    <ul>
+                                        <li>Higher complexity for operations like write, update and delete. Keeping multiple databases in a large-scale system consistent is not a trivial task.</li>
+                                        <li>Increased resource consumption.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Database Partitioning/Sharding
+                            <ul>
+                                <li>Describe this technique→Database partitioning divides a large database into smaller, more manageable parts.</li>
+                                <li>Advantages
+                                    <ul>
+                                        <li>Scaling, more data can be stored</li>
+                                        <li>Different queries that touch different parts of data can be performed in parallel</li>
+                                    </ul>
+                                </li>
+                                <li>Drawback
+                                    <ul>
+                                        <li>Increased complexity, especially for relational databases</li>
+                                        <li>Overhead for managing different parts, for example, keep them in a similar size</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Indexing, Replication and Partitioning are completely {{7560095851465254::orthogonal}} to each other. </li>
+                        <li>All three of them are commonly used together in most real-life large-scale systems.</li>
+                    </ul>
+                </li>
+                <li>Brewer&#39;s (CAP) Theorem
+                    <ul>
+                        <li>Repeat the CAP Theorem→A distributed database can only provide two out of three guarantees: consistency, availability, and partition tolerance. 
+<img src="https://remnote-user-data.s3.amazonaws.com/cEhJsI3c_qUOSPVWiOkA2_XrIqeokB_0cH3jviNd_wdICFWrJ9GIM-9rRAXKSypPZoTrCQ-L3Jz9ce3ZY69IdEMhrA7LuWBRRQ4MAz7yVeMEEl2VQNcx9CwlOGDLwUCj.png" width="732" height="729.0404312668463"/></li>
+                        <li>What is a network partition→A network partition is a network failure that divides a network into multiple isolated segments.</li>
+                        <li>What is partition tolerance?→Partition tolerance is the ability of a distributed system to continue operating despite network partitions.</li>
+                        <li>What is consistency in the CAP theorem?→Consistency means every read receives the most recent write or an error.</li>
+                        <li>What is availability in the CAP theorem?→Availability means that every request receives a non-error response, without the guarantee that it contains the most recent write.</li>
+                        <li>Without a network partition, consistency and availability can both be fulfilled. Explain why we have to choose one when there is a network partition
+                            <ul>
+                                <li>A network partition prevents communication between nodes, making it impossible to guarantee both consistency (all nodes have the same data) and availability (all nodes respond to requests) simultaneously. </li>
+                                <li>Choosing consistency: Service returns an error during network partition.</li>
+                                <li>Choosing availability: Data is not consistent through the whole network.</li>
+                                <li>Not that in reality a tradeoff can be made between consistency and availability, we don&#39;t have to choose one entirely.</li>
+                            </ul>
+                        </li>
+                        <li>When a database shall be distributed, we have to choose {{5708766922279914::Partition tolerance}} out of three quality attributes in the CAP theorem.</li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>Scalable Unstructured Data Storage
+                    <ul>
+                        <li>What is unstructured data?→Data which doesn&#39;t follow a particular structure, schema or model. For example, &quot;Blob&quot; - Binary Large Object Files, like Audio, Video or Images. Often the data sets and each file or object itself of unstructured data are large.</li>
+                        <li>Relational/non-relational databases are {{6528028871785729::not optimized}}  for unstructured data. They often have also a size limit for binary objects (~megabytes).</li>
+                        <li></li>
+                        <li>Distributed File System (DFS)
+                            <ul>
+                                <li>Describe→A distributed file system (DFS) is a storage architecture that distributes data across multiple storage nodes. It is similar to a file system on a single computer.</li>
+                                <li>Benefits
+                                    <ul>
+                                        <li>No need for a special API.</li>
+                                        <li>Files can be modified easily.</li>
+                                        <li>Efficient for high-performance operations</li>
+                                    </ul>
+                                </li>
+                                <li>Limitations
+                                    <ul>
+                                        <li>Number of files is limited</li>
+                                        <li>No easy access through web API (HTTP+ REST)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Object Store
+                            <ul>
+                                <li>Describe→An object store is a data storage architecture that manages data as objects rather than files or blocks. Each object contains the data itself, along with metadata and a unique identifier, allowing for easy retrieval and management.</li>
+                                <li>Benefits
+                                    <ul>
+                                        <li>Linear scalability</li>
+                                        <li>No limit to the number of objects</li>
+                                        <li>Very high limit on single object size (~5-10 Terabytes)</li>
+                                        <li>Provides an HTTP + REST API</li>
+                                        <li>Supports versioning out of the box</li>
+                                        <li></li>
+                                    </ul>
+                                </li>
+                                <li>Drawbacks
+                                    <ul>
+                                        <li>Objects are immutable, objects needs to be replaced if changed</li>
+                                        <li>No easy access like a file-system, access through an SDK or REST API</li>
+                                        <li>Lower IO performance compared to DFS</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Cloud and Open Source Solutions
+                            <ul>
+                                <li>Cloud-Based Object Store Solutions
+                                    <ul>
+                                        <li>Amazon S3 (Simple Storage Service) - Amazon&#39;s highly scalable cloud storage service that stores object data within buckets. Designed to store and protect any amount of data for various use cases, such as websites, cloud-native applications, backups, archiving machine learning, and analytics.</li>
+                                        <li>GCP Cloud Storage - Google Cloud&#39;s managed service for storing unstructured data for companies of all sizes</li>
+                                        <li>Azure Blob Storage -  Microsoft&#39;s massively scalable and secure object storage for cloud-native workloads, archives, data lakes, high-performance computing, and machine learning</li>
+                                        <li>Alibaba Cloud OSS (Object Storage Service) - Fully managed enterprise-ready Object Storage Service to store and access any amount of data from anywhere.</li>
+                                    </ul>
+                                </li>
+                                <li>Open Source and Third-Party Object Store Solutions
+                                    <ul>
+                                        <li>OpenIO - A software-defined open-source object storage solution ideal for Big Data, HPC, and AI. It is S3 compatible and can be deployed on-premises or cloud-hosted on any hardware that you choose.</li>
+                                        <li>MinIO - High-performance, S3-compatible object storage. It is native to Kubernetes and 100% open source under GNU AGPL v3.</li>
+                                        <li>Ceph - Open-source, reliable and scalable storage. Ceph provides a unified storage service with object, block, and file interfaces from a single cluster built from commodity hardware components.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Software Architecture Patterns and Styles
+            <ul>
+                <li>Introduction
+                    <ul>
+                        <li>What are software architectural patterns?→These are general, repeatable solutions to commonly occurring system design problems. This involves, in general, multiple components that run as separate units.</li>
+                        <li></li>
+                        <li>Why use software architectural patterns?
+                            <ul>
+                                <li>Save valuable time and resources</li>
+                                <li>Avoid the risk to make our architecture resemble a Big Ball of Mud (anti-Pattern, no structure, tightly coupled system, ...)</li>
+                                <li>Other engineers/architects can follow the pattern</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Multi-Tier Architecture
+                    <ul>
+                        <li>Describe what is a multi-tier architecture→A multi-tier architecture is a system which is separated into multiple logical (limiting the scope) and physical distinct tiers. The physical separation allows each tier to be separately developed, upgraded and scaled. </li>
+                        <li>What is the difference to a multi layer architecture?→Multi-tier architecture distributes application components across multiple physical tiers, while multi-layer architecture separates components into logical layers within a single tier.</li>
+                        <li>Name restrictions, which allow this architecture to be loosely coupled
+                            <ul>
+                                <li>Usage of client-server model</li>
+                                <li>It is not allowed to skip tiers, they must call each other in a specific order.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>The three-tier architecture is the most common and popular architectural pattern for client-server, web-based services.
+                            <ul>
+                                <li>Describe
+                                    <ul>
+                                        <li>A three-tier architecture separates an application into presentation, application, and data tiers for improved organization and scalability.</li>
+                                        <li>Presentation tier: Displays information, takes user input, no business logic</li>
+                                        <li>Application tier: Contains business logic and processes user requests, communicates with the data tier. Sometimes also called business or logic tier.</li>
+                                        <li>Data tier: Manages data storage, retrieval, and manipulation, ensuring data (user and business) integrity and security.</li>
+                                    </ul>
+                                </li>
+                                <li>Advantages
+                                    <ul>
+                                        <li>Easy to scale horizontally</li>
+                                        <li>Easy to maintain, the logic is concentrated in the application tier</li>
+                                    </ul>
+                                </li>
+                                <li>Drawback→Monolithic structure of the logic tier. Business concentrated in a single codebase. Possible high CPU and memory consumption and low development policy.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Two tier architecture
+                            <ul>
+                                <li>Describe→One tier for presentation and business tier, for example desktop applications. One tier for data and storage, often remotely.</li>
+                                <li>Advantages
+                                    <ul>
+                                        <li>Eliminates overhead of the logic tier in the three tier architecture</li>
+                                        <li>Faster, more native experience for the user</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>There is also a four and five (not often used) tier architecture.</li>
+                    </ul>
+                </li>
+                <li>Microservice Architecture
+                    <ul>
+                        <li>Describe→Microservice architecture organizes our business logic as a collection of loosely coupled and independently deployed services. Each service is owned by a small team and has a narrow scope of responsibility. </li>
+                        <li></li>
+                        <li>Advantages
+                            <ul>
+                                <li>Small codebase ⇒ faster and easier development, test, and deployment</li>
+                                <li>Better performance and horizontal scalability</li>
+                                <li>Better organizational scalability</li>
+                                <li>Better security (fault isolation)</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Drawbacks
+                            <ul>
+                                <li>All the advantages don&#39;t come out-of-the-box by switching from a monolithic (tier) architecture to a microservice architecture. </li>
+                                <li>Overhead </li>
+                                <li>Additional challenges (for example, each change should only happen in one service)</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Name important best practices
+                            <ul>
+                                <li>Single Responsibility Principle (SRP)</li>
+                                <li>Separate Database per service</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Event-Driven Architecture
+                    <ul>
+                        <li>Instead of direct messages that issues command or requests that ask for data in an event-driven architecture, we have only {{852148871429976::events}}.</li>
+                        <li></li>
+                        <li>What is an event?→An event is an immutable statement of a fact or a change.</li>
+                        <li></li>
+                        <li>Which components do we have?
+                            <ul>
+                                <li>Event producers</li>
+                                <li>Event consumers</li>
+                                <li>Message brokers</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>What benefits do we get?
+                            <ul>
+                                <li>Decoupled components</li>
+                                <li>Asynchronous messages</li>
+                                <li>Scalability and flexibility (more services can be added without any changes)</li>
+                                <li>Real-time stream analysis (Data analysis, Pattern detection, act upon data in real-time)</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Describe the event sourcing pattern→Event sourcing is an architectural pattern where state changes are stored as a sequence of events, enabling reconstruction of past states and facilitating auditing and replayability.</li>
+                        <li></li>
+                        <li>CQRS pattern
+                            <ul>
+                                <li>Stands for→Command Query Responsibility Segregation.</li>
+                                <li>Which problems does it solve?
+                                    <ul>
+                                        <li>Optimizing a database with high load of Read and Update operations (concurrent operations)
+                                            <ul>
+                                                <li>One database optimized for write, one for read</li>
+                                                <li>Events from Database A to B to update the data</li>
+                                            </ul>
+                                        </li>
+                                        <li>Joining multiple tables located in separate databases that belong to different microservices
+                                            <ul>
+                                                <li>Changes in two databases of service A and B were sent as event which is taken from service C.</li>
+                                                <li>Joins the data and provides a read-only &quot;materialized view&quot;.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Strategies for Processing Infinite Streams of Events
+            <ul>
+                <li>Introduction
+                    <ul>
+                        <li>Tumbling Window Strategy 
+                            <ul>
+                                <li>Describe→A tumbling window strategy processes data in fixed-size, non-overlapping time intervals.
+ <img src="https://remnote-user-data.s3.amazonaws.com/0V_eXZjlR5DNB7qBtK1g1vjWg0zAhPlhZCvF_zyL47xU_DYnBRUuqddrkvv9wRtVQkvkmY5eAWx0J1PoiQBi_dBs2SdAil5kVwpzCFpFeBH7ai_L85Ef7dp-ehXZvH-A.png" width="708" height="324.41782729805016"/></li>
+                                <li>Advantages?
+                                    <ul>
+                                        <li>Simple </li>
+                                        <li>Minimal memory/computation overhead</li>
+                                    </ul>
+                                </li>
+                                <li>Disadvantages?
+                                    <ul>
+                                        <li>Low granularity of results (depends on window size)</li>
+                                        <li>Not good for pattern/trend recognition</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Hopping Window Event-Stream
+                    <ul>
+                        <li>Describe→A hopping window processes events in overlapping fixed-size time windows that slide forward. Each time a window is closed, the events are processed, and the results are published.
+<img src="https://remnote-user-data.s3.amazonaws.com/-fUFjTa2mUj1hGabVcgucINZb7D79N7OrguMadRcqxSHbL4PzJCJ-_4-zNpuIf8hnHSgqxLDvbAfIwEhJT8MYdklS2nd0t8-22o0VjHNdkzb16BJsYy_7C3_SIk4ReEc.png" width="732" height="336.4043126684636"/></li>
+                        <li>Possible Use cases
+                            <ul>
+                                <li>Real-time analytics</li>
+                                <li>Error Log analysis</li>
+                                <li>Stock trading</li>
+                            </ul>
+                        </li>
+                        <li>Advantages?
+                            <ul>
+                                <li>Frequent results</li>
+                                <li>Respond to changes insights can be faster</li>
+                            </ul>
+                        </li>
+                        <li>Disadvantages?
+                            <ul>
+                                <li>Additional memory usage</li>
+                                <li>Additional CPU resources needed</li>
+                                <li>More network resources needed</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Sliding Window Event-Stream
+                    <ul>
+                        <li>Describe→In the sliding window event-stream, a new window is created when a new event occurs. The window size is fixed and will be processed and published after the window closes.
+<img src="https://remnote-user-data.s3.amazonaws.com/01tpxs5FrX8La5Sbg71i3TnvvaFGsAnt2zUIBKWIAXySBeYZTycrguXIdL3wLwC5SiufOfQTTq9oDG0waVxjtEvozCjI58AEUVSXyFAl-cwUoNtQI-GkMG3xR36FoJmg.png" width="732" height="329.49865229110515"/></li>
+                        <li>Possible Use cases?
+                            <ul>
+                                <li>Fraud detection</li>
+                                <li>API Rate Limiter</li>
+                            </ul>
+                        </li>
+                        <li>Advantage?
+                            <ul>
+                                <li>Flexible intervals</li>
+                            </ul>
+                        </li>
+                        <li>Disadvantage?
+                            <ul>
+                                <li>High memory and CPU consumption</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Session Window Event-Stream
+                    <ul>
+                        <li>Describe→A session window groups events based on a user session (variable time frame), processing events within that session together. Starts with the login and ends when the user leaves the website.</li>
+                        <li>Use Case?
+                            <ul>
+                                <li>User Behavior Analysis on a website
+<img src="https://remnote-user-data.s3.amazonaws.com/8D3MixKR30rwJg6iVAOM1QzcbP19RLhlaybnqyCZumYEQujZk0L5m5r6Fs74_0t2t6SnqiX9zff3AmpTe1aQxTJiXwoxygBZeOEJBEFO1QW56YPfIPAGWkqIiX-IZRP5.png" width="738" height="348.2807486631016"/></li>
+                                <li>Internet of Things, like a robot cleaner</li>
+                                <li>Navigation App, optimizing route for all drivers</li>
+                            </ul>
+                        </li>
+                        <li>Advantages
+                            <ul>
+                                <li>Good for real-time analytics for users</li>
+                                <li>Dynamic window size</li>
+                                <li>No waste of computation, since each event belongs to one window</li>
+                            </ul>
+                        </li>
+                        <li>Disadvantages
+                            <ul>
+                                <li>Defining the inactivity threshold/period difficult</li>
+                                <li>Potential many windows, depending on users, sessions etc.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Time in Stream Processing and Handling Late Arrival of Events
+                    <ul>
+                        <li>Types of Timestamps in Event-Stream Processing
+                            <ul>
+                                <li>Event time::Time when the event happened.</li>
+                                <li>Application Time / Arrival Time::Time when the event is consumed by the application/consumer microservice</li>
+                                <li>Processing Time::Time when the event read/parsed/processed by the consumer microservice.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>When to use arrival time?
+                            <ul>
+                                <li>We don&#39;t care about &quot;when the event actually happened&quot;.</li>
+                                <li>Need to act in real-time</li>
+                                <li>We don&#39;t know/trust the event time</li>
+                                <li>For example, for monitoring or altering purposes.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>When to use event time?
+                            <ul>
+                                <li>When accurate correlation or ordering of the events is required</li>
+                                <li>For example, analyzing trends in the stock market</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Name options for handling late arrival of events<img src="https://remnote-user-data.s3.amazonaws.com/m12-jWU6NaPkliVg3tMc9rDGqp7x3f61qPDKDoZs9H1IsXfxDpyNr4PusX6i1Nkg4ztv3-Xu_Rbt779z-YUfJdDR3fX-xO0Dc-Yh2B5OKWar5Wx6fO5H_Qq2du9i0JWb.png" width="732" height="266.3611859838275"/>
+                            <ul>
+                                <li>Discard the event</li>
+                                <li>End Window after a grace period, even later events are discarded</li>
+                                <li>Watermarking, adapting grace period depending on the arrived event with the latest event time</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Stream processing Technologies
+                    <ul>
+                        <li>Apache Kafka Streams
+                            <ul>
+                                <li>Client library (Java and Scala) for building applications and microservices that process continuous streams of records coming through the Kafka message broker.</li>
+                                <li>It supports:
+                                    <ul>
+                                        <li>Per record, real-time processing</li>
+                                        <li>Stateful and processing using Windows
+                                            <ul>
+                                                <li>Tumbling Window code</li>
+                                                <li>Hopping Window code</li>
+                                                <li>Session Window code</li>
+                                                <li>Siding Window code </li>
+                                            </ul>
+                                        </li>
+                                        <li></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Apache Flink
+                            <ul>
+                                <li>Apache Flink is a framework and distributed processing engine for building scalable streaming ETL, analytics, and event-driven applications. It is specifically designed for stateful computations of bounded and unbounded streams of events.</li>
+                                <li>Apache Flink can
+                                    <ul>
+                                        <li>Be used as a distributed system that requires effective allocation and management of computing resources using Hadoop YARN or Kubernetes.</li>
+                                        <li>Run as a standalone distributed cluster</li>
+                                        <li>Used as a client library for building microservices</li>
+                                    </ul>
+                                </li>
+                                <li>For more information, see Apache Flink&#39;s architecture and Windowing with Apache Flink (Java and Python code examples).</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li>Azure Stream Analytics
+                            <ul>
+                                <li>Azure Stream Analytics is a real-time analytics service that enables you to process and analyze streaming data from various sources. It&#39;s a fully managed, serverless service that uses a SQL-like query language to process data streams using windows.
+                                    <ul>
+                                        <li>Tumbling Window </li>
+                                        <li>Hopping Window</li>
+                                        <li>Session Window </li>
+                                        <li>Siding Window</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Big Data Architecture Patterns
+            <ul>
+                <li>Introduction to Big Data
+                    <ul>
+                        <li>Definition of Big Data→Big data is a large, complex data set that cannot be processed using traditional data processing applications.</li>
+                        <li></li>
+                        <li>Name three most common characteristics of Big Data
+                            <ul>
+                                <li>Volume (Large Quantity of Data)</li>
+                                <li>Variety (Large variety of unstructured data from multiple sources ⇒ Data fusion necessary)</li>
+                                <li>Velocity (Continuous stream of data at a very high rate)</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>Big Data Processing Strategies
+                    <ul>
+                        <li>Name two strategies/patterns to process big data
+                            <ul>
+                                <li>Batch processing</li>
+                                <li>Real-Time processing</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Batch processing model
+                            <ul>
+                                <li>Describe→A batch processing model processes large amounts of data in batches at scheduled intervals. The data is often stored in a DFS.</li>
+                                <li>Advantages
+                                    <ul>
+                                        <li>Easy to implement</li>
+                                        <li>High availability</li>
+                                        <li>Efficient</li>
+                                        <li>Higher fault tolerance</li>
+                                        <li>Complex and in-depth analysis of large datasets</li>
+                                    </ul>
+                                </li>
+                                <li>Drawback→High latency due to delayed processing.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Real-Time processing
+                            <ul>
+                                <li>Describe→Real-time processing is the immediate analysis of data as it is generated.</li>
+                                <li>Advantages→Real-time processing provides immediate insights and enables faster decision-making.</li>
+                                <li>Drawbacks
+                                    <ul>
+                                        <li>Hard to do complex analysis.</li>
+                                        <li>Doing data-fusion/analyzing historical data is impossible.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Lambda Architecture
+                    <ul>
+                        <li>Some system need batch and real-time processing of data, like anomaly detection.</li>
+                        <li></li>
+                        <li>Describe→Three layers: A batch layer processing historical data and a speed layer processing real-time data, combined to provide low-latency and high-throughput results. The third layer is the serving layer, which combines the data from the batch and speed layer. 
+<img src="https://remnote-user-data.s3.amazonaws.com/MhGeJHjq4IZEvqcOHqtneIYAzJ5_DtJyHFP7JC2FPqrAee_aTy3iTPah4betLrGdDK-YytusNQMElI7YnCUqhasYXOQTavrmyZpfANMssMulDFhQC7Jghu3gHm-dm_8H.png" width="732" height="347.25606469002696"/></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Software Architecture &amp; System Design Practice
+            <ul>
+                <li>Design a Highly Scalable Design Forum
+                    <ul>
+                        <li>System Design Step-By-Step Process
+                            <ul>
+                                <li>Ask questions to capture: functional and non-functional requirements, system constraints</li>
+                                <li>Define the systems API</li>
+                                <li>Create a Software Architecture Diagram to fulfill the Functional Requirements</li>
+                                <li>Refine the Software Architecture Diagram to address the Non-Functional Requirements</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>The most important thing in system design: Make the {{6343211462444005::right trade-offs}} based on the given requirements. </li>
+                        <li></li>
+                        <li>Requirements &amp; API
+                            <ul>
+                                <li>Example questions:
+                                    <ul>
+                                        <li>Can anyone post or view post/comments?</li>
+                                        <li>What can a post contain? (text/images/video)</li>
+                                        <li>What is the meaning of &quot;most popular posts&quot;?</li>
+                                        <li>What is the structure of the comments? (flat list vs tree)</li>
+                                    </ul>
+                                </li>
+                                <li>Assume the following functional requirements
+                                    <ul>
+                                        <li>A user can sign up and login to post, vote or comment.</li>
+                                        <li>A user should be able to create a new post that contains a
+                                            <ul>
+                                                <li>title</li>
+                                                <li>Topic tags</li>
+                                                <li>Body (text or uploaded images)</li>
+                                            </ul>
+                                        </li>
+                                        <li>A user should be able to comment on any existing post.</li>
+                                        <li>Comments are ordered chronologically as a flat list.</li>
+                                        <li>User can delete their own post or comments.</li>
+                                        <li>A logged-in user can upvote/downvote an existing post/comment.</li>
+                                        <li>Present the top most popular posts in the last 24 hours on the homepage, where popularity = Upvotes-Downvotes.</li>
+                                    </ul>
+                                </li>
+                                <li>Assume the following nonfunctional requirements
+                                    <ul>
+                                        <li>Scalability (millions of daily users)</li>
+                                        <li>Performance (less than 500ms response time 99p)</li>
+                                        <li>Fault Tolerance / High Availability (99.9%)</li>
+                                        <li>Availability + Partition Tolerance (AP over CP)</li>
+                                        <li>Durability</li>
+                                    </ul>
+                                </li>
+                                <li>We ignore system constraints for now.</li>
+                                <li>Using REST API over HTTP since this is a client web-based application
+                                    <ul>
+                                        <li>Identifying entities: Users, Posts, Images, Comments, Votes</li>
+                                        <li>Mapping Entities to URIs:
+                                            <ul>
+                                                <li><img src="https://remnote-user-data.s3.amazonaws.com/Ho8lRsm9ro4QP_Xx0PWn1nJEZnaCC5dQh98SV_SijFdKzxZ2nUDJbh2kFd2Njf6zpku3yC9XeJE36WviAm8x8GnQNqqDUZgWu6NAsUNKeSigYbt7UoVCzwZGlEGEs8M4.png" width="694" height="342.07102272727275"/></li>
+                                            </ul>
+                                        </li>
+                                        <li>Define resource representation
+                                            <ul>
+                                                <li><img src="https://remnote-user-data.s3.amazonaws.com/6lVJb_IIqiUlC5UiF9Nt8TiQQ-XLuCaWtTldc92b82erZxQsoaGKdVkbijc0NbVK3DdLLvhJIcZiJ13brTtb4Sodovb-_VM77A__APigh8p7YZ9bsWe31d2XyorWq4Pi.png" width="694" height="328.2698863636364"/></li>
+                                                <li><img src="https://remnote-user-data.s3.amazonaws.com/SNVFzNwvUqI65OoMquor6QGSpM1MHC-nqSBLXcD3pAMCb7Nn15J2XkWobWQlVdOV3jxRJ0z9JqFXUTDZrscyjpamxPvR1jQw5VELemt6Jdcto3DvqQPL-JxY5rpfgKMD.png" width="694" height="404.1761363636364"/></li>
+                                            </ul>
+                                        </li>
+                                        <li>Assigning HTTP methods
+                                            <ul>
+                                                <li><img src="https://remnote-user-data.s3.amazonaws.com/KIhSKE4-R5okvTWg0by-T3yMSvIgbyrD5zdJBkRixoEdayE9M645b1F9Ax2qH5K038sFfJ09k535u7w3yUW59C_C-Sw-Uyb5Lot8vH6ag3gUawaecnZa1_whGSWhVgMS.png" width="694" height="157.72727272727275"/></li>
+                                                <li><img src="https://remnote-user-data.s3.amazonaws.com/Cylgj-m4McJmcD8yMDKo7CMaMDVf5JyFxX1ic3tZjqskeZRN0E6yDghelqDnp2_qMTotkAcyUvCXyfQNhKXKyj3SawAHAFU9M-H1Lx6SUEcMOhn4qOap7FOfF_QeeNQg.png" width="694" height="315.4545454545455"/></li>
+                                                <li><img src="https://remnote-user-data.s3.amazonaws.com/ieoCm1RVqG2UMEEAUlYorDTCSQcUQoNogVl4Uwfizv7M4V3pG2MJlpbZW0l3a-gwfSwFZ8auklQWK1h18GL_z9VTS7C_btRvW1JA0n6llBihkyiZ6R0SkkGcEKpXki1R.png" width="694" height="203.07386363636365"/></li>
+                                                <li><img src="https://remnote-user-data.s3.amazonaws.com/2ZmmrrIbUM-L_5I0-IYNdTjQry64GZC_8DPLVglQ3B0JqK43euFSwMSc8NbHujkAJLWNO59kiDtHpmDqz7ZxnSp6_TMg7USv0Tb3k3QIqEO0mBa4Jo2XGQMER_273ZoN.png" width="694" height="208.0028409090909"/></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Using API Pagination, s.t. the user does not get millions of posts/comments at once</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Functional Architecture Diagram
+                            <ul>
+                                <li>Go through the functional requirements step by step and add them to the architectural diagram. Ignore the non-functional requirements for now.</li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/4G78ipJj90f_TfzxzVeca9mjznTr1deVYppOVlF5sCtxzaXDRqafCwWkV3o6oZADZa-VgFqKxHbXX3BaeQpX73Q4u_-x_cojQDZu2cvOzWtx1ssedK5Nxb8-F-hCcv9e.png" width="742" height="406.52127659574467"/></li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Final Software Architecture
+                            <ul>
+                                <li>Scalability 
+                                    <ul>
+                                        <li>Load Balancer for each service</li>
+                                        <li>Adding API Gateway</li>
+                                        <li>Sharding Database (Range Shard Strategy)</li>
+                                    </ul>
+                                </li>
+                                <li>Performance
+                                    <ul>
+                                        <li>Use a CDN, especially for the images and the web content</li>
+                                        <li>Caching at API Gateway</li>
+                                        <li>Indexing databases</li>
+                                        <li>Message Broker for votes</li>
+                                    </ul>
+                                </li>
+                                <li>Fault Tolerance/ High Availability
+                                    <ul>
+                                        <li>Multi Data Center Deployment ⇒ GSLB</li>
+                                        <li>Replication of databases and services</li>
+                                    </ul>
+                                </li>
+                                <li>Availability and Partition Tolerance
+                                    <ul>
+                                        <li>Databases are optimized for AP</li>
+                                    </ul>
+                                </li>
+                                <li>Durability
+                                    <ul>
+                                        <li>Replication of databases</li>
+                                        <li>Backups of databases</li>
+                                    </ul>
+                                </li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/ubp5ZPglsCCdIE2zaGwiabEZ9D8sk1mNlJh-TokFpud6sNQjh6PvI_FW0gzD-hSdJw1CaqYDfo2Ltj7fReoqOEkccTB3tZujEZzqKihXBoYgwANediXEz8ky_q8cdGJn.png" width="766" height="421.4974226804124"/></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Design an E-Commerce Marketplace Platform
+                    <ul>
+                        <li>Requirements &amp; API
+                            <ul>
+                                <li>Important Observation: 2 major actors, merchants and users/buyers.</li>
+                                <li>Example questions
+                                    <ul>
+                                        <li>Merchants
+                                            <ul>
+                                                <li>What type of products are we selling? Physical or digital?</li>
+                                                <li>What product information does a merchant provide?</li>
+                                                <li>What data do we need to provide the merchant?</li>
+                                                <li>What operation can a merchant perform?</li>
+                                            </ul>
+                                        </li>
+                                        <li>Users
+                                            <ul>
+                                                <li>Can anyone browse/purchase, or is registration required?</li>
+                                                <li>Are Product Reviews/Ratings in scope?</li>
+                                                <li>Search capabilities?</li>
+                                                <li>Do we need to design checkout/payment/delivery?</li>
+                                                <li>What UI do we offer? Browser/Mobile?</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Assume the following functional requirements
+                                    <ul>
+                                        <li>Product
+                                            <ul>
+                                                <li>Physical product (with limited inventory)</li>
+                                                <li>Each product contains
+                                                    <ul>
+                                                        <li>Title</li>
+                                                        <li>Description</li>
+                                                        <li>Categories</li>
+                                                        <li>Images</li>
+                                                        <li>Optional attributes</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Merchant
+                                            <ul>
+                                                <li>Product Management System
+                                                    <ul>
+                                                        <li>Signup</li>
+                                                        <li>Create new products</li>
+                                                        <li>Update the product properties</li>
+                                                        <li>Update product inventory</li>
+                                                        <li>View product data</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Product analytics
+                                                    <ul>
+                                                        <li>View real-time product page visitors</li>
+                                                        <li>View historical/projected product performance</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Sequence diagram
+                                                    <ul>
+                                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/5-n89SNHy9vdMAaZiwkc7YFrvRH2vITacPFgmAxYmFYlsuohnBZB2e_8hitb0PO1X9fQmORDWOP6ZYZag1itJqhCcCcdMB-AYQ32pNT8C7HUPuEUei5Ss58pZYD--2Ge.png" width="670" height="396.0882352941177"/></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Users
+                                            <ul>
+                                                <li>Store Front
+                                                    <ul>
+                                                        <li>Web UI + Mobile users</li>
+                                                        <li>Browser products</li>
+                                                        <li>Search products based on title/categories/description</li>
+                                                        <li>Out of scope: User registration, product reviews</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Store Checkout
+                                                    <ul>
+                                                        <li>Navigate to the checkout page</li>
+                                                        <li>View breakdown of the bill incl. taxes</li>
+                                                        <li>Complete the purchase by providing shipping + payment info</li>
+                                                        <li>Send order updates via email/push notifications to the user</li>
+                                                        <li>Out of scope: Shopping cart, delivery, payment</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Sequence diagram
+                                                    <ul>
+                                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/5qeEcHpaehexyt6V_fiaZ7WAFjcceYgjJuexF4F5NcBfOd16QopPzwpJp3q_zCZ_LY3SUo9Aq0Grg0zQaNjxSOmfj9rEUPu-fduCFEACfke7ug7PTePt3bT6yivuS0Mg.png" width="670" height="368.5"/></li>
+                                                        <li><img src="https://remnote-user-data.s3.amazonaws.com/1gZr3YTFENMkNZ9DPwt9GDL1F1CIGY3F7TvPnMTzNAwq4a-wUJiO8uokO5wrj0ZgAhT4HWeZGr96U7BC-kpzVEUyI982X7dwT4Gvmq5Ii72KklxMP-zGdgF5EXLvMx_Z.png" width="670" height="378.3529411764706"/></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Assume the following nonfunctional requirements
+                                    <ul>
+                                        <li>Merchants
+                                            <ul>
+                                                <li>Scalability (not very high)
+                                                    <ul>
+                                                        <li>Hundreds of merchants</li>
+                                                        <li>Low traffic</li>
+                                                        <li>Thousands of products</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Performance
+                                                    <ul>
+                                                        <li>Response time &lt; 1 second at 50th percentile</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Consistency vs. Availability
+                                                    <ul>
+                                                        <li>CP databases</li>
+                                                    </ul>
+                                                </li>
+                                                <li>High availability
+                                                    <ul>
+                                                        <li>Uptime 99.5%</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>User
+                                            <ul>
+                                                <li>Scalability (very high)
+                                                    <ul>
+                                                        <li>10–100 million daily users</li>
+                                                        <li>Multiple countries</li>
+                                                        <li>High traffic at peak</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Performance
+                                                    <ul>
+                                                        <li>Products reponse time &lt; 200ms 50p, 500mms 99p</li>
+                                                        <li>Checkout response time &lt;1s 99p</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Consistency vs. Availability
+                                                    <ul>
+                                                        <li>Storefront: AP</li>
+                                                        <li>Checkout: CP</li>
+                                                    </ul>
+                                                </li>
+                                                <li>High availability
+                                                    <ul>
+                                                        <li>Internal SLA: 99.99% uptime</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>We ignore system constraints for now.</li>
+                                <li>Defining of the system API would be very technical. Base are the sequence diagrams above from the functional requirements.</li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Functional Diagram
+                            <ul>
+                                <li>Go through the functional requirements step by step and add them to the architectural diagram. Ignore the non-functional requirements for now.</li>
+                                <li>Microservice Architecture for organizational scalability</li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/KquFgmzCo74z2d3G-uMw8vnRjWqImSI-990T4IESgS29ltNfnsryu5fAUVRuu06vcEGIUp7-mg2mdePSmQtMBcKT1ehJXF9gInJJtz-adJT_jCENdytQje_N2U4ZYfLo.png" width="742" height="408.49468085106383"/></li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li>Final Software Architecture
+                            <ul>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/LPv6475s14ETnbnii5FIrTDzGLxz5vU9UMx0oDujeVSz3WHNgVv_RNzvBO5mKYVJ7LqVxT-44MRE9RLXC5KOAMSnUCr0iial_qlHX3E69joYNGSHXZ2Y7tKDu_qHqmhA.png" width="351.4300102205945" height="193.82995409074027"/></li>
+                                <li>Running in multiple data centers, worldwide</li>
+                                <li><img src="https://remnote-user-data.s3.amazonaws.com/bPi0wRPLMn7qESCK1iZtTjyJzVmRbNXaZkjy58xyCG2cuVMWm7AdATvPOPkEIShnSfR1hkpOSkrVmI3dZz2B-JZ6u5zQ2ZWpEKkbpbxlXZpSBwBDcB6Um7XiZgCJng6D.png" width="742" height="355.2127659574468"/></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

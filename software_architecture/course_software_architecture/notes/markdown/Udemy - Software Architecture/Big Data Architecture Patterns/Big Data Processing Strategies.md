@@ -1,0 +1,20 @@
+- Name two strategies/patterns to process big data >>>
+    - Batch processing
+    - Real-Time processing
+- 
+- Batch processing model
+    - Describe→A batch processing model processes large amounts of data in batches at scheduled intervals. The data is often stored in a DFS.
+    - Advantages >>>
+        - Easy to implement
+        - High availability
+        - Efficient
+        - Higher fault tolerance
+        - Complex and in-depth analysis of large datasets
+    - Drawback→High latency due to delayed processing.
+- 
+- Real-Time processing
+    - Describe→Real-time processing is the immediate analysis of data as it is generated.
+    - Advantages→Real-time processing provides immediate insights and enables faster decision-making.
+    - Drawbacks >>>
+        - Hard to do complex analysis.
+        - Doing data-fusion/analyzing historical data is impossible.

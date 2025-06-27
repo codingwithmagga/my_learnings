@@ -1,0 +1,38 @@
+- Relational Database
+    - Describe >>>
+        - Data is stored in tables
+        - Each row is a single record
+        - The records are all related to each other through a set of predefined columns.
+        - Each of the columns has a name and type and optional a set of constraints. 
+        - Each record is uniquely identified by a key, represented by one or multiple columns.
+    - The structure ({{schema}}) of each table is defined {{ahead of time}}.
+    - How is data duplication avoided?→Data duplication is avoided by the opportunity to have a relation between different tables. For example, a product table with a product ID and a sales table where the product is referenced through the product ID.
+    - Advantages? >>>
+        - Support for complex queries
+        - Efficient storage
+        - Natural structure of data for humans
+        - ACID transactions guarantee
+    - Disadvantages >>>
+        - Rigid structure, which needs to be defined before the database can be used. Changes require maintenance time.
+        - Hard to maintain/scale
+        - Slower read operations compared to non-relational operations
+    - When to choose a relational database? >>>
+        - Structured data requirements
+        - Complex queries and transactions required
+        - Read performance is not the most important quality attribute
+- 
+- SQL
+    - Describe→SQL is a domain-specific language used for managing and manipulating data held in a relational database management system.
+    - Different relational database implementations have their own additional features, but the majority of standard operations are the same for all relational databases.
+- 
+- ACID transactions
+    - Explain the acronym >>>
+        - Atomicity
+        - Consistency
+        - Isolation
+        - Durability
+    - Definition transaction→A transaction is a sequence of database operations that for an external observer should appear as a single operation.
+    - Explain Atomicity→Atomicity ensures that a transaction is treated as a single, indivisible unit of work. Either all operations of the transaction are done at once or are not done.
+    - Explain Consistency→Consistency ensures that a transaction leaves the database in a valid state, e.g. no constraints are violated by a transaction. A committed transaction will be seen by all future queries/transactions.
+    - Explain Isolation→Isolation ensures that concurrent transactions appear to execute sequentially, preventing interference between them.
+    - Explain Durability→Durability ensures that once a transaction is committed, it remains persistent even in the event of system failures.

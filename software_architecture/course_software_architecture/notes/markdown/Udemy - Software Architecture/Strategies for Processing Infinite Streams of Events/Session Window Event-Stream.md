@@ -1,0 +1,13 @@
+- Describe→A session window groups events based on a user session (variable time frame), processing events within that session together. Starts with the login and ends when the user leaves the website.
+- Use Case? >>>
+    - User Behavior Analysis on a website
+![](https://remnote-user-data.s3.amazonaws.com/8D3MixKR30rwJg6iVAOM1QzcbP19RLhlaybnqyCZumYEQujZk0L5m5r6Fs74_0t2t6SnqiX9zff3AmpTe1aQxTJiXwoxygBZeOEJBEFO1QW56YPfIPAGWkqIiX-IZRP5.png)
+    - Internet of Things, like a robot cleaner
+    - Navigation App, optimizing route for all drivers
+- Advantages >>>
+    - Good for real-time analytics for users
+    - Dynamic window size
+    - No waste of computation, since each event belongs to one window
+- Disadvantages >>>
+    - Defining the inactivity threshold/period difficult
+    - Potential many windows, depending on users, sessions etc.

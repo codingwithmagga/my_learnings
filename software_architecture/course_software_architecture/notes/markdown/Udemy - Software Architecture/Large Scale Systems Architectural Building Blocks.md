@@ -1,0 +1,180 @@
+- DNS, Load Balancing & GLSB
+    - Load Balancer
+        - What is the purpose of a load balancer?→Distributes network traffic across multiple servers to prevent overload and ensure high availability. Additionally, it serves as a single server abstraction, meaning our service looks like it's running on one single server.
+        - Which quality attributes are provided? >>>
+            - Scalability
+            - High Availability
+            - Performance (Throughput), additionally latency added by the load balancer is inferior to the ability to handle more requests on multiple servers
+            - Maintainability
+        - Name different types of load balancers >>>
+            - DNS load balancing
+            - Hardware load balancing
+            - Software load balancing
+            - Global Server Load Balancing
+        - Explain DNS→Domain Name System (DNS) is part of the internet infrastructure that maps human-friendly URLs to IP Addresses. It is the "phone book of the internet".
+        - DNS load balancing
+            - Explain→The DNS server sends a list of IP addresses of our servers back to the client. It will rotate them at each request, which balances the load automatically, since most clients just take the first address in the list.
+            - Advantages >>>
+                - Simple
+                - Cheap (comes for free by purchasing a domain name)
+            - Disadvantage >>>
+                - The DNS server doesn't check the health of the servers. It can take some time to update the list of IP addresses in the DNS server, since it will be changed based on the configured TTL. Also, it may be cached in different computers.
+                - The strategy is a simple round-robin, different server powers or that a server may be overloaded is not considered.
+                - All IP addresses are public ⇒ security issue.
+        - Hard- and Software load balancers
+            - Explain the difference→Hardware load balancers are dedicated physical devices designed and optimized for load balancing, while software load balancers are software applications that can run on any computer to perform load balancing functions.
+            - Advantages >>>
+                - Better security, since the IP addresses and number of servers are not exposed.
+                - Actively monitoring possible
+                - Intelligent load balancing possible
+                - It can also be used internally for different services
+                    - ![](https://remnote-user-data.s3.amazonaws.com/Lt7PTVHpGtERsqmUIVNAifkkA4yuRmeNpeV3YBoMfJ4y7sxmm48DS1RnD1jAvWlUD4-hoKZVvj2nlQLMXz-NYRCTy_LtttZfBSvCUTNjoQYHhtTgLb7Dqj3t34DYqG8T.png)
+            - Disadvantage→Additional latency, which can be minimized when the load balancers servers are located physically close to the server running the services. Multiple load balancers may be required when there exists multiple data centers in different locations.
+        - Global Server Load Balancing (GLSB)
+            - Describe→A hybrid between a DNS service and a hardware/software load balancer for global traffic distribution. Solving the latency issue from the latter ones. It can be configured on various strategies for route traffic.
+    - 
+    - Open Source Software Load Balancing Solutions
+        - HAProxy
+            - HAProxy is a free and open-source, reliable, high-performance TCP/HTTP load balancer. It is particularly suited for very high traffic websites, and powers a significant portion of the world's most visited ones. It is considered the de-facto standard open-source load balancer, and is  shipped with most mainstream Linux distributions. HAProxy supports most Unix style operating systems.
+        - NGINX
+            - NGINX is a free, open-source, high-performance HTTP server and reverse proxy (load balancer). It is known for its high performance, stability, rich feature set and simple configuration. For a full tutorial on how to install, configure and use NGINX, follow this [link](https://www.nginx.com/resources/wiki/start/).
+    - 
+    - Cloud Based Load Balancing Solutions
+        - AWS - Elastic Load Balancing (ELB)
+            - Amazon ELB is a highly scalable load balancing solution. It is an ideal solution for running on AWS, and integrates seamlessly with all of AWS services. It can operate in 4 different modes:
+                - Application (Layer 7) Load Balancer - Ideal for advanced load balancing of HTTP and HTTPS traffic
+                - Network (Layer 4) Load Balancer - Ideal for load balancing of both TCP and UDP traffic
+                - Gateway Load Balancer - Ideal for deploying, scaling, and managing your third-party virtual appliances.
+                - Classic Load Balancer (Layer 4 and 7) - Ideal for routing traffic to EC2 instances.
+            - For the full documentation on Amazon ELB and its autoscaling policies follow this [link](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html) 
+        - GCP - Cloud Load Balancing
+            - Google Cloud Platform Load Balancer is Google's highly scalable and robust load-balancing solution. "Cloud Load Balancing allows you to put your resources behind a single IP address that is externally accessible or internal to your Virtual Private Cloud (VPC) network". Some of the load balancer types available as part of the GCP Cloud Load Balancing are:
+                - External HTTP(S) Load Balancer - Externally facing HTTP(s) (Layer 7) load balancer which enables you to run and scale your services behind an internal IP address
+                - Internal HTTP(S) Load Balancer - Internal Layer 7 load balancer that enables you to run and scale your services behind an internal IP address.
+                - External TCP/UDP Network Load Balancer - Externally facing TCP/UDP (Layer 4) load balancer
+                - Internal TCP/UDP Load Balancer - Internally facing TCP/UDP (Layer 4) load balancer.
+                - 
+        - Microsoft Azure Load Balancer
+            - Microsoft Azure load balancing solution provides 3 different types of load balancers:
+                - Standard Load Balancer - Public and internal Layer 4 load balancer
+                - Gateway Load Balancer - High-performance and high availability load balancer for third-party Network Virtual Appliances.
+                - Basic Load Balancer - Ideal for small-scale application
+    - 
+    - GSLB Solutions
+        - Amazon Route 53 - Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service.
+        - AWS Global Accelerator -  A networking service that helps you improve the availability, performance, and security of your public applications.
+        - Google Cloud Platform Load Balancer & Cloud DNS - Reliable, resilient, low-latency DNS serving from Google's worldwide network with everything you need to register, manage, and serve your domains.
+        - Azure Traffic Manager - DNS-based load balancing
+    - 
+- Message Brokers
+    - Drawbacks of synchronous communication >>>
+        - Both instances have to be healthy and maintain the connection
+        - No padding in the system to absorb a sudden increase in traffic or load
+    - 
+    - What is a message broker?→A software architectural building block inside our system that uses the queue data structure to store messages between senders and receivers. Decouples senders from the receivers and is fundamental for asynchronous software architecture.
+    - Capabilities of a message broker? >>>
+        - Buffering messages
+        - Message routing
+        - Transformation & Validation
+        - Load balancing
+    - 
+    - How does a message broker increases fault tolerance, availability and scalability? >>>
+        - By decoupling components, allowing one component to be temporarily unavailable without affecting others. 
+        - Prevent messages from being lost.
+        - Messages can be queued up during traffic spikes
+        - 
+    - Name drawbacks when using a message broker >>>
+        - Increased complexity
+        - Potential single point of failure
+        - Added latency (mostly not significant)
+    - 
+    - Open-Source Message Brokers
+        - Apache Kafka - The most popular open-source message broker nowadays. Apache Kafka is a distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
+        - RabbitMQ - A widely deployed open-source message broker. It is used worldwide at small startups and large enterprises.
+        - 
+    - Cloud-Based Message Brokers
+        - Amazon Simple Queue Service (SQS) - Fully managed message queuing service that enables you to decouple and scale micro-services, distributed systems, and serverless applications.
+        - GCP Pub/Sub and Cloud Tasks - Publisher/Subscriber and message queue solutions offered by Google Cloud Platform. See this article for comparison between the two offerings.
+        - Microsoft Azure:
+            - Service Bus - Fully managed enterprise message broker with message queues and publish-subscribe topics.
+            - Event Hubs - Fully managed real-time data ingestion service. Allows streaming millions of events per second from any source. Integrates seamlessly with Apache Kafka clients without any code changes. A perfect solution for Big Data.
+            - Event Grid - Reliable, serverless event delivery system at a massive scale. It uses the publish-subscribe model. It is Dynamically scalable, Low cost with a pay-as-you-go model, and guarantees "At least once delivery of an event"
+- API Gateway
+    - What problem does the API Gateway solve?→It manages and secures access to multiple backend services. With this, not every backend needs to implement its own security, authentication and authorization.
+    - 
+    - What does an API Gateway do? >>>
+        - An API gateway manages and secures external access to multiple internal APIs, providing just one single API to external users.
+        - ![](https://remnote-user-data.s3.amazonaws.com/qQH0WDU4RLGYBA5ldoJ2vn7zXh55nXe05pQcsFRv-QF_nXFaViKtklhyx-_kLPSqYLOpXDDsdlzcJPvUlkA3diDVimwdKPzGm0lRhxuLDGrRnLCJi2DAYULr442yAj97.png)
+    - Name benefits of an API Gateway >>>
+        - Seamless internal modifications/refactoring
+        - Consolidating all security, authorization and authentication in a single place
+        - Load balancing and traffic management, including health checks
+        - Request routing, saving the user from making multiple requests to different services
+        - Caching static content and responses
+        - Protocol translation
+    - 
+    - Considerations
+        - API Gateway shouldn't contain any {{business logic.}}
+        - API Gateway may become a {{single point of failure}}. 
+        - Avoid {{bypassing}} API Gateway from external services. 
+    - 
+    - Open-Source API Gateways
+        - Netflix Zuul
+            - Zuul is a free and open-source application gateway written in Java that provides capabilities for dynamic routing, monitoring, resiliency, security, and more.
+    - Cloud-Based API Gateways
+        - Amazon API Gateway
+            - Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. Supports RESTful APIs and WebSocket APIs (bi-directional communication between client and server).
+        - Google Cloud Platform API Gateway
+            - Google Cloud Platform API Gateway enables you to provide secure access to your services through a well-defined REST API that is consistent across all of your services, regardless of service implementation. It is designed for serverless workloads on GCP. For full documentation, follow this link.
+            - Apigee is Google Cloud’s API management product that enables organizations to build, manage, and secure APIs — for any use case, environment (on-premises, in Google Cloud, or a hybrid environment), or scale. For full documentation, follow this link.
+        - Microsoft Azure API Management
+            - API Management helps organizations publish APIs to external, partner, and internal developers to unlock the potential of their data and services.
+- Content Delivery Network - CDN
+    - What is a CDN?→A CDN is a geographically distributed network of servers that caches content to improve delivery speed and reduce latency.
+    - CDNs provide service by {{caching}} our website content on their {{edge servers}}, which are relocated at different {{Points of Presence (PoP).}} {{Edge servers}} are {{physically closer}} to the user and {{strategy located}} in terms of network infrastructure.
+    - CDNs can be used to deliver the following resources >>>
+        - Images
+        - Text
+        - CSS
+        - JavaScript files
+        - Video streams (live and on-demand)
+    - Quality attributes of CDNs >>>
+        - Performance ⇒ faster page loads
+        - High availability ⇒ issues/slowness are less noticeable
+        - Security ⇒ Protection against Distributed Denial of Service (DDoS) attacks
+    - How are CDNs improved? >>>
+        - Use faster and more optimized HDDs
+        - Reduce bandwidth by compressing the content
+    - 
+    - Name different strategies of CDNs >>>
+        - Pull strategy
+        - Push strategy
+    - 
+    - Pull strategy
+        - How does it work?→The service tells the CDN which content is cached and how the cache needs to be invalidated by setting the Time To Live (TTL) property. When the TTL expires, the CDN downloades the content again from the server.
+        - Advantage >>>
+            - Lower maintenance, once set up, everything is done by the CDN.
+        - Drawbacks >>>
+            - First user of an asset which is not cached will have a longer latency
+            - Increased load on the origin server during peak times when TTL is similar of all assets
+            - Still a high availability necessary on our system.
+    - Push strategy
+        - How does it work?→The origin server pushes content updates to CDN edge servers.
+        - Advantage? >>>
+            - When content doesn't change frequently, one push to the CDN is enough. Reduces traffic and temporarily downtime of our system can be caught.
+        - Drawback >>>
+            - If the content changes frequently, we actively need to push it every time to the CDN.
+    - 
+    - CDN Solutions & Cloud Technologies
+        - Cloudflare
+            - Cloudflare offers ultra-fast static and dynamic content delivery over our global edge network. It helps reduce bandwidth costs and takes advantage of built-in unmetered DDoS protection.
+        - Fastly
+            - Fastly's Deliver@Edge is a modern, efficient, and highly configurable CDN that gives you the freedom to control how your content is cached so you can deliver the content your users want quickly.
+        - Akamai
+            - Akamai has a large variety of offerings for API Acceleration, Global Traffic Management, Image & Video Management, Media Delivery, and much more.
+        - Amazon CloudFront
+            - Amazon CloudFront is a content delivery network (CDN) service built for high performance, security, and developer convenience. Some of its use-cases include delivering fast secure websites, accelerating dynamic content delivery and APIs, live streaming, video-on-demand, and others.
+        - Google Cloud Platform CDN
+            - GCP CDN offers fast, reliable web and video content delivery with a global scale and reach.
+        - Microsoft Azure Content Delivery Network
+            - Microsoft's CDN solution offers global coverage, full integration with Azure services, and a simple setup.

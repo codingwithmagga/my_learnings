@@ -1,0 +1,18 @@
+- Software architecture
+    - There are multiple definitions for software architecture, here is the one used in this course
+        - Definition→The software architecture of a system is a high-level description of the system's structure, its different components, and how those components communicate with each other to fulfill the systems' requirements and constraints.
+    - What is not part of the software architecture?→Technologies, programming languages or in general implementation details.
+    - When should you decide about implementation details?→After the high-level architecture is designed and approved. They should be delayed to the very end of the design.
+- 
+- Software architecture can have different levels of abstraction:
+    - Classes/Structs
+    - Modules/packages/libraries
+    - Services (process or groups of processes)
+- 
+- Name the four stages of the software development cycle >>>
+    - Design (output software architecture)
+    - Implementation (input software architecture)
+    - Testing
+    - Deployment
+- 
+- Correctness of the software architecture cannot be proved!
