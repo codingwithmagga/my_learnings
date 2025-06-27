@@ -15,7 +15,12 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(Boost)
 
-add_subdirectory(item1_template_type_deduction)
-add_subdirectory(item2_auto_type_deduction)
-add_subdirectory(item3_understand_decltype)
-add_subdirectory(item4_check_deduced_types/)
+# Chapter 1 - Deducing types
+add_subdirectory(ch1/item1_template_type_deduction)
+add_subdirectory(ch1/item2_auto_type_deduction)
+add_subdirectory(ch1/item3_understand_decltype)
+add_subdirectory(ch1/item4_check_deduced_types)
+
+# Chapter 2 - auto
+add_subdirectory(ch2/item5_prefer_auto)
+add_subdirectory(ch2/item6_auto_undesired_types)
