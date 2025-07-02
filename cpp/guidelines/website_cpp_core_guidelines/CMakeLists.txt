@@ -13,3 +13,4 @@ FetchContent_Declare(GSL
 FetchContent_MakeAvailable(GSL)
 
 add_subdirectory(philosophy)
+add_subdirectory(interfaces)
