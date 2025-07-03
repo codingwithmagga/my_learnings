@@ -28,3 +28,5 @@ add_subdirectory(ch2/item6_auto_undesired_types)
 # Chapter 3 - modern c++
 add_subdirectory(ch3/item7_object_initialization)
 add_subdirectory(ch3/item8_prefer_nullptr)
+add_subdirectory(ch3/item9_prefer_alias_declaration)
+add_subdirectory(ch3/item10_prefer_scoped_enums)

@@ -57,3 +57,5 @@ VALUES ('Mark', 'Watney', '777-555-1234', '2035', 5)
 INSERT INTO teachers(first_name, last_name, phone, department, homeroom_number, email)
 VALUES ('Jonas', 'Salk', '777-555-4321', 'Biology', 5, 'jsalk@school.org')
 ```
+
+The official solution differs in some column data types, but in general it is the same than my solution.
