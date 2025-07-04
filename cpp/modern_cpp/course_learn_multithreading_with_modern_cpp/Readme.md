@@ -31,6 +31,10 @@ At the end of chapter three are some lectures about computer architecture. As th
 
 The notes are also not that deeply structured, since I moved them from OneNote to Remnote a few weeks after I finished the course.
 
+## Practical Project
+
+I extended the thread pool and concurrent queue shown in this course and implemented a small [task scheduler](https://github.com/codingwithmagga/task_scheduler) with some examples.
+
 ## Course certificate
 
 <img src="./udemy_certificate.jpg" alt="Udemy Certificate" width="400" />
