@@ -1,0 +1,3 @@
+- Describe→The AS statement renames a table or column in a SQL query for better readability.
+- Basic Syntax→`SELECT column AS new_name FROM table1 AS t1` 
+- The `AS` operator get executed at {{the very end}} of a query, meaning that we cannot use the ALIAS inside a `WHERE` or a `HAVING` operator. 

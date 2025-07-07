@@ -1,0 +1,3 @@
+- Describe→A SELECT statement retrieves data from one or more tables in a database.
+- Example syntax→`SELECT column1, column2 FROM table_name;`
+- SQL Statement to select all columns from a table?→Use `SELECT * FROM table_name;` 

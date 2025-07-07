@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      SQL Statement Fundamentals
+    </h1>
+    <br/>
+    <ul>
+        <li>SELECT Statement
+            <ul>
+                <li>Describe→A SELECT statement retrieves data from one or more tables in a database.</li>
+                <li>Example syntax→<q>SELECT column1, column2 FROM table_name;</q></li>
+                <li>SQL Statement to select all columns from a table?→Use <q>SELECT * FROM table_name;</q> </li>
+            </ul>
+        </li>
+        <li>SELECT DISTINCT
+            <ul>
+                <li>Describe→A SQL statement that retrieves unique values from a specified column. Useful when a column contains duplicate values.</li>
+                <li>Syntax?→<q>SELECT DISTINCT column1, column2 FROM table_name;</q>  or <q>SELECT DISTINCT(column_name) FROM table_name</q> </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>COUNT
+            <ul>
+                <li>Describe→A SQL function that returns the number of rows in a table or the number of rows that satisfy a specified condition.</li>
+                <li>Syntax?→<q>COUNT(*)</q> counts all rows, <q>COUNT(column)</q> counts non-NULL values in a specified column.</li>
+                <li>Example: <q>SELECT COUNT(DISTINCT column_name) FROM table_name</q> returns the number of distinct entries in <q>column_name</q>. </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>SELECT WHERE
+            <ul>
+                <li>Describe WHERE→WHERE filters rows in a SQL query based on specified conditions on the columns.</li>
+                <li>Basic Syntax?→<q>SELECT column1, column2 FROM table_name WHERE condition;</q></li>
+                <li>Which operators are available?
+                    <ul>
+                        <li>Comparison operators, like <q>=</q>, <q>&gt;</q>, <q>&gt;=</q>, <q>!=</q> ... </li>
+                        <li>Logical operators, like <q>AND</q>, <q>OR</q>, <q>NOT</q></li>
+                    </ul>
+                </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>ORDER BY
+            <ul>
+                <li>Describe→A clause used to sort the result set of a SQL query in ascending or descending order of one or multiple column values.</li>
+                <li>Syntax?→<q>SELECT column_name1, column_name2 FROM table_name ORDER BY column_name1 ASC|DESC, column_name2 ASC|DESC;</q> </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>LIMIT
+            <ul>
+                <li>Describe→LIMIT is a clause that restricts the number of rows returned by a SQL query. It goes at the very end of a query.</li>
+                <li>Basic Syntax?→<q>SELECT * FROM table_name LIMIT number</q> </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>BETWEEN
+            <ul>
+                <li>Describe→A SQL operator that selects values within a given range using the <q>WHERE</q> operator.</li>
+                <li>Syntax?→<q>SELECT column_name(s) FROM table_name WHERE column_name BETWEEN value1 AND value2;</q> including <q>value1</q> and <q>value2</q> </li>
+                <li>Which format is used for dates?→<q>YYYY-MM-DD</q> (the ISO 8601 standard)</li>
+            </ul>
+        </li>
+        <li>IN
+            <ul>
+                <li>Describe→<q>IN</q> is a SQL operator used to specify that a value must be within a list of values.</li>
+                <li>Basic Syntax?→<q>SELECT column FROM table_name WHERE condition IN (option1, option2, ...);</q> </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>LIKE AND ILIKE
+            <ul>
+                <li>Describe→<q>LIKE</q> performs case-sensitive pattern matching, while <q>ILIKE</q> performs case-insensitive pattern matching.</li>
+                <li>Specify the possible wildcard characters
+                    <ul>
+                        <li>Percent sign (%) - Matches any sequence of characters</li>
+                        <li>Underscore (_) - Matches any single character</li>
+                    </ul>
+                </li>
+                <li>Basic Syntax?→<q>WHERE name LIKE &#39;A%&#39;</q> </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

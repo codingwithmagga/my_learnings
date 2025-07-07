@@ -1,0 +1,3 @@
+- This lecture shows how to import and export data to pgAdmin. Since this is not really SQL specific and is best shown visually, I didn't take any notes on this one. 
+- The same applies to the extra lection using python.
+- 

@@ -1,0 +1,3 @@
+- Describe→A self-join is a join where a table is joined to itself, allowing comparison of rows within the same table.
+- Basic syntax→Uses the standard `JOIN` syntax, but requires aliases for the table to distinguish correctly between the columns. 
+- 

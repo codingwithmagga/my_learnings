@@ -1,0 +1,42 @@
+- SELECT Statement
+    - Describe→A SELECT statement retrieves data from one or more tables in a database.
+    - Example syntax→`SELECT column1, column2 FROM table_name;`
+    - SQL Statement to select all columns from a table?→Use `SELECT * FROM table_name;` 
+- SELECT DISTINCT
+    - Describe→A SQL statement that retrieves unique values from a specified column. Useful when a column contains duplicate values.
+    - Syntax?→`SELECT DISTINCT column1, column2 FROM table_name;`  or `SELECT DISTINCT(column_name) FROM table_name` 
+    - 
+- COUNT
+    - Describe→A SQL function that returns the number of rows in a table or the number of rows that satisfy a specified condition.
+    - Syntax?→`COUNT(*)` counts all rows, `COUNT(column)` counts non-NULL values in a specified column.
+    - Example: `SELECT COUNT(DISTINCT column_name) FROM table_name` returns the number of distinct entries in `column_name`. 
+    - 
+- SELECT WHERE
+    - Describe WHERE→WHERE filters rows in a SQL query based on specified conditions on the columns.
+    - Basic Syntax?→`SELECT column1, column2 FROM table_name WHERE condition;`
+    - Which operators are available? >>>
+        - Comparison operators, like `=`, `>`, `>=`, `!=` ... 
+        - Logical operators, like `AND`, `OR`, `NOT`
+    - 
+- ORDER BY
+    - Describe→A clause used to sort the result set of a SQL query in ascending or descending order of one or multiple column values.
+    - Syntax?→`SELECT column_name1, column_name2 FROM table_name ORDER BY column_name1 ASC|DESC, column_name2 ASC|DESC;` 
+    - 
+- LIMIT
+    - Describe→LIMIT is a clause that restricts the number of rows returned by a SQL query. It goes at the very end of a query.
+    - Basic Syntax?→`SELECT * FROM table_name LIMIT number` 
+    - 
+- BETWEEN
+    - Describe→A SQL operator that selects values within a given range using the `WHERE` operator.
+    - Syntax?→`SELECT column_name(s) FROM table_name WHERE column_name BETWEEN value1 AND value2;` including `value1` and `value2` 
+    - Which format is used for dates?→`YYYY-MM-DD` (the ISO 8601 standard)
+- IN
+    - Describe→`IN` is a SQL operator used to specify that a value must be within a list of values.
+    - Basic Syntax?→`SELECT column FROM table_name WHERE condition IN (option1, option2, ...);` 
+    - 
+- LIKE AND ILIKE
+    - Describe→`LIKE` performs case-sensitive pattern matching, while `ILIKE` performs case-insensitive pattern matching.
+    - Specify the possible wildcard characters >>>
+        - Percent sign (%) - Matches any sequence of characters
+        - Underscore (_) - Matches any single character
+    - Basic Syntax?→`WHERE name LIKE 'A%'` 

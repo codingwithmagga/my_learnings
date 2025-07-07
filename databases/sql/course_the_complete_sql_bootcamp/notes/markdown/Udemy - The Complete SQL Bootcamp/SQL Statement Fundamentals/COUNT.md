@@ -1,0 +1,4 @@
+- Describe→A SQL function that returns the number of rows in a table or the number of rows that satisfy a specified condition.
+- Syntax?→`COUNT(*)` counts all rows, `COUNT(column)` counts non-NULL values in a specified column.
+- Example: `SELECT COUNT(DISTINCT column_name) FROM table_name` returns the number of distinct entries in `column_name`. 
+- 

@@ -1,0 +1,3 @@
+- Describe→A SQL command used to modify existing data within a database table.
+- Basic Syntax→`UPDATE table-name SET column1=value1, column2=value2, ... WHERE condition;` 
+- How to return affected rows?→Use the `RETURNING column1, column2, ...` function after an `UPDATE` statement.

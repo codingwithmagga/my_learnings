@@ -1,0 +1,3 @@
+- Describe→`IN` is a SQL operator used to specify that a value must be within a list of values.
+- Basic Syntax?→`SELECT column FROM table_name WHERE condition IN (option1, option2, ...);` 
+- 

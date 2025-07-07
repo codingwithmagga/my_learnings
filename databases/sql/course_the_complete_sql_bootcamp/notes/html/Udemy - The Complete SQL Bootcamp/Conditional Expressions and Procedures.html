@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Conditional Expressions and Procedures
+    </h1>
+    <br/>
+    <ul>
+        <li>CASE
+            <ul>
+                <li>Describe→A <q>CASE</q> statement allows you to run different SQL code based on different conditions. This is similar to <q>IF/ELSE</q> in other programming languages.</li>
+                <li>Basic syntax of general <q>CASE</q> statement→<q>SELECT x CASE WHEN condition1 THEN result1 WHEN condition2 THEN result2 ... ELSE resultN END FROM table;</q> </li>
+                <li>Basic syntax of <q>CASE</q> expression→<q>SELECT x CASE expression WHEN value1 THEN result1 WHEN value2 THEN result2 ... ELSE resultN END FROM table;</q> </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>COALESCE
+            <ul>
+                <li>Describe→<q>COALESCE</q> accepts an arbitrary number of arguments and returns the first <q>non-NULL</q> expression. If all arguments are <q>NULL</q>, <q>NULL</q> will be returned.</li>
+                <li>Basic Syntax→<q>COALESCE(value1, value2, ..., value_n)</q> </li>
+                <li>Example:
+                    <ul>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/DbXdZavmujRI_XOD5jfLXkIYg4IG_uDDpjVotuczOJicLCjGP8kS0Hyg8fm7P7Amxv6x_wv4uOjwk5gZSo7Yp8KXaiCylnLnhx6fWqZaa28liauGHClXiskczRKBOAlE.png" width="742" height="264.2195448460509"/></li>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/zPTj2Qy_NIqeSiIKnWOAFE963tOyP8lYl4f851Zm9tInp5MlxYfDWls9xB4T_zteR5HpNJYOxsLb44m_8CIznIODuzxJMT46pSa2mgBHUleoOOHW0y6O4MD-Jr89dmkn.png" width="742" height="344.3590425531915"/></li>
+                        <li><img src="https://remnote-user-data.s3.amazonaws.com/BmThSEmI6_KYSBkBbgFYcglbfwtGmmVbTotRfIMLqVd5BX5RN2yELJFv8_7Y_CqIYk4qQt9Xla5RWjhuizGOi9P5jc7LTVcJlUzYALTZffa4jTU9yd4t2aGVhfd4I-Lw.png" width="742" height="324.625"/></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>CAST
+            <ul>
+                <li>Describe→<q>CAST</q> converts a data type into another data type, if possible.</li>
+                <li>Basic Syntax→<q>CAST(expression AS datatype)</q> </li>
+                <li>There is also a special PostgreSQL <q>CAST</q> operator:  <q>SELECT &#39;4&#39;::INTEGER</q> </li>
+            </ul>
+        </li>
+        <li>NULLIF
+            <ul>
+                <li>Describe using Basic Syntax→<q>NULLIF(expression1, expression2)</q> returns <q>NULL</q> if <q>expression1</q> equals <q>expression2</q>, otherwise it returns <q>expression1</q>.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li>VIEWS
+            <ul>
+                <li>Describe→A <q>VIEW</q> is a stored query (the data is not physically stored) that acts like a virtual table.</li>
+                <li>Basic Syntax→<q>CREATE VIEW view_name AS SQL_CMD</q> </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Import and Export
+            <ul>
+                <li>This lecture shows how to import and export data to pgAdmin. Since this is not really SQL specific and is best shown visually, I didn&#39;t take any notes on this one. </li>
+                <li>The same applies to the extra lection using python.</li>
+                <li></li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

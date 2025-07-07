@@ -1,0 +1,5 @@
+- Describe→`LIKE` performs case-sensitive pattern matching, while `ILIKE` performs case-insensitive pattern matching.
+- Specify the possible wildcard characters >>>
+    - Percent sign (%) - Matches any sequence of characters
+    - Underscore (_) - Matches any single character
+- Basic Syntax?→`WHERE name LIKE 'A%'` 

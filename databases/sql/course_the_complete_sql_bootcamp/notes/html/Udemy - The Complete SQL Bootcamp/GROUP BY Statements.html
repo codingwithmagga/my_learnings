@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      GROUP BY Statements
+    </h1>
+    <br/>
+    <ul>
+        <li>Aggregation Functions
+            <ul>
+                <li>Main idea?→The main idea behind aggregate functions is to take multiple inputs and return a single output. </li>
+                <li></li>
+                <li>Most common aggregate functions
+                    <ul>
+                        <li><q>AVG()</q>::returns average value as floating point value</li>
+                        <li><q>COUNT()</q>::returns number of values</li>
+                        <li><q>MAX()</q>::returns maximum value</li>
+                        <li><q>MIN()</q>::returns minimum value</li>
+                        <li><q>SUM()</q>::returns sum of all values</li>
+                    </ul>
+                </li>
+                <li><q>ROUND(val, precision)</q>::round the value to specified precision</li>
+                <li></li>
+                <li>Basic syntax?→<q>SELECT AGG(column_name) FROM table_name</q> </li>
+                <li></li>
+                <li>Aggregate function call happens only in the {{569355907102476::SELECT}} clause or the {{569355907102476::HAVING}} clause. </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>GROUP BY
+            <ul>
+                <li>Describe→A SQL clause that groups rows with the same values in specified columns into a summary row.</li>
+                <li>Basic syntax→<q>SELECT category_col, AGG(data_col) FROM table GROUP BY category_col</q> </li>
+                <li>The <q>GROUP BY</q> clause must appear right after a {{1492825440530936::FROM}} or {{1492825440530936::WHERE}} statement.</li>
+                <li>In the <q>SELECT</q> statement, columns must either have {{7488734170323531::an aggregate function}} or be in the {{6775170167643532:: GROUP BY}} call.  </li>
+                <li><q>WHERE</q> statement should not refer to the {{18076557036896956::aggregation result}}, for this use {{18076557036896956::HAVING}}. </li>
+                <li>If you want to sort results based on the aggregate, make sure to {{035386134482203735::reference the entire function}}.</li>
+            </ul>
+        </li>
+        <li>HAVING
+            <ul>
+                <li>Describe→A <q>HAVING</q> clause filters groups of rows after they&#39;ve been grouped by a <q>GROUP BY</q> clause. Can filter an aggregated row, which is not possible using <q>WHERE.</q> </li>
+                <li>Basic Syntax→<q>SELECT column1, AGG(column2) GROUP BY column1 HAVING AGG(column2) &gt; x</q> </li>
+                <li></li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

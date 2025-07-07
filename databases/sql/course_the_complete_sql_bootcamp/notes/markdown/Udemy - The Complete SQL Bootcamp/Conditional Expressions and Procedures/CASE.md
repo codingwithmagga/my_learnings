@@ -1,0 +1,4 @@
+- Describe→A `CASE` statement allows you to run different SQL code based on different conditions. This is similar to `IF/ELSE` in other programming languages.
+- Basic syntax of general `CASE` statement→`SELECT x CASE WHEN condition1 THEN result1 WHEN condition2 THEN result2 ... ELSE resultN END FROM table;` 
+- Basic syntax of `CASE` expression→`SELECT x CASE expression WHEN value1 THEN result1 WHEN value2 THEN result2 ... ELSE resultN END FROM table;` 
+- 

@@ -1,0 +1,2 @@
+- [PostgreSQL: Documentation: 17: 9.4. String Functions and Operators](https://www.postgresql.org/docs/17/functions-string.html)
+- 

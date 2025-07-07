@@ -1,0 +1,15 @@
+- Main data types in SQL:
+    - Boolean - True or False
+    - Character - char, varchar and text
+    - Numeric - integer and floating-point number
+    - Temporal - date, time, timestamp, and interval
+    - UUID - Universally Unique Identifiers
+    - Array - Stores an array of strings, numbers, etc.
+    - JSON
+    - Hstore key-value pair
+    - Special types such as network address and geometric data
+    - Documentation: [PostgreSQL: Documentation: 17: Chapter 8. Data Types](https://www.postgresql.org/docs/current/datatype.html)
+- 
+- Example: Storing phone numbers as text/string, not as a numeric type.
+- 
+- Plan for long-term storage. Historical information can always be removed, but not restored.

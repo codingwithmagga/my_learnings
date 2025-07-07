@@ -1,0 +1,27 @@
+- CASE
+    - Describe→A `CASE` statement allows you to run different SQL code based on different conditions. This is similar to `IF/ELSE` in other programming languages.
+    - Basic syntax of general `CASE` statement→`SELECT x CASE WHEN condition1 THEN result1 WHEN condition2 THEN result2 ... ELSE resultN END FROM table;` 
+    - Basic syntax of `CASE` expression→`SELECT x CASE expression WHEN value1 THEN result1 WHEN value2 THEN result2 ... ELSE resultN END FROM table;` 
+    - 
+- COALESCE
+    - Describe→`COALESCE` accepts an arbitrary number of arguments and returns the first `non-NULL` expression. If all arguments are `NULL`, `NULL` will be returned.
+    - Basic Syntax→`COALESCE(value1, value2, ..., value_n)` 
+    - Example:
+        - ![](https://remnote-user-data.s3.amazonaws.com/DbXdZavmujRI_XOD5jfLXkIYg4IG_uDDpjVotuczOJicLCjGP8kS0Hyg8fm7P7Amxv6x_wv4uOjwk5gZSo7Yp8KXaiCylnLnhx6fWqZaa28liauGHClXiskczRKBOAlE.png)
+        - ![](https://remnote-user-data.s3.amazonaws.com/zPTj2Qy_NIqeSiIKnWOAFE963tOyP8lYl4f851Zm9tInp5MlxYfDWls9xB4T_zteR5HpNJYOxsLb44m_8CIznIODuzxJMT46pSa2mgBHUleoOOHW0y6O4MD-Jr89dmkn.png)
+        - ![](https://remnote-user-data.s3.amazonaws.com/BmThSEmI6_KYSBkBbgFYcglbfwtGmmVbTotRfIMLqVd5BX5RN2yELJFv8_7Y_CqIYk4qQt9Xla5RWjhuizGOi9P5jc7LTVcJlUzYALTZffa4jTU9yd4t2aGVhfd4I-Lw.png)
+- CAST
+    - Describe→`CAST` converts a data type into another data type, if possible.
+    - Basic Syntax→`CAST(expression AS datatype)` 
+    - There is also a special PostgreSQL `CAST` operator:  `SELECT '4'::INTEGER` 
+- NULLIF
+    - Describe using Basic Syntax→`NULLIF(expression1, expression2)` returns `NULL` if `expression1` equals `expression2`, otherwise it returns `expression1`.
+    - 
+- VIEWS
+    - Describe→A `VIEW` is a stored query (the data is not physically stored) that acts like a virtual table.
+    - Basic Syntax→`CREATE VIEW view_name AS SQL_CMD` 
+    - 
+- Import and Export
+    - This lecture shows how to import and export data to pgAdmin. Since this is not really SQL specific and is best shown visually, I didn't take any notes on this one. 
+    - The same applies to the extra lection using python.
+    - 

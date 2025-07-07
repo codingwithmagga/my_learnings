@@ -1,0 +1,5 @@
+- Describe→A SQL command used to create a new table in a database.
+- Basic Syntax→`CREATE TABLE table_name (column1 TYPE column_constraint, column2 TYPE column_constraint, ..., table_constraint, table_constraint, ...) INHERITS existing_table_name;` 
+- 
+- Describe `SERIAL` data type→An auto-incrementing integer data type that uniquely identifies each row in a table. Useful for columns which are a primary key.
+- 

@@ -1,0 +1,6 @@
+- Describe→A SQL clause that groups rows with the same values in specified columns into a summary row.
+- Basic syntax→`SELECT category_col, AGG(data_col) FROM table GROUP BY category_col` 
+- The `GROUP BY` clause must appear right after a {{FROM}} or {{WHERE}} statement.
+- In the `SELECT` statement, columns must either have {{an aggregate function}} or be in the {{ GROUP BY}} call.  
+- `WHERE` statement should not refer to the {{aggregation result}}, for this use {{HAVING}}. 
+- If you want to sort results based on the aggregate, make sure to {{reference the entire function}}.

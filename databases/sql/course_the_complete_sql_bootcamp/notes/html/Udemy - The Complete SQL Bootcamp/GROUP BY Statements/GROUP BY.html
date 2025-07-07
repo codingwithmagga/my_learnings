@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      GROUP BY
+    </h1>
+    <br/>
+    <ul>
+        <li>Describe→A SQL clause that groups rows with the same values in specified columns into a summary row.</li>
+        <li>Basic syntax→<q>SELECT category_col, AGG(data_col) FROM table GROUP BY category_col</q> </li>
+        <li>The <q>GROUP BY</q> clause must appear right after a {{1492825440530936::FROM}} or {{1492825440530936::WHERE}} statement.</li>
+        <li>In the <q>SELECT</q> statement, columns must either have {{7488734170323531::an aggregate function}} or be in the {{6775170167643532:: GROUP BY}} call.  </li>
+        <li><q>WHERE</q> statement should not refer to the {{18076557036896956::aggregation result}}, for this use {{18076557036896956::HAVING}}. </li>
+        <li>If you want to sort results based on the aggregate, make sure to {{035386134482203735::reference the entire function}}.</li>
+
+    </ul>
+    </body>
+</html>

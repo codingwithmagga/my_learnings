@@ -1,0 +1,280 @@
+- Course Introduction
+    - Overview of Databases
+        - Definition Database→A database is a structured set of data organized for efficient storage and retrieval. They are useful when dealing with large amounts of data.
+        - 
+        - Benefits of databases (compared to an Excel sheet) >>>
+            - Data Integrity, data can't be changed easily
+            - Can handle massive amounts of data
+            - Quickly combine different datasets
+            - Automate steps for re-use ⇒ SQL
+            - Can support data for websites and applications
+        - 
+        - Database platform options
+            - PostgreSQL
+                - Free (open source)
+                - Widely used on the internet
+                - Multi Plattform
+            - MySQL und MariaSQL
+                - Free (open source)
+                - Widely used on the internet
+                - Multi Plattform
+            - MS SQL Server Express
+                - Free, but with some limitations
+                - Compatible with SQL Server
+                - Windows only
+            - Microsoft access
+                - Cost
+                - Not easy to use just SQL
+            - SQLite
+                - Free (Open Source)
+                - Mainly command line
+        - 
+        - SQL
+            - PostgreSQL is a great Database choice for learning how to use SQL
+            - SQL (Structured Query Language) can be applied to various Databases or SQL-based software.
+            - SQL is the programming language used to communicate with the database
+        - 
+        - 
+    - Password
+        - Note only for me: PostgreSQL and pgAdmin password: "password"
+- SQL Statement Fundamentals
+    - SELECT Statement
+        - Describe→A SELECT statement retrieves data from one or more tables in a database.
+        - Example syntax→`SELECT column1, column2 FROM table_name;`
+        - SQL Statement to select all columns from a table?→Use `SELECT * FROM table_name;` 
+    - SELECT DISTINCT
+        - Describe→A SQL statement that retrieves unique values from a specified column. Useful when a column contains duplicate values.
+        - Syntax?→`SELECT DISTINCT column1, column2 FROM table_name;`  or `SELECT DISTINCT(column_name) FROM table_name` 
+        - 
+    - COUNT
+        - Describe→A SQL function that returns the number of rows in a table or the number of rows that satisfy a specified condition.
+        - Syntax?→`COUNT(*)` counts all rows, `COUNT(column)` counts non-NULL values in a specified column.
+        - Example: `SELECT COUNT(DISTINCT column_name) FROM table_name` returns the number of distinct entries in `column_name`. 
+        - 
+    - SELECT WHERE
+        - Describe WHERE→WHERE filters rows in a SQL query based on specified conditions on the columns.
+        - Basic Syntax?→`SELECT column1, column2 FROM table_name WHERE condition;`
+        - Which operators are available? >>>
+            - Comparison operators, like `=`, `>`, `>=`, `!=` ... 
+            - Logical operators, like `AND`, `OR`, `NOT`
+        - 
+    - ORDER BY
+        - Describe→A clause used to sort the result set of a SQL query in ascending or descending order of one or multiple column values.
+        - Syntax?→`SELECT column_name1, column_name2 FROM table_name ORDER BY column_name1 ASC|DESC, column_name2 ASC|DESC;` 
+        - 
+    - LIMIT
+        - Describe→LIMIT is a clause that restricts the number of rows returned by a SQL query. It goes at the very end of a query.
+        - Basic Syntax?→`SELECT * FROM table_name LIMIT number` 
+        - 
+    - BETWEEN
+        - Describe→A SQL operator that selects values within a given range using the `WHERE` operator.
+        - Syntax?→`SELECT column_name(s) FROM table_name WHERE column_name BETWEEN value1 AND value2;` including `value1` and `value2` 
+        - Which format is used for dates?→`YYYY-MM-DD` (the ISO 8601 standard)
+    - IN
+        - Describe→`IN` is a SQL operator used to specify that a value must be within a list of values.
+        - Basic Syntax?→`SELECT column FROM table_name WHERE condition IN (option1, option2, ...);` 
+        - 
+    - LIKE AND ILIKE
+        - Describe→`LIKE` performs case-sensitive pattern matching, while `ILIKE` performs case-insensitive pattern matching.
+        - Specify the possible wildcard characters >>>
+            - Percent sign (%) - Matches any sequence of characters
+            - Underscore (_) - Matches any single character
+        - Basic Syntax?→`WHERE name LIKE 'A%'` 
+- GROUP BY Statements
+    - Aggregation Functions
+        - Main idea?→The main idea behind aggregate functions is to take multiple inputs and return a single output. 
+        - 
+        - Most common aggregate functions
+            - `AVG()`::returns average value as floating point value
+            - `COUNT()`::returns number of values
+            - `MAX()`::returns maximum value
+            - `MIN()`::returns minimum value
+            - `SUM()`::returns sum of all values
+        - `ROUND(val, precision)`::round the value to specified precision
+        - 
+        - Basic syntax?→`SELECT AGG(column_name) FROM table_name` 
+        - 
+        - Aggregate function call happens only in the {{SELECT}} clause or the {{HAVING}} clause. 
+        - 
+    - GROUP BY
+        - Describe→A SQL clause that groups rows with the same values in specified columns into a summary row.
+        - Basic syntax→`SELECT category_col, AGG(data_col) FROM table GROUP BY category_col` 
+        - The `GROUP BY` clause must appear right after a {{FROM}} or {{WHERE}} statement.
+        - In the `SELECT` statement, columns must either have {{an aggregate function}} or be in the {{ GROUP BY}} call.  
+        - `WHERE` statement should not refer to the {{aggregation result}}, for this use {{HAVING}}. 
+        - If you want to sort results based on the aggregate, make sure to {{reference the entire function}}.
+    - HAVING
+        - Describe→A `HAVING` clause filters groups of rows after they've been grouped by a `GROUP BY` clause. Can filter an aggregated row, which is not possible using `WHERE.` 
+        - Basic Syntax→`SELECT column1, AGG(column2) GROUP BY column1 HAVING AGG(column2) > x` 
+        - 
+- JOINS
+    - AS Statement
+        - Describe→The AS statement renames a table or column in a SQL query for better readability.
+        - Basic Syntax→`SELECT column AS new_name FROM table1 AS t1` 
+        - The `AS` operator get executed at {{the very end}} of a query, meaning that we cannot use the ALIAS inside a `WHERE` or a `HAVING` operator. 
+    - Inner Joins
+        - Describe→An inner join combines rows from two or more tables based on a related column between them. Values missing in (at least) one of the columns will be discarded.
+![](https://remnote-user-data.s3.amazonaws.com/3AH8VsvLVG1koQmqeYoMr6Tlq15qAXmy7Qrg3hrjzHo7nTal84X9YsZ3NQBbn1apwg4ImZIKGpzaaAFk_hih10Et_iRaXgNcEW57SB11yVPatXlv9R_syyOqL0QxOBAt.png)
+        - Basic Syntax?→`SELECT * FROM table1 INNER JOIN table2 ON table1.column = table2.column;` 
+        - Example
+            - ![](https://remnote-user-data.s3.amazonaws.com/XMgExzHQzVr85muIQz6Qs3bTm5IRKNVWszbdt26he_GD1M76v6Sax5UgV787oyUaWjnqiFCAD0QhlI8zCoy8m6gYyZ82xxkaNMz2OX-yCanfr7AEmnmVFaouFbJ218hN.png)
+        - 
+    - Full Outer Joins
+        - Describe→A full outer join combines results from two tables, including all rows from both, matching where possible and filling in `NULL` where there's no match.![](https://remnote-user-data.s3.amazonaws.com/Ii0fHhUNpnbLgEN0avI3NaEe47ExUiPb0uP-99XxZte5G1hWi7DMcQ06_JPiB9460cLoAZmvzMn6y6D_GBGkxTa6UmPgArkGidlitNtvEC35lxkyDcV02KGFNGuOtKDq.png)
+        - Basic Syntax?→`SELECT * FROM table1 FULL OUTER JOIN table2 ON table1.col = table2.col;` 
+        - Example:
+            - ![](https://remnote-user-data.s3.amazonaws.com/4vnAoRjIy9KgxL3cjEFXCrxkzuLNmAdPbk0KmLyRfQ5syMTq5fNvZfSoPsBcZ2n667zx9vJdHBUq9LVpxYh0vMM0tLYgtE-iVWgUmUmC82hkgi3t-7CfGq5NwJ6lXk2Z.png)
+            - ![](https://remnote-user-data.s3.amazonaws.com/IPjxsAeflC2Qma4rKBziiMLJzjhwxkasFWFHC6HiGWA3IE9zgimdMpbJ1K1HiyupqJ5prICmWgg29FbCYwE8PZe2S5GvswUbi8xoLux3mJzoYNRBVE3NiiuiOvqwHgnt.png)
+    - Left Outer Join
+        - Describe→A left outer join returns all rows from the left table, if there is no match in the right table it will be filled with `null`. Not matching rows on the right table are discarded.
+![](https://remnote-user-data.s3.amazonaws.com/IpKvSJU-NRNC-3GJ6q44SAqcMmY4pVIEKcumq-pm_W_tPbbiUkKRZnXPJBqcfq1vX8h4JXA2lCHSl3d62AnDMlxiA8k3vQKwe9di1Lfw56VRZnCQjDtcKD8FnsmB27bE.png)
+        - Basic Syntax→`SELECT * FROM table1 LEFT OUTER JOIN table2 ON table1.column = table2.column;` 
+        - Example
+            - ![](https://remnote-user-data.s3.amazonaws.com/cNZwYcwZxaERsFxRFFMuZ0F_tAot3gSyeXdbT9uIey7djQF02dD0QsxU96xWwISHE02MMimwS_VhlmgNenuz-ULGmwZ4czXcNEmbba0uGKjaFGnTwEfjdKPrz7iUiaRP.png)
+            - ![](https://remnote-user-data.s3.amazonaws.com/TIsNk-Cfs4Eqp3Kn7ChpGENmaTTwytQZLk_EGaWCqsjslk_y3x7m9RxUgwARy6g_o7FfhVxFPPE-L4qiCeef5u59JpeOpn_di_NEFnHf6yjFkQS6TfODkg8BoTOYz7nt.png)
+    - Right Joins
+        - Describe→A right outer join returns all rows from the right table, if there is no match in the left table it will be filled with `null`. Not matching rows on the left table are discarded.
+![](https://remnote-user-data.s3.amazonaws.com/9wpfbCvyKpiI7XN0_9R6UHtBeQMazaZfVdJE1cToRe7hM0Fxgr8b08_BgMxY_m53sBG6clKXRu3rNFubbV2KSY1_F56xSGeZ5zhWZf19ytBcoYpu8Lnjw6dYeS86JrBn.png)
+        - Basic Syntax→`SELECT * FROM table1 RIGHT OUTER JOIN table2 ON table1.column = table2.column;` 
+        - 
+    - UNION
+        - Describe→A `UNION` combines the result sets of two or more SELECT statements into a single result set.
+        - Basic Syntax→`SELECT column(s) FROM table1 UNION SELECT column(s) FROM table2;` 
+        - 
+- Advanced SQL Commands
+    - Timestamps and Extract
+        - Date and time data types
+            - `TIME`::Contains only time
+            - `DATE`::Contains only date
+            - `TIMESTAMP`::Contains date and time
+            - `TIMESTAMPTZ`::Contains date, time, and timezone 
+        - 
+        - PostgreSQL Command
+            - `SHOW`::show a value of a run-time parameter 
+        - 
+        - Time related run-time parameter
+            - `TIMEZONE`::Show current timezone you are working in
+        - 
+        - Time related Functions and constants
+            - `SELECT NOW()`::PostgreSQL function which returns the current date, time and timezone
+            - `SELECT TIMEOFDAY()`::PostgreSQL function which returns day, time and timezone in a more readable way
+            - `SELECT CURRENT_TIME`::SQL command that retrieves the current time from the system clock.
+            - `SELECT CURRENT_DATE`::SQL command that retrieves the current date from the system's clock.
+            - `EXTRACT()`::Function in SQL that retrieves subparts of a date or timestamp, such as year, month, or day.
+            - Basic Syntax of `EXTRACT()`→`EXTRACT(field FROM timestamp_column)` where `field=YEAR` for example 
+            - `AGE()`::PostgreSQL Function that calculates the interval between two timestamps, returning the difference in years, months, and days. If only one timestamp is provided, it returns the difference between the current time and the given timestamp.
+            - Basic Syntax of `AGE()`→`AGE(timestamp_column)` returns the interval since the given timestamp or `AGE(timestamp1_column, timestamp2_column)` returning the difference between the two timestamps. 
+            - `TO_CHAR()`::Function in PostgreSQL that converts a date or number to a string in a specified format. General function but especially useful for timestamp formatting.
+            - Basic Syntax of `TO_CHAR()`→`TO_CHAR(date_column, format)` for example `format='mm-dd-yyyy'` 
+        - 
+    - Mathematical Functions and Operators
+        - [PostgreSQL: Documentation: 17: 9.3. Mathematical Functions and Operators](https://www.postgresql.org/docs/current/functions-math.html)
+        - 
+    - String Functions and Operators
+        - [PostgreSQL: Documentation: 17: 9.4. String Functions and Operators](https://www.postgresql.org/docs/17/functions-string.html)
+        - 
+    - SubQuery
+        - Describe→A subquery is a query nested inside another query. It allows constructing complex queries, essentially performing a query on the results of another query.
+        - Basic Syntax?→But the query which shall be executed first in braces `(QUERY)`. 
+        - Explain the `EXISTS()` function→`EXISTS()` is a subquery operator that returns `TRUE` if the subquery returns one or more rows, and `FALSE` otherwise.
+        - 
+    - Self-Join
+        - Describe→A self-join is a join where a table is joined to itself, allowing comparison of rows within the same table.
+        - Basic syntax→Uses the standard `JOIN` syntax, but requires aliases for the table to distinguish correctly between the columns. 
+        - 
+- Creating Databases and Tables
+    - Data types
+        - Main data types in SQL:
+            - Boolean - True or False
+            - Character - char, varchar and text
+            - Numeric - integer and floating-point number
+            - Temporal - date, time, timestamp, and interval
+            - UUID - Universally Unique Identifiers
+            - Array - Stores an array of strings, numbers, etc.
+            - JSON
+            - Hstore key-value pair
+            - Special types such as network address and geometric data
+            - Documentation: [PostgreSQL: Documentation: 17: Chapter 8. Data Types](https://www.postgresql.org/docs/current/datatype.html)
+        - 
+        - Example: Storing phone numbers as text/string, not as a numeric type.
+        - 
+        - Plan for long-term storage. Historical information can always be removed, but not restored.
+    - Primary keys and foreign keys
+        - What is a primary key?→A primary key is a column or set of columns that uniquely identifies each row in a database table.
+        - What is a foreign key?→A foreign key is a field in one table that refers to the primary key in another table.
+    - Constraints
+        - What is the duty of constraints?→Constraints enforce data integrity by limiting the type of data that can be stored in a database table.
+        - Name two main categories of constraints?→Column-level and table-level constraints.
+        - 
+        - Common column constraints
+            - `NOT NULL`::Ensures that a column cannot have a `NULL` value
+            - `UNIQUE`::Ensures that all values in a column are different 
+            - `PRIMARY KEY`::Uniquely identifies each row/record 
+            - `FOREIGN KEY`::Constraints data based on columns in other tables
+            - `CHECK constraint`::Ensures that all values in a column satisfy certain conditions.
+            - `EXCLUSION constraint`::Ensures that if any two rows are compared on the specified column or expression using the specified operator, not all of these comparisons will return `TRUE`. 
+        - 
+        - Common Table constrains
+            - `CHECK(condition)`::to check a condition when inserting or updating data
+            - `REFERENCES table_name(column_name)`::To constrain the value stored in the column that must exist in a column in another table. 
+            - `UNIQUE(column_list)`::Forces the values stored in the columns listed inside the parentheses to be unique.
+            - `PRIMARY KEY(column_list)`::Allows you to define the primary key that consists of multiple columns.
+    - CREATE Table
+        - Describe→A SQL command used to create a new table in a database.
+        - Basic Syntax→`CREATE TABLE table_name (column1 TYPE column_constraint, column2 TYPE column_constraint, ..., table_constraint, table_constraint, ...) INHERITS existing_table_name;` 
+        - 
+        - Describe `SERIAL` data type→An auto-incrementing integer data type that uniquely identifies each row in a table. Useful for columns which are a primary key.
+        - 
+    - INSERT
+        - Describe→INSERT is a SQL command used to add new rows of data to a table.
+        - Basic Syntax→`INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...), (value1, value2, ...), ...` 
+        - Basic Syntax for adding rows from another table→`INSERT INTO table_name (column1, column2, ...) SELECT column1, column2 FROM table_name2 WHERE condition;` 
+        - 
+    - UPDATE
+        - Describe→A SQL command used to modify existing data within a database table.
+        - Basic Syntax→`UPDATE table-name SET column1=value1, column2=value2, ... WHERE condition;` 
+        - How to return affected rows?→Use the `RETURNING column1, column2, ...` function after an `UPDATE` statement.
+    - DELETE
+        - Describe→A SQL command used to remove rows from a table.
+        - Basic Syntax→`DELETE FROM table_name WHERE condition;`
+    - ALTER Table
+        - Describe→A command used to modify the structure of an existing table in a database. For example, adding, dropping or renaming columns, changing the data type on a column, ...
+        - Basic Syntax→`ALTER TABLE table_name action;` where `action` differs on the actual action you want to do, for example `DROP COLUMN column_name` 
+        - 
+    - DROP Table
+        - Describe→A SQL command that deletes a column or an entire table from a database.
+        - Basic Syntax→`DROP TABLE table_name;` (delete entire table), `ALTER TABLE table_name DROP COLUMN IF EXISTS col_name` (delete column_name), note that `IF EXISTS` is optional but good practice 
+        - Explain the keyword `CASCADE`→`CASCADE` deletes all foreign key relationships referencing the deleted column in the table.
+    - CHECK Constraint
+        - Describe→A `CHECK` constraint limits the values that can be placed in a column.
+        - Basic Syntax→When Creating a table, add at the end of an added column `CHECK(condition)`
+        - 
+- Conditional Expressions and Procedures
+    - CASE
+        - Describe→A `CASE` statement allows you to run different SQL code based on different conditions. This is similar to `IF/ELSE` in other programming languages.
+        - Basic syntax of general `CASE` statement→`SELECT x CASE WHEN condition1 THEN result1 WHEN condition2 THEN result2 ... ELSE resultN END FROM table;` 
+        - Basic syntax of `CASE` expression→`SELECT x CASE expression WHEN value1 THEN result1 WHEN value2 THEN result2 ... ELSE resultN END FROM table;` 
+        - 
+    - COALESCE
+        - Describe→`COALESCE` accepts an arbitrary number of arguments and returns the first `non-NULL` expression. If all arguments are `NULL`, `NULL` will be returned.
+        - Basic Syntax→`COALESCE(value1, value2, ..., value_n)` 
+        - Example:
+            - ![](https://remnote-user-data.s3.amazonaws.com/DbXdZavmujRI_XOD5jfLXkIYg4IG_uDDpjVotuczOJicLCjGP8kS0Hyg8fm7P7Amxv6x_wv4uOjwk5gZSo7Yp8KXaiCylnLnhx6fWqZaa28liauGHClXiskczRKBOAlE.png)
+            - ![](https://remnote-user-data.s3.amazonaws.com/zPTj2Qy_NIqeSiIKnWOAFE963tOyP8lYl4f851Zm9tInp5MlxYfDWls9xB4T_zteR5HpNJYOxsLb44m_8CIznIODuzxJMT46pSa2mgBHUleoOOHW0y6O4MD-Jr89dmkn.png)
+            - ![](https://remnote-user-data.s3.amazonaws.com/BmThSEmI6_KYSBkBbgFYcglbfwtGmmVbTotRfIMLqVd5BX5RN2yELJFv8_7Y_CqIYk4qQt9Xla5RWjhuizGOi9P5jc7LTVcJlUzYALTZffa4jTU9yd4t2aGVhfd4I-Lw.png)
+    - CAST
+        - Describe→`CAST` converts a data type into another data type, if possible.
+        - Basic Syntax→`CAST(expression AS datatype)` 
+        - There is also a special PostgreSQL `CAST` operator:  `SELECT '4'::INTEGER` 
+    - NULLIF
+        - Describe using Basic Syntax→`NULLIF(expression1, expression2)` returns `NULL` if `expression1` equals `expression2`, otherwise it returns `expression1`.
+        - 
+    - VIEWS
+        - Describe→A `VIEW` is a stored query (the data is not physically stored) that acts like a virtual table.
+        - Basic Syntax→`CREATE VIEW view_name AS SQL_CMD` 
+        - 
+    - Import and Export
+        - This lecture shows how to import and export data to pgAdmin. Since this is not really SQL specific and is best shown visually, I didn't take any notes on this one. 
+        - The same applies to the extra lection using python.
+        - 
+- www.udemy.com/course/the complete sql bootcamp/

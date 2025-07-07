@@ -1,0 +1,2 @@
+- Describe→A SQL command used to remove rows from a table.
+- Basic Syntax→`DELETE FROM table_name WHERE condition;`

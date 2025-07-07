@@ -1,0 +1,3 @@
+- Describe→A `CHECK` constraint limits the values that can be placed in a column.
+- Basic Syntax→When Creating a table, add at the end of an added column `CHECK(condition)`
+- 

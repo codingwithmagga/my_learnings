@@ -1,0 +1,6 @@
+- Describe WHERE→WHERE filters rows in a SQL query based on specified conditions on the columns.
+- Basic Syntax?→`SELECT column1, column2 FROM table_name WHERE condition;`
+- Which operators are available? >>>
+    - Comparison operators, like `=`, `>`, `>=`, `!=` ... 
+    - Logical operators, like `AND`, `OR`, `NOT`
+- 

@@ -1,0 +1,66 @@
+- Data types
+    - Main data types in SQL:
+        - Boolean - True or False
+        - Character - char, varchar and text
+        - Numeric - integer and floating-point number
+        - Temporal - date, time, timestamp, and interval
+        - UUID - Universally Unique Identifiers
+        - Array - Stores an array of strings, numbers, etc.
+        - JSON
+        - Hstore key-value pair
+        - Special types such as network address and geometric data
+        - Documentation: [PostgreSQL: Documentation: 17: Chapter 8. Data Types](https://www.postgresql.org/docs/current/datatype.html)
+    - 
+    - Example: Storing phone numbers as text/string, not as a numeric type.
+    - 
+    - Plan for long-term storage. Historical information can always be removed, but not restored.
+- Primary keys and foreign keys
+    - What is a primary key?→A primary key is a column or set of columns that uniquely identifies each row in a database table.
+    - What is a foreign key?→A foreign key is a field in one table that refers to the primary key in another table.
+- Constraints
+    - What is the duty of constraints?→Constraints enforce data integrity by limiting the type of data that can be stored in a database table.
+    - Name two main categories of constraints?→Column-level and table-level constraints.
+    - 
+    - Common column constraints
+        - `NOT NULL`::Ensures that a column cannot have a `NULL` value
+        - `UNIQUE`::Ensures that all values in a column are different 
+        - `PRIMARY KEY`::Uniquely identifies each row/record 
+        - `FOREIGN KEY`::Constraints data based on columns in other tables
+        - `CHECK constraint`::Ensures that all values in a column satisfy certain conditions.
+        - `EXCLUSION constraint`::Ensures that if any two rows are compared on the specified column or expression using the specified operator, not all of these comparisons will return `TRUE`. 
+    - 
+    - Common Table constrains
+        - `CHECK(condition)`::to check a condition when inserting or updating data
+        - `REFERENCES table_name(column_name)`::To constrain the value stored in the column that must exist in a column in another table. 
+        - `UNIQUE(column_list)`::Forces the values stored in the columns listed inside the parentheses to be unique.
+        - `PRIMARY KEY(column_list)`::Allows you to define the primary key that consists of multiple columns.
+- CREATE Table
+    - Describe→A SQL command used to create a new table in a database.
+    - Basic Syntax→`CREATE TABLE table_name (column1 TYPE column_constraint, column2 TYPE column_constraint, ..., table_constraint, table_constraint, ...) INHERITS existing_table_name;` 
+    - 
+    - Describe `SERIAL` data type→An auto-incrementing integer data type that uniquely identifies each row in a table. Useful for columns which are a primary key.
+    - 
+- INSERT
+    - Describe→INSERT is a SQL command used to add new rows of data to a table.
+    - Basic Syntax→`INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...), (value1, value2, ...), ...` 
+    - Basic Syntax for adding rows from another table→`INSERT INTO table_name (column1, column2, ...) SELECT column1, column2 FROM table_name2 WHERE condition;` 
+    - 
+- UPDATE
+    - Describe→A SQL command used to modify existing data within a database table.
+    - Basic Syntax→`UPDATE table-name SET column1=value1, column2=value2, ... WHERE condition;` 
+    - How to return affected rows?→Use the `RETURNING column1, column2, ...` function after an `UPDATE` statement.
+- DELETE
+    - Describe→A SQL command used to remove rows from a table.
+    - Basic Syntax→`DELETE FROM table_name WHERE condition;`
+- ALTER Table
+    - Describe→A command used to modify the structure of an existing table in a database. For example, adding, dropping or renaming columns, changing the data type on a column, ...
+    - Basic Syntax→`ALTER TABLE table_name action;` where `action` differs on the actual action you want to do, for example `DROP COLUMN column_name` 
+    - 
+- DROP Table
+    - Describe→A SQL command that deletes a column or an entire table from a database.
+    - Basic Syntax→`DROP TABLE table_name;` (delete entire table), `ALTER TABLE table_name DROP COLUMN IF EXISTS col_name` (delete column_name), note that `IF EXISTS` is optional but good practice 
+    - Explain the keyword `CASCADE`→`CASCADE` deletes all foreign key relationships referencing the deleted column in the table.
+- CHECK Constraint
+    - Describe→A `CHECK` constraint limits the values that can be placed in a column.
+    - Basic Syntax→When Creating a table, add at the end of an added column `CHECK(condition)`
+    - 

@@ -1,0 +1,5 @@
+- Describe→A full outer join combines results from two tables, including all rows from both, matching where possible and filling in `NULL` where there's no match.![](https://remnote-user-data.s3.amazonaws.com/Ii0fHhUNpnbLgEN0avI3NaEe47ExUiPb0uP-99XxZte5G1hWi7DMcQ06_JPiB9460cLoAZmvzMn6y6D_GBGkxTa6UmPgArkGidlitNtvEC35lxkyDcV02KGFNGuOtKDq.png)
+- Basic Syntax?→`SELECT * FROM table1 FULL OUTER JOIN table2 ON table1.col = table2.col;` 
+- Example:
+    - ![](https://remnote-user-data.s3.amazonaws.com/4vnAoRjIy9KgxL3cjEFXCrxkzuLNmAdPbk0KmLyRfQ5syMTq5fNvZfSoPsBcZ2n667zx9vJdHBUq9LVpxYh0vMM0tLYgtE-iVWgUmUmC82hkgi3t-7CfGq5NwJ6lXk2Z.png)
+    - ![](https://remnote-user-data.s3.amazonaws.com/IPjxsAeflC2Qma4rKBziiMLJzjhwxkasFWFHC6HiGWA3IE9zgimdMpbJ1K1HiyupqJ5prICmWgg29FbCYwE8PZe2S5GvswUbi8xoLux3mJzoYNRBVE3NiiuiOvqwHgnt.png)

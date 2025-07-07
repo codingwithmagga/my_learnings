@@ -1,0 +1,24 @@
+- Date and time data types
+    - `TIME`::Contains only time
+    - `DATE`::Contains only date
+    - `TIMESTAMP`::Contains date and time
+    - `TIMESTAMPTZ`::Contains date, time, and timezone 
+- 
+- PostgreSQL Command
+    - `SHOW`::show a value of a run-time parameter 
+- 
+- Time related run-time parameter
+    - `TIMEZONE`::Show current timezone you are working in
+- 
+- Time related Functions and constants
+    - `SELECT NOW()`::PostgreSQL function which returns the current date, time and timezone
+    - `SELECT TIMEOFDAY()`::PostgreSQL function which returns day, time and timezone in a more readable way
+    - `SELECT CURRENT_TIME`::SQL command that retrieves the current time from the system clock.
+    - `SELECT CURRENT_DATE`::SQL command that retrieves the current date from the system's clock.
+    - `EXTRACT()`::Function in SQL that retrieves subparts of a date or timestamp, such as year, month, or day.
+    - Basic Syntax of `EXTRACT()`→`EXTRACT(field FROM timestamp_column)` where `field=YEAR` for example 
+    - `AGE()`::PostgreSQL Function that calculates the interval between two timestamps, returning the difference in years, months, and days. If only one timestamp is provided, it returns the difference between the current time and the given timestamp.
+    - Basic Syntax of `AGE()`→`AGE(timestamp_column)` returns the interval since the given timestamp or `AGE(timestamp1_column, timestamp2_column)` returning the difference between the two timestamps. 
+    - `TO_CHAR()`::Function in PostgreSQL that converts a date or number to a string in a specified format. General function but especially useful for timestamp formatting.
+    - Basic Syntax of `TO_CHAR()`→`TO_CHAR(date_column, format)` for example `format='mm-dd-yyyy'` 
+- 

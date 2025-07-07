@@ -1,0 +1,2 @@
+- What is a primary key?→A primary key is a column or set of columns that uniquely identifies each row in a database table.
+- What is a foreign key?→A foreign key is a field in one table that refers to the primary key in another table.

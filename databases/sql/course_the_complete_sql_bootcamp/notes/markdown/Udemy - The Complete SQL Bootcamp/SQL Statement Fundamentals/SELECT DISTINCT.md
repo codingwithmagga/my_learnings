@@ -1,0 +1,3 @@
+- Describe→A SQL statement that retrieves unique values from a specified column. Useful when a column contains duplicate values.
+- Syntax?→`SELECT DISTINCT column1, column2 FROM table_name;`  or `SELECT DISTINCT(column_name) FROM table_name` 
+- 

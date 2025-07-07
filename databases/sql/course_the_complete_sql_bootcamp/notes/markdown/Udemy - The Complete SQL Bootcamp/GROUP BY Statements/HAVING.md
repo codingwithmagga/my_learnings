@@ -1,0 +1,3 @@
+- Describe→A `HAVING` clause filters groups of rows after they've been grouped by a `GROUP BY` clause. Can filter an aggregated row, which is not possible using `WHERE.` 
+- Basic Syntax→`SELECT column1, AGG(column2) GROUP BY column1 HAVING AGG(column2) > x` 
+- 

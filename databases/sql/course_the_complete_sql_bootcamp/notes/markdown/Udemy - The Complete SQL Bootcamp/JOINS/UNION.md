@@ -1,0 +1,3 @@
+- Describe→A `UNION` combines the result sets of two or more SELECT statements into a single result set.
+- Basic Syntax→`SELECT column(s) FROM table1 UNION SELECT column(s) FROM table2;` 
+- 

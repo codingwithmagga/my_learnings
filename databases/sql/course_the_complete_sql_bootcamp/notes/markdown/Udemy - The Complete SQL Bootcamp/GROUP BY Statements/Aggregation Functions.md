@@ -1,0 +1,14 @@
+- Main idea?→The main idea behind aggregate functions is to take multiple inputs and return a single output. 
+- 
+- Most common aggregate functions
+    - `AVG()`::returns average value as floating point value
+    - `COUNT()`::returns number of values
+    - `MAX()`::returns maximum value
+    - `MIN()`::returns minimum value
+    - `SUM()`::returns sum of all values
+- `ROUND(val, precision)`::round the value to specified precision
+- 
+- Basic syntax?→`SELECT AGG(column_name) FROM table_name` 
+- 
+- Aggregate function call happens only in the {{SELECT}} clause or the {{HAVING}} clause. 
+- 

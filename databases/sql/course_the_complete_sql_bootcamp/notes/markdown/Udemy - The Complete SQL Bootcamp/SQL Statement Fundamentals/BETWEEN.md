@@ -1,0 +1,3 @@
+- Describe→A SQL operator that selects values within a given range using the `WHERE` operator.
+- Syntax?→`SELECT column_name(s) FROM table_name WHERE column_name BETWEEN value1 AND value2;` including `value1` and `value2` 
+- Which format is used for dates?→`YYYY-MM-DD` (the ISO 8601 standard)

@@ -1,0 +1,3 @@
+- Describe→A command used to modify the structure of an existing table in a database. For example, adding, dropping or renaming columns, changing the data type on a column, ...
+- Basic Syntax→`ALTER TABLE table_name action;` where `action` differs on the actual action you want to do, for example `DROP COLUMN column_name` 
+- 

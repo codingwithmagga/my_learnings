@@ -1,0 +1,33 @@
+- AS Statement
+    - Describe→The AS statement renames a table or column in a SQL query for better readability.
+    - Basic Syntax→`SELECT column AS new_name FROM table1 AS t1` 
+    - The `AS` operator get executed at {{the very end}} of a query, meaning that we cannot use the ALIAS inside a `WHERE` or a `HAVING` operator. 
+- Inner Joins
+    - Describe→An inner join combines rows from two or more tables based on a related column between them. Values missing in (at least) one of the columns will be discarded.
+![](https://remnote-user-data.s3.amazonaws.com/3AH8VsvLVG1koQmqeYoMr6Tlq15qAXmy7Qrg3hrjzHo7nTal84X9YsZ3NQBbn1apwg4ImZIKGpzaaAFk_hih10Et_iRaXgNcEW57SB11yVPatXlv9R_syyOqL0QxOBAt.png)
+    - Basic Syntax?→`SELECT * FROM table1 INNER JOIN table2 ON table1.column = table2.column;` 
+    - Example
+        - ![](https://remnote-user-data.s3.amazonaws.com/XMgExzHQzVr85muIQz6Qs3bTm5IRKNVWszbdt26he_GD1M76v6Sax5UgV787oyUaWjnqiFCAD0QhlI8zCoy8m6gYyZ82xxkaNMz2OX-yCanfr7AEmnmVFaouFbJ218hN.png)
+    - 
+- Full Outer Joins
+    - Describe→A full outer join combines results from two tables, including all rows from both, matching where possible and filling in `NULL` where there's no match.![](https://remnote-user-data.s3.amazonaws.com/Ii0fHhUNpnbLgEN0avI3NaEe47ExUiPb0uP-99XxZte5G1hWi7DMcQ06_JPiB9460cLoAZmvzMn6y6D_GBGkxTa6UmPgArkGidlitNtvEC35lxkyDcV02KGFNGuOtKDq.png)
+    - Basic Syntax?→`SELECT * FROM table1 FULL OUTER JOIN table2 ON table1.col = table2.col;` 
+    - Example:
+        - ![](https://remnote-user-data.s3.amazonaws.com/4vnAoRjIy9KgxL3cjEFXCrxkzuLNmAdPbk0KmLyRfQ5syMTq5fNvZfSoPsBcZ2n667zx9vJdHBUq9LVpxYh0vMM0tLYgtE-iVWgUmUmC82hkgi3t-7CfGq5NwJ6lXk2Z.png)
+        - ![](https://remnote-user-data.s3.amazonaws.com/IPjxsAeflC2Qma4rKBziiMLJzjhwxkasFWFHC6HiGWA3IE9zgimdMpbJ1K1HiyupqJ5prICmWgg29FbCYwE8PZe2S5GvswUbi8xoLux3mJzoYNRBVE3NiiuiOvqwHgnt.png)
+- Left Outer Join
+    - Describe→A left outer join returns all rows from the left table, if there is no match in the right table it will be filled with `null`. Not matching rows on the right table are discarded.
+![](https://remnote-user-data.s3.amazonaws.com/IpKvSJU-NRNC-3GJ6q44SAqcMmY4pVIEKcumq-pm_W_tPbbiUkKRZnXPJBqcfq1vX8h4JXA2lCHSl3d62AnDMlxiA8k3vQKwe9di1Lfw56VRZnCQjDtcKD8FnsmB27bE.png)
+    - Basic Syntax→`SELECT * FROM table1 LEFT OUTER JOIN table2 ON table1.column = table2.column;` 
+    - Example
+        - ![](https://remnote-user-data.s3.amazonaws.com/cNZwYcwZxaERsFxRFFMuZ0F_tAot3gSyeXdbT9uIey7djQF02dD0QsxU96xWwISHE02MMimwS_VhlmgNenuz-ULGmwZ4czXcNEmbba0uGKjaFGnTwEfjdKPrz7iUiaRP.png)
+        - ![](https://remnote-user-data.s3.amazonaws.com/TIsNk-Cfs4Eqp3Kn7ChpGENmaTTwytQZLk_EGaWCqsjslk_y3x7m9RxUgwARy6g_o7FfhVxFPPE-L4qiCeef5u59JpeOpn_di_NEFnHf6yjFkQS6TfODkg8BoTOYz7nt.png)
+- Right Joins
+    - Describe→A right outer join returns all rows from the right table, if there is no match in the left table it will be filled with `null`. Not matching rows on the left table are discarded.
+![](https://remnote-user-data.s3.amazonaws.com/9wpfbCvyKpiI7XN0_9R6UHtBeQMazaZfVdJE1cToRe7hM0Fxgr8b08_BgMxY_m53sBG6clKXRu3rNFubbV2KSY1_F56xSGeZ5zhWZf19ytBcoYpu8Lnjw6dYeS86JrBn.png)
+    - Basic Syntax→`SELECT * FROM table1 RIGHT OUTER JOIN table2 ON table1.column = table2.column;` 
+    - 
+- UNION
+    - Describe→A `UNION` combines the result sets of two or more SELECT statements into a single result set.
+    - Basic Syntax→`SELECT column(s) FROM table1 UNION SELECT column(s) FROM table2;` 
+    - 

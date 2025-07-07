@@ -1,0 +1,16 @@
+- What is the duty of constraints?→Constraints enforce data integrity by limiting the type of data that can be stored in a database table.
+- Name two main categories of constraints?→Column-level and table-level constraints.
+- 
+- Common column constraints
+    - `NOT NULL`::Ensures that a column cannot have a `NULL` value
+    - `UNIQUE`::Ensures that all values in a column are different 
+    - `PRIMARY KEY`::Uniquely identifies each row/record 
+    - `FOREIGN KEY`::Constraints data based on columns in other tables
+    - `CHECK constraint`::Ensures that all values in a column satisfy certain conditions.
+    - `EXCLUSION constraint`::Ensures that if any two rows are compared on the specified column or expression using the specified operator, not all of these comparisons will return `TRUE`. 
+- 
+- Common Table constrains
+    - `CHECK(condition)`::to check a condition when inserting or updating data
+    - `REFERENCES table_name(column_name)`::To constrain the value stored in the column that must exist in a column in another table. 
+    - `UNIQUE(column_list)`::Forces the values stored in the columns listed inside the parentheses to be unique.
+    - `PRIMARY KEY(column_list)`::Allows you to define the primary key that consists of multiple columns.

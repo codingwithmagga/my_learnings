@@ -1,0 +1,6 @@
+- Describe→`COALESCE` accepts an arbitrary number of arguments and returns the first `non-NULL` expression. If all arguments are `NULL`, `NULL` will be returned.
+- Basic Syntax→`COALESCE(value1, value2, ..., value_n)` 
+- Example:
+    - ![](https://remnote-user-data.s3.amazonaws.com/DbXdZavmujRI_XOD5jfLXkIYg4IG_uDDpjVotuczOJicLCjGP8kS0Hyg8fm7P7Amxv6x_wv4uOjwk5gZSo7Yp8KXaiCylnLnhx6fWqZaa28liauGHClXiskczRKBOAlE.png)
+    - ![](https://remnote-user-data.s3.amazonaws.com/zPTj2Qy_NIqeSiIKnWOAFE963tOyP8lYl4f851Zm9tInp5MlxYfDWls9xB4T_zteR5HpNJYOxsLb44m_8CIznIODuzxJMT46pSa2mgBHUleoOOHW0y6O4MD-Jr89dmkn.png)
+    - ![](https://remnote-user-data.s3.amazonaws.com/BmThSEmI6_KYSBkBbgFYcglbfwtGmmVbTotRfIMLqVd5BX5RN2yELJFv8_7Y_CqIYk4qQt9Xla5RWjhuizGOi9P5jc7LTVcJlUzYALTZffa4jTU9yd4t2aGVhfd4I-Lw.png)

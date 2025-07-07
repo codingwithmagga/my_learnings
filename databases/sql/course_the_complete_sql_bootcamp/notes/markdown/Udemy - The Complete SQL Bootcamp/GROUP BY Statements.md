@@ -1,0 +1,26 @@
+- Aggregation Functions
+    - Main idea?→The main idea behind aggregate functions is to take multiple inputs and return a single output. 
+    - 
+    - Most common aggregate functions
+        - `AVG()`::returns average value as floating point value
+        - `COUNT()`::returns number of values
+        - `MAX()`::returns maximum value
+        - `MIN()`::returns minimum value
+        - `SUM()`::returns sum of all values
+    - `ROUND(val, precision)`::round the value to specified precision
+    - 
+    - Basic syntax?→`SELECT AGG(column_name) FROM table_name` 
+    - 
+    - Aggregate function call happens only in the {{SELECT}} clause or the {{HAVING}} clause. 
+    - 
+- GROUP BY
+    - Describe→A SQL clause that groups rows with the same values in specified columns into a summary row.
+    - Basic syntax→`SELECT category_col, AGG(data_col) FROM table GROUP BY category_col` 
+    - The `GROUP BY` clause must appear right after a {{FROM}} or {{WHERE}} statement.
+    - In the `SELECT` statement, columns must either have {{an aggregate function}} or be in the {{ GROUP BY}} call.  
+    - `WHERE` statement should not refer to the {{aggregation result}}, for this use {{HAVING}}. 
+    - If you want to sort results based on the aggregate, make sure to {{reference the entire function}}.
+- HAVING
+    - Describe→A `HAVING` clause filters groups of rows after they've been grouped by a `GROUP BY` clause. Can filter an aggregated row, which is not possible using `WHERE.` 
+    - Basic Syntax→`SELECT column1, AGG(column2) GROUP BY column1 HAVING AGG(column2) > x` 
+    - 

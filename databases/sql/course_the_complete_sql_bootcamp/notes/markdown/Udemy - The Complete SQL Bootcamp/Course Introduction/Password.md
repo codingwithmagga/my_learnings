@@ -1,0 +1,1 @@
+- Note only for me: PostgreSQL and pgAdmin password: "password"

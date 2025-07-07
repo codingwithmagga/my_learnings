@@ -1,0 +1,4 @@
+- Describe→INSERT is a SQL command used to add new rows of data to a table.
+- Basic Syntax→`INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...), (value1, value2, ...), ...` 
+- Basic Syntax for adding rows from another table→`INSERT INTO table_name (column1, column2, ...) SELECT column1, column2 FROM table_name2 WHERE condition;` 
+- 

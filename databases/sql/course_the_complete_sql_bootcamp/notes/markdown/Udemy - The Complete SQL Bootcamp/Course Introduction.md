@@ -1,0 +1,38 @@
+- Overview of Databases
+    - Definition Database→A database is a structured set of data organized for efficient storage and retrieval. They are useful when dealing with large amounts of data.
+    - 
+    - Benefits of databases (compared to an Excel sheet) >>>
+        - Data Integrity, data can't be changed easily
+        - Can handle massive amounts of data
+        - Quickly combine different datasets
+        - Automate steps for re-use ⇒ SQL
+        - Can support data for websites and applications
+    - 
+    - Database platform options
+        - PostgreSQL
+            - Free (open source)
+            - Widely used on the internet
+            - Multi Plattform
+        - MySQL und MariaSQL
+            - Free (open source)
+            - Widely used on the internet
+            - Multi Plattform
+        - MS SQL Server Express
+            - Free, but with some limitations
+            - Compatible with SQL Server
+            - Windows only
+        - Microsoft access
+            - Cost
+            - Not easy to use just SQL
+        - SQLite
+            - Free (Open Source)
+            - Mainly command line
+    - 
+    - SQL
+        - PostgreSQL is a great Database choice for learning how to use SQL
+        - SQL (Structured Query Language) can be applied to various Databases or SQL-based software.
+        - SQL is the programming language used to communicate with the database
+    - 
+    - 
+- Password
+    - Note only for me: PostgreSQL and pgAdmin password: "password"

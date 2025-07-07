@@ -1,0 +1,2 @@
+- Describe using Basic Syntax→`NULLIF(expression1, expression2)` returns `NULL` if `expression1` equals `expression2`, otherwise it returns `expression1`.
+- 

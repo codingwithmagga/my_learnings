@@ -1,0 +1,3 @@
+- Describe→A SQL command that deletes a column or an entire table from a database.
+- Basic Syntax→`DROP TABLE table_name;` (delete entire table), `ALTER TABLE table_name DROP COLUMN IF EXISTS col_name` (delete column_name), note that `IF EXISTS` is optional but good practice 
+- Explain the keyword `CASCADE`→`CASCADE` deletes all foreign key relationships referencing the deleted column in the table.

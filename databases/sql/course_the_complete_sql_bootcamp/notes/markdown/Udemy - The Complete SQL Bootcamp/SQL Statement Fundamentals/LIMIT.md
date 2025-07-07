@@ -1,0 +1,3 @@
+- Describe→LIMIT is a clause that restricts the number of rows returned by a SQL query. It goes at the very end of a query.
+- Basic Syntax?→`SELECT * FROM table_name LIMIT number` 
+- 

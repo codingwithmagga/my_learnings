@@ -1,0 +1,2 @@
+- [PostgreSQL: Documentation: 17: 9.3. Mathematical Functions and Operators](https://www.postgresql.org/docs/current/functions-math.html)
+- 

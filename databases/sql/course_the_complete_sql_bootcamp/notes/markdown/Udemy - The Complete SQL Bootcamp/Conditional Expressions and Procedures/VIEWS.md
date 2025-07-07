@@ -1,0 +1,3 @@
+- Describe→A `VIEW` is a stored query (the data is not physically stored) that acts like a virtual table.
+- Basic Syntax→`CREATE VIEW view_name AS SQL_CMD` 
+- 

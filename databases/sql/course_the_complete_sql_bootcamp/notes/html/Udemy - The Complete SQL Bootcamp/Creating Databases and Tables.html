@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Creating Databases and Tables
+    </h1>
+    <br/>
+    <ul>
+        <li>Data types
+            <ul>
+                <li>Main data types in SQL:
+                    <ul>
+                        <li>Boolean - True or False</li>
+                        <li>Character - char, varchar and text</li>
+                        <li>Numeric - integer and floating-point number</li>
+                        <li>Temporal - date, time, timestamp, and interval</li>
+                        <li>UUID - Universally Unique Identifiers</li>
+                        <li>Array - Stores an array of strings, numbers, etc.</li>
+                        <li>JSON</li>
+                        <li>Hstore key-value pair</li>
+                        <li>Special types such as network address and geometric data</li>
+                        <li>Documentation: <a isInlineLink="true" isMention="true" href="https://www.postgresql.org/docs/current/datatype.html">PostgreSQL: Documentation: 17: Chapter 8. Data Types</a></li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Example: Storing phone numbers as text/string, not as a numeric type.</li>
+                <li></li>
+                <li>Plan for long-term storage. Historical information can always be removed, but not restored.</li>
+            </ul>
+        </li>
+        <li>Primary keys and foreign keys
+            <ul>
+                <li>What is a primary key?→A primary key is a column or set of columns that uniquely identifies each row in a database table.</li>
+                <li>What is a foreign key?→A foreign key is a field in one table that refers to the primary key in another table.</li>
+            </ul>
+        </li>
+        <li>Constraints
+            <ul>
+                <li>What is the duty of constraints?→Constraints enforce data integrity by limiting the type of data that can be stored in a database table.</li>
+                <li>Name two main categories of constraints?→Column-level and table-level constraints.</li>
+                <li></li>
+                <li>Common column constraints
+                    <ul>
+                        <li><q>NOT NULL</q>::Ensures that a column cannot have a <q>NULL</q> value</li>
+                        <li><q>UNIQUE</q>::Ensures that all values in a column are different </li>
+                        <li><q>PRIMARY KEY</q>::Uniquely identifies each row/record </li>
+                        <li><q>FOREIGN KEY</q>::Constraints data based on columns in other tables</li>
+                        <li><q>CHECK constraint</q>::Ensures that all values in a column satisfy certain conditions.</li>
+                        <li><q>EXCLUSION constraint</q>::Ensures that if any two rows are compared on the specified column or expression using the specified operator, not all of these comparisons will return <q>TRUE</q>. </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li>Common Table constrains
+                    <ul>
+                        <li><q>CHECK(condition)</q>::to check a condition when inserting or updating data</li>
+                        <li><q>REFERENCES table_name(column_name)</q>::To constrain the value stored in the column that must exist in a column in another table. </li>
+                        <li><q>UNIQUE(column_list)</q>::Forces the values stored in the columns listed inside the parentheses to be unique.</li>
+                        <li><q>PRIMARY KEY(column_list)</q>::Allows you to define the primary key that consists of multiple columns.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>CREATE Table
+            <ul>
+                <li>Describe→A SQL command used to create a new table in a database.</li>
+                <li>Basic Syntax→<q>CREATE TABLE table_name (column1 TYPE column_constraint, column2 TYPE column_constraint, ..., table_constraint, table_constraint, ...) INHERITS existing_table_name;</q> </li>
+                <li></li>
+                <li>Describe <q>SERIAL</q> data type→An auto-incrementing integer data type that uniquely identifies each row in a table. Useful for columns which are a primary key.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li>INSERT
+            <ul>
+                <li>Describe→INSERT is a SQL command used to add new rows of data to a table.</li>
+                <li>Basic Syntax→<q>INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...), (value1, value2, ...), ...</q> </li>
+                <li>Basic Syntax for adding rows from another table→<q>INSERT INTO table_name (column1, column2, ...) SELECT column1, column2 FROM table_name2 WHERE condition;</q> </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>UPDATE
+            <ul>
+                <li>Describe→A SQL command used to modify existing data within a database table.</li>
+                <li>Basic Syntax→<q>UPDATE table-name SET column1=value1, column2=value2, ... WHERE condition;</q> </li>
+                <li>How to return affected rows?→Use the <q>RETURNING column1, column2, ...</q> function after an <q>UPDATE</q> statement.</li>
+            </ul>
+        </li>
+        <li>DELETE
+            <ul>
+                <li>Describe→A SQL command used to remove rows from a table.</li>
+                <li>Basic Syntax→<q>DELETE FROM table_name WHERE condition;</q></li>
+            </ul>
+        </li>
+        <li>ALTER Table
+            <ul>
+                <li>Describe→A command used to modify the structure of an existing table in a database. For example, adding, dropping or renaming columns, changing the data type on a column, ...</li>
+                <li>Basic Syntax→<q>ALTER TABLE table_name action;</q> where <q>action</q> differs on the actual action you want to do, for example <q>DROP COLUMN column_name</q> </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>DROP Table
+            <ul>
+                <li>Describe→A SQL command that deletes a column or an entire table from a database.</li>
+                <li>Basic Syntax→<q>DROP TABLE table_name;</q> (delete entire table), <q>ALTER TABLE table_name DROP COLUMN IF EXISTS col_name</q> (delete column_name), note that <q>IF EXISTS</q> is optional but good practice </li>
+                <li>Explain the keyword <q>CASCADE</q>→<q>CASCADE</q> deletes all foreign key relationships referencing the deleted column in the table.</li>
+            </ul>
+        </li>
+        <li>CHECK Constraint
+            <ul>
+                <li>Describe→A <q>CHECK</q> constraint limits the values that can be placed in a column.</li>
+                <li>Basic Syntax→When Creating a table, add at the end of an added column <q>CHECK(condition)</q></li>
+                <li></li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

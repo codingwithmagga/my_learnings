@@ -1,0 +1,3 @@
+- Describe→`CAST` converts a data type into another data type, if possible.
+- Basic Syntax→`CAST(expression AS datatype)` 
+- There is also a special PostgreSQL `CAST` operator:  `SELECT '4'::INTEGER` 

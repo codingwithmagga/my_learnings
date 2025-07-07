@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Timestamps and Extract
+    </h1>
+    <br/>
+    <ul>
+        <li>Date and time data types
+            <ul>
+                <li><q>TIME</q>::Contains only time</li>
+                <li><q>DATE</q>::Contains only date</li>
+                <li><q>TIMESTAMP</q>::Contains date and time</li>
+                <li><q>TIMESTAMPTZ</q>::Contains date, time, and timezone </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>PostgreSQL Command
+            <ul>
+                <li><q>SHOW</q>::show a value of a run-time parameter </li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Time related run-time parameter
+            <ul>
+                <li><q>TIMEZONE</q>::Show current timezone you are working in</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Time related Functions and constants
+            <ul>
+                <li><q>SELECT NOW()</q>::PostgreSQL function which returns the current date, time and timezone</li>
+                <li><q>SELECT TIMEOFDAY()</q>::PostgreSQL function which returns day, time and timezone in a more readable way</li>
+                <li><q>SELECT CURRENT_TIME</q>::SQL command that retrieves the current time from the system clock.</li>
+                <li><q>SELECT CURRENT_DATE</q>::SQL command that retrieves the current date from the system&#39;s clock.</li>
+                <li><q>EXTRACT()</q>::Function in SQL that retrieves subparts of a date or timestamp, such as year, month, or day.</li>
+                <li>Basic Syntax of <q>EXTRACT()</q>→<q>EXTRACT(field FROM timestamp_column)</q> where <q>field=YEAR</q> for example </li>
+                <li><q>AGE()</q>::PostgreSQL Function that calculates the interval between two timestamps, returning the difference in years, months, and days. If only one timestamp is provided, it returns the difference between the current time and the given timestamp.</li>
+                <li>Basic Syntax of <q>AGE()</q>→<q>AGE(timestamp_column)</q> returns the interval since the given timestamp or <q>AGE(timestamp1_column, timestamp2_column)</q> returning the difference between the two timestamps. </li>
+                <li><q>TO_CHAR()</q>::Function in PostgreSQL that converts a date or number to a string in a specified format. General function but especially useful for timestamp formatting.</li>
+                <li>Basic Syntax of <q>TO_CHAR()</q>→<q>TO_CHAR(date_column, format)</q> for example <q>format=&#39;mm-dd-yyyy&#39;</q> </li>
+            </ul>
+        </li>
+        <li></li>
+
+    </ul>
+    </body>
+</html>
