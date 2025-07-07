@@ -14,7 +14,7 @@ Overall, despite these minor issues, the book is thought-provoking and offers va
 
 ## Structure
 
-In the *notes* folder you can find my notes from Remnote as Remnote file, markdown or html export (TODO).
+In the *notes* folder you can find my notes from Remnote as Remnote file, markdown or html export.
 
 ## Remarks
 
