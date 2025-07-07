@@ -1,0 +1,143 @@
+- ## Frage des Buches:
+    - Wie können wir in einer Welt leben, ohne selbst verrückt zu werden?
+- 
+- ## Internet und Social Media >>>
+    - Es ist keine Schande, nicht auf Twitter zu gehen.
+    - Nichts (oder zumindest nicht viel) auf die Meinung von Menschen aus dem Internet geben.
+    - Verzichte, soweit möglich, auf soziale Medien.
+    - Halte dich raus aus dem Internet-Rating-Spiel. William Shakespeare hat etwa eine 3,7 von 5 auf Goodreads.
+    - Vergeude dein Leben nicht mit dem Verdruss über das, was du verpasst. Im Leben geht es darum, mit dem Sein zufrieden zu sein, nicht mit dem Tun.
+    - Wir müssen dafür sorgen, dass wir in einer Welt voller Algorithmen die Entscheidungen treffen. Wir sollten uns nicht in eine homogene digitale Grippe quetschen lassen. Andersartigkeit ist gut!
+    - Beschränke deinen Nachrichtenkonsum.
+    - Nicht zu sehr online leben, treffe Freunde im realen Leben.
+    - Es ist keine Schande, keine Nachrichten zu sehen.
+    - Je mehr Stimulation wir haben, desto schneller langweilen wir uns.
+    - Vergleiche nicht das Schlimmste in deinem Leben mit dem Besten im Leben anderer.
+- 
+- ## Handy >>>
+    - Handy nicht überall mit hinnehmen, etwa beim Spazierengehen.
+    - Handy nicht mit ins Schlafzimmer nehmen.
+    - Man muss nicht immer erreichbar sein!
+    - Akzeptiere die Ungewissheit, sie treibt uns ans Handy.
+- 
+- ## Konsum >>>
+    - Die ganze Konsumgesellschaft basiert darauf, dass wir nicht mit dem zufrieden sind, was wir haben, sondern immer etwas Neues haben wollen.
+    - Freue dich an dem, was du hast.
+    - Unendliches Spiel, wenn du `x` hast, wirst du glücklich sein. Beispiele: >>>
+        - `x` = { gute Noten, studieren, guter Hob, Beförderung, ... }
+        - `x` = { zu Hause ausziehen, Wohnung kaufen, Wohnung abbezahlt, Haus mit Garten, Haus mit Garten abbezahlt, ... }
+    - Wir haben nicht zu wenig Zeit, wir haben von allem anderen zu viel (zu viele Optionen etwa).
+    - Es gibt von allem zu viel. 
+    - Konzentriere dich auf die Welt innerhalb deiner Grenzen. Man kann nicht alles lesen, jeden Fim schauen usw.
+    - Die heutige Welt stellt uns vor die Herausforderung, in einer Überzahl an Möglichkeiten uns selbst zu finden.
+    - Man verkauft uns Unzufriedenheit, weil sich daraus Profit schlagen lässt. Man verkauft uns die Idee, besser zu sein, als wir sind, indem wir versuchen, anders zu werden.
+    - Es ist in Ordnung, Wünsche zu haben. Aber wir dürfen Wünsche nicht mit Mangel verwechseln.
+    - Blaupause unserer Konsumgesellschaft und unserer Beziehung zu Technologie, ein Muster der Abhängigkeit: Unzufriedenheit ⇒ kurzfristige Befriedigung ⇒ noch größere Unzufriedenheit.
+    - Zu viele Leute geben Geld aus, das sie nicht haben, für Dinge, die sie nicht brauchen, um Leute zu beeindrucken, die sie nicht mögen.
+    - Problem des Mangels wird durch Problem des Überflusses ersetzt.
+    - Lass dir keine Mängel einreden, Stichwort: Werbung.
+- 
+- ## Älter werden >>>
+    - Die Angst vor dem Älterwerden reduziert sich im Alter.
+    - Altern passiert ohnehin. Wenn etwas unabwendbar ist, macht es keinen Sinn, sich darüber den Kopf zu zerbrechen.
+    - Sorgen um die Zukunft bilden das größte Hindernis, das mir im Weg steht, wenn ich im Moment leben und die Gegenwart genießen will.
+    - Akzeptiere das Altern, kämpfe nicht dagegen.
+- 
+- ## Aussehen >>>
+    - Wenn wir uns unglücklich über unser Aussehen fühlen, sollten wir uns mit dem Gefühl befassen, nicht mit dem Aussehen.
+    - Im konventionellen Sinne sind attraktive Menschen nicht zufriedener mit ihrem Aussehen.
+    - Niemand stört sich an deinem Aussehen, höchstens du selbst.
+- 
+- ## Leben und Gefühle >>>
+    - Das Lernen hat einen eigenen Wert für uns. Lernen ist einer der Wege, das Leben im Moment zu lieben. Man sollte lernen nicht als etwas betrachten, das keinen eigenen Wert hat und etwas einbringen soll.
+    - Vielleicht ist der Sinn des Lebens, die Gewissheit loszulassen und uns der wundersamen Ungewissheit des Lebens zuzuwenden. 
+    - Das, was wir fühlen, ist genauso wichtig, wie das, was wir haben.
+    - Vielleicht ist Glück etwas, das aus einem heraus kommt.
+    - Das Gefühl, du hättest nicht genug erreicht, heißt nicht, dass du nicht genug erreicht hast.
+    - Vergleiche dein Leben nicht mit einem hypothetischen Leben. Versuche nicht in ein Meer des Was-wäre‒wenn zu geraten. Akzeptiere deine Realität.
+    - Verzweifle nicht an Dingen, die du nicht ändern kannst.
+    - Darauf konzentrieren, was einem guttut, einschränken, was einem schadet, und dafür sorgen, dass wir eine echte Verbindung zur Welt haben, in der wir leben.
+    - Nicht unsozial sein, aber auch keine Angst vor dem Alleinsein haben.
+    - Wir können Probleme haben und trotzdem glücklich sein.
+    - Riskiere, dich lächerlich zu machen.
+    - Sei fürsorglich und freundlich zu dir.
+    - Akzeptiere deine Gefühle.
+    - Hör auf, von idealen Wunschzielen zu träumen.
+    - Die Chancen auf anhaltendes Glück haben wir erst, wenn wir ruhiger werden.
+    - Wenn es stressig wird, denke an eine Intensivstation, wo die Menschen glücklich und dankbar sind, wenn sie aus dem Fenster schauen können. Wo das Wichtigste, das Leben ist.
+    - Wenn du es nicht beeinflussen kannst, nimm es, wie es ist.
+    - Akzeptiere dich so, wie du bist.
+    - Schätze das am höchsten, was du am meisten vermissen würdest, wenn es nicht mehr da wäre.
+    - Versuche nicht, etwas zu fühlen, das du nicht fühlst. Versuche nicht, etwas zu sein, das du nicht sein kannst.
+    - Das Gefühl, du hättest keine Zeit, heißt nicht, dass du keine Zeit hast.
+    - Mach dich frei von Schuldgefühlen.
+- 
+- ## Ängste >>>
+    - Es ist viel wahrscheinlicher an Krankheit, Suizid oder einem Verkehrsunfall zu sterben, als z.B. durch Terrorismus. Irrationaler weise macht uns letzteres viel mehr Angst.
+    - Versuche, die Angst als Gefühl zu akzeptieren, nicht als Information.
+    - Das Einzige, wovor man Angst haben muss, ist die Angst selbst - Franklin D. Roosevelt.
+    - Keins (oder zumindest nich viele) der Dinge, um die ich mir Sorgen mache, sind weltbewegend.
+- 
+- ## Schlafen >>>
+    - Schlaf ist unverzichtbar für unser Wohlergehen. Schlechter Schlaf schadet unserer körperlichen und geistigen Gesundheit.
+    - Schlaf ist ein Feind des Konsums.
+    - Tipps von Schlafexperten:
+        - Routine zulegen
+        - Kein Koffein, Nikotin, Alkohol
+        - Sport am Morgen
+        - Nicht zu spät und zu schwer essen
+        - Möglichst viel natürliches Tageslicht
+        - Entspannen vor dem Zubettgehen
+    - WHO empfiehlt 7-9 Stunden Schlaf.
+    - Je später wir ins Bett gehen, desto weniger Schlaf bekommen wir ⇒ abends früher schlafen, nicht morgens länger
+- 
+- ## Körper und Geist >>>
+    - Körper und Geist, sowie deren Verfassung, hängen eng zusammen.
+    - Reden lindert Schmerzen (psychisch)
+    - Wer sich wohl in seiner Haut fühlt, achtet in den meisten Fällen besser auf sich als jemand, der seinen Körper wie einen Feind behandelt oder, schlimmer noch, wie ein Objekt.
+    - Studien belegen eine positive Wirkung der Natur auf die Psyche.
+    - Wir müssen uns Freiräume (tatsächliche und psychologische) schaffen, wo wir wir selbst sein können.
+    - Lesen ist nicht wichtig, weil es uns Fakten beibringt oder zu einem Job verhilft. Es ist wichtig, weil es uns einen Raum gibt, wo wir jenseits unserer vorgegebenen Realität existieren können.
+    - Die Welt ist viel schneller vorangeschritten, als es unser Körper und unsere Psyche mitbekommen haben. Wir haben uns seit 50.000 Jahren nicht verändert.
+    - Von Getriebenheit befreien, um das Leben zu genießen.
+- 
+- ## Sei freundlich zu dir >>>
+    - Wenn du Vollkommenheit anstrebst, wirst du nie zufrieden sein!
+    - Versuche nicht, irgendjemand anders zu sein. Freu dich über deine Einzigartigkeit.
+    - Sei du. Mach dir nichts daraus, wenn Leute dich nicht mögen. Es ist besser nicht gemocht zu werden, weil du du bist, als gemocht zu werden, weil man dich für jemand anderen hält.
+    - Tu jeden Tag etwas, das nichts mit Arbeit, Verpflichtungen oder dem Internet zu tun hat.
+    - Jedes Foto, bei dem du denkst "Mann, sehe ich alt aus" wird ein Foto, bei dem du denkst "Mann, sehe ich jung aus".
+    - Jeder wird missverstanden, versuche dich selbst zu verstehen.
+- 
+- ## Arbeit >>>
+    - Glaub nicht, du müsstest mehr leisten, um akzeptiert zu werden.
+    - Versuche, dir Arbeit als produktives Spiel vorzustellen.
+    - Versuche nicht mehr zu erledigen, versuche weniger zu erledigen zu haben.
+    - Versuche, mit der Art, wie du arbeitest, die Welt ein wenig besser zu machen.
+    - Tu nicht, was andere von dir erwarten, tu, was dir sinnvoll erscheint.
+    - Sei kein Perfektionist!
+    - Mach langsam.
+    - Es ist keine Schande, abzuschalten.
+    - Erlaube dir, zu scheitern.
+- 
+- ## Zukunft >>>
+    - Es liegt an uns, die Zukunft zu formen.
+    - Wenn du nicht akzeptierst, wo du stehst, kommst du auch nirgendwo anders hin.
+    - Eine Vorwärtsbewegung ist nicht automatisch gut, sie muss auch in die richtige Richtung erfolgen.
+    - Zukunftspläne sind Pläne für die nächste Gegenwart, in der du wieder für die Zukunft planst.
+- 
+- ## Verschiedenes >>>
+    - Unterstütze die Guten, statt nur auf die Bösen zu schimpfen.
+    - Ändere, was du ändern kannst und lass dich vom Rest nicht frustrieren.
+    - Wir brauchen Auszeiten, die Welt ist überfrachtet.
+    - Bei der Interaktion zwischen Primaten zeigen bestimmte Nervenzellen dieselbe Aktivität, wenn wir die Handlung eines Gegenübers beobachten, als wenn wir sie selbst ausführen.
+    - Wenn Wahnsinn zur Normalität wird, können wir nur gesund bleiben, indem wir den Mut aufbringen, anders (wir selbst) zu sein.
+    - Zu einem gewissen Grad machen wir unsere Welt selbst, jeder durch seine Art zu lesen. Das heißt aber auch, dass wir sie bis zu einem gewissen Grad beeinflussen können.
+    - In hektischen Zeiten brauchst du Momente des Friedens.
+    - Sei dir bewusst, womit du Zeit verbringst.
+    - Die Perspektive zu verändern, verändert deinen Planeten.
+    - Weniger ist mehr! Vereinfache dein Leben. Lass weg, was nicht notwendig ist.
+    - Es ist schwierig, die Einstellung zu ändern, etwa wie viel wir arbeiten müssen. Ein Schlüssel scheint Akzeptanz zu sein.
+    - Gerade das Nichtaussprechen von Problemen ist problematisch.
+    - Gutes Tun tut gut.
+    - 

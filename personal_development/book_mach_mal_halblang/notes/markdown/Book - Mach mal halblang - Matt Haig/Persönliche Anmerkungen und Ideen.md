@@ -1,0 +1,36 @@
+- ## Zielsetzungen
+    - Wieder mehr auf Ernährung achten: 
+        - Nicht zu viel essen
+        - Nicht zu spät essen
+        - Weniger Chips, Schokolade etc.
+    - Evtl. Yoga 1-2x Woche
+    - Ausmisten
+    - Mehr Fokussieren auf das Wesentliche
+    - Weniger Handyzeit, etwa am Esstisch.
+    - Mein Leben (und auch alles andere) nicht mit dem Leben anderer vergleichen.
+    - Sportergebnisse sind wirklich unwichtig.
+    - Umsetzung von "Weniger zu tun zu haben"
+- 
+- ## Nachdenken
+    - Wieso habe ich selbst ein Problem mit weniger Tempo bzw. Entschleunigung?
+- 
+- ## Kapitelfazite >>>
+    - 1 - Zu viele Optionen, konzentriere dich auf die wichtigsten. Versuche mehr im Moment zu leben.
+    - 2 - Akzeptiere, dass nur ein kleiner Teil dessen, was möglich ist, getan werden kann. Konzentriere dich darauf.
+    - 3 - Rede über deine Probleme (deine Frau hört zu!). Kümmere dich um Körper und Geist.
+    - 4 - Abschalten ist wichtig, reduziere das Tempo.
+    - 5 - Unnatürliche Umgebungen meiden. Nicht zu viele Sorgen machen. (Anm.: Auf einer Skala von 1 bis 10 bewerten, wie schlimm ein Ereignis (kein neuer Job, Essen wegwerfen etc.) wirklich ist. Spoiler: Das Meiste ist nicht wirklich schlimm.)
+    - 6 - Arbeite nicht zu viel. Weniger Vollkommenheit/Perfektion. Lebe dein Leben.
+    - 7 - Das Altern akzeptieren und zufrieden sein mit meinem Aussehen.
+    - 8 - Sei zufrieden mit deinem Leben und deinen Entscheidungen. Schaue nicht (zu viel) in die Vergangenheit. Du kannst sie ohnehin nicht ändern.
+    - 9 - Akzeptieren, dass man nicht alles verändern kann und vor allem von Nachrichten nicht verrückt machen lassen.
+    - 10 - Ohne Kompromisse genügend Schlaf finden jeden Tag, Ausnahme nur im Notfall, Kinder.
+    - 11 - Persönliche (reale) Beziehungen pflegen, Schädliches eliminieren/minimieren. 
+    - 12 - Handynutzung reduzieren. Nur an wenigen bestimmten Stellen im Haus (Flur, Wohnzimmer, Ladestation) ablegen. Nur wenn notwendig mitnehmen.
+    - 13 - Weniger ist mehr, speziell in materiellen Dingen. Keine Angst vor der Zukunft haben, strebe nicht nach Perfektion oder danach alles zu besitzen. Lebe mehr im Moment.
+    - 14 - Sei in der Natur, bewege dich, mach, was dir guttut und nimm Auszeiten.
+    - 15 - Weniger, gezielte, sinnvolle Arbeit. Nicht nur über Arbeit definieren.
+    - 16 - Ziel: Den Moment spüren. Schaffe Räume zum Abschalten sowohl körperlich als auch geistig.
+    - 17 - Akzeptiere dich, sehe die Welt gelassener/besser. Sei in der Natur.
+    - 18 - Befreie dich von Ballast (materiell wie psychisch). Akzeptiere dich und leben nicht zu schnell.
+- 
