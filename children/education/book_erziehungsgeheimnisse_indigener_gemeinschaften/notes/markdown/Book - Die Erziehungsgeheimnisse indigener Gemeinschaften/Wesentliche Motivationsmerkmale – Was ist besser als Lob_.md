@@ -1,0 +1,22 @@
+- Ideen, um sie im Hinterkopf zu behalten >>>
+    - Intrinsische Motivation (eine Motivation, die von innen herauskommt) ist der Schlüssel. Sie lässt Menschen wachsen, lernen und ohne großen Kampf oder Widerstände arbeiten. Äußere Einflüsse wie Belohnungen oder Bestrafungen können diese Art der Motivation schwächen. 
+    - Um Kinder ohne Bestechungen oder Androhung von Strafe zu motivieren, also die intrinsische Motivation zu fördern, müssen drei Voraussetzungen erfüllt sein:
+        - Das Kind muss sich Ihnen oder einer anderen Bezugsperson verbunden fühlen. 
+        - Das Kind muss das Gefühl haben, sich für sein Handeln entscheiden zu können und nicht zu der betreffenden Aufgabe gezwungen zu werden. 
+        - Das Kind muss sich zu der Aufgabe befähigt fühlen und das Gefühl haben, dass sein Beitrag geschätzt wird. 
+    - Lob kann die Motivation untergraben und das Konkurrenzverhalten unter Geschwistern fördern. 
+    - Auch die Eltern können vom Kind lernen – der Wissensfluss geht in beide Richtungen. Nehmen Sie deshalb nicht von vornherein an, Ihre Herangehensweise an die Dinge oder Ihre Perspektive auf diese sei automatisch die beste. Wenn Sie der Sichtweise und den Ideen Ihres Kindes Beachtung schenken, werden Sie überrascht sein, wie wertvoll und nützlich diese oft sind. 
+    - Das Wissen, die Idee oder den Beitrag eines Kindes anzunehmen, kann das Kind ungeheuer motivieren.
+    - Drei Schritte, um einem Kind quasi alles beizubringen:
+        - Üben. Verschaffen Sie Kindern, vor allem kleinen Kindern, so viele Gelegenheiten wie nur irgend möglich, sich darin zu üben, im Haushalt zu helfen und zusammenzuarbeiten. Geben Sie ihnen eine Aufgabe, lassen Sie sie zusehen und bestärken Sie sie in ihrem Wunsch, mitzumachen. 
+        - Vormachen. Geben Sie Kindern den Team-Mitgliedsausweis. Lassen Sie sie an Ihrem Alltag teilhaben, damit sie durch Zusehen lernen können und sich wie ein vollwertiges Mitglied der Familie fühlen. Machen Sie nicht nur eine bestimmte Aufgabe vor, sondern auch das gewünschte Verhalten. 
+        - Anerkennen. Versucht das Kind zu helfen, nehmen Sie seinen Beitrag an und bringen Sie seinen Ideen Wertschätzung entgegen. Respektieren Sie seine Sichtweise. Weisen Sie das Kind auf den Wert, den es erlernt, hin. Weisen Sie auch bei anderen auf den Wert (oder sein Fehlen) hin. Bringen Sie das Lernen mit Erwachsensein oder Reife in Verbindung.
+- 
+- Übungen >>>
+    - Widerstehen Sie dem Drang, das Kind pausenlos zu korrigieren, vor allem dann, wenn es Ihnen oder der Familie helfen will. Lassen Sie das Kind machen, ohne allzu viel einzugreifen, auch wenn es die Aufgabe aus Ihrer Sicht nicht richtig oder zu umständlich ausführt. 
+    - Lehnt das Kind eine Bitte ab (etwa beim Abwaschen zu helfen), drängen Sie es vermutlich zu sehr. Das Kind weiß, was Sie wollen. Bitten Sie nicht mehr. Warten Sie und lassen Sie das Kind entscheiden. 
+    - Achten Sie genau darauf, wie das Kind helfen will, und bauen Sie dann auf seinen Ideen auf, statt sich ihnen zu widersetzen. 
+    - Helfen Sie dem Kind, eine Aufgabe zu erlernen, indem Sie es üben lassen, statt ihm die Aufgabe zu erklären. Korrigieren Sie, falls nötig, gelegentlich sanft, aber lassen Sie das Kind im Großen und Ganzen machen. 
+    - Lassen Sie das Kind auch dann helfen, wenn dies Ihren Erwartungen oder Wünschen nicht entspricht. 
+    - Gehen Sie ausgesprochen sparsam mit Lob um. Wenn Sie das Kind loben, dann für das Erlernen eines übergeordneten Wertes (»Du bist schon sehr hilfsbereit«). Oder loben Sie es für seine Reife (»Du bist wirklich schon ein großes Mädchen/ein großer Junge«). 
+    - Auch Geschenke nur für das allgemeine Anerkennen geben, nicht für spezielle Aufgaben, etwa ein Eis nach dem Abwasch. Geschenke sind auch in der Regel klein: Etwas Besonderes zu essen oder etwas für das Kind zu kaufen, was das Kind braucht, etwa Unterwäsche.

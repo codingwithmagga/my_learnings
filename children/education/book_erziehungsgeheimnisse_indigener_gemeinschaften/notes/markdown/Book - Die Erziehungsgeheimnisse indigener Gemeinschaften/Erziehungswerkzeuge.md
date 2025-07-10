@@ -1,0 +1,33 @@
+- Ideen, um sie im Hinterkopf zu behalten >>>
+    - In der westlichen Welt verlassen sich Eltern in der Regel auf verbale Instruktionen und Erklärungen, um das Verhalten ihres Kindes zu verändern. Allerdings sind Worte häufig der am wenigsten effektive Weg, um mit Kindern zu kommunizieren, vor allem mit kleinen Kindern.
+    - Die Emotionen von Kindern spiegeln unsere Emotionen wider.
+        - Wenn Sie möchten, dass Ihr Kind ruhig ist, sollten Sie selbst ruhig und sanft sein. Sprechen Sie wenig oder gar nicht, denn Worte reizen. 
+        - Ebenso sollte man wenig Mimik nutzen. Man sollte Zuversicht und Selbstvertrauen verströmen, wenn Kinder weinen oder schreien.
+        - Umgekehrt gilt: Wenn Sie wollen, dass Ihr Kind laut und voller Energie ist, müssen Sie nur Ihr Energielevel in die Höhe treiben und viel reden.
+    - Befehle und Vorträge führen oft zu Machtkämpfen, Debatten und dem Teufelskreis der Wut.
+    - Wir können Machtkämpfen aus dem Weg gehen und aus dem Teufelskreis der Wut ausbrechen, indem wir uns nonverbaler Erziehungswerkzeuge bedienen und dem Kind zum Nachdenken verhelfen, statt ihm zu sagen, was es tun oder nicht tun soll.
+- 
+- Weitere Tipps >>>
+    - Tobsuchtsanfälle bändigen. Wut- und Tobsuchtsanfälle verschwinden, wenn wir ruhig auf das Kind reagieren. Hat Ihr Kind das nächste Mal mit einem emotionalen Ausbruch zu kämpfen, bleiben Sie ruhig und versuchen es mit einem der folgenden Werkzeuge:
+        - Energie. Kehren Sie die Energie um: Gehen Sie so ruhig wie möglich zu Ihrem Kind. Sagen Sie nichts. Zeigen Sie ihm, dass Sie in seiner Nähe sind und ihm helfen.
+        - Körperlichkeit. Berühren Sie das Kind sanft an der Schulter oder halten Sie ihm Ihre Hand hin. Manchmal ist eine weiche, ruhige Berührung alles, was das Kind braucht, um sich zu beruhigen. In vielerlei Hinsicht sind Kinder darauf programmiert, die emotionale Regulation über die Körperlichkeit zu erlernen, nicht über verbale Instruktionen.
+        - Ehrfurcht. Helfen Sie dem Kind dabei, seine Wut durch das Gefühl der Ehrfurcht zu ersetzen. Halten Sie nach etwas Schönem in der Umgebung Ausschau. Sagen Sie ganz ruhig und sanft zu dem Kind: »Oh, wie schön der Mond heute Abend ist! Siehst du?«
+        - Frische Luft. Kann sich das Kind immer noch nicht beruhigen, gehen Sie mit ihm an die frische Luft. Führen Sie es sanft hinaus oder nehmen Sie es auf den Arm. Ältere Kinder können auch nach draußen geschickt werden.
+        - Ignorieren. Wutanfälle oder Schläge des Kindes können (je nach Alter des Kindes) auch für eine (kurze) Zeit ignoriert werden.
+    - Verhalten ändern und Werte vermitteln. Statt dem Kind zu sagen: »Tu dies oder das nicht«, sollten Sie es zum Nachdenken bewegen. Lassen Sie es das angemessene Verhalten selbst herausfinden. Dazu haben Sie mehrere Möglichkeiten:
+        - »Der Blick«. Bündeln Sie alles, was Sie einem quengelnden Kind sagen wollen, in Ihrem Gesichtsausdruck. Öffnen Sie weit die Augen, legen Sie Stirn und Nase in Falten oder schütteln Sie den Kopf. Werfen Sie diesen »Blick« dann Ihrem Kind zu. Kinder können ihren Eltern fast alles vom Gesicht ablesen.
+        - Konsequenzen. Teilen Sie Ihrem Kind ganz ruhig die Konsequenzen seines Verhaltens mit und gehen Sie dann einfach weg (Beispiel: »Du wirst herunterfallen und dir wehtun.« oder "Kian wird uns nicht mehr besuchen wollen, wenn du nicht teilst.).
+        - Fragen. Statt Ihrem Kind zu sagen, was es tun soll, stellen Sie ihm eine Frage (Beispiel: »Wer ist da gemein zu Freddy?«, wenn es sein Geschwisterchen haut, oder: »Wer verhält sich da respektlos?«, wenn das Kind Ihre Bitte ignoriert). Diese Fragen können in einem halb ironischen, halb ernsthaften Tonfall gestellt werden. Sie sollten nie vorwurfsvoll oder verunglimpfend sein, sie dienen dazu, das eigene Verhalten und dessen Konsequenzen zu überdenken. 
+        - Aufgaben. Geben Sie dem Kind, das sich gerade ereifert oder Fehlverhalten zeigt, etwas zu tun. Ist es etwa unleidlich, könnten Sie zu ihm sagen: »Komm und hilf mir beim Essen machen.« Mit seinem Verhalten sagt das Kind: "Ich fühle mich unterfordert."
+        - Taten. Statt Ihrem Kind zu sagen, was es tun soll – beispielsweise morgens aus dem Haus gehen –, tun Sie es selbst. Das Kind wird Ihnen mit Sicherheit folgen. Alternativ helfen Sie dem Kind sanft dabei zu tun, was zu tun ist. Als dritte Möglichkeit kann die Umgebung des Kindes verändert werden. Generell: Stellen Sie keine "Möchtest du …" Fragen, handeln Sie einfach.
+        - Ignorieren. Emotionen, die nicht geschätzt werden können (bis zu einem gewissen Grad) ignoriert werden. Eine negative Reaktion signalisiert dem Kind, dass die jeweilige Emotion wichtig und nützlich ist. Mit einem Lächeln oder Nicken kann das veränderte Verhalten des Kindes honoriert werden.
+    - Wichtig: In ernsthaften Gefahrensituationen sind natürlich auch physische Interventionen notwendig. Wichtig ist dabei, wenn möglich, die Dringlichkeit aus der Stimme herauszuhalten und die Konsequenzen zu erläutern.
+- 
+- Übungen >>>
+    - Erste Schritte: Bei respektlosem Verhalten des Kindes sollten Eltern einfach abwenden und weggehen, ohne zu reagieren oder den Gesichtsausdruck zu verändern. Diese Strategie kann auch bei drohenden Machtkämpfen hilfreich sein.
+    - Üben im Schweigen: Eltern sollten Phasen des Schweigens einführen, um Ruhe ins Zuhause zu bringen. Durch regelmäßige stille Zeit können Kinder lernen, sich zu beruhigen und ein harmonisches Klima im Haus entsteht.
+    - Unleidlichkeit in Aufgaben wandeln: Bei unleidlichem Verhalten können Eltern das Kind in Aufgaben einbinden, indem sie ihm einfache Tätigkeiten im Haushalt anbieten. Dies fördert sowohl die Verantwortlichkeit des Kindes als auch eine ruhigere Atmosphäre.
+    - Einladen zur Hilfe: Kinder fühlen sich wertgeschätzt, wenn sie um Hilfe gebeten werden. Eltern können das Bedürfnis des Kindes, bei Erwachsenenaktivitäten mitzumachen, nutzen, um es positives Verhalten zu lehren.
+    - Verzicht auf Befehle: Anstatt häufig zu sagen "Tu dies" oder "Tu das nicht", sollten Eltern versuchen, solche Aussagen seltener zu verwenden. Dies kann die Beziehung zum Kind verbessern, denn es erhält mehr Gelegenheit zum Nachdenken und Lernen.
+    - Reflexion des eigenen Verhaltens: Eltern sollten die Häufigkeit ihrer eigenen Anweisungen überprüfen, indem sie ihre Interaktionen mit dem Kind aufzeichnen. So erkennen Sie, wie viel sie reden und wie oft sie dem Kind tatsächlich zuhören.
+    - Kunst des Ignorierens: Bei unerwünschtem Verhalten des Kindes sollten Eltern neutral reagieren und nicht emotional auf das Verhalten eingehen. Ignorieren kann helfen, unerwünschte Gewohnheiten abzubauen, ohne die Gefühle des Kindes zu verletzen.

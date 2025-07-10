@@ -1,0 +1,30 @@
+- Ideen, um sie im Hinterkopf zu behalten >>>
+    - Man kann Kindern nur etwas beibringen, indem man sie helfen lässt.
+    - Insbesondere Kleinkinder sind extrem hilfsbereit, obwohl sie natürlich eher "unbeholfen" wirken.
+    - Kinder haben den angeborenen Wunsch, ihren Eltern zu helfen. Es mag manchmal nicht so scheinen, aber sie kommen tatsächlich mit dem Bedürfnis auf, die Welt, zur Familie zu gehören, und den Platz in dieser Gruppe verdienen sie sich mit Helfen.
+    - Studie: 20 Monate alte Kinder lassen selbst neues Spielzeug liegen, um einem Erwachsenen zu helfen, etwas vom Boden aufzuheben. Es brauchte keine Aufforderung oder Belohnung. Tatsächlich mindert eine Belohnung, etwa ein neues Spielzeug, sogar die Hilfsbereitschaft bei einem zweiten Versuch.
+    - Hilft ein Kind zum ersten Mal bei einer bestimmten Arbeit, richtet es vielleicht ein ziemliches Chaos an. Mit etwas Übung aber lernt es schnell und verliert dabei den Wunsch zu helfen nicht.
+    - Um hilfsbereite Kinder großzuziehen, gilt daher Folgendes: Lassen Sie sie machen. Lassen Sie sie putzen, kochen, Staub saugen oder abwaschen, wenn sie Lust dazu haben. Auch wenn sie ein wenig Chaos anrichten, wird dieses später weniger. Später helfen Ihnen diese Kinder dann von ganz alleine im Haushalt.
+    - Halten Sie ein Kind niemals, in keinem Alter, davon ab, den Eltern oder einem anderen Mitglied der Familie zu helfen. Dies könnte seine Motivation zur Zusammenarbeit im Keim ersticken. Ist eine Aufgabe zu schwer oder zu gefährlich für das Kind, bitten Sie es, Ihnen bei der entsprechenden Arbeit zuzusehen. Oder gliedern Sie die Arbeit in Untereinheiten auf, die das Kind bewältigen kann.
+- 
+- Übungen >>>
+    - Babys (0 Jahre bis Laufalter)
+        - Babys lernen, indem sie in der Nähe ihrer Eltern sind und deren Tätigkeiten beobachten. 
+        - Es ist wichtig, das Baby in alltägliche Aufgaben einzubeziehen, anstatt es mit Spielzeug ablenken zu wollen.
+    - Für kleinere Kinder (Kinder bis 6 oder 7 Jahre): 
+        - Bitten Sie das Kind im Laufe des Tages immer wieder, Ihnen und der Familie zu helfen. Übertreiben Sie es jedoch nicht – hilft das Kind einmal in der Stunde, ist das mehr als ausreichend. 
+        - Bitten Sie es z. B. um Folgendes: 
+            - Etwas zu holen, das Sie gerade brauchen
+            - Eine kleine Tüte mit Einkäufen zu tragen
+            - Das Essen im Topf auf dem Herd umzurühren
+            - Ein Stück Gemüse mit einem relativ stumpfen Messer kleinzuschneiden
+            - Ihnen die Tür aufzuhalten
+            - Den Gartenschlauch aufzudrehen. 
+        - Die Bitten sollten:
+            - Echte Aufgaben sein, mit denen das Kind auch wirklich einen Beitrag zum Familienleben leistet, keine Scheinaufgaben
+            - Teamarbeit sein, also nichts, was das Kind allein erledigen muss 
+            - Einfach zu erfüllen und für das Kind leicht zu verstehen sein. Es sollte sie ohne Ihre Hilfe hinbekommen können. Bitten Sie das Kind also beispielsweise, ein Buch ins Regal zurückzustellen, und nicht das Wohnzimmer zu putzen. Die Aufgabe kann gar nicht einfach genug sein. 
+    - Für größere Kinder (ab 7 Jahren): 
+        - Ist das Kind es nicht gewohnt zu helfen, gehen Sie es langsam an. Probieren Sie es zunächst mit den Tipps, die ich gerade genannt habe. Und haben Sie Geduld. Die Kinder machen es am Anfang vielleicht bislang nicht richtig, werden es schließlich aber lernen. 
+        - Beginnt das Kind bereits, acomedido zu sein, können Sie die Komplexität der Aufgaben allmählich steigern, immer im Einklang mit dem Niveau seines Könnens. Lassen Sie sich von den Interessen und Fähigkeiten des Kindes leiten. 
+        - Statt Ihr Kind direkt um Hilfe zu bitten, können Sie es auch mit dem Aktivieren versuchen, indem Sie indirekt auf die zu erledigende Aufgabe anspielen. »Der Hundenapf ist leer« soll das Kind daran erinnern, den Hund zu füttern, »Zeit, Abendessen zu machen« soll das Kind daran erinnern, etwa die Zutaten aus dem Kühlschrank zu holen.

@@ -1,0 +1,25 @@
+- Ideen, um sie im Hinterkopf zu behalten >>>
+    - Babys und Kinder ganz allgemein sind von der Evolution darauf programmiert, von vielen verschiedenen Menschen großgezogen zu werden. Ob Großeltern, Tanten und Onkel oder Kindermädchen und Nachbarn – sie alle sind wichtig. 
+    - Durch dieses Netzwerk aus Liebe und Unterstützung sieht das Kind die Welt als hilfreich und freundlich, was es wiederum vor Depressionen und psychischen Problemen schützt. 
+    - Nur wenige zusätzliche »Eltern« können sich bereits enorm positiv auf das Leben eines Kindes auswirken.
+    - Auch andere Kinder geben fantastische Alloeltern ab und sind manchmal sogar die besseren Lehrer und Spielkameraden als Erwachsene. Denn Kinder integrieren Spiel ganz natürlich ins Lernen und haben hinsichtlich der Fähigkeiten keinen so großen Vorsprung wie Erwachsene. Etwa 5 Jahre Unterschied scheinen ein gutes Maß zu sein.
+    - Tiefe, enge Freundschaften sind wahrscheinlich ebenso wichtig für Ihre Gesundheit und die Ihres Kindes wie regelmäßige Bewegung und eine gesunde Ernährung.
+- 
+- Weitere Tipps >>>
+    - Bauen Sie sich ein Netzwerk aus Tanten und Onkeln auf. Schließen Sie sich mit drei oder vier anderen Familien zusammen, mit denen Sie sich die Kinderbetreuung nach der Kita oder Schule teilen. Dabei könnte beispielsweise jede Familie für jeweils einen Tag in der Woche die Verantwortung übernehmen. Dieses Netzwerk sorgt für die emotionale Unterstützung der Kinder sowie dafür, dass sich die Eltern auch einmal eine Pause gönnen können. 
+    - Gründen Sie KGAs (Krabbelgruppen gemischten Alters). Ermutigen Sie Ihr Kind dazu, mit den Kindern aller Altersstufen aus der Nachbarschaft zu spielen. Laden Sie andere Familien zum Abendessen oder auf einen Drink zu sich nach Hause ein. Organisieren Sie größere Nachbarschaftsspielgruppen am Wochenende, bei denen Kinder allen Alters gemeinsam im Hof, im Garten oder in einem nahe gelegenen Park spielen können. 
+    - Bilden Sie Mini-Alloeltern aus. Bringen Sie älteren Kindern bereits früh bei, wie man sich um jüngere Geschwister kümmert. Verbinden Sie diese Art der Fürsorge mit zunehmender Reife (etwa: »Du hilfst deinem Bruder, weil du jetzt schon ein großes Mädchen bist«). Belohnen Sie das Kind für seine Fürsorge, indem Sie ihm mit der Zeit immer mehr Verantwortung übertragen. 
+    - Zeigen Sie den Alloeltern, die Sie bereits haben, Ihre Wertschätzung. Zeigen Sie – idealerweise gemeinsam mit Ihrem Kind – Nannys, Erzieherinnen, Erziehern, Lehrern und Lehrerinnen, wie dankbar Sie für ihre Arbeit sind. Sie können das in Form von Dankeskarten, selbst gebackenen Keksen oder Einladungen zum Essen tun. Behandeln Sie diese Menschen wie geschätzte Familienmitglieder. Dadurch werden Sie für Ihr Kind ein Vorbild in puncto Großzügigkeit und Respekt.
+- 
+- Übung >>>
+    - Emotionale Unterstützung für die Familie aufbauen
+        - Wertschätzung für Alloeltern zeigen: Anerkennung der Beiträge von Tagesmüttern, Lehrern und Babysittern; Geschenke wie Dankeskarten oder kleine Aufmerksamkeiten können die Bedeutung ihrer Unterstützung hervorheben.
+        - Familienbeziehungen pflegen: Behandeln Sie Nannys und Babysitter wie Familienmitglieder, indem Sie persönliche Beziehungen aufbauen und deren Familien in soziale Aktivitäten einbeziehen.
+        - Regelmäßige Kontaktpflege: Halten Sie auch nach der Betreuung durch eine Person den Kontakt aufrecht, beispielsweise durch E-Mail, Telefon oder Einladungen zu gemeinsamen Aktivitäten.
+        - Respekt und Dankbarkeit: Behandeln Sie Alloeltern mit dem gleichen Respekt und Dankbarkeit wie nahe Familienmitglieder, um die emotionale Gesundheit und Entwicklungsunterstützung zu fördern.
+    - Die nächsten Schritte
+        - Mini-Alloeltern ausbilden: Rekrutieren Sie ältere Geschwister, um Verantwortung für jüngere Geschwister zu übernehmen; dies fördert Selbstständigkeit und Verantwortungsbewusstsein.
+        - Gelegenheiten zum Üben bieten: Geben Sie Kindern Gelegenheiten, sich um kleinere Geschwister zu kümmern; verbinden Sie die Betreuung mit einer positiven Selbstwahrnehmung als "groß" oder "verantwortungsbewusst".
+        - Netzwerk aus Tanten und Onkeln bilden: Suchen Sie enge Freunde für gegenseitige Betreuung der Kinder; so können Eltern entlastet werden und Kinder soziale Fähigkeiten entwickeln.
+        - Gründung einer KGA: Ermutigen Sie Kinder, mit anderen in unterschiedlichen Altersgruppen zu spielen; fördern Sie durch gemeinsame Spielgruppen die emotionale Entwicklung und die Übernahme von Führungsverantwortung.
+        - Tolerieren Sie die Verwandtschaft beziehungsweise lernen Sie, ihren Beitrag wertzuschätzen, auch wenn es schwer fällt.

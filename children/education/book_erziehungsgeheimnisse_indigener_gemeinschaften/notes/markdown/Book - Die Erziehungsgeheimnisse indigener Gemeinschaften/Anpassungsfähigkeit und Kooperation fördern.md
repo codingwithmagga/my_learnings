@@ -1,0 +1,21 @@
+- Ideen, um sie im Hinterkopf zu behalten >>>
+    - Kinder besitzen den ausgeprägten natürlichen Trieb, im Team zusammenzuarbeiten und zu kooperieren. Das könnte man vielleicht mit dem Gruppenzwang vergleichen, nur, dass es sich bei dieser Gruppe um die Familie handelt.
+    - Kindzentrierte Aktivitäten, also Aktivitäten, die rein auf das Kind ausgerichtet sind, wirken diesem Trieb entgegen und vermitteln dem Kind den Eindruck, es sei von Familienverantwortlichkeiten ausgenommen. 
+    - Beziehen wir umgekehrt aber das Kind in Erwachsenenaktivitäten mit ein, verstärken wir seine Motivation, zu kooperieren und zu tun, was die Familie tut. Das Kind fühlt sich als vollwertiges Mitglied des Teams, sowohl hinsichtlich der Vorteile als auch der Verantwortlichkeiten. 
+    - Zu Unleidlichkeit kommt es häufig, wenn das Kind von der Welt der Kinder (also auch von der Kinderunterhaltung) zur Welt der Erwachsenen wechselt. 
+    - In der überwiegenden Mehrheit der Kulturen rund um den Globus ist es nicht üblich, die Kinder unablässig anzuregen und zu unterhalten. Diese Form der Erziehung kann überaus erschöpfend und stressig sein – für Eltern und Kinder. 
+    - Die Kinder brauchen diese Unterhaltung und Anregung nicht, sie können sich absolut selbst unterhalten und beschäftigen. Und zwar ganz allein, ohne ständigen Input der Eltern und ohne Spielzeug.
+    - Kleine Kinder lieben alltägliche Aktivitäten. Sie sehen den Unterschied zwischen Erwachsenenarbeit und Spiel nicht, binden wir Sie in die Arbeit mit ein, so ist das ein Spiel für sie. Dann assoziieren sie Aufgaben im Haushalt mit Spaß und positiver Tätigkeit.
+- 
+- Übungen >>>
+    - Für alle Kinder: 
+        - Minimieren Sie kindzentrierte Aktivitäten. Stellen Sie sicher, dass das Kind Zugang zu Ihrem Alltag und zu Ihrer Arbeit hat. Lassen Sie es dabei bewenden, wenn Sie Arbeiten im Haushalt oder andere Erwachsenenaktivitäten erledigen. Sie sind für das Kind Unterhaltung und Anregung genug. 
+        - Minimieren Sie Ablenkungen wie Tablet & Co. sowie Spielzeug. Je weniger Unterhaltungsgegenstände das Kind hat, desto attraktiver wird Ihre Welt in seinen Augen und desto wahrscheinlicher wird es, dass sich das Kind dafür interessiert, Ihnen zu helfen und mit Ihnen zusammen zu sein. 
+        - Maximieren Sie den Aufenthalt des Kindes in der Welt der Erwachsenen. Gehen Sie Ihren Beschäftigungen nach und lassen Sie das Kind daran teilhaben. Nehmen Sie es mit, wenn Sie etwas zu erledigen haben, zum Arzt müssen oder Freunde besuchen. Nehmen Sie es nach Möglichkeit auch mit an Ihren Arbeitsplatz.
+        - Wählen Sie am Wochenende Aktivitäten, die Sie tun wollen – die Sie auch dann tun würden, wenn Sie keine Kinder hätten. Gehen Sie angeln, wandern oder Rad fahren. Arbeiten Sie im Garten. Gehen Sie an den Strand oder in den Park. Besuchen Sie Freunde. 
+    - Für größere Kinder (ab 7 Jahren): 
+        - Lassen Sie größere Kinder ihre eigenen kindzentrierten Aktivitäten planen und organisieren. Das können etwa Sport, außerschulischer Musik- oder Kunstunterricht oder Verabredungen mit Freunden zum Spielen sein. Ermutigen Sie sie dazu, die Logistik dafür selbst in die Hand zu nehmen (Anmeldungen, Transport etc.). 
+        - Steigern Sie die Verantwortlichkeiten des Kindes im Haushalt stufenweise, etwa wenn es um jüngere Geschwister, ums Kochen oder ums Putzen geht. Überlegen Sie auch, wie Ihnen das Kind bei der beruflichen Arbeit helfen kann. 
+        - Hat ein größeres Kind bisher nicht allzu oft Ausflüge in die Welt der Erwachsenen gemacht, sollten Sie es langsam angehen. Kümmern Sie sich um Ihre Sachen und lassen Sie das Kind dabei sein. Wird es unleidlich, erklären Sie ihm, wie es sich in der Welt der Erwachsenen benehmen soll. 
+        - Klappt es danach weiterhin nicht so recht, haben Sie Geduld. Geben Sie nicht auf und versuchen Sie es später noch einmal. Irgendwann wird das Kind es lernen.
+    - 

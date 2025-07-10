@@ -1,0 +1,22 @@
+- Ideen für den Hinterkopf >>>
+    - Bei der Team-Erziehung (Teamwork, Ermutigung, Autonomie und minimales Eingreifen) bestimmen die Eltern den Tagesablauf für die ganze Familie. Sie gehen ihren Beschäftigungen nach und erwarten, dass sich das Kind mehr oder weniger daran beteiligt.
+    - Während dieser familienzentrierten Aktivitäten hat allerdings das Kind bezüglich des eigenen Verhaltens größtenteils das Sagen. Es hat viel Autonomie, die Eltern beschränken sich auf minimales Eingreifen.
+    - Es gibt keine wissenschaftlichen Belege dafür, dass es sinnvoll ist, den Tagesablauf der Kinder mit unablässigen Aktivitäten und ständiger Unterhaltung zu optimieren.
+- 
+- Zusammenfassung: Ein sanftes Abendritual zur Unterstützung des Einschlafens >>>
+    - Vormachen (Modellverhalten):
+        - Zeige ruhig und gelassen, dass es Zeit zum Schlafen ist, indem du deine eigene Routine vorlebst (z. B. Zähneputzen, Pyjama anziehen, ins Bett gehen).
+        - Vermeide Druck oder Befehle – stattdessen signalisiere durch dein Verhalten, dass Schlafenszeit etwas Natürliches und Entspannendes ist.
+    - Anerkennen (positive Bestärkung):
+        - Wenn das Kind nachkommt, schenke ihm liebevolle Aufmerksamkeit (z. B. Lächeln, Umarmung).
+        - Verbinde das gewünschte Verhalten mit Reife, z. B. durch eine Frage wie: „Was würde ein großes Mädchen/ein großer Junge jetzt tun?“
+        - Bleibe geduldig und lass dem Kind Zeit, den Schritten in seinem eigenen Tempo zu folgen.
+    - Üben (begleitetes Einschlafen):
+        - Unterstütze das Kind beim Zur-Ruhe-Kommen, z. B. durch sanftes Streicheln oder ruhige Worte.
+        - Falls das Kind unruhig wird, erinnere gelassen an die Schlafenszeit: „Lass uns still sein, damit Körper und Geist zur Ruhe kommen.“
+        - Vermeide Diskussionen oder Ermahnungen – stattdessen wirkt deine eigene Ruhe ansteckend.
+    - TEAM
+        - Teamwork: Wir sind gemeinsam schlafen gegangen.
+        - Ermutigung: Ich habe Rosy zum Schlafengehen ermuntert, statt sie zu einer bestimmten Zeit dazu zu zwingen.
+        - Autonomie: Rosy entschied selbst, wann sie nach oben und schlafen gehen wollte.
+        - Minimales Eingreifen: Statt Rosys Verhalten zu bestimmen, habe ich getan, was minimal erforderlich war, um ihr dabei zu helfen, eine wertvolle Fähigkeit fürs Leben zu erlernen.

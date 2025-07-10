@@ -1,0 +1,47 @@
+- Ideen, um sie im Hinterkopf zu behalten >>>
+    - Ebenso wenig wie Erwachsene mögen es Kinder und Kleinkinder, wenn man sie herumkommandiert. Kinder allen Alters besitzen die natürliche Neigung, eigenständig, ohne Einmischung von außen, zu lernen. 
+    - Kommandieren wir Kinder herum, untergraben wir damit ihr Selbstvertrauen und ihre Eigenständigkeit. 
+    - Geben wir ihnen hingegen Autonomie und minimieren wir Anweisungen, vermitteln wir ihnen damit die Botschaft, dass sie autark sind und Probleme alleine bewältigen können. Das kann bereits bei einjährigen Kindern funktionieren, wobei man diese durch das System "Netz und doppelter Boden" im Auge behalten muss.
+    - Das System "Netz und doppelter Boden" wird verwendet, um Kindern Sicherheit und Unterstützung zu bieten, während sie ihre Unabhängigkeit und Autonomie entwickeln. Es bedeutet, dass die Eltern zwar im Hintergrund bleiben und das Kind bei Bedarf beobachten, jedoch nicht direkt eingreifen, sodass das Kind die Möglichkeit hat, selbstständig zu lernen und Probleme eigenständig zu lösen.
+    - Das Beobachten kann auch durch ältere Geschwister oder Nachbarn erfolgen.
+    - Der beste Weg, um Kinder vor Angst und Stress zu schützen, besteht darin, ihnen Autonomie zu geben. 
+    - Unabhängigkeit und Autonomie sind zwei Paar Stiefel. 
+        - Ein unabhängiges Kind ist von anderen abgekoppelt und ausschließlich für sich selbst verantwortlich. 
+        - Ein autonomes Kind ist Herr über die eigenen Handlungen und trifft seine eigenen Entscheidungen, ist dabei aber beständig mit seiner Familie und seinen Freunden verbunden. Man erwartet von ihm, dass es hilft, teilt und freundlich ist. Man erwartet von ihm, dass es der Gruppe etwas zurückgibt, wann immer das möglich ist.
+    - Eltern sollten, wenn nötig, auf subtile und indirekte Weise Einfluss auf das Verhalten ihres Kindes nehmen, um Konflikte zu vermeiden. Sie sollten dem Kind das Gefühl der Handlungsmacht belassen, sodass es sich nicht kontrolliert oder dominiert fühlt. Durch den Einsatz von Fragen, dem Hinweis auf Konsequenzen und der Möglichkeit zur Selbstentdeckung können Eltern Unterstützung bieten. Beispielsweise könnte ein Erwachsener sein eigenes Verhalten anpassen, indem er:
+        - Sich von einem schlagenden Kind entfernt, anstatt ihm zu sagen, dass es damit aufhören soll. 
+        - Statt dem Kind zu sagen, es solle das iPad nicht anfassen, könnte der Erwachsene das iPad einfach aus dem Raum nehmen, wenn das Kind nicht damit umgeht. 
+        - In unsicheren Situationen könnte der Erwachsene sich ruhig neben das Kind stellen und es sanft an die Hand nehmen, anstatt es direkt von der Mauer herunter zu fordern.
+    - 
+- 
+- Weitere Tipps >>>
+    - Achten Sie einmal darauf, wie oft Sie Ihrem Kind Anweisungen erteilen. Stellen Sie den Timer Ihres Smartphones auf zwanzig Minuten und zählen Sie, wie oft Sie in dieser Zeit Ihrem Kind Fragen stellen, das, was es tut, kommentieren oder etwas von ihm verlangen. 
+    - Beschränken Sie sich auf drei Anweisungen pro Stunde. Reduzieren Sie Ihre verbalen Äußerungen auf drei pro Stunde, insbesondere wenn sie Aktivitäten betreffen, die häufig Konflikte und Streit auslösen. Das können etwa Situationen sein, in denen Sie das Kind für die Kita oder die Schule fertig machen oder abends zu Bett bringen. Heben Sie sich Anweisungen dafür auf, Kindern Hilfsbereitschaft, Großzügigkeit und andere Verantwortlichkeiten der Familie gegenüber beizubringen. 
+    - Suchen Sie sich Autonomiebereiche. Suchen Sie nach Orten, an denen sich Kinder in Autonomie üben können, an denen Sie sie aus einiger Entfernung beobachten und sich auf minimales Eingreifen beschränken können. Versuchen Sie es mit großflächig offenen Parks und Spielplätzen, mit Wiesen und Stränden. Nehmen Sie sich eine Zeitschrift oder Arbeit mit und lassen Sie die Kinder ein paar Stunden allein spielen. 
+    - Machen Sie Ihren Garten oder Ihr Viertel zum Autonomiebereich. Bringen Sie Ihrem Kind bei, wie es mit Gefahren im Haus und um das Haus herum umzugehen hat. Dehnen Sie das System Netz und doppelter Boden auf die Nachbarn und deren Kinder aus. 
+    - Hören Sie auf, sich als Bauchredner für Ihr Kind zu betätigen. Sprechen Sie ab jetzt nicht mehr für Ihr Kind und schreiben Sie ihm auch nicht mehr vor, was es sagen soll. Lassen Sie es auf Fragen, die an Ihr Kind gerichtet sind, selbst antworten, lassen Sie es im Restaurant selbst bestellen und lassen Sie es selbst entscheiden, wann es Bitte und Danke sagen will. Arbeiten Sie darauf hin, dass es alle Gespräche allein bewältigt, auch Unterredungen mit Lehrern, Trainern und Ausbildenden.
+    - Bitten kurz und prägnant formulieren, etwa: "Bring das in die Küche" und dem Kind einfach etwas in die Hand drücken.
+    - Streit unter Kindern sollten diese selbst regeln. Man sollte erst eingreifen, wenn die Kinder sich wirklich wehtun.
+- 
+- Übung >>>
+    - Selbstvertrauen und Eigenständigkeit stärken
+        - Um Kindern mehr Autonomie zu ermöglichen und Konflikte zu verringern, sollten Anweisungen und verbale Eingriffe minimiert werden. Statt häufige Kommandos zu geben, können Eltern versuchen, dem Kind Freiraum zur selbstständigen Problemlösung zu schaffen.
+        - Der erste Schritt besteht darin, sich auf nur drei Anweisungen pro Stunde zu beschränken, um Kindern die Möglichkeit zu geben, eigenständig Entscheidungen zu treffen und ihre Handlungen zu reflektieren.
+        - Wenn Kinder in unsichere Situationen geraten, sollten Eltern abwarten und beobachten, ob das Kind selbständig eine Lösung finden kann. In den meisten Fällen profitieren Kinder von der Erfahrung, auch wenn sie manchmal Risiken eingehen müssen.
+        - Indem man Eltern erlaubt, nicht mehr für die Kinder zu sprechen oder sie anzuweisen, wie sie sich verhalten sollen, fördern sie das Selbstbewusstsein und die eigene Stimme der Kinder; sie lernen, in sozialen Situationen selbstständig zu agieren und Verantwortung zu übernehmen.
+    - Erste Schritte
+        - Eltern sollten sich bewusst werden, wie oft sie ihrem Kind Anweisungen geben, und versuchen, diese Zahl zu reduzieren. Ein Timer kann helfen, um eine bestimmte Zeitspanne für Beobachtungen ohne Eingreifen festzulegen.
+        - Auch wenn das Kind gegen Regeln verstößt, ist es wichtig, Geduld zu zeigen und das Kind nicht sofort zu korrigieren; die psychologischen Vorteile einer entspannten Umgebung überwiegen oft.
+        - Wenn die Übung gut verläuft, können Eltern schrittweise die Zeitintervalle verlängern, um den Kindern mehr Freiraum für die Entwicklung ihrer Fähigkeiten zu geben, was zu einer harmonischen Beziehung beitragen kann.
+        - Eltern sollten den Kindern ermöglichen, ihre eigenen Entscheidungen zu treffen, z. B. im Restaurant selbst zu bestellen oder ihre Freizeitaktivitäten zu wählen, um so ihre Selbstständigkeit zu fördern.
+    - Die nächsten Schritte
+        - Eltern müssen eine Regel streichen, die das Kind daran hindert, Dinge allein zu tun, die es gerne allein unternehmen möchte, wie beispielsweise Fahrrad fahren oder mit einem Küchenmesser arbeiten. Hier ist es wichtig, angemessene Sicherheitsvorkehrungen zu treffen.
+        - Kinder sollten im sicheren Umgang mit potenziellen Gefahren im Haus und der Umgebung unterrichtet werden. Sie sollten lernen, alltägliche Risiken zu erkennen und mit ihnen umzugehen, anstatt übermäßig überwacht zu werden.
+        - Eltern können Kleinkindern beibringen, was heiße und gefährliche Gegenstände sind, indem sie diese als „heiß“ kennzeichnen und Verhaltensweisen vormachen, die Sicherheit vermitteln.
+        - Größere Kinder sollten lernen, wie man mit Feuer, Messern und anderen Gefahren umgeht, indem sie schrittweise an Herausforderungen herangeführt werden und dabei stets sicherstellen, dass sie sicher lernen können.
+    - Los geht’s
+        - Autonomiebereiche sind wichtig, um Kindern mehr Freiraum zu schenken und stressfreie Umgebungen zu schaffen, in denen sie selbstständig erkunden können. Eltern sollten ihnen beibringen, wie sie sicher mit Gefahren umgehen, ohne ständig Anweisungen zu geben.
+        - Bei der Erkundung können Eltern das Kind anleiten, Gefahren zu identifizieren, ihnen aber dennoch ermöglichen, auf eigene Faust zu spielen, während sie die Eltern im Hintergrund bleiben.
+        - Beziehungen zu Nachbarn können gefördert werden, um ein Unterstützungssystem zu schaffen, das den Kindern hilft, in der Nachbarschaft sicherer zu agieren und so mehr Autonomie zu erlangen.
+        - Gemeinsame Aktivitäten wie Nachbarschaftspartys und Spielbesuche können nicht nur das Gemeinschaftsgefühl stärken, sondern auch dafür sorgen, dass Kinder sich sicherer fühlen, während sie selbstständige Entscheidungen treffen und ihre sozialen Fähigkeiten weiterentwickeln.
+        - 

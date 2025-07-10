@@ -1,0 +1,72 @@
+- Ideen, um sie im Hinterkopf zu behalten >>>
+    - Ist ein Kind wütend, fällt es ihm schwer, zuzuhören und zu lernen. 
+    - Ist das Kind hingegen entspannt und hat es keine Bestrafungen zu befürchten, ist es offen dafür, neue Regeln zu lernen und Fehler zu korrigieren. 
+    - Zeigt sich das Kind bei einer bestimmten Aufgabe nicht kooperativ – beispielsweise beim Erledigen der Hausaufgaben –, liegt dies wahrscheinlich daran, dass die Aufgabe mit Spannungen zwischen Eltern und Kind verbunden ist. Sind diese Spannungen abgebaut, etwa durch ein Spiel oder eine Geschichte, benimmt sich das Kind in der Regel kooperativer.
+    - Kinder lieben es, durch erzählte Geschichten zu lernen, vor allem dann, wenn diese Geschichten Figuren, Erfahrungen und Gegenstände aus ihrem eigenen Umfeld enthalten. Auf diese Weise zu lernen liegt in der Natur von Kindern. Folgendes beispielsweise tun Kinder ausgesprochen gern: 
+        - Sie lassen sich gern Geschichten aus der familiären Vergangenheit oder der Kindheit ihrer Eltern erzählen. 
+        - Sie stellen sich gern vor, wie Gegenstände zum Leben erwachen – und dann Fehler machen, genau wie sie selbst. 
+        - Sie stellen sich gern vor, dass Geister, Monster, Feen und andere übernatürliche Wesen um sie herum leben und ihnen dabei helfen, richtiges Verhalten zu erlernen. 
+    - Kinder lieben es, spielerisch zu lernen. Auf diese Weise bauen sie Spannungen ab und üben das richtige Verhalten. Kinder spielen auch sehr gern problematisches Verhalten oder Fehler nach und sehen dabei zu, welche Konsequenzen dieses Verhalten hat – vorausgesetzt, das Nachspielen ist lustig und nicht mit Stress verbunden (etwa mit der Angst vor Bestrafungen).
+- 
+- Weitere Tipps >>>
+    - Oft erweist es sich als wenig effektiv, das Verhalten eines Kindes mit langen Erklärungen oder Erwachsenenlogik verändern zu wollen, auch Werte kann man ihm so nur schwer vermitteln. Versuchen Sie es stattdessen einmal mit folgender Methode: Warten Sie einen ruhigen, entspannten Augenblick ab und wenden Sie eines der unten genannten Werkzeuge an: 
+    - Erzählen Sie dem Kind eine Geschichte aus Ihrer eigenen Kindheit. Erzählen Sie davon, wie Sie und Ihre Eltern mit Fehlern, Problemen oder Fehlverhalten umgegangen sind. Sind Sie bestraft worden? Wie haben Sie darauf reagiert? 
+    - Führen Sie ein Puppenspiel auf. Nehmen Sie ein Stofftier oder ein Paar Socken und spielen Sie die Folgen des Verhaltens Ihres Kindes nach. Spielen Sie auch, wie Sie sich das gewünschte Verhalten des Kindes vorstellen. Sie können auch Ihr Kind eine der Rollen spielen lassen. 
+    - Verlagern Sie das Problem in die Spielzone. Sagen Sie zu Ihrem Kind: »Wir streiten uns in letzter Zeit doch so oft wegen der Hausaufgaben [oder irgendeines anderen Problems]. Lass uns daraus ein Spiel machen. Wen willst du spielen? Mich oder dich?« Spielen Sie dann auf lustige Weise nach, was bei dem Streit passiert. Legen Sie sich dabei ruhig richtig ins Zeug, Sie dürfen auch maßlos übertreiben. Ziel der Übung ist es, dass Sie am Ende beide lachen und so die Spannungen bezüglich des Problems abgebaut werden. 
+    - Erzählen Sie eine Monstergeschichte. Erfinden Sie ein Monster, das sich im Haus oder in der Nähe des Hauses versteckt. Erzählen Sie Ihrem Kind, dass das Monster es beobachtet und holen wird (nur für ein paar Tage), wenn das Kind unleidlich ist. 
+    - Erwecken Sie einen Gegenstand spielerisch zum Leben. Nehmen Sie ein Stofftier, ein Stück Kleidung oder einen anderen Gegenstand zu Hilfe, um das Kind zu einer bestimmten Aufgabe zu bewegen. Lassen Sie den Gegenstand die Aufgabe selbst machen (beispielsweise sich die Zähne putzen) oder lassen Sie ihn das Kind darum bitten, die Aufgabe zu tun (lassen Sie etwa die Zahnbürste das Kind bitten, sich die Zähne zu putzen).
+    - Handelt ein Kind wütend oder impulsiv, kann man sagen: "Aua, das tut weh" oder "Aua, das tut deinem Bruder weh". Das Kind sollte weder angeschrien noch bestraft werden. Später beim nachspielen kann man diese Situation trainieren.
+- 
+- Übung mit Geschichten erziehen >>>
+    - Mit Geschichten erziehen
+        - Die Methode des Geschichtenerzählens zielt darauf ab, Kinder zum Nachdenken über ihr Verhalten zu bewegen, ohne ihnen echte Angst einzujagen. Es ist effektiver, kreative Geschichten zu nutzen, als Kinder durch Bestrafungen zu motivieren.
+        - Historikerin Emily Katz Anhalt betont die Bedeutung des Geschichtenerzählens für die kulturelle Weitergabe von Werten und Wissen, anstatt dies allein kommerziellen Medien zu überlassen.
+        - Eltern haben die Möglichkeit, Geschichten maßgeschneidert an die Erfahrungen und Reaktionen ihrer Kinder anzupassen, wodurch eine tiefere Verbindung und bessere Kommunikation entsteht.
+        - Durch Geschichten zeigt sich, dass Kinder kooperativer und flexibler sind; sie reflektieren aktiv über die Auswirkungen ihres Verhaltens. Eine Umfrage bei Rosy ergibt, dass sie Geschichten dem Schimpfen vorzieht.
+    - Erste Schritte
+        - Skeptische Eltern können mit realen Geschichten beginnen, um Vertrauen in das Geschichtenerzählen zu gewinnen. Diese Geschichten müssen nicht gruselig oder komplex sein, sondern können auch humorvoll oder nostalgisch sein.
+        - Familiengeschichten, insbesondere über die eigene Kindheit, sind besonders ansprechend für Kinder und helfen, generationenübergreifende Verbindungen zu schaffen. Sie stärken die Familienbindung und das Verständnis für familiäre Werte.
+        - Kinder profitieren emotional von der Kenntnis ihrer Familiengeschichte. Studien zeigen, dass Kinder, die etwas über ihre Herkunft wissen, weniger anfällig für psychische Probleme sind.
+        - Geschichten sollten anschauliche Details enthalten, um die Vorstellungskraft der Kinder anzuregen und ihnen ein lebentliches Bild zu vermitteln. Einfache Erzählungen über alltägliche Erfahrungen sind oft genug, um ihre Neugier zu wecken.
+    - Die nächsten Schritte
+        - Eltern sollten Animation und Spiel in ihre Geschichtenerzählungen integrieren, um das Interesse und die Mitarbeit der Kinder zu fördern. Gegenstände oder Stofftiere können zum Leben erweckt werden, um schöne Erinnerungen und gewünschtes Verhalten herzustellen.
+        - Kindgerechte Sprache und bildhafte Erzählweise machen komplexe Themen wie Wissenschaft für die Kinder faszinierend und zugänglich. Dies fördert auch ihre Neugierde und ihren Wissensdurst.
+        - Geschichten sollten mit Humor und Leichtigkeit erzählt werden, um eine entspannte Atmosphäre zu schaffen. Auch das sanfte Übertreiben fördert die Komik und die Bindung zwischen Eltern und Kind.
+        - Spielerische Ansätze, die die Fantasie anregen und Kinder ermuntern, können die Bereitschaft zur Kooperation erhöhen. Wenn Kinder aktiv in die Erzählungen einbezogen werden, entwickelt sich oft eine positive Dynamik.
+    - Los geht's
+        - Um den „Angstfaktor“ von Geschichten zu nutzen, können Eltern die Erzählungen schrittweise anpassen, je nach den Reaktionen ihres Kindes. Gruselige oder lustige Elemente sollten dem Alter und der Sensibilität des Kindes entsprechen.
+        - Fiktive Figuren wie Monster, die bestimmte Verhaltensweisen beeinflussen, können humorvoll oder leicht beängstigend eingesetzt werden, um das Verhalten positiv zu beeinflussen.
+        - Beliebte Beispiele für solche Geschichten wie das „Zappelphilipp-Monster“ verdeutlichen, wie Geschichten zur Verhaltensänderung eingesetzt werden können. Eine humorvolle Herangehensweise kann herausfordernde Situationen zu erheitern.
+        - Kreative Geschichtenerzählungen werden als enorm hilfreich angesehen, um alltägliche Verhaltensaufforderungen spielerisch zu gestalten; dies kann die ohnehin schon anstrengenden Momente im Alltag auflockern.
+    - Beispiele für Monster
+        - Das Teilenmonster
+            - Das Teilenmonster lebt in einem Baum vor dem Küchenfenster und wächst größer, wenn kleine Kinder nicht teilen.
+            - Wenn das Kind nicht kooperiert, holt das Monster es für sieben Nächte und füttert es nur mit Blumen- und Rosenkohl.
+        - Das Schreimonster
+            - Dieses Monster lebt hinter der Zimmerdecke und lauscht an den Lampen.
+            - Es kommt ins Zimmer, wenn kleine Kinder zu laut schreien oder viele Forderungen stellen, besonders morgens.
+        - Das Schuhmonster
+            - Das Schuhmonster ist weiblich und lebt in den Heizungsrohren, um sicherzustellen, dass die Kinder morgens schnell ihre Schuhe anziehen.
+            - Wenn die Kinder zögern, zieht es sie in den Lüftungsschacht, wobei die Geräusche der Heizung helfen, Rosy zum schnellen Anziehen zu motivieren.
+        - Das Zappelphilipp-Monster
+            - Das Zappelphilipp-Monster wurde von Matts erfunden und hilft beim Zubettbringen, indem es Kinder auffordert, sich ruhig zu verhalten.
+            - Wenn Rosy nicht ins Bett gehen will, wird das Monster erwähnt, was dazu führt, dass sie sich entspannt, schnell ins Bett geht und schnell einschläft.
+- 
+- Übungen durch Nachspielen erziehen >>>
+    - Durch Nachspielen erziehen
+        - Das Nachspielen von problematischen Situationen in einem spielerischen Kontext hilft Kindern, emotionale Kontrolle und selbstregulierendes Verhalten zu üben. Dabei ist es wichtig, dass alle Beteiligten entspannt und nicht emotional geladen sind.
+        - Zudem nutzen Kinder spielen, um sich von anstrengenden Erfahrungen und emotionalem Aufruhr zu erholen.
+        - Der Ton während des Spiels sollte leicht und humorvoll sein, um sicherzustellen, dass sich das Kind wohlfühlt und bereit ist, neue Fähigkeiten zu erproben, ohne dass Druck oder Angst im Spiel sind.
+        - Puppenspiele und Rollenspiele mit Figuren oder Alltagsgegenständen fördern nicht nur den Spaß, sondern ermöglichen es Kindern, ihr Verhalten in einem sicheren Umfeld zu reflektieren. Das Kind kann auch aktiv in das Spiel eingebunden werden, indem es Fragen beantwortet oder Figuren übernimmt.
+        - Die Technik, alltägliche Probleme in die „Spielzone“ zu verlagern, ermöglicht es, Spannungen abzubauen und die zwischenmenschliche Verbindung zwischen Eltern und Kind zu stärken. Übertriebene Darstellungen der Probleme sorgen für Lachen und Entspannung.
+    - Erste Schritte
+        - Ein Puppenspiel kann helfen, emotionale Konflikte und alltägliche Herausforderungen spielerisch zu bewältigen. Durch die Verwendung von Puppen oder Spielzeugfiguren ist es einfacher für das Kind, seine eigenen Probleme in einem neuen Licht zu sehen.
+        - Rollenspiele, bei denen das Kind die Perspektive verschiedener Figuren einnimmt, schaffen die Gelegenheit, das eigene Verhalten zu überdenken und die Konsequenzen zu erkennen. Fragen wie „Wie fühlt sich das an?“ fördern das Verständnis für Empathie.
+        - Beispiele aus dem Alltag, wie das Zubettgehen, können sinnvoll in die Spielszenen integriert werden, um das Kind an die Regeln und Verhaltensweisen zu gewöhnen, ohne dabei Druck auszuüben.
+        - Eltern sollten ermutigt werden, verspielt mit Übertreibungen umzugehen, um eine lockere Atmosphäre zu erzeugen, in der der Umgang mit Problemen weniger ernst genommen wird.
+    - Los geht’s
+        - Das Nachspielen problematischen Verhaltens, wie etwa Hauen, ist eine Möglichkeit, dem Kind die Folgen seines Handelns zu verdeutlichen. Indem die Eltern in einem ruhigen Moment die Szene nachspielen, können Emotionen besser verstanden werden.
+        - Indem Eltern überdramatisiert auf das Verhalten reagieren, können Kinder erkennen, dass ihre Handlungen sowohl körperliche als auch emotionale Schmerzen verursachen. Diese Einsicht wird durch humorvolle Darstellungen gefördert.
+        - Fragen, die zur Reflexion anregen, wie „Magst du mich denn nicht?“, können in das Spiel integriert werden, um das Kind dazu zu bringen, über seine Gefühle und Handlungen nachzudenken.
+        - Durch das Rollenwechseln kann das Kind verschiedene Perspektiven einnehmen und somit Empathie entwickeln. Das Nachlassen der Aggressionen bei Rosy zeigt, wie das spielerische Nachspielen von Verhalten zu einem positiveren Umgang führen kann.
+        - Das Ignorieren des problematischen Verhaltens und die Freude am spielerischen Lernen fördern eine angenehme Atmosphäre, wodurch sowohl das Kind als auch die Eltern von der Methode profitieren.
