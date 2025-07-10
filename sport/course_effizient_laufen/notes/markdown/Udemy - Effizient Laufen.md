@@ -1,0 +1,99 @@
+- Willkommen!
+    1. ## Einleitung
+        - Im Kurs geht es um Forschung und Wissenschaft.
+        - Durch Laufen wird man schlauer.
+    2. ## Eine kurze Einführung ins Laufen
+        - Welche Laufstile gibt es >>>
+            - Vorderfußlauf - Zunächst setzt der Fußballen auf - Abrollen nach hinten
+            - Mittelfußlauf - Aufsetzen mit einem flachen Fuß
+            - Fersenlauf - Zunächst setzt die Ferse auf - Abrollen nach vorne
+    3. ## Lerne den Vorderfußlauf kennen
+        - Übung Vorderfußlauf: barfuß oder in Socken in die Luft springen
+    - 
+- Eine Einführung ins Laufen
+    - ## 4. Menschen sind Ausdauerläufer
+        - Für welche Art des Laufens ist der Mensch gebaut?→Ausdauerlaufen
+        - Die Achillessehne hat wenig Einfluss beim {{Gehen}}. Sie speichert Energie (bis zu 50 %) für das {{Laufen}}.
+        - Durch die Fußwölbung läuft man barfuß auf dem {{Vorderfuß}}. So kann bis zu 17 % Energie zurückgegeben werden. 
+        - Lange Beine {{erhöhen}} die Kontaktzeit mit dem Boden. Das ist gut, denn die {{Inverse}} der Bodenkontaktzeit korreliert mit {{weniger}} Aufwand beim Laufen.
+    - 
+    - ## 5. Laufen macht dich schlauer!
+        - BDNF (Brain-derived neurotrophic factor) und NGF (Nerve Growth Factor) sind wichtige Faktoren für die Gehirnentwicklung. Studien zeigen, dass beide Faktoren unter freiwilliger Belastung bei Ratten deutlich {{ansteigen}}.  
+        - CTSB (Cathepsin B) wirkt sich auf BDNF aus und scheint eine Art Bindeglied aus. Studien zeigen, dass Sport und insbesondere Laufe gut für die {{Gehirnentwicklung}} sind. HIT hat einen geringeren Effekt und Kraftsport keinen. 
+    - 
+    - ## 6. Barfußlaufen macht dich sogar noch schlauer!
+        - Barfußlaufen {{steigert}} das Arbeitsgedächtnis (Fähigkeit, Informationen abzurufen und zu verarbeiten) um 16 %. Beim Laufen mit Schuhen war dieser Effekt nicht festzustellen. Eventuell liegt das daran, dass zusätzliche Ansprüche an das Empfinden des Körpers, etwa die Lage im Raum, erforderlich sind.
+    - 
+    - 
+- Stil und Probleme
+    - 
+    - Belastungsmaximum beim Laufen >>>
+        - --------------------- Portal ---------------------
+            - Belastungsmaximum (ca. in Körpergewicht) #
+                - [Fersenlauf (in Schuhe)](Udemy%20-%20Effizient%20Laufen/Stil%20und%20Probleme/Belastungsmaximum%20beim%20Laufen/Untitled/Untitled/Fersenlauf%20(in%20Schuhe).md);-1,7x
+                - [Fersenlauf (Barfuß)](Udemy%20-%20Effizient%20Laufen/Stil%20und%20Probleme/Belastungsmaximum%20beim%20Laufen/Untitled/Untitled/Fersenlauf%20(Barfu%C3%9F).md);-1,9x
+                - [Vorderfußlauf (Barfuß)](Udemy%20-%20Effizient%20Laufen/Stil%20und%20Probleme/Belastungsmaximum%20beim%20Laufen/Untitled/Untitled/Vorderfu%C3%9Flauf%20(Barfu%C3%9F).md);-0,6x
+    - 
+    - Mögliche Knieprobleme beim Laufen >>>
+        - Läuferknie oder Ilio-tibiales Bandsyndrom (ITBS)
+        - patellafemorales Schmerzsyndrom
+        - Entsteht durch Reibung im Knie beim Laufen
+    - 
+    - {{Vorderfußaufen}} kann Knieschmerzen verringern und vorbeugen, da die Last geringer ist. Dies wurde durch deine Studie belegt.
+    - 
+    - Füße sollten beim Gehen/Laufen {{gerade}} oder fast  {{gerade}} nach vorn zeigen.
+    - 
+    - Der Fuß und der Knöchel können Unebenheiten in Sekundenschnelle beim Auftreten {{ausgleichen}} und so die Bewegung reibungsloser und entsprechend geschmeidiger machen. Dies geht besonders gut beim Barfußlaufen beziehungsweise schlechter in Sportschuhen. Das Knie kann diese Bewegungen (insbesondere seitliche) {{nicht ausgleichen}}. Das Knie soll frei durchschwingen können, ansonsten kann es zu Knieschmerzen kommen.
+    - 
+    - Übungen, mit denen man überprüfen kann, ob beim Laufen alles in Ordnung ist >>>
+        - 100 m Laufen und nur daran denken, dass die Füße (fast) gerade nach vorn zeigen
+        - Du bekommst die Knie über deine Zehen. Im Sitzen, Füße flach aufgestellt, Unterschenkel und Oberschenkel orthogonal und dann nach vorn schieben. Überprüft, ob die Achillessehne flexibel genug ist.
+        - Du kannst deinen großen Zeh im Sitzen anheben ohne dass der Fußballen den Boden verlässt. Evtl. Hand zur Hilfe nehmen. Checkt, ob die Sehne gedehnt genug ist.
+        - Du kannst deinen großen Zeh unabhängig von den anderen bewegen. Test: Hinstellen, großen Zeh in den Boden drücken, andere Zehen nach oben bewegen.
+    - 
+    - Wie lange dauert es, den Laufstil auf Vorderfußlauf umzustellen?→Laut einer Studie fangen die Muskeln bereits nach 30 Sekunden an, sich umzustellen. In einem 12-Wochen-Programm konnten sich die Teilnehmer recht zügig umstellen.
+    - 
+- Laufschuhe
+    - Sportschuhe gibt es erst seit etwa {{1970}}. Sportschuhe haben im Vergleich zu normalen Schuhen ein gestütztes Gewölbe und einen gepolsterten/gedämpften Fersenbereich.
+    - Sportschuhe haben meist eine hohe Sprengung (Höhenunterschied zwischen vorn und hinten) und zwingen einen so quasi dazu, mit der {{Ferse}} aufzutreten.
+    - Laufschuhe nutzen sich ab und müssen nach etwa 750-1000 Kilometern ersetzt werden. Tatsächlich verlieren Schuhe (unabhängig von Preis und Marke) aber bereits relativ schnell viel ihrer dämpfenden Wirkung: >>>
+        - 80 km ⇒ 75 %
+        - 160 km ⇒ 67 %
+        - 800 km ⇒ 60 %
+    - 
+    - Minimalschuhe (Barfußschuhe) versuchen wenig von den natürlichen Bewegungsmöglichkeiten des Fußes zu nehmen: >>>
+        - Keine Sprengung
+        - Leicht
+        - Flexibel
+        - Kein stützendes Gewölbe
+    - 
+- Zubehör
+    - Funktionskleidung aus Synthetik ist wegen der direkten Schweißabgabe {{vorteilhaft}}.
+    - Beine wund laufen ⇒ {{Wolf laufen}}, Vaseline hilft.
+    - Studie: Unterwäsche aus {{Kompressionskleidung}} hilft bei gleichzeitiger vertikaler und horizontaler Bewegung. Kompressionstrümpfe helfen, schneller zu laufen und helfen bei der Regeneration.
+    - {{Musik}} kann helfen, muss aber nicht. Studie (1998): Kein Unterschied in der Sauerstoffaufnahme. Musik scheint die Läufer mehr zu entspannen, niedrigerer Laktatwerte und geringere Muskelentspannung.
+- Trainingsgestaltung
+    - Je länger die Strecke ist, desto {{niedriger}} sollte die Außentemperatur für optimale Außentemperatur sein. Bei Männern sind ca. 10 Grad Celsius bei einem Marathon optimal.
+    - Cold-Induced Vasodilatation Response (CIVD) - Bessere Durchblutung bei Kälte, dauert ca. {{ 10 Minuten}} bei Füßen und 5 Minuten bei Händen. Die Varianz (ca. 6 Minuten) ist jedoch bei verschiedenen Personen sehr hoch. Bei manchen Personen kann sie auch kaum oder gar nicht einsetzen.
+    - Studie: Laufen auf Sand {{verbessert}} die Leistungen gegenüber der Kontrollgruppe in einem 6-Wochen-Versuch. Die Wadenmuskulatur wird stärker beansprucht.
+    - Studie: Kraftwerte {{erhöhen}} sich durch Aufwärmen, beim Dehnen dagegen nur minimal. 
+    - Wissenschaftlich ist der hilfreiche Effekt von Dehnübungen {{nicht nachweisbar}}.
+    - 
+- Ernährung
+    - Beim Carboloading >>>
+        - Werden dem Körper wenig Kohlenhydrate zugeführt und dann kurz vor einem Wettkampf sehr viele Kohlenhydrate. 
+        - Studie: 36 bis 46 Stunden vor dem Rennen sind die wichtigsten. 10 g Kohlenhydrate pro kg Körpergewicht. Nach der Versuchsreihe (erst Entzug, dann hohen Zufuhr) lag der Glykogenspiegel deutlich höher. 
+        - Weitere Studie: Entzug ist vorher wahrscheinlich gar nicht notwendig.
+        - Weitere Studie: Carboloading bringt gar nicht viel...
+    - 
+    - Trinken >>>
+        - 600 - 1200 ml pro Stunde wird vom Körper toleriert
+        - 2h vor dem Wettkampf 500 ml
+        - Kohlenhydrate bei Belastung > 1h
+        - Aufnahme nach eigenem Durstgefühl sollte bei ca. 400-800 ml liegen
+        - Getränke zwischen 15 und 22 Grad
+    - 
+    - Supplement >>>
+        - Koffein hilft bei Ausdauer und Geschwindigkeit, nicht bei VO_2.
+        - Kreatin hilft viel beim Sprinten und etwas beim Ausdauerlauf.
+    - 

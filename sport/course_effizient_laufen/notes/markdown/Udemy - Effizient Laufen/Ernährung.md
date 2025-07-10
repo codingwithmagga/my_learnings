@@ -1,0 +1,17 @@
+- Beim Carboloading >>>
+    - Werden dem Körper wenig Kohlenhydrate zugeführt und dann kurz vor einem Wettkampf sehr viele Kohlenhydrate. 
+    - Studie: 36 bis 46 Stunden vor dem Rennen sind die wichtigsten. 10 g Kohlenhydrate pro kg Körpergewicht. Nach der Versuchsreihe (erst Entzug, dann hohen Zufuhr) lag der Glykogenspiegel deutlich höher. 
+    - Weitere Studie: Entzug ist vorher wahrscheinlich gar nicht notwendig.
+    - Weitere Studie: Carboloading bringt gar nicht viel...
+- 
+- Trinken >>>
+    - 600 - 1200 ml pro Stunde wird vom Körper toleriert
+    - 2h vor dem Wettkampf 500 ml
+    - Kohlenhydrate bei Belastung > 1h
+    - Aufnahme nach eigenem Durstgefühl sollte bei ca. 400-800 ml liegen
+    - Getränke zwischen 15 und 22 Grad
+- 
+- Supplement >>>
+    - Koffein hilft bei Ausdauer und Geschwindigkeit, nicht bei VO_2.
+    - Kreatin hilft viel beim Sprinten und etwas beim Ausdauerlauf.
+- 

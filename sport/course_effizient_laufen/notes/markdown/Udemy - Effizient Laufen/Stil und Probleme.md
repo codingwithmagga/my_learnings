@@ -1,0 +1,27 @@
+- 
+- Belastungsmaximum beim Laufen >>>
+    - --------------------- Portal ---------------------
+        - Belastungsmaximum (ca. in Körpergewicht) #
+            - [Fersenlauf (in Schuhe)](Stil%20und%20Probleme/Belastungsmaximum%20beim%20Laufen/Untitled/Untitled/Fersenlauf%20(in%20Schuhe).md);-1,7x
+            - [Fersenlauf (Barfuß)](Stil%20und%20Probleme/Belastungsmaximum%20beim%20Laufen/Untitled/Untitled/Fersenlauf%20(Barfu%C3%9F).md);-1,9x
+            - [Vorderfußlauf (Barfuß)](Stil%20und%20Probleme/Belastungsmaximum%20beim%20Laufen/Untitled/Untitled/Vorderfu%C3%9Flauf%20(Barfu%C3%9F).md);-0,6x
+- 
+- Mögliche Knieprobleme beim Laufen >>>
+    - Läuferknie oder Ilio-tibiales Bandsyndrom (ITBS)
+    - patellafemorales Schmerzsyndrom
+    - Entsteht durch Reibung im Knie beim Laufen
+- 
+- {{Vorderfußaufen}} kann Knieschmerzen verringern und vorbeugen, da die Last geringer ist. Dies wurde durch deine Studie belegt.
+- 
+- Füße sollten beim Gehen/Laufen {{gerade}} oder fast  {{gerade}} nach vorn zeigen.
+- 
+- Der Fuß und der Knöchel können Unebenheiten in Sekundenschnelle beim Auftreten {{ausgleichen}} und so die Bewegung reibungsloser und entsprechend geschmeidiger machen. Dies geht besonders gut beim Barfußlaufen beziehungsweise schlechter in Sportschuhen. Das Knie kann diese Bewegungen (insbesondere seitliche) {{nicht ausgleichen}}. Das Knie soll frei durchschwingen können, ansonsten kann es zu Knieschmerzen kommen.
+- 
+- Übungen, mit denen man überprüfen kann, ob beim Laufen alles in Ordnung ist >>>
+    - 100 m Laufen und nur daran denken, dass die Füße (fast) gerade nach vorn zeigen
+    - Du bekommst die Knie über deine Zehen. Im Sitzen, Füße flach aufgestellt, Unterschenkel und Oberschenkel orthogonal und dann nach vorn schieben. Überprüft, ob die Achillessehne flexibel genug ist.
+    - Du kannst deinen großen Zeh im Sitzen anheben ohne dass der Fußballen den Boden verlässt. Evtl. Hand zur Hilfe nehmen. Checkt, ob die Sehne gedehnt genug ist.
+    - Du kannst deinen großen Zeh unabhängig von den anderen bewegen. Test: Hinstellen, großen Zeh in den Boden drücken, andere Zehen nach oben bewegen.
+- 
+- Wie lange dauert es, den Laufstil auf Vorderfußlauf umzustellen?→Laut einer Studie fangen die Muskeln bereits nach 30 Sekunden an, sich umzustellen. In einem 12-Wochen-Programm konnten sich die Teilnehmer recht zügig umstellen.
+- 

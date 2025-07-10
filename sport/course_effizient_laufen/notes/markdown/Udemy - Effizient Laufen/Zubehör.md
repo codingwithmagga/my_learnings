@@ -1,0 +1,4 @@
+- Funktionskleidung aus Synthetik ist wegen der direkten Schweißabgabe {{vorteilhaft}}.
+- Beine wund laufen ⇒ {{Wolf laufen}}, Vaseline hilft.
+- Studie: Unterwäsche aus {{Kompressionskleidung}} hilft bei gleichzeitiger vertikaler und horizontaler Bewegung. Kompressionstrümpfe helfen, schneller zu laufen und helfen bei der Regeneration.
+- {{Musik}} kann helfen, muss aber nicht. Studie (1998): Kein Unterschied in der Sauerstoffaufnahme. Musik scheint die Läufer mehr zu entspannen, niedrigerer Laktatwerte und geringere Muskelentspannung.

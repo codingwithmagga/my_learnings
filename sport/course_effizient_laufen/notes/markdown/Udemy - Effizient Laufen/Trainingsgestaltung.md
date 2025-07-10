@@ -1,0 +1,6 @@
+- Je länger die Strecke ist, desto {{niedriger}} sollte die Außentemperatur für optimale Außentemperatur sein. Bei Männern sind ca. 10 Grad Celsius bei einem Marathon optimal.
+- Cold-Induced Vasodilatation Response (CIVD) - Bessere Durchblutung bei Kälte, dauert ca. {{ 10 Minuten}} bei Füßen und 5 Minuten bei Händen. Die Varianz (ca. 6 Minuten) ist jedoch bei verschiedenen Personen sehr hoch. Bei manchen Personen kann sie auch kaum oder gar nicht einsetzen.
+- Studie: Laufen auf Sand {{verbessert}} die Leistungen gegenüber der Kontrollgruppe in einem 6-Wochen-Versuch. Die Wadenmuskulatur wird stärker beansprucht.
+- Studie: Kraftwerte {{erhöhen}} sich durch Aufwärmen, beim Dehnen dagegen nur minimal. 
+- Wissenschaftlich ist der hilfreiche Effekt von Dehnübungen {{nicht nachweisbar}}.
+- 

@@ -1,0 +1,13 @@
+- Sportschuhe gibt es erst seit etwa {{1970}}. Sportschuhe haben im Vergleich zu normalen Schuhen ein gestütztes Gewölbe und einen gepolsterten/gedämpften Fersenbereich.
+- Sportschuhe haben meist eine hohe Sprengung (Höhenunterschied zwischen vorn und hinten) und zwingen einen so quasi dazu, mit der {{Ferse}} aufzutreten.
+- Laufschuhe nutzen sich ab und müssen nach etwa 750-1000 Kilometern ersetzt werden. Tatsächlich verlieren Schuhe (unabhängig von Preis und Marke) aber bereits relativ schnell viel ihrer dämpfenden Wirkung: >>>
+    - 80 km ⇒ 75 %
+    - 160 km ⇒ 67 %
+    - 800 km ⇒ 60 %
+- 
+- Minimalschuhe (Barfußschuhe) versuchen wenig von den natürlichen Bewegungsmöglichkeiten des Fußes zu nehmen: >>>
+    - Keine Sprengung
+    - Leicht
+    - Flexibel
+    - Kein stützendes Gewölbe
+- 

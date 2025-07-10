@@ -1,0 +1,14 @@
+- ## 4. Menschen sind Ausdauerläufer
+    - Für welche Art des Laufens ist der Mensch gebaut?→Ausdauerlaufen
+    - Die Achillessehne hat wenig Einfluss beim {{Gehen}}. Sie speichert Energie (bis zu 50 %) für das {{Laufen}}.
+    - Durch die Fußwölbung läuft man barfuß auf dem {{Vorderfuß}}. So kann bis zu 17 % Energie zurückgegeben werden. 
+    - Lange Beine {{erhöhen}} die Kontaktzeit mit dem Boden. Das ist gut, denn die {{Inverse}} der Bodenkontaktzeit korreliert mit {{weniger}} Aufwand beim Laufen.
+- 
+- ## 5. Laufen macht dich schlauer!
+    - BDNF (Brain-derived neurotrophic factor) und NGF (Nerve Growth Factor) sind wichtige Faktoren für die Gehirnentwicklung. Studien zeigen, dass beide Faktoren unter freiwilliger Belastung bei Ratten deutlich {{ansteigen}}.  
+    - CTSB (Cathepsin B) wirkt sich auf BDNF aus und scheint eine Art Bindeglied aus. Studien zeigen, dass Sport und insbesondere Laufe gut für die {{Gehirnentwicklung}} sind. HIT hat einen geringeren Effekt und Kraftsport keinen. 
+- 
+- ## 6. Barfußlaufen macht dich sogar noch schlauer!
+    - Barfußlaufen {{steigert}} das Arbeitsgedächtnis (Fähigkeit, Informationen abzurufen und zu verarbeiten) um 16 %. Beim Laufen mit Schuhen war dieser Effekt nicht festzustellen. Eventuell liegt das daran, dass zusätzliche Ansprüche an das Empfinden des Körpers, etwa die Lage im Raum, erforderlich sind.
+- 
+- 

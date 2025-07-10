@@ -14,7 +14,7 @@ Overall, it's a great introduction to SQL with lots of well-presented content, b
 
 ## Structure
 
-In the *notes* folder you can find my notes from Remnote as Remnote file, markdown or html export (TODO). The *code* folder contains the exercises and my solutions to the tests and challenges from the course. In general these are the SQL commands which can be executed for example in pgAdmin.
+In the *notes* folder you can find my notes from Remnote as Remnote file, markdown or html export. The *code* folder contains the exercises and my solutions to the tests and challenges from the course. In general these are the SQL commands which can be executed for example in pgAdmin.
 
 ## Remarks
 
