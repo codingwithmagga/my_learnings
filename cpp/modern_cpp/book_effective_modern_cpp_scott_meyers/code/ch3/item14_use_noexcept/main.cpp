@@ -16,6 +16,7 @@ public:
         : data(wRhs.data)
     {
         // Need to add this, otherwise the compiler does to much optimization
+        // Note that I can see a difference only in a Release Build
         if (check()) {
             throw std::exception("test");
         }
