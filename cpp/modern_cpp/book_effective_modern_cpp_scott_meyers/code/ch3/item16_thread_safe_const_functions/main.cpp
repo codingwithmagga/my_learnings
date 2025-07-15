@@ -80,11 +80,9 @@ int main()
             threads[i] = std::thread([&p]() { p.distanceFromOrigin(); });
         }
 
-        for (int i = 0; i < numThreads; ++i) {
-            threads[i].join();
+        for (auto& thread : threads) {
+            thread.join();
         }
-
-        std::this_thread::sleep_for(200ms);
 
         std::cout << "Call count: " << p.getCallCount() << "\n\n";
     }
@@ -100,11 +98,10 @@ int main()
                 std::cout << w.magicValue() << " "; });
         }
 
-        for (int i = 0; i < numThreads; ++i) {
-            threads[i].join();
+        for (auto& thread : threads) {
+            thread.join();
         }
 
-        std::this_thread::sleep_for(200ms);
         std::cout << "\n";
     }
 }
