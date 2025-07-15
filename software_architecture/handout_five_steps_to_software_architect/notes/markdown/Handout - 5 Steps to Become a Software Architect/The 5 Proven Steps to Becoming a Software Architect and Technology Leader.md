@@ -1,0 +1,37 @@
+- ## Why become a software architect?
+    - As the Software Architect and Technology Leader, you have the knowledge, confidence, and authority to guide your company to success. You know the system better than anyone since likely you are the one who designed and architected most of it. And your deep technical knowledge puts you in the position to make a big impact on the company’s revenue.
+- 
+- ## Who is a software architect?
+    - A software architect is not a degree that you graduate with, nor a certificate. In most organizations, it’s not even a position or title. It is a role.
+    - A software architect is an individual contributor who is trusted to make the right technical design decisions while:
+        - Building a new system component 
+        - Developing a new feature for a client 
+        - Researching, suggesting, and choosing the right technologies, programming languages, or tools 
+        - Optimizing performance to save the company money 
+        - Ensuring day to day stability, scalability, and fault tolerance for the entire system
+- 
+- ## The 5 step process
+    - ### Step 1: Learn the System
+        - Conduct Thorough System Analysis: Examine the existing system with a critical yet open-minded approach to understand its architecture and the reasoning behind design decisions, avoiding premature judgments.
+        - Identify Evolutionary Opportunities: Recognize that certain design choices may have been appropriate in the past but may no longer align with current business needs, highlighting areas for potential improvement.
+        - Analyze Client Interaction: Investigate how clients use and interact with the product to trace data flow throughout the system, identifying sources, storage mechanisms, and interaction points.
+        - Understand Technological Frameworks: Identify the technologies in use, including frameworks, databases, data delivery methods, and important threading models for performance-critical services, even if you're not initially familiar with all aspects of the tech stack.
+    - ### Step 2: Identify the business trend and technical pain-points
+        - Understand the most mission-critical, high traffic, revenue/customer experience impacting parts of the system.
+        - Study which part of the system has the most critical pain-points, the most outages and bugs in the last year, performance or scalability issues, or is just hard to test, maintain, deploy or add features to.
+    - ### Step 3: Become an expert in the problem domain
+        - Once you've identified which system to re-architect and the core problems, deeply study the problematic component before proposing any solutions.
+        - Focus on understanding the problem and acquiring any needed expertise; this may involve topics like multithreading, distributed systems, language features, and relevant frameworks.
+        - Invest in credible learning sources—preferably from experienced engineers, not just teachers or bloggers—to build knowledge efficiently.
+        - Your goal at this stage is to fully understand the problem and gain the necessary expertise, not to have a ready solution yet.
+    - ### Step 4: Research a solution or an improvement to current architecture
+        - Research and prototype potential architectural or technological improvements to address the problems identified in the system.
+        - Leverage your domain expertise to evaluate similar technologies; if none fit, consider how to redesign or re-architect the system to resolve scalability, performance, or related issues.
+        - Explore existing solutions and case studies from other teams or companies for inspiration, but be prepared to experiment with your own ideas if necessary.
+        - For each solution considered, collect data and use quantifiable metrics—rather than intuition alone—to guide your final decision.
+    - ### Step 5: Create a design proposal with clear goals and benefits
+        - Once confident in your solution, formally document your proposal as a design document or design proposal to share with your team or organization.
+        - Ensure your document clearly communicates the motivation, proposed changes, benefits, and supporting evidence for your solution.
+        - After approval, you may lead the implementation or delegate the work to others.
+        - By consistently applying this process, you’ll build a reputation as a software architect and technology leader within your organization.
+        - 
