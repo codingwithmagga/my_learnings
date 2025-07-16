@@ -35,5 +35,7 @@ private:
 
 int main()
 {
+    // I'm not really sure what to show here.
+    // I can't really check if the move operations are default generated or not.
     StringTable table;
 }
