@@ -1,0 +1,17 @@
+- Location, Comparing & Encrypting Files
+    - `tree`::Hierarchical representation of files and directories in a visual format that illustrates their structure and relationships.
+    - `find`::Command used in command-line interfaces to search for files and directories based on specified criteria. You can also search for text in files.
+    - `findstr`::Command-line utility that searches for specific strings within files and displays the matching lines. Supports wildcards.
+    - `fc`::Command used in command line interfaces to compare two files and display the differences between them.
+    - `cipher0`::Algorithm used to transform data into a secure format to prevent unauthorized access.
+- File Attributes
+    - What is a file attribute→A file attribute is a metadata tag describing a file's properties, such as read-only status or hidden status.
+    - Name four different attributes >>>
+        - Read-only (R)
+        - Hidden (H)
+        - System (S)
+        - Archive (A) - File was changed since last backup
+    - `Attrib`::Command used in a command line interface to display or change the attributes of a file or directory in a file system.
+- File Associations
+    - What are extension assocations?→Extension associations link file extensions to specific programs.
+    - `Assoc`↔Show or change associated file extensions with specific programs.

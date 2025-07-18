@@ -1,0 +1,11 @@
+- Troubleshooting Networks
+    - `ping`::Network utility that tests the reachability of a host on an Internet Protocol (IP) network by sending Internet Control Message Protocol (ICMP) echo request packets and waiting for a response.
+    - `tracert`↔A network diagnostic tool that traces the route packets take to reach a destination.
+    - `pathping`::Network diagnostic tool that combines the functionality of `ping` and `tracert` to identify network latency and packet loss along the route to a destination.
+    - `netstat`::Network utility that displays active connections, routing tables, and network interface statistics.
+- Managing networks
+    - `ipconfig`::Network configuration command that displays the current TCP/IP network settings and status of a computer in a Windows operating system.
+    - `nslookup`::Network utility that queries the Domain Name System (DNS) to obtain domain name or IP address mapping information.
+    - `route`::Command used in a command line interface to display and manipulate the routing table of a computer's network.
+    - `netsh`::Command-line utility in Windows used for configuring and managing network settings and interfaces.
+    - 

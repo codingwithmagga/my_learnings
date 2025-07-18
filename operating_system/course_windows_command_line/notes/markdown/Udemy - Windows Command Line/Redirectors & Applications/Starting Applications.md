@@ -1,0 +1,7 @@
+- Name three ways to start an application from the command line >>>
+    - Internal commands - Launching programs that are built in the command line like `echo` 
+    - Direct Invocation - Launching the program in the current directory and start by typing its name.
+    - The start command - Initiating applications with the start command followed by the application name. This also works for programs that are located in paths from the `PATH` variable, like `start "" chrome.exe`. 
+- 
+- `Set <NAME>=<PATH_TO_EXE>`→Allows to start `<EXE>` using `start <NAME>` 
+- 

@@ -1,0 +1,7 @@
+- What is a file attribute→A file attribute is a metadata tag describing a file's properties, such as read-only status or hidden status.
+- Name four different attributes >>>
+    - Read-only (R)
+    - Hidden (H)
+    - System (S)
+    - Archive (A) - File was changed since last backup
+- `Attrib`::Command used in a command line interface to display or change the attributes of a file or directory in a file system.

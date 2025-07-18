@@ -1,0 +1,3 @@
+- `tasklist`::Command used in a command line interface to display a list of currently running processes on a computer.
+- `taskkill`::Command used in a command line interface to terminate a running process on a computer.
+- `schtasks`::Utility in Windows that allows users to manage scheduled tasks from the command line.

@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Batch Scripting
+    </h1>
+    <br/>
+    <ul>
+        <li>Basics
+            <ul>
+                <li>Batch script
+                    <ul>
+                        <li>Describe→A batch script is a series of commands executed sequentially by a command interpreter. It is a text file with the file extension <q>.bat</q>. </li>
+                        <li>How to prevent the terminal from directly closing after executing a batch script?→Include <q>pause</q> as the last command in your batch script.</li>
+                        <li>How to hide the current directory and the command in the terminal when a batch script is executed?→Use the <q>@echo off</q> command at the beginning of your batch script.</li>
+                        <li>How to add and use variable?→Use <q>set variableName=value</q> to define and <q>%variableName%</q> to use a batch script variable.</li>
+                        <li>How to get user input into a variable→Use the <q>set /p</q> command followed by the variable name and a prompt which is shown to the user.</li>
+                        <li>How to implement an if-statement?→Use the <q>if</q> command, followed by a condition and commands (in braces) to execute if true, optionally followed by <q>else</q> and commands (in braces) for false conditions.</li>
+                        <li>How to add a function→Use the <q>:label</q> syntax to define a function and <q>goto label</q> to call it.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Loops
+            <ul>
+                <li>How to write a for loop in a batch script?→Use the <q>for</q> command with the <q>%%a</q> variable to iterate through items. <q>for %%a in ... DO (...)</q> </li>
+            </ul>
+        </li>
+        <li>Task Completion
+            <ul>
+                <li>How to get the extension of a file in a loop→Use a <q>for</q> loop and the <q>%%~x</q> variable in a batch script to extract and process file extensions.</li>
+                <li>How to check for the name of a file in a loop?→Use a <q>for</q> loop and the <q>%%~nx</q> variable in a batch script to extract and process file names.</li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

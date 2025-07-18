@@ -1,0 +1,7 @@
+- What is the command line (cmd)?→A text interface for interacting with a computer's operating system. Some tools and commands are extremely useful and cannot be accessed otherwise.
+- 
+- `dir`::View every file and folder in the current folder.
+- 
+- What are parameters (also known as options or arguments)→Parameters are values passed to commands to modify their behavior.
+- 
+- `help <CMD>`::Displays the manual/help page of the `<CMD>`  

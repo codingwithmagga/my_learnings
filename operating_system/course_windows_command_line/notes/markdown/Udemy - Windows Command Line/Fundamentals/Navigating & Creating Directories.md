@@ -1,0 +1,5 @@
+- `cd`::Changing current directory 
+- `mkdir <DIR>`::Create directory `<DIR>` 
+- How to type names with spaces?→Enclose the name in double quotes, for example `mkdir "My Cats"`
+- `rmdir <DIR>`::Delete an empty directory `DIR`.
+- `rmdir /S <DIR>`::Delete a directory `DIR` and all its folders and files in it.

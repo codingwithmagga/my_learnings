@@ -1,0 +1,210 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Udemy - Windows Command Line
+    </h1>
+    <br/>
+    <ul>
+        <li>Fundamentals
+            <ul>
+                <li>Commands &amp; Parameters
+                    <ul>
+                        <li>What is the command line (cmd)?→A text interface for interacting with a computer&#39;s operating system. Some tools and commands are extremely useful and cannot be accessed otherwise.</li>
+                        <li></li>
+                        <li><q>dir</q>::View every file and folder in the current folder.</li>
+                        <li></li>
+                        <li>What are parameters (also known as options or arguments)→Parameters are values passed to commands to modify their behavior.</li>
+                        <li></li>
+                        <li><q>help &lt;CMD&gt;</q>::Displays the manual/help page of the <q>&lt;CMD&gt;</q>  </li>
+                    </ul>
+                </li>
+                <li>Navigating &amp; Creating Directories
+                    <ul>
+                        <li><q>cd</q>::Changing current directory </li>
+                        <li><q>mkdir &lt;DIR&gt;</q>::Create directory <q>&lt;DIR&gt;</q> </li>
+                        <li>How to type names with spaces?→Enclose the name in double quotes, for example <q>mkdir &quot;My Cats&quot;</q></li>
+                        <li><q>rmdir &lt;DIR&gt;</q>::Delete an empty directory <q>DIR</q>.</li>
+                        <li><q>rmdir /S &lt;DIR&gt;</q>::Delete a directory <q>DIR</q> and all its folders and files in it.</li>
+                    </ul>
+                </li>
+                <li>Moving, Renaming &amp; Deleting
+                    <ul>
+                        <li></li>
+                        <div class="Portal">
+                            <ul>
+                                <li><q>move &lt;FILE&gt; &lt;DIR&gt;</q>::Move <q>&lt;FILE&gt;</q> to <q>&lt;DIR&gt;</q>, can also move directories </li>
+                            </ul>
+                        </div>                        <li><q>copy &lt;FILE&gt; &lt;DIR&gt;</q>::Copy <q>&lt;FILE&gt;</q> to <q>&lt;DIR&gt;</q>, can also copy directories</li>
+                        <li><q>ren &lt;FILE/FOLDER&gt; &lt;NEW_NAME&gt;</q>::Rename the file <q>&lt;FILE&gt;</q> or folder <q>&lt;FOLDER&gt;</q> to <q>&lt;NEW_NAME&gt;</q> </li>
+                        <li><q>del &lt;FILE&gt;</q>::Deletes the file <q>&lt;FILE&gt;</q>, does not work on directories </li>
+                        <li>Explain Wildcards→Wildcards are special characters that represent one or more characters in a filename, allowing for flexible file manipulation. For example <q>*</q> to represent any number of any character. </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Redirectors &amp; Applications
+            <ul>
+                <li>Redirectors
+                    <ul>
+                        <li>Describe→A redirector is a special symbol that can be used to redirect the input or output from one command to another.</li>
+                        <li>Explanation of using <q>echo</q> and using <q>&gt;</q> to redirect the output to a file. Since this was also part of the <a isRemReference="true" href="?isPin=false">Missing Semester</a> class I skip this one here.  </li>
+                        <li><q>type &lt;FILE&gt;</q>::Command used in a command line interface to display the contents of a specified file <q>&lt;FILE&gt;</q>.</li>
+                        <li><q>&lt;CMD&gt; &gt;&gt; &lt;FILE&gt;</q>::Append the output of <q>&lt;CMD&gt;</q> to an existing file <q>&lt;FILE&gt;</q> </li>
+                        <li></li>
+                        <li>Combining commands
+                            <ul>
+                                <li><q>&amp;&amp;</q>::Only runs the second command if the first runs succesfully. </li>
+                                <li><q>&amp;</q>::Always runs the second command.</li>
+                                <li><q>||</q>::Only runs the second command if the first one files.</li>
+                                <li><q>|</q>::Redirects the output of the first command as input to the second command. </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Starting Applications
+                    <ul>
+                        <li>Name three ways to start an application from the command line
+                            <ul>
+                                <li>Internal commands - Launching programs that are built in the command line like <q>echo</q> </li>
+                                <li>Direct Invocation - Launching the program in the current directory and start by typing its name.</li>
+                                <li>The start command - Initiating applications with the start command followed by the application name. This also works for programs that are located in paths from the <q>PATH</q> variable, like <q>start &quot;&quot; chrome.exe</q>. </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li><q>Set &lt;NAME&gt;=&lt;PATH_TO_EXE&gt;</q>→Allows to start <q>&lt;EXE&gt;</q> using <q>start &lt;NAME&gt;</q> </li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Batch Scripting
+            <ul>
+                <li>Basics
+                    <ul>
+                        <li>Batch script
+                            <ul>
+                                <li>Describe→A batch script is a series of commands executed sequentially by a command interpreter. It is a text file with the file extension <q>.bat</q>. </li>
+                                <li>How to prevent the terminal from directly closing after executing a batch script?→Include <q>pause</q> as the last command in your batch script.</li>
+                                <li>How to hide the current directory and the command in the terminal when a batch script is executed?→Use the <q>@echo off</q> command at the beginning of your batch script.</li>
+                                <li>How to add and use variable?→Use <q>set variableName=value</q> to define and <q>%variableName%</q> to use a batch script variable.</li>
+                                <li>How to get user input into a variable→Use the <q>set /p</q> command followed by the variable name and a prompt which is shown to the user.</li>
+                                <li>How to implement an if-statement?→Use the <q>if</q> command, followed by a condition and commands (in braces) to execute if true, optionally followed by <q>else</q> and commands (in braces) for false conditions.</li>
+                                <li>How to add a function→Use the <q>:label</q> syntax to define a function and <q>goto label</q> to call it.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Loops
+                    <ul>
+                        <li>How to write a for loop in a batch script?→Use the <q>for</q> command with the <q>%%a</q> variable to iterate through items. <q>for %%a in ... DO (...)</q> </li>
+                    </ul>
+                </li>
+                <li>Task Completion
+                    <ul>
+                        <li>How to get the extension of a file in a loop→Use a <q>for</q> loop and the <q>%%~x</q> variable in a batch script to extract and process file extensions.</li>
+                        <li>How to check for the name of a file in a loop?→Use a <q>for</q> loop and the <q>%%~nx</q> variable in a batch script to extract and process file names.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>File Management
+            <ul>
+                <li>Location, Comparing &amp; Encrypting Files
+                    <ul>
+                        <li><q>tree</q>::Hierarchical representation of files and directories in a visual format that illustrates their structure and relationships.</li>
+                        <li><q>find</q>::Command used in command-line interfaces to search for files and directories based on specified criteria. You can also search for text in files.</li>
+                        <li><q>findstr</q>::Command-line utility that searches for specific strings within files and displays the matching lines. Supports wildcards.</li>
+                        <li><q>fc</q>::Command used in command line interfaces to compare two files and display the differences between them.</li>
+                        <li><q>cipher0</q>::Algorithm used to transform data into a secure format to prevent unauthorized access.</li>
+                    </ul>
+                </li>
+                <li>File Attributes
+                    <ul>
+                        <li>What is a file attribute→A file attribute is a metadata tag describing a file&#39;s properties, such as read-only status or hidden status.</li>
+                        <li>Name four different attributes
+                            <ul>
+                                <li>Read-only (R)</li>
+                                <li>Hidden (H)</li>
+                                <li>System (S)</li>
+                                <li>Archive (A) - File was changed since last backup</li>
+                            </ul>
+                        </li>
+                        <li><q>Attrib</q>::Command used in a command line interface to display or change the attributes of a file or directory in a file system.</li>
+                    </ul>
+                </li>
+                <li>File Associations
+                    <ul>
+                        <li>What are extension assocations?→Extension associations link file extensions to specific programs.</li>
+                        <li><q>Assoc</q>↔Show or change associated file extensions with specific programs.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>System Administration
+            <ul>
+                <li>Task Management &amp; Scheduling
+                    <ul>
+                        <li><q>tasklist</q>::Command used in a command line interface to display a list of currently running processes on a computer.</li>
+                        <li><q>taskkill</q>::Command used in a command line interface to terminate a running process on a computer.</li>
+                        <li><q>schtasks</q>::Utility in Windows that allows users to manage scheduled tasks from the command line.</li>
+                    </ul>
+                </li>
+                <li>System Configuration &amp; Maintenance
+                    <ul>
+                        <li><q>shutdown</q>::Command that terminates the operating system and powers off the computer.</li>
+                        <li>Explain power scheme/plan→A power scheme is a set of hardware and system settings that control how your computer manages power consumption.</li>
+                        <li><q>powercfg</q>::Command used in Windows operating systems to manage power settings and configurations.</li>
+                        <li><q>sfc</q>::System file checker tool that scans and repairs corrupted system files in a Windows operating system.</li>
+                        <li><q>chkdsk</q>::Utility that checks the file system and file system metadata of a volume for logical and physical errors.</li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>Editing the registry
+                    <ul>
+                        <li>What is the windows registry?→A hierarchical database storing configuration settings and options for the Windows operating system and its applications.</li>
+                        <li><q>reg</q>::Command used in Windows operating systems to manage the registry, allowing users to add, delete, or modify registry keys and values.</li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Networking Tools
+            <ul>
+                <li>Troubleshooting Networks
+                    <ul>
+                        <li><q>ping</q>::Network utility that tests the reachability of a host on an Internet Protocol (IP) network by sending Internet Control Message Protocol (ICMP) echo request packets and waiting for a response.</li>
+                        <li><q>tracert</q>↔A network diagnostic tool that traces the route packets take to reach a destination.</li>
+                        <li><q>pathping</q>::Network diagnostic tool that combines the functionality of <q>ping</q> and <q>tracert</q> to identify network latency and packet loss along the route to a destination.</li>
+                        <li><q>netstat</q>::Network utility that displays active connections, routing tables, and network interface statistics.</li>
+                    </ul>
+                </li>
+                <li>Managing networks
+                    <ul>
+                        <li><q>ipconfig</q>::Network configuration command that displays the current TCP/IP network settings and status of a computer in a Windows operating system.</li>
+                        <li><q>nslookup</q>::Network utility that queries the Domain Name System (DNS) to obtain domain name or IP address mapping information.</li>
+                        <li><q>route</q>::Command used in a command line interface to display and manipulate the routing table of a computer&#39;s network.</li>
+                        <li><q>netsh</q>::Command-line utility in Windows used for configuring and managing network settings and interfaces.</li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Tips &amp; Tricks
+            <ul>
+                <li><q>doskey /history</q>::Command used in a command line interface to display a list of previously entered commands.</li>
+                <li>How to view the output of a command line by line?→Use the <q>more</q> command to page through the output. <q>&lt;CMD&gt; | more</q> </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

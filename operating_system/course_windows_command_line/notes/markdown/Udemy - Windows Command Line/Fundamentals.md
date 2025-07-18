@@ -1,0 +1,22 @@
+- Commands & Parameters
+    - What is the command line (cmd)?→A text interface for interacting with a computer's operating system. Some tools and commands are extremely useful and cannot be accessed otherwise.
+    - 
+    - `dir`::View every file and folder in the current folder.
+    - 
+    - What are parameters (also known as options or arguments)→Parameters are values passed to commands to modify their behavior.
+    - 
+    - `help <CMD>`::Displays the manual/help page of the `<CMD>`  
+- Navigating & Creating Directories
+    - `cd`::Changing current directory 
+    - `mkdir <DIR>`::Create directory `<DIR>` 
+    - How to type names with spaces?→Enclose the name in double quotes, for example `mkdir "My Cats"`
+    - `rmdir <DIR>`::Delete an empty directory `DIR`.
+    - `rmdir /S <DIR>`::Delete a directory `DIR` and all its folders and files in it.
+- Moving, Renaming & Deleting
+    - 
+    - --------------------- Portal ---------------------
+        - `move <FILE> <DIR>`::Move `<FILE>` to `<DIR>`, can also move directories 
+    - `copy <FILE> <DIR>`::Copy `<FILE>` to `<DIR>`, can also copy directories
+    - `ren <FILE/FOLDER> <NEW_NAME>`::Rename the file `<FILE>` or folder `<FOLDER>` to `<NEW_NAME>` 
+    - `del <FILE>`::Deletes the file `<FILE>`, does not work on directories 
+    - Explain Wildcards→Wildcards are special characters that represent one or more characters in a filename, allowing for flexible file manipulation. For example `*` to represent any number of any character. 

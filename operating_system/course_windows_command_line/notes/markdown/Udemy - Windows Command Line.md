@@ -1,0 +1,108 @@
+- Fundamentals
+    - Commands & Parameters
+        - What is the command line (cmd)?→A text interface for interacting with a computer's operating system. Some tools and commands are extremely useful and cannot be accessed otherwise.
+        - 
+        - `dir`::View every file and folder in the current folder.
+        - 
+        - What are parameters (also known as options or arguments)→Parameters are values passed to commands to modify their behavior.
+        - 
+        - `help <CMD>`::Displays the manual/help page of the `<CMD>`  
+    - Navigating & Creating Directories
+        - `cd`::Changing current directory 
+        - `mkdir <DIR>`::Create directory `<DIR>` 
+        - How to type names with spaces?→Enclose the name in double quotes, for example `mkdir "My Cats"`
+        - `rmdir <DIR>`::Delete an empty directory `DIR`.
+        - `rmdir /S <DIR>`::Delete a directory `DIR` and all its folders and files in it.
+    - Moving, Renaming & Deleting
+        - 
+        - --------------------- Portal ---------------------
+            - `move <FILE> <DIR>`::Move `<FILE>` to `<DIR>`, can also move directories 
+        - `copy <FILE> <DIR>`::Copy `<FILE>` to `<DIR>`, can also copy directories
+        - `ren <FILE/FOLDER> <NEW_NAME>`::Rename the file `<FILE>` or folder `<FOLDER>` to `<NEW_NAME>` 
+        - `del <FILE>`::Deletes the file `<FILE>`, does not work on directories 
+        - Explain Wildcards→Wildcards are special characters that represent one or more characters in a filename, allowing for flexible file manipulation. For example `*` to represent any number of any character. 
+- Redirectors & Applications
+    - Redirectors
+        - Describe→A redirector is a special symbol that can be used to redirect the input or output from one command to another.
+        - Explanation of using `echo` and using `>` to redirect the output to a file. Since this was also part of the [Missing Semester]() class I skip this one here.  
+        - `type <FILE>`::Command used in a command line interface to display the contents of a specified file `<FILE>`.
+        - `<CMD> >> <FILE>`::Append the output of `<CMD>` to an existing file `<FILE>` 
+        - 
+        - Combining commands
+            - `&&`::Only runs the second command if the first runs succesfully. 
+            - `&`::Always runs the second command.
+            - `||`::Only runs the second command if the first one files.
+            - `|`::Redirects the output of the first command as input to the second command. 
+    - Starting Applications
+        - Name three ways to start an application from the command line >>>
+            - Internal commands - Launching programs that are built in the command line like `echo` 
+            - Direct Invocation - Launching the program in the current directory and start by typing its name.
+            - The start command - Initiating applications with the start command followed by the application name. This also works for programs that are located in paths from the `PATH` variable, like `start "" chrome.exe`. 
+        - 
+        - `Set <NAME>=<PATH_TO_EXE>`→Allows to start `<EXE>` using `start <NAME>` 
+        - 
+- Batch Scripting
+    - Basics
+        - Batch script
+            - Describe→A batch script is a series of commands executed sequentially by a command interpreter. It is a text file with the file extension `.bat`. 
+            - How to prevent the terminal from directly closing after executing a batch script?→Include `pause` as the last command in your batch script.
+            - How to hide the current directory and the command in the terminal when a batch script is executed?→Use the `@echo off` command at the beginning of your batch script.
+            - How to add and use variable?→Use `set variableName=value` to define and `%variableName%` to use a batch script variable.
+            - How to get user input into a variable→Use the `set /p` command followed by the variable name and a prompt which is shown to the user.
+            - How to implement an if-statement?→Use the `if` command, followed by a condition and commands (in braces) to execute if true, optionally followed by `else` and commands (in braces) for false conditions.
+            - How to add a function→Use the `:label` syntax to define a function and `goto label` to call it.
+    - Loops
+        - How to write a for loop in a batch script?→Use the `for` command with the `%%a` variable to iterate through items. `for %%a in ... DO (...)` 
+    - Task Completion
+        - How to get the extension of a file in a loop→Use a `for` loop and the `%%~x` variable in a batch script to extract and process file extensions.
+        - How to check for the name of a file in a loop?→Use a `for` loop and the `%%~nx` variable in a batch script to extract and process file names.
+- File Management
+    - Location, Comparing & Encrypting Files
+        - `tree`::Hierarchical representation of files and directories in a visual format that illustrates their structure and relationships.
+        - `find`::Command used in command-line interfaces to search for files and directories based on specified criteria. You can also search for text in files.
+        - `findstr`::Command-line utility that searches for specific strings within files and displays the matching lines. Supports wildcards.
+        - `fc`::Command used in command line interfaces to compare two files and display the differences between them.
+        - `cipher0`::Algorithm used to transform data into a secure format to prevent unauthorized access.
+    - File Attributes
+        - What is a file attribute→A file attribute is a metadata tag describing a file's properties, such as read-only status or hidden status.
+        - Name four different attributes >>>
+            - Read-only (R)
+            - Hidden (H)
+            - System (S)
+            - Archive (A) - File was changed since last backup
+        - `Attrib`::Command used in a command line interface to display or change the attributes of a file or directory in a file system.
+    - File Associations
+        - What are extension assocations?→Extension associations link file extensions to specific programs.
+        - `Assoc`↔Show or change associated file extensions with specific programs.
+- System Administration
+    - Task Management & Scheduling
+        - `tasklist`::Command used in a command line interface to display a list of currently running processes on a computer.
+        - `taskkill`::Command used in a command line interface to terminate a running process on a computer.
+        - `schtasks`::Utility in Windows that allows users to manage scheduled tasks from the command line.
+    - System Configuration & Maintenance
+        - `shutdown`::Command that terminates the operating system and powers off the computer.
+        - Explain power scheme/plan→A power scheme is a set of hardware and system settings that control how your computer manages power consumption.
+        - `powercfg`::Command used in Windows operating systems to manage power settings and configurations.
+        - `sfc`::System file checker tool that scans and repairs corrupted system files in a Windows operating system.
+        - `chkdsk`::Utility that checks the file system and file system metadata of a volume for logical and physical errors.
+        - 
+    - Editing the registry
+        - What is the windows registry?→A hierarchical database storing configuration settings and options for the Windows operating system and its applications.
+        - `reg`::Command used in Windows operating systems to manage the registry, allowing users to add, delete, or modify registry keys and values.
+        - 
+        - 
+- Networking Tools
+    - Troubleshooting Networks
+        - `ping`::Network utility that tests the reachability of a host on an Internet Protocol (IP) network by sending Internet Control Message Protocol (ICMP) echo request packets and waiting for a response.
+        - `tracert`↔A network diagnostic tool that traces the route packets take to reach a destination.
+        - `pathping`::Network diagnostic tool that combines the functionality of `ping` and `tracert` to identify network latency and packet loss along the route to a destination.
+        - `netstat`::Network utility that displays active connections, routing tables, and network interface statistics.
+    - Managing networks
+        - `ipconfig`::Network configuration command that displays the current TCP/IP network settings and status of a computer in a Windows operating system.
+        - `nslookup`::Network utility that queries the Domain Name System (DNS) to obtain domain name or IP address mapping information.
+        - `route`::Command used in a command line interface to display and manipulate the routing table of a computer's network.
+        - `netsh`::Command-line utility in Windows used for configuring and managing network settings and interfaces.
+        - 
+- Tips & Tricks
+    - `doskey /history`::Command used in a command line interface to display a list of previously entered commands.
+    - How to view the output of a command line by line?→Use the `more` command to page through the output. `<CMD> | more` 

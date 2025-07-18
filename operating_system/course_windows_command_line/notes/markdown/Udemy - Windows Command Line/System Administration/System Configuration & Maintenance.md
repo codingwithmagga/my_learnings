@@ -1,0 +1,6 @@
+- `shutdown`::Command that terminates the operating system and powers off the computer.
+- Explain power scheme/plan→A power scheme is a set of hardware and system settings that control how your computer manages power consumption.
+- `powercfg`::Command used in Windows operating systems to manage power settings and configurations.
+- `sfc`::System file checker tool that scans and repairs corrupted system files in a Windows operating system.
+- `chkdsk`::Utility that checks the file system and file system metadata of a volume for logical and physical errors.
+- 

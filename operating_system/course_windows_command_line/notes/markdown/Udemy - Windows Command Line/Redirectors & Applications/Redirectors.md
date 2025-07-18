@@ -1,0 +1,10 @@
+- Describe→A redirector is a special symbol that can be used to redirect the input or output from one command to another.
+- Explanation of using `echo` and using `>` to redirect the output to a file. Since this was also part of the [Missing Semester]() class I skip this one here.  
+- `type <FILE>`::Command used in a command line interface to display the contents of a specified file `<FILE>`.
+- `<CMD> >> <FILE>`::Append the output of `<CMD>` to an existing file `<FILE>` 
+- 
+- Combining commands
+    - `&&`::Only runs the second command if the first runs succesfully. 
+    - `&`::Always runs the second command.
+    - `||`::Only runs the second command if the first one files.
+    - `|`::Redirects the output of the first command as input to the second command. 

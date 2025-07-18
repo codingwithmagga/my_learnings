@@ -1,0 +1,2 @@
+- What are extension assocations?→Extension associations link file extensions to specific programs.
+- `Assoc`↔Show or change associated file extensions with specific programs.

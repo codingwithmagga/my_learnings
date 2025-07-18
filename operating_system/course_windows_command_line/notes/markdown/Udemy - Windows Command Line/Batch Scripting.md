@@ -1,0 +1,14 @@
+- Basics
+    - Batch script
+        - Describe→A batch script is a series of commands executed sequentially by a command interpreter. It is a text file with the file extension `.bat`. 
+        - How to prevent the terminal from directly closing after executing a batch script?→Include `pause` as the last command in your batch script.
+        - How to hide the current directory and the command in the terminal when a batch script is executed?→Use the `@echo off` command at the beginning of your batch script.
+        - How to add and use variable?→Use `set variableName=value` to define and `%variableName%` to use a batch script variable.
+        - How to get user input into a variable→Use the `set /p` command followed by the variable name and a prompt which is shown to the user.
+        - How to implement an if-statement?→Use the `if` command, followed by a condition and commands (in braces) to execute if true, optionally followed by `else` and commands (in braces) for false conditions.
+        - How to add a function→Use the `:label` syntax to define a function and `goto label` to call it.
+- Loops
+    - How to write a for loop in a batch script?→Use the `for` command with the `%%a` variable to iterate through items. `for %%a in ... DO (...)` 
+- Task Completion
+    - How to get the extension of a file in a loop→Use a `for` loop and the `%%~x` variable in a batch script to extract and process file extensions.
+    - How to check for the name of a file in a loop?→Use a `for` loop and the `%%~nx` variable in a batch script to extract and process file names.

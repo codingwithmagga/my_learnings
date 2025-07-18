@@ -1,0 +1,4 @@
+- What is the windows registry?→A hierarchical database storing configuration settings and options for the Windows operating system and its applications.
+- `reg`::Command used in Windows operating systems to manage the registry, allowing users to add, delete, or modify registry keys and values.
+- 
+- 

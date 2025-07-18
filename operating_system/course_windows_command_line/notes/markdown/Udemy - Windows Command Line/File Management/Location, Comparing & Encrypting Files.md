@@ -1,0 +1,5 @@
+- `tree`::Hierarchical representation of files and directories in a visual format that illustrates their structure and relationships.
+- `find`::Command used in command-line interfaces to search for files and directories based on specified criteria. You can also search for text in files.
+- `findstr`::Command-line utility that searches for specific strings within files and displays the matching lines. Supports wildcards.
+- `fc`::Command used in command line interfaces to compare two files and display the differences between them.
+- `cipher0`::Algorithm used to transform data into a secure format to prevent unauthorized access.

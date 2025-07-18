@@ -1,0 +1,19 @@
+- Redirectors
+    - Describe→A redirector is a special symbol that can be used to redirect the input or output from one command to another.
+    - Explanation of using `echo` and using `>` to redirect the output to a file. Since this was also part of the [Missing Semester]() class I skip this one here.  
+    - `type <FILE>`::Command used in a command line interface to display the contents of a specified file `<FILE>`.
+    - `<CMD> >> <FILE>`::Append the output of `<CMD>` to an existing file `<FILE>` 
+    - 
+    - Combining commands
+        - `&&`::Only runs the second command if the first runs succesfully. 
+        - `&`::Always runs the second command.
+        - `||`::Only runs the second command if the first one files.
+        - `|`::Redirects the output of the first command as input to the second command. 
+- Starting Applications
+    - Name three ways to start an application from the command line >>>
+        - Internal commands - Launching programs that are built in the command line like `echo` 
+        - Direct Invocation - Launching the program in the current directory and start by typing its name.
+        - The start command - Initiating applications with the start command followed by the application name. This also works for programs that are located in paths from the `PATH` variable, like `start "" chrome.exe`. 
+    - 
+    - `Set <NAME>=<PATH_TO_EXE>`→Allows to start `<EXE>` using `start <NAME>` 
+    - 

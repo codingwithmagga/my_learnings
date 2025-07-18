@@ -1,0 +1,5 @@
+- `ipconfig`::Network configuration command that displays the current TCP/IP network settings and status of a computer in a Windows operating system.
+- `nslookup`::Network utility that queries the Domain Name System (DNS) to obtain domain name or IP address mapping information.
+- `route`::Command used in a command line interface to display and manipulate the routing table of a computer's network.
+- `netsh`::Command-line utility in Windows used for configuring and managing network settings and interfaces.
+- 

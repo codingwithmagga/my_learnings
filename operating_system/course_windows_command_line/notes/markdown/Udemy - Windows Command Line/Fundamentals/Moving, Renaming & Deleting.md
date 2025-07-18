@@ -1,0 +1,7 @@
+- 
+- --------------------- Portal ---------------------
+    - `move <FILE> <DIR>`::Move `<FILE>` to `<DIR>`, can also move directories 
+- `copy <FILE> <DIR>`::Copy `<FILE>` to `<DIR>`, can also copy directories
+- `ren <FILE/FOLDER> <NEW_NAME>`::Rename the file `<FILE>` or folder `<FOLDER>` to `<NEW_NAME>` 
+- `del <FILE>`::Deletes the file `<FILE>`, does not work on directories 
+- Explain Wildcards→Wildcards are special characters that represent one or more characters in a filename, allowing for flexible file manipulation. For example `*` to represent any number of any character. 

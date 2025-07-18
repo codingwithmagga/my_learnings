@@ -1,0 +1,2 @@
+- How to get the extension of a file in a loop→Use a `for` loop and the `%%~x` variable in a batch script to extract and process file extensions.
+- How to check for the name of a file in a loop?→Use a `for` loop and the `%%~nx` variable in a batch script to extract and process file names.

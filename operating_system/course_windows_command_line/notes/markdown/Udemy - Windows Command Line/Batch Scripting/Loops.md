@@ -1,0 +1,1 @@
+- How to write a for loop in a batch script?→Use the `for` command with the `%%a` variable to iterate through items. `for %%a in ... DO (...)` 

@@ -1,0 +1,16 @@
+- Task Management & Scheduling
+    - `tasklist`::Command used in a command line interface to display a list of currently running processes on a computer.
+    - `taskkill`::Command used in a command line interface to terminate a running process on a computer.
+    - `schtasks`::Utility in Windows that allows users to manage scheduled tasks from the command line.
+- System Configuration & Maintenance
+    - `shutdown`::Command that terminates the operating system and powers off the computer.
+    - Explain power scheme/plan→A power scheme is a set of hardware and system settings that control how your computer manages power consumption.
+    - `powercfg`::Command used in Windows operating systems to manage power settings and configurations.
+    - `sfc`::System file checker tool that scans and repairs corrupted system files in a Windows operating system.
+    - `chkdsk`::Utility that checks the file system and file system metadata of a volume for logical and physical errors.
+    - 
+- Editing the registry
+    - What is the windows registry?→A hierarchical database storing configuration settings and options for the Windows operating system and its applications.
+    - `reg`::Command used in Windows operating systems to manage the registry, allowing users to add, delete, or modify registry keys and values.
+    - 
+    - 

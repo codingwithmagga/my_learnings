@@ -1,0 +1,4 @@
+- `ping`::Network utility that tests the reachability of a host on an Internet Protocol (IP) network by sending Internet Control Message Protocol (ICMP) echo request packets and waiting for a response.
+- `tracert`↔A network diagnostic tool that traces the route packets take to reach a destination.
+- `pathping`::Network diagnostic tool that combines the functionality of `ping` and `tracert` to identify network latency and packet loss along the route to a destination.
+- `netstat`::Network utility that displays active connections, routing tables, and network interface statistics.
