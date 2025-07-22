@@ -37,3 +37,6 @@ add_subdirectory(ch3/item14_use_noexcept)
 add_subdirectory(ch3/item15_use_constexpr)
 add_subdirectory(ch3/item16_thread_safe_const_functions)
 add_subdirectory(ch3/item17_special_member_function_generation)
+
+# Chapter 4 - smart pointer
+add_subdirectory(ch4/item18_unique_ptr)
