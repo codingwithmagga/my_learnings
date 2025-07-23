@@ -40,3 +40,4 @@ add_subdirectory(ch3/item17_special_member_function_generation)
 
 # Chapter 4 - smart pointer
 add_subdirectory(ch4/item18_unique_ptr)
+add_subdirectory(ch4/item19_shared_ptr)
