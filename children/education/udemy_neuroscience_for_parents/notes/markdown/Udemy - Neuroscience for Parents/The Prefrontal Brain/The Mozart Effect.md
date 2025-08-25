@@ -1,0 +1,5 @@
+- The Mozart Effect is a Myth
+    - The Myth: The popular belief, known as the "Mozart Effect," claimed that playing classical music for babies or unborn children would boost their IQ.
+    - The Origin: The myth stemmed from a misinterpretation of a 1990s study. The actual study found only a temporary, 15-minute enhancement in spatial reasoning in adults after listening to classical music. It was not about children, nor was it about long-term IQ.
+    - The Reality: Subsequent research has found no link between listening to classical music (or any other type of music) and increased intelligence or IQ in children.
+    - The Takeaway: There is no cognitive benefit to forcing classical music on children. However, if a child enjoys classical music, they will experience the same positive effects of enjoyment and arousal that they would get from any other music or activity they like.

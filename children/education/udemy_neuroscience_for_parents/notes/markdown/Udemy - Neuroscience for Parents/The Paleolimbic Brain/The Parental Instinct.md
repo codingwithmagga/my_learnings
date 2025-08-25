@@ -1,0 +1,17 @@
+- The "Parental Berserk Button"
+    - Trigger: Threat to a child’s safety (e.g., near-miss accident, bullying).
+    - Response: The limbic amygdala (emotional/fear center) hijacks rational thought ⇒ primal aggression.
+        - Evolution’s design: Human babies are helpless; this instinct ensures survival.
+        - Physical signs: Adrenaline surge, shouting, even violent impulses (despite normally calm demeanor).
+        - 
+- Why It Happens
+    - Brain wiring: Parenthood activates a protective circuit in the amygdala—identical in both genders.
+        - Wildlife parallel: Think lionesses charging predators or birds dive-bombing threats.
+    - No rationality: Once triggered, logic is offline until adrenaline subsides (hours/days).
+    - 
+- Managing the Aftermath
+    - For yourself:
+        - Normalize the reaction: This is biology, not "overreacting."
+        - Debrief later: Explain to kids, "My brain thought you were in danger—I love you too much to stay calm."
+    - For others in rage mode:
+        - Don’t argue: Wait for the amygdala to calm (offer space, not logic).

@@ -1,0 +1,40 @@
+- The Newborn Brain: Overconnected and Pruned
+    - A baby’s brain is not a blank slate—it starts with more neural connections than an adult’s.
+    - In the first 3 months, ~90% of limbic system connections are pruned based on interactions with the environment.
+    - The brain keeps only what’s useful, shedding excess "wiring" to adapt.
+    - 
+- The Dominant Reptilian Brain in Babies
+    - The only fully operational brain structure at birth is the reptilian (primitive) brain, which governs survival instincts.
+    - Everything is a "danger" to a newborn: hunger, cold, loneliness, even a wet diaper triggers a stress response (crying).
+    - Crying is their only communication tool—it doesn’t always mean sadness but can signal:
+        - Flight: "Get me out of this!" (discomfort)
+        - Fight: "I’m furious!" (hunger/pain)
+        - Freeze: "I’m scared!" (need for security)
+        - 
+- How to Respond to Infant Stress
+    - Under age 2: The best way to calm a stressed baby is to meet their need (e.g., change a diaper, feed them). Comfort alone won’t resolve fight/flight triggers.
+    - Avoid misinterpreting cries: A baby turning redder when comforted may be in fight stress—they need resolution, not just soothing.
+    - 
+- Stress in Older Children and Teens
+    - Kids lack a mature prefrontal cortex (fully developed at ~24 years), so they struggle to "put things in perspective."
+        - A broken toy feels like a catastrophe because their brain can’t rationalize it yet.
+    - Recognizing stress responses:
+        - Flight: Avoiding eye contact, fidgeting.
+        - Fight: Stomping, clenched jaws.
+        - Freeze: Tears, apathy.
+        - 
+- Stress-Relief Strategies
+    - NBA Guidelines: Align with the child’s emotional state.
+        - Flight: Offer choices, use humor.
+        - Fight: Validate anger ("I’d be mad too!").
+        - Freeze: Quiet support (no pep talks).
+    - The "Hug Response":
+        - Hugs release oxytocin (the bonding hormone), reducing heart rate and stress.
+        - Even during conflicts, offering a hug can defuse tension over time.
+        - Key insight: Physical connection helps rewire stress patterns.
+        - 
+- When NOT to "Give In"
+    - This approach applies only when the reptilian brain is active (perceived danger).
+    - Once the child’s paleolimbic brain (social/emotional center) engages, boundaries and guidance become essential (covered in the next lecture).
+    - 
+- Final Note: Parenting infants and young children is about meeting survival needs first, then gradually teaching emotional regulation as their brain matures. Hugs aren’t a reward for tantrums—they’re a tool to exit survival mode and reconnect.

@@ -1,0 +1,15 @@
+- Our Hardwired "Us vs. Them" Instinct
+    - Amygdala + Hypothalamus: The brain’s "friend or foe" detectors.
+        - Oxytocin’s dual role:
+            - Bonds us to our group (family, friends, team).
+            - Excludes outsiders (triggers distrust/aggression toward "them").
+    - Evolution’s legacy: Survival depended on group loyalty—loners died.
+    - 
+- Adolescence = Tribal Identity Crisis
+    - Why it stings
+        - Social rejection activates the same brain pathways as physical pain.
+        - Example: Your 8-year-old sobbing over a friend’s cold shoulder feels like a gut punch.
+        - Parents’ pain when teens shut them out is biologically real.
+        - 
+- Key Insight:
+    - "Adolescence isn’t rejection—it’s rehearsal for belonging in the wider world."

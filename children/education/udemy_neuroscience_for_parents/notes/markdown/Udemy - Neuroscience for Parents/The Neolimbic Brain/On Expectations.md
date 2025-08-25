@@ -1,0 +1,11 @@
+- The Pygmalion Effect & Setting Expectations
+    - Children are highly attuned to expectations: They are experts at picking up subtle clues (words, gestures, attitudes) to understand what their parents and teachers expect from them, and they will subconsciously live up to those expectations.
+    - The Pygmalion Effect (Self-Fulfilling Prophecy): This is a well-studied and proven psychological phenomenon where higher expectations lead to an increase in performance.
+        - Example: In studies, teachers were given a random list of students falsely labeled as "high-potential." By the end of the year, those specific students showed the most improvement, even though teachers were told not to show favoritism. Their unconscious belief in the students' potential made it a reality.
+    - The Golem Effect (The Negative Side): The inverse is also true. Low expectations and negative stereotypes lead to poorer performance. This explains how stigmatization can hold children back.
+    - How to Be Demanding the Right Way: The key is not to be demanding about results (which can create insecurity and a sense that love is conditional), but to be demanding about effort and attitude.
+        - Focus on the process: Praise hard work, perseverance, and the willingness to try.
+        - Normalize mistakes: Teach that errors are a normal part of learning.
+        - Let them set the bar: Discuss expectations with your children, guide them to challenge themselves, and help them see their own potential. This gives them control and ownership over their success.
+    - The Core Message: A parent's belief in their child's potential is a powerful force. Looking at a child with love, compassion, and a belief in what they can become will directly help them achieve it.
+    - 

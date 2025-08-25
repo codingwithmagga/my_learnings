@@ -1,0 +1,31 @@
+- The Original Marshmallow Test (Walter Mischel)
+    - Kids offered 1 marshmallow now or 2 marshmallows later if they waited.
+    - Results:
+        - Some ate it immediately.
+        - Some tried to wait but gave in.
+        - A few resisted temptation and doubled their reward.
+    - 12-Year Follow-Up: Kids who waited had:
+        - Better grades
+        - Lower drug use
+        - Healthier weight
+        - 
+- The 2012 Revelation (Celeste Kidd)
+    - Willpower isn’t the only factor—trust in the environment matters more.
+    - Kids from unstable/unreliable backgrounds ate the marshmallow sooner (why wait if rewards might disappear?).
+    - Kids from stable/trustworthy homes waited (confidence that delayed rewards will come).
+    - 
+- How to Teach Delayed Gratification
+    - ✅ For Parents:
+        - Keep promises: If you say "we’ll get ice cream after homework," follow through.
+        - Make them earn rewards: "You can play video games after you clean your room."
+        - Enforce consequences: If they break a rule, calmly apply the pre-warned consequence (no empty threats).
+    - 🚫 Avoid:
+        - Giving in to begging/whining (teaches "persistence pays off NOW").
+        - Inconsistent rules (creates a "grab what you can" mindset).
+        - 
+- Why This Matters
+    - A child’s early worldview ("Can I trust the future?") shapes lifelong habits:
+        - Studying vs. procrastinating
+        - Saving money vs. impulsive spending
+        - Commitment in relationships vs. short-term gratification
+    - Rewiring is possible—but it’s easier to build the right foundation early.

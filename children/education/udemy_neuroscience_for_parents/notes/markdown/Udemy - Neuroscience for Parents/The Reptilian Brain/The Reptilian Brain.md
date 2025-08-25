@@ -1,0 +1,18 @@
+- What It Is
+    - Located deep in the skull, this ancient brain structure governs survival instincts (fight, flight, or freeze).
+    - Despite the nickname "reptilian brain," it’s shared by all vertebrates (not just reptiles).
+    - Works closely with the limbic system (especially the amygdala) to process threats.
+    - 
+- How It Works
+    - 3 Survival Responses:
+        - Fight: Confront the threat (e.g., aggression).
+        - Flight: Escape the danger (e.g., anxiety/avoidance).
+        - Freeze: Play dead or hide (e.g., helplessness/shutdown).
+    - Example: A caveman facing wolves might run (flight), fight with sticks (fight), or freeze to avoid detection.
+    - 
+- Modern-Day Activation
+    - Still triggers in life-or-death situations (e.g., jumping away from a speeding car).
+    - Also activates during stress (perceived threats, not real danger):
+        - Fight ⇒ Aggression (e.g., yelling after a stressful day).
+        - Flight ⇒ Anxiety (e.g., nervousness before a test).
+        - Freeze ⇒ Helplessness (e.g., procrastination or depression).

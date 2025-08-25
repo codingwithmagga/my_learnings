@@ -1,0 +1,27 @@
+- Role of the Neolimbic Brain
+    - Central hub for emotions, memories, and motivations.
+    - Acts as an autopilot—stores routines (e.g., walking, social codes) to free up mental energy.
+    - Records all life experiences (good and bad).
+    - 
+- Three Layers of Motivation
+    - (A) Intrinsic Motivations (Layer 1)
+        - Fixed from infancy (shaped by genes + early environment).
+        - Source of joy and energy (e.g., cleaning a room for fun).
+        - Forms core personality (aligned with 8 NBA personality types).
+    - (B) Extrinsic Motivations (Layer 2)
+        - Learned from environment (family, culture, media).
+        - Unstable and draining (e.g., studying to avoid punishment).
+        - Fades without external rewards or validation.
+    - (C) Obsessions (Layer 3)
+        - Compensate for emotional voids (e.g., obsessive love, workaholism).
+        - Tip beyond passion into addiction (e.g., stalking, extremism).
+        - Lead to loss of freedom and perpetual dissatisfaction.
+        - 
+- Key Contrasts
+    - Intrinsic: Sustainable, self-driven (e.g., pursuing a dream job).
+    - Extrinsic: Short-lived, externally pressured (e.g., chasing a high salary for approval).
+    - Obsessions: Destructive, compulsive (e.g., addiction to drugs, gambling, or ideologies).
+    - 
+- Why It Matters
+    - Living by extrinsic motives or obsessions breeds frustration and emptiness.
+    - Intrinsic alignment is key to lasting fulfillment.

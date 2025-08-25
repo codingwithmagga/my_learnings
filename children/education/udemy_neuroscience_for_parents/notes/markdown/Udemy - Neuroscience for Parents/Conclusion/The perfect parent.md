@@ -1,0 +1,12 @@
+- Kids are not that easily traumatized.
+- You cannot and should not protect children from everything.
+- Children need to learn how to deal with failure and pain.
+- As a parent, you will make errors and fail.
+- There will be moments of stress or clumsiness that lead to regret.
+- This is no big deal because nobody is perfect.
+- Parenting is difficult; there is no manual, and all kids are different.
+- What works with one child will not work with another.
+- Parenting is often chaos, drama, and tears.
+- Parents who stay home to raise small kids are at high risk for burnout.
+- You should not put an extra burden on yourself with unrealistic expectations.
+- You will make mistakes, and that is okay.

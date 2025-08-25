@@ -1,0 +1,28 @@
+- Core Function
+    - Purpose: Ensures group survival (vs. the reptilian brain’s focus on individual survival).
+    - Key Roles: Governs self-confidence and trust in others—dictating how we position ourselves socially.
+    - 
+- The Two Axes of Social Behavior
+    - (A) Self-Confidence Spectrum
+        - Assertiveness (Balanced):
+            - Healthy self-worth: can say yes or no without guilt.
+        - Dominance (Excess):
+            - "I deserve more than others" ⇒ manipulative charm ⇒ narcissism (extreme).
+            - Tactic: Uses people as tools for personal gain
+        - Submissiveness (Deficit):
+            - "I’m unlucky/broken" ⇒ blames self for failures ⇒ melancholic depression (extreme).
+    - (B) Trust Spectrum
+        - Assertiveness (Balanced):
+            - Rational trust; questions absurd claims (e.g., scams).
+        - Marginality (Deficit):
+            - Distrust ⇒ conspiracy theories ⇒ paranoia (extreme).
+        - Acquiescence (Excess):
+            - Blind trust ⇒ gullibility (e.g., falling for scams) ⇒ mystical delirium (extreme).
+            - 
+- How It Operates
+    - Territorial & Power-Driven:
+        - Dominant behaviors (peacocking, bullying) aim to intimidate but back down against firm resistance.
+        - Why? Like animals, the paleolimbic brain avoids prolonged conflict (too risky).
+    - Slow to Change:
+        - Self-confidence/trust levels evolve gradually (no "quick fixes").
+        - Exception: Trauma can shatter confidence instantly (but never boost it rapidly).

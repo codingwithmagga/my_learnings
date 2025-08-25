@@ -1,0 +1,35 @@
+- The Hypothalamus: Hunger’s Control Center
+    - The hypothalamus (in the primal brain) regulates:
+        - Hunger/thirst (survival instincts).
+        - Appetite (from a newborn’s cries to a teen’s bottomless stomach).
+    - Why it matters: The brain consumes 20% of the body’s energy despite being only 2% of its weight.
+    - 
+- Brain Food: Omega-3s & Healthy Fats
+    - 60% of the brain’s dry weight is fat—omega-3s (DHA/EPA) are critical for:
+        - Neuron formation.
+        - Memory, focus, and mood regulation.
+    - Best sources:
+        - Fatty fish (salmon, sardines).
+        - Nuts/seeds (walnuts, flaxseeds, chia).
+        - Grass-fed dairy/eggs (industrial feed strips omega-3s).
+    - Avoid: Processed fats (fast food grease) and excess sugar (harms neurogenesis).
+    - 
+- Babies & Breastmilk: The Omega-3 Link
+    - A baby’s brain grows to 55% of adult size in 3 months—requiring massive omega-3 intake.
+    - Breastmilk quality matters:
+        - A 2014 study tied omega-3 levels in breastmilk to higher academic performance (outranking school funding!).
+        - Mother’s diet = baby’s brain fuel. Supplements don’t match whole foods.
+        - 
+- Toxins to Avoid
+    - Alcohol during pregnancy: Slows fetal neurogenesis ⇒ cognitive impairment.
+        - Conception tip: Drinking pre-pregnancy (at 1-cell stage) is low-risk—no neurons exist yet.
+    - Sugar’s damage:
+        - Reduces new neuron growth.
+        - Triggers dopamine spikes (addictive).
+        - Weakens impulse control + memory.
+        - 
+- Parenting Food Habits
+    - Kids mimic diets: Serve veggies early/often to cultivate taste.
+    - Skip sugary drinks/snacks: Opt for water, nuts, fruit.
+    - Mediterranean diet ideal: Olive oil, fish, fresh produce.
+- 

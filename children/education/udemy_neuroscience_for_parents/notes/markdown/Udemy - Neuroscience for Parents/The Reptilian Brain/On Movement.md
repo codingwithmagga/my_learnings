@@ -1,0 +1,27 @@
+- The Misunderstood "Primitive" Brain
+    - Not primitive, but primal: It’s the oldest part of the brain evolutionarily, but its functions are far from basic.
+    - Critical roles: regulates heartbeat, breathing, body temperature, sleep, and movement coordination.
+    - Without it, we couldn’t survive—it’s the foundation for all higher brain functions.
+    - 
+- Why Do We Even Have a Brain?
+    - Surprising answer: The brain evolved primarily to coordinate movement, not for abstract thinking.
+        - Plants don’t move (no brain); 
+        - Even simple animals (like worms) developed nervous systems to wiggle.
+    - Proof: The cerebellum ("small brain"):
+        - Only 10% of brain volume but contains 50% of all neurons.
+        - Controls balance, motor skills, and muscle coordination.
+        - Evolved 400 million years ago (vs. humans’ 300,000-year existence).
+        - 
+- Movement is brain fuel for kids
+    - Babies’ cerebellums grow rapidly in their first 3 months as they learn to move.
+    - Modern problem: We force kids to sit still (school, TV) despite their brains being wired for constant motion.
+        - Criticizing kids for fidgeting ignores biology—movement is natural and healthy.
+    - Key insight: A sedentary lifestyle stifles brain development.
+    - 
+- Actionable Advice
+    - Prioritize movement:
+        - Outdoor play, sports, running—anything but prolonged sitting.
+        - Limit screen time (more on this later).
+    - Reframe expectations:
+        - Restlessness isn’t disobedience; it’s the brain’s demand for activity.
+        - Movement isn’t just for fitness—it’s essential for neural growth.

@@ -1,0 +1,31 @@
+- The "Terrible Twos" Explained
+    - Brain shift: Around age 2–3, the limbic brain (social/power center) activates—turning your sweet toddler into a tiny tyrant.
+    - Why? They’re learning to navigate social hierarchies (sharing, dominance, boundaries)
+    - Behavioral whiplash: One moment cuddly (Mogwai mode), the next defiant (Gremlin mode).
+    - 
+- Survival Guide for Parents
+    - (A) The Non-Negotiables
+        - You’re the alpha: No debates. Use clear, firm commands ("No biting. Time-out now.").
+        - No explanations: Their brain can’t process logic yet. "Because I said so" is valid.
+        - Manipulation tactics: Expect tears, blackmail ("I don’t love you!"), or charm offensives. Don’t cave.
+    - (B) The Art of Strategic Surrender
+        - Let them win small battles:
+            - Example: Allowing your child to dress themselves (even if slow) builds autonomy and self-worth.
+            - Trade-off: Wake up earlier or skip breakfast (natural consequences teach responsibility).
+            - 
+- Why This Phase Matters
+    - Limbic wins shape personality:
+        - Too many parental "wins" ⇒ submissiveness (low self-esteem).
+        - Too many child "wins" ⇒ dominance (entitlement).
+    - Goal: Balance = assertiveness (healthy confidence + respect for rules).
+    - 
+- Real-Life Scripts
+    - When they test limits:
+        - Gremlin: Throws toy.
+        - You: "Toys are for throwing. You choose: Play nicely or lose it." (Follow through instantly.)
+    - When they manipulate:
+        - Gremlin: "I hate you!"
+        - You: "I love you, but we don’t hit. Time-out." (Stay calm—they’re probing for weakness.)
+        - 
+- Pro Tip:
+    - "Parenting a limbic toddler is like training a puppy—consistency, not cruelty, builds trust."

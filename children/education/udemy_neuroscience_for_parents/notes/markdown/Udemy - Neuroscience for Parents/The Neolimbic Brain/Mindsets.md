@@ -1,0 +1,18 @@
+- The Growth Mindset vs. The Fixed Mindset in Education
+    - The Core Conflict: The author had a disagreement with his wife about exam preparation. He told his kids that effort (the process) was more important than the grade (the result), even if they failed. His wife believed this approach would make the kids not care about their results.
+    - Carol Dweck's Mindset Theory: The author explains this using psychologist Carol Dweck's framework:
+        - Fixed Mindset: Focuses on results and innate talent. Leads to risk-aversion, fear of failure, and giving up easily when things get hard.
+        - Growth Mindset: Focuses on the process, effort, and learning. Embraces challenges, sees failure as feedback, and values perseverance.
+    - Why the Growth Mindset is Better:
+        - Reduces Pressure: Kids are less stressed during exams because their self-worth isn't tied to a single result.
+        - Builds Resilience: It teaches perseverance, which is essential for long-term success (a concept known as "grit").
+        - Author's Personal Proof: The author used a growth mindset to build his business ("The Brain Academy"), persevering through 9 months with no sales and celebrating small progress ($55), which eventually led to success.
+    - Applying This to School Choice:
+        - The author discovered that prestigious "big name" schools often promote a fixed mindset: they focus on grades, competition, and preparing students for the "rat race," with little emphasis on personal development or happiness.
+        - He found a smaller, less famous school that actively promotes a growth mindset through its pedagogy:
+            - Personalized grading (comparing a child to their past self, not others).
+            - Evaluating year-long effort (50% of the grade comes from homework, class attitude, and tests, not just final exams).
+            - Teaching independent critical thinking, even though it's harder for teachers (it empowers students and prepares them for real-world problem-solving).
+    - The Final Message for Parents:
+        - Don't choose a school based on its reputation alone. Investigate its educational philosophy.
+        - A school that fosters a growth mindset is better at preparing children for a fulfilling and successful life by teaching them to love learning, persevere, and think independently, rather than just how to comply and get good grades.

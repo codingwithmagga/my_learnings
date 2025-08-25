@@ -1,0 +1,39 @@
+- Welcome
+    - Importance of Neuroscience for Parents
+        - A child’s brain development is significantly shaped by their environment and experiences, especially in their early years.
+        - Studies show that the quality of care at just 3.5 years old can predict with 77% accuracy whether a child will later drop out of high school.
+        - Parents have a dual responsibility: They determine 50% of their child’s genes and shape their environment, which in turn influences gene activation.
+        - 
+    - Extreme Effects of Neglect
+        - An extreme example shows that severe neglect can lead to massive cortical atrophy (brain shrinkage).
+        - However, everyday parenting mistakes (e.g., occasional yelling) do not have such drastic consequences.
+        - 
+    - How Parenthood Affects the Parent’s Brain
+        - Parents experience reduced neurogenesis (growth of new brain cells) due to stress.
+        - In pregnant women, the brain temporarily shrinks but returns to normal size after birth.
+        - Oxytocin (the "bonding hormone") and vasopressin play a key role:
+            - They strengthen the bond with the child.
+            - They trigger neural reorganization, helping parents adapt to new challenges.
+    - 
+    - Goals of the "Neuroscience for Parents" Course
+        - Parents will learn how to:
+            - Control their own emotions in challenging situations.
+            - Recognize which part of their child’s brain is active and adjust communication accordingly.
+            - Respond appropriately to behaviors to support balanced personality development.
+- How to take this course
+    - The Challenges and Rewards of Parenting
+        - Studies show that couples without children report higher happiness levels than those with kids—at least while the children are still living at home. Parenting is hard, with sleepless nights, stress, and conflicts.
+        - But there’s good news: A recent study found that parents whose children have moved out are ultimately happier than childless couples. The struggles do pay off in the long run.
+        - Why is parenting so tough? Because children’s brains work differently than adults’. They don’t reason, behave, or process emotions the same way. Understanding this can make parenting feel less frustrating.
+    - 
+    - How This Course Will Help
+        - We’ll focus on practical neuroscience—not complex brain anatomy, but what actually matters for parenting.
+        - The course follows the Neurocognitive and Behavioral Approach (NBA), simplified for real-world use. No jargon, just actionable insights.
+        - Key brain areas we’ll cover:
+            - Primitive brain (Section 2): Instincts and survival behaviors.
+            - Limbic brain (Section 3): Emotions, trust, and social bonding.
+            - Neocortex (Sections 4–5): Advanced thinking, personality, and executive functions.
+        - Each section includes:
+            - Theory: How the brain structure works.
+            - Practical tips: How to apply this knowledge with your child.
+        - Goal: Help you communicate effectively, manage emotions, and nurture your child’s potential.

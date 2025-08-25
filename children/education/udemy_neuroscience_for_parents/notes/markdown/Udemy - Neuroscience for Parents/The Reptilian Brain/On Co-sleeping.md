@@ -1,0 +1,30 @@
+- The Biological Norm
+    - Humans are the only mammals that don’t routinely sleep with their young—every other species does.
+    - Evolutionary perspective: Close contact at night promotes safety, bonding, and emotional security.
+    - 
+- Debunking Myths
+    - Myth: "Co-sleeping creates clingy, insecure kids."
+        - Reality: Studies show opposite results—children who co-sleep (on their terms) tend to be:
+            - More independent (confidence to explore, knowing their "safe base" is nearby).
+            - Fewer behavioral issues (less anxiety, better emotional regulation).
+            - 
+- Risks vs. Benefits
+    - For babies (<1 year):
+        - Risk: Bed-sharing can increase SIDS (5x higher in some studies).
+        - Safer alternative: Room-sharing (crib/bassinet next to parents’ bed).
+    - For toddlers/kids:
+        - Benefits: Comfort, emotional connection, easier nighttime soothing.
+        - Parental trade-off: Disrupted sleep (kicks, rolling, etc.).
+        - 
+- Practical Solutions
+    - The "Hybrid" Rule (tested by Gregory’s family):
+        - "Everyone starts the night in their own bed. If you wake up, you can join us."
+        - Why it works:
+            - Teaches independent sleep initiation.
+            - Allows comfort-seeking after waking (best of both worlds).
+    - Consistency is key:
+        - No exceptions = no confusion. Kids adapt quickly when boundaries are clear.
+        - 
+- Parental Well-Being Matters
+    - If co-sleeping drains you: It’s okay to prioritize your sleep (happy parent = happy child).
+    - Cultural note: In many societies (e.g., Japan), family beds are the norm—proof there’s no "one right way."

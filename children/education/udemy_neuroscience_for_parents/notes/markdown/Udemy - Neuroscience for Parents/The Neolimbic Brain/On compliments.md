@@ -1,0 +1,14 @@
+- How to Compliment Your Kids Effectively
+    - The Core Dilemma: Parents are often caught between two fears: praising too much creates arrogant, lazy children, while not praising enough makes children feel unloved and unmotivated. The solution is finding the right balance and, most importantly, praising the right way.
+    - Praise Effort, Not Innate Traits: What you praise reinforces a child's identity.
+        - Praise EFFORT (Good): Saying "You worked so hard on that!" reinforces an identity as a hard worker. This fosters a growth mindset, making children willing to take on challenges and see mistakes as learning opportunities.
+        - Praise INTELLIGENCE/TALENT (Bad): Saying "You're so smart!" reinforces the belief that achievement is an inborn trait. This fosters a fixed mindset, making children avoid risks and challenging tasks for fear of failing and no longer appearing "smart."
+    - The Simple Rule: Focus your praise on the process and the effort, not on the results or unchangeable personality traits.
+    - Examples:
+        - Instead of: "You're the best!" ⇒ Say: "You've worked so hard!"
+        - Instead of: "That's beautiful!" ⇒ Say: "You really applied yourself to that drawing!"
+        - Instead of: "You're so smart!" ⇒ Say: "You really like to learn new things, don't you?"
+    - Don't Overdo It:
+        - Praise releases dopamine (a feel-good chemical), and children can build a tolerance, needing more and more praise for the same effect.
+        - The biggest risk is that a child might start doing an activity only for the praise rather than for the intrinsic joy of the activity itself. This can cause them to abandon talents they naturally enjoy once the external validation stops.
+- Final Takeaway: Praise is powerful. Use it wisely to build resilient, motivated children by focusing on their effort and process, and avoid creating praise-dependent kids by overusing compliments on innate qualities.

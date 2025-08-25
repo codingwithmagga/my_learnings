@@ -1,0 +1,18 @@
+- The Science Behind It
+    - A study found that climbing trees improves working memory by 50%—the mental "scratchpad" we use for problem-solving and learning.
+    - Why? Each step forces the brain to:
+        - Continuously update spatial awareness.
+        - Adapt to unpredictable terrain (branches, balance)
+        - Coordinate complex movements in real time.
+        - 
+- Beyond Trees: Dynamic Activities That Help
+    - Balancing on beams (or curbs/logs).
+    - Carrying awkward objects (e.g., a wobbly stack of toys).
+    - Navigating obstacle courses (natural or DIY).
+    - Unpredictable movement > repetitive drills (e.g., soccer drills vs. free play).
+    - 
+- Why This Matters for Kids (and You!)
+    - Working memory is critical for:
+        - Academic success (following instructions, math, reading).
+        - Emotional regulation (pausing before reacting).
+    - Modern life lacks 3D movement—climbing trees is a full-body, brain-engaging workout.

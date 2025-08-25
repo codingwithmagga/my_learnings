@@ -1,0 +1,12 @@
+- Rethinking Academic Success & Effective Learning
+    - Perfection is Overrated: Straight A's are not necessary for success. There is no strong correlation between high IQ/Ivy League education and major life outcomes like wealth, relationship quality, or parenting skills. IQ only predicts about 4% of job performance.
+    - Parents > School: A child's parents and community have a greater impact on their achievement than the school they attend.
+    - Two Most Effective Learning Strategies (From a Brain Perspective):
+        - Force Mistakes: Let your child make mistakes in a safe environment (e.g., while studying with you). The emotional experience of getting something wrong and correcting it is a powerful learning tool embedded by evolution.
+        - Retrieve Knowledge: Actively asking questions and having your child recall information strengthens the neural pathways for that knowledge, making it stick. This is more effective than passive re-reading.
+    - Practical Tips for Parents:
+        - Test them: After they study, quiz them to force retrieval.
+        - Embrace failure: Let them fail with you at home to avoid failing in class.
+        - Space it out: Repetition over time (e.g., 5 short sessions) is far better than one long cramming session.
+        - Change locations: Studying in different places (living room, kitchen, garden) can improve retention.
+        - Prioritize sleep: Sleep improves memory by at least 15%, along with mood and immunity. Ensure they get enough.
