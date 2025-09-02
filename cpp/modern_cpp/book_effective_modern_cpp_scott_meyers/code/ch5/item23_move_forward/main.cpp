@@ -62,6 +62,8 @@ int main()
     String str { "annotation_text" };
     Annotation annotation(std::move(str));
 
+    std::cout << std::endl;
+
     Widget w;
     logAndProcess(w);
     logAndProcess(std::move(w));
