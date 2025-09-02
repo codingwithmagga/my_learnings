@@ -21,3 +21,7 @@ In the *notes* folder you can find my notes from Remnote as Remnote file, markdo
 ## Remarks
 
 I did not create flashcards for Remnote in this course as I don't think this would be really useful.
+
+## Course certificate
+
+<img src="./udemy_certificate.jpg" alt="Udemy Certificate" width="400" />
