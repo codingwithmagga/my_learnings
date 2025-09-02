@@ -44,3 +44,6 @@ add_subdirectory(ch4/item19_shared_ptr)
 add_subdirectory(ch4/item20_weak_ptr)
 add_subdirectory(ch4/item21_make_fcts)
 add_subdirectory(ch4/item22_pimpl_idiom)
+
+# Chapter 5 - Move and forward
+add_subdirectory(ch5/item23_move_forward)
