@@ -48,3 +48,4 @@ add_subdirectory(ch4/item22_pimpl_idiom)
 # Chapter 5 - Move and forward
 add_subdirectory(ch5/item23_move_forward)
 add_subdirectory(ch5/item24_universal_references)
+add_subdirectory(ch5/item25_move_forward_usage)
