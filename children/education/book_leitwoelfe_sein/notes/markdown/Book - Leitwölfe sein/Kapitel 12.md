@@ -1,0 +1,11 @@
+- Fallgruben für Leitwölfe >>>
+    - Es ist klüger, so viel wie möglich über sich selbst und über das eigene Kind herauszufinden und seinen inneren Vater/seine innere Mutter zu entdecken, als irgendeinem Drehbuch (also einer Erziehungsmethode) zu folgen.
+    - Es gibt viele Belege dafür, dass Authentizität in nahen persönlichen Beziehungen zu einem Schlüsselbegriff wird und es einen engen Zusammenhang zwischen Authentizität und Führung gibt.
+    - Authentisch zu sein bedeutet ganz einfach, in der Lage zu sein, anderen durch die Art und Weise, wie man spricht und sich verhält, mitzuteilen, wer man ist, im Gegensatz zum Agieren in einer Rolle, die andere Menschen von Ihnen erwarten oder vielleicht sogar fordern.
+    - Leitwölfe bemühen sich um eine sozialfreundliche Stimmung in der Familie: eine anspruchsvolle Aufgabe, die Authentizität statt purer Nettigkeit erfordert.
+    - 5 Fallgruben, die das Zusammenleben erschweren:
+        - Neuromantischer Stil – Harmonie über alles: Lässt keine negativen Gefühle zu. Die Unterteilung in positiv und negativ ist bereits schlecht. Kinder lernen nicht, mit allen Gefühlen umzugehen.
+        - Curling-Elternschaft: Konfliktvermeidung
+        - Weg des geringsten Widerstands: Inkonsequenz und nie Nein sagen
+        - Überwachung total: Starke Kontrolle und Ängste
+        - Mein Kind als Projekt: starre Vorstellungen für das Leben der Kinder

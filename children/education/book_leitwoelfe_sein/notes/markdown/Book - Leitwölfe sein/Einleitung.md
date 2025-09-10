@@ -1,0 +1,5 @@
+- Einleitung >>>
+    - In diesem Buch geht es darum, seine Kinder kennenzulernen, ihre persönlichen Grenzen kennenzulernen, sich diesen gegenüber respektvoll zu verhalten und mit seinen Kindern so authentisch wie möglich umzugehen.
+    - Kinder brauchen Eltern als Leitwölfe, damit sie sich im Dickicht des Lebens zurechtfinden. Sie brauchen Eltern, die manchmal – es gibt da keine genaue Zahl – klare Signale senden.
+    - Es gibt die „autoritäre“, die „faire, freie“ Zusammenarbeit, die „demokratische“ Art der Erziehung und irgendwie alles dazwischen. Alles passt nicht 100 %, es ist ein neues Denken erforderlich.
+    - Es gibt kein Patentrezept, wenn es um menschliche Beziehungen geht.

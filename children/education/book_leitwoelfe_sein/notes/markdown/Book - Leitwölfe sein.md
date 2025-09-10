@@ -1,0 +1,193 @@
+- Einleitung
+    - Einleitung >>>
+        - In diesem Buch geht es darum, seine Kinder kennenzulernen, ihre persönlichen Grenzen kennenzulernen, sich diesen gegenüber respektvoll zu verhalten und mit seinen Kindern so authentisch wie möglich umzugehen.
+        - Kinder brauchen Eltern als Leitwölfe, damit sie sich im Dickicht des Lebens zurechtfinden. Sie brauchen Eltern, die manchmal – es gibt da keine genaue Zahl – klare Signale senden.
+        - Es gibt die „autoritäre“, die „faire, freie“ Zusammenarbeit, die „demokratische“ Art der Erziehung und irgendwie alles dazwischen. Alles passt nicht 100 %, es ist ein neues Denken erforderlich.
+        - Es gibt kein Patentrezept, wenn es um menschliche Beziehungen geht.
+- Kapitel 1
+    - Kinder wollen Erwachsene, die die Führung übernehmen >>>
+        - Kinder kennen nur ihre Wünsche und Gelüste, aber nicht ihre grundlegenden Bedürfnisse.
+        - Man benötigt eine qualifizierte Anleitung, um sich an eine Kultur anzupassen – an welche Kultur auch immer, sowohl in der Gesellschaft als auch innerhalb der Familie.
+        - Führung und Erziehung sind verschiedene Dinge.
+        - Die ideale Führung durch einen Erwachsenen lässt sich wie folgt beschreiben: proaktiv, empathisch, flexibel, dialogbasiert und fürsorglich.
+            - Proaktiv: Handeln nach Werten und Zielen und dabei nicht nur auf das, was das Kind sagt oder tut, zu reagieren.
+            - Empathisch: Fähigkeit, einen anderen Menschen wirklich wahrzunehmen.
+            - Flexibel: Berücksichtigung von Veränderung und Entwicklung beim Kind, nicht stur konsequent sein.
+            - Dialogbasiert und fürsorglich: Würde, Bedürfnisse, Gedanken und Ideen des Kindes ernst nehmen.
+            - Der wichtigste Aspekt bei dieser neuen Art der Führung ist jedoch die persönliche Autorität.
+                - Persönliche Autorität steht im Gegensatz zur rollenbasierten Autorität (Eltern, Lehrer, Polizist …). 
+                - Persönliche Autorität gründet sich auf Selbstwertgefühl, Selbstbewusstsein, Selbstachtung, Selbstvertrauen und auf die Fähigkeit, persönliche Grenzen und Worte ernst zu nehmen und mit Empathie und Respekt zu begegnen.
+        - Im Großen und Ganzen kann man sich Familie als einen Raum vorstellen, in dem jedes Familienmitglied so viel wie möglich von dem bekommt, was es für die bestmögliche Qualität seines Lebens braucht, und so wenig wie möglich von dem, was nicht gut dafür ist.
+        - Es sollte ein Gleichgewicht herrschen zwischen dem Bedürfnis der Gemeinschaft und dem Bedürfnis des Einzelnen.
+        - Perfekte Eltern ⇒ absurde Vorstellung
+        - Beste Eltern ⇒ Eltern, die Verantwortung für Fehler übernehmen.
+        - Nicht schuldig fühlen (als Eltern), aber auf Feedback (des Kindes) achten und es ernst nehmen.
+        - Erwachsene sind zu 100 % verantwortlich für die Qualität einer längeren Beziehung zwischen Erwachsenem und Kind.
+        - Prozess gegenseitigen Lernens zwischen Kindern und Erwachsenen. Sie sind nicht gleichberechtigt (zu großer Machtunterschied), jedoch gleichwürdig.
+        - Kinder haben kein Interesse daran, Macht über ihre Eltern zu haben. Kommt es zu einem Machtkampf, will das Kind meist seine persönliche Integrität schützen.
+- Kapitel 2
+    - Sie können Ihrem Kind vertrauen >>>
+        - Reaktionen von Kindern sind immer sinnvoll. Es ist ein Feedback für Erwachsene, oft unmöglich zu entschlüsseln, aber es steht immer für Kooperationsbereitschaft.
+        - Jedes Kind will kooperieren.
+        - Führung sollte auf Vertrauen und Empathie basieren, das ist familienfreundlich.
+        - Kinder lügen (kein Flunkern, wirkliche Lügen), wenn sie die Erfahrung gemacht haben oder das Gefühl haben, dass ihre Eltern mit der Wahrheit nicht umgehen können.
+        - Wir loben die Kinder zu viel, anstatt zu sagen: „Ich liebe dich.“
+        - Wir müssen unsere richtige Sprache sprechen, damit die Gefühle richtig herüberkommen, etwa bei Trennung, Tod, Krankheit … Eine Ausnahme ist etwa, wenn man dem Kind etwas beibringen will, dann hilft eine kindgerechte Sprache.
+    - 
+- Kapitel 3
+    - Der Leitwolf und das innere Kind >>>
+        - Kinder können unter die Haut gehen und Gefühle und vergangene Erfahrungen berühren, die wir, so gut wir konnten, unterdrückt haben bzw. von denen wir nicht einmal wissen.
+        - Oft wird dies auch das innere Kind genannt. Wir alle nehmen mindestens eins mit uns ins Erwachsenenalter.
+        - Lebensstrategie aus der Ursprungsfamilie passt nicht in die neue Familie. Herausforderung: Lebensstrategie finden, die uns die Lebensqualität ermöglicht, die wir uns wünschen und verdient haben.
+        - Jedes Mal, wenn sie mit ihrem Kind einen Konflikt haben, ist das eine Gelegenheit, das für ihr inneres Kind zu tun, was ihre Eltern nicht tun konnten.
+        - Die Qualität der Elternschaft wird bestimmt durch die Frage, inwieweit man in der Lage ist und gewillt ist, die Herausforderung anzunehmen, vor die die Kinder einen stellen, und sie in ein besseres Leben umzuwandeln.
+            - ⇒ Es reicht, wenn man dies hin und wieder mal schafft.
+        - 
+- Kapitel 4
+    - Weibliche und männliche Führung >>>
+        - Studien zeigen, dass Kinder, die Zugang zu beiden Eltern haben, besser zurechtkommen und sich harmonischer entwickeln.
+        - Das Wohlbefinden von Kindern, ihre Entwicklung und Lebensqualität, hängen davon ab, was in der ganzen Familie los ist und wie es allen Familienmitgliedern geht – als Einzelperson und als Gemeinschaft.
+        - Lassen Sie ihr Kind jedes Mal, wenn Sie zusammenkommen, die Freude in ihrem Blick sehen.
+        - Kinder brauchen nicht so viel Aufmerksamkeit, wie sie fordern.
+        - Es wird nichts Schlimmes geschehen, wenn man zu Kindern sagt: „Nein ich möchte jetzt nicht mit dir spielen. Ich möchte meine Ruhe.“
+        - Kinder lernen daraus auch, aus gutem Gewissen Nein sagen zu können.
+        - Falls man immer füreinander da ist bzw. sein will, so ist das selbstzerstörerisch.
+    - 
+- Kapitel 5
+    - Frau und Mutter sein >>>
+        - Ungesunde Nähe und Abhängigkeit zwischen Kind und Mutter entwickeln sich nur dann, wenn die Beziehung zwischen Mann und Frau unzulänglich ist, weil der Mann nicht an seinem Platz ist.
+        - Unsere Fähigkeit, andere zu lieben, hängt davon ab, inwieweit wir uns selbst leiden können.
+        - Selbstaufopferung ist eine Grundvoraussetzung, um das Überleben eines Kindes zu ermöglichen – aber nur in den ersten 18 Monaten! Danach ist es Zeit, dass Sie Ihre eigenen Grenzen und Bedürfnisse wieder einfordern und, was noch wichtiger ist, dass Sie diese noch besser kennenlernen in der Entwicklung der Beziehung zu Ihrem Kind.
+        - Kinder brauchen eine Lebensbedingung, in der jeder genügend Raum hat, um zu sein, wie er ist, um in seiner Individualität zu wachsen und sich weiterzuentwickeln. Kinder brauchen Vorbilder, um zu lernen, wie man auf eine Weise lieben kann, die nicht selbstzerstörerisch ist.
+        - Das wertvollste Geschenk, das sie ihrem Kind geben können, ist, sich gut um sich selbst und die Paarbeziehung zu kümmern. Ihre Integrität zu opfern, ist keine Liebe, es ist nur ein Opfer, und es beeinflusst alle Mitglieder einer Familie in negativer Weise, auch wenn sie es aus Liebe tun.
+        - Wir alle – Erwachsene und Kinder – müssen in der Lage sein, persönliche Entscheidungen auf der Basis dessen zu treffen, wer wir sind (obwohl wir dazu erzogen worden sind, das Gegenteil zu glauben).
+        - Das Geheimnis erfolgreicher Beziehungen mit Partnern und Kindern ist nicht so sehr, was wir tun, sondern wie und wann wir es tun.
+        - Wir versuchen, eine Subjekt-Subjekt-Beziehung (kein Objekt!) zwischen Erwachsenen und Kindern umzusetzen.
+        - Persönliche Integrität besteht aus persönlichen Grenzen, Werten und Gefühlen jedes einzelnen Menschen. Dem Recht:
+            - auf Ruhe, wenn wir erschöpft sind.
+            - zu lieben und aufmerksam zu sein, wenn wir das wollen.
+            - Nein zu sagen
+            - für unsere Werte einzustehen und zu kämpfen
+            - zu weinen, wenn wir traurig sind
+            - zu schreiben, wenn wir wütend sind.
+            - unsere Träume und Sehnsüchte zu erfüllen.
+        - Sie müssen nicht aufhören, ihre Mutter zu lieben, aber lassen Sie nicht zu, dass die Liebe zu ihr sie daran hindert, ihr eigenes Leben zu verbessern.
+        - Versuchen Sie nicht, Kinder nach ihrem Wunschbild zu formen, sondern hören Sie ihnen zu, lernen Sie sie wirklich kennen, und lieben Sie sie dafür, wer sie sind.
+        - Die Fähigkeit, sich anzupassen, ist wichtig für unser aller Leben, egal wie alt wir sind, aber wenn man keine Verbindung zu sich selbst hat, führt sie nur zu Leid und Elend.
+        - Beliebt zu sein und gemocht zu werden, ist einfach. Mit sich selbst zufrieden zu sein und sich selbst zu mögen, ist viel schwerer.
+- Kapitel 6
+    - Wo sind die Männer und Väter? >>>
+        - Die Frage, was es heißt, Vater zu sein und nicht nur die Rolle des Ernährers und Versorgers auszufüllen, bekommt langsam mehr Gewicht.
+- Kapitel 7
+    - Wollen wir wirklich starke und gesunde Kinder? >>>
+        - Was macht eine gute bzw. erwachsene Führung aus? 
+            - ⇒ Persönliche Verantwortung, Integrität, Authentizität, Verfügbarkeit und Verbundenheit bei den Eltern bzw. Beziehungskompetenz bei den Fachkräften.
+    - 
+- Kapitel 8
+    - Was hat Macht mit Führung zu tun? >>>
+        - Wir müssen die Kunst des Dialogs lernen, um den Filter zu entfernen, der uns von echtem Kontakt zu unseren Kindern abhält. Der Filter besteht aus dem Gefühl der Verpflichtung eine elterliche Rolle spielen zu müssen.
+        - Das wirkliche Paradoxe im Hinblick auf das Haben uns Ausüben von Macht: führen und doch verletzlich sein.
+        - Die vollkommen abwegige Idee, dass starke Individuen für die Gruppe gefährlich sind und die Solidarität innerhalb von Familien und der Gesellschaft gefährden, vergiftet noch immer das Denken vieler Menschen.
+        - 
+    - 
+- Kapitel 9
+    - Die Zukunft ihres Kindes ist jetzt >>>
+        - Physisches Wohlbefinden und soziale Kompetenzen sind wichtige Voraussetzungen, um lernen zu können. Sie sind der optimale Schutz gegen jegliche Art von Gefahren oder Risiken welche die Zukunft bringen könnte
+            - Verhinderung von Abhängigkeiten, Missbrauch, Gewalt, Essstörungen usw.
+            - Weit aus effektiver als Grenzen setzen, Regeln, Strafen, Moralisieren oder Bewertungen
+        - Bestmöglicher Schutz (gegen psychologische Probleme) besteht aus folgenden Elementen
+            - Ein gesundes Gefühl zu einem Selbst entwickeln.
+            - Sich als wertvoll, für die Menschen, die wir lieben, erachten. 
+            - Dass wir es wert sind, geliebt zu werden.
+            - Die Möglichkeit, unser Leben in vollem Umfang zu leben, unsere Potenziale bestmöglich zu entfalten, sowohl intellektuell als auch emotional und psychisch. All das unterstützt unseren Selbstwert.
+            - ⇒ Diese Qualitäten entwickeln sich in erster Linie in der Familie.
+        - Kinder haben einen hohen Stressfaktor, wenn sie zu vielen Ambitionen und Zielen ausgesetzt werden. Sie brauchen die Erfahrung und Fähigkeit, ihrem Innersten Aufmerksamkeit (heute auch als „Achtsamkeit“ bekannt) zu schenken und sich zu entspannen.
+        - Es ist nichts daran auszusetzen, sich Ziele zu setzen oder einen Traum zu verfolgen. Jedoch sollte man sich auch auf das Hier und Jetzt konzentrieren können.
+        - Gegenwärtig sind Kinder einem Zuviel an „Erziehung“ ausgesetzt.
+        - Lösungsansätze
+            - Zeit mit dem Kind verbringen ohne „Lernspielzeug“. Das Kind wahrnehmen, wie es ist, nicht belehren oder erziehen, sondern still sein. 
+            - Ist einem Kind langweilig, sagen Sie: "Gratuliere dir, mein Freund. Es wird spannend sein zu sehen, welche Ideen du haben wirst." Langeweile hält kaum länger als 20 Minuten, auch bei Erwachsenen.
+            - Erzählen Sie ihrem Kind abends im Bett von ihrem Tag. Ihr Kind wird automatisch auch von seinem Tag erzählen, da sind keine Rückfragen nötig.
+            - Kind spielen lassen, die Beschäftigung nicht steuern.
+            - Stillen und Pausen sind in Ordnung,. Weniger „überverantwortlich sein“. Wenn Sie eine persönliche Beziehung entwickeln möchten, so müssen Sie sich selbst zeigen und verletzlich sein.
+    - 
+- Kapitel 10
+    - 
+    - Werte, die Führung schaffen >>>
+        - Es ist wichtig, über die eigenen sowie die Worte des Partners nachzudenken.
+        - Vier grundlegende Werte: Gleichwürdigkeit, Integrität, Authentizität, persönliche Verantwortung. Diese sind alleine nicht ausreichend, weitere persönliche Werte sind notwendig.
+        - Lassen Sie ihre Werte nie wichtiger werden als die Menschen, die sie lieben.
+        - Eigene Wertvorstellungen liefern Antworten auf Fragen, die kein Außenstehender beantworten kann, etwa: „Mein Kind will seine Hausaufgaben nicht machen, was mache ich?“, oder „Mein Kind will nicht schlafen, was mache ich?“.
+        - Für Kinder spielen Werte eine enorme Rolle.
+        - Gleichwürdigkeit bedeutet, dass ich als Partner/Partnerin oder als Vater/Mutter meinen Partner oder mein Kind genauso ernst nehmen sollte wie mich selbst. Ich muss versuchen, die Bedürfnisse, Wünsche, Träume und Ambitionen meiner Frau, meines Mannes oder meines Kindes einzubinden, statt sie zu ignorieren oder zu sagen: „Das kommt nicht infrage“ oder „Darüber können wir reden, wenn du erwachsen bist.“
+        - Integrität ist nicht nur moralische Integrität, d. h., man handelt auch so, wie man redet. Es umfasst auch die Übereinstimmung unserer persönlichen Grenzen, Bedürfnisse, Gefühle und so weiter mit unserem Tun und Handeln.
+        - Kinder haben von Geburt an persönliche Grenzen. Wie gehen wir mit diesen Grenzen um?
+        - Grenzen setzen heißt eigentlich, Regeln aufzustellen und zu befolgen.
+        - Es gibt heute viele Eltern, die den Unterschied zwischen Wünschen und Bedürfnissen nicht mehr kennen. Sie erfüllen einfach alle Wünsche.
+        - Sobald man anfängt, übereinander zu reden, tut man sich weh. Und genau das machen wir täglich mit unseren Kindern.
+        - Definitionsmacht der Erwachsenen: „Du bist dieses oder jenes …“ oder „Jetzt bist du so und so …“.
+        - Man sollte nicht „Ich möchte …“ oder schlimmer noch „Mama/Papa möchte …“ sagen.
+        - Kinder ermöglichen es, dass Eltern sich fragen: Wer bin ich eigentlich? Was will ich und was nicht? Statt zu fragen: „Was hätte ich gern, wenn es möglich wäre?“
+        - Verantwortung heißt auch, den Kindern gegenüber für sich selbst verantwortlich zu sein.
+        - Kinder müssen nicht unbedingt „schwarz“ bekommen, wenn sie auf die Frage „Möchtest du Schwarz oder Weiß haben?“ antworten. Man darf auch eigene Wünsche einbringen und einen Kompromiss finden.
+- Kapitel 11
+    - Erfolg durch Anpassung: unsere kollektive Illusion >>>
+        - Ein starkes und gesundes Kind ist in erster Linie ein Kind mit einem gesunden Selbstwertgefühl und so viel Selbstvertrauen, wie ihm seine Fähigkeiten und Begabungen aufzubauen erlauben.
+        - Ein gesunder Selbstwert bedeutet, eine nüchterne, differenzierte und annehmende Wahrnehmung desjenigen, der wir sind, zu haben – ein realistisches und nicht wertendes Selbstbild.
+        - Ein gesunder Selbstwert ist das effizienteste psychosoziale Immunsystem, das wir kennen. Es schützt vor Drogenmissbrauch, Essstörungen, Ritzen, Selbstmord und Selbstmordabsichten, Kriminalität, Gewalt und all den anderen Dingen, von denen wir uns wünschen, dass unsere Kinder niemals dazu neigen mögen.
+        - Kinder haben ein nahezu unvorstellbares Verlangen nach Kooperation.
+        - Die beste Form der Kindererziehung ist der Dialog, in dem sich beide Seiten besser kennenlernen und in dem sich Kinder die Weisheit und Erfahrungen ihrer Eltern freiwillig zunutze machen können.
+        - Es ist wichtig zu lernen, was man braucht und was man will. Existenziell wissen wir nicht, was wir brauchen. Wir lernen es aus Erfahrung.
+        - Es gibt einen Unterschied zwischen dem, was man will, und dem, wozu man Lust hat. Oft muss man tun, wozu man keine Lust hat, um zu erreichen, was man will.
+        - 
+- Kapitel 12
+    - Fallgruben für Leitwölfe >>>
+        - Es ist klüger, so viel wie möglich über sich selbst und über das eigene Kind herauszufinden und seinen inneren Vater/seine innere Mutter zu entdecken, als irgendeinem Drehbuch (also einer Erziehungsmethode) zu folgen.
+        - Es gibt viele Belege dafür, dass Authentizität in nahen persönlichen Beziehungen zu einem Schlüsselbegriff wird und es einen engen Zusammenhang zwischen Authentizität und Führung gibt.
+        - Authentisch zu sein bedeutet ganz einfach, in der Lage zu sein, anderen durch die Art und Weise, wie man spricht und sich verhält, mitzuteilen, wer man ist, im Gegensatz zum Agieren in einer Rolle, die andere Menschen von Ihnen erwarten oder vielleicht sogar fordern.
+        - Leitwölfe bemühen sich um eine sozialfreundliche Stimmung in der Familie: eine anspruchsvolle Aufgabe, die Authentizität statt purer Nettigkeit erfordert.
+        - 5 Fallgruben, die das Zusammenleben erschweren:
+            - Neuromantischer Stil – Harmonie über alles: Lässt keine negativen Gefühle zu. Die Unterteilung in positiv und negativ ist bereits schlecht. Kinder lernen nicht, mit allen Gefühlen umzugehen.
+            - Curling-Elternschaft: Konfliktvermeidung
+            - Weg des geringsten Widerstands: Inkonsequenz und nie Nein sagen
+            - Überwachung total: Starke Kontrolle und Ängste
+            - Mein Kind als Projekt: starre Vorstellungen für das Leben der Kinder
+- Kapitel 13
+    - Führung light: Teenagerzeit und das Kind als Erwachsener >>>
+        - Als Teenager braucht Ihr Kind von Ihnen zwei Dinge: Vertrauen, Vertrauen und noch mehr Vertrauen und dann, dass Sie als Eltern eine neue Rolle für sich finden. Von vorderster Front zurück, aber als Sicherheitsnetz für den Notfall verfügbar.
+        - Die besten Eltern machen am Tag etwa 20 Fehler. 30 sind auch ok!
+- Kapitel 14
+    - Was tun, wenn das Rudel tollt? >>>
+        - Was tun, wenn Kinder dauernd streiten und handgreiflich werden?
+            - In einer ruhigen Minute zusammen hinsetzen (bei einem Stück Kuchen etwa) und sagen: Ich würde gerne andere Wege finden, die Konflikte zu lösen. Beim nächsten Mal unterbreche ich den Streit und frage, worum es geht und wie wir das lösen können.
+            - Ausschlaggebender Punkt: Nicht mit Ärger oder Kritik eingreifen.
+        - Mein Kind klaut und lügt mich an, was tun?
+            - Dies kann nur eine Phase sein.
+            - Lügen ist im Endeffekt gut, das Kind merkt, dass der Diebstahl falsch ist.
+            - Mit dem Kind hinsetzen und darüber reden. Macht dich etwas unglücklich? Brauchst du Hilfe?
+            - Das Kind dazu bringen, über sein Verhalten nachzudenken.
+            - Wenn Kinder Verhaltensweisen entwickeln, die nicht zu ihnen passen, dann brauchen sie immer unser Interesse und unsere Aufmerksamkeit.
+        - Kind schläft mit 14 Monaten bei uns im Bett. Ein Problem?
+            - Wichtig: Wenn Sie sich wohlfühlen mit dem, was Sie tun, hören Sie nicht auf andere Eltern, Bücher usw. 
+            - Machen Sie mit gutem Gewissen weiter.
+        - 7-jähriges Kind macht groß und klein in die Hose, verliert Freunde.
+            - Ruhig hinsetzen und das Problem erläutern.
+            - Erklären, dass das Kind jetzt verantwortlich ist, sich nach so einem Unfall selbst sauberzumachen und umzuziehen. 
+            - Sag mir Bescheid, wenn ich dir helfen kann.
+            - Wichtig ist, dass man es ernst meint und dem Kind vertraut.
+            - Ursache bekämpfen (etwa Probleme in der Familie), nicht das Symptom.
+            - 
+        - Ab wann bei einem aggressiven Streit eingreifen?
+            - Eingreifen, wenn körperlich angegriffen wird oder wenn man es selbst nicht mehr aushält zuzuhören. 
+            - Häufigere Streitsituationen in einem ruhigen Moment besprechen.
+        - Kind (4-5 Jahre) hat häufig Angst, etwa nachts alleine im Bett.
+            - Menschen (Erwachsene wie Kinder) wachen nachts häufig zur gleichen Uhrzeit auf.
+            - Lernen, damit zurechtzukommen, etwa lesen, Licht anmachen, über den nächsten Tag nachdenken, Tiefenatmung.
+            - Kind muss verstehen, dass es selbst für seinen Schlaf verantwortlich ist und es irgendwann selbst die Angst in den Griff bekommen muss.
+        - Kampf im Familienleben, viel Streit, Drama, Gewaltbereitschaft und Geschrei mit zwei Kindern (4 und 5)
+            - Familienberatung notwendig zur Wiederfindung der Führungsrolle.
+            - Sorgfältige Auswahl des Beraters, wenn nach 2–3 Sitzungen keine Änderung eintritt, wechseln.
+        - Hohe Bildschirmzeit und Überschreitung von Regeln diesbezüglich bei 16-Jährigen
+            - Schwierig zu beantworten, da nicht bekannt ist, wie 15 Jahre Interessenkonflikte gelöst wurden.
+            - Reden: Ich sehe, wie selbstzerstörerisch du dich verhältst. Waffenstillstand für einen Monat vereinbaren.
+            - Sohn wird vermutlich ohnehin tun, was er will, aber wir versuchen, ihn in die richtige Richtung zu lenken. Nach einem Monat hat er alles, vielleicht schon selbst mehr reflektiert.

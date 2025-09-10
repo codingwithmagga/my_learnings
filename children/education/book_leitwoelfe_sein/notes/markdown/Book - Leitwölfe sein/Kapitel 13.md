@@ -1,0 +1,3 @@
+- Führung light: Teenagerzeit und das Kind als Erwachsener >>>
+    - Als Teenager braucht Ihr Kind von Ihnen zwei Dinge: Vertrauen, Vertrauen und noch mehr Vertrauen und dann, dass Sie als Eltern eine neue Rolle für sich finden. Von vorderster Front zurück, aber als Sicherheitsnetz für den Notfall verfügbar.
+    - Die besten Eltern machen am Tag etwa 20 Fehler. 30 sind auch ok!

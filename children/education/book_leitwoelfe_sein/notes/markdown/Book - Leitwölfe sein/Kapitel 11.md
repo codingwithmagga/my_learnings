@@ -1,0 +1,9 @@
+- Erfolg durch Anpassung: unsere kollektive Illusion >>>
+    - Ein starkes und gesundes Kind ist in erster Linie ein Kind mit einem gesunden Selbstwertgefühl und so viel Selbstvertrauen, wie ihm seine Fähigkeiten und Begabungen aufzubauen erlauben.
+    - Ein gesunder Selbstwert bedeutet, eine nüchterne, differenzierte und annehmende Wahrnehmung desjenigen, der wir sind, zu haben – ein realistisches und nicht wertendes Selbstbild.
+    - Ein gesunder Selbstwert ist das effizienteste psychosoziale Immunsystem, das wir kennen. Es schützt vor Drogenmissbrauch, Essstörungen, Ritzen, Selbstmord und Selbstmordabsichten, Kriminalität, Gewalt und all den anderen Dingen, von denen wir uns wünschen, dass unsere Kinder niemals dazu neigen mögen.
+    - Kinder haben ein nahezu unvorstellbares Verlangen nach Kooperation.
+    - Die beste Form der Kindererziehung ist der Dialog, in dem sich beide Seiten besser kennenlernen und in dem sich Kinder die Weisheit und Erfahrungen ihrer Eltern freiwillig zunutze machen können.
+    - Es ist wichtig zu lernen, was man braucht und was man will. Existenziell wissen wir nicht, was wir brauchen. Wir lernen es aus Erfahrung.
+    - Es gibt einen Unterschied zwischen dem, was man will, und dem, wozu man Lust hat. Oft muss man tun, wozu man keine Lust hat, um zu erreichen, was man will.
+    - 

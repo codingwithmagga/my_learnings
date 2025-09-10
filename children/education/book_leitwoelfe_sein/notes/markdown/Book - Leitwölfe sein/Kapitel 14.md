@@ -1,0 +1,34 @@
+- Was tun, wenn das Rudel tollt? >>>
+    - Was tun, wenn Kinder dauernd streiten und handgreiflich werden?
+        - In einer ruhigen Minute zusammen hinsetzen (bei einem Stück Kuchen etwa) und sagen: Ich würde gerne andere Wege finden, die Konflikte zu lösen. Beim nächsten Mal unterbreche ich den Streit und frage, worum es geht und wie wir das lösen können.
+        - Ausschlaggebender Punkt: Nicht mit Ärger oder Kritik eingreifen.
+    - Mein Kind klaut und lügt mich an, was tun?
+        - Dies kann nur eine Phase sein.
+        - Lügen ist im Endeffekt gut, das Kind merkt, dass der Diebstahl falsch ist.
+        - Mit dem Kind hinsetzen und darüber reden. Macht dich etwas unglücklich? Brauchst du Hilfe?
+        - Das Kind dazu bringen, über sein Verhalten nachzudenken.
+        - Wenn Kinder Verhaltensweisen entwickeln, die nicht zu ihnen passen, dann brauchen sie immer unser Interesse und unsere Aufmerksamkeit.
+    - Kind schläft mit 14 Monaten bei uns im Bett. Ein Problem?
+        - Wichtig: Wenn Sie sich wohlfühlen mit dem, was Sie tun, hören Sie nicht auf andere Eltern, Bücher usw. 
+        - Machen Sie mit gutem Gewissen weiter.
+    - 7-jähriges Kind macht groß und klein in die Hose, verliert Freunde.
+        - Ruhig hinsetzen und das Problem erläutern.
+        - Erklären, dass das Kind jetzt verantwortlich ist, sich nach so einem Unfall selbst sauberzumachen und umzuziehen. 
+        - Sag mir Bescheid, wenn ich dir helfen kann.
+        - Wichtig ist, dass man es ernst meint und dem Kind vertraut.
+        - Ursache bekämpfen (etwa Probleme in der Familie), nicht das Symptom.
+        - 
+    - Ab wann bei einem aggressiven Streit eingreifen?
+        - Eingreifen, wenn körperlich angegriffen wird oder wenn man es selbst nicht mehr aushält zuzuhören. 
+        - Häufigere Streitsituationen in einem ruhigen Moment besprechen.
+    - Kind (4-5 Jahre) hat häufig Angst, etwa nachts alleine im Bett.
+        - Menschen (Erwachsene wie Kinder) wachen nachts häufig zur gleichen Uhrzeit auf.
+        - Lernen, damit zurechtzukommen, etwa lesen, Licht anmachen, über den nächsten Tag nachdenken, Tiefenatmung.
+        - Kind muss verstehen, dass es selbst für seinen Schlaf verantwortlich ist und es irgendwann selbst die Angst in den Griff bekommen muss.
+    - Kampf im Familienleben, viel Streit, Drama, Gewaltbereitschaft und Geschrei mit zwei Kindern (4 und 5)
+        - Familienberatung notwendig zur Wiederfindung der Führungsrolle.
+        - Sorgfältige Auswahl des Beraters, wenn nach 2–3 Sitzungen keine Änderung eintritt, wechseln.
+    - Hohe Bildschirmzeit und Überschreitung von Regeln diesbezüglich bei 16-Jährigen
+        - Schwierig zu beantworten, da nicht bekannt ist, wie 15 Jahre Interessenkonflikte gelöst wurden.
+        - Reden: Ich sehe, wie selbstzerstörerisch du dich verhältst. Waffenstillstand für einen Monat vereinbaren.
+        - Sohn wird vermutlich ohnehin tun, was er will, aber wir versuchen, ihn in die richtige Richtung zu lenken. Nach einem Monat hat er alles, vielleicht schon selbst mehr reflektiert.

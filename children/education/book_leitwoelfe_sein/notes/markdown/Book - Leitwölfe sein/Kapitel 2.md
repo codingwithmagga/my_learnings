@@ -1,0 +1,8 @@
+- Sie können Ihrem Kind vertrauen >>>
+    - Reaktionen von Kindern sind immer sinnvoll. Es ist ein Feedback für Erwachsene, oft unmöglich zu entschlüsseln, aber es steht immer für Kooperationsbereitschaft.
+    - Jedes Kind will kooperieren.
+    - Führung sollte auf Vertrauen und Empathie basieren, das ist familienfreundlich.
+    - Kinder lügen (kein Flunkern, wirkliche Lügen), wenn sie die Erfahrung gemacht haben oder das Gefühl haben, dass ihre Eltern mit der Wahrheit nicht umgehen können.
+    - Wir loben die Kinder zu viel, anstatt zu sagen: „Ich liebe dich.“
+    - Wir müssen unsere richtige Sprache sprechen, damit die Gefühle richtig herüberkommen, etwa bei Trennung, Tod, Krankheit … Eine Ausnahme ist etwa, wenn man dem Kind etwas beibringen will, dann hilft eine kindgerechte Sprache.
+- 

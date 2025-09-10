@@ -1,0 +1,21 @@
+- Frau und Mutter sein >>>
+    - Ungesunde Nähe und Abhängigkeit zwischen Kind und Mutter entwickeln sich nur dann, wenn die Beziehung zwischen Mann und Frau unzulänglich ist, weil der Mann nicht an seinem Platz ist.
+    - Unsere Fähigkeit, andere zu lieben, hängt davon ab, inwieweit wir uns selbst leiden können.
+    - Selbstaufopferung ist eine Grundvoraussetzung, um das Überleben eines Kindes zu ermöglichen – aber nur in den ersten 18 Monaten! Danach ist es Zeit, dass Sie Ihre eigenen Grenzen und Bedürfnisse wieder einfordern und, was noch wichtiger ist, dass Sie diese noch besser kennenlernen in der Entwicklung der Beziehung zu Ihrem Kind.
+    - Kinder brauchen eine Lebensbedingung, in der jeder genügend Raum hat, um zu sein, wie er ist, um in seiner Individualität zu wachsen und sich weiterzuentwickeln. Kinder brauchen Vorbilder, um zu lernen, wie man auf eine Weise lieben kann, die nicht selbstzerstörerisch ist.
+    - Das wertvollste Geschenk, das sie ihrem Kind geben können, ist, sich gut um sich selbst und die Paarbeziehung zu kümmern. Ihre Integrität zu opfern, ist keine Liebe, es ist nur ein Opfer, und es beeinflusst alle Mitglieder einer Familie in negativer Weise, auch wenn sie es aus Liebe tun.
+    - Wir alle – Erwachsene und Kinder – müssen in der Lage sein, persönliche Entscheidungen auf der Basis dessen zu treffen, wer wir sind (obwohl wir dazu erzogen worden sind, das Gegenteil zu glauben).
+    - Das Geheimnis erfolgreicher Beziehungen mit Partnern und Kindern ist nicht so sehr, was wir tun, sondern wie und wann wir es tun.
+    - Wir versuchen, eine Subjekt-Subjekt-Beziehung (kein Objekt!) zwischen Erwachsenen und Kindern umzusetzen.
+    - Persönliche Integrität besteht aus persönlichen Grenzen, Werten und Gefühlen jedes einzelnen Menschen. Dem Recht:
+        - auf Ruhe, wenn wir erschöpft sind.
+        - zu lieben und aufmerksam zu sein, wenn wir das wollen.
+        - Nein zu sagen
+        - für unsere Werte einzustehen und zu kämpfen
+        - zu weinen, wenn wir traurig sind
+        - zu schreiben, wenn wir wütend sind.
+        - unsere Träume und Sehnsüchte zu erfüllen.
+    - Sie müssen nicht aufhören, ihre Mutter zu lieben, aber lassen Sie nicht zu, dass die Liebe zu ihr sie daran hindert, ihr eigenes Leben zu verbessern.
+    - Versuchen Sie nicht, Kinder nach ihrem Wunschbild zu formen, sondern hören Sie ihnen zu, lernen Sie sie wirklich kennen, und lieben Sie sie dafür, wer sie sind.
+    - Die Fähigkeit, sich anzupassen, ist wichtig für unser aller Leben, egal wie alt wir sind, aber wenn man keine Verbindung zu sich selbst hat, führt sie nur zu Leid und Elend.
+    - Beliebt zu sein und gemocht zu werden, ist einfach. Mit sich selbst zufrieden zu sein und sich selbst zu mögen, ist viel schwerer.

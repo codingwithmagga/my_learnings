@@ -1,0 +1,18 @@
+- 
+- Werte, die Führung schaffen >>>
+    - Es ist wichtig, über die eigenen sowie die Worte des Partners nachzudenken.
+    - Vier grundlegende Werte: Gleichwürdigkeit, Integrität, Authentizität, persönliche Verantwortung. Diese sind alleine nicht ausreichend, weitere persönliche Werte sind notwendig.
+    - Lassen Sie ihre Werte nie wichtiger werden als die Menschen, die sie lieben.
+    - Eigene Wertvorstellungen liefern Antworten auf Fragen, die kein Außenstehender beantworten kann, etwa: „Mein Kind will seine Hausaufgaben nicht machen, was mache ich?“, oder „Mein Kind will nicht schlafen, was mache ich?“.
+    - Für Kinder spielen Werte eine enorme Rolle.
+    - Gleichwürdigkeit bedeutet, dass ich als Partner/Partnerin oder als Vater/Mutter meinen Partner oder mein Kind genauso ernst nehmen sollte wie mich selbst. Ich muss versuchen, die Bedürfnisse, Wünsche, Träume und Ambitionen meiner Frau, meines Mannes oder meines Kindes einzubinden, statt sie zu ignorieren oder zu sagen: „Das kommt nicht infrage“ oder „Darüber können wir reden, wenn du erwachsen bist.“
+    - Integrität ist nicht nur moralische Integrität, d. h., man handelt auch so, wie man redet. Es umfasst auch die Übereinstimmung unserer persönlichen Grenzen, Bedürfnisse, Gefühle und so weiter mit unserem Tun und Handeln.
+    - Kinder haben von Geburt an persönliche Grenzen. Wie gehen wir mit diesen Grenzen um?
+    - Grenzen setzen heißt eigentlich, Regeln aufzustellen und zu befolgen.
+    - Es gibt heute viele Eltern, die den Unterschied zwischen Wünschen und Bedürfnissen nicht mehr kennen. Sie erfüllen einfach alle Wünsche.
+    - Sobald man anfängt, übereinander zu reden, tut man sich weh. Und genau das machen wir täglich mit unseren Kindern.
+    - Definitionsmacht der Erwachsenen: „Du bist dieses oder jenes …“ oder „Jetzt bist du so und so …“.
+    - Man sollte nicht „Ich möchte …“ oder schlimmer noch „Mama/Papa möchte …“ sagen.
+    - Kinder ermöglichen es, dass Eltern sich fragen: Wer bin ich eigentlich? Was will ich und was nicht? Statt zu fragen: „Was hätte ich gern, wenn es möglich wäre?“
+    - Verantwortung heißt auch, den Kindern gegenüber für sich selbst verantwortlich zu sein.
+    - Kinder müssen nicht unbedingt „schwarz“ bekommen, wenn sie auf die Frage „Möchtest du Schwarz oder Weiß haben?“ antworten. Man darf auch eigene Wünsche einbringen und einen Kompromiss finden.

@@ -1,0 +1,8 @@
+- Der Leitwolf und das innere Kind >>>
+    - Kinder können unter die Haut gehen und Gefühle und vergangene Erfahrungen berühren, die wir, so gut wir konnten, unterdrückt haben bzw. von denen wir nicht einmal wissen.
+    - Oft wird dies auch das innere Kind genannt. Wir alle nehmen mindestens eins mit uns ins Erwachsenenalter.
+    - Lebensstrategie aus der Ursprungsfamilie passt nicht in die neue Familie. Herausforderung: Lebensstrategie finden, die uns die Lebensqualität ermöglicht, die wir uns wünschen und verdient haben.
+    - Jedes Mal, wenn sie mit ihrem Kind einen Konflikt haben, ist das eine Gelegenheit, das für ihr inneres Kind zu tun, was ihre Eltern nicht tun konnten.
+    - Die Qualität der Elternschaft wird bestimmt durch die Frage, inwieweit man in der Lage ist und gewillt ist, die Herausforderung anzunehmen, vor die die Kinder einen stellen, und sie in ein besseres Leben umzuwandeln.
+        - ⇒ Es reicht, wenn man dies hin und wieder mal schafft.
+    - 

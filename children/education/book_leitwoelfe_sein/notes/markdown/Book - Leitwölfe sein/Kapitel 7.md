@@ -1,0 +1,4 @@
+- Wollen wir wirklich starke und gesunde Kinder? >>>
+    - Was macht eine gute bzw. erwachsene Führung aus? 
+        - ⇒ Persönliche Verantwortung, Integrität, Authentizität, Verfügbarkeit und Verbundenheit bei den Eltern bzw. Beziehungskompetenz bei den Fachkräften.
+- 

@@ -1,0 +1,20 @@
+- Kinder wollen Erwachsene, die die Führung übernehmen >>>
+    - Kinder kennen nur ihre Wünsche und Gelüste, aber nicht ihre grundlegenden Bedürfnisse.
+    - Man benötigt eine qualifizierte Anleitung, um sich an eine Kultur anzupassen – an welche Kultur auch immer, sowohl in der Gesellschaft als auch innerhalb der Familie.
+    - Führung und Erziehung sind verschiedene Dinge.
+    - Die ideale Führung durch einen Erwachsenen lässt sich wie folgt beschreiben: proaktiv, empathisch, flexibel, dialogbasiert und fürsorglich.
+        - Proaktiv: Handeln nach Werten und Zielen und dabei nicht nur auf das, was das Kind sagt oder tut, zu reagieren.
+        - Empathisch: Fähigkeit, einen anderen Menschen wirklich wahrzunehmen.
+        - Flexibel: Berücksichtigung von Veränderung und Entwicklung beim Kind, nicht stur konsequent sein.
+        - Dialogbasiert und fürsorglich: Würde, Bedürfnisse, Gedanken und Ideen des Kindes ernst nehmen.
+        - Der wichtigste Aspekt bei dieser neuen Art der Führung ist jedoch die persönliche Autorität.
+            - Persönliche Autorität steht im Gegensatz zur rollenbasierten Autorität (Eltern, Lehrer, Polizist …). 
+            - Persönliche Autorität gründet sich auf Selbstwertgefühl, Selbstbewusstsein, Selbstachtung, Selbstvertrauen und auf die Fähigkeit, persönliche Grenzen und Worte ernst zu nehmen und mit Empathie und Respekt zu begegnen.
+    - Im Großen und Ganzen kann man sich Familie als einen Raum vorstellen, in dem jedes Familienmitglied so viel wie möglich von dem bekommt, was es für die bestmögliche Qualität seines Lebens braucht, und so wenig wie möglich von dem, was nicht gut dafür ist.
+    - Es sollte ein Gleichgewicht herrschen zwischen dem Bedürfnis der Gemeinschaft und dem Bedürfnis des Einzelnen.
+    - Perfekte Eltern ⇒ absurde Vorstellung
+    - Beste Eltern ⇒ Eltern, die Verantwortung für Fehler übernehmen.
+    - Nicht schuldig fühlen (als Eltern), aber auf Feedback (des Kindes) achten und es ernst nehmen.
+    - Erwachsene sind zu 100 % verantwortlich für die Qualität einer längeren Beziehung zwischen Erwachsenem und Kind.
+    - Prozess gegenseitigen Lernens zwischen Kindern und Erwachsenen. Sie sind nicht gleichberechtigt (zu großer Machtunterschied), jedoch gleichwürdig.
+    - Kinder haben kein Interesse daran, Macht über ihre Eltern zu haben. Kommt es zu einem Machtkampf, will das Kind meist seine persönliche Integrität schützen.

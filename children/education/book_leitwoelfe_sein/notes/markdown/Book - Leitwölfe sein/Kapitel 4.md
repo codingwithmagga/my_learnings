@@ -1,0 +1,9 @@
+- Weibliche und männliche Führung >>>
+    - Studien zeigen, dass Kinder, die Zugang zu beiden Eltern haben, besser zurechtkommen und sich harmonischer entwickeln.
+    - Das Wohlbefinden von Kindern, ihre Entwicklung und Lebensqualität, hängen davon ab, was in der ganzen Familie los ist und wie es allen Familienmitgliedern geht – als Einzelperson und als Gemeinschaft.
+    - Lassen Sie ihr Kind jedes Mal, wenn Sie zusammenkommen, die Freude in ihrem Blick sehen.
+    - Kinder brauchen nicht so viel Aufmerksamkeit, wie sie fordern.
+    - Es wird nichts Schlimmes geschehen, wenn man zu Kindern sagt: „Nein ich möchte jetzt nicht mit dir spielen. Ich möchte meine Ruhe.“
+    - Kinder lernen daraus auch, aus gutem Gewissen Nein sagen zu können.
+    - Falls man immer füreinander da ist bzw. sein will, so ist das selbstzerstörerisch.
+- 

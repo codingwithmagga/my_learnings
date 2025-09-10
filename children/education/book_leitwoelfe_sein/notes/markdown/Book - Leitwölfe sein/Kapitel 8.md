@@ -1,0 +1,6 @@
+- Was hat Macht mit Führung zu tun? >>>
+    - Wir müssen die Kunst des Dialogs lernen, um den Filter zu entfernen, der uns von echtem Kontakt zu unseren Kindern abhält. Der Filter besteht aus dem Gefühl der Verpflichtung eine elterliche Rolle spielen zu müssen.
+    - Das wirkliche Paradoxe im Hinblick auf das Haben uns Ausüben von Macht: führen und doch verletzlich sein.
+    - Die vollkommen abwegige Idee, dass starke Individuen für die Gruppe gefährlich sind und die Solidarität innerhalb von Familien und der Gesellschaft gefährden, vergiftet noch immer das Denken vieler Menschen.
+    - 
+- 

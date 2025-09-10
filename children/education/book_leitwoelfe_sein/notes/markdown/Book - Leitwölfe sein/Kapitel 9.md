@@ -1,0 +1,20 @@
+- Die Zukunft ihres Kindes ist jetzt >>>
+    - Physisches Wohlbefinden und soziale Kompetenzen sind wichtige Voraussetzungen, um lernen zu können. Sie sind der optimale Schutz gegen jegliche Art von Gefahren oder Risiken welche die Zukunft bringen könnte
+        - Verhinderung von Abhängigkeiten, Missbrauch, Gewalt, Essstörungen usw.
+        - Weit aus effektiver als Grenzen setzen, Regeln, Strafen, Moralisieren oder Bewertungen
+    - Bestmöglicher Schutz (gegen psychologische Probleme) besteht aus folgenden Elementen
+        - Ein gesundes Gefühl zu einem Selbst entwickeln.
+        - Sich als wertvoll, für die Menschen, die wir lieben, erachten. 
+        - Dass wir es wert sind, geliebt zu werden.
+        - Die Möglichkeit, unser Leben in vollem Umfang zu leben, unsere Potenziale bestmöglich zu entfalten, sowohl intellektuell als auch emotional und psychisch. All das unterstützt unseren Selbstwert.
+        - ⇒ Diese Qualitäten entwickeln sich in erster Linie in der Familie.
+    - Kinder haben einen hohen Stressfaktor, wenn sie zu vielen Ambitionen und Zielen ausgesetzt werden. Sie brauchen die Erfahrung und Fähigkeit, ihrem Innersten Aufmerksamkeit (heute auch als „Achtsamkeit“ bekannt) zu schenken und sich zu entspannen.
+    - Es ist nichts daran auszusetzen, sich Ziele zu setzen oder einen Traum zu verfolgen. Jedoch sollte man sich auch auf das Hier und Jetzt konzentrieren können.
+    - Gegenwärtig sind Kinder einem Zuviel an „Erziehung“ ausgesetzt.
+    - Lösungsansätze
+        - Zeit mit dem Kind verbringen ohne „Lernspielzeug“. Das Kind wahrnehmen, wie es ist, nicht belehren oder erziehen, sondern still sein. 
+        - Ist einem Kind langweilig, sagen Sie: "Gratuliere dir, mein Freund. Es wird spannend sein zu sehen, welche Ideen du haben wirst." Langeweile hält kaum länger als 20 Minuten, auch bei Erwachsenen.
+        - Erzählen Sie ihrem Kind abends im Bett von ihrem Tag. Ihr Kind wird automatisch auch von seinem Tag erzählen, da sind keine Rückfragen nötig.
+        - Kind spielen lassen, die Beschäftigung nicht steuern.
+        - Stillen und Pausen sind in Ordnung,. Weniger „überverantwortlich sein“. Wenn Sie eine persönliche Beziehung entwickeln möchten, so müssen Sie sich selbst zeigen und verletzlich sein.
+- 
