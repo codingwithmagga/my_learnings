@@ -1,0 +1,3 @@
+- What is LTE?→Long-Term Evolution, a standard for wireless broadband communication (4th generation) for mobile devices.
+- What is 5G?→Fifth generation of wireless technology, offering faster data speeds, lower latency, and greater connectivity. Fallback to LTE if not available.
+- 

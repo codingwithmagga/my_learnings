@@ -1,0 +1,52 @@
+- Overview
+    - MAC addresses are useful in {{local}} networks, and IP addresses are useful in the {{global (Internet)}} network. 
+    - Explaining DNS, which was already in a previous video.
+- Types of IP addresses
+    - The first 6 minutes are almost the same as the [NAT, Public, and Private IP Addresses](../Udemy%20-%20Introduction%20to%20Computer%20Networking/Network%20Security/NAT%2C%20Public%2C%20and%20Private%20IP%20Addresses.md)
+    - Characteristics of public IP addresses >>>
+        - Globally unique and routable on the internet
+        - Assigned by Internet Service Providers (ISPs)
+        - Used to identify devices on the public internet.
+        - Typically used for routers and firewalls facing the internet
+    - Characteristics of private IP addresses >>>
+        - Not globally unique and so not routable on the internet
+        - Used for local networks, assigned by network administrators
+        - Defined by RFC 1918
+        - Ranges: 10.0.0.0 to 10.255.255.255
+        - Ranges: 172.16.0.0 to 172.31.255.255
+        - Ranges: 192.168.0.0 to 192.168.255.255
+- IPv4 address structure
+    - No new information. Every piece of information is already in [IP Addresses and Subnets](../Udemy%20-%20Introduction%20to%20Computer%20Networking/IP%20Addressing%2C%20Routing%2C%20and%20VLAN%20Basics/IP%20Addresses%20and%20Subnets.md).
+    - 
+- Classful vs. Classless Addressing
+    - What is the IPv4 address range?→$0.0.0.0$ to $255.255.255.255$
+    - What is the purpose of the Class A address range?→To provide addresses for large networks with many hosts, with a default subnet mask of 255.0.0.0 (/8). These ranges are always given as a whole to too big networks/organizations. Range from 1.0.0.0 to 127.0.0.0
+    - What is the purpose of the Class B address range?→To provide a range of IP addresses for medium-sized networks, specifically for organizations up to 65,536 hosts. Ranges from 128.0.0.0 to 191.255.0.0.
+    - What is the purpose of the Class C address range?→To provide a range of IP addresses for small to medium-sized networks, with 256 possible addresses per network. Ranges from 192.0.0.0 to 223.255.255.0.
+    - Describe the issue with classful IP addressing→Wasted IP addresses due to fixed class boundaries.
+- Converting Binary and Decimal
+    - How to convert a decimal to a binary?→Divide the decimal number by 2, record the remainder, and repeat with the quotient until it is 0, then write the remainders in reverse order.
+    - How to convert a binary to a decimal?→Sum the powers of 2 of each digit that is 1.
+    - 
+- Why is 255 special?
+    - Why is 255 special?→It is the highest number that can be stored in an 8-bit binary number. And so it is the highest value in an octet in an IP address.
+    - 
+- Hands-on practice 
+    - A practice lesson, no notes here.
+- Subnetting
+    - Define Subnetting→Dividing a large network into smaller, more manageable segments to improve efficiency, security, and IP address allocation.
+    - Reason for subnetting in big organizations?→Subnetting in large organizations is primarily done for security. By splitting the network into smaller segments, communication between them must pass through a router, which can enforce firewall rules and other security measures. This setup helps control access and protects sensitive parts of the network.
+    - An organization has a class B network starting at 145.14.0.0/16. 
+    - How to reduce the number of given IP addresses using the subnet mask?→By borrowing bits from the host portion to create a larger network portion, thereby creating more subnets with fewer host addresses per subnet. For example, 145.14.0.0/22 gives the range 145.14.0.0-145.14.3.255.
+- Subnets and CIDR Notation
+    - What is the purpose of the subnet mask?→To determine the scope of the local network for a given IP address.
+    - Explain the CIDR notation→A way to express the number of bits in a subnet mask, written as a slash followed by the number of bits, e.g., 192.168.1.0/24. For example, IP address 97.122.14.233/25 is the network address 97.122.14.128/25 and the broadcast address 97.122.14.255/25.
+    - 
+- Practice Videos: Subnets
+    - Three videos about CIDR notation and subnets examples.
+    - Examples of how to calculate the number of hosts.
+    - Take the range and subtract network and broadcast addresses.
+    - So a subnet mask of 255.255.255.0 gives us 256-2=254 host addresses.
+- Network address, broadcast address
+    - All this content was already shown way earlier. I don't know why it comes in a 2-minute video at the end again.
+    - 

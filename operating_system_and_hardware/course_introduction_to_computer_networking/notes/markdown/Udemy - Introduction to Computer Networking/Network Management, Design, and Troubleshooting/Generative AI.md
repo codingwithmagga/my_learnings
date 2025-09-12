@@ -1,0 +1,7 @@
+- A demo with ChatGPT doing networking things:
+    - Configuring a Cisco router.
+        - Creates a script
+        - Check the script line by line, use it as a starting point
+    - Problem search within a router.
+    - Error log analysis
+    - Configuring using Terraform.

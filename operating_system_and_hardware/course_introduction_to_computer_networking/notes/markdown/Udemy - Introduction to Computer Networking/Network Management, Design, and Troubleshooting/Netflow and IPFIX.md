@@ -1,0 +1,2 @@
+- What is netflow?→A network protocol developed by CISCO used for collecting and monitoring network traffic, providing detailed information about the source and destination of the traffic.
+- What is IPFIX?→A standardized protocol for collecting and exporting network flow information, based on NetFlow version 9.

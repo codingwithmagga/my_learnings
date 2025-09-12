@@ -1,0 +1,3 @@
+- Explain IDS→Intrusion Detection System, a system that monitors network traffic for signs of unauthorized access or malicious activity. 
+- Explain IPS→Intrusion Prevention System, a network security system that monitors and controls network traffic to prevent unauthorized access and malicious activities by analyzing and blocking suspicious packets.
+- What is the difference between a signature-based and a behavior-based prevention system?→Signature based checks for known malware or attack data stripes. Behavior-based determines normal baseline traffic and watches for unusual traffic patterns.

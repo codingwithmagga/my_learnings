@@ -1,0 +1,8 @@
+- What does a VPN do?→A VPN (Virtual Private Network) creates a secure, encrypted tunnel between your device and a server on the internet. This hides your online activity from your internet provider and anyone else on your network, and it masks your real IP address to make it look like you are browsing from the VPN server's location. This enhances your privacy and security, especially on public Wi-Fi.
+- Drawback of using a VPN >>>
+    - Reduced internet speed
+    - Price (subscription)
+    - Reliance on VPN provider's security
+    - No protection against viruses and malware
+    - Blocked by some services
+- 

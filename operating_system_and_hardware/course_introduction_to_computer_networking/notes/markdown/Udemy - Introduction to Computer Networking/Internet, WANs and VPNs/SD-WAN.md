@@ -1,0 +1,3 @@
+- What is SD-WAN?→Software-Defined Wide Area Network, a network technology that uses software to manage and optimize WAN connections, often used for secure and efficient networking between branches and data centers.
+- What is one key advantage of an SD-WAN appliance having multiple internet connections?→It allows the appliance to prioritize high-priority traffic, like point-of-sale data, by sending it over the best-performing available connection (e.g., cable modem or 5G) and to fail over if one connection fails.
+- 

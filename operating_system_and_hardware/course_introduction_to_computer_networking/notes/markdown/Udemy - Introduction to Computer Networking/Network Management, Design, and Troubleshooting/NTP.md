@@ -1,0 +1,3 @@
+- Explain NTP→Network time protocol, a protocol that synchronizes computer clocks over a network to a precise time source.
+- Why is synchronized time important in a network?→So that events can be accurately correlated and logged across different devices. Also digital certifacte expiration.
+- 

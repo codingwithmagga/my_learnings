@@ -1,0 +1,3 @@
+- What is an IPSEC VPN?→A virtual private network (connection of one network with another) that uses the IPSEC protocol to encrypt and authenticate IP packets.
+- What is the problem with large WANs?→Scalability and security issues.
+- How does an IPSEC VPN work?→IPsec VPN secures IP communication by encrypting and authenticating packets between endpoints using protocols like ESP and AH. This is done by the router. It establishes a secure tunnel over the internet, typically negotiated via IKE, allowing safe data transfer over insecure networks.

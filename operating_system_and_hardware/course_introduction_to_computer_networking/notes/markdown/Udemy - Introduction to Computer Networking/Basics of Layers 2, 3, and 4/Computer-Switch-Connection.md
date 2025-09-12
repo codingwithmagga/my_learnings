@@ -1,0 +1,3 @@
+- Explain the structure of a MAC Table→A table that maps MAC addresses to ports on a network switch, used for forwarding data packets to the correct destination device.
+- Entries in a MAC table are {{temporary}}.
+- When connecting a hub or a switch to another switch, {{multiple}} MAC addresses may be associated with a single port. 

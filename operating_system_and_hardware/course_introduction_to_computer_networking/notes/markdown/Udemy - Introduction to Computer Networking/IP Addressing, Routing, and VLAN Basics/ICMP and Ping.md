@@ -1,0 +1,5 @@
+- What is ICMP?→ICMP (Internet Control Message Protocol) is used for error reporting and diagnostic functions in IP networks. It works on the network layer.
+- What does the `ping` command do?→Sends ICMP echo request packets to test network connectivity and measures response time.
+- Explain TTL→Time to live, a field in IP packets that limits the number of hops (router passes) before the packet is discarded.
+- What is the loopback address?→127.0.0.1, the local IP address on every computer.
+- 

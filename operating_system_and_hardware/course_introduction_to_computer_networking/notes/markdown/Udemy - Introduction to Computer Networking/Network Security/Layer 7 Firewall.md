@@ -1,0 +1,4 @@
+- Extend the acronym NGFW→Next-Generation Firewall.
+- What is the difference from a layer 3/4 firewall?→It can filter based on application-layer data, not just IP address and port number. They perform what is known as deep packet inspection (DPI).
+- What is a signature?→A pattern or set of data used to identify a specific type of traffic or threat. The signatures can be downloaded.
+- 

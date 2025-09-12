@@ -1,0 +1,149 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Network Management, Design, and Troubleshooting
+    </h1>
+    <br/>
+    <ul>
+        <li>Network Redundancy
+            <ul>
+                <li>What is a single point of failure?→A component or part of a system that, if it fails, will cause the entire system to fail.</li>
+                <li>What is the core purpose of implementing network redundancy?→The core purpose is to eliminate single points of failure to keep the network functioning properly even when a component fails, ensuring high availability.</li>
+                <li>What is the role of a dynamic routing protocol in a failure scenario?→A dynamic routing protocol acts like a GPS for the network, automatically detecting a failed connection and dynamically calculating a new path for traffic to take.</li>
+                <li>What problem do protocols like HSRP and VRRP solve?→They solve the problem of a server&#39;s default gateway failing by allowing multiple routers to share a virtual IP address, which a backup router can take over if the primary fails.</li>
+            </ul>
+        </li>
+        <li>Load Balancing
+            <ul>
+                <li>Why should we add load balancing?→To distribute workload across multiple identical servers (possible in different locations), improving responsiveness/availability, reliability, and scalability.</li>
+                <li>How can health checks be achieved with load balancing→By periodically sending requests to registered servers and verifying responses are received within a specified time interval.</li>
+            </ul>
+        </li>
+        <li>Network Troubleshooting
+            <ul>
+                <li>Which steps to take to take down a network error?
+                    <ul>
+                        <li>Create a network diagram.</li>
+                        <li>Methodical Troubleshooting: Ask questions to narrow down the issue.</li>
+                        <li>Begin with components closest to the problem, validate it, and proceed to the next layer.</li>
+                    </ul>
+                </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>DHCP
+            <ul>
+                <li>Explain DHCP.→Dynamic host configuration protocol, automatically assigns IP addresses and other network settings to devices on a network.</li>
+                <li>How does a computer get an IP address→Through DHCP, a computer sends a request to a DHCP server (often the router), which then assigns an available IP address from its pool of addresses.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li>DNS
+            <ul>
+                <li>Explain DNS→Domain Name System, a system that translates domain names into IP addresses.</li>
+                <li>How do DNS servers operate?→By resolving domain names to IP addresses through a hierarchical system of servers, using caching and zone transfers to distribute and update information.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Netflow and IPFIX
+            <ul>
+                <li>What is netflow?→A network protocol developed by CISCO used for collecting and monitoring network traffic, providing detailed information about the source and destination of the traffic.</li>
+                <li>What is IPFIX?→A standardized protocol for collecting and exporting network flow information, based on NetFlow version 9.</li>
+            </ul>
+        </li>
+        <li>NTP
+            <ul>
+                <li>Explain NTP→Network time protocol, a protocol that synchronizes computer clocks over a network to a precise time source.</li>
+                <li>Why is synchronized time important in a network?→So that events can be accurately correlated and logged across different devices. Also digital certifacte expiration.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li>SNMP
+            <ul>
+                <li>Define SNMP→Simple Network Management Protocol (SNMP), a protocol to monitor and manage devices on a network.</li>
+                <li>What is an SNMP Trap?→An SNMP Trap is a one-way, asynchronous notification sent from a managed device to an SNMP manager. It alerts the manager about significant events or changes on the device, prompting the manager software to generate alerts for administrators or users.</li>
+                <li>What is an SNMP Inform?→An SNMP Inform is similar to an SNMP Trap, but with one key difference: it is a notification sent from a managed device to an SNMP manager that requires an acknowledgment (response) from the manager. This ensures the manager received the message. Traps, on the other hand, do not require any acknowledgment.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Quality of Service
+            <ul>
+                <li>The Challenge: Not all traffic is equal.
+                    <ul>
+                        <li>Define quality of service (QoS)→A set of technologies that manage network traffic to reduce packet loss, delay, and jitter, ensuring that critical applications receive sufficient bandwidth and priority.</li>
+                        <li>Define class of service (CoS)→A method of prioritizing traffic on a network to ensure that critical traffic receives sufficient bandwidth and low latency. It works on layer 2 and inserts a header with 802.1p priority bits.</li>
+                        <li>Define Differential Services Code Point (DSCP)→A 6-bit field in the IP header (layer 3) used to identify packets with a specific forwarding treatment or priority level.</li>
+                    </ul>
+                </li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Configuration Management tools
+            <ul>
+                <li>What is a problem configuration management tools shall solve?→Ensuring consistency and accuracy of device configurations across a network. Also scalability: hundreds of devices can be configured fast.</li>
+                <li>Benefits of configuration management
+                    <ul>
+                        <li>Standardization: Every device follows the same rules.</li>
+                        <li>Automation: Reduce manual work and errors.</li>
+                        <li>Version control: Keep track of changes and roll back if needed.</li>
+                        <li>Scalability: Configure 10 or 10000 devices with the same effort.</li>
+                    </ul>
+                </li>
+                <li>Different tools:
+                    <ul>
+                        <li>Ansbile -  agentless uses simple YAML playbooks.</li>
+                        <li>Puppet - uses a declarative language to define desired states.</li>
+                        <li>Chef - Recipe-based approach, similar to Puppet but Ruby-based</li>
+                        <li>SatlStack - focuses on speed and scalabilty.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Generative AI
+            <ul>
+                <li>A demo with ChatGPT doing networking things:
+                    <ul>
+                        <li>Configuring a Cisco router.
+                            <ul>
+                                <li>Creates a script</li>
+                                <li>Check the script line by line, use it as a starting point</li>
+                            </ul>
+                        </li>
+                        <li>Problem search within a router.</li>
+                        <li>Error log analysis</li>
+                        <li>Configuring using Terraform.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>AI Assisted Networking
+            <ul>
+                <li>How can AI help in networking?
+                    <ul>
+                        <li>Automated repetitive tasks</li>
+                        <li>Predictive analytics for performance</li>
+                        <li>Network optimization</li>
+                        <li>Detect and fix problems faster
+                            <ul>
+                                <li>Anomaly detection</li>
+                                <li>Traffic analysis &amp; pattern recognition</li>
+                                <li>Automated troubleshooting</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

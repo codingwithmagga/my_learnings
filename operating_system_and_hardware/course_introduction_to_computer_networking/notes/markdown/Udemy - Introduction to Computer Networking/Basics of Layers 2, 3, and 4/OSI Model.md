@@ -1,0 +1,10 @@
+- Explain the OSI Model shortly→A 7-layered framework for designing and implementing computer networks.
+- Name the remark sentence for the layers→All people seem to need data processing. 
+- Name the seven layers→Physical, Data Link, Network, Transport, Session, Presentation, Application
+- Practical example: uploading a video to YouTube >>>
+    - The application, presentation, and session layers (7-5) handle the interface and preparation of data for transport.
+    - The transport layer (Layer 4) manages data segmentation and reliability through protocols like HTTP.
+    - The network layer (Layer 3) is where IP addressing comes into play, guiding the data to its correct destination across the internet.
+    - The data link layer (Layer 2) uses MAC addresses to deliver data to the correct device on the local network.
+    - Finally, the physical layer (Layer 1) involves the actual hardware and transmission mediums that carry the data.
+- At each layer (4, 3, 2), a header is added: {{port number}} (layer 4), {{IP address}} (layer 3), and {{MAC address}} (layer 2).

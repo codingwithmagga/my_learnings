@@ -1,0 +1,4 @@
+- Define Subnetting→Dividing a large network into smaller, more manageable segments to improve efficiency, security, and IP address allocation.
+- Reason for subnetting in big organizations?→Subnetting in large organizations is primarily done for security. By splitting the network into smaller segments, communication between them must pass through a router, which can enforce firewall rules and other security measures. This setup helps control access and protects sensitive parts of the network.
+- An organization has a class B network starting at 145.14.0.0/16. 
+- How to reduce the number of given IP addresses using the subnet mask?→By borrowing bits from the host portion to create a larger network portion, thereby creating more subnets with fewer host addresses per subnet. For example, 145.14.0.0/22 gives the range 145.14.0.0-145.14.3.255.

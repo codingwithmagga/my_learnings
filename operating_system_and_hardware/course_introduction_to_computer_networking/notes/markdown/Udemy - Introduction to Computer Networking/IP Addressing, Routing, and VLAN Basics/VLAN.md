@@ -1,0 +1,5 @@
+- What is a VLAN?→A virtual LAN is a logical subnet that divides a physical network into several separate virtual logical segments, which operate like independent physical networks. Each VLAN has a subnet and is a broadcast domain.
+- Explain the term physical segmentation→Separating devices with switches and routers. In the router it is possible to specify which networks can speak with each other.
+- What is a trunk port?→A port that carries traffic for multiple VLANs over only one physical device.
+- What is an access port→A port that belongs to only one VLAN and carries traffic for that VLAN only.
+- 

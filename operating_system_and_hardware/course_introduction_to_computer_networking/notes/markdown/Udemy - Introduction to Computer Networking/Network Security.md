@@ -1,0 +1,34 @@
+- NAT, Public, and Private IP Addresses
+    - Difference between public and private IP addresses?→Public IP addresses are globally unique and can be accessed from anywhere on the internet, while private IP addresses are used within a local network and cannot be accessed directly from outside the network.
+    - Explain NAT→NAT (Network Address Translation) is a technique used to allow multiple devices on a private network to share a single public IP address when accessing the internet or other external networks by modifying the source IP address of outgoing packets and keeping track of the mappings to allow return traffic.
+    - 
+- DMZ Networks
+    - What is a DMZ Network?→A demilitarized zone network, a subnet that separates an internal local area network (LAN) from other untrusted networks, typically the internet. 
+    - Explain the structure when a DMZ is used >>>
+        - A DMZ network that sits between the internet and the internal LAN. 
+        - A firewall or network device that controls and filters traffic between the internet and the DMZ. 
+        - A second firewall or network device that controls and filters traffic between the DMZ and the internal LAN.
+    - 
+- Basic Layer 3 and 4 Firewall
+    - What is a firewall in general?→A network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.
+    - Describe the firewall rules list for layers 3 and 4→A list of rules that define what traffic is allowed or blocked based on source and destination IP addresses (layer 3), ports (layer 4), and protocols (layer 4).
+    - What is the best practice for the last rule in a firewall?→Deny all.
+    - 
+- Layer 7 Firewall
+    - Extend the acronym NGFW→Next-Generation Firewall.
+    - What is the difference from a layer 3/4 firewall?→It can filter based on application-layer data, not just IP address and port number. They perform what is known as deep packet inspection (DPI).
+    - What is a signature?→A pattern or set of data used to identify a specific type of traffic or threat. The signatures can be downloaded.
+    - 
+- IDS and IPS
+    - Explain IDS→Intrusion Detection System, a system that monitors network traffic for signs of unauthorized access or malicious activity. 
+    - Explain IPS→Intrusion Prevention System, a network security system that monitors and controls network traffic to prevent unauthorized access and malicious activities by analyzing and blocking suspicious packets.
+    - What is the difference between a signature-based and a behavior-based prevention system?→Signature based checks for known malware or attack data stripes. Behavior-based determines normal baseline traffic and watches for unusual traffic patterns.
+- VPN services
+    - What does a VPN do?→A VPN (Virtual Private Network) creates a secure, encrypted tunnel between your device and a server on the internet. This hides your online activity from your internet provider and anyone else on your network, and it masks your real IP address to make it look like you are browsing from the VPN server's location. This enhances your privacy and security, especially on public Wi-Fi.
+    - Drawback of using a VPN >>>
+        - Reduced internet speed
+        - Price (subscription)
+        - Reliance on VPN provider's security
+        - No protection against viruses and malware
+        - Blocked by some services
+    - 

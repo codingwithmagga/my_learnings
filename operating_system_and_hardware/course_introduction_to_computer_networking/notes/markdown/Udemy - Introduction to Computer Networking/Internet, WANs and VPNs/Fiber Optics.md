@@ -1,0 +1,6 @@
+- Difference between coaxial cable and fiber optics→Coaxial cable uses electrical signals over copper; fiber optics uses light signals over glass or plastic fibers (about the width of a human hair).
+- Benefits of fiber optic?→High speed, High bandwidth, low attenuation, and immunity to electromagnetic interference.
+- Name two types of fiber optics >>>
+    - Single-mode fiber (SMF) optics, single light path, best for long distances.
+    - Multi-mode fiber (MMF) optics, multiple light paths, for shorter local distances.
+- 

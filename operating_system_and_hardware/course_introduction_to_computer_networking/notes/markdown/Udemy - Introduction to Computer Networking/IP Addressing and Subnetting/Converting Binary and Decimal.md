@@ -1,0 +1,3 @@
+- How to convert a decimal to a binary?→Divide the decimal number by 2, record the remainder, and repeat with the quotient until it is 0, then write the remainders in reverse order.
+- How to convert a binary to a decimal?→Sum the powers of 2 of each digit that is 1.
+- 

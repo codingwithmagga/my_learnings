@@ -1,0 +1,3 @@
+- 
+- What is a Layer 2 VPN?→A type of VPN that operates at the data link layer, allowing multiple devices to be connected as if they were on the same physical network. This means they have the same IP address subnet. 
+- Explain a use case for this→Disaster recovery. Virtual machines can be moved from one data center to another (when they are connected via a Layer 2 VPN), keeping everything the same, including the IP address. 

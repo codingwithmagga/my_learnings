@@ -1,0 +1,2 @@
+- Why should we add load balancing?→To distribute workload across multiple identical servers (possible in different locations), improving responsiveness/availability, reliability, and scalability.
+- How can health checks be achieved with load balancing→By periodically sending requests to registered servers and verifying responses are received within a specified time interval.

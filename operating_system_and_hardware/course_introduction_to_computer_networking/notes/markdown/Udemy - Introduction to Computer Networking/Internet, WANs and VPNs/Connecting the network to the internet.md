@@ -1,0 +1,4 @@
+- What is a border router?→A router that connects a private network to a public network, such as the Internet. It is also the first line of defense against attacks.
+- What is an ISP?→Internet Service Provider, a company that provides individuals and other companies access to the Internet and other related services such as website building and virtual hosting.
+- Difference between bandwidth and speed?→Bandwidth refers to the amount of data that can be transmitted over a network in a given time (e.g., Mbps/Gbps), while speed refers to the rate at which data is transmitted (latency).
+- 

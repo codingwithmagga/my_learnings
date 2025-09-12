@@ -1,0 +1,4 @@
+- Three videos about CIDR notation and subnets examples.
+- Examples of how to calculate the number of hosts.
+- Take the range and subtract network and broadcast addresses.
+- So a subnet mask of 255.255.255.0 gives us 256-2=254 host addresses.

@@ -1,0 +1,40 @@
+- WAN
+    - What is a WAN?→A wide area network is a network that spans a large geographical area.
+    - What is an edge router?→A router that sits at the edge of a network, connecting to the WAN and routing traffic between the network and the internet or other external networks.
+    - What is a dynamic routing protocol?→A routing protocol that allows routers to exchange information and dynamically adjust routes and update their route table based on network changes.
+    - What is a static route?→A manually configured routing table entry that does not change unless the network administrator manually updates it.
+    - What is the default route?→A route that is used when no other specific route is available, typically pointing to the internet or a default gateway. Often the IP address 0.0.0.0/0 is used.
+    - What is a route table?→A data structure used by a router to determine the best path to forward a packet to its destination.
+    - 
+- Connecting the network to the internet
+    - What is a border router?→A router that connects a private network to a public network, such as the Internet. It is also the first line of defense against attacks.
+    - What is an ISP?→Internet Service Provider, a company that provides individuals and other companies access to the Internet and other related services such as website building and virtual hosting.
+    - Difference between bandwidth and speed?→Bandwidth refers to the amount of data that can be transmitted over a network in a given time (e.g., Mbps/Gbps), while speed refers to the rate at which data is transmitted (latency).
+    - 
+- IPSEC VPN
+    - What is an IPSEC VPN?→A virtual private network (connection of one network with another) that uses the IPSEC protocol to encrypt and authenticate IP packets.
+    - What is the problem with large WANs?→Scalability and security issues.
+    - How does an IPSEC VPN work?→IPsec VPN secures IP communication by encrypting and authenticating packets between endpoints using protocols like ESP and AH. This is done by the router. It establishes a secure tunnel over the internet, typically negotiated via IKE, allowing safe data transfer over insecure networks.
+- Layer 2 VPN
+    - 
+    - What is a Layer 2 VPN?→A type of VPN that operates at the data link layer, allowing multiple devices to be connected as if they were on the same physical network. This means they have the same IP address subnet. 
+    - Explain a use case for this→Disaster recovery. Virtual machines can be moved from one data center to another (when they are connected via a Layer 2 VPN), keeping everything the same, including the IP address. 
+- LTE and 5G
+    - What is LTE?→Long-Term Evolution, a standard for wireless broadband communication (4th generation) for mobile devices.
+    - What is 5G?→Fifth generation of wireless technology, offering faster data speeds, lower latency, and greater connectivity. Fallback to LTE if not available.
+    - 
+- SD-WAN
+    - What is SD-WAN?→Software-Defined Wide Area Network, a network technology that uses software to manage and optimize WAN connections, often used for secure and efficient networking between branches and data centers.
+    - What is one key advantage of an SD-WAN appliance having multiple internet connections?→It allows the appliance to prioritize high-priority traffic, like point-of-sale data, by sending it over the best-performing available connection (e.g., cable modem or 5G) and to fail over if one connection fails.
+    - 
+- Latency and Jitter
+    - What is latency?→Delay between data transmission and reception. Normally measured in milliseconds.
+    - What is jitter?→Variation in packet delay (latency), causing uneven audio or video playback.
+    - 
+- Fiber Optics
+    - Difference between coaxial cable and fiber optics→Coaxial cable uses electrical signals over copper; fiber optics uses light signals over glass or plastic fibers (about the width of a human hair).
+    - Benefits of fiber optic?→High speed, High bandwidth, low attenuation, and immunity to electromagnetic interference.
+    - Name two types of fiber optics >>>
+        - Single-mode fiber (SMF) optics, single light path, best for long distances.
+        - Multi-mode fiber (MMF) optics, multiple light paths, for shorter local distances.
+    - 

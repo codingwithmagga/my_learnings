@@ -1,0 +1,4 @@
+- What is the name of a part of an IP address?→Octet (8 bits for each number)
+- Explain /24 networks→A /24 network has 24 bits as network portion leaving the rest (8 bits) for individual IP addresses. It refers to a subnet mask of 255.255.255.0, which allows for 256 possible IP addresses.
+- Special IPs in /24 networks (in general): {{Network Address}} (x.x.x.0), {{Default Gateway}} (x.x.x.1), and {{Broadcast Address}} (x.x.x.255).
+- 

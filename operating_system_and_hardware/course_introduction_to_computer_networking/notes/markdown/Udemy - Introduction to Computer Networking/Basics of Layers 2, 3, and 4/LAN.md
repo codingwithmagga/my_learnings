@@ -1,0 +1,26 @@
+- What is a Hub?→Hubs are basic network devices that flood incoming traffic to all connected ports. Inefficient for unicast communication, leading to collision domains where devices must take turns transmitting.
+- What is a unicast communication?→Communication between a single sender and a single receiver
+- Explain the term "collision domain"→A network segment where two or more devices can collide, resulting in a data transmission failure, typically in Ethernet networks using hubs.
+- What is a Layer 2 Bridge→Bridges improve network efficiency by using MAC tables to forward traffic selectively. Collision domains are reduced, enhancing network performance. Bridges are a precursor to switches.
+- What is a switch? >>>
+    - A network device that connects multiple devices within a local area network (LAN) and forwards data packets between them based on MAC addresses.
+    - They have MAC tables associating MAC addresses with specific ports, enabling targeted forwarding.
+    - Each port on a switch is its own collision domain, reducing collision issues.
+- What is a broadcast domain? >>>
+    - A network segment where all devices can receive each other's broadcast frames. 
+    - Broadcast traffic is flooded to every port within the broadcast domain. 
+    - A switch creates a single broadcast domain.
+- What is a router? >>>
+    - Device that forwards data packets
+    - Operates at Layer 3 (Network Layer)
+    - Uses IP addresses for routing
+    - Connects different networks
+    - Routers can be used to break up L2-broadcast domains and reduce broadcast traffic.
+- 
+- Review:
+    - Unicast is {{one-to-one}} communication.
+    - Hubs flood incoming traffic to {{all}} ports, causing {{inefficiency}} and {{collision domains}}.
+    - Bridges reduce collision domains by selectively forwarding traffic based on {{MAC tables}}.
+    - Switches further improve efficiency with individual {{collision domains}} for each port.
+    - Broadcast domains in switches can be {{large}}, impacting {{network efficiency}} and {{MAC table size}}.
+    - Routers can be used to break up {{L2-broadcast domains}} and reduce broadcast {{traffic}}.

@@ -1,0 +1,3 @@
+- Explain DHCP.→Dynamic host configuration protocol, automatically assigns IP addresses and other network settings to devices on a network.
+- How does a computer get an IP address→Through DHCP, a computer sends a request to a DHCP server (often the router), which then assigns an available IP address from its pool of addresses.
+- 

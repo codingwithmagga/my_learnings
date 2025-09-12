@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      IP Addressing and Subnetting
+    </h1>
+    <br/>
+    <ul>
+        <li>Overview
+            <ul>
+                <li>MAC addresses are useful in {{9995265560076422::local}} networks, and IP addresses are useful in the {{8128711510483505::global (Internet)}} network. </li>
+                <li>Explaining DNS, which was already in a previous video.</li>
+            </ul>
+        </li>
+        <li>Types of IP addresses
+            <ul>
+                <li>The first 6 minutes are almost the same as the <a isRemReference="true" href="../Udemy%20-%20Introduction%20to%20Computer%20Networking/Network%20Security/NAT%2C%20Public%2C%20and%20Private%20IP%20Addresses.html?isPin=false">NAT, Public, and Private IP Addresses</a></li>
+                <li>Characteristics of public IP addresses
+                    <ul>
+                        <li>Globally unique and routable on the internet</li>
+                        <li>Assigned by Internet Service Providers (ISPs)</li>
+                        <li>Used to identify devices on the public internet.</li>
+                        <li>Typically used for routers and firewalls facing the internet</li>
+                    </ul>
+                </li>
+                <li>Characteristics of private IP addresses
+                    <ul>
+                        <li>Not globally unique and so not routable on the internet</li>
+                        <li>Used for local networks, assigned by network administrators</li>
+                        <li>Defined by RFC 1918</li>
+                        <li>Ranges: 10.0.0.0 to 10.255.255.255</li>
+                        <li>Ranges: 172.16.0.0 to 172.31.255.255</li>
+                        <li>Ranges: 192.168.0.0 to 192.168.255.255</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>IPv4 address structure
+            <ul>
+                <li>No new information. Every piece of information is already in <a isRemReference="true" href="../Udemy%20-%20Introduction%20to%20Computer%20Networking/IP%20Addressing%2C%20Routing%2C%20and%20VLAN%20Basics/IP%20Addresses%20and%20Subnets.html?isPin=false">IP Addresses and Subnets</a>.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Classful vs. Classless Addressing
+            <ul>
+                <li>What is the IPv4 address range?→$0.0.0.0$ to $255.255.255.255$</li>
+                <li>What is the purpose of the Class A address range?→To provide addresses for large networks with many hosts, with a default subnet mask of 255.0.0.0 (/8). These ranges are always given as a whole to too big networks/organizations. Range from 1.0.0.0 to 127.0.0.0</li>
+                <li>What is the purpose of the Class B address range?→To provide a range of IP addresses for medium-sized networks, specifically for organizations up to 65,536 hosts. Ranges from 128.0.0.0 to 191.255.0.0.</li>
+                <li>What is the purpose of the Class C address range?→To provide a range of IP addresses for small to medium-sized networks, with 256 possible addresses per network. Ranges from 192.0.0.0 to 223.255.255.0.</li>
+                <li>Describe the issue with classful IP addressing→Wasted IP addresses due to fixed class boundaries.</li>
+            </ul>
+        </li>
+        <li>Converting Binary and Decimal
+            <ul>
+                <li>How to convert a decimal to a binary?→Divide the decimal number by 2, record the remainder, and repeat with the quotient until it is 0, then write the remainders in reverse order.</li>
+                <li>How to convert a binary to a decimal?→Sum the powers of 2 of each digit that is 1.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Why is 255 special?
+            <ul>
+                <li>Why is 255 special?→It is the highest number that can be stored in an 8-bit binary number. And so it is the highest value in an octet in an IP address.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Hands-on practice 
+            <ul>
+                <li>A practice lesson, no notes here.</li>
+            </ul>
+        </li>
+        <li>Subnetting
+            <ul>
+                <li>Define Subnetting→Dividing a large network into smaller, more manageable segments to improve efficiency, security, and IP address allocation.</li>
+                <li>Reason for subnetting in big organizations?→Subnetting in large organizations is primarily done for security. By splitting the network into smaller segments, communication between them must pass through a router, which can enforce firewall rules and other security measures. This setup helps control access and protects sensitive parts of the network.</li>
+                <li>An organization has a class B network starting at 145.14.0.0/16. </li>
+                <li>How to reduce the number of given IP addresses using the subnet mask?→By borrowing bits from the host portion to create a larger network portion, thereby creating more subnets with fewer host addresses per subnet. For example, 145.14.0.0/22 gives the range 145.14.0.0-145.14.3.255.</li>
+            </ul>
+        </li>
+        <li>Subnets and CIDR Notation
+            <ul>
+                <li>What is the purpose of the subnet mask?→To determine the scope of the local network for a given IP address.</li>
+                <li>Explain the CIDR notation→A way to express the number of bits in a subnet mask, written as a slash followed by the number of bits, e.g., 192.168.1.0/24. For example, IP address 97.122.14.233/25 is the network address 97.122.14.128/25 and the broadcast address 97.122.14.255/25.</li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Practice Videos: Subnets
+            <ul>
+                <li>Three videos about CIDR notation and subnets examples.</li>
+                <li>Examples of how to calculate the number of hosts.</li>
+                <li>Take the range and subtract network and broadcast addresses.</li>
+                <li>So a subnet mask of 255.255.255.0 gives us 256-2=254 host addresses.</li>
+            </ul>
+        </li>
+        <li>Network address, broadcast address
+            <ul>
+                <li>All this content was already shown way earlier. I don&#39;t know why it comes in a 2-minute video at the end again.</li>
+                <li></li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

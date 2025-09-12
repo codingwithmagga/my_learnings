@@ -1,0 +1,2 @@
+- MAC addresses are useful in {{local}} networks, and IP addresses are useful in the {{global (Internet)}} network. 
+- Explaining DNS, which was already in a previous video.

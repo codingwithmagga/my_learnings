@@ -1,0 +1,70 @@
+- Network Redundancy
+    - What is a single point of failure?→A component or part of a system that, if it fails, will cause the entire system to fail.
+    - What is the core purpose of implementing network redundancy?→The core purpose is to eliminate single points of failure to keep the network functioning properly even when a component fails, ensuring high availability.
+    - What is the role of a dynamic routing protocol in a failure scenario?→A dynamic routing protocol acts like a GPS for the network, automatically detecting a failed connection and dynamically calculating a new path for traffic to take.
+    - What problem do protocols like HSRP and VRRP solve?→They solve the problem of a server's default gateway failing by allowing multiple routers to share a virtual IP address, which a backup router can take over if the primary fails.
+- Load Balancing
+    - Why should we add load balancing?→To distribute workload across multiple identical servers (possible in different locations), improving responsiveness/availability, reliability, and scalability.
+    - How can health checks be achieved with load balancing→By periodically sending requests to registered servers and verifying responses are received within a specified time interval.
+- Network Troubleshooting
+    - Which steps to take to take down a network error? >>>
+        - Create a network diagram.
+        - Methodical Troubleshooting: Ask questions to narrow down the issue.
+        - Begin with components closest to the problem, validate it, and proceed to the next layer.
+    - 
+- DHCP
+    - Explain DHCP.→Dynamic host configuration protocol, automatically assigns IP addresses and other network settings to devices on a network.
+    - How does a computer get an IP address→Through DHCP, a computer sends a request to a DHCP server (often the router), which then assigns an available IP address from its pool of addresses.
+    - 
+- DNS
+    - Explain DNS→Domain Name System, a system that translates domain names into IP addresses.
+    - How do DNS servers operate?→By resolving domain names to IP addresses through a hierarchical system of servers, using caching and zone transfers to distribute and update information.
+    - 
+- Netflow and IPFIX
+    - What is netflow?→A network protocol developed by CISCO used for collecting and monitoring network traffic, providing detailed information about the source and destination of the traffic.
+    - What is IPFIX?→A standardized protocol for collecting and exporting network flow information, based on NetFlow version 9.
+- NTP
+    - Explain NTP→Network time protocol, a protocol that synchronizes computer clocks over a network to a precise time source.
+    - Why is synchronized time important in a network?→So that events can be accurately correlated and logged across different devices. Also digital certifacte expiration.
+    - 
+- SNMP
+    - Define SNMP→Simple Network Management Protocol (SNMP), a protocol to monitor and manage devices on a network.
+    - What is an SNMP Trap?→An SNMP Trap is a one-way, asynchronous notification sent from a managed device to an SNMP manager. It alerts the manager about significant events or changes on the device, prompting the manager software to generate alerts for administrators or users.
+    - What is an SNMP Inform?→An SNMP Inform is similar to an SNMP Trap, but with one key difference: it is a notification sent from a managed device to an SNMP manager that requires an acknowledgment (response) from the manager. This ensures the manager received the message. Traps, on the other hand, do not require any acknowledgment.
+    - 
+- Quality of Service
+    - The Challenge: Not all traffic is equal.
+        - Define quality of service (QoS)→A set of technologies that manage network traffic to reduce packet loss, delay, and jitter, ensuring that critical applications receive sufficient bandwidth and priority.
+        - Define class of service (CoS)→A method of prioritizing traffic on a network to ensure that critical traffic receives sufficient bandwidth and low latency. It works on layer 2 and inserts a header with 802.1p priority bits.
+        - Define Differential Services Code Point (DSCP)→A 6-bit field in the IP header (layer 3) used to identify packets with a specific forwarding treatment or priority level.
+    - 
+- Configuration Management tools
+    - What is a problem configuration management tools shall solve?→Ensuring consistency and accuracy of device configurations across a network. Also scalability: hundreds of devices can be configured fast.
+    - Benefits of configuration management >>>
+        - Standardization: Every device follows the same rules.
+        - Automation: Reduce manual work and errors.
+        - Version control: Keep track of changes and roll back if needed.
+        - Scalability: Configure 10 or 10000 devices with the same effort.
+    - Different tools:
+        - Ansbile -  agentless uses simple YAML playbooks.
+        - Puppet - uses a declarative language to define desired states.
+        - Chef - Recipe-based approach, similar to Puppet but Ruby-based
+        - SatlStack - focuses on speed and scalabilty.
+- Generative AI
+    - A demo with ChatGPT doing networking things:
+        - Configuring a Cisco router.
+            - Creates a script
+            - Check the script line by line, use it as a starting point
+        - Problem search within a router.
+        - Error log analysis
+        - Configuring using Terraform.
+- AI Assisted Networking
+    - How can AI help in networking? >>>
+        - Automated repetitive tasks
+        - Predictive analytics for performance
+        - Network optimization
+        - Detect and fix problems faster
+            - Anomaly detection
+            - Traffic analysis & pattern recognition
+            - Automated troubleshooting
+            - 

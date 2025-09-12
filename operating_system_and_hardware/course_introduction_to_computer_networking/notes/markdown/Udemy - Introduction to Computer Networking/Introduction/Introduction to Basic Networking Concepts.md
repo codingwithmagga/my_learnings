@@ -1,0 +1,8 @@
+- {{Local Area Networks}} (LANs) connect devices within a single physical location for seamless communication.
+- Ethernet switches play a pivotal role in connecting devices in a LAN and are typically used in a {{star}} topology.
+- Explain star topology→A star topology connects all nodes to a central hub or switch.
+- The OSI model helps organize networking tasks into layers, with Layer One dealing with {{physical }}aspects.
+- Ethernet, whether wired or {{wireless}}, remains a fundamental technology in LANs.
+- Network Interface Cards (NICs) have unique {{MAC}} addresses, facilitating communication within the LAN.
+- Ethernet frames consist of a {{Payload}}, {{Destination MAC}}, and {{Source MAC}}, akin to an envelope for efficient data exchange.
+- 

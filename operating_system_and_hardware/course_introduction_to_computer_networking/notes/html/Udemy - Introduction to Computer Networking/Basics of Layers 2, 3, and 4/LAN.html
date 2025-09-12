@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      LAN
+    </h1>
+    <br/>
+    <ul>
+        <li>What is a Hub?→Hubs are basic network devices that flood incoming traffic to all connected ports. Inefficient for unicast communication, leading to collision domains where devices must take turns transmitting.</li>
+        <li>What is a unicast communication?→Communication between a single sender and a single receiver</li>
+        <li>Explain the term &quot;collision domain&quot;→A network segment where two or more devices can collide, resulting in a data transmission failure, typically in Ethernet networks using hubs.</li>
+        <li>What is a Layer 2 Bridge→Bridges improve network efficiency by using MAC tables to forward traffic selectively. Collision domains are reduced, enhancing network performance. Bridges are a precursor to switches.</li>
+        <li>What is a switch?
+            <ul>
+                <li>A network device that connects multiple devices within a local area network (LAN) and forwards data packets between them based on MAC addresses.</li>
+                <li>They have MAC tables associating MAC addresses with specific ports, enabling targeted forwarding.</li>
+                <li>Each port on a switch is its own collision domain, reducing collision issues.</li>
+            </ul>
+        </li>
+        <li>What is a broadcast domain?
+            <ul>
+                <li>A network segment where all devices can receive each other&#39;s broadcast frames. </li>
+                <li>Broadcast traffic is flooded to every port within the broadcast domain. </li>
+                <li>A switch creates a single broadcast domain.</li>
+            </ul>
+        </li>
+        <li>What is a router?
+            <ul>
+                <li>Device that forwards data packets</li>
+                <li>Operates at Layer 3 (Network Layer)</li>
+                <li>Uses IP addresses for routing</li>
+                <li>Connects different networks</li>
+                <li>Routers can be used to break up L2-broadcast domains and reduce broadcast traffic.</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Review:
+            <ul>
+                <li>Unicast is {{009772762000977542::one-to-one}} communication.</li>
+                <li>Hubs flood incoming traffic to {{3952170986125816::all}} ports, causing {{42937509196714285::inefficiency}} and {{42937509196714285::collision domains}}.</li>
+                <li>Bridges reduce collision domains by selectively forwarding traffic based on {{15830481085722004::MAC tables}}.</li>
+                <li>Switches further improve efficiency with individual {{3259150372039865::collision domains}} for each port.</li>
+                <li>Broadcast domains in switches can be {{9239347780101135::large}}, impacting {{4437913169677715::network efficiency}} and {{4437913169677715::MAC table size}}.</li>
+                <li>Routers can be used to break up {{875973694903358::L2-broadcast domains}} and reduce broadcast {{875973694903358::traffic}}.</li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

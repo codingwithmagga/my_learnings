@@ -1,0 +1,2 @@
+- Why is 255 special?→It is the highest number that can be stored in an 8-bit binary number. And so it is the highest value in an octet in an IP address.
+- 

@@ -1,0 +1,5 @@
+- The Challenge: Not all traffic is equal.
+    - Define quality of service (QoS)→A set of technologies that manage network traffic to reduce packet loss, delay, and jitter, ensuring that critical applications receive sufficient bandwidth and priority.
+    - Define class of service (CoS)→A method of prioritizing traffic on a network to ensure that critical traffic receives sufficient bandwidth and low latency. It works on layer 2 and inserts a header with 802.1p priority bits.
+    - Define Differential Services Code Point (DSCP)→A 6-bit field in the IP header (layer 3) used to identify packets with a specific forwarding treatment or priority level.
+- 

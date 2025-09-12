@@ -1,0 +1,7 @@
+- Introduction
+    - Explain WiFi→A wireless networking technology that allows devices to connect to the internet or communicate with each other without the use of cables or wires.
+    - Difference between 2.4 GHz and 5.0 GHz→2.4 GHz has longer range and better penetration through walls, but lower bandwidth and more interference; 5.0 GHz has shorter range and less penetration, but higher bandwidth and less interference.
+    - What is a WiFi Access Point?→A device that allows wireless devices to connect to a network. It is physically connected to the router (maybe via a switch in bigger networks).
+    - What is a WLAN Controller?→A device that manages and configures multiple wireless access points (WAPs) in a wireless local area network (WLAN).
+    - Explain SSID→SSID (Service Set Identifier) the name of a WiFi network.
+    - 

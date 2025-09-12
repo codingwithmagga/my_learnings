@@ -1,0 +1,8 @@
+- 
+- BUM Traffic refers to a collective term used to describe three distinct types of traffic on Ethernet networks: {{Broadcast}}, {{Unknown Unicast}}, and {{Multicast}}.
+- MAC addresses are {{hard-coded}} and associated with network interfaces, while IP addresses are {{manually}} assigned and serve as network identifiers.
+- What is an ARP Request?→A layer2 broadcast message sent to find the MAC address associated with an IP address.
+- What is an ARP Table?→A table on a computer that maps IP addresses to MAC addresses on a network.
+- What is an unknown unicast?→A frame sent to a MAC address that is not known to the switch, and therefore flooded out all ports.
+- Switches can be {{interconnected}} to create larger networks and operate as a unified switch.
+- What is a multicast?→A transmission sent to multiple destinations simultaneously. The switch identifies the ports belonging to the multicast group and forwards the traffic only to those ports.

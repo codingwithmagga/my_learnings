@@ -1,0 +1,3 @@
+- Explain DNS→Domain Name System, a system that translates domain names into IP addresses.
+- How do DNS servers operate?→By resolving domain names to IP addresses through a hierarchical system of servers, using caching and zone transfers to distribute and update information.
+- 

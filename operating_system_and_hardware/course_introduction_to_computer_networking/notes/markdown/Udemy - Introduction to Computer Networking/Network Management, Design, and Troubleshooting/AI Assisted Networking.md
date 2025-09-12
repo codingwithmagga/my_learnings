@@ -1,0 +1,9 @@
+- How can AI help in networking? >>>
+    - Automated repetitive tasks
+    - Predictive analytics for performance
+    - Network optimization
+    - Detect and fix problems faster
+        - Anomaly detection
+        - Traffic analysis & pattern recognition
+        - Automated troubleshooting
+        - 

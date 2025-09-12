@@ -1,0 +1,5 @@
+- Explain PoE→Power over Ethernet (PoE), a technology that allows an Ethernet cable to carry both data and power, enabling devices to receive power over the same cable used for network connectivity.
+- What problem does PoE solve in networking?→The need for a separate power supply for devices like IP phones and wireless access points.
+- Name two common devices that use PoE.→IP phones, security cameras
+- What is the difference between PoE, PoE+, and PoE++?→PoE (Power over Ethernet) provides up to 15.4 W of power, PoE+ provides up to 30 W, and PoE++ provides up to 60 W (also known as PoE Type 3) or 100 W (PoE Type 4).
+- How does PoE improve flexibility in device placement?→By eliminating the need for a nearby power outlet.

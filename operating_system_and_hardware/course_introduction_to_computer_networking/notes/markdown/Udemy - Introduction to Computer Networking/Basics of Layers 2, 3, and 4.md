@@ -1,0 +1,92 @@
+- LAN
+    - What is a Hub?→Hubs are basic network devices that flood incoming traffic to all connected ports. Inefficient for unicast communication, leading to collision domains where devices must take turns transmitting.
+    - What is a unicast communication?→Communication between a single sender and a single receiver
+    - Explain the term "collision domain"→A network segment where two or more devices can collide, resulting in a data transmission failure, typically in Ethernet networks using hubs.
+    - What is a Layer 2 Bridge→Bridges improve network efficiency by using MAC tables to forward traffic selectively. Collision domains are reduced, enhancing network performance. Bridges are a precursor to switches.
+    - What is a switch? >>>
+        - A network device that connects multiple devices within a local area network (LAN) and forwards data packets between them based on MAC addresses.
+        - They have MAC tables associating MAC addresses with specific ports, enabling targeted forwarding.
+        - Each port on a switch is its own collision domain, reducing collision issues.
+    - What is a broadcast domain? >>>
+        - A network segment where all devices can receive each other's broadcast frames. 
+        - Broadcast traffic is flooded to every port within the broadcast domain. 
+        - A switch creates a single broadcast domain.
+    - What is a router? >>>
+        - Device that forwards data packets
+        - Operates at Layer 3 (Network Layer)
+        - Uses IP addresses for routing
+        - Connects different networks
+        - Routers can be used to break up L2-broadcast domains and reduce broadcast traffic.
+    - 
+    - Review:
+        - Unicast is {{one-to-one}} communication.
+        - Hubs flood incoming traffic to {{all}} ports, causing {{inefficiency}} and {{collision domains}}.
+        - Bridges reduce collision domains by selectively forwarding traffic based on {{MAC tables}}.
+        - Switches further improve efficiency with individual {{collision domains}} for each port.
+        - Broadcast domains in switches can be {{large}}, impacting {{network efficiency}} and {{MAC table size}}.
+        - Routers can be used to break up {{L2-broadcast domains}} and reduce broadcast {{traffic}}.
+- OSI Model
+    - Explain the OSI Model shortly→A 7-layered framework for designing and implementing computer networks.
+    - Name the remark sentence for the layers→All people seem to need data processing. 
+    - Name the seven layers→Physical, Data Link, Network, Transport, Session, Presentation, Application
+    - Practical example: uploading a video to YouTube >>>
+        - The application, presentation, and session layers (7-5) handle the interface and preparation of data for transport.
+        - The transport layer (Layer 4) manages data segmentation and reliability through protocols like HTTP.
+        - The network layer (Layer 3) is where IP addressing comes into play, guiding the data to its correct destination across the internet.
+        - The data link layer (Layer 2) uses MAC addresses to deliver data to the correct device on the local network.
+        - Finally, the physical layer (Layer 1) involves the actual hardware and transmission mediums that carry the data.
+    - At each layer (4, 3, 2), a header is added: {{port number}} (layer 4), {{IP address}} (layer 3), and {{MAC address}} (layer 2).
+- Computer-Switch-Connection
+    - Explain the structure of a MAC Table→A table that maps MAC addresses to ports on a network switch, used for forwarding data packets to the correct destination device.
+    - Entries in a MAC table are {{temporary}}.
+    - When connecting a hub or a switch to another switch, {{multiple}} MAC addresses may be associated with a single port. 
+- BUM traffic
+    - 
+    - BUM Traffic refers to a collective term used to describe three distinct types of traffic on Ethernet networks: {{Broadcast}}, {{Unknown Unicast}}, and {{Multicast}}.
+    - MAC addresses are {{hard-coded}} and associated with network interfaces, while IP addresses are {{manually}} assigned and serve as network identifiers.
+    - What is an ARP Request?→A layer2 broadcast message sent to find the MAC address associated with an IP address.
+    - What is an ARP Table?→A table on a computer that maps IP addresses to MAC addresses on a network.
+    - What is an unknown unicast?→A frame sent to a MAC address that is not known to the switch, and therefore flooded out all ports.
+    - Switches can be {{interconnected}} to create larger networks and operate as a unified switch.
+    - What is a multicast?→A transmission sent to multiple destinations simultaneously. The switch identifies the ports belonging to the multicast group and forwards the traffic only to those ports.
+- Routers
+    - What is the role of routers in network architecture? >>>
+        - Routers are essential devices that serve as a boundary between different Layer 2 networks, enabling distinct network segments.
+        - The presence of routers between segments reduces broadcast traffic and isolates network domains.
+    - A router creates different network segments, for example, when connected to two or more switches.
+        - Each segment established by a router has its own unique {{IP address range}} and {{subnet}}.
+        - Devices within each segment are assigned IP addresses specific to their respective {{subnets}}. 
+        - Each segment, connected through a router, forms its own distinct {{ broadcast domain}}.
+        - Routers do not propagate {{Layer 2}} broadcasts between segments.
+    - What is a default gateway?→The IP address of the router that a device uses to access another network. Routers act as default gateways for devices within their respective segments.
+    - When devices need to communicate with other segments or networks, they send traffic to the router, which makes routing decisions based on {{Layer 3 IP addresses}}. 
+- TCP and UDP
+    - Characteristics of a UDP connection >>>
+        - Connectionless
+        - No Error Checking
+        - Values speed over accuracy
+        - Use cases: 
+            - VoIP (Voice over Internet Protocol)
+            - DNS (Domain Name System)
+            - DHCP (Dynamic Host Configuration Protocol) is a network protocol that automatically assigns IP addresses and network settings to devices on a network.
+            - TFTP (Trivial File Transfer Protocol) is a simple, lightweight protocol used to transfer files over a network, typically without authentication or advanced features .
+            - 
+        - Datagrams
+    - 
+    - Characteristics of a TCP connection >>>
+        - Connection-oriented protocol
+        - Error checking (Checksum) and correction
+        - Values accuracy over speed.
+        - Use cases:
+            - Web browsing
+            - File downloads
+            - E-Mail
+        - Segments
+        - 
+    - 
+- PoE
+    - Explain PoE→Power over Ethernet (PoE), a technology that allows an Ethernet cable to carry both data and power, enabling devices to receive power over the same cable used for network connectivity.
+    - What problem does PoE solve in networking?→The need for a separate power supply for devices like IP phones and wireless access points.
+    - Name two common devices that use PoE.→IP phones, security cameras
+    - What is the difference between PoE, PoE+, and PoE++?→PoE (Power over Ethernet) provides up to 15.4 W of power, PoE+ provides up to 30 W, and PoE++ provides up to 60 W (also known as PoE Type 3) or 100 W (PoE Type 4).
+    - How does PoE improve flexibility in device placement?→By eliminating the need for a nearby power outlet.

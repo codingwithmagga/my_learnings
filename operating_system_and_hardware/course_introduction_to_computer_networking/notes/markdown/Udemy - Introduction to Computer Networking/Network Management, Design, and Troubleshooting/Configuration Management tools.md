@@ -1,0 +1,11 @@
+- What is a problem configuration management tools shall solve?→Ensuring consistency and accuracy of device configurations across a network. Also scalability: hundreds of devices can be configured fast.
+- Benefits of configuration management >>>
+    - Standardization: Every device follows the same rules.
+    - Automation: Reduce manual work and errors.
+    - Version control: Keep track of changes and roll back if needed.
+    - Scalability: Configure 10 or 10000 devices with the same effort.
+- Different tools:
+    - Ansbile -  agentless uses simple YAML playbooks.
+    - Puppet - uses a declarative language to define desired states.
+    - Chef - Recipe-based approach, similar to Puppet but Ruby-based
+    - SatlStack - focuses on speed and scalabilty.

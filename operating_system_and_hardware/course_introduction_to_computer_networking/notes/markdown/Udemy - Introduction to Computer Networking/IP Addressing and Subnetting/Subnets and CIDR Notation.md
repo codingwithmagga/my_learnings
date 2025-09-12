@@ -1,0 +1,3 @@
+- What is the purpose of the subnet mask?→To determine the scope of the local network for a given IP address.
+- Explain the CIDR notation→A way to express the number of bits in a subnet mask, written as a slash followed by the number of bits, e.g., 192.168.1.0/24. For example, IP address 97.122.14.233/25 is the network address 97.122.14.128/25 and the broadcast address 97.122.14.255/25.
+- 

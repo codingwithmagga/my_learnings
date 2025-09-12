@@ -1,0 +1,4 @@
+- What is a firewall in general?→A network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.
+- Describe the firewall rules list for layers 3 and 4→A list of rules that define what traffic is allowed or blocked based on source and destination IP addresses (layer 3), ports (layer 4), and protocols (layer 4).
+- What is the best practice for the last rule in a firewall?→Deny all.
+- 

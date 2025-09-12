@@ -1,0 +1,6 @@
+- What is a DMZ Network?→A demilitarized zone network, a subnet that separates an internal local area network (LAN) from other untrusted networks, typically the internet. 
+- Explain the structure when a DMZ is used >>>
+    - A DMZ network that sits between the internet and the internal LAN. 
+    - A firewall or network device that controls and filters traffic between the internet and the DMZ. 
+    - A second firewall or network device that controls and filters traffic between the DMZ and the internal LAN.
+- 

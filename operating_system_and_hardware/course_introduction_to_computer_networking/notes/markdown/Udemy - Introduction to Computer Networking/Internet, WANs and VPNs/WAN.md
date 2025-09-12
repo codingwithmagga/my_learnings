@@ -1,0 +1,7 @@
+- What is a WAN?→A wide area network is a network that spans a large geographical area.
+- What is an edge router?→A router that sits at the edge of a network, connecting to the WAN and routing traffic between the network and the internet or other external networks.
+- What is a dynamic routing protocol?→A routing protocol that allows routers to exchange information and dynamically adjust routes and update their route table based on network changes.
+- What is a static route?→A manually configured routing table entry that does not change unless the network administrator manually updates it.
+- What is the default route?→A route that is used when no other specific route is available, typically pointing to the internet or a default gateway. Often the IP address 0.0.0.0/0 is used.
+- What is a route table?→A data structure used by a router to determine the best path to forward a packet to its destination.
+- 

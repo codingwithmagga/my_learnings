@@ -1,0 +1,4 @@
+- Define SNMP→Simple Network Management Protocol (SNMP), a protocol to monitor and manage devices on a network.
+- What is an SNMP Trap?→An SNMP Trap is a one-way, asynchronous notification sent from a managed device to an SNMP manager. It alerts the manager about significant events or changes on the device, prompting the manager software to generate alerts for administrators or users.
+- What is an SNMP Inform?→An SNMP Inform is similar to an SNMP Trap, but with one key difference: it is a notification sent from a managed device to an SNMP manager that requires an acknowledgment (response) from the manager. This ensures the manager received the message. Traps, on the other hand, do not require any acknowledgment.
+- 

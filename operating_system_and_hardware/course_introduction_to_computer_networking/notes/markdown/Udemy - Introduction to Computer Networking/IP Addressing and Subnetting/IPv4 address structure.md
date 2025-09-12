@@ -1,0 +1,2 @@
+- No new information. Every piece of information is already in [IP Addresses and Subnets](../../Udemy%20-%20Introduction%20to%20Computer%20Networking/IP%20Addressing%2C%20Routing%2C%20and%20VLAN%20Basics/IP%20Addresses%20and%20Subnets.md).
+- 

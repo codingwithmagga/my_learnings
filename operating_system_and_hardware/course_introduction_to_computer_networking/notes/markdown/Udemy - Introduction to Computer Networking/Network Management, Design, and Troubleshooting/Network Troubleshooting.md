@@ -1,0 +1,5 @@
+- Which steps to take to take down a network error? >>>
+    - Create a network diagram.
+    - Methodical Troubleshooting: Ask questions to narrow down the issue.
+    - Begin with components closest to the problem, validate it, and proceed to the next layer.
+- 

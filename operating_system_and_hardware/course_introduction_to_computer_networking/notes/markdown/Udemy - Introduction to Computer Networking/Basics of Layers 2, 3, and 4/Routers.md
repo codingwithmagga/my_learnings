@@ -1,0 +1,10 @@
+- What is the role of routers in network architecture? >>>
+    - Routers are essential devices that serve as a boundary between different Layer 2 networks, enabling distinct network segments.
+    - The presence of routers between segments reduces broadcast traffic and isolates network domains.
+- A router creates different network segments, for example, when connected to two or more switches.
+    - Each segment established by a router has its own unique {{IP address range}} and {{subnet}}.
+    - Devices within each segment are assigned IP addresses specific to their respective {{subnets}}. 
+    - Each segment, connected through a router, forms its own distinct {{ broadcast domain}}.
+    - Routers do not propagate {{Layer 2}} broadcasts between segments.
+- What is a default gateway?→The IP address of the router that a device uses to access another network. Routers act as default gateways for devices within their respective segments.
+- When devices need to communicate with other segments or networks, they send traffic to the router, which makes routing decisions based on {{Layer 3 IP addresses}}. 

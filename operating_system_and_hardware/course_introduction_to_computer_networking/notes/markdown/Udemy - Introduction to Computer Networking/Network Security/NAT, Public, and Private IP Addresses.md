@@ -1,0 +1,3 @@
+- Difference between public and private IP addresses?→Public IP addresses are globally unique and can be accessed from anywhere on the internet, while private IP addresses are used within a local network and cannot be accessed directly from outside the network.
+- Explain NAT→NAT (Network Address Translation) is a technique used to allow multiple devices on a private network to share a single public IP address when accessing the internet or other external networks by modifying the source IP address of outgoing packets and keeping track of the mappings to allow return traffic.
+- 

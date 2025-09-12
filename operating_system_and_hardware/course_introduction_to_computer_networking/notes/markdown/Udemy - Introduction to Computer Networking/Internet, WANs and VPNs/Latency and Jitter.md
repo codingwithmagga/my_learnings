@@ -1,0 +1,3 @@
+- What is latency?→Delay between data transmission and reception. Normally measured in milliseconds.
+- What is jitter?→Variation in packet delay (latency), causing uneven audio or video playback.
+- 

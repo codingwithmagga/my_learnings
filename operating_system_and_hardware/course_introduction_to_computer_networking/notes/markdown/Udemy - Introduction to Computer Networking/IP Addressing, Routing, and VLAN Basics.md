@@ -1,0 +1,30 @@
+- IP Addresses and Subnets
+    - What is the name of a part of an IP address?→Octet (8 bits for each number)
+    - Explain /24 networks→A /24 network has 24 bits as network portion leaving the rest (8 bits) for individual IP addresses. It refers to a subnet mask of 255.255.255.0, which allows for 256 possible IP addresses.
+    - Special IPs in /24 networks (in general): {{Network Address}} (x.x.x.0), {{Default Gateway}} (x.x.x.1), and {{Broadcast Address}} (x.x.x.255).
+    - 
+- Packet Walk
+    - This lecture shows how a package is sent from one computer to another computer in a different network segment connected via a router. It goes like this: >>>
+        - Each IP packet contains a source and destination IP address. These addresses determine the sender and recipient of the data.
+        - The default gateway, typically residing on a router within the same local area network, serves as the bridge for outbound traffic destined for other networks.
+        - When an IP packet is prepared for transmission, it includes Layer 2 addressing information. This information encompasses the source and destination MAC addresses.
+        - The source computer generates an Ethernet frame by appending the source and destination MAC addresses, corresponding to its network segment.
+        - The Ethernet frame arrives at a physical switch. The switch analyzes the Layer 2 addressing, identifies the destination MAC, and forwards the frame within the local segment.
+        - Upon reaching the router, the Ethernet frame is examined. The router deciphers the destination MAC, acknowledging its role in the transmission process.
+        - The router proceeds to inspect the destination IP address within the IP packet. It determines if the packet should be routed to another network.
+        - To forward the packet to the next network segment, the router checks its ARP table to link the destination IP with the appropriate MAC address.
+        - The router appends new Layer 2 headers to the packet to accommodate its journey into the next network segment, including source and destination MAC addresses.
+        - The updated Ethernet frame is sent to the switch, which forwards it based on the new destination MAC address, ensuring it reaches the intended segment.
+        - The Ethernet frame arrives at the destination computer. The computer recognizes its MAC address, proceeds to extract the Layer 3 addressing information, and retrieves the payload for processing.
+- ICMP and Ping
+    - What is ICMP?→ICMP (Internet Control Message Protocol) is used for error reporting and diagnostic functions in IP networks. It works on the network layer.
+    - What does the `ping` command do?→Sends ICMP echo request packets to test network connectivity and measures response time.
+    - Explain TTL→Time to live, a field in IP packets that limits the number of hops (router passes) before the packet is discarded.
+    - What is the loopback address?→127.0.0.1, the local IP address on every computer.
+    - 
+- VLAN
+    - What is a VLAN?→A virtual LAN is a logical subnet that divides a physical network into several separate virtual logical segments, which operate like independent physical networks. Each VLAN has a subnet and is a broadcast domain.
+    - Explain the term physical segmentation→Separating devices with switches and routers. In the router it is possible to specify which networks can speak with each other.
+    - What is a trunk port?→A port that carries traffic for multiple VLANs over only one physical device.
+    - What is an access port→A port that belongs to only one VLAN and carries traffic for that VLAN only.
+    - 

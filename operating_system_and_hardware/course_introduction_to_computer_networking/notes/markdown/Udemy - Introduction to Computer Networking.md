@@ -1,0 +1,342 @@
+- Introduction
+    - Introduction to Basic Networking Concepts
+        - {{Local Area Networks}} (LANs) connect devices within a single physical location for seamless communication.
+        - Ethernet switches play a pivotal role in connecting devices in a LAN and are typically used in a {{star}} topology.
+        - Explain star topology→A star topology connects all nodes to a central hub or switch.
+        - The OSI model helps organize networking tasks into layers, with Layer One dealing with {{physical }}aspects.
+        - Ethernet, whether wired or {{wireless}}, remains a fundamental technology in LANs.
+        - Network Interface Cards (NICs) have unique {{MAC}} addresses, facilitating communication within the LAN.
+        - Ethernet frames consist of a {{Payload}}, {{Destination MAC}}, and {{Source MAC}}, akin to an envelope for efficient data exchange.
+        - 
+- Basics of Layers 2, 3, and 4
+    - LAN
+        - What is a Hub?→Hubs are basic network devices that flood incoming traffic to all connected ports. Inefficient for unicast communication, leading to collision domains where devices must take turns transmitting.
+        - What is a unicast communication?→Communication between a single sender and a single receiver
+        - Explain the term "collision domain"→A network segment where two or more devices can collide, resulting in a data transmission failure, typically in Ethernet networks using hubs.
+        - What is a Layer 2 Bridge→Bridges improve network efficiency by using MAC tables to forward traffic selectively. Collision domains are reduced, enhancing network performance. Bridges are a precursor to switches.
+        - What is a switch? >>>
+            - A network device that connects multiple devices within a local area network (LAN) and forwards data packets between them based on MAC addresses.
+            - They have MAC tables associating MAC addresses with specific ports, enabling targeted forwarding.
+            - Each port on a switch is its own collision domain, reducing collision issues.
+        - What is a broadcast domain? >>>
+            - A network segment where all devices can receive each other's broadcast frames. 
+            - Broadcast traffic is flooded to every port within the broadcast domain. 
+            - A switch creates a single broadcast domain.
+        - What is a router? >>>
+            - Device that forwards data packets
+            - Operates at Layer 3 (Network Layer)
+            - Uses IP addresses for routing
+            - Connects different networks
+            - Routers can be used to break up L2-broadcast domains and reduce broadcast traffic.
+        - 
+        - Review:
+            - Unicast is {{one-to-one}} communication.
+            - Hubs flood incoming traffic to {{all}} ports, causing {{inefficiency}} and {{collision domains}}.
+            - Bridges reduce collision domains by selectively forwarding traffic based on {{MAC tables}}.
+            - Switches further improve efficiency with individual {{collision domains}} for each port.
+            - Broadcast domains in switches can be {{large}}, impacting {{network efficiency}} and {{MAC table size}}.
+            - Routers can be used to break up {{L2-broadcast domains}} and reduce broadcast {{traffic}}.
+    - OSI Model
+        - Explain the OSI Model shortly→A 7-layered framework for designing and implementing computer networks.
+        - Name the remark sentence for the layers→All people seem to need data processing. 
+        - Name the seven layers→Physical, Data Link, Network, Transport, Session, Presentation, Application
+        - Practical example: uploading a video to YouTube >>>
+            - The application, presentation, and session layers (7-5) handle the interface and preparation of data for transport.
+            - The transport layer (Layer 4) manages data segmentation and reliability through protocols like HTTP.
+            - The network layer (Layer 3) is where IP addressing comes into play, guiding the data to its correct destination across the internet.
+            - The data link layer (Layer 2) uses MAC addresses to deliver data to the correct device on the local network.
+            - Finally, the physical layer (Layer 1) involves the actual hardware and transmission mediums that carry the data.
+        - At each layer (4, 3, 2), a header is added: {{port number}} (layer 4), {{IP address}} (layer 3), and {{MAC address}} (layer 2).
+    - Computer-Switch-Connection
+        - Explain the structure of a MAC Table→A table that maps MAC addresses to ports on a network switch, used for forwarding data packets to the correct destination device.
+        - Entries in a MAC table are {{temporary}}.
+        - When connecting a hub or a switch to another switch, {{multiple}} MAC addresses may be associated with a single port. 
+    - BUM traffic
+        - 
+        - BUM Traffic refers to a collective term used to describe three distinct types of traffic on Ethernet networks: {{Broadcast}}, {{Unknown Unicast}}, and {{Multicast}}.
+        - MAC addresses are {{hard-coded}} and associated with network interfaces, while IP addresses are {{manually}} assigned and serve as network identifiers.
+        - What is an ARP Request?→A layer2 broadcast message sent to find the MAC address associated with an IP address.
+        - What is an ARP Table?→A table on a computer that maps IP addresses to MAC addresses on a network.
+        - What is an unknown unicast?→A frame sent to a MAC address that is not known to the switch, and therefore flooded out all ports.
+        - Switches can be {{interconnected}} to create larger networks and operate as a unified switch.
+        - What is a multicast?→A transmission sent to multiple destinations simultaneously. The switch identifies the ports belonging to the multicast group and forwards the traffic only to those ports.
+    - Routers
+        - What is the role of routers in network architecture? >>>
+            - Routers are essential devices that serve as a boundary between different Layer 2 networks, enabling distinct network segments.
+            - The presence of routers between segments reduces broadcast traffic and isolates network domains.
+        - A router creates different network segments, for example, when connected to two or more switches.
+            - Each segment established by a router has its own unique {{IP address range}} and {{subnet}}.
+            - Devices within each segment are assigned IP addresses specific to their respective {{subnets}}. 
+            - Each segment, connected through a router, forms its own distinct {{ broadcast domain}}.
+            - Routers do not propagate {{Layer 2}} broadcasts between segments.
+        - What is a default gateway?→The IP address of the router that a device uses to access another network. Routers act as default gateways for devices within their respective segments.
+        - When devices need to communicate with other segments or networks, they send traffic to the router, which makes routing decisions based on {{Layer 3 IP addresses}}. 
+    - TCP and UDP
+        - Characteristics of a UDP connection >>>
+            - Connectionless
+            - No Error Checking
+            - Values speed over accuracy
+            - Use cases: 
+                - VoIP (Voice over Internet Protocol)
+                - DNS (Domain Name System)
+                - DHCP (Dynamic Host Configuration Protocol) is a network protocol that automatically assigns IP addresses and network settings to devices on a network.
+                - TFTP (Trivial File Transfer Protocol) is a simple, lightweight protocol used to transfer files over a network, typically without authentication or advanced features .
+                - 
+            - Datagrams
+        - 
+        - Characteristics of a TCP connection >>>
+            - Connection-oriented protocol
+            - Error checking (Checksum) and correction
+            - Values accuracy over speed.
+            - Use cases:
+                - Web browsing
+                - File downloads
+                - E-Mail
+            - Segments
+            - 
+        - 
+    - PoE
+        - Explain PoE→Power over Ethernet (PoE), a technology that allows an Ethernet cable to carry both data and power, enabling devices to receive power over the same cable used for network connectivity.
+        - What problem does PoE solve in networking?→The need for a separate power supply for devices like IP phones and wireless access points.
+        - Name two common devices that use PoE.→IP phones, security cameras
+        - What is the difference between PoE, PoE+, and PoE++?→PoE (Power over Ethernet) provides up to 15.4 W of power, PoE+ provides up to 30 W, and PoE++ provides up to 60 W (also known as PoE Type 3) or 100 W (PoE Type 4).
+        - How does PoE improve flexibility in device placement?→By eliminating the need for a nearby power outlet.
+- IP Addressing, Routing, and VLAN Basics
+    - IP Addresses and Subnets
+        - What is the name of a part of an IP address?→Octet (8 bits for each number)
+        - Explain /24 networks→A /24 network has 24 bits as network portion leaving the rest (8 bits) for individual IP addresses. It refers to a subnet mask of 255.255.255.0, which allows for 256 possible IP addresses.
+        - Special IPs in /24 networks (in general): {{Network Address}} (x.x.x.0), {{Default Gateway}} (x.x.x.1), and {{Broadcast Address}} (x.x.x.255).
+        - 
+    - Packet Walk
+        - This lecture shows how a package is sent from one computer to another computer in a different network segment connected via a router. It goes like this: >>>
+            - Each IP packet contains a source and destination IP address. These addresses determine the sender and recipient of the data.
+            - The default gateway, typically residing on a router within the same local area network, serves as the bridge for outbound traffic destined for other networks.
+            - When an IP packet is prepared for transmission, it includes Layer 2 addressing information. This information encompasses the source and destination MAC addresses.
+            - The source computer generates an Ethernet frame by appending the source and destination MAC addresses, corresponding to its network segment.
+            - The Ethernet frame arrives at a physical switch. The switch analyzes the Layer 2 addressing, identifies the destination MAC, and forwards the frame within the local segment.
+            - Upon reaching the router, the Ethernet frame is examined. The router deciphers the destination MAC, acknowledging its role in the transmission process.
+            - The router proceeds to inspect the destination IP address within the IP packet. It determines if the packet should be routed to another network.
+            - To forward the packet to the next network segment, the router checks its ARP table to link the destination IP with the appropriate MAC address.
+            - The router appends new Layer 2 headers to the packet to accommodate its journey into the next network segment, including source and destination MAC addresses.
+            - The updated Ethernet frame is sent to the switch, which forwards it based on the new destination MAC address, ensuring it reaches the intended segment.
+            - The Ethernet frame arrives at the destination computer. The computer recognizes its MAC address, proceeds to extract the Layer 3 addressing information, and retrieves the payload for processing.
+    - ICMP and Ping
+        - What is ICMP?→ICMP (Internet Control Message Protocol) is used for error reporting and diagnostic functions in IP networks. It works on the network layer.
+        - What does the `ping` command do?→Sends ICMP echo request packets to test network connectivity and measures response time.
+        - Explain TTL→Time to live, a field in IP packets that limits the number of hops (router passes) before the packet is discarded.
+        - What is the loopback address?→127.0.0.1, the local IP address on every computer.
+        - 
+    - VLAN
+        - What is a VLAN?→A virtual LAN is a logical subnet that divides a physical network into several separate virtual logical segments, which operate like independent physical networks. Each VLAN has a subnet and is a broadcast domain.
+        - Explain the term physical segmentation→Separating devices with switches and routers. In the router it is possible to specify which networks can speak with each other.
+        - What is a trunk port?→A port that carries traffic for multiple VLANs over only one physical device.
+        - What is an access port→A port that belongs to only one VLAN and carries traffic for that VLAN only.
+        - 
+- Internet, WANs and VPNs
+    - WAN
+        - What is a WAN?→A wide area network is a network that spans a large geographical area.
+        - What is an edge router?→A router that sits at the edge of a network, connecting to the WAN and routing traffic between the network and the internet or other external networks.
+        - What is a dynamic routing protocol?→A routing protocol that allows routers to exchange information and dynamically adjust routes and update their route table based on network changes.
+        - What is a static route?→A manually configured routing table entry that does not change unless the network administrator manually updates it.
+        - What is the default route?→A route that is used when no other specific route is available, typically pointing to the internet or a default gateway. Often the IP address 0.0.0.0/0 is used.
+        - What is a route table?→A data structure used by a router to determine the best path to forward a packet to its destination.
+        - 
+    - Connecting the network to the internet
+        - What is a border router?→A router that connects a private network to a public network, such as the Internet. It is also the first line of defense against attacks.
+        - What is an ISP?→Internet Service Provider, a company that provides individuals and other companies access to the Internet and other related services such as website building and virtual hosting.
+        - Difference between bandwidth and speed?→Bandwidth refers to the amount of data that can be transmitted over a network in a given time (e.g., Mbps/Gbps), while speed refers to the rate at which data is transmitted (latency).
+        - 
+    - IPSEC VPN
+        - What is an IPSEC VPN?→A virtual private network (connection of one network with another) that uses the IPSEC protocol to encrypt and authenticate IP packets.
+        - What is the problem with large WANs?→Scalability and security issues.
+        - How does an IPSEC VPN work?→IPsec VPN secures IP communication by encrypting and authenticating packets between endpoints using protocols like ESP and AH. This is done by the router. It establishes a secure tunnel over the internet, typically negotiated via IKE, allowing safe data transfer over insecure networks.
+    - Layer 2 VPN
+        - 
+        - What is a Layer 2 VPN?→A type of VPN that operates at the data link layer, allowing multiple devices to be connected as if they were on the same physical network. This means they have the same IP address subnet. 
+        - Explain a use case for this→Disaster recovery. Virtual machines can be moved from one data center to another (when they are connected via a Layer 2 VPN), keeping everything the same, including the IP address. 
+    - LTE and 5G
+        - What is LTE?→Long-Term Evolution, a standard for wireless broadband communication (4th generation) for mobile devices.
+        - What is 5G?→Fifth generation of wireless technology, offering faster data speeds, lower latency, and greater connectivity. Fallback to LTE if not available.
+        - 
+    - SD-WAN
+        - What is SD-WAN?→Software-Defined Wide Area Network, a network technology that uses software to manage and optimize WAN connections, often used for secure and efficient networking between branches and data centers.
+        - What is one key advantage of an SD-WAN appliance having multiple internet connections?→It allows the appliance to prioritize high-priority traffic, like point-of-sale data, by sending it over the best-performing available connection (e.g., cable modem or 5G) and to fail over if one connection fails.
+        - 
+    - Latency and Jitter
+        - What is latency?→Delay between data transmission and reception. Normally measured in milliseconds.
+        - What is jitter?→Variation in packet delay (latency), causing uneven audio or video playback.
+        - 
+    - Fiber Optics
+        - Difference between coaxial cable and fiber optics→Coaxial cable uses electrical signals over copper; fiber optics uses light signals over glass or plastic fibers (about the width of a human hair).
+        - Benefits of fiber optic?→High speed, High bandwidth, low attenuation, and immunity to electromagnetic interference.
+        - Name two types of fiber optics >>>
+            - Single-mode fiber (SMF) optics, single light path, best for long distances.
+            - Multi-mode fiber (MMF) optics, multiple light paths, for shorter local distances.
+        - 
+- Network Management, Design, and Troubleshooting
+    - Network Redundancy
+        - What is a single point of failure?→A component or part of a system that, if it fails, will cause the entire system to fail.
+        - What is the core purpose of implementing network redundancy?→The core purpose is to eliminate single points of failure to keep the network functioning properly even when a component fails, ensuring high availability.
+        - What is the role of a dynamic routing protocol in a failure scenario?→A dynamic routing protocol acts like a GPS for the network, automatically detecting a failed connection and dynamically calculating a new path for traffic to take.
+        - What problem do protocols like HSRP and VRRP solve?→They solve the problem of a server's default gateway failing by allowing multiple routers to share a virtual IP address, which a backup router can take over if the primary fails.
+    - Load Balancing
+        - Why should we add load balancing?→To distribute workload across multiple identical servers (possible in different locations), improving responsiveness/availability, reliability, and scalability.
+        - How can health checks be achieved with load balancing→By periodically sending requests to registered servers and verifying responses are received within a specified time interval.
+    - Network Troubleshooting
+        - Which steps to take to take down a network error? >>>
+            - Create a network diagram.
+            - Methodical Troubleshooting: Ask questions to narrow down the issue.
+            - Begin with components closest to the problem, validate it, and proceed to the next layer.
+        - 
+    - DHCP
+        - Explain DHCP.→Dynamic host configuration protocol, automatically assigns IP addresses and other network settings to devices on a network.
+        - How does a computer get an IP address→Through DHCP, a computer sends a request to a DHCP server (often the router), which then assigns an available IP address from its pool of addresses.
+        - 
+    - DNS
+        - Explain DNS→Domain Name System, a system that translates domain names into IP addresses.
+        - How do DNS servers operate?→By resolving domain names to IP addresses through a hierarchical system of servers, using caching and zone transfers to distribute and update information.
+        - 
+    - Netflow and IPFIX
+        - What is netflow?→A network protocol developed by CISCO used for collecting and monitoring network traffic, providing detailed information about the source and destination of the traffic.
+        - What is IPFIX?→A standardized protocol for collecting and exporting network flow information, based on NetFlow version 9.
+    - NTP
+        - Explain NTP→Network time protocol, a protocol that synchronizes computer clocks over a network to a precise time source.
+        - Why is synchronized time important in a network?→So that events can be accurately correlated and logged across different devices. Also digital certifacte expiration.
+        - 
+    - SNMP
+        - Define SNMP→Simple Network Management Protocol (SNMP), a protocol to monitor and manage devices on a network.
+        - What is an SNMP Trap?→An SNMP Trap is a one-way, asynchronous notification sent from a managed device to an SNMP manager. It alerts the manager about significant events or changes on the device, prompting the manager software to generate alerts for administrators or users.
+        - What is an SNMP Inform?→An SNMP Inform is similar to an SNMP Trap, but with one key difference: it is a notification sent from a managed device to an SNMP manager that requires an acknowledgment (response) from the manager. This ensures the manager received the message. Traps, on the other hand, do not require any acknowledgment.
+        - 
+    - Quality of Service
+        - The Challenge: Not all traffic is equal.
+            - Define quality of service (QoS)→A set of technologies that manage network traffic to reduce packet loss, delay, and jitter, ensuring that critical applications receive sufficient bandwidth and priority.
+            - Define class of service (CoS)→A method of prioritizing traffic on a network to ensure that critical traffic receives sufficient bandwidth and low latency. It works on layer 2 and inserts a header with 802.1p priority bits.
+            - Define Differential Services Code Point (DSCP)→A 6-bit field in the IP header (layer 3) used to identify packets with a specific forwarding treatment or priority level.
+        - 
+    - Configuration Management tools
+        - What is a problem configuration management tools shall solve?→Ensuring consistency and accuracy of device configurations across a network. Also scalability: hundreds of devices can be configured fast.
+        - Benefits of configuration management >>>
+            - Standardization: Every device follows the same rules.
+            - Automation: Reduce manual work and errors.
+            - Version control: Keep track of changes and roll back if needed.
+            - Scalability: Configure 10 or 10000 devices with the same effort.
+        - Different tools:
+            - Ansbile -  agentless uses simple YAML playbooks.
+            - Puppet - uses a declarative language to define desired states.
+            - Chef - Recipe-based approach, similar to Puppet but Ruby-based
+            - SatlStack - focuses on speed and scalabilty.
+    - Generative AI
+        - A demo with ChatGPT doing networking things:
+            - Configuring a Cisco router.
+                - Creates a script
+                - Check the script line by line, use it as a starting point
+            - Problem search within a router.
+            - Error log analysis
+            - Configuring using Terraform.
+    - AI Assisted Networking
+        - How can AI help in networking? >>>
+            - Automated repetitive tasks
+            - Predictive analytics for performance
+            - Network optimization
+            - Detect and fix problems faster
+                - Anomaly detection
+                - Traffic analysis & pattern recognition
+                - Automated troubleshooting
+                - 
+- Network Security
+    - NAT, Public, and Private IP Addresses
+        - Difference between public and private IP addresses?→Public IP addresses are globally unique and can be accessed from anywhere on the internet, while private IP addresses are used within a local network and cannot be accessed directly from outside the network.
+        - Explain NAT→NAT (Network Address Translation) is a technique used to allow multiple devices on a private network to share a single public IP address when accessing the internet or other external networks by modifying the source IP address of outgoing packets and keeping track of the mappings to allow return traffic.
+        - 
+    - DMZ Networks
+        - What is a DMZ Network?→A demilitarized zone network, a subnet that separates an internal local area network (LAN) from other untrusted networks, typically the internet. 
+        - Explain the structure when a DMZ is used >>>
+            - A DMZ network that sits between the internet and the internal LAN. 
+            - A firewall or network device that controls and filters traffic between the internet and the DMZ. 
+            - A second firewall or network device that controls and filters traffic between the DMZ and the internal LAN.
+        - 
+    - Basic Layer 3 and 4 Firewall
+        - What is a firewall in general?→A network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.
+        - Describe the firewall rules list for layers 3 and 4→A list of rules that define what traffic is allowed or blocked based on source and destination IP addresses (layer 3), ports (layer 4), and protocols (layer 4).
+        - What is the best practice for the last rule in a firewall?→Deny all.
+        - 
+    - Layer 7 Firewall
+        - Extend the acronym NGFW→Next-Generation Firewall.
+        - What is the difference from a layer 3/4 firewall?→It can filter based on application-layer data, not just IP address and port number. They perform what is known as deep packet inspection (DPI).
+        - What is a signature?→A pattern or set of data used to identify a specific type of traffic or threat. The signatures can be downloaded.
+        - 
+    - IDS and IPS
+        - Explain IDS→Intrusion Detection System, a system that monitors network traffic for signs of unauthorized access or malicious activity. 
+        - Explain IPS→Intrusion Prevention System, a network security system that monitors and controls network traffic to prevent unauthorized access and malicious activities by analyzing and blocking suspicious packets.
+        - What is the difference between a signature-based and a behavior-based prevention system?→Signature based checks for known malware or attack data stripes. Behavior-based determines normal baseline traffic and watches for unusual traffic patterns.
+    - VPN services
+        - What does a VPN do?→A VPN (Virtual Private Network) creates a secure, encrypted tunnel between your device and a server on the internet. This hides your online activity from your internet provider and anyone else on your network, and it masks your real IP address to make it look like you are browsing from the VPN server's location. This enhances your privacy and security, especially on public Wi-Fi.
+        - Drawback of using a VPN >>>
+            - Reduced internet speed
+            - Price (subscription)
+            - Reliance on VPN provider's security
+            - No protection against viruses and malware
+            - Blocked by some services
+        - 
+- WiFi
+    - Introduction
+        - Explain WiFi→A wireless networking technology that allows devices to connect to the internet or communicate with each other without the use of cables or wires.
+        - Difference between 2.4 GHz and 5.0 GHz→2.4 GHz has longer range and better penetration through walls, but lower bandwidth and more interference; 5.0 GHz has shorter range and less penetration, but higher bandwidth and less interference.
+        - What is a WiFi Access Point?→A device that allows wireless devices to connect to a network. It is physically connected to the router (maybe via a switch in bigger networks).
+        - What is a WLAN Controller?→A device that manages and configures multiple wireless access points (WAPs) in a wireless local area network (WLAN).
+        - Explain SSID→SSID (Service Set Identifier) the name of a WiFi network.
+        - 
+- IP Addressing and Subnetting
+    - Overview
+        - MAC addresses are useful in {{local}} networks, and IP addresses are useful in the {{global (Internet)}} network. 
+        - Explaining DNS, which was already in a previous video.
+    - Types of IP addresses
+        - The first 6 minutes are almost the same as the [NAT, Public, and Private IP Addresses](Udemy%20-%20Introduction%20to%20Computer%20Networking/Network%20Security/NAT%2C%20Public%2C%20and%20Private%20IP%20Addresses.md)
+        - Characteristics of public IP addresses >>>
+            - Globally unique and routable on the internet
+            - Assigned by Internet Service Providers (ISPs)
+            - Used to identify devices on the public internet.
+            - Typically used for routers and firewalls facing the internet
+        - Characteristics of private IP addresses >>>
+            - Not globally unique and so not routable on the internet
+            - Used for local networks, assigned by network administrators
+            - Defined by RFC 1918
+            - Ranges: 10.0.0.0 to 10.255.255.255
+            - Ranges: 172.16.0.0 to 172.31.255.255
+            - Ranges: 192.168.0.0 to 192.168.255.255
+    - IPv4 address structure
+        - No new information. Every piece of information is already in [IP Addresses and Subnets](Udemy%20-%20Introduction%20to%20Computer%20Networking/IP%20Addressing%2C%20Routing%2C%20and%20VLAN%20Basics/IP%20Addresses%20and%20Subnets.md).
+        - 
+    - Classful vs. Classless Addressing
+        - What is the IPv4 address range?→$0.0.0.0$ to $255.255.255.255$
+        - What is the purpose of the Class A address range?→To provide addresses for large networks with many hosts, with a default subnet mask of 255.0.0.0 (/8). These ranges are always given as a whole to too big networks/organizations. Range from 1.0.0.0 to 127.0.0.0
+        - What is the purpose of the Class B address range?→To provide a range of IP addresses for medium-sized networks, specifically for organizations up to 65,536 hosts. Ranges from 128.0.0.0 to 191.255.0.0.
+        - What is the purpose of the Class C address range?→To provide a range of IP addresses for small to medium-sized networks, with 256 possible addresses per network. Ranges from 192.0.0.0 to 223.255.255.0.
+        - Describe the issue with classful IP addressing→Wasted IP addresses due to fixed class boundaries.
+    - Converting Binary and Decimal
+        - How to convert a decimal to a binary?→Divide the decimal number by 2, record the remainder, and repeat with the quotient until it is 0, then write the remainders in reverse order.
+        - How to convert a binary to a decimal?→Sum the powers of 2 of each digit that is 1.
+        - 
+    - Why is 255 special?
+        - Why is 255 special?→It is the highest number that can be stored in an 8-bit binary number. And so it is the highest value in an octet in an IP address.
+        - 
+    - Hands-on practice 
+        - A practice lesson, no notes here.
+    - Subnetting
+        - Define Subnetting→Dividing a large network into smaller, more manageable segments to improve efficiency, security, and IP address allocation.
+        - Reason for subnetting in big organizations?→Subnetting in large organizations is primarily done for security. By splitting the network into smaller segments, communication between them must pass through a router, which can enforce firewall rules and other security measures. This setup helps control access and protects sensitive parts of the network.
+        - An organization has a class B network starting at 145.14.0.0/16. 
+        - How to reduce the number of given IP addresses using the subnet mask?→By borrowing bits from the host portion to create a larger network portion, thereby creating more subnets with fewer host addresses per subnet. For example, 145.14.0.0/22 gives the range 145.14.0.0-145.14.3.255.
+    - Subnets and CIDR Notation
+        - What is the purpose of the subnet mask?→To determine the scope of the local network for a given IP address.
+        - Explain the CIDR notation→A way to express the number of bits in a subnet mask, written as a slash followed by the number of bits, e.g., 192.168.1.0/24. For example, IP address 97.122.14.233/25 is the network address 97.122.14.128/25 and the broadcast address 97.122.14.255/25.
+        - 
+    - Practice Videos: Subnets
+        - Three videos about CIDR notation and subnets examples.
+        - Examples of how to calculate the number of hosts.
+        - Take the range and subtract network and broadcast addresses.
+        - So a subnet mask of 255.255.255.0 gives us 256-2=254 host addresses.
+    - Network address, broadcast address
+        - All this content was already shown way earlier. I don't know why it comes in a 2-minute video at the end again.
+        - 

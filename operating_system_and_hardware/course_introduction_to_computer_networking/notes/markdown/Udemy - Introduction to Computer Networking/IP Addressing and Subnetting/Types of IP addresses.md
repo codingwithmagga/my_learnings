@@ -1,0 +1,13 @@
+- The first 6 minutes are almost the same as the [NAT, Public, and Private IP Addresses](../../Udemy%20-%20Introduction%20to%20Computer%20Networking/Network%20Security/NAT%2C%20Public%2C%20and%20Private%20IP%20Addresses.md)
+- Characteristics of public IP addresses >>>
+    - Globally unique and routable on the internet
+    - Assigned by Internet Service Providers (ISPs)
+    - Used to identify devices on the public internet.
+    - Typically used for routers and firewalls facing the internet
+- Characteristics of private IP addresses >>>
+    - Not globally unique and so not routable on the internet
+    - Used for local networks, assigned by network administrators
+    - Defined by RFC 1918
+    - Ranges: 10.0.0.0 to 10.255.255.255
+    - Ranges: 172.16.0.0 to 172.31.255.255
+    - Ranges: 192.168.0.0 to 192.168.255.255

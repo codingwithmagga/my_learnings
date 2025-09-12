@@ -1,0 +1,23 @@
+- Characteristics of a UDP connection >>>
+    - Connectionless
+    - No Error Checking
+    - Values speed over accuracy
+    - Use cases: 
+        - VoIP (Voice over Internet Protocol)
+        - DNS (Domain Name System)
+        - DHCP (Dynamic Host Configuration Protocol) is a network protocol that automatically assigns IP addresses and network settings to devices on a network.
+        - TFTP (Trivial File Transfer Protocol) is a simple, lightweight protocol used to transfer files over a network, typically without authentication or advanced features .
+        - 
+    - Datagrams
+- 
+- Characteristics of a TCP connection >>>
+    - Connection-oriented protocol
+    - Error checking (Checksum) and correction
+    - Values accuracy over speed.
+    - Use cases:
+        - Web browsing
+        - File downloads
+        - E-Mail
+    - Segments
+    - 
+- 
