@@ -29,6 +29,8 @@ cmake --build .
 
 At the end of chapter three are some lectures about computer architecture. As they are not to relevant here and are also covered by other courses I attended, I did not add notes of it.
 
+The instructor updated the course, s.t. my implementation of thread pool starting at lecture 85 differs a bit from the current videos.
+
 The notes are also not that deeply structured, since I moved them from OneNote to Remnote a few weeks after I finished the course.
 
 ## Practical Project

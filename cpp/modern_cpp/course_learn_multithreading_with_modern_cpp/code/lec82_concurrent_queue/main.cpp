@@ -1,9 +1,11 @@
+#include <chrono>
 #include <iostream>
 #include <mutex>
 #include <queue>
 #include <string>
 
 using namespace std;
+using namespace std::chrono_literals;
 
 template <typename T>
 class ConcurrentQueue {

@@ -1,8 +1,10 @@
+#include <chrono>
 #include <iostream>
 #include <mutex>
 #include <thread>
 
 using namespace std;
+using namespace std::chrono_literals;
 
 mutex mut1, mut2;
 

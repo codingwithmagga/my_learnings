@@ -1,5 +1,6 @@
 // Condition variable with predicate
 // Example with multiple waiting threads
+#include <chrono>
 #include <condition_variable>
 #include <iostream>
 #include <string>
@@ -7,6 +8,7 @@
 
 using namespace std;
 using namespace std::chrono;
+using namespace std::chrono_literals;
 
 // The shared data
 std::string sdata;

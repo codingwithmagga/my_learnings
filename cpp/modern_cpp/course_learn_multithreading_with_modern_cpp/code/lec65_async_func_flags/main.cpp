@@ -1,7 +1,9 @@
+#include <chrono>
 #include <future>
 #include <iostream>
 #include <thread>
 
+using namespace std::chrono_literals;
 using namespace std;
 
 int func()

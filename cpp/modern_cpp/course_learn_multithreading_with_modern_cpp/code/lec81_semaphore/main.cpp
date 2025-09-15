@@ -1,8 +1,10 @@
+#include <chrono>
 #include <iostream>
 #include <mutex>
 #include <vector>
 
 using namespace std;
+using namespace std::chrono_literals;
 
 class Semaphore {
 public:

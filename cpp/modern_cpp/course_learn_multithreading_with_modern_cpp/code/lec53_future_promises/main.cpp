@@ -1,7 +1,9 @@
+#include <chrono>
 #include <future>
 #include <iostream>
 
 using namespace std;
+using namespace std::chrono_literals;
 
 void produce(std::promise<int>& px)
 {

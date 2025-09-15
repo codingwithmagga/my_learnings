@@ -5,6 +5,7 @@
 #include <queue>
 
 using namespace std;
+using namespace std::literals;
 using namespace std::chrono_literals;
 
 mutex coutMut;
@@ -18,9 +19,6 @@ public:
         unique_lock lck(mut);
 
         if (q.size() >= max) {
-            unique_lock lckCout(coutMut);
-            cout << "Waiting cause q is full" << endl;
-            lckCout.unlock();
             check_full.wait(lck, [this]() { return q.size() < max; });
         }
 
@@ -33,9 +31,6 @@ public:
         unique_lock lck(mut);
 
         if (q.empty()) {
-            unique_lock lckCout(coutMut);
-            cout << "Waiting cause q is empty" << endl;
-            lckCout.unlock();
             check_empty.wait(lck, [this]() { return !q.empty(); });
         }
 
@@ -49,7 +44,7 @@ public:
 private:
     queue<T> q;
     mutex mut;
-    size_t max = 2;
+    size_t max = 200;
 
     condition_variable check_empty;
     condition_variable check_full;
@@ -65,8 +60,10 @@ public:
     {
         const auto numCores = thread::hardware_concurrency();
         for (int i = 0; i < numCores; ++i) {
-            threads.push_back(thread(&Threadpool::worker, this));
+            threads.push_back(thread(&Threadpool::worker, this, i));
         }
+
+        cq = std::make_unique<ConcurrentQueue<Func>[]>(numCores);
 
         cout << "Pool created with " << numCores << " cores" << endl;
     }
@@ -80,27 +77,38 @@ public:
 
     void submit(Func func)
     {
-        cq.push(func);
+        std::lock_guard<std::mutex> guard(pos_mut);
+        cq[pos].push(func);
+
+        pos = (pos + 1) % threads.size();
     }
 
 private:
-    void worker()
+    void worker(int idx)
     {
         while (true) {
-            auto task = cq.front();
+            auto task = cq[idx].front();
             task();
         }
     }
 
     vector<thread> threads;
-    ConcurrentQueue<Func> cq;
+    std::unique_ptr<ConcurrentQueue<Func>[]> cq;
+    std::mutex pos_mut;
+    int pos { 0 };
 };
 
 void task()
 {
-    lock_guard lck(coutMut);
-    cout << "id: " << this_thread::get_id() << " starts" << endl;
     this_thread::sleep_for(100ms);
+    lock_guard lck(coutMut);
+    cout << "id: " << this_thread::get_id() << " ends" << endl;
+}
+
+void taskLong()
+{
+    this_thread::sleep_for(5s);
+    lock_guard lck(coutMut);
     cout << "id: " << this_thread::get_id() << " ends" << endl;
 }
 
@@ -108,7 +116,8 @@ int main()
 {
     Threadpool pool;
 
-    for (int i = 0; i < 20; ++i) {
+    pool.submit(taskLong);
+    for (int i = 0; i < 200; ++i) {
         pool.submit(task);
     }
 

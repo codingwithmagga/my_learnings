@@ -1,8 +1,11 @@
+#include <chrono>
 #include <iostream>
 #include <mutex>
 #include <thread>
 
 using namespace std;
+using namespace std::chrono_literals;
+
 std::mutex mut;
 
 void print(string str)
