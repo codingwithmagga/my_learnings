@@ -1,0 +1,237 @@
+- 00 - How to read this book
+    - Newsflash: Shaming yourself or allowing others to shame you will never actually help you get better. You can't shame yourself, or be shamed, into being more functional.
+    - Show her how to do (simple) things (like making a bed), and never laugh or question it.
+    - It is not simply a book about how to support a person with ADHD. It's a book about understanding what it's truly like to love someone with ADHD, warts and all, and the tools we all can use to create a healthy and happy home for everyone affected by ADHD.
+    - 
+- 01 - Losing important things
+    - For the ADHD person >>>
+        - You are going to lose things. So try to lose the slightly less important stuff.
+        - Acceptance is so often the key to actually feeling better.
+        - Tips:
+            - Ditch the shame: No bullying. From anyone, including yourself.
+            - Strive to regulate your emotions: When you feel big emotions coming up, use your breathing to calm yourself down. Breathe deeply from the belly, counting in for eight and out for eight, for as long as you need to.
+            - Reduce stress: Stress makes ADHD symptoms worse. Be extra vigilant when you're starting to feel stressed or anxious. Slow down, breathe as described above, and listen to your body. Take your time.
+            - Put some safety nets in place: Leave your ID or expensive things at home if possible. Have phone insurance, etc. Streamline the things you need to remember (key, wallet, ...).
+        - 
+    - For the partner >>>
+        - The brain of a person with ADHD works differently. They don't lose things on purpose or because they don't care. 
+        - The natural reaction (when sth. get lost) is warmth and compassion. Tell the person with ADHD it's okay, you love him/her, and when he/she calms down, help with practical things like cancelling cards. 
+        - Your feelings matter too, but be kind and do it after your partner calms down and the practical steps are done.
+        - Tips:
+            - Don't get angry: Your partner feels bad enough, and it wasn't done on purpose.  
+            - Aim for Co-Regulation: Calming your partner with ADHD down is the first task.
+            - Help with the practicalities: Providing assistance in the practical things is the best way you can help.
+            - Work on a solution together: Talk about patterns of how they lose their things. Come up with strategies together that help mitigate the losses.
+- 02 - Time Blindness
+    - For the ADHD person >>>
+        - It could also be called time optimism, leaving the house in 45 minutes but watching an hour-long Netflix episode before? Should work!
+        - Only two times: "Right now" and "Not now". Nothing in between.
+        - Tips:
+            - Use Radical Acceptance: Time doesn't work normally for you. It is important to know that how your brain perceives time is different and that time will not magically change for you.
+            - Tell the truth: Practise being incredible honest. Tell people why your are running late. It less stressful to tell the truth than a lie.
+            - Make a joke out of it: Share with people in a light-hearted way that you are struggling with time. It takes a lot of mental energy to hide this behavior. Share your behavior and make a bit of fun of it.
+            - Build new habits: Pre-plan your journeys, especially the important ones. No guesstimating; buffers for unexpected delays are essential. Overestimate how long it will take to get from Point A to B. Practice makes better.
+    - 
+    - For the partner >>>
+        - Rather than you against your partner, you should become your partner and you versus time blindness.
+        - Stop moralizing timekeeping as something that makes a person good or bad.
+        - Timekeeping is a skill that needs understanding and then practice. Creating a safe environment for the ADHD person can be a game changer.
+        - Tips:
+            - Change the narrative: Support for better time management skills will give much better results than shaming and arguments ever will. It's a problem for both to solve rather than an issue to argue about.
+            - Don't set them up to fail: don't set up a time and wait annoyed at home. When they give you a time, say something like, "There are no expectations for you to make this time. Please let me know if you need any help planning the journey".
+            - Use time check-ins: friendly check-ins with the ADHD person to see how they are getting on. It also works as a reminder for them. 
+            - Be a time realist: When the ADHD person thinks they can bend time, call them back to reality.
+- 03 - Hyperfocus
+    - For the ADHD person >>>
+        - Hyperfocus is an extremely intense ability to focus on a particular subject for a duration of time that cannot be estimated. It appears on a whim and turns off whenever it chooses. It is absolutely not the thing on which to base one's identity and future life choices.
+        - You can't control your periods of hyperfocus. All you can do is accept them, work with them, and allow them just to be.
+        - Tips:
+            - If you are/were a gifted child: It may be time to redefine yourself. You don't have to be excellent, super-intelligent, or highly creative to be worthy of love and respect.
+            - Language matters: Using the correct language (hyperfocusing) takes the shame out of the experience and lets those around you know what's happening. You are not being crazy, lazy, or obsessive. 
+            - Beware of burnout: hours spent researching can lead to burnout. After a certain amount of time, your brain will have had enough. Take a break when needed.
+            - Ride the wave: Do the research, dream the dream, but don't act yet! Making decisions during hyperfocus can be destructive. If an idea is persistent for a long time, and there are sensible reasons to do it. Then you can revisit your decision.
+    - 
+    - For the partner >>>
+        - Understand that the ADHD person is on a research project. He/she may look into expensive or time-consuming options. But knowing the extreme options allows him/her to judge the value of the more realistic ones better. 
+        - Check occasionally that the ADHD person is not burning out. Offer drinks and snacks.
+        - Allow them their research projects and don't judge them. It is like a hobby. Offer help if acceptable.
+        - Tips:
+            - Communicate: Figure out what your ADHDer likes to focus on, and create space for it.
+            - Shared joy: Don't get frustrated by their research results. Instead, lean into the shared excitement about discovering something incredible and take a moment to appreciate it with them. 
+            - Boundaries: Whether it's budget or time, clear boundaries will help the ADHD person do their research.
+            - Kind interruptions: Suggest they take a break if it starts to overwhelm them. 
+- 04 - Poor Personal Hygiene
+    - For the ADHD person >>>
+        - ADHD persons understand that being clean is a good thing. But it's not their life purpose, and for them it is not a moral failing if they aren't clean.
+        - Tips
+            - Shame reduction: You are not disgusting or worthless if you struggle with personal hygiene. It's hard for you, and that's ok. 
+            - Wear-again shelf: Create a place for clothes that aren't ready to wash yet. It keeps the clothes off the floor.
+            - Progress, not perfection: Change doesn't come overnight. It is likely that personal hygiene will continue to be a bit of a struggle. That's okay; we are looking for progress, not perfection. Start with small, manageable changes.
+            - Honesty: Don't lie about this to people who love you and that you feel safe with. Let these people know sharing your challenges can really help reduce the shame.
+    - 
+    - For the partner >>>
+        - Don't set personal hygiene routines: no forced routines, just acceptance and gentle reminders.
+        - The goal is simple: love and accept their hygiene habits, communicate openly with them, and implement little things that might help ease the burden.
+        - Tips:
+            - Don't Judge: Don't act shocked, and don't shame your ADHDer. They do this themselves enough.
+            - Experiment with co-habits: Whenever you shower or clean your teeth, check in with the DHD person. Perhaps they want to do it too. 
+            - Use humor: These can be a really sensitive topic, so go easy on your ADHDer. Kindness and compassion are the name of the game. But using lighthearted humor can really help to reduce the shame and seriousness of the situation.
+            - Try novelty: ADHDers love novelty. You can help encourage your ADDHer by having products you think they will enjoy.
+- 05 - Cleaning the House 
+    - For the ADHD person >>>
+        - There are many links between ADHD and addiction.
+        - Getting sober is absolutely necessary.
+        - The non-ADHD person has to do the majority of admin, organization, and domestic tasks in the house.
+        - It can help that you admit that your house will never be perfectly clean. It just needs to be okay most of the time. Your life purpose should be a super-tidy house. It is to accept yourself and be happy.
+        - Tips:
+            - Let go of the shame: No one can hate themselves into a version of themselves that they like. You are not a disgusting, awful human being.
+            - Ask for help: Ask someone to show you, slowly and clearly, how to do things in the house.
+            - One thing a day: Start with one thing a day, like taking a coffee cup downstairs or hanging up a T-shirt. You are more likely to succeed when starting small, and this will slowly build your self-esteem.
+            - Patience: The trick is to make little improvements daily that will change your habits and self-beliefs over months and years.
+    - 
+    - For the partner >>>
+        - Look at the ADHD person as someone who desperately wanted to be part of the household cleaning routine but simply couldn't. The pain for them is real.
+        - Hearing "I'm proud of you" can work like a magical healing potion. You can see the joy in their faces.
+        - Tips:
+            - Be curious, not angry: Ask your ADHDer what it feels like to stand in a messy room. Ask them if they knew where to start. It's likely that this is extremely overwhelming for them, and this leads to avoidance. Get curious about their story and experience, as opposed to projecting your own standards onto them.
+            - Offer to teach: Your ADHDer is way more capable than they think they are, and loving, kind, clear instructions can be an absolute game changer.
+            - Celebrate the wins: Even if it feels a bit strange saying "well done" to small things, do it. An ADHDer whose progress is noted and celebrated is going to build self-esteem and skills a lot more quickly than someone whose efforts are ignored. 
+            - Don't mock them: don't make fun of them. That should be clear. Be inquisitive and supportive.
+- 06 - Financial issues
+    - For the ADHD person >>>
+        - Don't have credit cards.
+        - Tips:
+            - Ask for help: It can be utterly overwhelming to be in debt with a pile of unopened bills. As well as devastating for your mental health. Ask for help, open one letter after another.
+            - Open the letters: Stacks of unopened bills are far worse than whatever is hiding inside them.
+            - Credit cards: Don't have them unless you absolutely need them for basic living expenses.
+            - Practice: You aren't awful or stupid. It's time to practice, very slowly and ideally, with help. Save a little each month. Open an envelope. Fill a shopping cart and don't buy it. It will get better.
+    - 
+    - For the partner:
+        - Your ADHDer may be the first person to buy other people things they can't afford. 
+        - It helps when the ADHDHer makes you part of the process and talks to you. This will reduce massively impulse purchases.
+        - They are searching for that hit of happiness that impulsive spending brings them. Understand this and don't shame them for this.
+        - They are responsible for their choices; we don't want to control them. We can be a lifeline if they are struggling and asking for help.
+        - Tips:
+            - Ask and listen: Ask your ADHDer what their relationship with money is like and whether they have any struggles. Don't shame or blame them. 
+            - Credit cards: Offer to look after the credit cards of your partner. It is not about controlling; it is an offer to support them.
+            - Celebrate wins: Acknowledge the behavior of choosing something on sale or a medium-priced hotel.
+            - Help them budget: Help your ADHDer work out how much their bills are every month. Help them budget. Limit the damage they can make if possible.
+    - 
+- 07 - Task avoidance
+    - For the ADHD person >>>
+        - It doesn't matter what the ADHD person is supposed to do; their brain will feverishly look for something -a anything - else to do and make that thing so incredibly desirable that there is no choice but to do that instead.
+        - It's about avoiding whatever it is that is most important at that time.
+        - At the very core of ADHD is an issue with attention. So it's no surprise their minds are often drifting off task.
+        - Tips:
+            - Recognize: Call it out when you are doing something different: "I am seriously distracted right now. I'm going back to the task at hand and coming back to these later." It is building a habit to choose where your focus goes.
+            - Do the important task first: If you have something to do, do it right now. The longer you wait, the more likely you are to find something different interesting.
+            - Tell people: Let people around you know you have ADHD and are incredibly easily distracted. If you feel comfortable, give them the permission to call you out in a calm and kind way.
+            - See the positives: Sometimes you do something special, useful, etc., while avoiding an important task. See the positives from this.
+    - 
+    - For the partner >>>
+        - List of phrases that do not work if you are trying to get your partner back on task:
+            - Just do it! I don't understand why you are delaying.
+            - Stop painting that jacket! You are wasting time.
+            - You know you are going to have anxiety avoiding this. What are you doing?
+            - You'll feel better if you just get it done. Come on.
+            - Shall I just do it for you?
+        - It may be a bit awkward if your partner drifts off during a conversation. Don't take that personally. The ADHD mind works like that. Ask your partner to share what he/she was thinking.
+        - Tips:
+            - Gently call it out: Tell them kindly that they are off track: "Looks like you are a bit distracted by now. What's going on for you?"
+            - Don't interrupt: If they are really doing what they should do, don't ask questions about anything else. They can easily be knocked off their task.
+            - Set a time limit: If the ADHD person really can't get back to the task, set a time limit for the other task they are currently doing.
+            - Be inquisitive: if their mind wanders off to investigate a creative or ingenious idea, listen to it. 
+- 08 - Object Constancy Struggles
+    - For the ADHD person >>>
+        - An ADHD person is so utterly and heavily invested in what is right in front of them that everything else fades into distant memory.
+        - Object constancy is the psychological ability to maintain stable positive feelings and a strong connection to another person, even when experiencing conflict, disappointment, or physical distance.
+        - It is also the phenomenon "out of sight, out of mind." If someone is not physically in front of the ADHD person, it is incredibly difficult to keep them in mind. They can't recall feelings or the connection.
+        - Tips:
+            - Know that it's okay: you do not have to be good at replying to text messages to be loved.
+            - Be honest: Share with your friends and family that you find frequent communication on the phone really difficult, that it's got nothing to do with how much you care about them. Ask for a plan together that satisfies both of you.
+            - Stop the shame spiral: End the shame spiral. Don't ignore other people; send something like, "I'm so sorry. I've been finding communicating on the phone really tough. I'm sorry if that's made you feel uncared for or ignored. It's something I struggle with. I'd love to catch up in person, though, if you are open to it".
+            - Don't read a message if you can't reply: Don't open a message if you cannot answer immediately. The notification is a little reminder.
+    - 
+    - For the partner >>>
+        - Don't expect messages when your partner is at work or busy hyperfocusing on something. You get their full attention when they are home.
+        - It's not about to get better at texting. We want to feel empowered to be honest about their needs, and in turn, we would like to be able to be honest about ours.
+        - Tips:
+            - Be Honest: Tell the ADHD person how you feel when you get no reply. For you it is important to hear that they really love you and that you understand their struggle in this area.
+            - Remove the pressure: Tell your ADHDer that you don't expect to hear from them when they are busy. But make clear when something is urgent, you really need a call or text.
+            - Plan together: Figure out other ways to spend quality time together face-to-face. ADHDers are great company.
+            - You can always call: Try a call instead. This makes it easier for both when it is urgent.
+- 09 - Directional Dyslexia
+    - For the ADHD person >>>
+        - Routine and repetition are the ADHDer's best friend. The minute there is something new? Everything went down. It's like a different world. 
+        - Accept yourself radically and with love. This means saying, "I struggle with new places and get super-overwhelmed! It's a symptom of my ADHD, and I might need some extra support and kindness."
+        - Tips:
+            - Visual directions: Google Maps and verbal directions don't work. What helps are visual cues. 
+            - Calm down if you get confused: if you get lost and overwhelmed (like a panic attack) kicks in, take a break. Find a bench, sit down, and breathe deeply. 
+            - Plan journeys: Planning the night before really helps you visualize your journeys and reduce anxiety. Take as much information as possible and write it down.
+            - Ask for help: Ask for help. If it's a friend or stranger. Ask for visual directions. 
+    - 
+    - For the partner >>>
+        - Accept your ADHDer exactly as they are, allowing a safe space for them to communicate their internal experiences and totally unmask. With this topic, real-world help is needed sometimes.
+        - Tips:
+            - Don't judge: Be a safe space for directional help so they always know they can call you if they are lost and need a friendly voice.
+            - Help with planning: It's not natural for an ADHDer to plan their trip before. Remind them and offer to help.
+            - Double-check travel times: Time blindness is an issue here. Check their travel plans and time estimations. Also add time for getting lost, too.
+            - Help them calm down: Calm them down if they call and are lost. Let them know everything is okay, and take some deep breaths together.
+- 10 - Impulsivity
+    - For the ADHD person >>>
+        - ADDHer has the rare ability to fail over and over again and never lose hope. When people have that kind of persistence, well, the chances of something working eventually are pretty goddamn high.
+        - Tips:
+            - Have patience: because something feels like the purpose today doesn't mean it will tomorrow. Is this something you want to do for the next 10 years? 
+            - Find your genius: Often the key to our genius will be embedded in the thing that we naturally gravitate towards. Often it is something we'd love to do as a child. If you haven't found it yet, don't be discouraged.
+            - Dream, Don't Do: Allow yourself to dream about a new idea. Get all your dopamine out of the idea using your incredible imagination, but don't quit everything else. Set yourself boundaries.
+            - Find your team: A neurotypical person has a significant value for you. He brings different skills to the table and can help you with logic, organization, and planning.
+    - 
+    - For the partner >>>
+        - An ADHDer feels intensely for new hobbies; the impulsivity overtakes them, and they commit fully to this being their new life purpose.
+        - You can't control or stop the creative genius of the ADDHer brain. Your task is (together with the ADHD person) to decide which ideas are actually worth committing time to. 
+        - The impulsivity of your ADHDer is something to protect. You can help them see when an idea might land them in trouble or what might be a stroke of genius.
+        - Tips:
+            - Don't dismiss dreams: Don't dismiss the dreams, even if they sound like the most nonsensical thing you've ever heard. That's their experience of happiness. Chat about the ideas, have some fun yourself, maybe create a business plan.
+            - Watch and wait: The communicating style make severything sound like the best idea ever. Be patient and wathc if the idea holfs longer than a few days or weeks.
+            - Provide a reality check: help them to remember things like the financial implications and practicalities of their grand plans. These are the unsexy details that bring them back down to earth. If an ADHDer is willing to get into the unsexy stuff, this might be a sign of staying power.
+            - Spot the gold: Ninety-nine of your ADHDer ideas might go down the drain, but keep your mind open for that one idea that will go into the clouds.
+- 11 - ADHD and love
+    - For the ADHD person >>>
+        - ADHD can also affect the ability to love somebody deeply and to receive love in return.
+        - A big problem: ADHD stops them from progressing to true intimacy because they are constantly seeking the new high of somebody else.
+        - It's true that an ADHD person may not function properly without a neurotypical partner. 
+        - Reminder that you as an ADHD person aren't bad or broken or undeserving of beautiful, intimate love. You just work a little differently.
+        - If normal people have a honeymoon, ADHD people have a treacle sun. It's sweeter, it's brighter, and goddamn, is it going to burn you.
+        - It's important to get really honest with your partner about how you work as an ADHDer. As the partner, be curious and kind.
+        - Real happiness comes when you can unmask yourself with the person you love. ADHDers wear a mask their whole life to cover up their shame.
+        - Tip:
+            - Use your ADHD lens: Look at your behavior with compassion, not judgment. When you know love is a hyperfocus, you can take accountability and change.
+            - Use radical honesty: true love asks a lot of you, and one part is radical honesty.
+            - Be accountable: We have to take accountability and set up boundaries so that those we love can feel safe. You can't be impulsive with lust. You will hurt everyone. 
+            - Get therapy: Often ADHD comes from homes where at least one parent has emotional difficulties. This can cause problems for the child around intimacy, vulnerability, and communication, three necessities for happy relationships. In particular, attachment-focused trauma therapy might be needed to help unlearn negative behaviors. 
+    - 
+    - For the partner >>>
+        - The foundation for true love is intimacy. It's being completely known by another person and being loved. For an ADHDer, they have hidden so much from the world - huge chunks of their identity they have considered too shameful to be loved.
+        - Choose curiosity over judgment: Get curious, not angry, when the ADHDer has problems in the relationship. 
+        - Set boundaries. Your emotions matter too. During times of sadness and confusion, both people in the relationship deserve soft, safe, curious communication. 
+        - Use humor: Using humor can let them know that nothing is shameful in this relationship and that all parts are welcome.
+        - Do your research: Learn about ADHD and relationships, about attachment styles, and about healthy communication.
+    - 
+- 12 - Joys of ADHD
+    - List of grateful things as an AHD person:
+        - Optimism
+        - Quick learning
+        - Problem-solving
+        - Brainstorming
+        - Risk-taking
+        - Empathy
+        - Creativity
+        - Crisis situations
+    - 
+    - List of grateful things about having an ADHD person as a partner:
+        - Very caring
+        - Sense of humor
+        - Entrepreneurialism
+        - Interests
+        - Research
+    - 

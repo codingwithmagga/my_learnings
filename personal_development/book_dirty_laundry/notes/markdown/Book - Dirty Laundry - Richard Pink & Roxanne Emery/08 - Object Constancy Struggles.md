@@ -1,0 +1,18 @@
+- For the ADHD person >>>
+    - An ADHD person is so utterly and heavily invested in what is right in front of them that everything else fades into distant memory.
+    - Object constancy is the psychological ability to maintain stable positive feelings and a strong connection to another person, even when experiencing conflict, disappointment, or physical distance.
+    - It is also the phenomenon "out of sight, out of mind." If someone is not physically in front of the ADHD person, it is incredibly difficult to keep them in mind. They can't recall feelings or the connection.
+    - Tips:
+        - Know that it's okay: you do not have to be good at replying to text messages to be loved.
+        - Be honest: Share with your friends and family that you find frequent communication on the phone really difficult, that it's got nothing to do with how much you care about them. Ask for a plan together that satisfies both of you.
+        - Stop the shame spiral: End the shame spiral. Don't ignore other people; send something like, "I'm so sorry. I've been finding communicating on the phone really tough. I'm sorry if that's made you feel uncared for or ignored. It's something I struggle with. I'd love to catch up in person, though, if you are open to it".
+        - Don't read a message if you can't reply: Don't open a message if you cannot answer immediately. The notification is a little reminder.
+- 
+- For the partner >>>
+    - Don't expect messages when your partner is at work or busy hyperfocusing on something. You get their full attention when they are home.
+    - It's not about to get better at texting. We want to feel empowered to be honest about their needs, and in turn, we would like to be able to be honest about ours.
+    - Tips:
+        - Be Honest: Tell the ADHD person how you feel when you get no reply. For you it is important to hear that they really love you and that you understand their struggle in this area.
+        - Remove the pressure: Tell your ADHDer that you don't expect to hear from them when they are busy. But make clear when something is urgent, you really need a call or text.
+        - Plan together: Figure out other ways to spend quality time together face-to-face. ADHDers are great company.
+        - You can always call: Try a call instead. This makes it easier for both when it is urgent.

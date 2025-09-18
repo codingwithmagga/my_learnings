@@ -1,0 +1,18 @@
+- For the ADHD person >>>
+    - Hyperfocus is an extremely intense ability to focus on a particular subject for a duration of time that cannot be estimated. It appears on a whim and turns off whenever it chooses. It is absolutely not the thing on which to base one's identity and future life choices.
+    - You can't control your periods of hyperfocus. All you can do is accept them, work with them, and allow them just to be.
+    - Tips:
+        - If you are/were a gifted child: It may be time to redefine yourself. You don't have to be excellent, super-intelligent, or highly creative to be worthy of love and respect.
+        - Language matters: Using the correct language (hyperfocusing) takes the shame out of the experience and lets those around you know what's happening. You are not being crazy, lazy, or obsessive. 
+        - Beware of burnout: hours spent researching can lead to burnout. After a certain amount of time, your brain will have had enough. Take a break when needed.
+        - Ride the wave: Do the research, dream the dream, but don't act yet! Making decisions during hyperfocus can be destructive. If an idea is persistent for a long time, and there are sensible reasons to do it. Then you can revisit your decision.
+- 
+- For the partner >>>
+    - Understand that the ADHD person is on a research project. He/she may look into expensive or time-consuming options. But knowing the extreme options allows him/her to judge the value of the more realistic ones better. 
+    - Check occasionally that the ADHD person is not burning out. Offer drinks and snacks.
+    - Allow them their research projects and don't judge them. It is like a hobby. Offer help if acceptable.
+    - Tips:
+        - Communicate: Figure out what your ADHDer likes to focus on, and create space for it.
+        - Shared joy: Don't get frustrated by their research results. Instead, lean into the shared excitement about discovering something incredible and take a moment to appreciate it with them. 
+        - Boundaries: Whether it's budget or time, clear boundaries will help the ADHD person do their research.
+        - Kind interruptions: Suggest they take a break if it starts to overwhelm them. 

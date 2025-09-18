@@ -1,0 +1,16 @@
+- For the ADHD person >>>
+    - ADHD persons understand that being clean is a good thing. But it's not their life purpose, and for them it is not a moral failing if they aren't clean.
+    - Tips
+        - Shame reduction: You are not disgusting or worthless if you struggle with personal hygiene. It's hard for you, and that's ok. 
+        - Wear-again shelf: Create a place for clothes that aren't ready to wash yet. It keeps the clothes off the floor.
+        - Progress, not perfection: Change doesn't come overnight. It is likely that personal hygiene will continue to be a bit of a struggle. That's okay; we are looking for progress, not perfection. Start with small, manageable changes.
+        - Honesty: Don't lie about this to people who love you and that you feel safe with. Let these people know sharing your challenges can really help reduce the shame.
+- 
+- For the partner >>>
+    - Don't set personal hygiene routines: no forced routines, just acceptance and gentle reminders.
+    - The goal is simple: love and accept their hygiene habits, communicate openly with them, and implement little things that might help ease the burden.
+    - Tips:
+        - Don't Judge: Don't act shocked, and don't shame your ADHDer. They do this themselves enough.
+        - Experiment with co-habits: Whenever you shower or clean your teeth, check in with the DHD person. Perhaps they want to do it too. 
+        - Use humor: These can be a really sensitive topic, so go easy on your ADHDer. Kindness and compassion are the name of the game. But using lighthearted humor can really help to reduce the shame and seriousness of the situation.
+        - Try novelty: ADHDers love novelty. You can help encourage your ADDHer by having products you think they will enjoy.

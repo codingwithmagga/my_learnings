@@ -1,0 +1,18 @@
+- For the ADHD person >>>
+    - It could also be called time optimism, leaving the house in 45 minutes but watching an hour-long Netflix episode before? Should work!
+    - Only two times: "Right now" and "Not now". Nothing in between.
+    - Tips:
+        - Use Radical Acceptance: Time doesn't work normally for you. It is important to know that how your brain perceives time is different and that time will not magically change for you.
+        - Tell the truth: Practise being incredible honest. Tell people why your are running late. It less stressful to tell the truth than a lie.
+        - Make a joke out of it: Share with people in a light-hearted way that you are struggling with time. It takes a lot of mental energy to hide this behavior. Share your behavior and make a bit of fun of it.
+        - Build new habits: Pre-plan your journeys, especially the important ones. No guesstimating; buffers for unexpected delays are essential. Overestimate how long it will take to get from Point A to B. Practice makes better.
+- 
+- For the partner >>>
+    - Rather than you against your partner, you should become your partner and you versus time blindness.
+    - Stop moralizing timekeeping as something that makes a person good or bad.
+    - Timekeeping is a skill that needs understanding and then practice. Creating a safe environment for the ADHD person can be a game changer.
+    - Tips:
+        - Change the narrative: Support for better time management skills will give much better results than shaming and arguments ever will. It's a problem for both to solve rather than an issue to argue about.
+        - Don't set them up to fail: don't set up a time and wait annoyed at home. When they give you a time, say something like, "There are no expectations for you to make this time. Please let me know if you need any help planning the journey".
+        - Use time check-ins: friendly check-ins with the ADHD person to see how they are getting on. It also works as a reminder for them. 
+        - Be a time realist: When the ADHD person thinks they can bend time, call them back to reality.

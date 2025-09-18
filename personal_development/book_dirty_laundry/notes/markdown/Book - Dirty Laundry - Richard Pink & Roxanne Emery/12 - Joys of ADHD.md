@@ -1,0 +1,17 @@
+- List of grateful things as an AHD person:
+    - Optimism
+    - Quick learning
+    - Problem-solving
+    - Brainstorming
+    - Risk-taking
+    - Empathy
+    - Creativity
+    - Crisis situations
+- 
+- List of grateful things about having an ADHD person as a partner:
+    - Very caring
+    - Sense of humor
+    - Entrepreneurialism
+    - Interests
+    - Research
+- 

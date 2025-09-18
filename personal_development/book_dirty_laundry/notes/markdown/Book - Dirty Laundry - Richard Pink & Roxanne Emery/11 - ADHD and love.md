@@ -1,0 +1,21 @@
+- For the ADHD person >>>
+    - ADHD can also affect the ability to love somebody deeply and to receive love in return.
+    - A big problem: ADHD stops them from progressing to true intimacy because they are constantly seeking the new high of somebody else.
+    - It's true that an ADHD person may not function properly without a neurotypical partner. 
+    - Reminder that you as an ADHD person aren't bad or broken or undeserving of beautiful, intimate love. You just work a little differently.
+    - If normal people have a honeymoon, ADHD people have a treacle sun. It's sweeter, it's brighter, and goddamn, is it going to burn you.
+    - It's important to get really honest with your partner about how you work as an ADHDer. As the partner, be curious and kind.
+    - Real happiness comes when you can unmask yourself with the person you love. ADHDers wear a mask their whole life to cover up their shame.
+    - Tip:
+        - Use your ADHD lens: Look at your behavior with compassion, not judgment. When you know love is a hyperfocus, you can take accountability and change.
+        - Use radical honesty: true love asks a lot of you, and one part is radical honesty.
+        - Be accountable: We have to take accountability and set up boundaries so that those we love can feel safe. You can't be impulsive with lust. You will hurt everyone. 
+        - Get therapy: Often ADHD comes from homes where at least one parent has emotional difficulties. This can cause problems for the child around intimacy, vulnerability, and communication, three necessities for happy relationships. In particular, attachment-focused trauma therapy might be needed to help unlearn negative behaviors. 
+- 
+- For the partner >>>
+    - The foundation for true love is intimacy. It's being completely known by another person and being loved. For an ADHDer, they have hidden so much from the world - huge chunks of their identity they have considered too shameful to be loved.
+    - Choose curiosity over judgment: Get curious, not angry, when the ADHDer has problems in the relationship. 
+    - Set boundaries. Your emotions matter too. During times of sadness and confusion, both people in the relationship deserve soft, safe, curious communication. 
+    - Use humor: Using humor can let them know that nothing is shameful in this relationship and that all parts are welcome.
+    - Do your research: Learn about ADHD and relationships, about attachment styles, and about healthy communication.
+- 

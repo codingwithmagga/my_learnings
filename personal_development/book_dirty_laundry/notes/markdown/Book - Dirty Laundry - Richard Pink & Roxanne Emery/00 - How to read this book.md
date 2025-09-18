@@ -1,0 +1,4 @@
+- Newsflash: Shaming yourself or allowing others to shame you will never actually help you get better. You can't shame yourself, or be shamed, into being more functional.
+- Show her how to do (simple) things (like making a bed), and never laugh or question it.
+- It is not simply a book about how to support a person with ADHD. It's a book about understanding what it's truly like to love someone with ADHD, warts and all, and the tools we all can use to create a healthy and happy home for everyone affected by ADHD.
+- 

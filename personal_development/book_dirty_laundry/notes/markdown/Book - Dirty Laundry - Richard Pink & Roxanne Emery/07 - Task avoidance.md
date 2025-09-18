@@ -1,0 +1,23 @@
+- For the ADHD person >>>
+    - It doesn't matter what the ADHD person is supposed to do; their brain will feverishly look for something -a anything - else to do and make that thing so incredibly desirable that there is no choice but to do that instead.
+    - It's about avoiding whatever it is that is most important at that time.
+    - At the very core of ADHD is an issue with attention. So it's no surprise their minds are often drifting off task.
+    - Tips:
+        - Recognize: Call it out when you are doing something different: "I am seriously distracted right now. I'm going back to the task at hand and coming back to these later." It is building a habit to choose where your focus goes.
+        - Do the important task first: If you have something to do, do it right now. The longer you wait, the more likely you are to find something different interesting.
+        - Tell people: Let people around you know you have ADHD and are incredibly easily distracted. If you feel comfortable, give them the permission to call you out in a calm and kind way.
+        - See the positives: Sometimes you do something special, useful, etc., while avoiding an important task. See the positives from this.
+- 
+- For the partner >>>
+    - List of phrases that do not work if you are trying to get your partner back on task:
+        - Just do it! I don't understand why you are delaying.
+        - Stop painting that jacket! You are wasting time.
+        - You know you are going to have anxiety avoiding this. What are you doing?
+        - You'll feel better if you just get it done. Come on.
+        - Shall I just do it for you?
+    - It may be a bit awkward if your partner drifts off during a conversation. Don't take that personally. The ADHD mind works like that. Ask your partner to share what he/she was thinking.
+    - Tips:
+        - Gently call it out: Tell them kindly that they are off track: "Looks like you are a bit distracted by now. What's going on for you?"
+        - Don't interrupt: If they are really doing what they should do, don't ask questions about anything else. They can easily be knocked off their task.
+        - Set a time limit: If the ADHD person really can't get back to the task, set a time limit for the other task they are currently doing.
+        - Be inquisitive: if their mind wanders off to investigate a creative or ingenious idea, listen to it. 

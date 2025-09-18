@@ -1,0 +1,19 @@
+- For the ADHD person >>>
+    - Don't have credit cards.
+    - Tips:
+        - Ask for help: It can be utterly overwhelming to be in debt with a pile of unopened bills. As well as devastating for your mental health. Ask for help, open one letter after another.
+        - Open the letters: Stacks of unopened bills are far worse than whatever is hiding inside them.
+        - Credit cards: Don't have them unless you absolutely need them for basic living expenses.
+        - Practice: You aren't awful or stupid. It's time to practice, very slowly and ideally, with help. Save a little each month. Open an envelope. Fill a shopping cart and don't buy it. It will get better.
+- 
+- For the partner:
+    - Your ADHDer may be the first person to buy other people things they can't afford. 
+    - It helps when the ADHDHer makes you part of the process and talks to you. This will reduce massively impulse purchases.
+    - They are searching for that hit of happiness that impulsive spending brings them. Understand this and don't shame them for this.
+    - They are responsible for their choices; we don't want to control them. We can be a lifeline if they are struggling and asking for help.
+    - Tips:
+        - Ask and listen: Ask your ADHDer what their relationship with money is like and whether they have any struggles. Don't shame or blame them. 
+        - Credit cards: Offer to look after the credit cards of your partner. It is not about controlling; it is an offer to support them.
+        - Celebrate wins: Acknowledge the behavior of choosing something on sale or a medium-priced hotel.
+        - Help them budget: Help your ADHDer work out how much their bills are every month. Help them budget. Limit the damage they can make if possible.
+- 

@@ -1,0 +1,16 @@
+- For the ADHD person >>>
+    - Routine and repetition are the ADHDer's best friend. The minute there is something new? Everything went down. It's like a different world. 
+    - Accept yourself radically and with love. This means saying, "I struggle with new places and get super-overwhelmed! It's a symptom of my ADHD, and I might need some extra support and kindness."
+    - Tips:
+        - Visual directions: Google Maps and verbal directions don't work. What helps are visual cues. 
+        - Calm down if you get confused: if you get lost and overwhelmed (like a panic attack) kicks in, take a break. Find a bench, sit down, and breathe deeply. 
+        - Plan journeys: Planning the night before really helps you visualize your journeys and reduce anxiety. Take as much information as possible and write it down.
+        - Ask for help: Ask for help. If it's a friend or stranger. Ask for visual directions. 
+- 
+- For the partner >>>
+    - Accept your ADHDer exactly as they are, allowing a safe space for them to communicate their internal experiences and totally unmask. With this topic, real-world help is needed sometimes.
+    - Tips:
+        - Don't judge: Be a safe space for directional help so they always know they can call you if they are lost and need a friendly voice.
+        - Help with planning: It's not natural for an ADHDer to plan their trip before. Remind them and offer to help.
+        - Double-check travel times: Time blindness is an issue here. Check their travel plans and time estimations. Also add time for getting lost, too.
+        - Help them calm down: Calm them down if they call and are lost. Let them know everything is okay, and take some deep breaths together.

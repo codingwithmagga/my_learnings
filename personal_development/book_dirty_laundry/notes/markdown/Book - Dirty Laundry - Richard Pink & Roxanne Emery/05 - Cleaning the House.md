@@ -1,0 +1,19 @@
+- For the ADHD person >>>
+    - There are many links between ADHD and addiction.
+    - Getting sober is absolutely necessary.
+    - The non-ADHD person has to do the majority of admin, organization, and domestic tasks in the house.
+    - It can help that you admit that your house will never be perfectly clean. It just needs to be okay most of the time. Your life purpose should be a super-tidy house. It is to accept yourself and be happy.
+    - Tips:
+        - Let go of the shame: No one can hate themselves into a version of themselves that they like. You are not a disgusting, awful human being.
+        - Ask for help: Ask someone to show you, slowly and clearly, how to do things in the house.
+        - One thing a day: Start with one thing a day, like taking a coffee cup downstairs or hanging up a T-shirt. You are more likely to succeed when starting small, and this will slowly build your self-esteem.
+        - Patience: The trick is to make little improvements daily that will change your habits and self-beliefs over months and years.
+- 
+- For the partner >>>
+    - Look at the ADHD person as someone who desperately wanted to be part of the household cleaning routine but simply couldn't. The pain for them is real.
+    - Hearing "I'm proud of you" can work like a magical healing potion. You can see the joy in their faces.
+    - Tips:
+        - Be curious, not angry: Ask your ADHDer what it feels like to stand in a messy room. Ask them if they knew where to start. It's likely that this is extremely overwhelming for them, and this leads to avoidance. Get curious about their story and experience, as opposed to projecting your own standards onto them.
+        - Offer to teach: Your ADHDer is way more capable than they think they are, and loving, kind, clear instructions can be an absolute game changer.
+        - Celebrate the wins: Even if it feels a bit strange saying "well done" to small things, do it. An ADHDer whose progress is noted and celebrated is going to build self-esteem and skills a lot more quickly than someone whose efforts are ignored. 
+        - Don't mock them: don't make fun of them. That should be clear. Be inquisitive and supportive.

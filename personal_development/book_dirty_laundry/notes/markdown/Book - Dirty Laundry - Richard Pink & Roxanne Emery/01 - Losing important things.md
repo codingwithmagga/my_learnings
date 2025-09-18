@@ -1,0 +1,18 @@
+- For the ADHD person >>>
+    - You are going to lose things. So try to lose the slightly less important stuff.
+    - Acceptance is so often the key to actually feeling better.
+    - Tips:
+        - Ditch the shame: No bullying. From anyone, including yourself.
+        - Strive to regulate your emotions: When you feel big emotions coming up, use your breathing to calm yourself down. Breathe deeply from the belly, counting in for eight and out for eight, for as long as you need to.
+        - Reduce stress: Stress makes ADHD symptoms worse. Be extra vigilant when you're starting to feel stressed or anxious. Slow down, breathe as described above, and listen to your body. Take your time.
+        - Put some safety nets in place: Leave your ID or expensive things at home if possible. Have phone insurance, etc. Streamline the things you need to remember (key, wallet, ...).
+    - 
+- For the partner >>>
+    - The brain of a person with ADHD works differently. They don't lose things on purpose or because they don't care. 
+    - The natural reaction (when sth. get lost) is warmth and compassion. Tell the person with ADHD it's okay, you love him/her, and when he/she calms down, help with practical things like cancelling cards. 
+    - Your feelings matter too, but be kind and do it after your partner calms down and the practical steps are done.
+    - Tips:
+        - Don't get angry: Your partner feels bad enough, and it wasn't done on purpose.  
+        - Aim for Co-Regulation: Calming your partner with ADHD down is the first task.
+        - Help with the practicalities: Providing assistance in the practical things is the best way you can help.
+        - Work on a solution together: Talk about patterns of how they lose their things. Come up with strategies together that help mitigate the losses.
