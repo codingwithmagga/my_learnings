@@ -15,6 +15,9 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(Boost)
 
+# Helper lib
+add_subdirectory(helper_lib)
+
 # Chapter 1 - Deducing types
 add_subdirectory(ch1/item1_template_type_deduction)
 add_subdirectory(ch1/item2_auto_type_deduction)
@@ -49,3 +52,4 @@ add_subdirectory(ch4/item22_pimpl_idiom)
 add_subdirectory(ch5/item23_move_forward)
 add_subdirectory(ch5/item24_universal_references)
 add_subdirectory(ch5/item25_move_forward_usage)
+add_subdirectory(ch5/item26_overloading_universal_references)

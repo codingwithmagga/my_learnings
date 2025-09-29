@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iterator>
+#include <memory>
 #include <vector>
 
 template <typename It>

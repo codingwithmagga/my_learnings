@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 
 class Investment {
 public:

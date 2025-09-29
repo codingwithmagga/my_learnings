@@ -18,7 +18,7 @@ public:
         // Need to add this, otherwise the compiler does to much optimization
         // Note that I can see a difference only in a Release Build
         if (check()) {
-            throw std::exception("test");
+            throw std::runtime_error("test");
         }
     };
 
@@ -26,7 +26,7 @@ public:
         : data(std::move(wRhs.data))
     {
         if (check()) {
-            throw std::exception("test");
+            throw std::runtime_error("test");
         }
     };
 

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 #include <mutex>
 
 using MuxGuard = std::lock_guard<std::mutex>;
@@ -53,7 +54,7 @@ int main()
     f(0);
 
     std::cout << "Calling f(NULL):     ";
-    f(NULL);
+    // f(NULL); // clang does not compile
 
     std::cout << "Calling f(nullptr):  ";
     f(nullptr);
