@@ -60,3 +60,4 @@ add_subdirectory(ch5/item30_perfect_forwarding_pitfalls)
 
 # Chapter 6 - Lambda expressions
 add_subdirectory(ch6/item31_avoid_default_capture_modes)
+add_subdirectory(ch6/item32_use_init_capture)
