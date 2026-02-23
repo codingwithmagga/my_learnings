@@ -63,3 +63,6 @@ add_subdirectory(ch6/item31_avoid_default_capture_modes)
 add_subdirectory(ch6/item32_use_init_capture)
 add_subdirectory(ch6/item33_auto_params)
 add_subdirectory(ch6/item34_prefer_lambdas)
+
+# Chapter 7 - Concurrency
+add_subdirectory(ch7/item35_prefer_std_async)
