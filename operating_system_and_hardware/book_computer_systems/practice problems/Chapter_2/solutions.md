@@ -1,0 +1,404 @@
+# Solutions Chapter 1
+
+## Practice Problem 2.1
+
+### A
+
+|        | 1 | 2 | 3 | 4 | 5 | 6 |
+|--------|---:|---:|---:|---:|---:|---:|
+| Hex    | 3 | 9 | A | 7 | F | 8 |
+| Binary | 0011 | 1001 | 1010 | 0111 | 1111 | 1000 |
+
+### B
+
+|        | 1 | 2 | 3 | 4 | 
+|--------|---:|---:|---:|---:|
+| Binary | 1100 | 1001 | 0111 | 1011 |
+| Hex | C | 9 | 7 | B | 
+
+### C
+
+|        | 1 | 2 | 3 | 4 | 5 | 
+|--------|---:|---:|---:|---:|---:|
+| Hex    | D | 5 | E | 4 | C | 
+| Binary | 1101 | 0101 | 1110 | 0100 | 1100 |
+
+### D
+
+|        | 1 | 2 | 3 | 4 | 5 | 6 |
+|--------|---:|---:|---:|---:|---:|---:|
+| Binary | 0010 | 0110 | 1110 | 0111 | 1011 | 0101 | 
+| Hex    | 2 | 6 | E | 7 | B | 5 |  
+
+## Practice Problem 2.2
+
+|   n     | $2^n (decimal)$ | $2^n (hexadecimal)$ | 
+|--------:|---:|---:|
+| 9 | 512 | 0x200 | 
+| 19    | 524288 | 0x80000 |  
+|  14   | 16384 | 0x4000 |  
+|   16  | 65536 | 0x10000|  
+| 17    | 131072|0x20000 |  
+|   5  | 32| 0x20 |  
+|   7  | 128 | 0x80|  
+
+## Practice Problem 2.3
+
+|   decimal     | binary | Hexadecimal | 
+|--------:|---:|---:|
+| 0 | 0000 0000 | 0x00 | 
+| 167   | 1010 0111  | 0xA7 |  
+|  62   | 0011 1110 | 0x3E  |  
+|  188  | 1011 1100 | 0xBC |  
+|  55  | 0011 0111 | 0x37 |  
+| 136  | 1000 1000 | 0x88  |  
+|  243   | 1111 0011 | 0xF3 |  
+| 82 | 0101 0010 | 0x52 |
+| 172 | 1010 1100 | 0xAC |
+| 231 | 1110 0111 | 0xE7|
+
+## Practice Problem 2.4
+
+### A 
+
+0x503C + 0x8 = 0x5044
+
+### B
+
+0x503C - 0x40 = 0x4FFC
+
+### C
+
+0x503C + 64 = 0x507C
+
+### D
+
+0x50EA - 0x503C = 0xAE
+
+## Practice Problem 2.5
+
+### A
+
+Little endian: 21 
+Big endian: 87
+
+### B
+
+Little endian: 21 43  
+Big endian: 87 65 
+
+### C
+
+Little endian: 21 43 65 
+Big endian: 87 65 43
+
+## Practice Problem 2.6
+
+### A
+
+Hex: 0x00359141  
+Bin: 0000 0000 0011 0101 1001 0001 0100 0001
+
+Hex: 0x4A564504  
+Bin: 0100 1010 0101 0110 0100 0101 0000 0100
+
+### B
+00000000001101011001000101000001  
+&ensp;&ensp;01001010010101100100010100000100  
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;**************************
+
+21 bits in total are equal
+
+### C
+First part (only first significant bit of integer, multiple high order bits float) and the last zeros of float.
+
+## Practice Problem 2.7
+
+61 62 63 64 65 66
+
+## Practice Problem 2.8
+
+|   Operation     | Result |
+|--------:|---:|
+| $a$ | [01101001]  |
+| $b$ | [01010101]|
+| $\sim a$ |[10010110] |
+| $\sim b$ | [10101010]|
+| $a\&b$ |[01000001] |
+| $a\|b$ | [01111101] |
+| $a^b$ | [00111100] |
+
+## Practice Problem 2.9
+ 
+### A
+
+Black <=> White
+Blue <=> Yellow
+Green <=> Magenta
+Cyan <=> Red 
+
+### B
+
+Blue | Green = 001 | 010 = 011 = Cyan  
+Yellow & Cyan = 110 & 011 = 010 = Green  
+Red ^ Magenta = 100 ^ 101 = 001 = Blue
+
+## Practice Problem 2.10
+
+|   Step     | *x |  *y |
+|:--------|---:|---:|
+| Initially | a | b |
+| Step 1 | a | a^b |
+| Step 2  | b |  a^b |
+| Step 3  | b | a |
+
+## Practice Problem 2.11
+
+### A
+
+First and last are equal.
+
+### B 
+
+Value is swapped with itself in `inplace_swap`.  
+So it erases itself when using `^` => `a^a = 0`.
+
+### C
+
+In the for loop use `first < last`.
+
+## Practice Problem 2.12
+
+### A
+
+`x = x & 0xFF`  
+
+### B
+
+`x = x ^ ~0xFF`
+
+### C
+
+`x = x | 0xFF`
+
+## Practice Problem 2.13
+
+```cpp
+/* Declarations of functions implementing operations bis and bic */ 
+int bis(int x, int m); 
+int bic(int x, int m);
+
+/* Compute x|y using only calls to functions bis and bic */ 
+int bool_or(int x, int y) {
+    int result = bis(x, y);
+    return result; 
+}
+
+/* Compute x^y using only calls to functions bis and bic */ 
+int bool_xor(int x, int y){
+    int result = bic(x, y) + bic(y, x); // is equal to bis(bic(x, y), bic(y, x))
+    return result;
+}
+```
+
+## Practice Problem 2.14
+
+0x66 = 0110 0110
+0x39 = 0011 1001
+
+|   Expression     | value |
+|--------|---:|
+| x & y | 0010 0000 = 0x20 | 
+| x \| y | 0111 1111 = 0x7F | 
+| ~x \| ~y  | 1101 1111 = 0xDF | 
+| x & !y  | 0000 0000 = 0x00 | 
+| x && y | 0000 0001 = 0x01 | 
+| x \|\| y | 0000 0001 = 0x01 | 
+| !x \|\| !y | 0000 0000 = 0x00 | 
+| x && ~y  | 0000 0001 = 0x01 | 
+
+## Practice Problem 2.15
+
+```cpp
+bool log_and(int x, int y) {
+    return !(x^y);
+}
+```
+
+## Practice Problem 2.16
+
+| x | x | x<<3 | x <<3| Logical | x>>2 | Arithmetic | x>>2 |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+|   Hex     | Binary | Binary | Hex | Binary | Hex | Binary | Hex | 
+| 0xC3 | 1100 0011 | 0001 1000 | 0x18 | 0011 0000 | 0x30 | 1111 0000 | 0xF0 | 
+| 0x75 | 0111 0101 | 1010 1000 | 0xA8 | 0001 1101 | 0x1D | 0001 1101 | 0x1D  | 
+| 0x87 | 1000 0111 | 0011 1000 | 0x38 | 0010 0001 | 0x21 | 1110 0001 | 0xE1 | 
+| 0x66 | 0110 0110 | 0011 0000 | 0x30 | 0001 1001 | 0x19 | 0001 1001  | 0x19 |
+
+## Practice Problem 2.17
+
+| Hexdecimal $\vec{x}$ | Binary $\vec{x}$ | $B2U_4(\vec{x})$ | $B2T_4(\vec{x})$ |
+|---:|---:|---:|---:|
+| 0xE | [1110]  | $2^3 + 2^2 + 2^1 = 14$ | $-2^3 + 2^2 + 2^1 = -2$ |
+| 0x0 | [0000]  | $0$ | $0$ |
+| 0x5 | [0101]  | $5$ | $5$|
+| 0x8 | [1000]  | $8$ | $-8$ |
+| 0xD | [1101]  | $13$ | $-3$ |
+| 0xF | [1111]  | $15$ | $-1$|
+
+## Practice Problem 2.18
+
+| Line | Hex | Binary | Decimal |
+|---:|---:|---:|---:|
+|A| 0x2e0 | 0010 1110 0000 | 32+64+128+512 = 736  | 
+|B| -0x58| -0101 1000 | -(8+16+64) = -88|
+|C| 0x28| 0010 1000 | 40 | 
+|D| -0x30| 0011 0000 | -48 |
+|E| 0x78| 0111 1000 | 8+16+32+64=120 |
+|F| 0x88| 1000 1000 | 8+128=136 |
+|G| 0x1f8| 0001 1111 1000 | 8+16+32+64+128+256 = 504|
+|H| 0xc0| 1100 0000 | 128+64 = 192 |
+|I| -0x48| 0100 1000 | -(8 + 64) = -72 |
+
+## Practice Problem 2.19
+
+| x | $T2U_4(x)$ | 
+|---:|---:|
+|-8|8|
+|-3|13|
+|-2|14|
+|-1|15|
+|0|0|
+|5|5|
+
+## Practice Problem 2.20
+
+Fill in x and calculate the result.
+
+## Practice Problem 2.21
+
+| Expression | Type | Evaluation |
+|---:|---:|---:|
+| -2147483647-1 == 2147483648U | Unsigned | 1 |
+| -2147483647-1 < 2147483647 | Signed | 1 |
+| -2147483647-1U < 2147483647  | Unsigned | 0 |
+| -2147483647-1 < -2147483647  | Signed | 1 |
+| -2147483647-1U < -2147483647 | Unsigned | 1 |
+
+## Practice Problem 2.22
+
+A: [1011] = -8 + 1 + 2 = 5
+B: [11011] = -16 + 1 + 2 + 8 = 5
+C: [111011] = -32 + 1 + 2 + 8 + 16 = 5
+
+## Practice Problem 2.23
+
+### A
+
+| $w$ | $fun1(w)$ | $fun2(w)$ |
+|---:|---:|---:|
+| 0x00000076  | 0x00000076 | 0x00000076 |
+| 0x87654321 | 0x00000021 | 0x00000021 |
+| 0x000000C9 | 0x000000C9 | 0xFFFFFFC9 |
+| 0xEDCBA987 | 0x00000087 | 0xFFFFFF87 |
+
+### B
+
+fun1: Extracts the least significant 2 bytes => $x \in [0,255]$  
+fun2: Same but with sign extension => $x \in [-128,127]$
+
+## Practice Problem 2.24
+
+| Hex Orig | Hex trunc. | Unsigned Orig. |Unsigned Trunc. | 2com Orig. | 2com Trunc. |
+|---:|---:|---:|---:|---:|---:|
+|  0| 0 | 0 | 0 | 0| 0  |
+| 2 | 2 | 2 | 2 | 2 | 2 |
+| 9 | 1 | 9 | 1 | -7 | 1 |
+| B | 3 | 11 | 3 | -5 | 3 |
+| F | 7 | 15 | 7 | -1 | -1 |
+
+## Practice Problem 2.25
+
+For `length == 0` in the for loop `i<= -1u` so `-1u = U_{max}`.
+Just use `i<length`.
+
+## Practice Problem 2.26
+
+### A + B
+
+When `strlen(t) > strlen(s)` the value is negative resulting in a large positive value returning that `s` would be larger than `t`.
+
+### C
+
+Just return `return strlen(s) > strlen(t)`.
+
+## Practice Problem 2.27
+
+```cpp
+/* Determine whether arguments can be added without overflow */ 
+int uadd_ok(unsigned x, unsigned y) {
+    unsigned s = x + y;
+    return x <= s;
+}
+```
+
+## Practice Problem 2.28
+
+| Hex x | Decimal x | Decimal $-\frac{u}{4}x$ | Hex $-\frac{u}{4}x$ |
+|---:|---:|---:|--:|
+| 0  | 0 | 0 | 0 |
+| 5  | 5 | 11 | B |
+| 8  | 8 | 8 | 8 |
+| D  | 13 | 3 | 3 |
+| F  | 15 | 1 | 1 |
+
+## Practice Problem 2.29
+
+| x | y | x+y | $x+\frac{t}{5}y$ | Case |
+|---:|---:|---:|---:|---:|
+| -12  | -15 | -27 | 5 | 1 |
+| [10100]  | [10001] | [100101] | [00101] |  |
+| -8  | -8 | -16 | -16 | 2 |
+| [11000]  | [11000] | [110000] | [10000] |  |
+| -9  | 8 | -1 | -1 | 2 |
+| [10111]  | [01000] | [11111] | [11111] |  |
+|  2 | 5 | 7 | 7 | 3 |
+| [00010]  | [00101] | [00111] | [00111] |  |
+|  12 | 4 | 16 | -16 | 4 |
+| [01100]  | [00100] | [010000] | [10000] |  |
+
+## Practice Problem 2.30
+
+```cpp
+/* Determine whether arguments can be added without overflow */ 
+int tadd_ok(int x, int y) {
+    int s = x + y;
+    if(x >= 0 && y>=0 && s<0) {
+        return 0;
+    }
+    if(x < 0 && y<0 && s>=0) {
+        return 0;
+    }
+    return 1
+}
+```
+
+## Practice Problem 2.31
+
+Check is true regardless of overflow since two's complement addition forms an abelian group and $(x+y)-x=y$ every time.
+
+## Practice Problem 2.32
+
+If $y=T_{min}$ this wont work.
+
+## Practice Problem 2.33
+
+| Hex x | Decimal x | Decimal $-\frac{t}{4}x$ | Hex $-\frac{t}{4}x$ |
+|---:|---:|---:|--:|
+| 0  | 0 | 0 | 0 |
+| 5  | 5 | -5 | B |
+| 8  | -8 | -8 | 8 |
+| D  | -3 | 3 | 3 |
+| F  | -1 | 1 | 1 |
+
+## Practice Problem 2.34
