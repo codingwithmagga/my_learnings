@@ -1,4 +1,4 @@
-# Solutions Chapter 1
+# Solutions Chapter 2
 
 ## Practice Problem 2.1
 
@@ -402,3 +402,136 @@ If $y=T_{min}$ this wont work.
 | F  | -1 | 1 | 1 |
 
 ## Practice Problem 2.34
+
+| Mode| x | y | $x \cdot y$ | Truncated $x \cdot y$  |
+|---:|---:|---:|---:|---:|
+|Unsigned | 4 [100] | 5 [101] | 20 [010100] | 4 [100] | 
+|Two's compl. | -4 [100] | -3 [101] | 12 [001100] | -4 [100] | 
+|Unsigned | 2 [010] | 7 [111] | 14 [001110] | 6 [110] | 
+|Two's compl. | 2 [010] | -1 [111] | -2 [111110] | -2 [110] | 
+|Unsigned | 6 [110] | 6 [110] | 36 [100100] | 4 [100] | 
+|Two's compl. | -2 [110] | -2 [110] | 4 [000100] | -4 [100] | 
+
+## Practice Problem 2.35
+
+### 1
+
+Rewrite usig equation (2.3) => $ x \cdot y = v2^w + u$.  
+$u = T2U_w(p)$  
+Rewrite usig equation (2.6) => $ x \cdot y = p+t2^w$.  
+
+### 2
+
+By definition of integer division, dividing p by nonzero x gives a quotient q and a remainder r such that 
+p=x-q +r, and |r| < |x|.
+
+### 3
+
+<!--> TODO: FIX euqaitons<-->
+Suppose q = y. Then we have $x \cdot y =x-y+r-+t2$.  
+From this, we can see that r + 12” =0. But |r| < |x| < 2”, and so this identity can hold only if t = 0, in which case r = 0.  
+Suppose r = ft = 0. Then we will have x - y =x - q, implying that y = q. 
+
+## Practice Problem 2.36
+
+```cpp
+/* Determine whether arguments can be multiplied without overflow */ 
+int tmult_ok(int x, int y){ 
+    int s32 = x*y;
+    int64_t s64 = (int64_t) x*y;
+
+    return s32==s64;
+}
+```
+
+## Practice Problem 2.37
+
+### A
+
+Only if size_t would also be 64 bit. But this not the case here, so no.
+
+### B
+
+Throw error if mulitplication overflows.
+
+```cpp
+uint64_t required_size = ele_cnt * (uint64_t) ele_size; 
+size_t request_size = (size_t) required_size; 
+
+if (required_size != request_size) 
+    /* Overflow must have occurred. Abort operation */ 
+    return NULL; 
+```
+
+## Practice Problem 2.38
+
+For each value of k, we can compute two multiples: $2^k$ (when b is 0) and $2^k + 1$
+(when b is a). Thus, we can compute multiples 1, 2,3, 4, 5, 8, and 9. 
+
+## Practice Problem 2.39
+
+$- (x<<m)$
+
+## Practice Problem 2.40
+
+| K | Shifts | Add/Subs | Expression |
+|---:|---:|---:|--:|
+| 6  | 2 | 1 | (x<<2)+(x<<1) |
+| 31  | 1 | 1 | (x<<5) - x |
+| -6  | 2 | 1 | (x<<1)-(x<<3) |
+| 55  | 2 | 2 | (x<<6) - (x<<3) - x |
+
+## Practice Problem 2.41
+
+Choose A when n=m, else B.
+
+## Practice Problem 2.42
+
+```cpp
+    int div16(int x) {
+        int bias = (x>>31) & 0xF; 
+        return (x+bias)>>4;
+    }
+```
+
+## Practice Problem 2.43
+
+$ (x<<5) -x$ => x*31
+$ (y>>3) $
+
+M=31; N=8
+
+## Practice Problem 2.44
+
+A. false for $x=TMin_{32}$
+B. true
+C. false for some $x>2^16$
+D. true
+E. false for $x=TMin_{32}$
+F. True
+G. true
+
+## Practice Problem 2.45
+
+| Fractional | Binary | Decimal | 
+|---:|---:|---:|
+| $\frac{1}{8}$  | 0.001 | 0.125 | 
+| $\frac{3}{4}$  | 0.11 | 0.75 | 
+| $\frac{5}{16}$  | 0.0101 | 0.3125 | 
+| $1\frac{9}{16}$  | 1.1001 | 1.5625 | 
+| $2\frac{11}{16}$  | 10.1011 | 2.6875 | 
+| $1\frac{1}{8}$  | 1.001 | 1.125 | 
+| $5\frac{7}{8}$  | 101.111 | 5.875 | 
+| $3\frac{3}{16}$  | 11.0011 | 3.1875 | 
+
+## Practice Problem 2.46
+
+A. $0.000110011[0011] \cdots_2 - 0.00011001100110011001100 =  0.000000000000000000000001100[1100]\cdots_2 $
+
+B. $0.1 - x = \frac{1}{2^{20}}*\frac{1}{10} = 9.54e-8$
+
+C. $9.54e-8*100h*10 = 9.54e-8*360000s*10 = 0,34344s$
+
+D. $2000 m/s * 0,34344s = 686.88m$
+
+## Practice Problem 2.47
