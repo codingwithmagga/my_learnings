@@ -37,35 +37,35 @@ void show_unsigned_bits(unsigned x)
     show_bits((byte_pointer)&x, sizeof(unsigned));
 }
 
-/* * : Generate mask indicating leftmost 1 in x. Assume w=32. *
- *  For example, OxFFOO —-> 0x8000, and 0x6600 --> 0x4000. *
- * If x = 0, then return 0. */
-int leftmost_one(unsigned x)
+/* The following code does not run properly on some machines */
+int bad_int_size_is_32()
 {
-    x |= (x >> 1);
-    x |= (x >> 2);
-    x |= (x >> 4);
-    x |= (x >> 8);
-    x |= (x >> 16);
-
-    x ^= (x >> 1);
-
-    return x;
+    /* Set most significant bit (msb) of 32-bit machine */
+    int set_msb = 1 << 31;
+    /* Shift past msb of 32-bit word */
+    int beyond_msb = 1 << 32;
+    /* set_msb is nonzero when word size >= 32
+    beyond_msb is zero when word size <= 32 */
+    return set_msb && !beyond_msb;
 }
+
+int int_size_is_32()
+{
+
+    unsigned set_msb = 1u << 15; /* sicher bei int >= 16 */
+    set_msb = set_msb << 15;     /* jetzt Bit 30 */
+    set_msb = set_msb << 1;      /* jetzt Bit 31 */
+
+    unsigned beyond_msb = set_msb << 1;
+    return set_msb && !beyond_msb;
+}
+
+// A: Shifting greater than width type
 
 int main()
 {
-    unsigned xlow = 1;
-    unsigned xmid = 0x67665599;
-    unsigned xhigh = 0xFFAABBCC;
-    unsigned zero = 0x00000000;
-    unsigned ones = 0x00011111;
 
-    printf("%i \n", leftmost_one(xlow));
-    printf("%i \n", leftmost_one(xmid));
-    printf("%i \n", leftmost_one(xhigh));
-    printf("%i \n", leftmost_one(zero));
-    printf("%i \n", leftmost_one(ones));
+    printf("%i \n", int_size_is_32());
 
     return 0;
 }
